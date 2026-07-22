@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <!--
+    Gluttonium is generated in its own pass after ordinary natural rock and
+    vanilla mineable lumps have been created.  Keeping this separate prevents
+    it from consuming steel, compacted machinery, or precious-ore selections.
+
+    1.2 veins per 10,000 map cells gives roughly 7-8 additional veins on a
+    standard 250x250 map.  Each vein still uses RimRound's original 3-6 tiles.
+  -->
+  <GenStepDef>
+    <defName>RR_ScatterGluttoniumLumps</defName>
+    <order>201</order>
+    <genStep Class="GenStep_ScatterLumpsMineable">
+      <forcedDefToScatter>RR_GluttoniumOre</forcedDefToScatter>
+      <allowInWaterBiome>false</allowInWaterBiome>
+      <countPer10kCellsRange>1.2~1.2</countPer10kCellsRange>
+    </genStep>
+  </GenStepDef>
+</Defs>

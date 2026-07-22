@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <JobDef>
+    <defName>RR_FattenPrisonerDirectFeed</defName>
+    <driverClass>RimRound.FeedOther.JobDriver_FattenPrisonerDirectFeed</driverClass>
+    <reportString>feeding TargetA to TargetB.</reportString>
+    <neverShowWeapon>true</neverShowWeapon>
+    <playerInterruptible>true</playerInterruptible>
+    <casualInterruptible>false</casualInterruptible>
+  </JobDef>
+
+  <JobDef>
+    <defName>RR_PrisonerMealDelivery</defName>
+    <driverClass>RimRound.FeedOther.JobDriver_PrisonerMealDelivery</driverClass>
+    <reportString>delivering TargetA to TargetB.</reportString>
+    <neverShowWeapon>true</neverShowWeapon>
+    <playerInterruptible>true</playerInterruptible>
+    <casualInterruptible>false</casualInterruptible>
+  </JobDef>
+
+  <JobDef>
+    <defName>RR_FattenPrisonerBedLock</defName>
+    <driverClass>RimRound.FeedOther.JobDriver_FattenPrisonerBedLock</driverClass>
+    <reportString>being kept in bed for fattening.</reportString>
+    <neverShowWeapon>true</neverShowWeapon>
+    <playerInterruptible>false</playerInterruptible>
+    <casualInterruptible>false</casualInterruptible>
+  </JobDef>
+</Defs>

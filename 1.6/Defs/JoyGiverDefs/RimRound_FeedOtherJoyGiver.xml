@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <JoyGiverDef>
+    <defName>RR_FeedOther</defName>
+    <giverClass>RimRound.FeedOther.JoyGiver_FeedOther</giverClass>
+    <baseChance>3.0</baseChance>
+    <jobDef>RR_FeedOther</jobDef>
+    <joyKind>RR_FeedOtherJoy</joyKind>
+    <requiredCapacities>
+      <li>Moving</li>
+      <li>Manipulation</li>
+    </requiredCapacities>
+  </JoyGiverDef>
+
+  <!--
+    This activity has its own recreation category so vanilla Gluttonous
+    boredom cannot suppress the custom eligibility worker before it runs.
+  -->
+  <JoyKindDef>
+    <defName>RR_FeedOtherJoy</defName>
+    <label>shared indulgence</label>
+  </JoyKindDef>
+</Defs>

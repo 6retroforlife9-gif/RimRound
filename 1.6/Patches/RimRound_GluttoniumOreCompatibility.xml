@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+  <!--
+    Remove Gluttonium from GenStep_RocksFromGrid's shared weighted ore pool.
+    Vanilla steel, compacted machinery, and precious-ore counts are therefore
+    calculated exactly as they are without RimRound.
+  -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="RR_GluttoniumOre"]/building/mineableScatterCommonality</xpath>
+    <value>
+      <mineableScatterCommonality>0</mineableScatterCommonality>
+    </value>
+  </Operation>
+
+  <!--
+    Add the independent Gluttonium pass to every map-generator base that
+    explicitly runs ordinary RocksFromGrid. Children inheriting those bases
+    receive the step automatically. Generators using RocksFromGrid_NoMinerals
+    remain mineral-free, matching vanilla behaviour for encounter maps.
+  -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/MapGeneratorDef[genSteps/li="RocksFromGrid"]/genSteps</xpath>
+    <value>
+      <li>RR_ScatterGluttoniumLumps</li>
+    </value>
+  </Operation>
+
+  <!--
+    RimWorld's Mine vein reverse designator requires building.veinMineable.
+    RimRound predates that vanilla field, so ordinary Mine works but Mine vein
+    is omitted unless this flag is added explicitly.
+  -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="RR_GluttoniumOre"]/building</xpath>
+    <value>
+      <veinMineable>true</veinMineable>
+    </value>
+  </Operation>
+</Patch>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <JobDef>
+    <defName>RR_FeedOther</defName>
+    <driverClass>RimRound.FeedOther.JobDriver_FeedOther</driverClass>
+    <reportString>sharing meals with TargetB.</reportString>
+    <joyKind>RR_FeedOtherJoy</joyKind>
+    <joySkill>Social</joySkill>
+    <joyXpPerTick>0.004</joyXpPerTick>
+    <joyDuration>60000</joyDuration>
+    <joyMaxParticipants>2</joyMaxParticipants>
+    <neverShowWeapon>true</neverShowWeapon>
+    <playerInterruptible>true</playerInterruptible>
+    <casualInterruptible>true</casualInterruptible>
+    <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+  </JobDef>
+
+  <JobDef>
+    <defName>RR_FeedOtherPartner</defName>
+    <driverClass>RimRound.FeedOther.JobDriver_FeedOtherPartner</driverClass>
+    <reportString>sharing meals with TargetB.</reportString>
+    <joyKind>RR_FeedOtherJoy</joyKind>
+    <joySkill>Social</joySkill>
+    <joyXpPerTick>0.004</joyXpPerTick>
+    <joyDuration>60000</joyDuration>
+    <joyMaxParticipants>2</joyMaxParticipants>
+    <neverShowWeapon>true</neverShowWeapon>
+    <playerInterruptible>true</playerInterruptible>
+    <casualInterruptible>true</casualInterruptible>
+    <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+  </JobDef>
+
+  <JobDef>
+    <defName>RR_FeedOtherOneWay</defName>
+    <driverClass>RimRound.FeedOther.JobDriver_FeedOtherOneWay</driverClass>
+    <reportString>feeding TargetB.</reportString>
+    <joyKind>RR_FeedOtherJoy</joyKind>
+    <joySkill>Social</joySkill>
+    <joyXpPerTick>0.004</joyXpPerTick>
+    <joyDuration>60000</joyDuration>
+    <joyMaxParticipants>2</joyMaxParticipants>
+    <neverShowWeapon>true</neverShowWeapon>
+    <playerInterruptible>true</playerInterruptible>
+    <casualInterruptible>true</casualInterruptible>
+    <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+  </JobDef>
+
+  <JobDef>
+    <defName>RR_FeedOtherBedside</defName>
+    <driverClass>RimRound.FeedOther.JobDriver_FeedOtherBedside</driverClass>
+    <reportString>sharing a bedside meal with TargetB.</reportString>
+    <joyKind>RR_FeedOtherJoy</joyKind>
+    <joySkill>Social</joySkill>
+    <joyXpPerTick>0.004</joyXpPerTick>
+    <joyDuration>60000</joyDuration>
+    <joyMaxParticipants>2</joyMaxParticipants>
+    <neverShowWeapon>true</neverShowWeapon>
+    <playerInterruptible>true</playerInterruptible>
+    <casualInterruptible>true</casualInterruptible>
+    <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+  </JobDef>
+
+  <JobDef>
+    <defName>RR_BeFedOtherPartner</defName>
+    <driverClass>RimRound.FeedOther.JobDriver_BeFedOtherPartner</driverClass>
+    <reportString>being fed by TargetB.</reportString>
+    <joyKind>RR_FeedOtherJoy</joyKind>
+    <joySkill>Social</joySkill>
+    <joyXpPerTick>0.004</joyXpPerTick>
+    <joyDuration>60000</joyDuration>
+    <joyMaxParticipants>2</joyMaxParticipants>
+    <neverShowWeapon>true</neverShowWeapon>
+    <playerInterruptible>true</playerInterruptible>
+    <casualInterruptible>true</casualInterruptible>
+    <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+  </JobDef>
+</Defs>

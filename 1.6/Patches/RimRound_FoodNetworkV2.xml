@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+  <!-- Each dispensed serving carries its own density and ingredient history. -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="RR_FeedingTubeFluid"]/comps</xpath>
+    <value>
+      <li Class="CompProperties_Ingredients">
+        <compClass>CompIngredients</compClass>
+      </li>
+      <li Class="RimRound.FeedOther.CompProperties_FoodNetworkServing">
+        <compClass>RimRound.FeedOther.CompFoodNetworkServing</compClass>
+      </li>
+    </value>
+  </Operation>
+
+  <!-- Pawn-operated dispensers now create a genuine vanilla nutrient-paste
+       meal. The extra component is dormant on ordinary paste and stores exact
+       nutrition/density only on meals drawn from Food Network v2. -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="MealNutrientPaste"]/comps</xpath>
+    <value>
+      <li Class="RimRound.FeedOther.CompProperties_FoodNetworkServing">
+        <compClass>RimRound.FeedOther.CompFoodNetworkServing</compClass>
+      </li>
+    </value>
+  </Operation>
+
+  <!-- The processor now respects the hopper's ordinary player filter, so the
+       hard-coded ban on every plant food is no longer appropriate. -->
+  <Operation Class="PatchOperationRemove">
+    <xpath>Defs/ThingDef[defName="RR_Hopper"]/building/fixedStorageSettings/filter/specialFiltersToDisallow/li[text()="AllowPlantFood"]</xpath>
+  </Operation>
+
+  <!-- The valve is a switch, so its Architect-menu icon should match the
+       familiar vanilla power-switch graphic instead of a conduit. -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="RR_TD_FeedingTubeValve"]/uiIconPath</xpath>
+    <value>
+      <uiIconPath>Things/Building/Power/PowerSwitch</uiIconPath>
+    </value>
+  </Operation>
+
+  <!-- Replace the old north-only distiller markers with rotation-aware input
+       and output ports. -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="RR_TD_NutrientDistillery"]/placeWorkers/li[text()="RimRound.FeedingTube.NutrientDistillery_PlaceWorker"]</xpath>
+    <value>
+      <li>RimRound.FeedOther.FoodNetworkV2DistillerPlaceWorker</li>
+    </value>
+  </Operation>
+</Patch>

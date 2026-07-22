@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+  <!-- Existing SwellGlow eating and elasticity traits become dedicated
+       post-generation categories instead of using vanilla personality slots. -->
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/TraitDef[defName="SG_TraitEatSpeedDownPlus"]/commonality</xpath>
+    <value><commonality>0</commonality></value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/TraitDef[defName="SG_TraitEatSpeedDown"]/commonality</xpath>
+    <value><commonality>0</commonality></value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/TraitDef[defName="SG_TraitEatSpeedUp"]/commonality</xpath>
+    <value><commonality>0</commonality></value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/TraitDef[defName="SG_TraitEatSpeedUpPlus"]/commonality</xpath>
+    <value><commonality>0</commonality></value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/TraitDef[defName="SG_TraitEatSpeedDownPlus"]/degreeDatas/li</xpath>
+    <value><statFactors><EatingSpeed>0.75</EatingSpeed></statFactors></value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/TraitDef[defName="SG_TraitEatSpeedDown"]/degreeDatas/li</xpath>
+    <value><statFactors><EatingSpeed>0.90</EatingSpeed></statFactors></value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/TraitDef[defName="SG_TraitEatSpeedUp"]/degreeDatas/li</xpath>
+    <value><statFactors><EatingSpeed>1.10</EatingSpeed></statFactors></value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/TraitDef[defName="SG_TraitEatSpeedUpPlus"]/degreeDatas/li</xpath>
+    <value><statFactors><EatingSpeed>1.25</EatingSpeed></statFactors></value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/TraitDef[defName="SG_TraitEatSpeedDownPlus"]</xpath>
+    <value><exclusionTags><li>RR_Trait_EatingSpeed</li></exclusionTags></value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/TraitDef[defName="SG_TraitEatSpeedDown"]</xpath>
+    <value><exclusionTags><li>RR_Trait_EatingSpeed</li></exclusionTags></value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/TraitDef[defName="SG_TraitEatSpeedUp"]</xpath>
+    <value><exclusionTags><li>RR_Trait_EatingSpeed</li></exclusionTags></value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/TraitDef[defName="SG_TraitEatSpeedUpPlus"]</xpath>
+    <value><exclusionTags><li>RR_Trait_EatingSpeed</li></exclusionTags></value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/TraitDef[defName="SG_TraitEatSpeedDownPlus"]/conflictingTraits</xpath>
+    <value><li>RR_TraitEatSpeedAverage</li></value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/TraitDef[defName="SG_TraitEatSpeedDown"]/conflictingTraits</xpath>
+    <value><li>RR_TraitEatSpeedAverage</li></value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/TraitDef[defName="SG_TraitEatSpeedUp"]/conflictingTraits</xpath>
+    <value><li>RR_TraitEatSpeedAverage</li></value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/TraitDef[defName="SG_TraitEatSpeedUpPlus"]/conflictingTraits</xpath>
+    <value><li>RR_TraitEatSpeedAverage</li></value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/TraitDef[defName="SG_TraitStomachElasticityDown"]/commonality</xpath>
+    <value><commonality>0</commonality></value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/TraitDef[defName="SG_TraitStomachElasticityUp"]/commonality</xpath>
+    <value><commonality>0</commonality></value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/TraitDef[defName="SG_TraitStomachElasticityUpPlus"]/commonality</xpath>
+    <value><commonality>0</commonality></value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/TraitDef[defName="SG_TraitStomachElasticityDown"]</xpath>
+    <value><exclusionTags><li>RR_Trait_StomachElasticity</li></exclusionTags></value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/TraitDef[defName="SG_TraitStomachElasticityUp"]</xpath>
+    <value><exclusionTags><li>RR_Trait_StomachElasticity</li></exclusionTags></value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/TraitDef[defName="SG_TraitStomachElasticityUpPlus"]</xpath>
+    <value><exclusionTags><li>RR_Trait_StomachElasticity</li></exclusionTags></value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/TraitDef[defName="SG_TraitStomachElasticityDown"]/conflictingTraits</xpath>
+    <value><li>RR_TraitStomachElasticityAverage</li></value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/TraitDef[defName="SG_TraitStomachElasticityUp"]/conflictingTraits</xpath>
+    <value><li>RR_TraitStomachElasticityAverage</li></value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/TraitDef[defName="SG_TraitStomachElasticityUpPlus"]/conflictingTraits</xpath>
+    <value><li>RR_TraitStomachElasticityAverage</li></value>
+  </Operation>
+</Patch>

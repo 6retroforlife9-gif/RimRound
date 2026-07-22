@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+  <!-- Restore the standard bed-specific ownership component while keeping
+       this physically 3x3 bed limited to one assigned pawn. -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="NotRegalBed"]/comps/li[@Class="RimRound.Comps.Buildings.CompProperties_AssignableToPawnModified"]</xpath>
+    <value>
+      <li Class="RimRound.FeedOther.CompProperties_NotRegalBedAssignable" />
+    </value>
+  </Operation>
+
+  <!-- It is a normal owner-assignable bed by default, while retaining the
+       ordinary player medical-bed toggle inherited from BedWithQualityBase. -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="NotRegalBed"]/building/bed_defaultMedical</xpath>
+    <value>
+      <bed_defaultMedical>false</bed_defaultMedical>
+    </value>
+  </Operation>
+
+  <!-- Use normal bed pathing. Pawns can pass through to the sleeping slot,
+       but the remaining eight footprint cells are not ordinary standing
+       positions or accidental interaction spots. -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="NotRegalBed"]/passability</xpath>
+    <value>
+      <passability>PassThroughOnly</passability>
+    </value>
+  </Operation>
+</Patch>

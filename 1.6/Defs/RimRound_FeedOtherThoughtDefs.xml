@@ -1,0 +1,78 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Defs>
+  <ThoughtDef>
+    <defName>RR_SharedFeeding</defName>
+    <showBubble>true</showBubble>
+    <thoughtClass>Thought_MemorySocial</thoughtClass>
+    <durationDays>10</durationDays>
+    <stackLimit>12</stackLimit>
+    <stackLimitForSameOtherPawn>3</stackLimitForSameOtherPawn>
+    <stackedEffectMultiplier>0.75</stackedEffectMultiplier>
+    <stages>
+      <li>
+        <label>shared an indulgent meal</label>
+        <baseOpinionOffset>4</baseOpinionOffset>
+      </li>
+    </stages>
+  </ThoughtDef>
+  <ThoughtDef>
+    <defName>RR_FeedOtherVeryFullMood</defName>
+    <thoughtClass>Thought_Memory</thoughtClass>
+    <durationDays>0.25</durationDays>
+    <stackLimit>1</stackLimit>
+    <stages>
+      <li>
+        <label>satisfyingly very full</label>
+        <description>Reaching a wonderfully indulgent level of fullness felt deeply satisfying.</description>
+        <baseMoodEffect>5</baseMoodEffect>
+      </li>
+      <li>
+        <label>delightfully very full</label>
+        <description>Becoming very full was exactly the indulgence I hoped for.</description>
+        <baseMoodEffect>10</baseMoodEffect>
+      </li>
+      <li>
+        <label>ecstatically very full</label>
+        <description>Reaching such magnificent fullness was absolutely exhilarating.</description>
+        <baseMoodEffect>15</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+  <ThoughtDef>
+    <defName>RR_FeedOtherVeryFullDiscomfort</defName>
+    <thoughtClass>Thought_Memory</thoughtClass>
+    <durationDays>0.25</durationDays>
+    <stackLimit>1</stackLimit>
+    <stages>
+      <li>
+        <label>uncomfortably very full</label>
+        <description>Being stuffed this full felt unpleasant and excessive.</description>
+        <baseMoodEffect>-5</baseMoodEffect>
+      </li>
+      <li>
+        <label>distressingly very full</label>
+        <description>I hated feeling so bloated and overstuffed.</description>
+        <baseMoodEffect>-10</baseMoodEffect>
+      </li>
+      <li>
+        <label>miserably very full</label>
+        <description>Reaching such a revolting level of fullness made me miserable.</description>
+        <baseMoodEffect>-15</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+  <!-- Post-meal social recreation reward: four hours. -->
+  <ThoughtDef>
+    <defName>RR_AfterMealChatMood</defName>
+    <thoughtClass>Thought_Memory</thoughtClass>
+    <durationDays>0.1666667</durationDays>
+    <stackLimit>1</stackLimit>
+    <stages>
+      <li>
+        <label>enjoyed an after-meal chat</label>
+        <description>Relaxing together and chatting after the meal was a pleasant way to unwind.</description>
+        <baseMoodEffect>2</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+</Defs>

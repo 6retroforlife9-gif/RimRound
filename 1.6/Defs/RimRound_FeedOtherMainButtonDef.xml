@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <MainButtonDef>
+    <defName>RRFeedOtherSettings</defName>
+    <label>RimRound Patch</label>
+    <description>Configure RimRound Patch feeding, cooldown, social, pawn, prisoner, generation, and orbital features.</description>
+    <tabWindowClass>RimRound.FeedOther.MainTabWindow_FeedOtherSettings</tabWindowClass>
+    <order>70</order>
+    <validWithoutMap>true</validWithoutMap>
+    <minimized>true</minimized>
+    <iconPath>UI/Buttons/MainButtons/RRFeedOtherSettingsButton</iconPath>
+  </MainButtonDef>
+</Defs>

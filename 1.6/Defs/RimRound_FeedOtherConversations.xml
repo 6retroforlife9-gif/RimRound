@@ -1,0 +1,2361 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Defs>
+  <!--
+    RIMROUND FEED OTHER — EDITABLE CONVERSATION LIBRARY
+
+    Ordinary dialogue can be changed or expanded in this file without rebuilding
+    RimRoundFeedOther.dll. Add another <li> inside an entry's <lines> list, or
+    copy an entire entry and change its filters.
+
+    FILTER VALUES
+      activity:      SharedMeal, Feeding, FeedingInPlace, PostSharedMeal, PostFeeding, Any
+      phase:         Starting, Ongoing, Finishing, Any
+      relationship:  General, Friend, Family, Romantic, Strained, Any
+      speech:        BothSpeaking, OneSpeaking, NeitherSpeaking, Any
+      tone:          Positive, Neutral, Reluctant, Any
+      firstWeightGoal/secondWeightGoal: Gain, CelebrateSize, Lose, StayLean, Neutral, Any
+      firstSize/secondSize: Thin, Soft, Large, Extreme, Any
+      fullness:      Comfortable, Full, VeryFull, Stuffed, Any
+      fullnessMood: Positive, Neutral, Negative, Any
+      speakerRole:    Either, Feeder, FedPawn, MutualNarration
+
+    SPEAKER ROLE
+      Either            alternate naturally between pawns who can speak
+      Feeder            only the feeding pawn may speak this entry
+      FedPawn           only the pawn receiving food may speak this entry
+      MutualNarration   role-stable action/nonverbal description
+
+    SUPPORTED TEXT TOKENS USED HERE
+      [INITIATOR_nameDef]       the pawn selected to speak/act
+      [RECIPIENT_nameDef]       the other pawn
+      [INITIATOR_possessive]    speaker's possessive pronoun
+      [RECIPIENT_possessive]    listener's possessive pronoun
+      [FEEDER_nameDef]          feeding pawn; never swaps with the speaker
+      [FEDPAWN_nameDef]         pawn receiving food; never swaps
+      [FEEDER_possessive]       feeding pawn's possessive pronoun
+      [FEDPAWN_possessive]      fed pawn's possessive pronoun
+      [INITIATOR_sizeDesc]       speaker's current broad body-size description
+      [RECIPIENT_sizeDesc]       listener's current broad body-size description
+
+    SharedMeal and PostSharedMeal tone consider both pawns. For Feeding,
+    FeedingInPlace and PostFeeding, tone and fullness context follow only the
+    FedPawn. A one-way feeder is never treated as though they personally ate.
+
+    FeedingInPlace only describes the physical arrangement. Its dialogue is
+    deliberately about recreation, friendship, family, romance, curiosity and
+    shared interests—not illness, hospitals or medical treatment.
+  -->
+  <LogEntryDef>
+    <defName>RR_FeedOtherConversationLog</defName>
+  </LogEntryDef>
+  <InteractionDef>
+    <defName>RR_FeedOtherConversation</defName>
+    <label>talk while sharing food</label>
+    <workerClass>RimRound.FeedOther.InteractionWorker_FeedOtherConversation</workerClass>
+    <socialFightBaseChance>0</socialFightBaseChance>
+    <ignoreTimeSinceLastInteraction>true</ignoreTimeSinceLastInteraction>
+    <symbol>Things/Mote/SpeechSymbols/Chitchat</symbol>
+  </InteractionDef>
+  <RimRound.FeedOther.FeedOtherConversationDef>
+    <defName>RR_FeedOtherConversationLibrary</defName>
+    <entries>
+      <!-- ========================= SHARED MEAL ========================= -->
+      <li>
+        <activity>SharedMeal</activity>
+        <phase>Starting</phase>
+        <relationship>Any</relationship>
+        <speech>BothSpeaking</speech>
+        <tone>Any</tone>
+        <lines>
+          <li>[INITIATOR_nameDef] commented on the generous meal and asked what [RECIPIENT_nameDef] thought of it.</li>
+          <li>[INITIATOR_nameDef] said that eating together made the meal feel more enjoyable.</li>
+          <li>[INITIATOR_nameDef] wondered which part of the meal [RECIPIENT_nameDef] intended to try first.</li>
+          <li>[INITIATOR_nameDef] joked that neither of them appeared interested in leaving leftovers.</li>
+          <li>[INITIATOR_nameDef] asked whether [RECIPIENT_nameDef] had been looking forward to sharing the meal.</li>
+        </lines>
+      </li>
+      <li>
+        <activity>SharedMeal</activity>
+        <phase>Starting</phase>
+        <relationship>Any</relationship>
+        <speech>OneSpeaking</speech>
+        <tone>Any</tone>
+        <lines>
+          <li>[INITIATOR_nameDef] described the meal while [RECIPIENT_nameDef] listened with interest.</li>
+          <li>[INITIATOR_nameDef] asked what [RECIPIENT_nameDef] thought of the portion. [RECIPIENT_nameDef] answered with an expressive look.</li>
+          <li>[INITIATOR_nameDef] joked about the amount of food. [RECIPIENT_nameDef] responded with an amused smile.</li>
+          <li>[INITIATOR_nameDef] explained why sharing food was one of [INITIATOR_possessive] favourite ways to relax.</li>
+        </lines>
+      </li>
+      <li>
+        <activity>SharedMeal</activity>
+        <phase>Starting</phase>
+        <relationship>Any</relationship>
+        <speech>NeitherSpeaking</speech>
+        <tone>Any</tone>
+        <lines>
+          <li>[INITIATOR_nameDef] and [RECIPIENT_nameDef] exchanged eager looks before beginning the meal.</li>
+          <li>[INITIATOR_nameDef] gestured towards the food, and [RECIPIENT_nameDef] answered with an approving nod.</li>
+          <li>[INITIATOR_nameDef] and [RECIPIENT_nameDef] settled in together, clearly ready to enjoy the meal.</li>
+        </lines>
+      </li>
+      <li>
+        <activity>SharedMeal</activity>
+        <phase>Ongoing</phase>
+        <relationship>Any</relationship>
+        <speech>BothSpeaking</speech>
+        <tone>Neutral</tone>
+        <lines>
+          <li>[INITIATOR_nameDef] compared the portion with other meals [INITIATOR_nameDef] and [RECIPIENT_nameDef] had eaten.</li>
+          <li>[INITIATOR_nameDef] wondered whether trying another of [RECIPIENT_possessive] favourite foods would be as enjoyable.</li>
+          <li>[INITIATOR_nameDef] admitted that the appeal of a long, relaxed meal was beginning to make sense.</li>
+          <li>[INITIATOR_nameDef] asked [RECIPIENT_nameDef] what made a meal especially satisfying.</li>
+          <li>[INITIATOR_nameDef] suggested that sharing each other's interests was half the fun.</li>
+        </lines>
+      </li>
+      <li>
+        <activity>SharedMeal</activity>
+        <phase>Ongoing</phase>
+        <relationship>Any</relationship>
+        <speech>BothSpeaking</speech>
+        <tone>Positive</tone>
+        <lines>
+          <li>[INITIATOR_nameDef] happily talked about becoming comfortable with larger portions.</li>
+          <li>[INITIATOR_nameDef] admitted that being pleasantly full was one of [INITIATOR_possessive] favourite feelings.</li>
+          <li>[INITIATOR_nameDef] wondered how much their appetites might grow after more meals like this.</li>
+          <li>[INITIATOR_nameDef] enthusiastically discussed the joys of relaxing with plenty of good food.</li>
+          <li>[INITIATOR_nameDef] said that growing softer together sounded like an enjoyable shared goal.</li>
+          <li>[INITIATOR_nameDef] suggested an even more generous meal for the next time they did this.</li>
+        </lines>
+      </li>
+      <li>
+        <activity>SharedMeal</activity>
+        <phase>Ongoing</phase>
+        <relationship>Any</relationship>
+        <speech>BothSpeaking</speech>
+        <tone>Reluctant</tone>
+        <lines>
+          <li>[INITIATOR_nameDef] said that [INITIATOR_nameDef] still did not entirely understand the appeal, but was willing to give it a fair try.</li>
+          <li>[INITIATOR_nameDef] asked why [RECIPIENT_nameDef] found large, filling meals so enjoyable.</li>
+          <li>[INITIATOR_nameDef] admitted that sharing the experience made it less intimidating.</li>
+          <li>[INITIATOR_nameDef] asked that they keep the meal comfortable rather than turning it into a competition.</li>
+          <li>[INITIATOR_nameDef] conceded that the food itself was better than expected.</li>
+        </lines>
+      </li>
+      <li>
+        <activity>SharedMeal</activity>
+        <phase>Ongoing</phase>
+        <relationship>Friend</relationship>
+        <speech>Any</speech>
+        <tone>Any</tone>
+        <lines>
+          <li>[INITIATOR_nameDef] teased [RECIPIENT_nameDef] about how quickly the food was disappearing.</li>
+          <li>[INITIATOR_nameDef] suggested making shared meals a regular way to spend time together.</li>
+          <li>[INITIATOR_nameDef] joked that [RECIPIENT_nameDef] had found a very convenient excuse to avoid leftovers.</li>
+          <li>[INITIATOR_nameDef] recalled another oversized meal the two friends had enjoyed.</li>
+        </lines>
+      </li>
+      <li>
+        <activity>SharedMeal</activity>
+        <phase>Ongoing</phase>
+        <relationship>Family</relationship>
+        <speech>Any</speech>
+        <tone>Any</tone>
+        <lines>
+          <li>[INITIATOR_nameDef] recalled the generous meals their family used to share.</li>
+          <li>[INITIATOR_nameDef] joked that [RECIPIENT_nameDef] had always been far too easy to tempt with good food.</li>
+          <li>[INITIATOR_nameDef] said it was nice to spend some unhurried time together.</li>
+          <li>[INITIATOR_nameDef] challenged [RECIPIENT_nameDef] to choose the meal next time.</li>
+        </lines>
+      </li>
+      <li>
+        <activity>SharedMeal</activity>
+        <phase>Ongoing</phase>
+        <relationship>Romantic</relationship>
+        <speech>Any</speech>
+        <tone>Any</tone>
+        <lines>
+          <li>[INITIATOR_nameDef] affectionately told [RECIPIENT_nameDef] that quiet meals together were always special.</li>
+          <li>[INITIATOR_nameDef] teased [RECIPIENT_nameDef] about [RECIPIENT_possessive] growing appetite.</li>
+          <li>[INITIATOR_nameDef] said that seeing [RECIPIENT_nameDef] relaxed and satisfied made the meal even better.</li>
+          <li>[INITIATOR_nameDef] promised to find something especially tempting for their next meal together.</li>
+          <li>[INITIATOR_nameDef] reached for [RECIPIENT_possessive] hand and smiled across the meal.</li>
+        </lines>
+      </li>
+      <li>
+        <activity>SharedMeal</activity>
+        <phase>Ongoing</phase>
+        <relationship>Strained</relationship>
+        <speech>Any</speech>
+        <tone>Any</tone>
+        <lines>
+          <li>[INITIATOR_nameDef] cautiously admitted that the shared meal was less awkward than expected.</li>
+          <li>[INITIATOR_nameDef] tried to find something about the food that both pawns could agree on.</li>
+          <li>[INITIATOR_nameDef] kept the conversation polite and asked whether [RECIPIENT_nameDef] was enjoying the meal.</li>
+          <li>[INITIATOR_nameDef] suggested focusing on the food rather than their recent disagreements.</li>
+        </lines>
+      </li>
+      <li>
+        <activity>SharedMeal</activity>
+        <phase>Ongoing</phase>
+        <relationship>Any</relationship>
+        <speech>OneSpeaking</speech>
+        <tone>Any</tone>
+        <lines>
+          <li>[INITIATOR_nameDef] talked animatedly about the meal. [RECIPIENT_nameDef] replied with nods and expressive gestures.</li>
+          <li>[INITIATOR_nameDef] asked whether [RECIPIENT_nameDef] was enjoying the experience. [RECIPIENT_nameDef] gave an enthusiastic thumbs-up.</li>
+          <li>[INITIATOR_nameDef] joked about their appetites. [RECIPIENT_nameDef] responded with an exaggerated eye roll.</li>
+          <li>[INITIATOR_nameDef] described another food they could try together while [RECIPIENT_nameDef] listened closely.</li>
+        </lines>
+      </li>
+      <li>
+        <activity>SharedMeal</activity>
+        <phase>Ongoing</phase>
+        <relationship>Any</relationship>
+        <speech>NeitherSpeaking</speech>
+        <tone>Any</tone>
+        <lines>
+          <li>[INITIATOR_nameDef] and [RECIPIENT_nameDef] traded playful looks as the meal steadily disappeared.</li>
+          <li>[INITIATOR_nameDef] pointed to the remaining food, and [RECIPIENT_nameDef] confidently accepted the challenge.</li>
+          <li>[INITIATOR_nameDef] patted [INITIATOR_possessive] stomach while [RECIPIENT_nameDef] responded with a knowing grin.</li>
+        </lines>
+      </li>
+      <li>
+        <activity>SharedMeal</activity>
+        <phase>Finishing</phase>
+        <relationship>Any</relationship>
+        <speech>BothSpeaking</speech>
+        <tone>Positive</tone>
+        <lines>
+          <li>[INITIATOR_nameDef] leaned back contentedly and said that the wonderfully heavy feeling had made the meal worthwhile.</li>
+          <li>[INITIATOR_nameDef] happily admitted that there was no room left for another full serving.</li>
+          <li>[INITIATOR_nameDef] praised the meal and immediately began discussing what they should eat next time.</li>
+          <li>[INITIATOR_nameDef] said that reaching their limit together had been surprisingly satisfying.</li>
+        </lines>
+      </li>
+      <li>
+        <activity>SharedMeal</activity>
+        <phase>Finishing</phase>
+        <relationship>Any</relationship>
+        <speech>BothSpeaking</speech>
+        <tone>Neutral</tone>
+        <lines>
+          <li>[INITIATOR_nameDef] declared the meal a success and suggested taking some time to relax.</li>
+          <li>[INITIATOR_nameDef] admitted that the portion had been more filling than expected.</li>
+          <li>[INITIATOR_nameDef] thanked [RECIPIENT_nameDef] for sharing the experience.</li>
+          <li>[INITIATOR_nameDef] said that trying one of [RECIPIENT_possessive] interests had been worthwhile.</li>
+        </lines>
+      </li>
+      <li>
+        <activity>SharedMeal</activity>
+        <phase>Finishing</phase>
+        <relationship>Any</relationship>
+        <speech>BothSpeaking</speech>
+        <tone>Reluctant</tone>
+        <lines>
+          <li>[INITIATOR_nameDef] said that [INITIATOR_nameDef] had definitely eaten enough, but appreciated [RECIPIENT_possessive] company.</li>
+          <li>[INITIATOR_nameDef] admitted that the experience had been better than expected, even if the portion was daunting.</li>
+          <li>[INITIATOR_nameDef] asked that their next shared interest involve a somewhat smaller meal.</li>
+        </lines>
+      </li>
+      <li>
+        <activity>SharedMeal</activity>
+        <phase>Finishing</phase>
+        <relationship>Any</relationship>
+        <speech>OneSpeaking</speech>
+        <tone>Any</tone>
+        <lines>
+          <li>[INITIATOR_nameDef] declared that they had both eaten enough. [RECIPIENT_nameDef] agreed with a satisfied nod.</li>
+          <li>[INITIATOR_nameDef] thanked [RECIPIENT_nameDef] for the shared meal. [RECIPIENT_nameDef] answered with a warm smile.</li>
+          <li>[INITIATOR_nameDef] suggested relaxing for a while. [RECIPIENT_nameDef] patted [RECIPIENT_possessive] stomach in agreement.</li>
+        </lines>
+      </li>
+      <li>
+        <activity>SharedMeal</activity>
+        <phase>Finishing</phase>
+        <relationship>Any</relationship>
+        <speech>NeitherSpeaking</speech>
+        <tone>Any</tone>
+        <lines>
+          <li>[INITIATOR_nameDef] and [RECIPIENT_nameDef] leaned back together, visibly satisfied with the finished meal.</li>
+          <li>[INITIATOR_nameDef] gestured that the meal was complete, and [RECIPIENT_nameDef] agreed with a contented smile.</li>
+          <li>[INITIATOR_nameDef] and [RECIPIENT_nameDef] exchanged a final pleased look before settling down to relax.</li>
+        </lines>
+      </li>
+      <!-- ======================== ONE-WAY FEEDING ======================= -->
+      <li>
+        <activity>Feeding</activity>
+        <phase>Starting</phase>
+        <relationship>Any</relationship>
+        <speech>BothSpeaking</speech>
+        <tone>Any</tone>
+        <speakerRole>Feeder</speakerRole>
+        <lines>
+          <li>[FEEDER_nameDef] asked [FEDPAWN_nameDef] what [FEDPAWN_nameDef] thought of the chosen meal.</li>
+          <li>[FEEDER_nameDef] joked that feeding [FEDPAWN_nameDef] was a very comfortable way to share an interest.</li>
+          <li>[FEEDER_nameDef] explained what made preparing generous portions for someone else enjoyable.</li>
+          <li>[FEEDER_nameDef] suggested taking the experience slowly and enjoying it together.</li>
+          <li>[FEEDER_nameDef] wondered whether [FEDPAWN_nameDef] would choose the same food next time.</li>
+        </lines>
+      </li>
+      <li>
+        <activity>Feeding</activity>
+        <phase>Starting</phase>
+        <relationship>Any</relationship>
+        <speech>BothSpeaking</speech>
+        <tone>Any</tone>
+        <speakerRole>FedPawn</speakerRole>
+        <lines>
+          <li>[FEDPAWN_nameDef] asked how [FEEDER_nameDef] first became interested in feeding others.</li>
+          <li>[FEDPAWN_nameDef] said that trying something [FEEDER_nameDef] enjoyed sounded interesting.</li>
+          <li>[FEDPAWN_nameDef] joked that the generous portion revealed [FEEDER_nameDef] enthusiasm.</li>
+          <li>[FEDPAWN_nameDef] asked what [FEEDER_nameDef] enjoyed most about the activity.</li>
+          <li>[FEDPAWN_nameDef] admitted to being curious about how the experience would feel.</li>
+        </lines>
+      </li>
+      <li>
+        <activity>Feeding</activity>
+        <phase>Starting</phase>
+        <relationship>Any</relationship>
+        <speech>OneSpeaking</speech>
+        <tone>Any</tone>
+        <speakerRole>Feeder</speakerRole>
+        <lines>
+          <li>[FEEDER_nameDef] explained the plan while [FEDPAWN_nameDef] listened and nodded.</li>
+          <li>[FEEDER_nameDef] asked whether [FEDPAWN_nameDef] was ready. [FEDPAWN_nameDef] replied with an eager gesture.</li>
+          <li>[FEEDER_nameDef] joked about the generous portion. [FEDPAWN_nameDef] answered with a broad smile.</li>
+          <li>[FEEDER_nameDef] talked about why feeding someone could be fun while [FEDPAWN_nameDef] watched with interest.</li>
+        </lines>
+      </li>
+      <li>
+        <activity>Feeding</activity>
+        <phase>Starting</phase>
+        <relationship>Any</relationship>
+        <speech>OneSpeaking</speech>
+        <tone>Any</tone>
+        <speakerRole>FedPawn</speakerRole>
+        <lines>
+          <li>[FEDPAWN_nameDef] said the meal looked generous. [FEEDER_nameDef] answered with a proud smile.</li>
+          <li>[FEDPAWN_nameDef] asked whether [FEEDER_nameDef] had planned the portion carefully. [FEEDER_nameDef] nodded.</li>
+          <li>[FEDPAWN_nameDef] joked that [FEEDER_nameDef] seemed very enthusiastic about the activity. [FEEDER_nameDef] grinned.</li>
+          <li>[FEDPAWN_nameDef] said that trying one of [FEEDER_possessive] interests sounded worthwhile. [FEEDER_nameDef] responded warmly.</li>
+        </lines>
+      </li>
+      <li>
+        <activity>Feeding</activity>
+        <phase>Starting</phase>
+        <relationship>Any</relationship>
+        <speech>NeitherSpeaking</speech>
+        <tone>Any</tone>
+        <speakerRole>MutualNarration</speakerRole>
+        <lines>
+          <li>[FEEDER_nameDef] offered the first portion, and [FEDPAWN_nameDef] accepted it with an interested nod.</li>
+          <li>[FEEDER_nameDef] gestured towards the food. [FEDPAWN_nameDef] smiled and signalled readiness.</li>
+          <li>[FEEDER_nameDef] and [FEDPAWN_nameDef] exchanged playful looks as the feeding began.</li>
+        </lines>
+      </li>
+      <li>
+        <activity>Feeding</activity>
+        <phase>Ongoing</phase>
+        <relationship>Any</relationship>
+        <speech>BothSpeaking</speech>
+        <tone>Neutral</tone>
+        <speakerRole>FedPawn</speakerRole>
+        <lines>
+          <li>[FEDPAWN_nameDef] admitted that trying one of [FEEDER_possessive] interests was more entertaining than expected.</li>
+          <li>[FEDPAWN_nameDef] asked what [FEEDER_nameDef] enjoyed most about feeding someone else.</li>
+          <li>[FEDPAWN_nameDef] wondered whether the activity was more about the food or the company.</li>
+          <li>[FEDPAWN_nameDef] suggested swapping roles during another session.</li>
+          <li>[FEDPAWN_nameDef] discussed which foods would make the best portions next time.</li>
+        </lines>
+      </li>
+      <li>
+        <activity>Feeding</activity>
+        <phase>Ongoing</phase>
+        <relationship>Any</relationship>
+        <speech>BothSpeaking</speech>
+        <tone>Neutral</tone>
+        <speakerRole>Feeder</speakerRole>
+        <lines>
+          <li>[FEEDER_nameDef] asked what [FEDPAWN_nameDef] thought of the experience so far.</li>
+          <li>[FEEDER_nameDef] explained why choosing the right portion was part of the fun.</li>
+          <li>[FEEDER_nameDef] wondered whether [FEDPAWN_nameDef] preferred the food or the attention.</li>
+          <li>[FEEDER_nameDef] suggested trying one of [FEDPAWN_possessive] interests in return.</li>
+          <li>[FEEDER_nameDef] asked what food [FEDPAWN_nameDef] would choose for another session.</li>
+        </lines>
+      </li>
+      <li>
+        <activity>Feeding</activity>
+        <phase>Ongoing</phase>
+        <relationship>Any</relationship>
+        <speech>BothSpeaking</speech>
+        <tone>Positive</tone>
+        <speakerRole>Feeder</speakerRole>
+        <lines>
+          <li>[FEEDER_nameDef] happily discussed how satisfying it felt to help [FEDPAWN_nameDef] become thoroughly full.</li>
+          <li>[FEEDER_nameDef] said that generous feeding and [FEDPAWN_possessive] growing appetite made an excellent combination.</li>
+          <li>[FEEDER_nameDef] enthusiastically wondered how much larger a portion [FEDPAWN_nameDef] might enjoy as capacity grew.</li>
+          <li>[FEEDER_nameDef] said that seeing [FEDPAWN_nameDef] relaxed, soft and well fed made the activity especially enjoyable.</li>
+          <li>[FEEDER_nameDef] suggested making the next feeding session even more indulgent.</li>
+        </lines>
+      </li>
+      <li>
+        <activity>Feeding</activity>
+        <phase>Ongoing</phase>
+        <relationship>Any</relationship>
+        <speech>BothSpeaking</speech>
+        <tone>Positive</tone>
+        <speakerRole>FedPawn</speakerRole>
+        <lines>
+          <li>[FEDPAWN_nameDef] admitted to loving the warm, heavy feeling produced by the generous meal.</li>
+          <li>[FEDPAWN_nameDef] happily talked about becoming comfortable with increasingly large portions.</li>
+          <li>[FEDPAWN_nameDef] wondered how much more food might fit after [FEDPAWN_possessive] capacity grew.</li>
+          <li>[FEDPAWN_nameDef] talked about the joys of becoming softer and better fed over time.</li>
+          <li>[FEDPAWN_nameDef] eagerly asked what [FEEDER_nameDef] might choose for the next session.</li>
+        </lines>
+      </li>
+      <li>
+        <activity>Feeding</activity>
+        <phase>Ongoing</phase>
+        <relationship>Any</relationship>
+        <speech>BothSpeaking</speech>
+        <tone>Reluctant</tone>
+        <speakerRole>FedPawn</speakerRole>
+        <lines>
+          <li>[INITIATOR_nameDef] admitted that the activity was unfamiliar, but appreciated being allowed to set a comfortable pace.</li>
+          <li>[INITIATOR_nameDef] asked what [RECIPIENT_nameDef] found appealing about feeding someone else.</li>
+          <li>[INITIATOR_nameDef] said that sharing an interest did not necessarily mean becoming an expert immediately.</li>
+          <li>[INITIATOR_nameDef] asked [RECIPIENT_nameDef] not to turn the experience into a contest.</li>
+          <li>[INITIATOR_nameDef] conceded that the attention and company were enjoyable, even if the fullness was not.</li>
+        </lines>
+      </li>
+      <li>
+        <activity>Feeding</activity>
+        <phase>Ongoing</phase>
+        <relationship>Friend</relationship>
+        <speech>Any</speech>
+        <tone>Any</tone>
+        <lines>
+          <li>[INITIATOR_nameDef] teased [RECIPIENT_nameDef] about enjoying this far too much.</li>
+          <li>[INITIATOR_nameDef] joked that [RECIPIENT_nameDef] had discovered an extremely lazy hobby.</li>
+          <li>[INITIATOR_nameDef] said it was fun to take part in something [RECIPIENT_nameDef] cared about.</li>
+          <li>[INITIATOR_nameDef] challenged [RECIPIENT_nameDef] to find an even better meal next time.</li>
+        </lines>
+      </li>
+      <li>
+        <activity>Feeding</activity>
+        <phase>Ongoing</phase>
+        <relationship>Family</relationship>
+        <speech>Any</speech>
+        <tone>Any</tone>
+        <lines>
+          <li>[INITIATOR_nameDef] joked that generous portions seemed to run in the family.</li>
+          <li>[INITIATOR_nameDef] recalled old family meals while offering another portion.</li>
+          <li>[INITIATOR_nameDef] said that it was good to have an excuse to spend time together.</li>
+          <li>[INITIATOR_nameDef] teased [RECIPIENT_nameDef] about never refusing a favourite food.</li>
+        </lines>
+      </li>
+      <li>
+        <activity>Feeding</activity>
+        <phase>Ongoing</phase>
+        <relationship>Romantic</relationship>
+        <speech>Any</speech>
+        <tone>Any</tone>
+        <speakerRole>Feeder</speakerRole>
+        <lines>
+          <li>[FEEDER_nameDef] affectionately said that feeding [FEDPAWN_nameDef] made the shared experience special.</li>
+          <li>[FEEDER_nameDef] gently teased [FEDPAWN_nameDef] about [FEDPAWN_possessive] appetite.</li>
+          <li>[FEEDER_nameDef] said that seeing [FEDPAWN_nameDef] relaxed and enjoying the attention was irresistible.</li>
+          <li>[FEEDER_nameDef] promised to choose another of [FEDPAWN_possessive] favourite foods next time.</li>
+          <li>[FEEDER_nameDef] smiled and said that spoiling [FEDPAWN_nameDef] was a wonderfully indulgent way to spend time together.</li>
+        </lines>
+      </li>
+      <li>
+        <activity>Feeding</activity>
+        <phase>Ongoing</phase>
+        <relationship>Romantic</relationship>
+        <speech>Any</speech>
+        <tone>Any</tone>
+        <speakerRole>FedPawn</speakerRole>
+        <lines>
+          <li>[FEDPAWN_nameDef] said that being fed by [FEEDER_nameDef] made the experience feel special.</li>
+          <li>[FEDPAWN_nameDef] affectionately teased [FEEDER_nameDef] about enjoying the feeder role far too much.</li>
+          <li>[FEDPAWN_nameDef] admitted that [FEEDER_possessive] attention made the meal especially enjoyable.</li>
+          <li>[FEDPAWN_nameDef] asked what [FEEDER_nameDef] planned to tempt [FEDPAWN_nameDef] with next time.</li>
+          <li>[FEDPAWN_nameDef] said that sharing this interest with [FEEDER_nameDef] felt wonderfully intimate.</li>
+        </lines>
+      </li>
+      <li>
+        <activity>Feeding</activity>
+        <phase>Ongoing</phase>
+        <relationship>Strained</relationship>
+        <speech>Any</speech>
+        <tone>Any</tone>
+        <speakerRole>Feeder</speakerRole>
+        <lines>
+          <li>[FEEDER_nameDef] kept the conversation careful and asked whether [FEDPAWN_nameDef] still wanted to continue.</li>
+          <li>[FEEDER_nameDef] admitted that cooperating over the food seemed to be easing the tension.</li>
+          <li>[FEEDER_nameDef] reassured [FEDPAWN_nameDef] that the activity did not need to become more awkward than it already was.</li>
+          <li>[FEEDER_nameDef] asked what would make the shared experience more comfortable for [FEDPAWN_nameDef].</li>
+        </lines>
+      </li>
+      <li>
+        <activity>Feeding</activity>
+        <phase>Ongoing</phase>
+        <relationship>Strained</relationship>
+        <speech>Any</speech>
+        <tone>Any</tone>
+        <speakerRole>FedPawn</speakerRole>
+        <lines>
+          <li>[FEDPAWN_nameDef] cautiously tried to understand what [FEEDER_nameDef] enjoyed about the activity.</li>
+          <li>[FEDPAWN_nameDef] admitted that cooperating over the food was helping to ease the tension.</li>
+          <li>[FEDPAWN_nameDef] said that trying [FEEDER_possessive] interest was less awkward than expected.</li>
+          <li>[FEDPAWN_nameDef] agreed that neither pawn needed to pretend the situation was completely comfortable.</li>
+        </lines>
+      </li>
+      <li>
+        <activity>Feeding</activity>
+        <phase>Ongoing</phase>
+        <relationship>Any</relationship>
+        <speech>OneSpeaking</speech>
+        <tone>Any</tone>
+        <speakerRole>Feeder</speakerRole>
+        <lines>
+          <li>[FEEDER_nameDef] asked how the pace felt. [FEDPAWN_nameDef] answered with a reassuring nod.</li>
+          <li>[FEEDER_nameDef] joked about the portion. [FEDPAWN_nameDef] replied with an exaggerated look of disbelief.</li>
+          <li>[FEEDER_nameDef] talked about the fun of sharing interests while [FEDPAWN_nameDef] listened attentively.</li>
+          <li>[FEEDER_nameDef] suggested another serving. [FEDPAWN_nameDef] responded with an eager gesture.</li>
+          <li>[FEEDER_nameDef] asked whether this should become a regular activity. [FEDPAWN_nameDef] smiled in response.</li>
+        </lines>
+      </li>
+      <li>
+        <activity>Feeding</activity>
+        <phase>Ongoing</phase>
+        <relationship>Any</relationship>
+        <speech>OneSpeaking</speech>
+        <tone>Any</tone>
+        <speakerRole>FedPawn</speakerRole>
+        <lines>
+          <li>[FEDPAWN_nameDef] commented on the generous pace. [FEEDER_nameDef] replied with an encouraging nod.</li>
+          <li>[FEDPAWN_nameDef] joked that [FEEDER_nameDef] was enjoying the activity far too much. [FEEDER_nameDef] grinned.</li>
+          <li>[FEDPAWN_nameDef] said that trying [FEEDER_possessive] interest was unexpectedly fun. [FEEDER_nameDef] responded warmly.</li>
+          <li>[FEDPAWN_nameDef] asked for another serving. [FEEDER_nameDef] immediately prepared it.</li>
+          <li>[FEDPAWN_nameDef] suggested doing this again. [FEEDER_nameDef] answered with an eager gesture.</li>
+        </lines>
+      </li>
+      <li>
+        <activity>Feeding</activity>
+        <phase>Ongoing</phase>
+        <relationship>Any</relationship>
+        <speech>NeitherSpeaking</speech>
+        <tone>Any</tone>
+        <speakerRole>MutualNarration</speakerRole>
+        <lines>
+          <li>[FEEDER_nameDef] offered another portion, and [FEDPAWN_nameDef] accepted with a playful grin.</li>
+          <li>[FEDPAWN_nameDef] patted [FEDPAWN_possessive] stomach and gave [FEEDER_nameDef] a thoughtful look.</li>
+          <li>[FEEDER_nameDef] paused for confirmation. [FEDPAWN_nameDef] nodded and gestured for the activity to continue.</li>
+          <li>[FEEDER_nameDef] and [FEDPAWN_nameDef] exchanged amused expressions over the dwindling food.</li>
+        </lines>
+      </li>
+      <li>
+        <activity>Feeding</activity>
+        <phase>Finishing</phase>
+        <relationship>Any</relationship>
+        <speech>BothSpeaking</speech>
+        <tone>Positive</tone>
+        <speakerRole>FedPawn</speakerRole>
+        <lines>
+          <li>[FEDPAWN_nameDef] happily said that the thoroughly full feeling was exactly what [FEDPAWN_nameDef] had hoped for.</li>
+          <li>[FEDPAWN_nameDef] praised the session and enthusiastically discussed doing it again.</li>
+          <li>[FEDPAWN_nameDef] admitted that another full serving would be impossible, but looked delighted about it.</li>
+          <li>[FEDPAWN_nameDef] said that exploring this interest with [FEEDER_nameDef] had been deeply satisfying.</li>
+        </lines>
+      </li>
+      <li>
+        <activity>Feeding</activity>
+        <phase>Finishing</phase>
+        <relationship>Any</relationship>
+        <speech>BothSpeaking</speech>
+        <tone>Positive</tone>
+        <speakerRole>Feeder</speakerRole>
+        <lines>
+          <li>[FEEDER_nameDef] said that helping [FEDPAWN_nameDef] reach such a satisfied stopping point had been deeply enjoyable.</li>
+          <li>[FEEDER_nameDef] praised [FEDPAWN_nameDef] for handling the generous portions so well.</li>
+          <li>[FEEDER_nameDef] happily began discussing what they might try during another session.</li>
+          <li>[FEEDER_nameDef] said that sharing the interest with [FEDPAWN_nameDef] had made it especially satisfying.</li>
+        </lines>
+      </li>
+      <li>
+        <activity>Feeding</activity>
+        <phase>Finishing</phase>
+        <relationship>Any</relationship>
+        <speech>BothSpeaking</speech>
+        <tone>Neutral</tone>
+        <lines>
+          <li>[INITIATOR_nameDef] agreed that they had reached a good stopping point.</li>
+          <li>[INITIATOR_nameDef] thanked [RECIPIENT_nameDef] for making the experience enjoyable.</li>
+          <li>[INITIATOR_nameDef] admitted that the activity had been more fun than expected.</li>
+          <li>[INITIATOR_nameDef] suggested trading roles if they tried it again.</li>
+        </lines>
+      </li>
+      <li>
+        <activity>Feeding</activity>
+        <phase>Finishing</phase>
+        <relationship>Any</relationship>
+        <speech>BothSpeaking</speech>
+        <tone>Reluctant</tone>
+        <speakerRole>FedPawn</speakerRole>
+        <lines>
+          <li>[FEDPAWN_nameDef] firmly said that this was enough food for now, but thanked [FEEDER_nameDef] for respecting the limit.</li>
+          <li>[FEDPAWN_nameDef] admitted that trying the activity had been worthwhile, even though the fullness was challenging.</li>
+          <li>[FEDPAWN_nameDef] said that feeding as a shared interest made more sense after trying it with [FEEDER_nameDef].</li>
+        </lines>
+      </li>
+      <li>
+        <activity>Feeding</activity>
+        <phase>Finishing</phase>
+        <relationship>Any</relationship>
+        <speech>OneSpeaking</speech>
+        <tone>Any</tone>
+        <speakerRole>Feeder</speakerRole>
+        <lines>
+          <li>[FEEDER_nameDef] declared the session complete. [FEDPAWN_nameDef] answered with a satisfied smile.</li>
+          <li>[FEEDER_nameDef] thanked [FEDPAWN_nameDef] for sharing the experience. [FEDPAWN_nameDef] squeezed [FEEDER_possessive] hand.</li>
+          <li>[FEEDER_nameDef] suggested taking a break. [FEDPAWN_nameDef] patted [FEDPAWN_possessive] stomach in agreement.</li>
+        </lines>
+      </li>
+      <li>
+        <activity>Feeding</activity>
+        <phase>Finishing</phase>
+        <relationship>Any</relationship>
+        <speech>OneSpeaking</speech>
+        <tone>Any</tone>
+        <speakerRole>FedPawn</speakerRole>
+        <lines>
+          <li>[FEDPAWN_nameDef] said that the session had reached a good stopping point. [FEEDER_nameDef] nodded in agreement.</li>
+          <li>[FEDPAWN_nameDef] thanked [FEEDER_nameDef] for sharing the experience. [FEEDER_nameDef] answered with a pleased smile.</li>
+          <li>[FEDPAWN_nameDef] suggested relaxing for a while. [FEEDER_nameDef] responded with an approving gesture.</li>
+        </lines>
+      </li>
+      <li>
+        <activity>Feeding</activity>
+        <phase>Finishing</phase>
+        <relationship>Any</relationship>
+        <speech>NeitherSpeaking</speech>
+        <tone>Any</tone>
+        <speakerRole>MutualNarration</speakerRole>
+        <lines>
+          <li>[FEEDER_nameDef] signalled that the feeding was complete, and [FEDPAWN_nameDef] responded with a contented nod.</li>
+          <li>[FEDPAWN_nameDef] rested a hand on [FEDPAWN_possessive] stomach while [FEEDER_nameDef] smiled approvingly.</li>
+          <li>[FEEDER_nameDef] and [FEDPAWN_nameDef] exchanged a pleased look before settling down to relax.</li>
+        </lines>
+      </li>
+      <!-- ======================= FEEDING IN PLACE ======================= -->
+      <li>
+        <activity>FeedingInPlace</activity>
+        <phase>Starting</phase>
+        <relationship>Any</relationship>
+        <speech>BothSpeaking</speech>
+        <tone>Any</tone>
+        <speakerRole>Feeder</speakerRole>
+        <lines>
+          <li>[FEEDER_nameDef] said that staying comfortable while sharing the activity sounded like an excellent plan.</li>
+          <li>[FEEDER_nameDef] asked what had made [FEDPAWN_nameDef] curious about trying this.</li>
+          <li>[FEEDER_nameDef] joked that [FEDPAWN_nameDef] had found the most relaxed possible way to enjoy a meal.</li>
+          <li>[FEEDER_nameDef] asked which part of the experience [FEDPAWN_nameDef] was looking forward to most.</li>
+          <li>[FEEDER_nameDef] said that feeding [FEDPAWN_nameDef] was a pleasant excuse to spend time together.</li>
+        </lines>
+      </li>
+      <li>
+        <activity>FeedingInPlace</activity>
+        <phase>Starting</phase>
+        <relationship>Any</relationship>
+        <speech>BothSpeaking</speech>
+        <tone>Any</tone>
+        <speakerRole>FedPawn</speakerRole>
+        <lines>
+          <li>[FEDPAWN_nameDef] said that trying the activity while staying comfortable sounded appealing.</li>
+          <li>[FEDPAWN_nameDef] asked how [FEEDER_nameDef] became interested in feeding others.</li>
+          <li>[FEDPAWN_nameDef] joked that [FEEDER_nameDef] had arranged an impressively relaxed meal.</li>
+          <li>[FEDPAWN_nameDef] asked what [FEEDER_nameDef] enjoyed most about this kind of shared activity.</li>
+          <li>[FEDPAWN_nameDef] said that trying one of [FEEDER_possessive] interests was a pleasant way to spend time together.</li>
+        </lines>
+      </li>
+      <li>
+        <activity>FeedingInPlace</activity>
+        <phase>Starting</phase>
+        <relationship>Any</relationship>
+        <speech>OneSpeaking</speech>
+        <tone>Any</tone>
+        <speakerRole>Feeder</speakerRole>
+        <lines>
+          <li>[FEEDER_nameDef] explained the activity while [FEDPAWN_nameDef] listened with clear interest.</li>
+          <li>[FEEDER_nameDef] asked whether [FEDPAWN_nameDef] was ready. [FEDPAWN_nameDef] responded with an eager nod.</li>
+          <li>[FEEDER_nameDef] joked about the comfortable arrangement. [FEDPAWN_nameDef] smiled in agreement.</li>
+          <li>[FEEDER_nameDef] described the food and received an approving gesture from [FEDPAWN_nameDef].</li>
+        </lines>
+      </li>
+      <li>
+        <activity>FeedingInPlace</activity>
+        <phase>Starting</phase>
+        <relationship>Any</relationship>
+        <speech>OneSpeaking</speech>
+        <tone>Any</tone>
+        <speakerRole>FedPawn</speakerRole>
+        <lines>
+          <li>[FEDPAWN_nameDef] commented on the comfortable arrangement. [FEEDER_nameDef] answered with a pleased smile.</li>
+          <li>[FEDPAWN_nameDef] asked whether [FEEDER_nameDef] was ready to begin. [FEEDER_nameDef] nodded eagerly.</li>
+          <li>[FEDPAWN_nameDef] joked about the generous food. [FEEDER_nameDef] responded with an amused shrug.</li>
+          <li>[FEDPAWN_nameDef] said that trying [FEEDER_possessive] interest seemed surprisingly relaxing. [FEEDER_nameDef] smiled.</li>
+        </lines>
+      </li>
+      <li>
+        <activity>FeedingInPlace</activity>
+        <phase>Starting</phase>
+        <relationship>Any</relationship>
+        <speech>NeitherSpeaking</speech>
+        <tone>Any</tone>
+        <speakerRole>MutualNarration</speakerRole>
+        <lines>
+          <li>[FEEDER_nameDef] presented the food, and [FEDPAWN_nameDef] answered with an enthusiastic smile.</li>
+          <li>[FEEDER_nameDef] gestured towards the first portion. [FEDPAWN_nameDef] nodded and settled comfortably.</li>
+          <li>[FEEDER_nameDef] and [FEDPAWN_nameDef] exchanged playful looks as they began.</li>
+        </lines>
+      </li>
+      <li>
+        <activity>FeedingInPlace</activity>
+        <phase>Ongoing</phase>
+        <relationship>Any</relationship>
+        <speech>BothSpeaking</speech>
+        <tone>Neutral</tone>
+        <speakerRole>FedPawn</speakerRole>
+        <lines>
+          <li>[FEDPAWN_nameDef] admitted that this was a surprisingly enjoyable way to explore one of [FEEDER_possessive] interests.</li>
+          <li>[FEDPAWN_nameDef] asked whether [FEEDER_nameDef] enjoyed the food preparation or the shared attention more.</li>
+          <li>[FEDPAWN_nameDef] wondered what other relaxing activities they could try together.</li>
+          <li>[FEDPAWN_nameDef] said that the unhurried conversation was making the food more enjoyable.</li>
+          <li>[FEDPAWN_nameDef] suggested reversing roles during a future session.</li>
+        </lines>
+      </li>
+      <li>
+        <activity>FeedingInPlace</activity>
+        <phase>Ongoing</phase>
+        <relationship>Any</relationship>
+        <speech>BothSpeaking</speech>
+        <tone>Neutral</tone>
+        <speakerRole>Feeder</speakerRole>
+        <lines>
+          <li>[FEEDER_nameDef] asked whether [FEDPAWN_nameDef] enjoyed the food or the attention more.</li>
+          <li>[FEEDER_nameDef] said that the relaxed arrangement made sharing the interest especially enjoyable.</li>
+          <li>[FEEDER_nameDef] wondered what other quiet activities they could try together.</li>
+          <li>[FEEDER_nameDef] said that the unhurried conversation made feeding [FEDPAWN_nameDef] more enjoyable.</li>
+          <li>[FEEDER_nameDef] suggested trying one of [FEDPAWN_possessive] interests next time.</li>
+        </lines>
+      </li>
+      <li>
+        <activity>FeedingInPlace</activity>
+        <phase>Ongoing</phase>
+        <relationship>Any</relationship>
+        <speech>BothSpeaking</speech>
+        <tone>Positive</tone>
+        <speakerRole>FedPawn</speakerRole>
+        <lines>
+          <li>[FEDPAWN_nameDef] happily talked about the pleasure of relaxing while becoming increasingly full.</li>
+          <li>[FEDPAWN_nameDef] said that the comfortable arrangement made indulging in a large meal even better.</li>
+          <li>[FEDPAWN_nameDef] wondered how much more enjoyable this would become as [FEDPAWN_possessive] appetite grew.</li>
+          <li>[FEDPAWN_nameDef] enthusiastically discussed the joys of being soft, well fed and completely at ease.</li>
+          <li>[FEDPAWN_nameDef] admitted that the heavy feeling of fullness was becoming wonderfully relaxing.</li>
+        </lines>
+      </li>
+      <li>
+        <activity>FeedingInPlace</activity>
+        <phase>Ongoing</phase>
+        <relationship>Any</relationship>
+        <speech>BothSpeaking</speech>
+        <tone>Positive</tone>
+        <speakerRole>Feeder</speakerRole>
+        <lines>
+          <li>[FEEDER_nameDef] said that helping [FEDPAWN_nameDef] relax while becoming increasingly full was deeply satisfying.</li>
+          <li>[FEEDER_nameDef] happily commented on how comfortable and content [FEDPAWN_nameDef] looked.</li>
+          <li>[FEEDER_nameDef] wondered what larger portion [FEDPAWN_nameDef] might enjoy as capacity grew.</li>
+          <li>[FEEDER_nameDef] enthusiastically discussed making this a regular shared indulgence.</li>
+          <li>[FEEDER_nameDef] admitted that spoiling [FEDPAWN_nameDef] this way was wonderfully relaxing.</li>
+        </lines>
+      </li>
+      <li>
+        <activity>FeedingInPlace</activity>
+        <phase>Ongoing</phase>
+        <relationship>Any</relationship>
+        <speech>BothSpeaking</speech>
+        <tone>Reluctant</tone>
+        <speakerRole>FedPawn</speakerRole>
+        <lines>
+          <li>[INITIATOR_nameDef] said that trying the activity in a relaxed setting made it easier to understand.</li>
+          <li>[INITIATOR_nameDef] admitted that the attention was enjoyable even if becoming very full was not.</li>
+          <li>[INITIATOR_nameDef] asked [RECIPIENT_nameDef] what made the experience so appealing.</li>
+          <li>[INITIATOR_nameDef] said that curiosity was not the same as promising to make this a regular habit.</li>
+          <li>[INITIATOR_nameDef] appreciated being able to explore the interest without pressure.</li>
+        </lines>
+      </li>
+      <li>
+        <activity>FeedingInPlace</activity>
+        <phase>Ongoing</phase>
+        <relationship>Friend</relationship>
+        <speech>Any</speech>
+        <tone>Any</tone>
+        <lines>
+          <li>[INITIATOR_nameDef] teased [RECIPIENT_nameDef] about choosing such an effortlessly comfortable hobby.</li>
+          <li>[INITIATOR_nameDef] said that trying a friend's favourite activity was turning out to be great fun.</li>
+          <li>[INITIATOR_nameDef] joked that [RECIPIENT_nameDef] was becoming far too skilled at relaxing.</li>
+          <li>[INITIATOR_nameDef] suggested another food they could try during their next session.</li>
+        </lines>
+      </li>
+      <li>
+        <activity>FeedingInPlace</activity>
+        <phase>Ongoing</phase>
+        <relationship>Family</relationship>
+        <speech>Any</speech>
+        <tone>Any</tone>
+        <lines>
+          <li>[INITIATOR_nameDef] joked that comfortable meals and generous portions clearly ran in the family.</li>
+          <li>[INITIATOR_nameDef] recalled an old family story while sharing another portion.</li>
+          <li>[INITIATOR_nameDef] said it was good to have some quiet time together.</li>
+          <li>[INITIATOR_nameDef] teased [RECIPIENT_nameDef] about always finding the easiest seat in the colony.</li>
+        </lines>
+      </li>
+      <li>
+        <activity>FeedingInPlace</activity>
+        <phase>Ongoing</phase>
+        <relationship>Romantic</relationship>
+        <speech>Any</speech>
+        <tone>Any</tone>
+        <speakerRole>Feeder</speakerRole>
+        <lines>
+          <li>[FEEDER_nameDef] affectionately said that feeding [FEDPAWN_nameDef] this way was wonderfully intimate.</li>
+          <li>[FEEDER_nameDef] told [FEDPAWN_nameDef] that seeing [FEDPAWN_nameDef] comfortable and content was irresistible.</li>
+          <li>[FEEDER_nameDef] gently teased [FEDPAWN_nameDef] about being thoroughly spoiled.</li>
+          <li>[FEEDER_nameDef] held [FEDPAWN_possessive] hand while talking about what they should try next time.</li>
+          <li>[FEEDER_nameDef] admitted that sharing this interest with [FEDPAWN_nameDef] made it especially enjoyable.</li>
+        </lines>
+      </li>
+      <li>
+        <activity>FeedingInPlace</activity>
+        <phase>Ongoing</phase>
+        <relationship>Romantic</relationship>
+        <speech>Any</speech>
+        <tone>Any</tone>
+        <speakerRole>FedPawn</speakerRole>
+        <lines>
+          <li>[FEDPAWN_nameDef] said that being fed by [FEEDER_nameDef] made the relaxed experience feel especially intimate.</li>
+          <li>[FEDPAWN_nameDef] affectionately teased [FEEDER_nameDef] about enjoying the feeder role so much.</li>
+          <li>[FEDPAWN_nameDef] admitted that being thoroughly spoiled by [FEEDER_nameDef] was difficult to resist.</li>
+          <li>[FEDPAWN_nameDef] held [FEEDER_possessive] hand while asking what they should try next time.</li>
+          <li>[FEDPAWN_nameDef] said that sharing this interest with [FEEDER_nameDef] made it especially enjoyable.</li>
+        </lines>
+      </li>
+      <li>
+        <activity>FeedingInPlace</activity>
+        <phase>Ongoing</phase>
+        <relationship>Strained</relationship>
+        <speech>Any</speech>
+        <tone>Any</tone>
+        <speakerRole>Feeder</speakerRole>
+        <lines>
+          <li>[FEEDER_nameDef] cautiously admitted that spending time with [FEDPAWN_nameDef] this way seemed to be easing the tension.</li>
+          <li>[FEEDER_nameDef] kept the conversation polite and asked whether [FEDPAWN_nameDef] was enjoying the activity.</li>
+          <li>[FEEDER_nameDef] explained why sharing the experience mattered without pressuring [FEDPAWN_nameDef].</li>
+          <li>[FEEDER_nameDef] acknowledged the awkwardness but said the food at least provided common ground.</li>
+        </lines>
+      </li>
+      <li>
+        <activity>FeedingInPlace</activity>
+        <phase>Ongoing</phase>
+        <relationship>Strained</relationship>
+        <speech>Any</speech>
+        <tone>Any</tone>
+        <speakerRole>FedPawn</speakerRole>
+        <lines>
+          <li>[FEDPAWN_nameDef] cautiously admitted that spending time with [FEEDER_nameDef] this way seemed to be easing the tension.</li>
+          <li>[FEDPAWN_nameDef] tried to understand why the experience mattered to [FEEDER_nameDef].</li>
+          <li>[FEDPAWN_nameDef] admitted that trying [FEEDER_possessive] interest was less awkward than expected.</li>
+          <li>[FEDPAWN_nameDef] acknowledged the awkwardness but agreed that the food provided common ground.</li>
+        </lines>
+      </li>
+      <li>
+        <activity>FeedingInPlace</activity>
+        <phase>Ongoing</phase>
+        <relationship>Any</relationship>
+        <speech>OneSpeaking</speech>
+        <tone>Any</tone>
+        <speakerRole>Feeder</speakerRole>
+        <lines>
+          <li>[FEEDER_nameDef] chatted about the food while [FEDPAWN_nameDef] replied with smiles and gestures.</li>
+          <li>[FEEDER_nameDef] asked whether [FEDPAWN_nameDef] wanted another portion. [FEDPAWN_nameDef] nodded eagerly.</li>
+          <li>[FEEDER_nameDef] teased [FEDPAWN_nameDef], who answered with an exaggerated eye roll.</li>
+          <li>[FEEDER_nameDef] described why the activity was enjoyable while [FEDPAWN_nameDef] listened closely.</li>
+          <li>[FEEDER_nameDef] suggested doing this again. [FEDPAWN_nameDef] responded with a warm smile.</li>
+        </lines>
+      </li>
+      <li>
+        <activity>FeedingInPlace</activity>
+        <phase>Ongoing</phase>
+        <relationship>Any</relationship>
+        <speech>OneSpeaking</speech>
+        <tone>Any</tone>
+        <speakerRole>FedPawn</speakerRole>
+        <lines>
+          <li>[FEDPAWN_nameDef] chatted about the food while [FEEDER_nameDef] replied with smiles and gestures.</li>
+          <li>[FEDPAWN_nameDef] asked for another portion. [FEEDER_nameDef] nodded and prepared it.</li>
+          <li>[FEDPAWN_nameDef] teased [FEEDER_nameDef], who answered with an exaggerated shrug.</li>
+          <li>[FEDPAWN_nameDef] described why the relaxed activity was enjoyable while [FEEDER_nameDef] listened closely.</li>
+          <li>[FEDPAWN_nameDef] suggested doing this again. [FEEDER_nameDef] responded with a warm smile.</li>
+        </lines>
+      </li>
+      <li>
+        <activity>FeedingInPlace</activity>
+        <phase>Ongoing</phase>
+        <relationship>Any</relationship>
+        <speech>NeitherSpeaking</speech>
+        <tone>Any</tone>
+        <speakerRole>MutualNarration</speakerRole>
+        <lines>
+          <li>[FEEDER_nameDef] offered another portion. [FEDPAWN_nameDef] accepted it with a pleased nod.</li>
+          <li>[FEDPAWN_nameDef] patted [FEDPAWN_possessive] stomach and gave [FEEDER_nameDef] a playful look.</li>
+          <li>[FEEDER_nameDef] paused, and [FEDPAWN_nameDef] gestured enthusiastically for the activity to continue.</li>
+          <li>[FEEDER_nameDef] and [FEDPAWN_nameDef] traded amused expressions as they relaxed together.</li>
+        </lines>
+      </li>
+      <li>
+        <activity>FeedingInPlace</activity>
+        <phase>Finishing</phase>
+        <relationship>Any</relationship>
+        <speech>BothSpeaking</speech>
+        <tone>Positive</tone>
+        <speakerRole>FedPawn</speakerRole>
+        <lines>
+          <li>[FEDPAWN_nameDef] contentedly said that the full, heavy feeling had made the relaxed session perfect.</li>
+          <li>[FEDPAWN_nameDef] happily admitted that there was no room left for another proper serving.</li>
+          <li>[FEDPAWN_nameDef] praised the experience and began planning an even more indulgent version for next time.</li>
+          <li>[FEDPAWN_nameDef] said that being completely full while spending time with [FEEDER_nameDef] was wonderfully satisfying.</li>
+        </lines>
+      </li>
+      <li>
+        <activity>FeedingInPlace</activity>
+        <phase>Finishing</phase>
+        <relationship>Any</relationship>
+        <speech>BothSpeaking</speech>
+        <tone>Positive</tone>
+        <speakerRole>Feeder</speakerRole>
+        <lines>
+          <li>[FEEDER_nameDef] contentedly said that seeing [FEDPAWN_nameDef] so relaxed and full had made the session perfect.</li>
+          <li>[FEEDER_nameDef] happily agreed that [FEDPAWN_nameDef] had reached a thoroughly satisfying stopping point.</li>
+          <li>[FEEDER_nameDef] praised the experience and began planning another indulgent version for next time.</li>
+          <li>[FEEDER_nameDef] said that sharing this interest with [FEDPAWN_nameDef] had been wonderfully satisfying.</li>
+        </lines>
+      </li>
+      <li>
+        <activity>FeedingInPlace</activity>
+        <phase>Finishing</phase>
+        <relationship>Any</relationship>
+        <speech>BothSpeaking</speech>
+        <tone>Neutral</tone>
+        <lines>
+          <li>[INITIATOR_nameDef] agreed that they had reached a comfortable stopping point.</li>
+          <li>[INITIATOR_nameDef] thanked [RECIPIENT_nameDef] for sharing the unusual but enjoyable experience.</li>
+          <li>[INITIATOR_nameDef] said that trying another pawn's interest had been worthwhile.</li>
+          <li>[INITIATOR_nameDef] suggested simply relaxing together for a while longer.</li>
+        </lines>
+      </li>
+      <li>
+        <activity>FeedingInPlace</activity>
+        <phase>Finishing</phase>
+        <relationship>Any</relationship>
+        <speech>BothSpeaking</speech>
+        <tone>Reluctant</tone>
+        <speakerRole>FedPawn</speakerRole>
+        <lines>
+          <li>[FEDPAWN_nameDef] said that this was enough for now, but appreciated being included without pressure.</li>
+          <li>[FEDPAWN_nameDef] admitted that the activity had been more enjoyable than expected.</li>
+          <li>[FEDPAWN_nameDef] said that feeding as a shared interest made more sense after trying it with [FEEDER_nameDef].</li>
+        </lines>
+      </li>
+      <li>
+        <activity>FeedingInPlace</activity>
+        <phase>Finishing</phase>
+        <relationship>Any</relationship>
+        <speech>OneSpeaking</speech>
+        <tone>Any</tone>
+        <speakerRole>Feeder</speakerRole>
+        <lines>
+          <li>[FEEDER_nameDef] announced that they had reached a good stopping point. [FEDPAWN_nameDef] nodded contentedly.</li>
+          <li>[FEEDER_nameDef] thanked [FEDPAWN_nameDef] for the shared experience. [FEDPAWN_nameDef] answered with a warm smile.</li>
+          <li>[FEEDER_nameDef] suggested relaxing. [FEDPAWN_nameDef] settled back with an appreciative expression.</li>
+        </lines>
+      </li>
+      <li>
+        <activity>FeedingInPlace</activity>
+        <phase>Finishing</phase>
+        <relationship>Any</relationship>
+        <speech>OneSpeaking</speech>
+        <tone>Any</tone>
+        <speakerRole>FedPawn</speakerRole>
+        <lines>
+          <li>[FEDPAWN_nameDef] said that they had reached a good stopping point. [FEEDER_nameDef] nodded contentedly.</li>
+          <li>[FEDPAWN_nameDef] thanked [FEEDER_nameDef] for the shared experience. [FEEDER_nameDef] answered with a warm smile.</li>
+          <li>[FEDPAWN_nameDef] suggested relaxing. [FEEDER_nameDef] responded with an appreciative expression.</li>
+        </lines>
+      </li>
+      <li>
+        <activity>FeedingInPlace</activity>
+        <phase>Finishing</phase>
+        <relationship>Any</relationship>
+        <speech>NeitherSpeaking</speech>
+        <tone>Any</tone>
+        <speakerRole>MutualNarration</speakerRole>
+        <lines>
+          <li>[FEEDER_nameDef] signalled that the session was complete, and [FEDPAWN_nameDef] responded with a satisfied nod.</li>
+          <li>[FEDPAWN_nameDef] rested a hand on [FEDPAWN_possessive] stomach while [FEEDER_nameDef] smiled.</li>
+          <li>[FEEDER_nameDef] and [FEDPAWN_nameDef] settled comfortably, clearly pleased with the time spent together.</li>
+        </lines>
+      </li>
+      <!-- ========================= POST-SHARED-MEAL SOCIAL RECREATION ========================= -->
+      <li>
+        <activity>PostSharedMeal</activity>
+        <phase>Starting</phase>
+        <relationship>Any</relationship>
+        <speech>BothSpeaking</speech>
+        <tone>Any</tone>
+        <firstWeightGoal>Any</firstWeightGoal>
+        <secondWeightGoal>Any</secondWeightGoal>
+        <firstSize>Any</firstSize>
+        <secondSize>Any</secondSize>
+        <fullness>Any</fullness>
+        <fullnessMood>Any</fullnessMood>
+        <speakerRole>Either</speakerRole>
+        <lines>
+          <li>[INITIATOR_nameDef] settled back after the meal and kept the conversation going.</li>
+          <li>[INITIATOR_nameDef] suggested relaxing together for a while longer instead of rushing away.</li>
+          <li>[INITIATOR_nameDef] asked [RECIPIENT_nameDef] how the meal had left [RECIPIENT_nameDef] feeling.</li>
+        </lines>
+      </li>
+      <li>
+        <activity>PostSharedMeal</activity>
+        <phase>Starting</phase>
+        <relationship>Any</relationship>
+        <speech>OneSpeaking</speech>
+        <tone>Any</tone>
+        <firstWeightGoal>Any</firstWeightGoal>
+        <secondWeightGoal>Any</secondWeightGoal>
+        <firstSize>Any</firstSize>
+        <secondSize>Any</secondSize>
+        <fullness>Any</fullness>
+        <fullnessMood>Any</fullnessMood>
+        <speakerRole>Either</speakerRole>
+        <lines>
+          <li>[INITIATOR_nameDef] chatted comfortably while [RECIPIENT_nameDef] answered with attentive gestures.</li>
+          <li>[INITIATOR_nameDef] continued talking about the meal as [RECIPIENT_nameDef] listened contentedly.</li>
+          <li>[INITIATOR_nameDef] joked about lingering after the meal. [RECIPIENT_nameDef] replied with an amused look.</li>
+        </lines>
+      </li>
+      <li>
+        <activity>PostSharedMeal</activity>
+        <phase>Starting</phase>
+        <relationship>Any</relationship>
+        <speech>NeitherSpeaking</speech>
+        <tone>Any</tone>
+        <firstWeightGoal>Any</firstWeightGoal>
+        <secondWeightGoal>Any</secondWeightGoal>
+        <firstSize>Any</firstSize>
+        <secondSize>Any</secondSize>
+        <fullness>Any</fullness>
+        <fullnessMood>Any</fullnessMood>
+        <speakerRole>MutualNarration</speakerRole>
+        <lines>
+          <li>[INITIATOR_nameDef] and [RECIPIENT_nameDef] remained together, exchanging relaxed smiles after the meal.</li>
+          <li>[INITIATOR_nameDef] and [RECIPIENT_nameDef] quietly enjoyed each other’s company while they recovered from the meal.</li>
+          <li>[INITIATOR_nameDef] gave [RECIPIENT_nameDef] a playful look, and both settled in for a little longer.</li>
+        </lines>
+      </li>
+      <li>
+        <activity>PostSharedMeal</activity>
+        <phase>Ongoing</phase>
+        <relationship>Any</relationship>
+        <speech>Any</speech>
+        <tone>Any</tone>
+        <firstWeightGoal>Any</firstWeightGoal>
+        <secondWeightGoal>Any</secondWeightGoal>
+        <firstSize>Any</firstSize>
+        <secondSize>Any</secondSize>
+        <fullness>Any</fullness>
+        <fullnessMood>Any</fullnessMood>
+        <speakerRole>Either</speakerRole>
+        <lines>
+          <li>[INITIATOR_nameDef] discussed which recipe might be worth trying the next time they ate together.</li>
+          <li>[INITIATOR_nameDef] wondered what should be done with the leftovers once they finally felt ready to move.</li>
+          <li>[INITIATOR_nameDef] traded colony gossip with [RECIPIENT_nameDef] while the meal settled.</li>
+          <li>[INITIATOR_nameDef] suggested that the conversation was almost as satisfying as the food.</li>
+        </lines>
+      </li>
+      <li>
+        <activity>PostSharedMeal</activity>
+        <phase>Ongoing</phase>
+        <relationship>Any</relationship>
+        <speech>Any</speech>
+        <tone>Any</tone>
+        <firstWeightGoal>Any</firstWeightGoal>
+        <secondWeightGoal>Any</secondWeightGoal>
+        <firstSize>Any</firstSize>
+        <secondSize>Any</secondSize>
+        <fullness>VeryFull</fullness>
+        <fullnessMood>Any</fullnessMood>
+        <speakerRole>Either</speakerRole>
+        <lines>
+          <li>[INITIATOR_nameDef] joked that another bite would require finding somewhere entirely new to put it.</li>
+          <li>[INITIATOR_nameDef] compared how full they both felt and declared the meal a convincing success.</li>
+          <li>[INITIATOR_nameDef] admitted that standing up immediately sounded far too ambitious.</li>
+        </lines>
+      </li>
+      <li>
+        <activity>PostSharedMeal</activity>
+        <phase>Ongoing</phase>
+        <relationship>Any</relationship>
+        <speech>Any</speech>
+        <tone>Any</tone>
+        <firstWeightGoal>Any</firstWeightGoal>
+        <secondWeightGoal>Any</secondWeightGoal>
+        <firstSize>Any</firstSize>
+        <secondSize>Any</secondSize>
+        <fullness>Stuffed</fullness>
+        <fullnessMood>Any</fullnessMood>
+        <speakerRole>Either</speakerRole>
+        <lines>
+          <li>[INITIATOR_nameDef] joked that [INITIATOR_nameDef] might need to be rolled away after eating so much.</li>
+          <li>[INITIATOR_nameDef] said that even thinking about another serving felt exhausting.</li>
+          <li>[INITIATOR_nameDef] carefully shifted position and laughed about just how completely full [INITIATOR_nameDef] felt.</li>
+          <li>[INITIATOR_nameDef] wondered whether either of them would manage a graceful exit after that meal.</li>
+        </lines>
+      </li>
+      <li>
+        <activity>PostSharedMeal</activity>
+        <phase>Ongoing</phase>
+        <relationship>Any</relationship>
+        <speech>Any</speech>
+        <tone>Any</tone>
+        <firstWeightGoal>Any</firstWeightGoal>
+        <secondWeightGoal>Any</secondWeightGoal>
+        <firstSize>Any</firstSize>
+        <secondSize>Any</secondSize>
+        <fullness>Any</fullness>
+        <fullnessMood>Positive</fullnessMood>
+        <speakerRole>Either</speakerRole>
+        <lines>
+          <li>[INITIATOR_nameDef] happily savoured the heavy, satisfied feeling left by the meal.</li>
+          <li>[INITIATOR_nameDef] said that being so comfortably full made it easy to relax and talk.</li>
+          <li>[INITIATOR_nameDef] admitted that the meal had left [INITIATOR_nameDef] in an especially good mood.</li>
+        </lines>
+      </li>
+      <li>
+        <activity>PostSharedMeal</activity>
+        <phase>Ongoing</phase>
+        <relationship>Any</relationship>
+        <speech>Any</speech>
+        <tone>Any</tone>
+        <firstWeightGoal>Any</firstWeightGoal>
+        <secondWeightGoal>Any</secondWeightGoal>
+        <firstSize>Any</firstSize>
+        <secondSize>Any</secondSize>
+        <fullness>Any</fullness>
+        <fullnessMood>Negative</fullnessMood>
+        <speakerRole>Either</speakerRole>
+        <lines>
+          <li>[INITIATOR_nameDef] admitted that the company was excellent even if the final few bites had been too much.</li>
+          <li>[INITIATOR_nameDef] suggested stopping a little earlier next time while still enjoying another meal together.</li>
+          <li>[INITIATOR_nameDef] took a careful breath and joked that the conversation was much easier than digesting the meal.</li>
+        </lines>
+      </li>
+      <li>
+        <activity>PostSharedMeal</activity>
+        <phase>Ongoing</phase>
+        <relationship>Any</relationship>
+        <speech>Any</speech>
+        <tone>Any</tone>
+        <firstWeightGoal>Gain</firstWeightGoal>
+        <secondWeightGoal>Any</secondWeightGoal>
+        <firstSize>Any</firstSize>
+        <secondSize>Any</secondSize>
+        <fullness>Any</fullness>
+        <fullnessMood>Any</fullnessMood>
+        <speakerRole>Feeder</speakerRole>
+        <lines>
+          <li>[INITIATOR_nameDef] talked enthusiastically about making larger shared meals a regular habit.</li>
+          <li>[INITIATOR_nameDef] wondered how [INITIATOR_possessive] [INITIATOR_sizeDesc] might change after more meals like this.</li>
+          <li>[INITIATOR_nameDef] said that today felt like satisfying progress toward gaining more weight.</li>
+        </lines>
+      </li>
+      <li>
+        <activity>PostSharedMeal</activity>
+        <phase>Ongoing</phase>
+        <relationship>Any</relationship>
+        <speech>Any</speech>
+        <tone>Any</tone>
+        <firstWeightGoal>Any</firstWeightGoal>
+        <secondWeightGoal>Gain</secondWeightGoal>
+        <firstSize>Any</firstSize>
+        <secondSize>Any</secondSize>
+        <fullness>Any</fullness>
+        <fullnessMood>Any</fullnessMood>
+        <speakerRole>FedPawn</speakerRole>
+        <lines>
+          <li>[INITIATOR_nameDef] talked enthusiastically about making larger shared meals a regular habit.</li>
+          <li>[INITIATOR_nameDef] wondered how [INITIATOR_possessive] [INITIATOR_sizeDesc] might change after more meals like this.</li>
+          <li>[INITIATOR_nameDef] said that today felt like satisfying progress toward gaining more weight.</li>
+        </lines>
+      </li>
+      <li>
+        <activity>PostSharedMeal</activity>
+        <phase>Ongoing</phase>
+        <relationship>Any</relationship>
+        <speech>Any</speech>
+        <tone>Any</tone>
+        <firstWeightGoal>CelebrateSize</firstWeightGoal>
+        <secondWeightGoal>Any</secondWeightGoal>
+        <firstSize>Any</firstSize>
+        <secondSize>Any</secondSize>
+        <fullness>Any</fullness>
+        <fullnessMood>Any</fullnessMood>
+        <speakerRole>Feeder</speakerRole>
+        <lines>
+          <li>[INITIATOR_nameDef] spoke fondly about [INITIATOR_possessive] [INITIATOR_sizeDesc] and how comfortable it felt.</li>
+          <li>[INITIATOR_nameDef] said there was no reason to feel guilty about enjoying a generous meal at [INITIATOR_possessive] current size.</li>
+          <li>[INITIATOR_nameDef] joked that maintaining [INITIATOR_possessive] figure clearly required dedication.</li>
+        </lines>
+      </li>
+      <li>
+        <activity>PostSharedMeal</activity>
+        <phase>Ongoing</phase>
+        <relationship>Any</relationship>
+        <speech>Any</speech>
+        <tone>Any</tone>
+        <firstWeightGoal>Any</firstWeightGoal>
+        <secondWeightGoal>CelebrateSize</secondWeightGoal>
+        <firstSize>Any</firstSize>
+        <secondSize>Any</secondSize>
+        <fullness>Any</fullness>
+        <fullnessMood>Any</fullnessMood>
+        <speakerRole>FedPawn</speakerRole>
+        <lines>
+          <li>[INITIATOR_nameDef] spoke fondly about [INITIATOR_possessive] [INITIATOR_sizeDesc] and how comfortable it felt.</li>
+          <li>[INITIATOR_nameDef] said there was no reason to feel guilty about enjoying a generous meal at [INITIATOR_possessive] current size.</li>
+          <li>[INITIATOR_nameDef] joked that maintaining [INITIATOR_possessive] figure clearly required dedication.</li>
+        </lines>
+      </li>
+      <li>
+        <activity>PostSharedMeal</activity>
+        <phase>Ongoing</phase>
+        <relationship>Any</relationship>
+        <speech>Any</speech>
+        <tone>Any</tone>
+        <firstWeightGoal>Lose</firstWeightGoal>
+        <secondWeightGoal>Any</secondWeightGoal>
+        <firstSize>Any</firstSize>
+        <secondSize>Any</secondSize>
+        <fullness>Any</fullness>
+        <fullnessMood>Any</fullnessMood>
+        <speakerRole>Feeder</speakerRole>
+        <lines>
+          <li>[INITIATOR_nameDef] admitted enjoying the meal, but proposed something lighter next time while working toward losing weight.</li>
+          <li>[INITIATOR_nameDef] discussed balancing occasional indulgence with the goal of slimming down.</li>
+          <li>[INITIATOR_nameDef] joked that the meal had made tomorrow’s restraint feel especially necessary.</li>
+        </lines>
+      </li>
+      <li>
+        <activity>PostSharedMeal</activity>
+        <phase>Ongoing</phase>
+        <relationship>Any</relationship>
+        <speech>Any</speech>
+        <tone>Any</tone>
+        <firstWeightGoal>Any</firstWeightGoal>
+        <secondWeightGoal>Lose</secondWeightGoal>
+        <firstSize>Any</firstSize>
+        <secondSize>Any</secondSize>
+        <fullness>Any</fullness>
+        <fullnessMood>Any</fullnessMood>
+        <speakerRole>FedPawn</speakerRole>
+        <lines>
+          <li>[INITIATOR_nameDef] admitted enjoying the meal, but proposed something lighter next time while working toward losing weight.</li>
+          <li>[INITIATOR_nameDef] discussed balancing occasional indulgence with the goal of slimming down.</li>
+          <li>[INITIATOR_nameDef] joked that the meal had made tomorrow’s restraint feel especially necessary.</li>
+        </lines>
+      </li>
+      <li>
+        <activity>PostSharedMeal</activity>
+        <phase>Ongoing</phase>
+        <relationship>Any</relationship>
+        <speech>Any</speech>
+        <tone>Any</tone>
+        <firstWeightGoal>StayLean</firstWeightGoal>
+        <secondWeightGoal>Any</secondWeightGoal>
+        <firstSize>Any</firstSize>
+        <secondSize>Any</secondSize>
+        <fullness>Any</fullness>
+        <fullnessMood>Any</fullnessMood>
+        <speakerRole>Feeder</speakerRole>
+        <lines>
+          <li>[INITIATOR_nameDef] said that an occasional large meal was enjoyable, but [INITIATOR_nameDef] still preferred staying lean.</li>
+          <li>[INITIATOR_nameDef] suggested keeping the next shared meal satisfying without making it quite so enormous.</li>
+          <li>[INITIATOR_nameDef] joked that [INITIATOR_possessive] slim build had survived the meal—for now.</li>
+        </lines>
+      </li>
+      <li>
+        <activity>PostSharedMeal</activity>
+        <phase>Ongoing</phase>
+        <relationship>Any</relationship>
+        <speech>Any</speech>
+        <tone>Any</tone>
+        <firstWeightGoal>Any</firstWeightGoal>
+        <secondWeightGoal>StayLean</secondWeightGoal>
+        <firstSize>Any</firstSize>
+        <secondSize>Any</secondSize>
+        <fullness>Any</fullness>
+        <fullnessMood>Any</fullnessMood>
+        <speakerRole>FedPawn</speakerRole>
+        <lines>
+          <li>[INITIATOR_nameDef] said that an occasional large meal was enjoyable, but [INITIATOR_nameDef] still preferred staying lean.</li>
+          <li>[INITIATOR_nameDef] suggested keeping the next shared meal satisfying without making it quite so enormous.</li>
+          <li>[INITIATOR_nameDef] joked that [INITIATOR_possessive] slim build had survived the meal—for now.</li>
+        </lines>
+      </li>
+      <li>
+        <activity>PostSharedMeal</activity>
+        <phase>Ongoing</phase>
+        <relationship>Any</relationship>
+        <speech>Any</speech>
+        <tone>Any</tone>
+        <firstWeightGoal>Any</firstWeightGoal>
+        <secondWeightGoal>Any</secondWeightGoal>
+        <firstSize>Thin</firstSize>
+        <secondSize>Any</secondSize>
+        <fullness>Any</fullness>
+        <fullnessMood>Any</fullnessMood>
+        <speakerRole>Feeder</speakerRole>
+        <lines>
+          <li>[INITIATOR_nameDef] joked that [INITIATOR_possessive] [INITIATOR_sizeDesc] had left plenty of room for the meal to make an impression.</li>
+          <li>[INITIATOR_nameDef] wondered whether a few more meals like that would make [INITIATOR_possessive] clothes fit differently.</li>
+        </lines>
+      </li>
+      <li>
+        <activity>PostSharedMeal</activity>
+        <phase>Ongoing</phase>
+        <relationship>Any</relationship>
+        <speech>Any</speech>
+        <tone>Any</tone>
+        <firstWeightGoal>Any</firstWeightGoal>
+        <secondWeightGoal>Any</secondWeightGoal>
+        <firstSize>Soft</firstSize>
+        <secondSize>Any</secondSize>
+        <fullness>Any</fullness>
+        <fullnessMood>Any</fullnessMood>
+        <speakerRole>Feeder</speakerRole>
+        <lines>
+          <li>[INITIATOR_nameDef] affectionately patted [INITIATOR_possessive] [INITIATOR_sizeDesc] and said the meal had settled comfortably.</li>
+          <li>[INITIATOR_nameDef] joked that [INITIATOR_possessive] softer shape made relaxing after dinner especially tempting.</li>
+        </lines>
+      </li>
+      <li>
+        <activity>PostSharedMeal</activity>
+        <phase>Ongoing</phase>
+        <relationship>Any</relationship>
+        <speech>Any</speech>
+        <tone>Any</tone>
+        <firstWeightGoal>Any</firstWeightGoal>
+        <secondWeightGoal>Any</secondWeightGoal>
+        <firstSize>Large</firstSize>
+        <secondSize>Any</secondSize>
+        <fullness>Any</fullness>
+        <fullnessMood>Any</fullnessMood>
+        <speakerRole>Feeder</speakerRole>
+        <lines>
+          <li>[INITIATOR_nameDef] joked that [INITIATOR_possessive] [INITIATOR_sizeDesc] made getting comfortable after a huge meal an art form.</li>
+          <li>[INITIATOR_nameDef] admitted that the generous meal suited [INITIATOR_possessive] appetite remarkably well.</li>
+        </lines>
+      </li>
+      <li>
+        <activity>PostSharedMeal</activity>
+        <phase>Ongoing</phase>
+        <relationship>Any</relationship>
+        <speech>Any</speech>
+        <tone>Any</tone>
+        <firstWeightGoal>Any</firstWeightGoal>
+        <secondWeightGoal>Any</secondWeightGoal>
+        <firstSize>Extreme</firstSize>
+        <secondSize>Any</secondSize>
+        <fullness>Any</fullness>
+        <fullnessMood>Any</fullnessMood>
+        <speakerRole>Feeder</speakerRole>
+        <lines>
+          <li>[INITIATOR_nameDef] laughed that even a meal that large seemed modest beside [INITIATOR_possessive] [INITIATOR_sizeDesc].</li>
+          <li>[INITIATOR_nameDef] joked that finding enough room to relax comfortably was the real post-meal challenge.</li>
+        </lines>
+      </li>
+      <li>
+        <activity>PostSharedMeal</activity>
+        <phase>Ongoing</phase>
+        <relationship>Any</relationship>
+        <speech>Any</speech>
+        <tone>Any</tone>
+        <firstWeightGoal>Any</firstWeightGoal>
+        <secondWeightGoal>Any</secondWeightGoal>
+        <firstSize>Any</firstSize>
+        <secondSize>Thin</secondSize>
+        <fullness>Any</fullness>
+        <fullnessMood>Any</fullnessMood>
+        <speakerRole>FedPawn</speakerRole>
+        <lines>
+          <li>[INITIATOR_nameDef] joked that [INITIATOR_possessive] [INITIATOR_sizeDesc] had left plenty of room for the meal to make an impression.</li>
+          <li>[INITIATOR_nameDef] wondered whether a few more meals like that would make [INITIATOR_possessive] clothes fit differently.</li>
+        </lines>
+      </li>
+      <li>
+        <activity>PostSharedMeal</activity>
+        <phase>Ongoing</phase>
+        <relationship>Any</relationship>
+        <speech>Any</speech>
+        <tone>Any</tone>
+        <firstWeightGoal>Any</firstWeightGoal>
+        <secondWeightGoal>Any</secondWeightGoal>
+        <firstSize>Any</firstSize>
+        <secondSize>Soft</secondSize>
+        <fullness>Any</fullness>
+        <fullnessMood>Any</fullnessMood>
+        <speakerRole>FedPawn</speakerRole>
+        <lines>
+          <li>[INITIATOR_nameDef] affectionately patted [INITIATOR_possessive] [INITIATOR_sizeDesc] and said the meal had settled comfortably.</li>
+          <li>[INITIATOR_nameDef] joked that [INITIATOR_possessive] softer shape made relaxing after dinner especially tempting.</li>
+        </lines>
+      </li>
+      <li>
+        <activity>PostSharedMeal</activity>
+        <phase>Ongoing</phase>
+        <relationship>Any</relationship>
+        <speech>Any</speech>
+        <tone>Any</tone>
+        <firstWeightGoal>Any</firstWeightGoal>
+        <secondWeightGoal>Any</secondWeightGoal>
+        <firstSize>Any</firstSize>
+        <secondSize>Large</secondSize>
+        <fullness>Any</fullness>
+        <fullnessMood>Any</fullnessMood>
+        <speakerRole>FedPawn</speakerRole>
+        <lines>
+          <li>[INITIATOR_nameDef] joked that [INITIATOR_possessive] [INITIATOR_sizeDesc] made getting comfortable after a huge meal an art form.</li>
+          <li>[INITIATOR_nameDef] admitted that the generous meal suited [INITIATOR_possessive] appetite remarkably well.</li>
+        </lines>
+      </li>
+      <li>
+        <activity>PostSharedMeal</activity>
+        <phase>Ongoing</phase>
+        <relationship>Any</relationship>
+        <speech>Any</speech>
+        <tone>Any</tone>
+        <firstWeightGoal>Any</firstWeightGoal>
+        <secondWeightGoal>Any</secondWeightGoal>
+        <firstSize>Any</firstSize>
+        <secondSize>Extreme</secondSize>
+        <fullness>Any</fullness>
+        <fullnessMood>Any</fullnessMood>
+        <speakerRole>FedPawn</speakerRole>
+        <lines>
+          <li>[INITIATOR_nameDef] laughed that even a meal that large seemed modest beside [INITIATOR_possessive] [INITIATOR_sizeDesc].</li>
+          <li>[INITIATOR_nameDef] joked that finding enough room to relax comfortably was the real post-meal challenge.</li>
+        </lines>
+      </li>
+      <li>
+        <activity>PostSharedMeal</activity>
+        <phase>Ongoing</phase>
+        <relationship>Romantic</relationship>
+        <speech>Any</speech>
+        <tone>Any</tone>
+        <firstWeightGoal>Any</firstWeightGoal>
+        <secondWeightGoal>Any</secondWeightGoal>
+        <firstSize>Any</firstSize>
+        <secondSize>Any</secondSize>
+        <fullness>Any</fullness>
+        <fullnessMood>Any</fullnessMood>
+        <speakerRole>Either</speakerRole>
+        <lines>
+          <li>[INITIATOR_nameDef] affectionately teased [RECIPIENT_nameDef] about looking wonderfully satisfied after the meal.</li>
+          <li>[INITIATOR_nameDef] said that lingering together like this was one of [INITIATOR_possessive] favourite parts of sharing food.</li>
+          <li>[INITIATOR_nameDef] rested close to [RECIPIENT_nameDef] and began planning their next indulgent evening.</li>
+        </lines>
+      </li>
+      <li>
+        <activity>PostSharedMeal</activity>
+        <phase>Ongoing</phase>
+        <relationship>Friend</relationship>
+        <speech>Any</speech>
+        <tone>Any</tone>
+        <firstWeightGoal>Any</firstWeightGoal>
+        <secondWeightGoal>Any</secondWeightGoal>
+        <firstSize>Any</firstSize>
+        <secondSize>Any</secondSize>
+        <fullness>Any</fullness>
+        <fullnessMood>Any</fullnessMood>
+        <speakerRole>Either</speakerRole>
+        <lines>
+          <li>[INITIATOR_nameDef] teased [RECIPIENT_nameDef] about who had looked fullest by the end.</li>
+          <li>[INITIATOR_nameDef] suggested turning the next shared meal into another long, lazy afternoon.</li>
+          <li>[INITIATOR_nameDef] recalled another time the two friends had eaten far more than intended.</li>
+        </lines>
+      </li>
+      <li>
+        <activity>PostSharedMeal</activity>
+        <phase>Ongoing</phase>
+        <relationship>Family</relationship>
+        <speech>Any</speech>
+        <tone>Any</tone>
+        <firstWeightGoal>Any</firstWeightGoal>
+        <secondWeightGoal>Any</secondWeightGoal>
+        <firstSize>Any</firstSize>
+        <secondSize>Any</secondSize>
+        <fullness>Any</fullness>
+        <fullnessMood>Any</fullnessMood>
+        <speakerRole>Either</speakerRole>
+        <lines>
+          <li>[INITIATOR_nameDef] recalled family meals where everyone remained at the table long after the food was gone.</li>
+          <li>[INITIATOR_nameDef] joked that [RECIPIENT_nameDef] had always been easy to keep talking with good food nearby.</li>
+          <li>[INITIATOR_nameDef] said the relaxed conversation felt comfortably familiar.</li>
+        </lines>
+      </li>
+      <li>
+        <activity>PostSharedMeal</activity>
+        <phase>Ongoing</phase>
+        <relationship>Strained</relationship>
+        <speech>Any</speech>
+        <tone>Any</tone>
+        <firstWeightGoal>Any</firstWeightGoal>
+        <secondWeightGoal>Any</secondWeightGoal>
+        <firstSize>Any</firstSize>
+        <secondSize>Any</secondSize>
+        <fullness>Any</fullness>
+        <fullnessMood>Any</fullnessMood>
+        <speakerRole>Either</speakerRole>
+        <lines>
+          <li>[INITIATOR_nameDef] kept the conversation polite and admitted that sharing the meal had eased some of the tension.</li>
+          <li>[INITIATOR_nameDef] cautiously suggested that eating together again might help them get along better.</li>
+          <li>[INITIATOR_nameDef] focused on harmless jokes about the meal rather than their disagreements.</li>
+        </lines>
+      </li>
+      <li>
+        <activity>PostSharedMeal</activity>
+        <phase>Finishing</phase>
+        <relationship>Any</relationship>
+        <speech>BothSpeaking</speech>
+        <tone>Any</tone>
+        <firstWeightGoal>Any</firstWeightGoal>
+        <secondWeightGoal>Any</secondWeightGoal>
+        <firstSize>Any</firstSize>
+        <secondSize>Any</secondSize>
+        <fullness>Any</fullness>
+        <fullnessMood>Any</fullnessMood>
+        <speakerRole>Either</speakerRole>
+        <lines>
+          <li>[INITIATOR_nameDef] and [RECIPIENT_nameDef] finally agreed that they felt rested enough to get moving again.</li>
+          <li>[INITIATOR_nameDef] wrapped up the conversation and thanked [RECIPIENT_nameDef] for staying a while longer.</li>
+          <li>[INITIATOR_nameDef] joked that the meal had been digested just enough to make standing seem possible.</li>
+        </lines>
+      </li>
+      <li>
+        <activity>PostSharedMeal</activity>
+        <phase>Finishing</phase>
+        <relationship>Any</relationship>
+        <speech>OneSpeaking</speech>
+        <tone>Any</tone>
+        <firstWeightGoal>Any</firstWeightGoal>
+        <secondWeightGoal>Any</secondWeightGoal>
+        <firstSize>Any</firstSize>
+        <secondSize>Any</secondSize>
+        <fullness>Any</fullness>
+        <fullnessMood>Any</fullnessMood>
+        <speakerRole>Either</speakerRole>
+        <lines>
+          <li>[INITIATOR_nameDef] finished the story, and [RECIPIENT_nameDef] answered with a warm gesture before they parted.</li>
+          <li>[INITIATOR_nameDef] brought the relaxed conversation to a close while [RECIPIENT_nameDef] nodded appreciatively.</li>
+          <li>[INITIATOR_nameDef] joked that it was probably time to test whether either of them could move again.</li>
+        </lines>
+      </li>
+      <li>
+        <activity>PostSharedMeal</activity>
+        <phase>Finishing</phase>
+        <relationship>Any</relationship>
+        <speech>NeitherSpeaking</speech>
+        <tone>Any</tone>
+        <firstWeightGoal>Any</firstWeightGoal>
+        <secondWeightGoal>Any</secondWeightGoal>
+        <firstSize>Any</firstSize>
+        <secondSize>Any</secondSize>
+        <fullness>Any</fullness>
+        <fullnessMood>Any</fullnessMood>
+        <speakerRole>MutualNarration</speakerRole>
+        <lines>
+          <li>[INITIATOR_nameDef] and [RECIPIENT_nameDef] exchanged one last contented look before returning to their day.</li>
+          <li>[INITIATOR_nameDef] and [RECIPIENT_nameDef] quietly ended their post-meal rest and prepared to move on.</li>
+          <li>[INITIATOR_nameDef] and [RECIPIENT_nameDef] shared an amused glance before finally parting.</li>
+        </lines>
+      </li>
+        <!-- ========================= ROLE-AWARE POST-FEEDING SOCIAL RECREATION ========================= -->
+        <li>
+          <activity>PostFeeding</activity>
+          <phase>Starting</phase>
+          <relationship>Any</relationship>
+          <speech>BothSpeaking</speech>
+          <tone>Any</tone>
+          <firstWeightGoal>Any</firstWeightGoal>
+          <secondWeightGoal>Any</secondWeightGoal>
+          <firstSize>Any</firstSize>
+          <secondSize>Any</secondSize>
+          <fullness>Any</fullness>
+          <fullnessMood>Any</fullnessMood>
+          <speakerRole>Feeder</speakerRole>
+          <lines>
+            <li>[FEEDER_nameDef] stayed beside [FEDPAWN_nameDef] and asked how the feeding had left [FEDPAWN_nameDef] feeling.</li>
+            <li>[FEEDER_nameDef] suggested resting together for a while and checked that [FEDPAWN_nameDef] felt comfortable.</li>
+            <li>[FEEDER_nameDef] settled in nearby and invited [FEDPAWN_nameDef] to keep talking while the food settled.</li>
+          </lines>
+        </li>
+        <li>
+          <activity>PostFeeding</activity>
+          <phase>Starting</phase>
+          <relationship>Any</relationship>
+          <speech>BothSpeaking</speech>
+          <tone>Any</tone>
+          <firstWeightGoal>Any</firstWeightGoal>
+          <secondWeightGoal>Any</secondWeightGoal>
+          <firstSize>Any</firstSize>
+          <secondSize>Any</secondSize>
+          <fullness>Any</fullness>
+          <fullnessMood>Any</fullnessMood>
+          <speakerRole>FedPawn</speakerRole>
+          <lines>
+            <li>[FEDPAWN_nameDef] thanked [FEEDER_nameDef] and described how the meal had left [FEDPAWN_nameDef] feeling.</li>
+            <li>[FEDPAWN_nameDef] said that staying together to talk sounded better than trying to move immediately.</li>
+            <li>[FEDPAWN_nameDef] began chatting with [FEEDER_nameDef] while relaxing after being fed.</li>
+          </lines>
+        </li>
+        <li>
+          <activity>PostFeeding</activity>
+          <phase>Starting</phase>
+          <relationship>Any</relationship>
+          <speech>OneSpeaking</speech>
+          <tone>Any</tone>
+          <firstWeightGoal>Any</firstWeightGoal>
+          <secondWeightGoal>Any</secondWeightGoal>
+          <firstSize>Any</firstSize>
+          <secondSize>Any</secondSize>
+          <fullness>Any</fullness>
+          <fullnessMood>Any</fullnessMood>
+          <speakerRole>Feeder</speakerRole>
+          <lines>
+            <li>[FEEDER_nameDef] chatted gently while [FEDPAWN_nameDef] answered with relaxed gestures.</li>
+            <li>[FEEDER_nameDef] checked that [FEDPAWN_nameDef] was comfortable and stayed to keep them company.</li>
+          </lines>
+        </li>
+        <li>
+          <activity>PostFeeding</activity>
+          <phase>Starting</phase>
+          <relationship>Any</relationship>
+          <speech>OneSpeaking</speech>
+          <tone>Any</tone>
+          <firstWeightGoal>Any</firstWeightGoal>
+          <secondWeightGoal>Any</secondWeightGoal>
+          <firstSize>Any</firstSize>
+          <secondSize>Any</secondSize>
+          <fullness>Any</fullness>
+          <fullnessMood>Any</fullnessMood>
+          <speakerRole>FedPawn</speakerRole>
+          <lines>
+            <li>[FEDPAWN_nameDef] talked about the feeding while [FEEDER_nameDef] listened attentively.</li>
+            <li>[FEDPAWN_nameDef] thanked [FEEDER_nameDef] and continued the conversation as the food settled.</li>
+          </lines>
+        </li>
+        <li>
+          <activity>PostFeeding</activity>
+          <phase>Starting</phase>
+          <relationship>Any</relationship>
+          <speech>NeitherSpeaking</speech>
+          <tone>Any</tone>
+          <firstWeightGoal>Any</firstWeightGoal>
+          <secondWeightGoal>Any</secondWeightGoal>
+          <firstSize>Any</firstSize>
+          <secondSize>Any</secondSize>
+          <fullness>Any</fullness>
+          <fullnessMood>Any</fullnessMood>
+          <speakerRole>MutualNarration</speakerRole>
+          <lines>
+            <li>[FEEDER_nameDef] remained beside [FEDPAWN_nameDef], and the two exchanged relaxed smiles after the feeding.</li>
+            <li>[FEDPAWN_nameDef] settled comfortably while [FEEDER_nameDef] stayed nearby for quiet company.</li>
+          </lines>
+        </li>
+        <li>
+          <activity>PostFeeding</activity>
+          <phase>Ongoing</phase>
+          <relationship>Any</relationship>
+          <speech>Any</speech>
+          <tone>Any</tone>
+          <firstWeightGoal>Any</firstWeightGoal>
+          <secondWeightGoal>Any</secondWeightGoal>
+          <firstSize>Any</firstSize>
+          <secondSize>Any</secondSize>
+          <fullness>Any</fullness>
+          <fullnessMood>Any</fullnessMood>
+          <speakerRole>Feeder</speakerRole>
+          <lines>
+            <li>[FEEDER_nameDef] asked what food [FEDPAWN_nameDef] might enjoy during another feeding session.</li>
+            <li>[FEEDER_nameDef] discussed recipes and portions while keeping an eye on how [FEDPAWN_nameDef] felt.</li>
+            <li>[FEEDER_nameDef] traded colony gossip with [FEDPAWN_nameDef] while the recipient rested.</li>
+            <li>[FEEDER_nameDef] joked that providing the food was easier than deciding what should be served next time.</li>
+          </lines>
+        </li>
+        <li>
+          <activity>PostFeeding</activity>
+          <phase>Ongoing</phase>
+          <relationship>Any</relationship>
+          <speech>Any</speech>
+          <tone>Any</tone>
+          <firstWeightGoal>Any</firstWeightGoal>
+          <secondWeightGoal>Any</secondWeightGoal>
+          <firstSize>Any</firstSize>
+          <secondSize>Any</secondSize>
+          <fullness>Any</fullness>
+          <fullnessMood>Any</fullnessMood>
+          <speakerRole>FedPawn</speakerRole>
+          <lines>
+            <li>[FEDPAWN_nameDef] described which part of the feeding had been most enjoyable.</li>
+            <li>[FEDPAWN_nameDef] discussed favourite foods with [FEEDER_nameDef] while continuing to rest.</li>
+            <li>[FEDPAWN_nameDef] said that the company had made the feeding session especially pleasant.</li>
+            <li>[FEDPAWN_nameDef] began planning what [FEEDER_nameDef] could bring during another session.</li>
+          </lines>
+        </li>
+        <li>
+          <activity>PostFeeding</activity>
+          <phase>Ongoing</phase>
+          <relationship>Any</relationship>
+          <speech>Any</speech>
+          <tone>Any</tone>
+          <firstWeightGoal>Neutral</firstWeightGoal>
+          <secondWeightGoal>Any</secondWeightGoal>
+          <firstSize>Any</firstSize>
+          <secondSize>Any</secondSize>
+          <fullness>Any</fullness>
+          <fullnessMood>Any</fullnessMood>
+          <speakerRole>Feeder</speakerRole>
+          <lines>
+            <li>[FEEDER_nameDef] kept the conversation practical, asking what portions would suit [FEDPAWN_nameDef] next time.</li>
+            <li>[FEEDER_nameDef] said that [FEDPAWN_nameDef] should decide what felt right while [FEEDER_nameDef] was happy to help.</li>
+            <li>[FEEDER_nameDef] checked how [FEDPAWN_nameDef] felt without making assumptions about changing their weight.</li>
+          </lines>
+        </li>
+        <li>
+          <activity>PostFeeding</activity>
+          <phase>Ongoing</phase>
+          <relationship>Any</relationship>
+          <speech>Any</speech>
+          <tone>Any</tone>
+          <firstWeightGoal>Any</firstWeightGoal>
+          <secondWeightGoal>Any</secondWeightGoal>
+          <firstSize>Any</firstSize>
+          <secondSize>Any</secondSize>
+          <fullness>VeryFull</fullness>
+          <fullnessMood>Any</fullnessMood>
+          <speakerRole>Feeder</speakerRole>
+          <lines>
+            <li>[FEEDER_nameDef] smiled at how thoroughly full [FEDPAWN_nameDef] looked and asked whether they needed more time to rest.</li>
+            <li>[FEEDER_nameDef] joked that [FEDPAWN_nameDef] had clearly reached a convincing stopping point.</li>
+            <li>[FEEDER_nameDef] promised that no more food was coming and encouraged [FEDPAWN_nameDef] to relax.</li>
+          </lines>
+        </li>
+        <li>
+          <activity>PostFeeding</activity>
+          <phase>Ongoing</phase>
+          <relationship>Any</relationship>
+          <speech>Any</speech>
+          <tone>Any</tone>
+          <firstWeightGoal>Any</firstWeightGoal>
+          <secondWeightGoal>Any</secondWeightGoal>
+          <firstSize>Any</firstSize>
+          <secondSize>Any</secondSize>
+          <fullness>VeryFull</fullness>
+          <fullnessMood>Any</fullnessMood>
+          <speakerRole>FedPawn</speakerRole>
+          <lines>
+            <li>[FEDPAWN_nameDef] admitted that another proper serving would be impossible for a while.</li>
+            <li>[FEDPAWN_nameDef] laughed about being far too full to hurry anywhere.</li>
+            <li>[FEDPAWN_nameDef] carefully shifted position and said that the feeding had certainly done its job.</li>
+          </lines>
+        </li>
+        <li>
+          <activity>PostFeeding</activity>
+          <phase>Ongoing</phase>
+          <relationship>Any</relationship>
+          <speech>Any</speech>
+          <tone>Any</tone>
+          <firstWeightGoal>Any</firstWeightGoal>
+          <secondWeightGoal>Any</secondWeightGoal>
+          <firstSize>Any</firstSize>
+          <secondSize>Any</secondSize>
+          <fullness>Stuffed</fullness>
+          <fullnessMood>Any</fullnessMood>
+          <speakerRole>Feeder</speakerRole>
+          <lines>
+            <li>[FEEDER_nameDef] teased [FEDPAWN_nameDef] gently about looking completely stuffed and very ready to stay put.</li>
+            <li>[FEEDER_nameDef] asked whether [FEDPAWN_nameDef] needed anything besides time for the enormous meal to settle.</li>
+            <li>[FEEDER_nameDef] joked that carrying another portion over would now be entirely pointless.</li>
+          </lines>
+        </li>
+        <li>
+          <activity>PostFeeding</activity>
+          <phase>Ongoing</phase>
+          <relationship>Any</relationship>
+          <speech>Any</speech>
+          <tone>Any</tone>
+          <firstWeightGoal>Any</firstWeightGoal>
+          <secondWeightGoal>Any</secondWeightGoal>
+          <firstSize>Any</firstSize>
+          <secondSize>Any</secondSize>
+          <fullness>Stuffed</fullness>
+          <fullnessMood>Any</fullnessMood>
+          <speakerRole>FedPawn</speakerRole>
+          <lines>
+            <li>[FEDPAWN_nameDef] joked that even thinking about another serving felt exhausting.</li>
+            <li>[FEDPAWN_nameDef] admitted that standing gracefully would have to wait until the meal settled.</li>
+            <li>[FEDPAWN_nameDef] laughed about just how completely full the feeding had left them.</li>
+          </lines>
+        </li>
+        <li>
+          <activity>PostFeeding</activity>
+          <phase>Ongoing</phase>
+          <relationship>Any</relationship>
+          <speech>Any</speech>
+          <tone>Any</tone>
+          <firstWeightGoal>Any</firstWeightGoal>
+          <secondWeightGoal>Any</secondWeightGoal>
+          <firstSize>Any</firstSize>
+          <secondSize>Any</secondSize>
+          <fullness>Any</fullness>
+          <fullnessMood>Positive</fullnessMood>
+          <speakerRole>Feeder</speakerRole>
+          <lines>
+            <li>[FEEDER_nameDef] noticed how satisfied [FEDPAWN_nameDef] seemed and said that the feeding had clearly gone well.</li>
+            <li>[FEEDER_nameDef] was pleased that [FEDPAWN_nameDef] looked so relaxed and content after the meal.</li>
+          </lines>
+        </li>
+        <li>
+          <activity>PostFeeding</activity>
+          <phase>Ongoing</phase>
+          <relationship>Any</relationship>
+          <speech>Any</speech>
+          <tone>Any</tone>
+          <firstWeightGoal>Any</firstWeightGoal>
+          <secondWeightGoal>Any</secondWeightGoal>
+          <firstSize>Any</firstSize>
+          <secondSize>Any</secondSize>
+          <fullness>Any</fullness>
+          <fullnessMood>Positive</fullnessMood>
+          <speakerRole>FedPawn</speakerRole>
+          <lines>
+            <li>[FEDPAWN_nameDef] happily savoured the heavy, satisfied feeling left by the feeding.</li>
+            <li>[FEDPAWN_nameDef] said that being so comfortably full made it easy to relax and talk.</li>
+            <li>[FEDPAWN_nameDef] admitted that the generous feeding had left them in an especially good mood.</li>
+          </lines>
+        </li>
+        <li>
+          <activity>PostFeeding</activity>
+          <phase>Ongoing</phase>
+          <relationship>Any</relationship>
+          <speech>Any</speech>
+          <tone>Any</tone>
+          <firstWeightGoal>Any</firstWeightGoal>
+          <secondWeightGoal>Any</secondWeightGoal>
+          <firstSize>Any</firstSize>
+          <secondSize>Any</secondSize>
+          <fullness>Any</fullness>
+          <fullnessMood>Negative</fullnessMood>
+          <speakerRole>Feeder</speakerRole>
+          <lines>
+            <li>[FEEDER_nameDef] checked on [FEDPAWN_nameDef] and suggested stopping a little earlier during the next session.</li>
+            <li>[FEEDER_nameDef] reassured [FEDPAWN_nameDef] that future portions could be adjusted to keep things comfortable.</li>
+          </lines>
+        </li>
+        <li>
+          <activity>PostFeeding</activity>
+          <phase>Ongoing</phase>
+          <relationship>Any</relationship>
+          <speech>Any</speech>
+          <tone>Any</tone>
+          <firstWeightGoal>Any</firstWeightGoal>
+          <secondWeightGoal>Any</secondWeightGoal>
+          <firstSize>Any</firstSize>
+          <secondSize>Any</secondSize>
+          <fullness>Any</fullness>
+          <fullnessMood>Negative</fullnessMood>
+          <speakerRole>FedPawn</speakerRole>
+          <lines>
+            <li>[FEDPAWN_nameDef] admitted that the company was excellent even if the final few bites had been too much.</li>
+            <li>[FEDPAWN_nameDef] suggested using slightly smaller portions next time while still enjoying another feeding session.</li>
+            <li>[FEDPAWN_nameDef] took a careful breath and said that talking was easier than digesting the final serving.</li>
+          </lines>
+        </li>
+        <li>
+          <activity>PostFeeding</activity>
+          <phase>Ongoing</phase>
+          <relationship>Any</relationship>
+          <speech>Any</speech>
+          <tone>Any</tone>
+          <firstWeightGoal>Any</firstWeightGoal>
+          <secondWeightGoal>Gain</secondWeightGoal>
+          <firstSize>Any</firstSize>
+          <secondSize>Any</secondSize>
+          <fullness>Any</fullness>
+          <fullnessMood>Any</fullnessMood>
+          <speakerRole>Feeder</speakerRole>
+          <lines>
+            <li>[FEEDER_nameDef] asked whether regular generous portions would help [FEDPAWN_nameDef] make the progress they wanted.</li>
+            <li>[FEEDER_nameDef] suggested trying a slightly richer menu next time if [FEDPAWN_nameDef] still wanted to gain.</li>
+          </lines>
+        </li>
+        <li>
+          <activity>PostFeeding</activity>
+          <phase>Ongoing</phase>
+          <relationship>Any</relationship>
+          <speech>Any</speech>
+          <tone>Any</tone>
+          <firstWeightGoal>Any</firstWeightGoal>
+          <secondWeightGoal>Gain</secondWeightGoal>
+          <firstSize>Any</firstSize>
+          <secondSize>Any</secondSize>
+          <fullness>Any</fullness>
+          <fullnessMood>Any</fullnessMood>
+          <speakerRole>FedPawn</speakerRole>
+          <lines>
+            <li>[FEDPAWN_nameDef] said that the feeding felt like satisfying progress toward gaining more weight.</li>
+            <li>[FEDPAWN_nameDef] enthusiastically discussed making generous feeding sessions a regular habit.</li>
+          </lines>
+        </li>
+        <li>
+          <activity>PostFeeding</activity>
+          <phase>Ongoing</phase>
+          <relationship>Any</relationship>
+          <speech>Any</speech>
+          <tone>Any</tone>
+          <firstWeightGoal>Any</firstWeightGoal>
+          <secondWeightGoal>CelebrateSize</secondWeightGoal>
+          <firstSize>Any</firstSize>
+          <secondSize>Any</secondSize>
+          <fullness>Any</fullness>
+          <fullnessMood>Any</fullnessMood>
+          <speakerRole>Feeder</speakerRole>
+          <lines>
+            <li>[FEEDER_nameDef] said that maintaining [FEDPAWN_nameDef] at a size they enjoyed called for meals worth looking forward to.</li>
+            <li>[FEEDER_nameDef] asked which foods would best help [FEDPAWN_nameDef] enjoy and maintain their current figure.</li>
+          </lines>
+        </li>
+        <li>
+          <activity>PostFeeding</activity>
+          <phase>Ongoing</phase>
+          <relationship>Any</relationship>
+          <speech>Any</speech>
+          <tone>Any</tone>
+          <firstWeightGoal>Any</firstWeightGoal>
+          <secondWeightGoal>CelebrateSize</secondWeightGoal>
+          <firstSize>Any</firstSize>
+          <secondSize>Any</secondSize>
+          <fullness>Any</fullness>
+          <fullnessMood>Any</fullnessMood>
+          <speakerRole>FedPawn</speakerRole>
+          <lines>
+            <li>[FEDPAWN_nameDef] spoke proudly about enjoying their current size and wanting meals that helped maintain it.</li>
+            <li>[FEDPAWN_nameDef] said that being fed so generously suited the figure they had chosen to embrace.</li>
+          </lines>
+        </li>
+        <li>
+          <activity>PostFeeding</activity>
+          <phase>Ongoing</phase>
+          <relationship>Any</relationship>
+          <speech>Any</speech>
+          <tone>Any</tone>
+          <firstWeightGoal>Any</firstWeightGoal>
+          <secondWeightGoal>Lose</secondWeightGoal>
+          <firstSize>Any</firstSize>
+          <secondSize>Any</secondSize>
+          <fullness>Any</fullness>
+          <fullnessMood>Any</fullnessMood>
+          <speakerRole>Feeder</speakerRole>
+          <lines>
+            <li>[FEEDER_nameDef] suggested lighter portions next time so [FEDPAWN_nameDef] could still enjoy the company without working against their goal.</li>
+            <li>[FEEDER_nameDef] asked which satisfying but lighter foods would better suit [FEDPAWN_nameDef] in future.</li>
+          </lines>
+        </li>
+        <li>
+          <activity>PostFeeding</activity>
+          <phase>Ongoing</phase>
+          <relationship>Any</relationship>
+          <speech>Any</speech>
+          <tone>Any</tone>
+          <firstWeightGoal>Any</firstWeightGoal>
+          <secondWeightGoal>Lose</secondWeightGoal>
+          <firstSize>Any</firstSize>
+          <secondSize>Any</secondSize>
+          <fullness>Any</fullness>
+          <fullnessMood>Any</fullnessMood>
+          <speakerRole>FedPawn</speakerRole>
+          <lines>
+            <li>[FEDPAWN_nameDef] admitted that the feeding was enjoyable but said the next session should be lighter.</li>
+            <li>[FEDPAWN_nameDef] discussed balancing an occasional indulgence with the weight they wanted to lose.</li>
+          </lines>
+        </li>
+        <li>
+          <activity>PostFeeding</activity>
+          <phase>Ongoing</phase>
+          <relationship>Any</relationship>
+          <speech>Any</speech>
+          <tone>Any</tone>
+          <firstWeightGoal>Any</firstWeightGoal>
+          <secondWeightGoal>StayLean</secondWeightGoal>
+          <firstSize>Any</firstSize>
+          <secondSize>Any</secondSize>
+          <fullness>Any</fullness>
+          <fullnessMood>Any</fullnessMood>
+          <speakerRole>Feeder</speakerRole>
+          <lines>
+            <li>[FEEDER_nameDef] agreed that future feedings could focus on modest portions that suited [FEDPAWN_nameDef] better.</li>
+            <li>[FEEDER_nameDef] suggested keeping the social ritual while choosing food that supported [FEDPAWN_nameDef] staying lean.</li>
+          </lines>
+        </li>
+        <li>
+          <activity>PostFeeding</activity>
+          <phase>Ongoing</phase>
+          <relationship>Any</relationship>
+          <speech>Any</speech>
+          <tone>Any</tone>
+          <firstWeightGoal>Any</firstWeightGoal>
+          <secondWeightGoal>StayLean</secondWeightGoal>
+          <firstSize>Any</firstSize>
+          <secondSize>Any</secondSize>
+          <fullness>Any</fullness>
+          <fullnessMood>Any</fullnessMood>
+          <speakerRole>FedPawn</speakerRole>
+          <lines>
+            <li>[FEDPAWN_nameDef] said that the company was worth repeating even if the next meal should be less generous.</li>
+            <li>[FEDPAWN_nameDef] talked about enjoying future feeding sessions without changing the lean figure they preferred.</li>
+          </lines>
+        </li>
+        <li>
+          <activity>PostFeeding</activity>
+          <phase>Ongoing</phase>
+          <relationship>Any</relationship>
+          <speech>Any</speech>
+          <tone>Any</tone>
+          <firstWeightGoal>Any</firstWeightGoal>
+          <secondWeightGoal>Neutral</secondWeightGoal>
+          <firstSize>Any</firstSize>
+          <secondSize>Any</secondSize>
+          <fullness>Any</fullness>
+          <fullnessMood>Any</fullnessMood>
+          <speakerRole>Feeder</speakerRole>
+          <lines>
+            <li>[FEEDER_nameDef] asked what amount would leave [FEDPAWN_nameDef] comfortably satisfied next time.</li>
+            <li>[FEEDER_nameDef] suggested keeping future sessions flexible instead of treating weight change as the goal.</li>
+          </lines>
+        </li>
+        <li>
+          <activity>PostFeeding</activity>
+          <phase>Ongoing</phase>
+          <relationship>Any</relationship>
+          <speech>Any</speech>
+          <tone>Any</tone>
+          <firstWeightGoal>Any</firstWeightGoal>
+          <secondWeightGoal>Neutral</secondWeightGoal>
+          <firstSize>Any</firstSize>
+          <secondSize>Any</secondSize>
+          <fullness>Any</fullness>
+          <fullnessMood>Any</fullnessMood>
+          <speakerRole>FedPawn</speakerRole>
+          <lines>
+            <li>[FEDPAWN_nameDef] said that the relaxed company mattered more than whether the feeding changed their weight.</li>
+            <li>[FEDPAWN_nameDef] discussed choosing future portions entirely by appetite and mood.</li>
+          </lines>
+        </li>
+        <li>
+          <activity>PostFeeding</activity>
+          <phase>Ongoing</phase>
+          <relationship>Any</relationship>
+          <speech>Any</speech>
+          <tone>Any</tone>
+          <firstWeightGoal>Any</firstWeightGoal>
+          <secondWeightGoal>Any</secondWeightGoal>
+          <firstSize>Any</firstSize>
+          <secondSize>Thin</secondSize>
+          <fullness>Any</fullness>
+          <fullnessMood>Any</fullnessMood>
+          <speakerRole>Feeder</speakerRole>
+          <lines>
+            <li>[FEEDER_nameDef] remarked that the generous meal was especially noticeable on [FEDPAWN_nameDef]’s [FEDPAWN_sizeDesc].</li>
+            <li>[FEEDER_nameDef] asked whether portions that large felt comfortable for [FEDPAWN_nameDef]’s current build.</li>
+          </lines>
+        </li>
+        <li>
+          <activity>PostFeeding</activity>
+          <phase>Ongoing</phase>
+          <relationship>Any</relationship>
+          <speech>Any</speech>
+          <tone>Any</tone>
+          <firstWeightGoal>Any</firstWeightGoal>
+          <secondWeightGoal>Any</secondWeightGoal>
+          <firstSize>Any</firstSize>
+          <secondSize>Soft</secondSize>
+          <fullness>Any</fullness>
+          <fullnessMood>Any</fullnessMood>
+          <speakerRole>Feeder</speakerRole>
+          <lines>
+            <li>[FEEDER_nameDef] said that [FEDPAWN_nameDef] looked especially relaxed while settling their [FEDPAWN_sizeDesc].</li>
+            <li>[FEEDER_nameDef] playfully asked whether the meal had made [FEDPAWN_nameDef] feel even softer and sleepier.</li>
+          </lines>
+        </li>
+        <li>
+          <activity>PostFeeding</activity>
+          <phase>Ongoing</phase>
+          <relationship>Any</relationship>
+          <speech>Any</speech>
+          <tone>Any</tone>
+          <firstWeightGoal>Any</firstWeightGoal>
+          <secondWeightGoal>Any</secondWeightGoal>
+          <firstSize>Any</firstSize>
+          <secondSize>Large</secondSize>
+          <fullness>Any</fullness>
+          <fullnessMood>Any</fullnessMood>
+          <speakerRole>Feeder</speakerRole>
+          <lines>
+            <li>[FEEDER_nameDef] made sure [FEDPAWN_nameDef] had enough room to settle their [FEDPAWN_sizeDesc] comfortably.</li>
+            <li>[FEEDER_nameDef] joked that getting comfortable after a feeding that large had become an art for [FEDPAWN_nameDef].</li>
+          </lines>
+        </li>
+        <li>
+          <activity>PostFeeding</activity>
+          <phase>Ongoing</phase>
+          <relationship>Any</relationship>
+          <speech>Any</speech>
+          <tone>Any</tone>
+          <firstWeightGoal>Any</firstWeightGoal>
+          <secondWeightGoal>Any</secondWeightGoal>
+          <firstSize>Any</firstSize>
+          <secondSize>Extreme</secondSize>
+          <fullness>Any</fullness>
+          <fullnessMood>Any</fullnessMood>
+          <speakerRole>Feeder</speakerRole>
+          <lines>
+            <li>[FEEDER_nameDef] carefully checked that [FEDPAWN_nameDef] had enough space to rest their [FEDPAWN_sizeDesc].</li>
+            <li>[FEEDER_nameDef] joked that even a generous feeding looked modest beside [FEDPAWN_nameDef]’s [FEDPAWN_sizeDesc].</li>
+          </lines>
+        </li>
+        <li>
+          <activity>PostFeeding</activity>
+          <phase>Ongoing</phase>
+          <relationship>Romantic</relationship>
+          <speech>Any</speech>
+          <tone>Any</tone>
+          <firstWeightGoal>Any</firstWeightGoal>
+          <secondWeightGoal>Any</secondWeightGoal>
+          <firstSize>Any</firstSize>
+          <secondSize>Any</secondSize>
+          <fullness>Any</fullness>
+          <fullnessMood>Any</fullnessMood>
+          <speakerRole>Feeder</speakerRole>
+          <lines>
+            <li>[FEEDER_nameDef] affectionately teased [FEDPAWN_nameDef] about looking wonderfully satisfied after being fed.</li>
+            <li>[FEEDER_nameDef] stayed close and began planning another cosy feeding evening for the two of them.</li>
+          </lines>
+        </li>
+        <li>
+          <activity>PostFeeding</activity>
+          <phase>Ongoing</phase>
+          <relationship>Romantic</relationship>
+          <speech>Any</speech>
+          <tone>Any</tone>
+          <firstWeightGoal>Any</firstWeightGoal>
+          <secondWeightGoal>Any</secondWeightGoal>
+          <firstSize>Any</firstSize>
+          <secondSize>Any</secondSize>
+          <fullness>Any</fullness>
+          <fullnessMood>Any</fullnessMood>
+          <speakerRole>FedPawn</speakerRole>
+          <lines>
+            <li>[FEDPAWN_nameDef] said that being cared for by [FEEDER_nameDef] had made the feeding especially intimate.</li>
+            <li>[FEDPAWN_nameDef] affectionately thanked [FEEDER_nameDef] and suggested repeating the quiet ritual soon.</li>
+          </lines>
+        </li>
+        <li>
+          <activity>PostFeeding</activity>
+          <phase>Ongoing</phase>
+          <relationship>Friend</relationship>
+          <speech>Any</speech>
+          <tone>Any</tone>
+          <firstWeightGoal>Any</firstWeightGoal>
+          <secondWeightGoal>Any</secondWeightGoal>
+          <firstSize>Any</firstSize>
+          <secondSize>Any</secondSize>
+          <fullness>Any</fullness>
+          <fullnessMood>Any</fullnessMood>
+          <speakerRole>Feeder</speakerRole>
+          <lines>
+            <li>[FEEDER_nameDef] teased [FEDPAWN_nameDef] about how thoroughly the feeding had defeated their appetite.</li>
+            <li>[FEEDER_nameDef] recalled another occasion when helping [FEDPAWN_nameDef] with food had turned into a long conversation.</li>
+          </lines>
+        </li>
+        <li>
+          <activity>PostFeeding</activity>
+          <phase>Ongoing</phase>
+          <relationship>Friend</relationship>
+          <speech>Any</speech>
+          <tone>Any</tone>
+          <firstWeightGoal>Any</firstWeightGoal>
+          <secondWeightGoal>Any</secondWeightGoal>
+          <firstSize>Any</firstSize>
+          <secondSize>Any</secondSize>
+          <fullness>Any</fullness>
+          <fullnessMood>Any</fullnessMood>
+          <speakerRole>FedPawn</speakerRole>
+          <lines>
+            <li>[FEDPAWN_nameDef] joked that [FEEDER_nameDef] was far too effective at keeping a friend well fed.</li>
+            <li>[FEDPAWN_nameDef] suggested turning the next feeding into another long, lazy afternoon together.</li>
+          </lines>
+        </li>
+        <li>
+          <activity>PostFeeding</activity>
+          <phase>Ongoing</phase>
+          <relationship>Strained</relationship>
+          <speech>Any</speech>
+          <tone>Any</tone>
+          <firstWeightGoal>Any</firstWeightGoal>
+          <secondWeightGoal>Any</secondWeightGoal>
+          <firstSize>Any</firstSize>
+          <secondSize>Any</secondSize>
+          <fullness>Any</fullness>
+          <fullnessMood>Any</fullnessMood>
+          <speakerRole>Feeder</speakerRole>
+          <lines>
+            <li>[FEEDER_nameDef] kept the conversation considerate and asked whether [FEDPAWN_nameDef] had been comfortable.</li>
+            <li>[FEEDER_nameDef] cautiously suggested that another relaxed feeding might help ease some of the tension between them.</li>
+          </lines>
+        </li>
+        <li>
+          <activity>PostFeeding</activity>
+          <phase>Ongoing</phase>
+          <relationship>Strained</relationship>
+          <speech>Any</speech>
+          <tone>Any</tone>
+          <firstWeightGoal>Any</firstWeightGoal>
+          <secondWeightGoal>Any</secondWeightGoal>
+          <firstSize>Any</firstSize>
+          <secondSize>Any</secondSize>
+          <fullness>Any</fullness>
+          <fullnessMood>Any</fullnessMood>
+          <speakerRole>FedPawn</speakerRole>
+          <lines>
+            <li>[FEDPAWN_nameDef] admitted that being fed had been more pleasant than expected despite the tension between them.</li>
+            <li>[FEDPAWN_nameDef] kept the conversation polite and thanked [FEEDER_nameDef] for the effort.</li>
+          </lines>
+        </li>
+        <li>
+          <activity>PostFeeding</activity>
+          <phase>Finishing</phase>
+          <relationship>Any</relationship>
+          <speech>BothSpeaking</speech>
+          <tone>Any</tone>
+          <firstWeightGoal>Any</firstWeightGoal>
+          <secondWeightGoal>Any</secondWeightGoal>
+          <firstSize>Any</firstSize>
+          <secondSize>Any</secondSize>
+          <fullness>Any</fullness>
+          <fullnessMood>Any</fullnessMood>
+          <speakerRole>Feeder</speakerRole>
+          <lines>
+            <li>[FEEDER_nameDef] wrapped up the conversation after checking that [FEDPAWN_nameDef] felt settled enough to continue the day.</li>
+            <li>[FEEDER_nameDef] thanked [FEDPAWN_nameDef] for the company and said they could rest longer if needed.</li>
+            <li>[FEEDER_nameDef] joked that [FEDPAWN_nameDef] now looked just about ready to test whether moving was possible.</li>
+          </lines>
+        </li>
+        <li>
+          <activity>PostFeeding</activity>
+          <phase>Finishing</phase>
+          <relationship>Any</relationship>
+          <speech>BothSpeaking</speech>
+          <tone>Any</tone>
+          <firstWeightGoal>Any</firstWeightGoal>
+          <secondWeightGoal>Any</secondWeightGoal>
+          <firstSize>Any</firstSize>
+          <secondSize>Any</secondSize>
+          <fullness>Any</fullness>
+          <fullnessMood>Any</fullnessMood>
+          <speakerRole>FedPawn</speakerRole>
+          <lines>
+            <li>[FEDPAWN_nameDef] said that the meal had settled enough to move again and thanked [FEEDER_nameDef] for staying.</li>
+            <li>[FEDPAWN_nameDef] brought the relaxed conversation to a close and thanked [FEEDER_nameDef] for the feeding.</li>
+            <li>[FEDPAWN_nameDef] joked that digestion had finally made standing seem possible again.</li>
+          </lines>
+        </li>
+        <li>
+          <activity>PostFeeding</activity>
+          <phase>Finishing</phase>
+          <relationship>Any</relationship>
+          <speech>OneSpeaking</speech>
+          <tone>Any</tone>
+          <firstWeightGoal>Any</firstWeightGoal>
+          <secondWeightGoal>Any</secondWeightGoal>
+          <firstSize>Any</firstSize>
+          <secondSize>Any</secondSize>
+          <fullness>Any</fullness>
+          <fullnessMood>Any</fullnessMood>
+          <speakerRole>Feeder</speakerRole>
+          <lines>
+            <li>[FEEDER_nameDef] gently ended the conversation after making sure [FEDPAWN_nameDef] was comfortable.</li>
+            <li>[FEEDER_nameDef] said goodbye for now while [FEDPAWN_nameDef] responded with an appreciative gesture.</li>
+          </lines>
+        </li>
+        <li>
+          <activity>PostFeeding</activity>
+          <phase>Finishing</phase>
+          <relationship>Any</relationship>
+          <speech>OneSpeaking</speech>
+          <tone>Any</tone>
+          <firstWeightGoal>Any</firstWeightGoal>
+          <secondWeightGoal>Any</secondWeightGoal>
+          <firstSize>Any</firstSize>
+          <secondSize>Any</secondSize>
+          <fullness>Any</fullness>
+          <fullnessMood>Any</fullnessMood>
+          <speakerRole>FedPawn</speakerRole>
+          <lines>
+            <li>[FEDPAWN_nameDef] thanked [FEEDER_nameDef] and indicated that the meal had settled enough for the conversation to end.</li>
+            <li>[FEDPAWN_nameDef] finished the story while [FEEDER_nameDef] answered with a warm gesture before they parted.</li>
+          </lines>
+        </li>
+        <li>
+          <activity>PostFeeding</activity>
+          <phase>Finishing</phase>
+          <relationship>Any</relationship>
+          <speech>NeitherSpeaking</speech>
+          <tone>Any</tone>
+          <firstWeightGoal>Any</firstWeightGoal>
+          <secondWeightGoal>Any</secondWeightGoal>
+          <firstSize>Any</firstSize>
+          <secondSize>Any</secondSize>
+          <fullness>Any</fullness>
+          <fullnessMood>Any</fullnessMood>
+          <speakerRole>MutualNarration</speakerRole>
+          <lines>
+            <li>[FEEDER_nameDef] and [FEDPAWN_nameDef] exchanged one last contented look before returning to their day.</li>
+            <li>[FEDPAWN_nameDef] gave [FEEDER_nameDef] an appreciative nod as their quiet post-feeding rest ended.</li>
+          </lines>
+        </li>
+    </entries>
+  </RimRound.FeedOther.FeedOtherConversationDef>
+</Defs>

@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <RR_FeedOtherSettingsTitle>RimRound Patch settings</RR_FeedOtherSettingsTitle>
+  <RR_FeedOtherSettingsTabFeeding>Feeding</RR_FeedOtherSettingsTabFeeding>
+  <RR_FeedOtherSettingsTabCooldowns>Cooldowns</RR_FeedOtherSettingsTabCooldowns>
+  <RR_FeedOtherSettingsTabSocial>Social</RR_FeedOtherSettingsTabSocial>
+  <RR_FeedOtherSettingsTabPawnBehaviour>Pawn behaviour</RR_FeedOtherSettingsTabPawnBehaviour>
+  <RR_FeedOtherSettingsTabPrisoners>Prisoners</RR_FeedOtherSettingsTabPrisoners>
+  <RR_FeedOtherSettingsTabWorld>World &amp; generation</RR_FeedOtherSettingsTabWorld>
+  <RR_FeedOtherSettingsResetPage>Reset this page</RR_FeedOtherSettingsResetPage>
+  <RR_FeedOtherSettingsResetAll>Reset all</RR_FeedOtherSettingsResetAll>
+
+  <RR_FeedOtherSettingsFeedingHeader>Feeding activities</RR_FeedOtherSettingsFeedingHeader>
+  <RR_FeedOtherSettingsAutonomousShared>Autonomous shared meals</RR_FeedOtherSettingsAutonomousShared>
+  <RR_FeedOtherSettingsAutonomousSharedTip>Allows eligible Neutral+ or higher pawns to start shared eating and shared bedside-feeding recreation on their own.</RR_FeedOtherSettingsAutonomousSharedTip>
+  <RR_FeedOtherSettingsAutonomousOneWay>Autonomous one-way feeding</RR_FeedOtherSettingsAutonomousOneWay>
+  <RR_FeedOtherSettingsAutonomousOneWayTip>Allows exempt pawns and RimRound pawns with Neutral or lower weight opinion to feed an eligible pawn without eating themselves.</RR_FeedOtherSettingsAutonomousOneWayTip>
+  <RR_FeedOtherSettingsManualFeeding>Manual right-click feeding</RR_FeedOtherSettingsManualFeeding>
+  <RR_FeedOtherSettingsManualFeedingTip>Adds the player-forced Feed command when one selected pawn right-clicks another eligible humanlike pawn.</RR_FeedOtherSettingsManualFeedingTip>
+  <RR_FeedOtherSettingsBedsideFeeding>Bedside and sleeping-recipient feeding</RR_FeedOtherSettingsBedsideFeeding>
+  <RR_FeedOtherSettingsBedsideFeedingTip>Allows feeding a downed, immobile, resting, or sleeping recipient while they remain in bed. Disabling this affects new sessions only.</RR_FeedOtherSettingsBedsideFeedingTip>
+  <RR_FeedOtherSettingsStartingCutoff>Maximum fullness for starting a session</RR_FeedOtherSettingsStartingCutoff>
+  <RR_FeedOtherSettingsStartingCutoffTip>A new automatic or manual session may start at exactly this percentage, but not above it. This value is always kept below the feeding target.</RR_FeedOtherSettingsStartingCutoffTip>
+  <RR_FeedOtherSettingsFeedingTarget>Feed Other stop fullness</RR_FeedOtherSettingsFeedingTarget>
+  <RR_FeedOtherSettingsFeedingTargetTooltip>Controls the exact hard-capacity percentage at which Shared Meal, Feed Other, manual feeding, and bedside feeding stop. The final fullness increase is clamped to this value. The recommended default is 70%. This does not alter RimRound's health-stage boundaries, its 70% Very Full mood trigger, or the separate 80% prisoner Fatten target.</RR_FeedOtherSettingsFeedingTargetTooltip>
+  <RR_FeedOtherSettingsStageFull>Resulting RimRound stage: Full (below Very Full).</RR_FeedOtherSettingsStageFull>
+  <RR_FeedOtherSettingsStageVeryFull>Resulting RimRound stage: Very Full.</RR_FeedOtherSettingsStageVeryFull>
+  <RR_FeedOtherSettingsStagePainfullyFull>Resulting RimRound stage: Painfully Full.</RR_FeedOtherSettingsStagePainfullyFull>
+  <RR_FeedOtherSettingsStageAboutToBurst>Resulting RimRound stage: About to Burst.</RR_FeedOtherSettingsStageAboutToBurst>
+  <RR_FeedOtherSettingsHighTargetWarning>Warning: 80% or higher deliberately applies severe fullness penalties and may make heavily penalised pawns collapse or become immobile.</RR_FeedOtherSettingsHighTargetWarning>
+  <RR_FeedOtherSettingsMoodNote>RimRound's actual Very Full boundary remains 70%. Positive or negative Very Full mood memories trigger when a pawn crosses that real boundary, even when feeding continues to a higher selected target. A target below 70% will not award a Very Full mood.</RR_FeedOtherSettingsMoodNote>
+  <RR_FeedOtherSettingsResetTarget>Reset target to 70%</RR_FeedOtherSettingsResetTarget>
+  <RR_FeedOtherSettingsSessionTimeout>Maximum feeding-session time</RR_FeedOtherSettingsSessionTimeout>
+  <RR_FeedOtherSettingsSessionTimeoutTip>Maximum time spent fetching, meeting, waiting, and eating before a feeding session ends safely. The optional after-meal social phase has its own limit.</RR_FeedOtherSettingsSessionTimeoutTip>
+  <RR_FeedOtherSettingsAutonomousFrequency>Autonomous event frequency</RR_FeedOtherSettingsAutonomousFrequency>
+  <RR_FeedOtherSettingsAutonomousFrequencyTip>Multiplies the final chance that Feed Other wins an eligible recreation choice. It does not bypass eligibility, food, relationship, timetable, or cooldown checks.</RR_FeedOtherSettingsAutonomousFrequencyTip>
+
+  <RR_FeedOtherSettingsCooldownHeader>Autonomous feeding cooldowns</RR_FeedOtherSettingsCooldownHeader>
+  <RR_FeedOtherSettingsParticipantCooldown>Participant / recipient cooldown</RR_FeedOtherSettingsParticipantCooldown>
+  <RR_FeedOtherSettingsParticipantCooldownTip>Cooldown applied to both shared-meal participants and to the recipient of a one-way feeding session.</RR_FeedOtherSettingsParticipantCooldownTip>
+  <RR_FeedOtherSettingsOneWayCooldown>One-way feeder cooldown</RR_FeedOtherSettingsOneWayCooldown>
+  <RR_FeedOtherSettingsOneWayCooldownTip>Separate cooldown applied to a pawn who performs one-way feeding without eating.</RR_FeedOtherSettingsOneWayCooldownTip>
+  <RR_FeedOtherSettingsPairCooldown>Same-pair cooldown</RR_FeedOtherSettingsPairCooldown>
+  <RR_FeedOtherSettingsPairCooldownTip>Prevents the same two pawns from immediately forming another autonomous feeding pair even if their individual cooldowns differ.</RR_FeedOtherSettingsPairCooldownTip>
+  <RR_FeedOtherSettingsLikeBypass>Like-or-higher weight opinion bypasses cooldowns</RR_FeedOtherSettingsLikeBypass>
+  <RR_FeedOtherSettingsLikeBypassTip>If either pawn has Like, Love, Fanatical, or Extreme weight opinion, their pair may start again immediately whenever all other conditions are valid.</RR_FeedOtherSettingsLikeBypassTip>
+  <RR_FeedOtherSettingsManualIgnoresCooldown>Manual commands ignore feeding cooldowns</RR_FeedOtherSettingsManualIgnoresCooldown>
+  <RR_FeedOtherSettingsManualIgnoresCooldownTip>When enabled, right-click Feed commands neither check nor start these feeding cooldowns. When disabled, manual feeding uses and records the same cooldown system.</RR_FeedOtherSettingsManualIgnoresCooldownTip>
+  <RR_FeedOtherSettingsCooldownZeroNote>Setting a cooldown to 0 hours disables that particular cooldown. Existing saved cooldown expiry times are not lengthened or shortened; the new duration is used by future sessions.</RR_FeedOtherSettingsCooldownZeroNote>
+
+  <RR_FeedOtherSettingsSocialHeader>Dialogue, recreation, and memories</RR_FeedOtherSettingsSocialHeader>
+  <RR_FeedOtherSettingsDialogue>Feeding dialogue and interaction logs</RR_FeedOtherSettingsDialogue>
+  <RR_FeedOtherSettingsDialogueTip>Controls the contextual conversation lines shown during feeding and the optional after-meal chat.</RR_FeedOtherSettingsDialogueTip>
+  <RR_FeedOtherSettingsPostMealSocial>Continue as social recreation after eating</RR_FeedOtherSettingsPostMealSocial>
+  <RR_FeedOtherSettingsPostMealSocialTip>If either awake participant is still bored after eating, the pair remains together to chat until both reach the target or the time limit expires.</RR_FeedOtherSettingsPostMealSocialTip>
+  <RR_FeedOtherSettingsRecreationTarget>After-meal recreation target</RR_FeedOtherSettingsRecreationTarget>
+  <RR_FeedOtherSettingsRecreationTargetTip>The after-meal chat continues while either participant's recreation is below this percentage.</RR_FeedOtherSettingsRecreationTargetTip>
+  <RR_FeedOtherSettingsMaxChat>Maximum after-meal chat time</RR_FeedOtherSettingsMaxChat>
+  <RR_FeedOtherSettingsMaxChatTip>Hard time limit for the social recreation phase after feeding is complete.</RR_FeedOtherSettingsMaxChatTip>
+  <RR_FeedOtherSettingsSocialMemory>Social-opinion memory from completed feeding</RR_FeedOtherSettingsSocialMemory>
+  <RR_FeedOtherSettingsSocialMemoryTip>Gives both participants the social memory that improves their opinion of each other after a fully completed feeding session.</RR_FeedOtherSettingsSocialMemoryTip>
+  <RR_FeedOtherSettingsPositiveMood>Positive Very Full mood memories</RR_FeedOtherSettingsPositiveMood>
+  <RR_FeedOtherSettingsPositiveMoodTip>Allows Neutral+ and higher weight opinions to receive the positive RimRound Patch mood memory when crossing RimRound's real 70% Very Full boundary.</RR_FeedOtherSettingsPositiveMoodTip>
+  <RR_FeedOtherSettingsNegativeMood>Negative Very Full discomfort memories</RR_FeedOtherSettingsNegativeMood>
+  <RR_FeedOtherSettingsNegativeMoodTip>Allows Neutral-, Dislike, and Hate weight opinions to receive the negative discomfort memory when crossing the real 70% Very Full boundary.</RR_FeedOtherSettingsNegativeMoodTip>
+  <RR_FeedOtherSettingsAfterMealMood>After-meal chat mood (+2)</RR_FeedOtherSettingsAfterMealMood>
+  <RR_FeedOtherSettingsAfterMealMoodTip>Awards the +2 mood memory after at least 600 ticks of successful post-meal social recreation.</RR_FeedOtherSettingsAfterMealMoodTip>
+
+  <RR_FeedOtherSettingsPawnHeader>Pawn behaviour and abilities</RR_FeedOtherSettingsPawnHeader>
+  <RR_FeedOtherSettingsIdleEating>Idle underweight eating</RR_FeedOtherSettingsIdleEating>
+  <RR_FeedOtherSettingsIdleEatingTip>Allows an eligible Neutral+ or higher pawn who dislikes being too thin to choose a normal policy-approved meal while idle.</RR_FeedOtherSettingsIdleEatingTip>
+  <RR_FeedOtherSettingsIdleTrigger>Idle-eating fullness trigger</RR_FeedOtherSettingsIdleTrigger>
+  <RR_FeedOtherSettingsIdleTriggerTip>The pawn must be below this percentage of hard stomach capacity before the idle-eating timer runs.</RR_FeedOtherSettingsIdleTriggerTip>
+  <RR_FeedOtherSettingsIdleMinDelay>Minimum idle-eating delay</RR_FeedOtherSettingsIdleMinDelay>
+  <RR_FeedOtherSettingsIdleMinDelayTip>Shortest random in-game delay before an eligible idle pawn tries to find a meal.</RR_FeedOtherSettingsIdleMinDelayTip>
+  <RR_FeedOtherSettingsIdleMaxDelay>Maximum idle-eating delay</RR_FeedOtherSettingsIdleMaxDelay>
+  <RR_FeedOtherSettingsIdleMaxDelayTip>Longest random in-game delay before an eligible idle pawn tries to find a meal.</RR_FeedOtherSettingsIdleMaxDelayTip>
+  <RR_FeedOtherSettingsMilkExpression>Automatic milk-expression feature</RR_FeedOtherSettingsMilkExpression>
+  <RR_FeedOtherSettingsMilkExpressionTip>Shows and enables the per-pawn Express milk automatically command for lactating adult women. Turning this master switch off preserves every pawn's saved choice.</RR_FeedOtherSettingsMilkExpressionTip>
+  <RR_FeedOtherSettingsPersuasion>Weight-opinion persuasion abilities</RR_FeedOtherSettingsPersuasion>
+  <RR_FeedOtherSettingsPersuasionTip>Shows the Increase and Decrease Weight Opinion ability buttons on eligible adult pawns.</RR_FeedOtherSettingsPersuasionTip>
+  <RR_FeedOtherSettingsPersuasionCooldown>Persuasion cooldown</RR_FeedOtherSettingsPersuasionCooldown>
+  <RR_FeedOtherSettingsPersuasionCooldownTip>Shared cooldown used by both persuasion directions after either a success or failure.</RR_FeedOtherSettingsPersuasionCooldownTip>
+  <RR_FeedOtherSettingsShowAdvanced>Show advanced persuasion chances</RR_FeedOtherSettingsShowAdvanced>
+  <RR_FeedOtherSettingsHideAdvanced>Hide advanced persuasion chances</RR_FeedOtherSettingsHideAdvanced>
+  <RR_FeedOtherSettingsPersuasionAdvancedHeader>Advanced persuasion chance formula</RR_FeedOtherSettingsPersuasionAdvancedHeader>
+  <RR_FeedOtherSettingsPersuasionBase>Base chance at Social 1</RR_FeedOtherSettingsPersuasionBase>
+  <RR_FeedOtherSettingsPersuasionBaseTip>Starting success chance for Social 1. A pawn with Social 0 deliberately uses the Social 1 value.</RR_FeedOtherSettingsPersuasionBaseTip>
+  <RR_FeedOtherSettingsPersuasionPerLevel>Chance per additional Social level</RR_FeedOtherSettingsPersuasionPerLevel>
+  <RR_FeedOtherSettingsPersuasionPerLevelTip>Added once per Social level after level 1, through level 10.</RR_FeedOtherSettingsPersuasionPerLevelTip>
+  <RR_FeedOtherSettingsPersuasionOpinion>Maximum target-opinion influence</RR_FeedOtherSettingsPersuasionOpinion>
+  <RR_FeedOtherSettingsPersuasionOpinionTip>Target opinion from -100 to +100 changes the chance linearly from this negative amount to this positive amount.</RR_FeedOtherSettingsPersuasionOpinionTip>
+  <RR_FeedOtherSettingsPersuasionRomantic>Romantic-partner bonus</RR_FeedOtherSettingsPersuasionRomantic>
+  <RR_FeedOtherSettingsPersuasionRomanticTip>Added when the speaker and target are spouses, fiancés, or lovers.</RR_FeedOtherSettingsPersuasionRomanticTip>
+  <RR_FeedOtherSettingsPersuasionFamily>Close-family bonus</RR_FeedOtherSettingsPersuasionFamily>
+  <RR_FeedOtherSettingsPersuasionFamilyTip>Added for a parent, child, sibling, or half-sibling when no romantic bonus applies.</RR_FeedOtherSettingsPersuasionFamilyTip>
+  <RR_FeedOtherSettingsPersuasionMinimum>Minimum final chance</RR_FeedOtherSettingsPersuasionMinimum>
+  <RR_FeedOtherSettingsPersuasionMinimumTip>Lower limit applied after Social, opinion, and relationship modifiers.</RR_FeedOtherSettingsPersuasionMinimumTip>
+  <RR_FeedOtherSettingsPersuasionMaximum>Maximum final chance</RR_FeedOtherSettingsPersuasionMaximum>
+  <RR_FeedOtherSettingsPersuasionMaximumTip>Upper limit applied after Social, opinion, and relationship modifiers.</RR_FeedOtherSettingsPersuasionMaximumTip>
+  <RR_FeedOtherSettingsPersuasionSocialCapNote>Social levels above 10 deliberately use the same chance as Social 10.</RR_FeedOtherSettingsPersuasionSocialCapNote>
+
+  <RR_FeedOtherSettingsPrisonerHeader>Prisoner food handling</RR_FeedOtherSettingsPrisonerHeader>
+  <RR_FeedOtherSettingsPrisonerOverhaul>Prisoner feeding overhaul</RR_FeedOtherSettingsPrisonerOverhaul>
+  <RR_FeedOtherSettingsPrisonerOverhaulTip>Uses the patch's deterministic prisoner meal delivery, safe diet-range repair, and optional Fatten feeding behaviour. Turning it off returns new food decisions to vanilla and RimRound.</RR_FeedOtherSettingsPrisonerOverhaulTip>
+  <RR_FeedOtherSettingsPrisonerDeliveryCooldown>Ordinary meal-delivery cooldown</RR_FeedOtherSettingsPrisonerDeliveryCooldown>
+  <RR_FeedOtherSettingsPrisonerDeliveryCooldownTip>Minimum time between successful ordinary food deliveries to the same prisoner.</RR_FeedOtherSettingsPrisonerDeliveryCooldownTip>
+  <RR_FeedOtherSettingsFatten>Fatten interaction overhaul</RR_FeedOtherSettingsFatten>
+  <RR_FeedOtherSettingsFattenTip>Bed-locks prisoners assigned the RimRound Fatten interaction and has wardens feed one serving at a time to the selected target. Turning this off returns that interaction to RimRound's original behaviour.</RR_FeedOtherSettingsFattenTip>
+  <RR_FeedOtherSettingsFattenTarget>Fatten session target</RR_FeedOtherSettingsFattenTarget>
+  <RR_FeedOtherSettingsFattenTargetTip>Hard stomach-capacity percentage at which warden Fatten feeding stops. The final serving is clamped exactly to this target.</RR_FeedOtherSettingsFattenTargetTip>
+  <RR_FeedOtherSettingsFattenResume>Resume Fatten feeding below</RR_FeedOtherSettingsFattenResume>
+  <RR_FeedOtherSettingsFattenResumeTip>After reaching the Fatten target, wardens wait until physical fullness falls strictly below this percentage before starting another Fatten session.</RR_FeedOtherSettingsFattenResumeTip>
+  <RR_FeedOtherSettingsFattenWarning>At 80% or higher, Fatten deliberately reaches RimRound's Painfully Full or worse stages and may immobilise heavily penalised prisoners.</RR_FeedOtherSettingsFattenWarning>
+
+  <RR_FeedOtherSettingsWorldHeader>Pawn generation, resources, and orbit</RR_FeedOtherSettingsWorldHeader>
+  <RR_FeedOtherSettingsBalancedOpinions>Balanced weight-opinion distribution</RR_FeedOtherSettingsBalancedOpinions>
+  <RR_FeedOtherSettingsBalancedOpinionsTip>Uses the patch's neutral-centred symmetric distribution for newly assigned RimRound weight opinions. Turning it off restores RimRound's original loaded weights.</RR_FeedOtherSettingsBalancedOpinionsTip>
+  <RR_FeedOtherSettingsEatingTraits>Guarantee one eating-style trait</RR_FeedOtherSettingsEatingTraits>
+  <RR_FeedOtherSettingsEatingTraitsTip>Adds exactly one slow, average, or fast eating-style marker after normal traits are generated.</RR_FeedOtherSettingsEatingTraitsTip>
+  <RR_FeedOtherSettingsElasticityTraits>Guarantee one stomach-elasticity trait</RR_FeedOtherSettingsElasticityTraits>
+  <RR_FeedOtherSettingsElasticityTraitsTip>Adds exactly one rigid, average, flexible, or elastic stomach marker after normal traits are generated.</RR_FeedOtherSettingsElasticityTraitsTip>
+  <RR_FeedOtherSettingsRepairTraits>Repair missing categories on existing pawns</RR_FeedOtherSettingsRepairTraits>
+  <RR_FeedOtherSettingsRepairTraitsTip>When loading or saving settings, adds currently enabled missing trait categories and removes accidental duplicates. Existing traits are never removed merely because generation is disabled.</RR_FeedOtherSettingsRepairTraitsTip>
+  <RR_FeedOtherSettingsGluttonium>Generate separate Gluttonium veins</RR_FeedOtherSettingsGluttonium>
+  <RR_FeedOtherSettingsGluttoniumTip>Runs the independent Gluttonium ore pass without consuming vanilla steel, compacted machinery, or precious-ore selections. Applies only to newly generated maps.</RR_FeedOtherSettingsGluttoniumTip>
+  <RR_FeedOtherSettingsGluttoniumFrequency>Gluttonium veins per 10,000 cells</RR_FeedOtherSettingsGluttoniumFrequency>
+  <RR_FeedOtherSettingsGluttoniumFrequencyTip>Expected number of independent 3–6 tile Gluttonium veins per 10,000 map cells. A standard 250×250 map receives about 6.25 times this value.</RR_FeedOtherSettingsGluttoniumFrequencyTip>
+  <RR_FeedOtherSettingsOrbitalRelief>Orbital movement-penalty relief</RR_FeedOtherSettingsOrbitalRelief>
+  <RR_FeedOtherSettingsOrbitalReliefTip>Reduces only negative Moving offsets from RimRound Weight and Fullness hediffs on maps located on an orbital or space planet layer.</RR_FeedOtherSettingsOrbitalReliefTip>
+  <RR_FeedOtherSettingsOrbitalReliefAmount>Orbital movement relief amount</RR_FeedOtherSettingsOrbitalReliefAmount>
+  <RR_FeedOtherSettingsOrbitalReliefAmountTip>Percentage of the normal planetary RimRound movement penalty removed in orbit. At 75%, a -0.80 penalty becomes -0.20.</RR_FeedOtherSettingsOrbitalReliefAmountTip>
+  <RR_FeedOtherSettingsAlwaysOnFixes>Hoverchair recovery, fullness-overflow protection, sleeping/bed preservation, and Mine Vein compatibility remain always-on reliability fixes.</RR_FeedOtherSettingsAlwaysOnFixes>
+  <RR_AutoExpressMilkLabel>Express milk automatically</RR_AutoExpressMilkLabel>
+  <RR_AutoExpressMilkDesc>When enabled, this pawn turns each full lactation charge into as many whole vanilla Milk items as its stored milk nutrition can supply. The items are placed nearby and the same amount is removed from milk fullness, so breastfeeding and milk items share one supply.</RR_AutoExpressMilkDesc>
+  <RR_WeightOpinionShiftSuccess>{INITIATOR_labelShort} changed {TARGET_labelShort}'s weight opinion from {OLDOPINION} to {NEWOPINION}.</RR_WeightOpinionShiftSuccess>
+  <RR_WeightOpinionShiftFailure>{INITIATOR_labelShort} failed to change {TARGET_labelShort}'s weight opinion ({CHANCE}% chance).</RR_WeightOpinionShiftFailure>
+  <RR_WeightOpinionShiftPreview>Weight opinion: {OLDOPINION} → {NEWOPINION}&#10;Success chance: {CHANCE}%&#10;Social used: {SOCIAL}/10; target opinion: {TARGETOPINION}; relationship: {RELATIONSHIP}</RR_WeightOpinionShiftPreview>
+  <RR_WeightOpinionShiftRelationshipRomantic>romantic partner (+{BONUS}%)</RR_WeightOpinionShiftRelationshipRomantic>
+  <RR_WeightOpinionShiftRelationshipFamily>close family (+{BONUS}%)</RR_WeightOpinionShiftRelationshipFamily>
+  <RR_WeightOpinionShiftRelationshipNone>none</RR_WeightOpinionShiftRelationshipNone>
+  <RR_WeightOpinionShiftCannotTargetSelf>A pawn cannot use this conversation on themselves.</RR_WeightOpinionShiftCannotTargetSelf>
+  <RR_WeightOpinionShiftTargetMustBeAdult>{TARGET_labelShort} must be a humanlike adult aged 18 or older.</RR_WeightOpinionShiftTargetMustBeAdult>
+  <RR_WeightOpinionShiftTargetUnavailable>{TARGET_labelShort} must be awake, conscious, and mentally stable.</RR_WeightOpinionShiftTargetUnavailable>
+  <RR_WeightOpinionShiftTargetUnsupported>{TARGET_labelShort} does not have a compatible RimRound weight opinion.</RR_WeightOpinionShiftTargetUnsupported>
+  <RR_WeightOpinionShiftAlreadyMaximum>{TARGET_labelShort}'s weight opinion is already Fanatical.</RR_WeightOpinionShiftAlreadyMaximum>
+  <RR_WeightOpinionShiftAlreadyMinimum>{TARGET_labelShort}'s weight opinion is already Hate.</RR_WeightOpinionShiftAlreadyMinimum>
+
+  <RR_FeedOtherSettingsTabFoodNetwork>Food network</RR_FeedOtherSettingsTabFoodNetwork>
+  <RR_FoodNetworkSettingsHeader>Food processing, pipes, storage, and automatic feeders</RR_FoodNetworkSettingsHeader>
+  <RR_FoodNetworkSettingsEnabled>Food Network v2 overhaul</RR_FoodNetworkSettingsEnabled>
+  <RR_FoodNetworkSettingsEnabledTip>Uses the transactional pipe network, FIFO food batches, safe dispenser jobs, validated bed links, and two-port distiller. Turning this off returns the machines to RimRound's original implementation; saved v2 batches are retained.</RR_FoodNetworkSettingsEnabledTip>
+  <RR_FoodNetworkSettingsPreparedMeals>Allow prepared meals in food processors</RR_FoodNetworkSettingsPreparedMeals>
+  <RR_FoodNetworkSettingsPreparedMealsTip>Lets a processor liquefy prepared meals accepted by its hopper filter. Raw foods and ingredients remain accepted either way.</RR_FoodNetworkSettingsPreparedMealsTip>
+  <RR_FoodNetworkSettingsProcessorRate>Processor throughput per 60-tick cycle</RR_FoodNetworkSettingsProcessorRate>
+  <RR_FoodNetworkSettingsProcessorRateTip>Maximum nutrition converted by each food processor per cycle. A single larger item is still processed whole when there is enough exact storage capacity.</RR_FoodNetworkSettingsProcessorRateTip>
+  <RR_FoodNetworkSettingsServingSize>Survival/Maintain nutrition per pulse</RR_FoodNetworkSettingsServingSize>
+  <RR_FoodNetworkSettingsServingSizeTip>Maximum nutrition delivered by one bed-feeder pulse in Survival or Maintain mode. Gain modes use the separate stomach-capacity flow setting. A pawn-operated food dispenser creates one real nutrient-paste meal sized automatically to that pawn's active bars.</RR_FoodNetworkSettingsServingSizeTip>
+  <RR_FoodNetworkSettingsDistillerRate>Distiller throughput per 60-tick cycle</RR_FoodNetworkSettingsDistillerRate>
+  <RR_FoodNetworkSettingsDistillerRateTip>Nutrition moved transactionally from the blue input network to the red output network per cycle. Nutrition and ingredients are conserved.</RR_FoodNetworkSettingsDistillerRateTip>
+  <RR_FoodNetworkSettingsFeederHeader>Automatic feeders</RR_FoodNetworkSettingsFeederHeader>
+  <RR_FoodNetworkSettingsFeederGainFlow>Gain-mode fullness flow per pulse</RR_FoodNetworkSettingsFeederGainFlow>
+  <RR_FoodNetworkSettingsFeederGainFlowTip>Percentage of each pawn's hard stomach capacity pumped per check in Gain or Maximum Gain mode. This is physical fullness volume, so distilled food does not flow more slowly merely because it is denser. The target and 95% safety ceiling still prevent overshoot.</RR_FoodNetworkSettingsFeederGainFlowTip>
+  <RR_FoodNetworkSettingsFeederInterval>Feeding check interval</RR_FoodNetworkSettingsFeederInterval>
+  <RR_FoodNetworkSettingsFeederIntervalTip>How often each connected feeder checks its beds and can dispense one serving per eligible occupant.</RR_FoodNetworkSettingsFeederIntervalTip>
+  <RR_FoodNetworkSettingsMaximumTarget>Advanced Maximum Gain target</RR_FoodNetworkSettingsMaximumTarget>
+  <RR_FoodNetworkSettingsMaximumTargetTip>Hard stomach-capacity percentage used by an advanced feeder's Maximum Gain mode. It can never exceed 95%.</RR_FoodNetworkSettingsMaximumTargetTip>
+  <RR_FoodNetworkSettingsAdvancedRange>Advanced feeder hose range</RR_FoodNetworkSettingsAdvancedRange>
+  <RR_FoodNetworkSettingsAdvancedRangeTip>Maximum distance between an advanced automatic feeder and each linked bed occupant.</RR_FoodNetworkSettingsAdvancedRangeTip>
+  <RR_FoodNetworkSettingsAdvancedBeds>Advanced feeder bed limit</RR_FoodNetworkSettingsAdvancedBeds>
+  <RR_FoodNetworkSettingsAdvancedBedsTip>Maximum number of occupied beds one advanced automatic feeder may link at the same time. The basic feeder remains limited to one adjacent bed.</RR_FoodNetworkSettingsAdvancedBedsTip>
+  <RR_FoodNetworkSettingsOverlayHeader>Pipe overlay</RR_FoodNetworkSettingsOverlayHeader>
+  <RR_FoodNetworkSettingsSelectedOverlay>Show network while a food-network building is selected</RR_FoodNetworkSettingsSelectedOverlay>
+  <RR_FoodNetworkSettingsSelectedOverlayTip>Displays the food-pipe overlay whenever a pipe, valve, tank, processor, dispenser, feeder, or distiller is selected.</RR_FoodNetworkSettingsSelectedOverlayTip>
+  <RR_FoodNetworkSettingsAlwaysOverlay>Always show the food-pipe overlay</RR_FoodNetworkSettingsAlwaysOverlay>
+  <RR_FoodNetworkSettingsAlwaysOverlayTip>Keeps the food network visible without selecting a machine. This may add visual clutter on large colonies.</RR_FoodNetworkSettingsAlwaysOverlayTip>
+  <RR_FoodNetworkSettingsMigrationNote>Existing tank volume and density migrate once into a conserved legacy batch. Existing buildings, research, feeder mode, and first linked pawn retain their original defNames and save data.</RR_FoodNetworkSettingsMigrationNote>
+  <RR_FoodNetworkSettingsPreservationNote>Tank contents keep RimRound's current indefinite-preservation behaviour in this beta. Spoilage during power loss is intentionally not enabled until tanks have a clear, balanced refrigeration requirement.</RR_FoodNetworkSettingsPreservationNote>
+
+  <RR_FoodNetworkNoIngredients>legacy or unspecified mixture</RR_FoodNetworkNoIngredients>
+  <RR_FoodNetworkServingInspect>Network serving: {0} nutrition; density {1}×</RR_FoodNetworkServingInspect>
+  <RR_FoodNetworkDisconnected>Food network: disconnected</RR_FoodNetworkDisconnected>
+  <RR_FoodNetworkSummary>Food network: {0} nutrition; {1}/{2} fullness volume; {3} FIFO batches</RR_FoodNetworkSummary>
+  <RR_FoodNetworkTankStored>Tank: {0} nutrition; {1}/{2} fullness volume</RR_FoodNetworkTankStored>
+  <RR_FoodNetworkDensity>Nutrition density: {0}×</RR_FoodNetworkDensity>
+  <RR_FoodNetworkIngredients>Ingredients: {0}</RR_FoodNetworkIngredients>
+  <RR_FoodNetworkStatusOffline>Status: unpowered, switched off, or broken down</RR_FoodNetworkStatusOffline>
+  <RR_FoodNetworkStatusNoConnection>Status: no food-pipe connection</RR_FoodNetworkStatusNoConnection>
+  <RR_FoodNetworkStatusNoStorage>Status: connected network has no tank</RR_FoodNetworkStatusNoStorage>
+  <RR_FoodNetworkStatusOutputFull>Status: output storage is full</RR_FoodNetworkStatusOutputFull>
+  <RR_FoodNetworkStatusNoFeedstock>Status: no hopper-filter-approved food</RR_FoodNetworkStatusNoFeedstock>
+  <RR_FoodNetworkStatusProcessing>Status: ready to process food</RR_FoodNetworkStatusProcessing>
+  <RR_FoodNetworkStatusReady>Status: ready</RR_FoodNetworkStatusReady>
+  <RR_FoodNetworkStatusNoFood>Status: insufficient liquid food</RR_FoodNetworkStatusNoFood>
+  <RR_FoodNetworkStatusNeedsTwoNetworks>Status: connect separate input and output networks</RR_FoodNetworkStatusNeedsTwoNetworks>
+  <RR_FoodNetworkStatusSameNetwork>Status: blocked because input and output are the same network</RR_FoodNetworkStatusSameNetwork>
+  <RR_FoodNetworkStatusDistilling>Status: distilling</RR_FoodNetworkStatusDistilling>
+  <RR_FoodNetworkDistillerInput>Blue input nutrition: {0}</RR_FoodNetworkDistillerInput>
+  <RR_FoodNetworkDistillerOutput>Red output nutrition: {0}</RR_FoodNetworkDistillerOutput>
+
+  <RR_FoodNetworkPurgeTank>Purge this tank</RR_FoodNetworkPurgeTank>
+  <RR_FoodNetworkPurgeTankDesc>Discard only this tank's saved FIFO batches.</RR_FoodNetworkPurgeTankDesc>
+  <RR_FoodNetworkPurgeTankConfirm>Discard all liquid food in this tank? This cannot be undone.</RR_FoodNetworkPurgeTankConfirm>
+  <RR_FoodNetworkPurgeNetwork>Purge connected network</RR_FoodNetworkPurgeNetwork>
+  <RR_FoodNetworkPurgeNetworkDesc>Discard every saved food batch in all tanks on this connected network.</RR_FoodNetworkPurgeNetworkDesc>
+  <RR_FoodNetworkPurgeNetworkConfirm>Discard all liquid food in every tank on this connected network? This cannot be undone.</RR_FoodNetworkPurgeNetworkConfirm>
+
+  <RR_FoodNetworkFeederNoBeds>Status: no beds linked</RR_FoodNetworkFeederNoBeds>
+  <RR_FoodNetworkFeederOff>Status: off; {0} bed(s) linked</RR_FoodNetworkFeederOff>
+  <RR_FoodNetworkFeederReady>Status: {0} bed(s) linked; mode {1}</RR_FoodNetworkFeederReady>
+  <RR_FoodNetworkLinkBedBasic>Link adjacent bed</RR_FoodNetworkLinkBedBasic>
+  <RR_FoodNetworkLinkBedBasicDesc>Select an immediately adjacent humanlike bed, or a pawn currently lying in one. The link remains on the bed when its occupant changes.</RR_FoodNetworkLinkBedBasicDesc>
+  <RR_FoodNetworkLinkBedAdvanced>Add linked bed</RR_FoodNetworkLinkBedAdvanced>
+  <RR_FoodNetworkLinkBedAdvancedDesc>Select a humanlike bed within hose range, or a pawn currently lying in one. Several persistent bed links can share this feeder up to the configured limit.</RR_FoodNetworkLinkBedAdvancedDesc>
+  <RR_FoodNetworkUnlinkBeds>Disconnect feeding tubes</RR_FoodNetworkUnlinkBeds>
+  <RR_FoodNetworkUnlinkBedsDesc>Safely remove every bed link and its movement-blocking feeding-tube hediff.</RR_FoodNetworkUnlinkBedsDesc>
+  <RR_FoodNetworkBedLimitReached>The advanced feeder has reached its configured bed limit.</RR_FoodNetworkBedLimitReached>
+  <RR_FoodNetworkTargetMustBeInBed>Select a humanlike bed, or a living humanlike pawn currently occupying one.</RR_FoodNetworkTargetMustBeInBed>
+  <RR_FoodNetworkTargetOutOfRange>The target is outside the feeder's {0}-cell hose range.</RR_FoodNetworkTargetOutOfRange>
+  <RR_FoodNetworkBasicNeedsAdjacentBed>A basic feeder can connect only to an immediately adjacent occupied bed.</RR_FoodNetworkBasicNeedsAdjacentBed>
+  <RR_FoodNetworkAlreadyLinked>That bed is already linked to another automatic feeder.</RR_FoodNetworkAlreadyLinked>
+  <RR_FoodNetworkLinkUnavailable>The feeding-tube link could not be saved.</RR_FoodNetworkLinkUnavailable>
+  <RR_FoodNetworkGainModeDesc>Continuously feeds linked occupants toward the shared feeding target of {0}% hard fullness.</RR_FoodNetworkGainModeDesc>
+  <RR_FoodNetworkMaximumModeDesc>Continuously feeds linked occupants toward {0}% hard fullness, while retaining the 95% rupture-safety ceiling.</RR_FoodNetworkMaximumModeDesc>
+</LanguageData>

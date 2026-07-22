@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <AbilityDef>
+    <defName>RR_IncreaseWeightOpinion</defName>
+    <label>increase weight opinion</label>
+    <description>Try to persuade another adult pawn to become more accepting of gaining weight. Success moves their RimRound weight opinion upward by one level. The chance uses Social skill levels 1-10, the target's opinion of the speaker, and close relationships; Social levels above 10 use the same chance as level 10.</description>
+    <iconPath>UI/DebugIcons/INCREASE_WEIGHT_OPINION</iconPath>
+    <warmupSound>Tick_Low</warmupSound>
+    <jobDef>CastAbilityOnThingMelee</jobDef>
+    <stunTargetWhileCasting>true</stunTargetWhileCasting>
+    <showPsycastEffects>false</showPsycastEffects>
+    <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+    <showWhenDrafted>false</showWhenDrafted>
+    <hostile>false</hostile>
+    <uiOrder>2</uiOrder>
+    <cooldownTicksRange>
+      <min>60000</min>
+      <max>60000</max>
+    </cooldownTicksRange>
+    <comps>
+      <li Class="RimRound.FeedOther.CompProperties_WeightOpinionShift">
+        <increase>true</increase>
+      </li>
+      <li Class="CompProperties_AbilityMustBeCapableOf">
+        <workTags>
+          <li>Social</li>
+        </workTags>
+      </li>
+    </comps>
+    <verbProperties>
+      <verbClass>Verb_CastAbilityTouch</verbClass>
+      <drawAimPie>false</drawAimPie>
+      <range>-1</range>
+      <warmupTime>3</warmupTime>
+      <targetParams>
+        <canTargetBuildings>false</canTargetBuildings>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetHumans>true</canTargetHumans>
+        <canTargetAnimals>false</canTargetAnimals>
+        <canTargetSelf>false</canTargetSelf>
+        <neverTargetHostileFaction>true</neverTargetHostileFaction>
+      </targetParams>
+    </verbProperties>
+  </AbilityDef>
+
+  <AbilityDef>
+    <defName>RR_DecreaseWeightOpinion</defName>
+    <label>decrease weight opinion</label>
+    <description>Try to persuade another adult pawn to become less accepting of gaining weight. Success moves their RimRound weight opinion downward by one level. The chance uses Social skill levels 1-10, the target's opinion of the speaker, and close relationships; Social levels above 10 use the same chance as level 10.</description>
+    <iconPath>UI/DebugIcons/DECREASE_WEIGHT_OPINION</iconPath>
+    <warmupSound>Tick_Low</warmupSound>
+    <jobDef>CastAbilityOnThingMelee</jobDef>
+    <stunTargetWhileCasting>true</stunTargetWhileCasting>
+    <showPsycastEffects>false</showPsycastEffects>
+    <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+    <showWhenDrafted>false</showWhenDrafted>
+    <hostile>false</hostile>
+    <uiOrder>3</uiOrder>
+    <cooldownTicksRange>
+      <min>60000</min>
+      <max>60000</max>
+    </cooldownTicksRange>
+    <comps>
+      <li Class="RimRound.FeedOther.CompProperties_WeightOpinionShift">
+        <increase>false</increase>
+      </li>
+      <li Class="CompProperties_AbilityMustBeCapableOf">
+        <workTags>
+          <li>Social</li>
+        </workTags>
+      </li>
+    </comps>
+    <verbProperties>
+      <verbClass>Verb_CastAbilityTouch</verbClass>
+      <drawAimPie>false</drawAimPie>
+      <range>-1</range>
+      <warmupTime>3</warmupTime>
+      <targetParams>
+        <canTargetBuildings>false</canTargetBuildings>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetHumans>true</canTargetHumans>
+        <canTargetAnimals>false</canTargetAnimals>
+        <canTargetSelf>false</canTargetSelf>
+        <neverTargetHostileFaction>true</neverTargetHostileFaction>
+      </targetParams>
+    </verbProperties>
+  </AbilityDef>
+</Defs>

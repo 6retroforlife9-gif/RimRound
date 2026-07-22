@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <!-- Neutral markers used by the beta's guaranteed post-generation trait
+       categories. Commonality is zero because these are added after vanilla
+       personality traits rather than consuming a normal trait slot. -->
+  <TraitDef>
+    <defName>RR_TraitEatSpeedAverage</defName>
+    <commonality>0</commonality>
+    <degreeDatas>
+      <li>
+        <degree>0</degree>
+        <label>average eater</label>
+        <description>[PAWN_nameDef] eats at an ordinary pace, neither lingering over meals nor rushing through them.</description>
+      </li>
+    </degreeDatas>
+    <conflictingTraits>
+      <li>SG_TraitEatSpeedDownPlus</li>
+      <li>SG_TraitEatSpeedDown</li>
+      <li>SG_TraitEatSpeedUp</li>
+      <li>SG_TraitEatSpeedUpPlus</li>
+    </conflictingTraits>
+    <exclusionTags>
+      <li>RR_Trait_EatingSpeed</li>
+    </exclusionTags>
+  </TraitDef>
+
+  <TraitDef>
+    <defName>RR_TraitStomachElasticityAverage</defName>
+    <commonality>0</commonality>
+    <degreeDatas>
+      <li>
+        <degree>0</degree>
+        <label>average stomach elasticity</label>
+        <description>[PAWN_nameDef]'s stomach stretches at an ordinary rate when regularly pushed beyond its comfortable limit.</description>
+      </li>
+    </degreeDatas>
+    <conflictingTraits>
+      <li>SG_TraitStomachElasticityDown</li>
+      <li>SG_TraitStomachElasticityUp</li>
+      <li>SG_TraitStomachElasticityUpPlus</li>
+    </conflictingTraits>
+    <exclusionTags>
+      <li>RR_Trait_StomachElasticity</li>
+    </exclusionTags>
+  </TraitDef>
+</Defs>
