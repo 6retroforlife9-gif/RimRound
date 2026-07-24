@@ -11,6 +11,8 @@ namespace RimRound.FeedOther
     internal static class FoodNetworkV2Constants
     {
         public const float Epsilon = 0.0001f;
+        public const float DispenserMealNutrition = 0.90f;
+        public const int MaximumDispenserMealsPerTrip = 4;
         public const string PipeDefName = "RR_TD_FeedingTubeConduit";
         public const string ValveDefName = "RR_TD_FeedingTubeValve";
         public const string SmallTankDefName = "RR_TD_FoodStorageVat_Small";
@@ -664,6 +666,53 @@ namespace RimRound.FeedOther
                     return slice.nutrition > FoodNetworkV2Constants.Epsilon &&
                         slice.fullness > FoodNetworkV2Constants.Epsilon;
                 });
+        }
+
+        public bool TryPreviewExactNutrition(float nutrition, out FoodBatchV2 batch)
+        {
+            batch = null;
+            if (nutrition <= FoodNetworkV2Constants.Epsilon)
+            {
+                return false;
+            }
+
+            List<FoodNetworkDrawSliceV2> plan = BuildDrawPlan(
+                nutrition,
+                float.MaxValue);
+            float plannedNutrition = plan.Sum(delegate(FoodNetworkDrawSliceV2 slice)
+            {
+                return slice.nutrition;
+            });
+            if (plannedNutrition + FoodNetworkV2Constants.Epsilon < nutrition)
+            {
+                return false;
+            }
+
+            float plannedFullness = plan.Sum(delegate(FoodNetworkDrawSliceV2 slice)
+            {
+                return slice.fullness;
+            });
+            int createdTick = plan.Count == 0
+                ? CurrentTick
+                : plan.Min(delegate(FoodNetworkDrawSliceV2 slice)
+                {
+                    return slice.source.createdTick;
+                });
+            List<ThingDef> ingredients = plan
+                .SelectMany(delegate(FoodNetworkDrawSliceV2 slice)
+                {
+                    return slice.source.ingredients ?? new List<ThingDef>();
+                })
+                .Where(delegate(ThingDef ingredient) { return ingredient != null; })
+                .Distinct()
+                .ToList();
+
+            batch = new FoodBatchV2(
+                plannedNutrition,
+                plannedFullness,
+                ingredients,
+                createdTick);
+            return !batch.Empty;
         }
 
         public bool TryDrawExactNutrition(float nutrition, out FoodBatchV2 batch)

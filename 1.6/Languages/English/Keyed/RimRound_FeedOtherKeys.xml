@@ -174,15 +174,17 @@
   <RR_FoodNetworkSettingsSelectedOverlayTip>Displays the food-pipe overlay whenever a pipe, valve, tank, processor, dispenser, feeder, or distiller is selected.</RR_FoodNetworkSettingsSelectedOverlayTip>
   <RR_FoodNetworkSettingsAlwaysOverlay>Always show the food-pipe overlay</RR_FoodNetworkSettingsAlwaysOverlay>
   <RR_FoodNetworkSettingsAlwaysOverlayTip>Keeps the food network visible without selecting a machine. This may add visual clutter on large colonies.</RR_FoodNetworkSettingsAlwaysOverlayTip>
-  <RR_FoodNetworkSettingsMigrationNote>Existing tank volume and density migrate once into a conserved legacy batch. Existing buildings, research, feeder mode, and first linked pawn retain their original defNames and save data.</RR_FoodNetworkSettingsMigrationNote>
+  <RR_FoodNetworkSettingsMigrationNote>Existing tank volume and concentration migrate once into a conserved legacy batch. Existing buildings, research, feeder mode, and first linked pawn retain their original defNames and save data.</RR_FoodNetworkSettingsMigrationNote>
   <RR_FoodNetworkSettingsPreservationNote>Tank contents keep RimRound's current indefinite-preservation behaviour in this beta. Spoilage during power loss is intentionally not enabled until tanks have a clear, balanced refrigeration requirement.</RR_FoodNetworkSettingsPreservationNote>
 
   <RR_FoodNetworkNoIngredients>legacy or unspecified mixture</RR_FoodNetworkNoIngredients>
-  <RR_FoodNetworkServingInspect>Network serving: {0} nutrition; density {1}×</RR_FoodNetworkServingInspect>
+  <RR_NutritionConcentration>Nutrition concentration</RR_NutritionConcentration>
+  <RR_NutritionConcentrationInspect>Nutrition concentration: {0}×; base fullness volume: {1} per item</RR_NutritionConcentrationInspect>
+  <RR_FoodNetworkServingInspect>Network meal: {0} nutrition each; concentration {1}×; base fullness volume {2} each</RR_FoodNetworkServingInspect>
   <RR_FoodNetworkDisconnected>Food network: disconnected</RR_FoodNetworkDisconnected>
   <RR_FoodNetworkSummary>Food network: {0} nutrition; {1}/{2} fullness volume; {3} FIFO batches</RR_FoodNetworkSummary>
   <RR_FoodNetworkTankStored>Tank: {0} nutrition; {1}/{2} fullness volume</RR_FoodNetworkTankStored>
-  <RR_FoodNetworkDensity>Nutrition density: {0}×</RR_FoodNetworkDensity>
+  <RR_FoodNetworkDensity>Nutrition concentration: {0}×</RR_FoodNetworkDensity>
   <RR_FoodNetworkIngredients>Ingredients: {0}</RR_FoodNetworkIngredients>
   <RR_FoodNetworkStatusOffline>Status: unpowered, switched off, or broken down</RR_FoodNetworkStatusOffline>
   <RR_FoodNetworkStatusNoConnection>Status: no food-pipe connection</RR_FoodNetworkStatusNoConnection>

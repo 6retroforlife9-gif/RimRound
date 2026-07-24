@@ -16,6 +16,7 @@ namespace RimRound.FeedOther
         public const int MinimumRewardDurationTicks = 600;
         public const float RecreationGainFactor = 0.75f;
         public const float MaximumConversationDistance = 6f;
+        public const int RomanticHeartIntervalTicks = 300;
 
         public static bool CanStart(Pawn first, Pawn second, bool secondWasAsleepAtStart)
         {
@@ -48,6 +49,30 @@ namespace RimRound.FeedOther
         public static bool EitherStillBored(Pawn first, Pawn second)
         {
             return JoyBelowTarget(first) || JoyBelowTarget(second);
+        }
+
+
+        public static void TickRomanticHearts(Pawn first, Pawn second)
+        {
+            if (first == null || second == null || !first.Spawned || !second.Spawned ||
+                first.Map == null || first.Map != second.Map ||
+                FleckDefOf.Heart == null ||
+                !LovePartnerRelationUtility.LovePartnerRelationExists(first, second) ||
+                !first.IsHashIntervalTick(RomanticHeartIntervalTicks))
+            {
+                return;
+            }
+
+            int interval = Find.TickManager.TicksGame / RomanticHeartIntervalTicks;
+            Pawn target = (interval & 1) == 0 ? first : second;
+            if (target.Spawned && target.Map == first.Map)
+            {
+                FleckMaker.ThrowMetaIcon(
+                    target.Position,
+                    target.Map,
+                    FleckDefOf.Heart,
+                    0.42f);
+            }
         }
 
         public static void GainRecreation(Pawn participant, int delta)

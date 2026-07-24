@@ -32,6 +32,21 @@ namespace RimRound.FeedOther
                 }
             }
 
+            // A pawn using the Food Network faucet in Fullness or Hybrid mode
+            // collects whole 0.90 meals. Consume the final whole meal normally,
+            // but discard only the part that would exceed the active bar target.
+            float selfFeedingTarget;
+            if (pawn != null && __0 > __state &&
+                FoodNetworkV2ServingUtility.TryGetActiveSelfFeedingTarget(
+                    pawn,
+                    __instance,
+                    out selfFeedingTarget))
+            {
+                __0 = __state >= selfFeedingTarget
+                    ? __state
+                    : UnityEngine.Mathf.Min(__0, selfFeedingTarget);
+            }
+
             // While a warden is actively fattening a prisoner, clamp the final
             // whole serving to exact Painfully Full (80% hard capacity). Once
             // reached, the saved Fatten latch blocks more feeding until below 10%.

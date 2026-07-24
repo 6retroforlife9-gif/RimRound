@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="RR_TD_FeedingTubeConduit"]/graphicData</xpath>
+    <value>
+      <color>(0,0,0,0)</color>
+      <shaderType>Transparent</shaderType>
+    </value>
+  </Operation>
+</Patch>

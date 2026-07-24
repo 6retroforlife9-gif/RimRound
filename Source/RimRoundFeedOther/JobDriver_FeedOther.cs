@@ -107,8 +107,23 @@ namespace RimRound.FeedOther
 
                 Thing meal;
                 Thing partnerMeal = Partner?.CurJob?.targetA.Thing;
-                if (!FeedOtherUtility.TryFindStoredMeal(pawn, FoodAnchor, partnerMeal, out meal))
+                bool followUpCollection = mealsCompleted > 0;
+                bool foundMeal = followUpCollection
+                    ? FeedOtherUtility.TryFindNearbyStoredMeal(
+                        pawn,
+                        pawn.Position,
+                        partnerMeal,
+                        out meal)
+                    : FeedOtherUtility.TryFindStoredMeal(
+                        pawn,
+                        FoodAnchor,
+                        partnerMeal,
+                        out meal);
+                if (!foundMeal)
                 {
+                    // Once the pair has eaten, do not send either participant
+                    // back across the map. Complete their eating part and allow
+                    // the partner/post-meal social phase to finish normally.
                     cannotContinueFeeding = true;
                     JumpToToil(waitForPartner);
                     return;
@@ -131,9 +146,13 @@ namespace RimRound.FeedOther
             findFood.defaultCompleteMode = ToilCompleteMode.Instant;
             yield return findFood;
 
-            yield return Toils_Goto.GotoThing(TargetIndex.A, PathEndMode.ClosestTouch)
-                .FailOnDespawnedNullOrForbidden(TargetIndex.A);
-            yield return Toils_Ingest.PickupIngestible(TargetIndex.A, pawn);
+            foreach (Toil collectMeal in
+                FeedOtherUtility.CollectSessionMealSourceToils(
+                    pawn,
+                    pawn))
+            {
+                yield return collectMeal;
+            }
 
             waitForBothMeals = ToilMaker.MakeToil("WaitForFeedOtherMeals");
             waitForBothMeals.defaultCompleteMode = ToilCompleteMode.Never;
@@ -377,6 +396,11 @@ namespace RimRound.FeedOther
                 pawn.pather?.StopDead();
                 FeedOtherUtility.FaceDiningTableOrPawn(pawn, Partner);
                 PostMealSocialUtility.GainRecreation(pawn, delta);
+
+                if (IsLeader)
+                {
+                    PostMealSocialUtility.TickRomanticHearts(pawn, Partner);
+                }
 
                 if (!IsLeader)
                 {

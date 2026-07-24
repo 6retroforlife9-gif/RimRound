@@ -1,5 +1,6 @@
 using HarmonyLib;
 using RimRound.Comps;
+using RimRound.FeedingTube;
 using RimWorld;
 using RimWorld.Planet;
 using System;
@@ -262,7 +263,27 @@ namespace RimRound.FeedOther
                     ignoreReservations: false,
                     calculateWantedStackCount: true))
             {
-                return false;
+                Building_FoodFaucet faucet;
+                float faucetScore;
+                if (!FeedOtherMod.Settings.foodNetworkV2Enabled ||
+                    !FoodNetworkV2FaucetSearchUtility.TryFindBestFaucet(
+                        warden,
+                        prisoner,
+                        prisoner.needs.food.CurCategory ==
+                            HungerCategory.Starving,
+                        FoodPreferability.MealLavish,
+                        false,
+                        false,
+                        FoodPreferability.Undefined,
+                        false,
+                        out faucet,
+                        out faucetScore))
+                {
+                    return false;
+                }
+
+                foodSource = faucet;
+                foodDef = ThingDefOf.MealNutrientPaste;
             }
 
             if (foodSource == null || foodDef == null)
@@ -272,7 +293,8 @@ namespace RimRound.FeedOther
 
             bool preparedMeal = foodDef.ingestible != null &&
                 foodDef.ingestible.preferability >= FoodPreferability.MealAwful;
-            if (foodSource is Building_NutrientPasteDispenser || preparedMeal)
+            if (foodSource is Building_NutrientPasteDispenser ||
+                foodSource is Building_FoodFaucet || preparedMeal)
             {
                 count = 1;
             }
@@ -290,7 +312,8 @@ namespace RimRound.FeedOther
                         nutrition));
             }
 
-            if (!(foodSource is Building_NutrientPasteDispenser))
+            if (!(foodSource is Building_NutrientPasteDispenser) &&
+                !(foodSource is Building_FoodFaucet))
             {
                 count = Mathf.Min(count, foodSource.stackCount);
                 if (warden.carryTracker != null)
@@ -298,6 +321,29 @@ namespace RimRound.FeedOther
                     count = Mathf.Min(
                         count,
                         warden.carryTracker.AvailableStackSpace(foodSource.def));
+                }
+
+                FullnessAndDietStats_ThingComp fullness =
+                    prisoner.TryGetComp<FullnessAndDietStats_ThingComp>();
+                while (count > 0)
+                {
+                    bool acceptable = IsFattenPrisoner(prisoner)
+                        ? fullness != null &&
+                            FeedOtherUtility.IsPortionFitAtFullnessTarget(
+                                prisoner,
+                                foodSource,
+                                count,
+                                FattenFullnessTarget(prisoner, fullness))
+                        : FeedOtherUtility
+                            .IsSelfFeedingPortionFitAcceptable(
+                                prisoner,
+                                foodSource,
+                                count);
+                    if (acceptable)
+                    {
+                        break;
+                    }
+                    count--;
                 }
             }
 

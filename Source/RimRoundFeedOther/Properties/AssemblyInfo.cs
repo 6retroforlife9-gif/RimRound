@@ -7,5 +7,5 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyProduct("RimRound Feed Other")]
 [assembly: ComVisible(false)]
 [assembly: Guid("1dd37ceb-a68e-44b8-a944-e72647db9154")]
-[assembly: AssemblyVersion("1.0.69.8")]
-[assembly: AssemblyFileVersion("1.0.69.8")]
+[assembly: AssemblyVersion("1.0.69.18")]
+[assembly: AssemblyFileVersion("1.0.69.18")]

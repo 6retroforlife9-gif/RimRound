@@ -1,4 +1,5 @@
 using RimRound.Comps;
+using RimRound.FeedingTube;
 using RimRound.Utilities;
 using RimWorld;
 using System;
@@ -45,6 +46,10 @@ namespace RimRound.FeedOther
         public const float SharedFoodSearchRadius = 30f;
         public const float MaximumSharedDiningDistance = 6f;
         public const float OneWayDiningSeatSearchRadius = 30f;
+        // Once eating or feeding has begun, a participant may only leave the
+        // social location for another serving when the source is genuinely
+        // nearby. Initial collection still uses the normal 30-cell search.
+        public const float FollowUpMealSearchRadius = 8f;
         public static int MaximumSessionTicks
         {
             get { return FeedOtherMod.Settings.MaximumSessionTicks; }
@@ -67,6 +72,11 @@ namespace RimRound.FeedOther
         // Small tolerance used only for floating-point comparison. It must never
         // be large enough to permit a genuinely oversized serving.
         public const float FoodFitEpsilon = 0.0001f;
+        // A whole selected portion may discard at most this much nutrition when
+        // the job-scoped fullness clamp stops at its active target. Waste is
+        // converted back from excess fullness using the food's real concentration
+        // and the pawn's live fullness-gain multiplier.
+        public const float MaximumWastedNutrition = 1.0f;
         // Duration factors are relative to normal self-eating. Lower values mean
         // less chew time. The eater's live Eating Speed stat is still applied.
         public const float SharedEatingDurationFactor = 0.90f;
@@ -1051,12 +1061,11 @@ namespace RimRound.FeedOther
                 initiator.Map.mapPawns.AllPawnsSpawned
                     .Where(candidate => IsValidPartnerFor(initiator, candidate)));
 
-            List<Thing> initiatorMeals = OrderMealCandidatesByFit(
-                    initiator,
-                    initiator,
-                    StoredMealCandidates(initiator, IntVec3.Invalid, null),
-                    IntVec3.Invalid)
-                .ToList();
+            List<Thing> initiatorMeals = SessionMealSources(
+                initiator,
+                initiator,
+                IntVec3.Invalid,
+                null);
 
             // Check every viable meal pairing with a current romantic partner
             // before considering unrelated pawns. If the partner is unavailable
@@ -1066,6 +1075,21 @@ namespace RimRound.FeedOther
             {
                 foreach (Thing meal in initiatorMeals)
                 {
+                    Building_FoodFaucet faucet = meal as Building_FoodFaucet;
+                    if (faucet != null)
+                    {
+                        if (CanFaucetSupplyCombined(
+                            faucet,
+                            initiator,
+                            candidate))
+                        {
+                            partner = candidate;
+                            initiatorMeal = faucet;
+                            return true;
+                        }
+                        continue;
+                    }
+
                     Thing candidateMeal;
                     if (TryFindStoredMeal(candidate, meal.Position, meal, out candidateMeal))
                     {
@@ -1093,12 +1117,26 @@ namespace RimRound.FeedOther
                 return false;
             }
 
-            foreach (Thing meal in OrderMealCandidatesByFit(
+            foreach (Thing meal in SessionMealSources(
                 initiator,
                 initiator,
-                StoredMealCandidates(initiator, IntVec3.Invalid, null),
-                IntVec3.Invalid))
+                IntVec3.Invalid,
+                null))
             {
+                Building_FoodFaucet faucet = meal as Building_FoodFaucet;
+                if (faucet != null)
+                {
+                    if (CanFaucetSupplyCombined(
+                        faucet,
+                        initiator,
+                        requestedPartner))
+                    {
+                        initiatorMeal = faucet;
+                        return true;
+                    }
+                    continue;
+                }
+
                 Thing partnerMeal;
                 if (TryFindStoredMeal(requestedPartner, meal.Position, meal, out partnerMeal))
                 {
@@ -1280,18 +1318,26 @@ namespace RimRound.FeedOther
                 out meal);
         }
 
-        public static bool TryFindStoredMeal(Pawn pawn, IntVec3 anchor, Thing otherPawnMeal, out Thing meal)
+        public static bool TryFindStoredMeal(
+            Pawn pawn,
+            IntVec3 anchor,
+            Thing otherPawnMeal,
+            out Thing meal)
         {
-            meal = OrderMealCandidatesByFit(
+            meal = SessionMealSources(
                     pawn,
                     pawn,
-                    StoredMealCandidates(pawn, anchor, otherPawnMeal),
-                    anchor)
+                    anchor,
+                    otherPawnMeal)
                 .FirstOrDefault();
             return meal != null;
         }
 
-        public static bool TryFindStoredMealForFeeding(Pawn feeder, Pawn feedee, IntVec3 anchor, out Thing meal)
+        public static bool TryFindStoredMealForFeeding(
+            Pawn feeder,
+            Pawn feedee,
+            IntVec3 anchor,
+            out Thing meal)
         {
             meal = OrderMealCandidatesByFit(
                     feedee,
@@ -1300,24 +1346,152 @@ namespace RimRound.FeedOther
                         .Where(candidate => FeederCanCollectMeal(feeder, candidate)),
                     anchor)
                 .FirstOrDefault();
+            if (meal != null)
+            {
+                return true;
+            }
+
+            Building_FoodFaucet faucet;
+            if (TryFindSessionFaucet(
+                feeder,
+                feedee,
+                anchor,
+                null,
+                out faucet))
+            {
+                meal = faucet;
+                return true;
+            }
+
+            return false;
+        }
+
+        public static bool TryFindNearbyStoredMeal(
+            Pawn pawn,
+            IntVec3 sessionOrigin,
+            Thing otherPawnMeal,
+            out Thing meal)
+        {
+            meal = SessionMealSources(
+                    pawn,
+                    pawn,
+                    sessionOrigin,
+                    otherPawnMeal)
+                .Where(source => IsMealSourceWithinDistance(
+                    source,
+                    sessionOrigin,
+                    FollowUpMealSearchRadius))
+                .FirstOrDefault();
             return meal != null;
+        }
+
+        public static bool TryFindNearbyStoredMealForFeeding(
+            Pawn feeder,
+            Pawn feedee,
+            IntVec3 sessionOrigin,
+            out Thing meal)
+        {
+            meal = OrderMealCandidatesByFit(
+                    feedee,
+                    feeder,
+                    StoredMealCandidates(
+                            feedee,
+                            sessionOrigin,
+                            null,
+                            feeder)
+                        .Where(candidate => FeederCanCollectMeal(feeder, candidate))
+                        .Where(candidate => IsMealSourceWithinDistance(
+                            candidate,
+                            sessionOrigin,
+                            FollowUpMealSearchRadius)),
+                    sessionOrigin)
+                .FirstOrDefault();
+            if (meal != null)
+            {
+                return true;
+            }
+
+            Building_FoodFaucet faucet;
+            if (TryFindSessionFaucet(
+                    feeder,
+                    feedee,
+                    sessionOrigin,
+                    null,
+                    out faucet) &&
+                IsMealSourceWithinDistance(
+                    faucet,
+                    sessionOrigin,
+                    FollowUpMealSearchRadius))
+            {
+                meal = faucet;
+                return true;
+            }
+
+            return false;
+        }
+
+        public static bool IsMealSourceWithinDistance(
+            Thing source,
+            IntVec3 origin,
+            float radius)
+        {
+            if (source == null || !origin.IsValid || radius < 0f)
+            {
+                return false;
+            }
+
+            Building_FoodFaucet faucet = source as Building_FoodFaucet;
+            IntVec3 sourceCell = faucet != null
+                ? faucet.InteractionCell
+                : source.Position;
+            return sourceCell.IsValid &&
+                origin.DistanceToSquared(sourceCell) <= radius * radius;
         }
 
         public static float EstimatedFullnessGain(Pawn eater, Thing food)
         {
-            FullnessAndDietStats_ThingComp comp = eater?.TryGetComp<FullnessAndDietStats_ThingComp>();
-            if (comp == null || food == null)
+            if (food == null)
             {
                 return 0f;
             }
 
-            float fullnessRatio = food.TryGetComp<ThingComp_FoodItems_NutritionDensity>()?.Props?.fullnessToNutritionRatio ??
-                FullnessAndDietStats_ThingComp.defaultFullnessToNutritionRatio;
-            // NutritionForEater is used instead of the raw stat so modded and
-            // RimRound large meals use the exact serving nutrition the pawn will
-            // actually ingest.
             float nutrition = FoodUtility.NutritionForEater(eater, food);
-            return Mathf.Max(0f, nutrition * fullnessRatio * comp.FullnessGainedMultiplier);
+            return EstimatedFullnessGain(
+                eater,
+                nutrition,
+                FullnessToNutritionRatio(food));
+        }
+
+        public static float EstimatedFullnessGain(
+            Pawn eater,
+            float nutrition,
+            float fullnessToNutritionRatio)
+        {
+            FullnessAndDietStats_ThingComp comp =
+                eater?.TryGetComp<FullnessAndDietStats_ThingComp>();
+            if (comp == null || nutrition <= FoodFitEpsilon)
+            {
+                return 0f;
+            }
+
+            return Mathf.Max(
+                0f,
+                nutrition * Mathf.Max(FoodFitEpsilon, fullnessToNutritionRatio) *
+                    comp.FullnessGainedMultiplier);
+        }
+
+        public static float FullnessToNutritionRatio(Thing food)
+        {
+            CompFoodNetworkServing networkServing =
+                food?.TryGetComp<CompFoodNetworkServing>();
+            if (networkServing != null && networkServing.IsInitialized)
+            {
+                return networkServing.FullnessToNutritionRatio;
+            }
+
+            return food?.TryGetComp<ThingComp_FoodItems_NutritionDensity>()
+                       ?.Props?.fullnessToNutritionRatio ??
+                FullnessAndDietStats_ThingComp.defaultFullnessToNutritionRatio;
         }
 
         public static float RemainingFeedingCapacity(Pawn eater)
@@ -1331,11 +1505,210 @@ namespace RimRound.FeedOther
             return Mathf.Max(0f, FeedingTarget(eater) - comp.CurrentFullness);
         }
 
+        private static float NutritionWasteFromFullness(
+            float totalNutrition,
+            float projectedFullnessGain,
+            float remainingFullness)
+        {
+            if (totalNutrition <= FoodFitEpsilon ||
+                projectedFullnessGain <= FoodFitEpsilon ||
+                remainingFullness <= FoodFitEpsilon)
+            {
+                return float.MaxValue;
+            }
+
+            float excessFullness = Mathf.Max(
+                0f,
+                projectedFullnessGain - remainingFullness);
+            return excessFullness <= FoodFitEpsilon
+                ? 0f
+                : totalNutrition * excessFullness / projectedFullnessGain;
+        }
+
+        public static bool IsNutritionWasteAcceptable(float nutritionWaste)
+        {
+            return nutritionWaste <= MaximumWastedNutrition + FoodFitEpsilon;
+        }
+
+        public static float ProjectedSessionNutritionWaste(
+            Pawn eater,
+            Thing food,
+            int units = 1)
+        {
+            if (eater == null || food == null || units <= 0)
+            {
+                return float.MaxValue;
+            }
+
+            float nutritionPerUnit = FoodUtility.NutritionForEater(eater, food);
+            float gainPerUnit = EstimatedFullnessGain(eater, food);
+            return NutritionWasteFromFullness(
+                nutritionPerUnit * units,
+                gainPerUnit * units,
+                RemainingFeedingCapacity(eater));
+        }
+
+        public static bool IsSessionPortionFitAcceptable(
+            Pawn eater,
+            Thing food,
+            int units = 1)
+        {
+            return IsNutritionWasteAcceptable(
+                ProjectedSessionNutritionWaste(eater, food, units));
+        }
+
+        public static float ProjectedNutritionWasteAtFullnessTarget(
+            Pawn eater,
+            Thing food,
+            int units,
+            float targetFullness)
+        {
+            FullnessAndDietStats_ThingComp fullness =
+                eater?.TryGetComp<FullnessAndDietStats_ThingComp>();
+            if (fullness == null || food == null || units <= 0)
+            {
+                return float.MaxValue;
+            }
+
+            float nutritionPerUnit = FoodUtility.NutritionForEater(eater, food);
+            float gainPerUnit = EstimatedFullnessGain(eater, food);
+            float remaining = Mathf.Max(
+                0f,
+                targetFullness - fullness.CurrentFullness);
+            return NutritionWasteFromFullness(
+                nutritionPerUnit * units,
+                gainPerUnit * units,
+                remaining);
+        }
+
+        public static bool IsPortionFitAtFullnessTarget(
+            Pawn eater,
+            Thing food,
+            int units,
+            float targetFullness)
+        {
+            return IsNutritionWasteAcceptable(
+                ProjectedNutritionWasteAtFullnessTarget(
+                    eater,
+                    food,
+                    units,
+                    targetFullness));
+        }
+
+        public static float ProjectedSelfFeedingNutritionWaste(
+            Pawn eater,
+            Thing food,
+            int units = 1)
+        {
+            if (eater == null || food == null || units <= 0 ||
+                food is Building_NutrientPasteDispenser ||
+                food is Building_FoodFaucet ||
+                food.def?.ingestible == null)
+            {
+                return 0f;
+            }
+
+            float nutritionPerUnit = FoodUtility.NutritionForEater(eater, food);
+            float totalNutrition = nutritionPerUnit * units;
+            if (totalNutrition <= FoodFitEpsilon)
+            {
+                return float.MaxValue;
+            }
+
+            FullnessAndDietStats_ThingComp fullness =
+                eater.TryGetComp<FullnessAndDietStats_ThingComp>();
+            if (fullness == null || fullness.Disabled ||
+                fullness.DietMode == DietMode.Disabled)
+            {
+                float wanted = eater.needs?.food == null
+                    ? totalNutrition
+                    : Mathf.Max(0f, eater.needs.food.NutritionWanted);
+                return Mathf.Max(0f, totalNutrition - wanted);
+            }
+
+            Pair<float, float> ranges;
+            try
+            {
+                ranges = fullness.GetRanges();
+            }
+            catch (Exception)
+            {
+                // Never break a vanilla food search because another mod left the
+                // fullness component temporarily uninitialised.
+                return 0f;
+            }
+
+            if (fullness.DietMode == DietMode.Nutrition)
+            {
+                if (eater.needs?.food == null)
+                {
+                    return 0f;
+                }
+
+                float digestingNutrition = fullness.CurrentFullness /
+                    Mathf.Max(
+                        FoodFitEpsilon,
+                        fullness.CurrentFullnessToNutritionRatio);
+                float remainingNutrition = Mathf.Max(
+                    0f,
+                    ranges.Second - eater.needs.food.CurLevel -
+                        digestingNutrition);
+                return Mathf.Max(0f, totalNutrition - remainingNutrition);
+            }
+
+            float target = ranges.Second;
+            if (!fullness.SetAboveHardLimit)
+            {
+                target = Mathf.Min(target, fullness.HardLimit);
+            }
+
+            float gainPerUnit = EstimatedFullnessGain(eater, food);
+            float remainingFullness = Mathf.Max(
+                0f,
+                target - fullness.CurrentFullness);
+            return NutritionWasteFromFullness(
+                totalNutrition,
+                gainPerUnit * units,
+                remainingFullness);
+        }
+
+        public static bool IsSelfFeedingPortionFitAcceptable(
+            Pawn eater,
+            Thing food,
+            int units = 1)
+        {
+            return IsNutritionWasteAcceptable(
+                ProjectedSelfFeedingNutritionWaste(eater, food, units));
+        }
+
+        public static bool IsAutomaticFoodSelectionFitAcceptable(
+            Pawn eater,
+            Thing food,
+            int units = 1)
+        {
+            if (PrisonerFatteningFoodPatch.IsFattenPrisoner(eater))
+            {
+                FullnessAndDietStats_ThingComp fullness =
+                    eater?.TryGetComp<FullnessAndDietStats_ThingComp>();
+                return fullness != null &&
+                    IsPortionFitAtFullnessTarget(
+                        eater,
+                        food,
+                        units,
+                        PrisonerFatteningFoodPatch.FattenFullnessTarget(
+                            eater,
+                            fullness));
+            }
+
+            return IsSelfFeedingPortionFitAcceptable(eater, food, units);
+        }
+
         public static bool CanFullyConsumeOneUnit(Pawn eater, Thing food)
         {
             float gain = EstimatedFullnessGain(eater, food);
             return gain > FoodFitEpsilon &&
-                RemainingFeedingCapacity(eater) > FoodFitEpsilon;
+                RemainingFeedingCapacity(eater) > FoodFitEpsilon &&
+                IsSessionPortionFitAcceptable(eater, food, 1);
         }
 
         // Prepared meals remain individual servings. Small stackable foods are
@@ -1381,12 +1754,18 @@ namespace RimRound.FeedOther
                 return 0;
             }
 
-            // Every food allocation rounds upward to a whole item or serving.
-            // This keeps proper prepared meals eligible even when the final meal
-            // exceeds the remaining gap. The job-scoped fullness clamp consumes
-            // the food normally but discards the excess at the selected target.
-            return Mathf.Max(0, Mathf.FloorToInt(
+            // Round upward to the first whole-item count that reaches the target,
+            // then step back only when that complete portion would discard more
+            // than the global 1.0-nutrition waste allowance. The job may search
+            // for a smaller top-up source after consuming the reduced count.
+            int units = Mathf.Max(0, Mathf.FloorToInt(
                 (remaining + gainPerUnit - FoodFitEpsilon) / gainPerUnit));
+            while (units > 0 &&
+                !IsSessionPortionFitAcceptable(eater, food, units))
+            {
+                units--;
+            }
+            return units;
         }
 
         public static int RequiredMealCount(Pawn eater, Thing food)
@@ -1396,6 +1775,15 @@ namespace RimRound.FeedOther
 
         public static int MealCollectionCount(Pawn collector, Thing food, params Pawn[] eaters)
         {
+            Building_FoodFaucet faucet = food as Building_FoodFaucet;
+            if (faucet != null)
+            {
+                return NetworkMealCollectionCount(
+                    collector,
+                    faucet,
+                    eaters);
+            }
+
             if (collector?.carryTracker == null || food == null || food.stackCount <= 0)
             {
                 return 0;
@@ -1430,14 +1818,42 @@ namespace RimRound.FeedOther
                 requested++;
             }
 
-            // Multiple storage trips are now permitted. A short source stack or
-            // limited carry capacity supplies a useful partial allocation, then the
-            // job rechecks live fullness and searches again below the selected target.
+            // Take the useful allocation available on this collection. After a
+            // feeding/eating round, another source is considered only when it is
+            // within FollowUpMealSearchRadius of the social location.
             return Mathf.Min(requested, available);
         }
 
         public static int SharedStackCollectionCount(Pawn eater, Pawn partner, Thing food)
         {
+            Building_FoodFaucet faucet = food as Building_FoodFaucet;
+            if (faucet != null)
+            {
+                int faucetRequested = NetworkMealsNeeded(
+                    eater,
+                    faucet,
+                    true);
+                int partnerNeeded = NetworkMealsNeeded(
+                    partner,
+                    faucet,
+                    false);
+                int availableForEater = Mathf.Max(
+                    0,
+                    CompleteNetworkMeals(faucet) - partnerNeeded);
+                int carrySpace = eater?.carryTracker == null ||
+                    ThingDefOf.MealNutrientPaste == null
+                    ? 0
+                    : eater.carryTracker.AvailableStackSpace(
+                        ThingDefOf.MealNutrientPaste);
+                return Mathf.Max(
+                    0,
+                    Mathf.Min(
+                        faucetRequested,
+                        availableForEater,
+                        carrySpace,
+                        FoodNetworkV2Constants.MaximumDispenserMealsPerTrip));
+            }
+
             if (eater?.carryTracker == null || food == null || food.stackCount <= 0 ||
                 !IsMealAcceptableForPawn(eater, food))
             {
@@ -1451,7 +1867,8 @@ namespace RimRound.FeedOther
 
             // Do not add the normal spare serving when both pawns target the same
             // physical stack; each reservation must leave at least one valid share
-            // for the other pawn. Either pawn can collect more in a later round.
+            // for the other pawn. A later round may collect only from a source
+            // beside the current dining location.
             return requested <= 0 || available <= 0
                 ? 0
                 : Mathf.Min(requested, available);
@@ -1462,6 +1879,14 @@ namespace RimRound.FeedOther
             if (collector == null || job == null || food == null)
             {
                 return 0;
+            }
+
+            // Food Network withdrawals happen transactionally at the faucet.
+            // The building itself is not reserved, matching vanilla paste
+            // dispensers and allowing several pawns to queue safely.
+            if (IsFoodNetworkFaucet(food))
+            {
+                return Mathf.Max(0, desiredCount);
             }
 
             // A Feed Other job is now single-collection. Never silently reserve
@@ -1530,6 +1955,21 @@ namespace RimRound.FeedOther
             IntVec3 searchOrigin,
             out IntVec3 diningCell)
         {
+            return TryFindDiningSeatExcept(
+                pawn,
+                meal,
+                searchOrigin,
+                IntVec3.Invalid,
+                out diningCell);
+        }
+
+        public static bool TryFindDiningSeatExcept(
+            Pawn pawn,
+            Thing meal,
+            IntVec3 searchOrigin,
+            IntVec3 excludedCell,
+            out IntVec3 diningCell)
+        {
             diningCell = IntVec3.Invalid;
             if (pawn?.Map == null || meal?.def?.ingestible == null ||
                 meal.def.ingestible.chairSearchRadius <= 0f)
@@ -1548,7 +1988,8 @@ namespace RimRound.FeedOther
 
                 foreach (IntVec3 seat in DiningSeatsForTable(table))
                 {
-                    if (!IsDiningSeatUsable(pawn, seat, searchOrigin, radius))
+                    if (seat == excludedCell ||
+                        !IsDiningSeatUsable(pawn, seat, searchOrigin, radius))
                     {
                         continue;
                     }
@@ -1939,6 +2380,288 @@ namespace RimRound.FeedOther
             }
         }
 
+        private static List<Thing> SessionMealSources(
+            Pawn eater,
+            Pawn collector,
+            IntVec3 anchor,
+            Thing otherPawnMeal)
+        {
+            List<Thing> sources = OrderMealCandidatesByFit(
+                    eater,
+                    collector,
+                    StoredMealCandidates(
+                        eater,
+                        anchor,
+                        otherPawnMeal,
+                        collector),
+                    anchor)
+                .ToList();
+
+            Building_FoodFaucet faucet;
+            if (TryFindSessionFaucet(
+                collector,
+                eater,
+                anchor,
+                otherPawnMeal,
+                out faucet) &&
+                !sources.Contains(faucet))
+            {
+                sources.Add(faucet);
+            }
+
+            return sources;
+        }
+
+        private static bool TryFindSessionFaucet(
+            Pawn collector,
+            Pawn eater,
+            IntVec3 anchor,
+            Thing otherPawnMeal,
+            out Building_FoodFaucet faucet)
+        {
+            faucet = null;
+            if (!FeedOtherMod.Settings.foodNetworkV2Enabled ||
+                collector == null || eater == null || collector.Map == null ||
+                eater.Map != collector.Map || collector.carryTracker == null ||
+                ThingDefOf.MealNutrientPaste == null ||
+                collector.carryTracker.AvailableStackSpace(
+                    ThingDefOf.MealNutrientPaste) <= 0)
+            {
+                return false;
+            }
+
+            bool desperate = eater.needs?.food != null &&
+                eater.needs.food.CurCategory == HungerCategory.Starving;
+            float score;
+            if (!FoodNetworkV2FaucetSearchUtility.TryFindBestFaucet(
+                collector,
+                eater,
+                desperate,
+                FoodPreferability.MealLavish,
+                false,
+                false,
+                FoodPreferability.Undefined,
+                false,
+                out faucet,
+                out score))
+            {
+                return false;
+            }
+
+            if (anchor.IsValid &&
+                anchor.DistanceToSquared(faucet.InteractionCell) >
+                    SharedFoodSearchRadius * SharedFoodSearchRadius)
+            {
+                faucet = null;
+                return false;
+            }
+
+            if (ReferenceEquals(otherPawnMeal, faucet) &&
+                CompleteNetworkMeals(faucet) < 2)
+            {
+                faucet = null;
+                return false;
+            }
+
+            return true;
+        }
+
+        private static int CompleteNetworkMeals(Building_FoodFaucet faucet)
+        {
+            FoodNetworkV2 network =
+                FoodNetworkV2MachineUtility.NetworkFor(faucet);
+            return network == null
+                ? 0
+                : Mathf.FloorToInt(
+                    (network.StoredNutrition + FoodNetworkV2Constants.Epsilon) /
+                    FoodNetworkV2Constants.DispenserMealNutrition);
+        }
+
+        private static int NetworkMealsNeeded(
+            Pawn eater,
+            Building_FoodFaucet faucet,
+            bool capForTrip)
+        {
+            if (eater == null || faucet == null)
+            {
+                return 0;
+            }
+
+            FoodBatchV2 preview;
+            if (!FoodNetworkV2ServingUtility.TryPreviewMeal(
+                faucet,
+                out preview))
+            {
+                return 0;
+            }
+
+            float gainPerMeal = EstimatedFullnessGain(
+                eater,
+                FoodNetworkV2Constants.DispenserMealNutrition,
+                preview.FullnessToNutritionRatio);
+            float remaining = RemainingFeedingCapacity(eater);
+            if (gainPerMeal <= FoodFitEpsilon ||
+                remaining <= FoodFitEpsilon)
+            {
+                return 0;
+            }
+
+            int needed = Mathf.Max(
+                1,
+                Mathf.CeilToInt(
+                    (remaining - FoodFitEpsilon) / gainPerMeal));
+            return capForTrip
+                ? Mathf.Min(
+                    needed,
+                    FoodNetworkV2Constants.MaximumDispenserMealsPerTrip)
+                : needed;
+        }
+
+        private static bool CanFaucetSupplyCombined(
+            Building_FoodFaucet faucet,
+            Pawn first,
+            Pawn second)
+        {
+            int firstNeeded = NetworkMealsNeeded(first, faucet, false);
+            int secondNeeded = NetworkMealsNeeded(second, faucet, false);
+            return firstNeeded > 0 && secondNeeded > 0 &&
+                CompleteNetworkMeals(faucet) >=
+                    firstNeeded + secondNeeded;
+        }
+
+        private static int NetworkMealCollectionCount(
+            Pawn collector,
+            Building_FoodFaucet faucet,
+            params Pawn[] eaters)
+        {
+            if (collector?.carryTracker == null || faucet == null ||
+                ThingDefOf.MealNutrientPaste == null)
+            {
+                return 0;
+            }
+
+            int requested = 0;
+            if (eaters != null)
+            {
+                foreach (Pawn eater in eaters)
+                {
+                    requested += NetworkMealsNeeded(
+                        eater,
+                        faucet,
+                        true);
+                }
+            }
+
+            int carrySpace = collector.carryTracker.AvailableStackSpace(
+                ThingDefOf.MealNutrientPaste);
+            return Mathf.Max(
+                0,
+                Mathf.Min(
+                    requested,
+                    CompleteNetworkMeals(faucet),
+                    carrySpace,
+                    FoodNetworkV2Constants.MaximumDispenserMealsPerTrip));
+        }
+
+        public static bool IsFoodNetworkFaucet(Thing source)
+        {
+            return FeedOtherMod.Settings.foodNetworkV2Enabled &&
+                source is Building_FoodFaucet;
+        }
+
+        public static IEnumerable<Toil> CollectSessionMealSourceToils(
+            Pawn collector,
+            Pawn eater)
+        {
+            Toil goToFaucet = Toils_Goto.GotoThing(
+                    TargetIndex.A,
+                    PathEndMode.InteractionCell)
+                .FailOnDespawnedNullOrForbidden(TargetIndex.A);
+            Toil collectionComplete = ToilMaker.MakeToil(
+                "CompleteSessionMealCollection");
+            collectionComplete.defaultCompleteMode =
+                ToilCompleteMode.Instant;
+
+            yield return Toils_Jump.JumpIf(
+                goToFaucet,
+                delegate
+                {
+                    Job currentJob = collector == null
+                        ? null
+                        : collector.CurJob;
+                    Thing source = currentJob == null
+                        ? null
+                        : currentJob.GetTarget(TargetIndex.A).Thing;
+                    return IsFoodNetworkFaucet(source);
+                });
+
+            yield return Toils_Goto.GotoThing(
+                    TargetIndex.A,
+                    PathEndMode.ClosestTouch)
+                .FailOnDespawnedNullOrForbidden(TargetIndex.A);
+            yield return Toils_Ingest.PickupIngestible(
+                TargetIndex.A,
+                eater);
+            yield return Toils_Jump.Jump(collectionComplete);
+
+            yield return goToFaucet;
+            Toil dispense = ToilMaker.MakeToil(
+                "TakeFixedMealFromFoodNetwork");
+            dispense.initAction = delegate
+            {
+                Pawn actor = dispense.actor;
+                if (actor == null || actor.CurJob == null ||
+                    actor.carryTracker == null ||
+                    actor.carryTracker.CarriedThing != null)
+                {
+                    if (actor?.jobs?.curDriver != null)
+                    {
+                        actor.jobs.curDriver.EndJobWith(
+                            JobCondition.Incompletable);
+                    }
+                    return;
+                }
+
+                Building_FoodFaucet faucet = actor.CurJob
+                    .GetTarget(TargetIndex.A).Thing as
+                        Building_FoodFaucet;
+                int requestedMeals = Mathf.Clamp(
+                    actor.CurJob.count,
+                    1,
+                    FoodNetworkV2Constants.MaximumDispenserMealsPerTrip);
+                Thing serving =
+                    FoodNetworkV2ServingUtility.TryDispenseMeals(
+                        faucet,
+                        eater,
+                        requestedMeals);
+                if (serving == null ||
+                    !actor.carryTracker.TryStartCarry(serving))
+                {
+                    if (serving != null && !serving.Destroyed)
+                    {
+                        FoodNetworkV2ServingUtility.TryReturnToNetwork(
+                            faucet,
+                            serving);
+                        serving.Destroy(DestroyMode.Vanish);
+                    }
+                    actor.jobs.curDriver.EndJobWith(
+                        JobCondition.Incompletable);
+                    return;
+                }
+
+                actor.CurJob.SetTarget(
+                    TargetIndex.A,
+                    actor.carryTracker.CarriedThing);
+                actor.CurJob.count =
+                    actor.carryTracker.CarriedThing.stackCount;
+            };
+            dispense.defaultCompleteMode = ToilCompleteMode.Delay;
+            dispense.defaultDuration =
+                Building_NutrientPasteDispenser.CollectDuration;
+            yield return dispense;
+            yield return collectionComplete;
+        }
+
         private static IOrderedEnumerable<Thing> OrderMealCandidatesByFit(
             Pawn eater,
             Pawn collector,
@@ -1962,6 +2685,11 @@ namespace RimRound.FeedOther
 
         public static bool IsPreparedMeal(Thing food)
         {
+            if (IsFoodNetworkFaucet(food))
+            {
+                return true;
+            }
+
             return food?.def?.ingestible != null &&
                 food.def.ingestible.preferability >= FoodPreferability.MealAwful;
         }
@@ -1971,9 +2699,9 @@ namespace RimRound.FeedOther
             if (IsPreparedMeal(food))
             {
                 // Prepared meals are already the first candidate tier. Within
-                // that tier, prefer a serving that wastes the least fullness.
-                return Mathf.Max(0f,
-                    RemainingFeedingCapacity(eater) - EstimatedFullnessGain(eater, food));
+                // that tier, prefer the serving that discards the least actual
+                // nutrition after concentration and pawn fullness gain are applied.
+                return ProjectedSessionNutritionWaste(eater, food, 1);
             }
 
             // Non-meal fallbacks are quality-tiered before fit or distance. A

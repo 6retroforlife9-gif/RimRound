@@ -1,6 +1,7 @@
 using HarmonyLib;
 using RimRound.Comps;
 using RimRound.FeedingTube;
+using RimRound.FeedingTube.Comps;
 using RimRound.Patch;
 using RimWorld;
 using RimWorld.Planet;
@@ -53,7 +54,12 @@ namespace RimRound.FeedOther
 
         public void Initialize(FoodBatchV2 batch)
         {
-            if (batch == null || batch.Empty)
+            Initialize(batch, 1);
+        }
+
+        public void Initialize(FoodBatchV2 batch, int servingCount)
+        {
+            if (batch == null || batch.Empty || servingCount <= 0)
             {
                 initialized = false;
                 fullnessToNutritionRatio = 1f;
@@ -63,7 +69,7 @@ namespace RimRound.FeedOther
 
             initialized = true;
             fullnessToNutritionRatio = batch.FullnessToNutritionRatio;
-            representedNutrition = batch.nutrition;
+            representedNutrition = batch.nutrition / servingCount;
         }
 
         public override void PostExposeData()
@@ -95,7 +101,132 @@ namespace RimRound.FeedOther
             }
             return "RR_FoodNetworkServingInspect".Translate(
                 representedNutrition.ToString("F2"),
-                (1f / FullnessToNutritionRatio).ToString("F2"));
+                (1f / FullnessToNutritionRatio).ToString("F2"),
+                (representedNutrition * FullnessToNutritionRatio)
+                    .ToString("F4"));
+        }
+    }
+
+    /// <summary>
+    /// RimRound's ratio is a fullness-to-nutrition ratio, while the inspector
+    /// historically displayed its reciprocal under the vague label "density".
+    /// Show the reciprocal as concentration and also show the actual base
+    /// fullness volume of one item so high-nutrition foods are unambiguous.
+    /// </summary>
+    [HarmonyPatch(
+        typeof(ThingComp_FoodItems_NutritionDensity),
+        nameof(ThingComp_FoodItems_NutritionDensity.CompInspectStringExtra))]
+    internal static class NutritionConcentrationInspectPatch
+    {
+        [HarmonyPostfix]
+        private static void Postfix(
+            ThingComp_FoodItems_NutritionDensity __instance,
+            ref string __result)
+        {
+            float ratio = __instance?.Props == null
+                ? 0f
+                : __instance.Props.fullnessToNutritionRatio;
+            Thing food = __instance?.parent;
+            if (ratio <= FoodNetworkV2Constants.Epsilon || food == null)
+            {
+                return;
+            }
+
+            float nutrition;
+            try
+            {
+                nutrition = food.GetStatValue(StatDefOf.Nutrition);
+            }
+            catch (Exception)
+            {
+                return;
+            }
+
+            __result = "RR_NutritionConcentrationInspect".Translate(
+                (1f / ratio).ToString("F2"),
+                (nutrition * ratio).ToString("F4"));
+        }
+    }
+
+    [HarmonyPatch(
+        typeof(FoodNetStorage_ThingComp),
+        nameof(FoodNetStorage_ThingComp.CompInspectStringExtra))]
+    internal static class ClassicFoodNetworkConcentrationInspectPatch
+    {
+        [HarmonyPostfix]
+        private static void Postfix(ref string __result)
+        {
+            if (string.IsNullOrEmpty(__result))
+            {
+                return;
+            }
+
+            __result = __result
+                .Replace(
+                    "Nutrition_Density".Translate().ToString(),
+                    "RR_NutritionConcentration".Translate().ToString())
+                .Replace(
+                    "RR_NutritionDensity".Translate().ToString(),
+                    "RR_NutritionConcentration".Translate().ToString());
+        }
+    }
+
+    [HarmonyPatch(
+        typeof(Building_NutrientDistillery),
+        nameof(Building_NutrientDistillery.GetInspectString))]
+    internal static class ClassicDistilleryConcentrationInspectPatch
+    {
+        [HarmonyPostfix]
+        private static void Postfix(ref string __result)
+        {
+            if (!string.IsNullOrEmpty(__result))
+            {
+                __result = __result.Replace(
+                    "Target nutrition density",
+                    "Target nutrition concentration");
+            }
+        }
+    }
+
+    [HarmonyPatch(
+        typeof(Building_NutrientDistillery),
+        nameof(Building_NutrientDistillery.GetGizmos))]
+    internal static class ClassicDistilleryConcentrationGizmoPatch
+    {
+        [HarmonyPostfix]
+        private static void Postfix(ref IEnumerable<Gizmo> __result)
+        {
+            __result = Relabel(__result);
+        }
+
+        private static IEnumerable<Gizmo> Relabel(IEnumerable<Gizmo> gizmos)
+        {
+            if (gizmos == null)
+            {
+                yield break;
+            }
+
+            foreach (Gizmo gizmo in gizmos)
+            {
+                Command command = gizmo as Command;
+                if (command != null)
+                {
+                    if (command.defaultLabel ==
+                        "Increase target nutrition density")
+                    {
+                        command.defaultLabel =
+                            "Increase target nutrition concentration";
+                    }
+                    else if (command.defaultLabel ==
+                        "Decrease target nutrition density")
+                    {
+                        command.defaultLabel =
+                            "Decrease target nutrition concentration";
+                    }
+                }
+
+                yield return gizmo;
+            }
         }
     }
 
@@ -111,16 +242,25 @@ namespace RimRound.FeedOther
 
         private static Thing MakePasteMeal(FoodBatchV2 batch)
         {
+            return MakePasteMealStack(batch, 1);
+        }
+
+        private static Thing MakePasteMealStack(
+            FoodBatchV2 batch,
+            int servingCount)
+        {
             return MakeServing(
                 batch,
                 ThingDefOf.MealNutrientPaste,
-                "MealNutrientPaste");
+                "MealNutrientPaste",
+                servingCount);
         }
 
         private static Thing MakeServing(
             FoodBatchV2 batch,
             ThingDef servingDef,
-            string servingDefName)
+            string servingDefName,
+            int servingCount = 1)
         {
             if (batch == null || batch.Empty || servingDef == null)
             {
@@ -140,7 +280,12 @@ namespace RimRound.FeedOther
                 return null;
             }
 
-            servingComp.Initialize(batch);
+            int clampedServingCount = Mathf.Clamp(
+                servingCount,
+                1,
+                Mathf.Max(1, servingDef.stackLimit));
+            serving.stackCount = clampedServingCount;
+            servingComp.Initialize(batch, clampedServingCount);
             CompIngredients compIngredients = serving.TryGetComp<CompIngredients>();
             if (compIngredients != null)
             {
@@ -160,40 +305,65 @@ namespace RimRound.FeedOther
             Building_FoodFaucet faucet,
             Pawn eater)
         {
-            if (faucet == null || eater == null || !faucet.Spawned ||
+            int requestedMeals = RequestedMealCountForPawn(faucet, eater);
+            return TryDispenseMeals(faucet, eater, requestedMeals);
+        }
+
+        public static Thing TryDispenseMeals(
+            Building_FoodFaucet faucet,
+            Pawn eater,
+            int requestedMeals)
+        {
+            if (faucet == null || eater == null || requestedMeals <= 0 ||
+                !faucet.Spawned ||
                 !FoodNetworkV2MachineUtility.IsOperational(faucet))
             {
                 return null;
             }
 
             FoodNetworkV2 network = FoodNetworkV2MachineUtility.NetworkFor(faucet);
-            float maximumNutrition;
-            float maximumStoredFullness;
-            if (network == null ||
-                !TryGetPawnServingLimits(
-                    eater,
-                    out maximumNutrition,
-                    out maximumStoredFullness))
+            if (network == null)
+            {
+                return null;
+            }
+
+            int completeMeals = Mathf.FloorToInt(
+                (network.StoredNutrition + FoodNetworkV2Constants.Epsilon) /
+                FoodNetworkV2Constants.DispenserMealNutrition);
+            int mealCount = Mathf.Min(
+                requestedMeals,
+                completeMeals,
+                FoodNetworkV2Constants.MaximumDispenserMealsPerTrip,
+                Mathf.Max(1, ThingDefOf.MealNutrientPaste.stackLimit));
+            if (mealCount <= 0)
             {
                 return null;
             }
 
             FoodBatchV2 batch;
-            if (!network.TryDraw(
-                    maximumNutrition,
-                    maximumStoredFullness,
-                    false,
-                    out batch))
+            float nutrition =
+                FoodNetworkV2Constants.DispenserMealNutrition * mealCount;
+            if (!network.TryDrawExactNutrition(nutrition, out batch))
             {
                 return null;
             }
 
-            return FinishDispense(faucet, network, batch, true);
+            return FinishDispense(
+                faucet,
+                network,
+                batch,
+                true,
+                mealCount);
         }
 
         public static Thing TryDispense(
             Building_FoodFaucet faucet,
-            float nutrition)
+            float ignoredNutrition)
+        {
+            return TryDispenseOneMeal(faucet);
+        }
+
+        public static Thing TryDispenseOneMeal(Building_FoodFaucet faucet)
         {
             if (faucet == null || !faucet.Spawned ||
                 !FoodNetworkV2MachineUtility.IsOperational(faucet))
@@ -204,12 +374,14 @@ namespace RimRound.FeedOther
             FoodNetworkV2 network = FoodNetworkV2MachineUtility.NetworkFor(faucet);
             FoodBatchV2 batch;
             if (network == null ||
-                !network.TryDrawExactNutrition(nutrition, out batch))
+                !network.TryDrawExactNutrition(
+                    FoodNetworkV2Constants.DispenserMealNutrition,
+                    out batch))
             {
                 return null;
             }
 
-            return FinishDispense(faucet, network, batch, true);
+            return FinishDispense(faucet, network, batch, true, 1);
         }
 
         public static bool CanDispenseForPawn(
@@ -217,100 +389,152 @@ namespace RimRound.FeedOther
             Pawn eater)
         {
             FoodNetworkV2 network = FoodNetworkV2MachineUtility.NetworkFor(faucet);
-            float maximumNutrition;
-            float maximumStoredFullness;
-            return faucet != null && eater != null &&
+            return faucet != null && eater != null && !eater.Dead &&
+                eater.needs != null && eater.needs.food != null &&
                 FoodNetworkV2MachineUtility.IsOperational(faucet) &&
                 network != null &&
-                TryGetPawnServingLimits(
-                    eater,
-                    out maximumNutrition,
-                    out maximumStoredFullness) &&
-                network.CanDraw(maximumNutrition, maximumStoredFullness);
+                network.CanDrawNutrition(
+                    FoodNetworkV2Constants.DispenserMealNutrition);
         }
 
-        private static bool TryGetPawnServingLimits(
-            Pawn eater,
-            out float maximumNutrition,
-            out float maximumStoredFullness)
+        public static bool TryPreviewMeal(
+            Building_FoodFaucet faucet,
+            out FoodBatchV2 batch)
         {
-            maximumNutrition = 0f;
-            maximumStoredFullness = float.MaxValue;
-            if (eater == null || eater.Dead || eater.needs == null ||
-                eater.needs.food == null)
+            batch = null;
+            FoodNetworkV2 network = FoodNetworkV2MachineUtility.NetworkFor(faucet);
+            return faucet != null &&
+                FoodNetworkV2MachineUtility.IsOperational(faucet) &&
+                network != null &&
+                network.TryPreviewExactNutrition(
+                    FoodNetworkV2Constants.DispenserMealNutrition,
+                    out batch);
+        }
+
+        public static int RequestedMealCountForPawn(
+            Building_FoodFaucet faucet,
+            Pawn eater)
+        {
+            if (!CanDispenseForPawn(faucet, eater))
             {
-                return false;
+                return 0;
             }
 
             FullnessAndDietStats_ThingComp fullness =
                 eater.TryGetComp<FullnessAndDietStats_ThingComp>();
             if (fullness == null || fullness.Disabled ||
-                fullness.DietMode == DietMode.Disabled)
+                fullness.DietMode == DietMode.Disabled ||
+                fullness.DietMode == DietMode.Nutrition)
             {
-                maximumNutrition = Mathf.Max(
-                    0f,
-                    eater.needs.food.NutritionWanted);
-                return maximumNutrition > FoodNetworkV2Constants.Epsilon;
+                return 1;
             }
 
-            float gainedMultiplier = fullness.FullnessGainedMultiplier;
-            if (gainedMultiplier <= FoodNetworkV2Constants.Epsilon)
+            if (fullness.DietMode != DietMode.Fullness &&
+                fullness.DietMode != DietMode.Hybrid)
+            {
+                return 1;
+            }
+
+            FoodBatchV2 preview;
+            if (!TryPreviewMeal(faucet, out preview))
+            {
+                return 0;
+            }
+
+            Pair<float, float> ranges;
+            try
+            {
+                ranges = fullness.GetRanges();
+            }
+            catch (Exception)
+            {
+                return 1;
+            }
+
+            float target = ranges.Second;
+            if (!fullness.SetAboveHardLimit)
+            {
+                target = Mathf.Min(target, fullness.HardLimit);
+            }
+
+            float remaining = Mathf.Max(0f, target - fullness.CurrentFullness);
+            float gainPerMeal =
+                FoodNetworkV2Constants.DispenserMealNutrition *
+                preview.FullnessToNutritionRatio *
+                fullness.FullnessGainedMultiplier;
+            if (remaining <= FoodNetworkV2Constants.Epsilon ||
+                gainPerMeal <= FoodNetworkV2Constants.Epsilon)
+            {
+                return 0;
+            }
+
+            return Mathf.Clamp(
+                Mathf.CeilToInt(
+                    (remaining - FoodNetworkV2Constants.Epsilon) /
+                    gainPerMeal),
+                1,
+                FoodNetworkV2Constants.MaximumDispenserMealsPerTrip);
+        }
+
+        internal static bool TryGetActiveSelfFeedingTarget(
+            Pawn pawn,
+            FullnessAndDietStats_ThingComp fullness,
+            out float target)
+        {
+            target = 0f;
+            if (pawn == null || fullness == null || pawn.CurJob == null ||
+                fullness.Disabled ||
+                (fullness.DietMode != DietMode.Fullness &&
+                 fullness.DietMode != DietMode.Hybrid))
             {
                 return false;
             }
-            var ranges = fullness.GetRanges();
-            switch (fullness.DietMode)
+
+            Thing food = pawn.CurJob.GetTarget(TargetIndex.A).Thing;
+            CompFoodNetworkServing serving = food == null
+                ? null
+                : food.TryGetComp<CompFoodNetworkServing>();
+            bool networkJob =
+                (serving != null && serving.IsInitialized) ||
+                pawn.CurJob.GetTarget(TargetIndex.C).Thing is
+                    Building_FoodFaucet;
+            if (!networkJob)
             {
-                case DietMode.Nutrition:
-                    float digestingNutrition = fullness.CurrentFullness /
-                        Mathf.Max(
-                            FoodNetworkV2Constants.Epsilon,
-                            fullness.CurrentFullnessToNutritionRatio);
-                    maximumNutrition = ranges.Second -
-                        eater.needs.food.CurLevel - digestingNutrition;
-                    if (!fullness.SetAboveHardLimit)
-                    {
-                        maximumStoredFullness =
-                            (fullness.HardLimit - fullness.CurrentFullness) /
-                            gainedMultiplier;
-                    }
-                    break;
-
-                case DietMode.Hybrid:
-                case DietMode.Fullness:
-                    float fullnessTarget = ranges.Second;
-                    if (!fullness.SetAboveHardLimit)
-                    {
-                        fullnessTarget = Mathf.Min(
-                            fullnessTarget,
-                            fullness.HardLimit);
-                    }
-                    maximumStoredFullness =
-                        (fullnessTarget - fullness.CurrentFullness) /
-                        gainedMultiplier;
-                    // The network transaction's fullness limit determines the
-                    // exact nutrition required even when several FIFO batches
-                    // have different densities.
-                    maximumNutrition = float.MaxValue;
-                    break;
-
-                default:
-                    return false;
+                return false;
             }
 
-            return maximumNutrition > FoodNetworkV2Constants.Epsilon &&
-                maximumStoredFullness > FoodNetworkV2Constants.Epsilon;
+            Pair<float, float> ranges;
+            try
+            {
+                ranges = fullness.GetRanges();
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+
+            target = ranges.Second;
+            if (!fullness.SetAboveHardLimit)
+            {
+                target = Mathf.Min(target, fullness.HardLimit);
+            }
+            return target > FoodNetworkV2Constants.Epsilon;
         }
 
         private static Thing FinishDispense(
             Building_FoodFaucet faucet,
             FoodNetworkV2 network,
             FoodBatchV2 batch,
-            bool pasteMeal)
+            bool pasteMeal,
+            int servingCount = 1)
         {
             Thing serving = pasteMeal
-                ? MakePasteMeal(batch)
-                : MakeServing(batch);
+                ? MakePasteMealStack(batch, servingCount)
+                : MakeServing(
+                    batch,
+                    FeedingTubeThingDefOf.RR_FeedingTubeFluid,
+                    "RR_FeedingTubeFluid",
+                    servingCount);
             if (serving == null)
             {
                 network.TryStore(batch);
@@ -348,10 +572,11 @@ namespace RimRound.FeedOther
                 ingredientComp.ingredients.NullOrEmpty()
                     ? (IEnumerable<ThingDef>)new ThingDef[0]
                     : (IEnumerable<ThingDef>)ingredientComp.ingredients;
+            float returnedNutrition = servingComp.RepresentedNutrition *
+                Mathf.Max(1, serving.stackCount);
             FoodBatchV2 batch = new FoodBatchV2(
-                servingComp.RepresentedNutrition,
-                servingComp.RepresentedNutrition *
-                    servingComp.FullnessToNutritionRatio,
+                returnedNutrition,
+                returnedNutrition * servingComp.FullnessToNutritionRatio,
                 ingredients,
                 Find.TickManager == null ? 0 : Find.TickManager.TicksGame);
             FoodNetworkV2 network =
@@ -410,9 +635,8 @@ namespace RimRound.FeedOther
                 return true;
             }
 
-            __result = FoodNetworkV2ServingUtility.TryDispense(
-                __instance,
-                FeedOtherMod.Settings.foodDispenserServingNutrition);
+            __result = FoodNetworkV2ServingUtility.TryDispenseOneMeal(
+                __instance);
             return false;
         }
     }
@@ -845,6 +1069,39 @@ namespace RimRound.FeedOther
     }
 
     /// <summary>
+    /// Reject complete food portions that would discard more than 1.0 nutrition
+    /// at the eater's active target. The conversion from excess fullness back to
+    /// nutrition uses each food's real concentration and the eater's live
+    /// fullness multiplier.
+    /// </summary>
+    [HarmonyPatch(typeof(FoodUtility), nameof(FoodUtility.FoodOptimality))]
+    internal static class MaximumNutritionWasteFoodOptimalityPatch
+    {
+        [HarmonyPostfix]
+        private static void Postfix(
+            [HarmonyArgument(0)] Pawn eater,
+            [HarmonyArgument(1)] Thing foodSource,
+            ref float __result)
+        {
+            if (eater == null || foodSource == null ||
+                foodSource is Building_NutrientPasteDispenser ||
+                foodSource is Building_FoodFaucet ||
+                foodSource.def?.ingestible == null)
+            {
+                return;
+            }
+
+            if (!FeedOtherUtility.IsAutomaticFoodSelectionFitAcceptable(
+                eater,
+                foodSource,
+                1))
+            {
+                __result = float.MinValue;
+            }
+        }
+    }
+
+    /// <summary>
     /// Let vanilla finish its complete food search first, then compare its
     /// ordinary ingest job with an operational Food Network v2 dispenser. This
     /// confines the non-ingestible building target to the one job driver that
@@ -860,11 +1117,31 @@ namespace RimRound.FeedOther
         [HarmonyPriority(Priority.Low)]
         private static void Postfix(Pawn pawn, ref Job __result)
         {
-            if (!FeedOtherMod.Settings.foodNetworkV2Enabled ||
-                pawn == null || pawn.needs == null ||
-                pawn.needs.food == null || pawn.RaceProps == null ||
-                pawn.Map == null || FoodUtility.ShouldBeFedBySomeone(pawn) ||
+            if (pawn == null ||
                 (__result != null && __result.def != JobDefOf.Ingest))
+            {
+                return;
+            }
+
+            if (__result != null)
+            {
+                Thing selectedFood = __result.GetTarget(TargetIndex.A).Thing;
+                if (selectedFood != null &&
+                    !(selectedFood is Building_NutrientPasteDispenser) &&
+                    !(selectedFood is Building_FoodFaucet) &&
+                    !FeedOtherUtility.IsAutomaticFoodSelectionFitAcceptable(
+                        pawn,
+                        selectedFood,
+                        1))
+                {
+                    __result = null;
+                }
+            }
+
+            if (!FeedOtherMod.Settings.foodNetworkV2Enabled ||
+                pawn.needs == null || pawn.needs.food == null ||
+                pawn.RaceProps == null || pawn.Map == null ||
+                FoodUtility.ShouldBeFedBySomeone(pawn))
             {
                 return;
             }
@@ -1063,6 +1340,8 @@ namespace RimRound.FeedOther
                 actor.CurJob.SetTarget(
                     TargetIndex.A,
                     actor.carryTracker.CarriedThing);
+                actor.CurJob.count =
+                    actor.carryTracker.CarriedThing.stackCount;
             };
             dispense.defaultCompleteMode = ToilCompleteMode.Delay;
             dispense.defaultDuration = Building_NutrientPasteDispenser.CollectDuration;

@@ -1,11 +1,35 @@
-# RimRound Feed Other v1.0.69-beta.10 — Corrected south-facing oversized-bed texture slot
+# RimRound Feed Other v1.0.69-beta.18 — Romantic post-meal hearts and hidden food pipes
 
 ## Current development status
 
 **Current stable build:** v1.0.60 Manual sleeping-recipient bed preservation  
-**Current beta build:** v1.0.69-beta.10 Corrected south-facing oversized-bed texture slot
+**Current beta build:** v1.0.69-beta.18 Romantic post-meal hearts and hidden food pipes
 
 This beta continues from v1.0.69-beta.1 and still branches from the fully working v1.0.60 package. The v1.0.60 ZIP remains the stable package.
+
+
+## Romantic post-meal hearts and hidden food pipes
+
+- Romantic partners now emit the vanilla heart fleck during the optional post-meal conversation/recreation phase after Share Meal, Feed Other, one-way feeding and awake bedside feeding. The event leader emits one heart every 300 ticks (about five real-time seconds at normal speed), alternating between the two partners so linked jobs cannot double-spawn the effect.
+- Hearts are visual only. They do not trigger Lovin', pregnancy, Lovin' memories or cooldowns, and stop immediately when the post-meal social phase ends or the pawns are no longer romantic partners.
+- Completed `RR_TD_FeedingTubeConduit` food pipes now use a fully transparent world graphic, matching the visual behaviour of vanilla hidden conduits. Blueprints and construction frames remain visible.
+- RimRound's existing food-network overlay still reveals the full pipe network while placing compatible Food Network buildings. The existing selected-network and always-show overlay settings continue to control their optional visibility outside active placement.
+
+## Standing fallback and completed event flow
+
+- If a one-way Feed Other recipient's selected chair is taken before the linked job reserves it, the recipient now searches once for another valid nearby dining chair. If no replacement can be reserved, the recipient meets the feeder and completes the event standing instead of failing the job.
+- Initial meal collection still uses the normal food-search radius and attempts to collect the complete required stack in one trip. After feeding/eating begins, another collection trip is allowed only when a valid source is within **8 cells** of the current feeding or dining location.
+- If no nearby follow-up food exists, the participant is marked complete for this session rather than walking back to distant storage. The pair then finishes the eating/feeding conversation and continues into post-meal social recreation when either pawn can still benefit from it.
+- One-way, shared-meal and bedside flows all retain and consume usable meals already carried before considering any new collection. Bedside collection also attempts to bring a compatible allocation for both the recipient and feeder on the initial trip.
+- This specifically prevents repeated storage-to-table/bed shuttling while preserving a nearby top-up when food or a Food Network faucet is beside the event.
+
+## Maximum 1.0 nutrition waste and clearer concentration display
+
+- A complete selected food portion is now rejected when stopping at the eater's active target would discard more than **1.0 nutrition**. Exactly 1.0 nutrition of projected waste remains allowed, with a small floating-point tolerance.
+- Waste is calculated from the food's real nutrition, its `fullnessToNutritionRatio` concentration, the eater's live fullness-gain multiplier, and the remaining fullness or nutrition-bar gap. Concentrated foods are therefore judged by the nutrition actually discarded rather than by their small physical fullness alone.
+- The rule applies to ordinary self-feeding, Feed Other, Share Meal, one-way and bedside feeding, doctor patient feeding, ordinary prisoner delivery, and direct Fatten feeding. Invalid large meals are demoted during vanilla food scoring and rejected if a returned job still contains one.
+- Stackable foods may reduce their planned whole-item count until the portion is within the 1.0 limit. A rejected oversized prepared meal is left intact so the job can search for a smaller alternative.
+- Food inspectors now call the reciprocal ratio **nutrition concentration** rather than density and display the item's estimated base fullness volume. Food Network meals show nutrition per meal, concentration, and base fullness per meal; tank and distillery wording is also corrected.
 
 To roll back after installing the beta, first delete these beta-only files, then extract v1.0.60 over the RimRound folder:
 
@@ -29,6 +53,22 @@ To roll back after installing the beta, first delete these beta-only files, then
 - `Textures/UI/Buttons/MainButtons/RRFeedOtherSettingsButton.png`
 
 The stable archive then restores the DLL and all modified stable files. Removing the beta-only XML files is necessary because an ordinary archive overwrite does not delete files that exist only in the beta. To restore all original oversized-bed artwork after beta.10, verify or reinstall the original mod files through Steam before reinstalling the stable patch.
+
+## v1.0.69-beta.15 — XL hopper vanilla food filter
+
+- XL hoppers now accept exactly the same item category as RimWorld's ordinary nutrient-paste hoppers: **raw food only**.
+- Rough plant matter remains excluded through the same `AllowPlantFood` special filter used by the vanilla hopper.
+- The default filter also matches vanilla exclusions for human meat, megaspider meat and twisted meat when Anomaly is active.
+- Prepared meals, packaged meals and other finished foods can no longer be placed in XL hoppers.
+
+## v1.0.69-beta.14 — Food Network dispenser repair
+
+- Food Network faucets now create only complete **0.90 nutrition** nutrient-paste meals. A network with less than 0.90 stored nutrition is not offered as a usable dispenser.
+- Nutrition mode collects one meal and ends that food search. Fullness and Hybrid modes collect up to four complete meals per trip based on the pawn's live remaining bar capacity.
+- Share Meal, Feed Other, one-way feeding and bedside feeding can collect real paste-meal stacks directly from a faucet. The final whole meal is consumed normally and only fullness above the active target is discarded.
+- Vanilla self-feeding continues to use the guarded faucet search instead of exposing the non-ingestible building to unsafe global food scoring.
+- Doctor patient-feeding and the prisoner Fatten work giver now use the faucet as a safe fallback when no ordinary food source is available. Their drivers turn the building target into real paste meals before feeding.
+- The original RimRound faucet validator remains disabled in Food Network v2 mode because it can null-reference during general food searches and rejects collector/eater pairs where the pawns differ.
 
 ## Corrected south-facing oversized-bed texture
 
@@ -57,7 +97,7 @@ The stable archive then restores the DLL and all modified stable files. Removing
 - Existing tanks migrate their saved volume and density once. Existing defNames, research, buildings and the first legacy feeder target remain compatible. The master setting can return to classic RimRound and safely re-import the live classic tank amounts when v2 is enabled again.
 - Food processors respect each attached hopper's storage filter, accept raw plant food, optionally accept prepared meals, preserve ingredient contamination, process exact whole stack counts and show a specific blocked status.
 - Tanks show network nutrition, fullness volume, capacity, density, FIFO batch count and ingredients. Separate confirmed commands purge one tank or the entire connected network.
-- Pawn-operated food dispensers create one genuine vanilla nutrient-paste meal at collection time. Its per-instance component carries the network batch's exact nutrition and density, so several pawns can safely eat differently sized paste meals from differently distilled networks without mutating a shared ThingDef.
+- Pawn-operated food dispensers create one genuine vanilla nutrient-paste meal at collection time. Its per-instance component carries the network batch's exact per-meal 0.90 nutrition and density, so several pawns can safely eat fixed meals from differently distilled networks without mutating a shared ThingDef.
 - Basic automatic feeders retain one adjacent humanlike bed. Advanced feeders retain several beds within the configurable hose range and bed limit. Empty linked beds remain linked; tube hediffs follow current occupants and are removed when an occupant leaves, changes maps, dies, or the feeder is removed.
 - Feeder Survival, Maintain, Gain and Maximum Gain modes use real serving ingestion, the configurable feeding target, the 95% rupture ceiling, live power/breakdown/network checks, ingredients and RimRound's normal fullness/mood handling. The basic feeder is restricted to Survival and Maintain.
 - The distiller has separate rotation-aware blue input and red output ports. It refuses a same-network loop, conserves nutrition and ingredients, changes only fullness volume/density, and displays both network states in its inspector.

@@ -41,6 +41,10 @@
       <HintPath>$(RimRoundReferenceRoot)/ExternalMods/SwellGlow/Assemblies/UnityEngine.TextRenderingModule.dll</HintPath>
       <Private>false</Private>
     </Reference>
+    <Reference Include="netstandard">
+      <HintPath>$(RimRoundReferenceRoot)/ExternalMods/SwellGlow/Assemblies/netstandard.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
   </ItemGroup>
 
   <ItemGroup>
@@ -65,6 +69,7 @@
     <Compile Include="JobDriver_FeedOtherOneWay.cs" />
     <Compile Include="JobDriver_FattenPrisonerDirectFeed.cs" />
     <Compile Include="JobDriver_FoodFeedPatientEatingSpeed.cs" />
+    <Compile Include="FoodNetworkV2PatientSearchPatch.cs" />
     <Compile Include="JobDriver_PrisonerMealDelivery.cs" />
     <Compile Include="JobDriver_FattenPrisonerBedLock.cs" />
     <Compile Include="NeedFood_NutritionWanted_FeedOtherPatch.cs" />

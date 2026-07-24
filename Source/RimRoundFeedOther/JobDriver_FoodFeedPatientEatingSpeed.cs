@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using RimRound.FeedingTube;
 using RimWorld;
 using Verse;
 using Verse.AI;
@@ -12,6 +13,22 @@ namespace RimRound.FeedOther
     /// </summary>
     public class JobDriver_FoodFeedPatientEatingSpeed : JobDriver_FoodFeedPatient
     {
+        public override bool TryMakePreToilReservations(bool errorOnFailed)
+        {
+            if (TargetThingA is Building_FoodFaucet)
+            {
+                return pawn.Reserve(
+                    Deliveree,
+                    job,
+                    1,
+                    -1,
+                    null,
+                    errorOnFailed);
+            }
+
+            return base.TryMakePreToilReservations(errorOnFailed);
+        }
+
         protected override IEnumerable<Toil> MakeNewToils()
         {
             this.FailOnDespawnedNullOrForbidden(TargetIndex.B);
@@ -23,6 +40,10 @@ namespace RimRound.FeedOther
                     TargetIndex.A,
                     PathEndMode.InteractionCell)
                 .FailOnForbidden(TargetIndex.A);
+            Toil goToFoodNetworkFaucet = Toils_Goto.GotoThing(
+                    TargetIndex.A,
+                    PathEndMode.InteractionCell)
+                .FailOnDespawnedNullOrForbidden(TargetIndex.A);
             Toil goToFoodHolder = Toils_Goto.GotoThing(
                     TargetIndex.C,
                     PathEndMode.Touch)
@@ -43,6 +64,9 @@ namespace RimRound.FeedOther
             yield return Toils_Jump.JumpIf(
                 goToNutrientDispenser,
                 () => TargetThingA is Building_NutrientPasteDispenser);
+            yield return Toils_Jump.JumpIf(
+                goToFoodNetworkFaucet,
+                () => TargetThingA is Building_FoodFaucet);
             yield return Toils_Goto.GotoThing(
                     TargetIndex.A,
                     PathEndMode.ClosestTouch)
@@ -66,6 +90,58 @@ namespace RimRound.FeedOther
             yield return Toils_Ingest.TakeMealFromDispenser(
                 TargetIndex.A,
                 pawn);
+            yield return Toils_Jump.Jump(carryFoodToPatient);
+            yield return goToFoodNetworkFaucet;
+
+            Toil takeFoodNetworkMeal = ToilMaker.MakeToil(
+                "TakePatientMealFromFoodNetwork");
+            takeFoodNetworkMeal.initAction = delegate
+            {
+                Pawn actor = takeFoodNetworkMeal.actor;
+                Building_FoodFaucet faucet = actor?.CurJob
+                    ?.GetTarget(TargetIndex.A).Thing as
+                        Building_FoodFaucet;
+                if (actor == null || faucet == null ||
+                    actor.carryTracker == null ||
+                    actor.carryTracker.CarriedThing != null)
+                {
+                    actor?.jobs?.curDriver?.EndJobWith(
+                        JobCondition.Incompletable);
+                    return;
+                }
+
+                actor.rotationTracker.FaceTarget(faucet);
+                Thing serving =
+                    FoodNetworkV2ServingUtility.TryDispenseMeals(
+                        faucet,
+                        Deliveree,
+                        1);
+                if (serving == null ||
+                    !actor.carryTracker.TryStartCarry(serving))
+                {
+                    if (serving != null && !serving.Destroyed)
+                    {
+                        FoodNetworkV2ServingUtility.TryReturnToNetwork(
+                            faucet,
+                            serving);
+                        serving.Destroy(DestroyMode.Vanish);
+                    }
+                    actor.jobs.curDriver.EndJobWith(
+                        JobCondition.Incompletable);
+                    return;
+                }
+
+                actor.CurJob.SetTarget(
+                    TargetIndex.A,
+                    actor.carryTracker.CarriedThing);
+                actor.CurJob.count =
+                    actor.carryTracker.CarriedThing.stackCount;
+            };
+            takeFoodNetworkMeal.defaultCompleteMode =
+                ToilCompleteMode.Delay;
+            takeFoodNetworkMeal.defaultDuration =
+                Building_NutrientPasteDispenser.CollectDuration;
+            yield return takeFoodNetworkMeal;
             yield return carryFoodToPatient;
 
             yield return FeedOtherUtility.ChewIngestibleWithEatingSpeed(

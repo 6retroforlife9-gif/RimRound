@@ -21,6 +21,8 @@ namespace RimRound.FeedOther
         private bool carriedMealsForRecipient;
         private int recipientTopUpRoundsCompleted;
         private int feederTopUpRoundsCompleted;
+        private int recipientMealsCompleted;
+        private int feederMealsCompleted;
         private bool currentRecipientMealIsTopUp;
         private bool currentFeederMealIsTopUp;
         private FeedOtherConversationState conversationState = new FeedOtherConversationState();
@@ -43,6 +45,8 @@ namespace RimRound.FeedOther
             Scribe_Values.Look(ref carriedMealsForRecipient, "feedOtherBedsideCarryingForRecipient", false);
             Scribe_Values.Look(ref recipientTopUpRoundsCompleted, "feedOtherBedsideRecipientTopUpRoundsCompleted", 0);
             Scribe_Values.Look(ref feederTopUpRoundsCompleted, "feedOtherBedsideFeederTopUpRoundsCompleted", 0);
+            Scribe_Values.Look(ref recipientMealsCompleted, "feedOtherBedsideRecipientMealsCompleted", 0);
+            Scribe_Values.Look(ref feederMealsCompleted, "feedOtherBedsideFeederMealsCompleted", 0);
             Scribe_Values.Look(ref currentRecipientMealIsTopUp, "feedOtherBedsideCurrentRecipientMealIsTopUp", false);
             Scribe_Values.Look(ref currentFeederMealIsTopUp, "feedOtherBedsideCurrentFeederMealIsTopUp", false);
             Scribe_Deep.Look(ref conversationState, "feedOtherBedsideConversationState");
@@ -145,7 +149,20 @@ namespace RimRound.FeedOther
             findRecipientFood.initAction = delegate
             {
                 Thing meal;
-                if (!FeedOtherUtility.TryFindStoredMealForFeeding(pawn, Recipient, FoodAnchor, out meal))
+                bool followUpCollection = recipientMealsCompleted > 0 ||
+                    feederMealsCompleted > 0;
+                bool foundMeal = followUpCollection
+                    ? FeedOtherUtility.TryFindNearbyStoredMealForFeeding(
+                        pawn,
+                        Recipient,
+                        Recipient?.Position ?? pawn.Position,
+                        out meal)
+                    : FeedOtherUtility.TryFindStoredMealForFeeding(
+                        pawn,
+                        Recipient,
+                        FoodAnchor,
+                        out meal);
+                if (!foundMeal)
                 {
                     recipientCannotContinue = true;
                     JumpToToil(chooseNext);
@@ -158,8 +175,19 @@ namespace RimRound.FeedOther
                 // Prioritise the in-bed recipient. Any spare serving may later
                 // be eaten by the feeder, but the recipient's allocation is never
                 // rejected merely because a combined two-pawn pickup will not fit.
-                job.count = FeedOtherUtility.MealCollectionCount(
-                    pawn, meal, Recipient);
+                bool canAlsoFeedCollector =
+                    FeedOtherUtility.IsMealAcceptableForPawn(pawn, meal) &&
+                    FeedOtherUtility.CanFullyConsumeOneUnit(pawn, meal);
+                job.count = canAlsoFeedCollector
+                    ? FeedOtherUtility.MealCollectionCount(
+                        pawn,
+                        meal,
+                        Recipient,
+                        pawn)
+                    : FeedOtherUtility.MealCollectionCount(
+                        pawn,
+                        meal,
+                        Recipient);
                 job.count = FeedOtherUtility.ReserveMealStack(pawn, job, meal, job.count);
                 if (job.count <= 0)
                 {
@@ -170,9 +198,13 @@ namespace RimRound.FeedOther
             findRecipientFood.defaultCompleteMode = ToilCompleteMode.Instant;
             yield return findRecipientFood;
 
-            yield return Toils_Goto.GotoThing(TargetIndex.A, PathEndMode.ClosestTouch)
-                .FailOnDespawnedNullOrForbidden(TargetIndex.A);
-            yield return Toils_Ingest.PickupIngestible(TargetIndex.A, Recipient);
+            foreach (Toil collectRecipientMeal in
+                FeedOtherUtility.CollectSessionMealSourceToils(
+                    pawn,
+                    Recipient))
+            {
+                yield return collectRecipientMeal;
+            }
 
             Toil shareRecipientMealTarget = ToilMaker.MakeToil("ShareBedsideRecipientMealTarget");
             shareRecipientMealTarget.initAction = delegate
@@ -212,6 +244,7 @@ namespace RimRound.FeedOther
             Toil recordRecipientMeal = ToilMaker.MakeToil("RecordBedsideRecipientMeal");
             recordRecipientMeal.initAction = delegate
             {
+                recipientMealsCompleted++;
                 if (currentRecipientMealIsTopUp)
                 {
                     recipientTopUpRoundsCompleted++;
@@ -228,7 +261,20 @@ namespace RimRound.FeedOther
             findFeederFood.initAction = delegate
             {
                 Thing meal;
-                if (!FeedOtherUtility.TryFindStoredMeal(pawn, FoodAnchor, null, out meal))
+                bool followUpCollection = recipientMealsCompleted > 0 ||
+                    feederMealsCompleted > 0;
+                bool foundMeal = followUpCollection
+                    ? FeedOtherUtility.TryFindNearbyStoredMeal(
+                        pawn,
+                        Recipient?.Position ?? pawn.Position,
+                        null,
+                        out meal)
+                    : FeedOtherUtility.TryFindStoredMeal(
+                        pawn,
+                        FoodAnchor,
+                        null,
+                        out meal);
+                if (!foundMeal)
                 {
                     feederCannotContinue = true;
                     JumpToToil(chooseNext);
@@ -249,9 +295,13 @@ namespace RimRound.FeedOther
             findFeederFood.defaultCompleteMode = ToilCompleteMode.Instant;
             yield return findFeederFood;
 
-            yield return Toils_Goto.GotoThing(TargetIndex.A, PathEndMode.ClosestTouch)
-                .FailOnDespawnedNullOrForbidden(TargetIndex.A);
-            yield return Toils_Ingest.PickupIngestible(TargetIndex.A, pawn);
+            foreach (Toil collectFeederMeal in
+                FeedOtherUtility.CollectSessionMealSourceToils(
+                    pawn,
+                    pawn))
+            {
+                yield return collectFeederMeal;
+            }
             goToRecipientWithFeederFood = Toils_Goto.GotoThing(TargetIndex.B, PathEndMode.Touch);
             yield return goToRecipientWithFeederFood;
 
@@ -270,6 +320,7 @@ namespace RimRound.FeedOther
             Toil recordFeederMeal = ToilMaker.MakeToil("RecordBedsideFeederMeal");
             recordFeederMeal.initAction = delegate
             {
+                feederMealsCompleted++;
                 if (currentFeederMealIsTopUp)
                 {
                     feederTopUpRoundsCompleted++;
@@ -302,6 +353,7 @@ namespace RimRound.FeedOther
                 {
                     PostMealSocialUtility.GainRecreation(Recipient, delta);
                 }
+                PostMealSocialUtility.TickRomanticHearts(pawn, Recipient);
 
                 FeedOtherConversationUtility.TickConversation(
                     postMealConversationState,

@@ -17,6 +17,7 @@ namespace RimRound.FeedOther
         private bool recipientCannotContinue;
         private bool sessionTimedOut;
         private int recipientTopUpRoundsCompleted;
+        private int mealsCompleted;
         private bool currentMealIsTopUp;
         private int nextRecipientPathRefreshTick;
         private FeedOtherConversationState conversationState = new FeedOtherConversationState();
@@ -35,6 +36,7 @@ namespace RimRound.FeedOther
             Scribe_Values.Look(ref recipientCannotContinue, "feedOtherOneWayCannotContinue", false);
             Scribe_Values.Look(ref sessionTimedOut, "feedOtherOneWaySessionTimedOut", false);
             Scribe_Values.Look(ref recipientTopUpRoundsCompleted, "feedOtherOneWayTopUpRoundsCompleted", 0);
+            Scribe_Values.Look(ref mealsCompleted, "feedOtherOneWayMealsCompleted", 0);
             Scribe_Values.Look(ref currentMealIsTopUp, "feedOtherOneWayCurrentMealIsTopUp", false);
             Scribe_Deep.Look(ref conversationState, "feedOtherOneWayConversationState");
             Scribe_Values.Look(ref recipientWasAsleepAtStart, "feedOtherOneWayRecipientWasAsleep", false);
@@ -87,10 +89,32 @@ namespace RimRound.FeedOther
                 }
 
                 Thing meal;
-                if (!FeedOtherUtility.TryFindStoredMealForFeeding(pawn, Recipient, FoodAnchor, out meal))
+                bool followUpCollection = mealsCompleted > 0;
+                bool foundMeal = followUpCollection
+                    ? FeedOtherUtility.TryFindNearbyStoredMealForFeeding(
+                        pawn,
+                        Recipient,
+                        Recipient?.Position ?? pawn.Position,
+                        out meal)
+                    : FeedOtherUtility.TryFindStoredMealForFeeding(
+                        pawn,
+                        Recipient,
+                        FoodAnchor,
+                        out meal);
+                if (!foundMeal)
                 {
                     recipientCannotContinue = true;
-                    EndJobWith(JobCondition.Succeeded);
+                    if (mealsCompleted > 0)
+                    {
+                        // A completed feeding round is a valid event. Do not
+                        // abandon the social phase merely because the next meal
+                        // would require another long storage run.
+                        FinishMealOrBeginPostMeal(postMealSocial);
+                    }
+                    else
+                    {
+                        EndJobWith(JobCondition.Succeeded);
+                    }
                     return;
                 }
 
@@ -108,9 +132,13 @@ namespace RimRound.FeedOther
             findFood.defaultCompleteMode = ToilCompleteMode.Instant;
             yield return findFood;
 
-            yield return Toils_Goto.GotoThing(TargetIndex.A, PathEndMode.ClosestTouch)
-                .FailOnDespawnedNullOrForbidden(TargetIndex.A);
-            yield return Toils_Ingest.PickupIngestible(TargetIndex.A, Recipient);
+            foreach (Toil collectMeal in
+                FeedOtherUtility.CollectSessionMealSourceToils(
+                    pawn,
+                    Recipient))
+            {
+                yield return collectMeal;
+            }
 
             Toil shareCarriedMealTarget = ToilMaker.MakeToil("ShareOneWayFeedingMealTarget");
             shareCarriedMealTarget.initAction = delegate
@@ -175,6 +203,7 @@ namespace RimRound.FeedOther
             Toil continueOrFinish = ToilMaker.MakeToil("ContinueOneWayFeeding");
             continueOrFinish.initAction = delegate
             {
+                mealsCompleted++;
                 if (currentMealIsTopUp)
                 {
                     recipientTopUpRoundsCompleted++;
@@ -228,6 +257,7 @@ namespace RimRound.FeedOther
                 {
                     PostMealSocialUtility.GainRecreation(Recipient, delta);
                 }
+                PostMealSocialUtility.TickRomanticHearts(pawn, Recipient);
 
                 FeedOtherConversationUtility.TickConversation(
                     postMealConversationState,
@@ -687,12 +717,37 @@ namespace RimRound.FeedOther
 
             if (!MustRemainInPlace && FeedOtherUtility.IsDiningSeat(job.targetC.Cell, pawn.Map))
             {
-                if (!pawn.ReserveSittableOrSpot(job.targetC.Cell, job, errorOnFailed))
+                IntVec3 chosenSeat = job.targetC.Cell;
+                if (!pawn.ReserveSittableOrSpot(chosenSeat, job, false))
                 {
-                    return false;
+                    // The originally selected chair may be taken between job
+                    // creation and reservation. Try one fresh nearby chair, then
+                    // continue the event standing with the feeder instead of
+                    // failing the linked job.
+                    IntVec3 alternateSeat;
+                    if (FeedOtherUtility.TryFindDiningSeatExcept(
+                            pawn,
+                            job.targetA.Thing,
+                            Feeder.Position,
+                            chosenSeat,
+                            out alternateSeat) &&
+                        pawn.ReserveSittableOrSpot(alternateSeat, job, false))
+                    {
+                        chosenSeat = alternateSeat;
+                        job.targetC = alternateSeat;
+                    }
+                    else
+                    {
+                        job.count = MeetFeederMode;
+                        job.targetC = pawn.Position;
+                        return true;
+                    }
                 }
 
-                pawn.Map.pawnDestinationReservationManager.Reserve(pawn, job, job.targetC.Cell);
+                pawn.Map.pawnDestinationReservationManager.Reserve(
+                    pawn,
+                    job,
+                    chosenSeat);
             }
 
             return true;

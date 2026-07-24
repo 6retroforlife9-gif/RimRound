@@ -25,10 +25,42 @@
     </value>
   </Operation>
 
-  <!-- The processor now respects the hopper's ordinary player filter, so the
-       hard-coded ban on every plant food is no longer appropriate. -->
-  <Operation Class="PatchOperationRemove">
-    <xpath>Defs/ThingDef[defName="RR_Hopper"]/building/fixedStorageSettings/filter/specialFiltersToDisallow/li[text()="AllowPlantFood"]</xpath>
+  <!-- Keep the XL hopper's accepted contents identical to RimWorld's vanilla
+       nutrient-paste hopper: raw food only, excluding rough plant matter. -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="RR_Hopper"]/building/fixedStorageSettings</xpath>
+    <value>
+      <fixedStorageSettings>
+        <priority>Important</priority>
+        <filter>
+          <categories>
+            <li>FoodRaw</li>
+          </categories>
+          <specialFiltersToDisallow>
+            <li>AllowPlantFood</li>
+          </specialFiltersToDisallow>
+        </filter>
+      </fixedStorageSettings>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="RR_Hopper"]/building/defaultStorageSettings</xpath>
+    <value>
+      <defaultStorageSettings>
+        <priority>Important</priority>
+        <filter>
+          <categories>
+            <li>FoodRaw</li>
+          </categories>
+          <disallowedThingDefs>
+            <li>Meat_Human</li>
+            <li>Meat_Megaspider</li>
+            <li MayRequire="Ludeon.RimWorld.Anomaly">Meat_Twisted</li>
+          </disallowedThingDefs>
+        </filter>
+      </defaultStorageSettings>
+    </value>
   </Operation>
 
   <!-- The valve is a switch, so its Architect-menu icon should match the

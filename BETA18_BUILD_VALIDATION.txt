@@ -1,0 +1,29 @@
+RimRound Feed Other v1.0.69-beta.18 validation
+
+Primary source build:
+- Build succeeded
+- 0 warnings
+- 0 errors
+- Assembly version: 1.0.69.18
+
+Managed assembly validation:
+- Managed methods discovered: 1,156
+- Method bodies read successfully: 1,155
+- IL bytes read: 96,073
+- PostMealSocialUtility.TickRomanticHearts(Pawn, Pawn) present
+
+Feature source assertions:
+- Shared Meal emits hearts only from the paired-job leader
+- One-way and bedside post-meal phases emit hearts from their single controlling driver
+- Hearts require an active romantic-partner relation and alternate every 300 ticks
+- The completed food-conduit world graphic is transparent
+- Food-pipe blueprint graphic data is unchanged
+- Existing Food Network overlay logic remains present for placement and optional selection display
+
+Package validation:
+- Packaged source rebuilt successfully
+- Packaged source rebuild: 0 warnings, 0 errors
+- Rebuilt packaged assembly passed managed method-body validation
+- 16 XML files parsed successfully
+- ZIP integrity passed
+- Runtime/in-game testing is still required
