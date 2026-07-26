@@ -68,7 +68,7 @@
 
   <RR_FeedOtherSettingsPawnHeader>Pawn behaviour and abilities</RR_FeedOtherSettingsPawnHeader>
   <RR_FeedOtherSettingsIdleEating>Idle underweight eating</RR_FeedOtherSettingsIdleEating>
-  <RR_FeedOtherSettingsIdleEatingTip>Allows an eligible Neutral+ or higher pawn who dislikes being too thin to choose a normal policy-approved meal while idle.</RR_FeedOtherSettingsIdleEatingTip>
+  <RR_FeedOtherSettingsIdleEatingTip>Allows an eligible Neutral+ or higher pawn who dislikes being too thin to collect policy-approved food and eat it where it is collected. Food Network faucets dispense enough complete meals for the active Fullness/Hybrid target, or every complete meal currently available when the target cannot be met.</RR_FeedOtherSettingsIdleEatingTip>
   <RR_FeedOtherSettingsIdleTrigger>Idle-eating fullness trigger</RR_FeedOtherSettingsIdleTrigger>
   <RR_FeedOtherSettingsIdleTriggerTip>The pawn must be below this percentage of hard stomach capacity before the idle-eating timer runs.</RR_FeedOtherSettingsIdleTriggerTip>
   <RR_FeedOtherSettingsIdleMinDelay>Minimum idle-eating delay</RR_FeedOtherSettingsIdleMinDelay>

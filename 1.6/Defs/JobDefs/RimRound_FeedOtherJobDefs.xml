@@ -74,4 +74,14 @@
     <casualInterruptible>true</casualInterruptible>
     <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
   </JobDef>
+  <JobDef>
+    <defName>RR_IdleEatToFullness</defName>
+    <driverClass>RimWorld.JobDriver_Ingest</driverClass>
+    <reportString>eating to gain weight.</reportString>
+    <neverShowWeapon>true</neverShowWeapon>
+    <playerInterruptible>true</playerInterruptible>
+    <casualInterruptible>true</casualInterruptible>
+    <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+  </JobDef>
+
 </Defs>

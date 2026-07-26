@@ -309,10 +309,37 @@ namespace RimRound.FeedOther
             return TryDispenseMeals(faucet, eater, requestedMeals);
         }
 
+        public static Thing TryDispenseIdleMealsForPawn(
+            Building_FoodFaucet faucet,
+            Pawn eater)
+        {
+            int requestedMeals = RequestedIdleMealCountForPawn(
+                faucet,
+                eater);
+            return TryDispenseMealsInternal(
+                faucet,
+                eater,
+                requestedMeals,
+                int.MaxValue);
+        }
+
         public static Thing TryDispenseMeals(
             Building_FoodFaucet faucet,
             Pawn eater,
             int requestedMeals)
+        {
+            return TryDispenseMealsInternal(
+                faucet,
+                eater,
+                requestedMeals,
+                FoodNetworkV2Constants.MaximumDispenserMealsPerTrip);
+        }
+
+        private static Thing TryDispenseMealsInternal(
+            Building_FoodFaucet faucet,
+            Pawn eater,
+            int requestedMeals,
+            int maximumMealsPerTrip)
         {
             if (faucet == null || eater == null || requestedMeals <= 0 ||
                 !faucet.Spawned ||
@@ -330,11 +357,16 @@ namespace RimRound.FeedOther
             int completeMeals = Mathf.FloorToInt(
                 (network.StoredNutrition + FoodNetworkV2Constants.Epsilon) /
                 FoodNetworkV2Constants.DispenserMealNutrition);
+            int carrySpace = eater.carryTracker == null
+                ? 0
+                : eater.carryTracker.AvailableStackSpace(
+                    ThingDefOf.MealNutrientPaste);
             int mealCount = Mathf.Min(
                 requestedMeals,
                 completeMeals,
-                FoodNetworkV2Constants.MaximumDispenserMealsPerTrip,
-                Mathf.Max(1, ThingDefOf.MealNutrientPaste.stackLimit));
+                Mathf.Max(1, maximumMealsPerTrip),
+                Mathf.Max(1, ThingDefOf.MealNutrientPaste.stackLimit),
+                Mathf.Max(0, carrySpace));
             if (mealCount <= 0)
             {
                 return null;
@@ -415,6 +447,27 @@ namespace RimRound.FeedOther
             Building_FoodFaucet faucet,
             Pawn eater)
         {
+            return RequestedMealCountForPawn(
+                faucet,
+                eater,
+                FoodNetworkV2Constants.MaximumDispenserMealsPerTrip);
+        }
+
+        public static int RequestedIdleMealCountForPawn(
+            Building_FoodFaucet faucet,
+            Pawn eater)
+        {
+            return RequestedMealCountForPawn(
+                faucet,
+                eater,
+                int.MaxValue);
+        }
+
+        private static int RequestedMealCountForPawn(
+            Building_FoodFaucet faucet,
+            Pawn eater,
+            int maximumRequestedMeals)
+        {
             if (!CanDispenseForPawn(faucet, eater))
             {
                 return 0;
@@ -468,12 +521,14 @@ namespace RimRound.FeedOther
                 return 0;
             }
 
-            return Mathf.Clamp(
+            int requested = Mathf.Max(
+                1,
                 Mathf.CeilToInt(
                     (remaining - FoodNetworkV2Constants.Epsilon) /
-                    gainPerMeal),
-                1,
-                FoodNetworkV2Constants.MaximumDispenserMealsPerTrip);
+                    gainPerMeal));
+            return Mathf.Min(
+                requested,
+                Mathf.Max(1, maximumRequestedMeals));
         }
 
         internal static bool TryGetActiveSelfFeedingTarget(
@@ -498,7 +553,10 @@ namespace RimRound.FeedOther
                 (serving != null && serving.IsInitialized) ||
                 pawn.CurJob.GetTarget(TargetIndex.C).Thing is
                     Building_FoodFaucet;
-            if (!networkJob)
+            bool idleEatToFullness =
+                IdleUnderweightEatingPatch.IsIdleEatToFullnessJob(
+                    pawn.CurJob);
+            if (!networkJob && !idleEatToFullness)
             {
                 return false;
             }
@@ -1282,6 +1340,15 @@ namespace RimRound.FeedOther
             JobDriver_Ingest __instance,
             ref IEnumerable<Toil> __result)
         {
+            if (IdleUnderweightEatingPatch.IsIdleEatToFullnessJob(
+                __instance?.job))
+            {
+                __result =
+                    IdleUnderweightEatingPatch
+                        .MakeStandingIdleEatingToils(__instance);
+                return false;
+            }
+
             Building_FoodFaucet faucet =
                 __instance.job.GetTarget(TargetIndex.A).Thing as Building_FoodFaucet;
             if (faucet == null)

@@ -19,9 +19,9 @@ RimRound is a mod for RimWorld aimed at adding weight gain and FA content to the
   <li>Several tweaks to general game operation to work better with how pawns look when they are huge</li>
   <br>
   
-  <li>A feeding dispenser system which lets you liquify your food.</li>
+  <li>A configurable social feeding and food-network system for RimWorld 1.6, including shared meals, assisted feeding, liquid-food storage, dispensers and automatic bed feeders.</li>
   <ul>
-    <li>This feature is currently in testing! If you would like not to use it, remove the feeding tube .dll from your Assemblies folder.</li>
+    <li>Its gameplay options are available through the RimRound Patch settings tab. See FEED_OTHER_README.md for current behaviour and defaults.</li>
   </ul>
 </ul>
 

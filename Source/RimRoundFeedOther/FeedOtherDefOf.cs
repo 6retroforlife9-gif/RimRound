@@ -19,6 +19,7 @@ namespace RimRound.FeedOther
         public static JobDef RR_PrisonerMealDelivery;
         public static JobDef RR_FattenPrisonerBedLock;
         public static JobDef RR_BeFedOtherPartner;
+        public static JobDef RR_IdleEatToFullness;
         public static JoyKindDef RR_FeedOtherJoy;
         public static ThoughtDef RR_SharedFeeding;
         public static ThoughtDef RR_FeedOtherVeryFullMood;

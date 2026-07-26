@@ -1,4 +1,24 @@
 ==================================================
+Author: 6retroforlife9-gif
+Date: Sun Jul 26 2026
+
+RimRound 1.6 Feed Other and reliability update v1.0.69.22
+
+- Restrict autonomous underweight idle eating to player-faction humanlike colony
+  pawns. Visitors, quest guests, prisoners and enemies can no longer enter the
+  scheduled eat-to-fullness path through their idle or wander think nodes.
+- Preserve full initial feeding-stack collection, live per-meal target checks,
+  concentrated-food portion clamps and the one-nutrition maximum waste rule.
+- Integrate Food Network v2, diet-aware paste dispensing, bed-linked automatic
+  feeders, distillation, double-bed support and save-compatible network migration.
+- Integrate the repaired 3x3 single-person bed, corrected directional artwork,
+  hoverchair recovery, prisoner Maintain/Fatten handling, Gluttonium generation,
+  configurable feeding targets and post-meal social recreation.
+- Consolidate the patch documentation into one maintained feature guide and this
+  release entry. Remove temporary beta testing and source-diff files from the mod
+  root.
+
+==================================================
 Author: Niwatori401
 Date: Thu Jan 1 23:38:32 2026
 

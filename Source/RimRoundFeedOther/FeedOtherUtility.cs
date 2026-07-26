@@ -2155,8 +2155,53 @@ namespace RimRound.FeedOther
             }
 
             float nutritionPerUnit = FoodUtility.NutritionForEater(pawn, food);
-            int units = PlannedIngestUnitCount(pawn, food);
+
+            // RimWorld's PickupIngestible toil consults NutritionWanted while the
+            // source stack is still spawned. Return the complete reserved
+            // collection allocation at that stage so a pawn can pick up all meals
+            // needed for the session in one trip. Once the food is carried, return
+            // only the live per-round portion so prepared meals are still consumed
+            // one complete serving at a time and the target is rechecked after
+            // every meal.
+            int pickupUnits = SessionPickupUnitCount(pawn, food);
+            int units = pickupUnits > 0
+                ? pickupUnits
+                : PlannedIngestUnitCount(pawn, food);
             return Mathf.Max(0f, nutritionPerUnit * units);
+        }
+
+        private static int SessionPickupUnitCount(Pawn eater, Thing food)
+        {
+            if (eater == null || food == null || !food.Spawned ||
+                food.stackCount <= 0)
+            {
+                return 0;
+            }
+
+            Job ownJob = eater.CurJob;
+            if (IsFeedOtherEatingJob(eater.CurJobDef) &&
+                ownJob != null && ownJob.targetA.Thing == food)
+            {
+                return Mathf.Min(food.stackCount, Mathf.Max(0, ownJob.count));
+            }
+
+            Pawn feeder;
+            JobDriver caregiverDriver;
+            if (TryGetCaregiverFeedingDriver(
+                    eater,
+                    out feeder,
+                    out caregiverDriver))
+            {
+                Job caregiverJob = feeder?.CurJob;
+                if (caregiverJob != null && caregiverJob.targetA.Thing == food)
+                {
+                    return Mathf.Min(
+                        food.stackCount,
+                        Mathf.Max(0, caregiverJob.count));
+                }
+            }
+
+            return 0;
         }
 
         public static bool IsLeaderJobFor(Pawn possibleLeader, Pawn partner)
