@@ -1,40 +1,41 @@
-<!-- ======================= Yak =============================== -->
-
+<?xml version='1.0' encoding='utf-8'?>
 <Defs>
-	<ThingDef ParentName="OrganicProductBase">
-		<defName>SG_CaloyakMeat</defName>
-		<label>caloyak meat</label>
-		<description>Meat from a caloyak. Heavily enriched with calorite.</description>
-		<graphicData>
-      		<texPath>Things/Products/CaloyakMeat</texPath>
-      		<graphicClass>Graphic_StackCount</graphicClass>
-    	</graphicData>
-		<socialPropernessMatters>true</socialPropernessMatters>
-		<statBases>
-			<MarketValue>1.9</MarketValue> <!-- Can be used like meat in recipes -->
-			<Mass>0.045</Mass>
-			<MaxHitPoints>50</MaxHitPoints>
-			<Flammability>0.2</Flammability>
-			<Nutrition>0.5</Nutrition>
-			<FoodPoisonChanceFixedHuman>0.02</FoodPoisonChanceFixedHuman>
-		</statBases>
-		<comps>
-		<li Class="CompProperties_Rottable">
-			<daysToRotStart>2</daysToRotStart>
-			<rotDestroys>true</rotDestroys>
-		</li>
-		</comps>
-		<ingestible>
-			<preferability>RawBad</preferability>
-			<foodType>AnimalProduct, Meat</foodType>
-			<babiesCanIngest>false</babiesCanIngest>
-		</ingestible>
-		<thingCategories>
-			<li>CaloriteIngredients</li>
-			<li>MeatRaw</li>
-		</thingCategories>
-		<allowedArchonexusCount>80</allowedArchonexusCount>
-	</ThingDef>
+  <ThingDef ParentName="OrganicProductBase">
+    <defName>SG_CaloyakMeat</defName>
+    <label>caloyak meat</label>
+    <description>Calorite-rich meat from a caloyak. Each unit supplies 0.1 nutrition. Retains animal-meat identity in specialist recipes.</description>
+    <graphicData>
+      <texPath>Things/Products/CaloyakMeat</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <statBases>
+      <MarketValue>2.8</MarketValue>
+      <!-- Can be used like meat in recipes -->
+      <Mass>0.045</Mass>
+      <MaxHitPoints>50</MaxHitPoints>
+      <Flammability>0.2</Flammability>
+      <Nutrition>0.1</Nutrition>
+      <FoodPoisonChanceFixedHuman>0.02</FoodPoisonChanceFixedHuman>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>2</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+      <li Class="CompProperties_Ingredients" />
+    </comps>
+    <ingestible>
+      <preferability>RawBad</preferability>
+      <foodType>AnimalProduct, Meat</foodType>
+      <babiesCanIngest>false</babiesCanIngest>
+    </ingestible>
+    <thingCategories>
+      <li>CaloriteIngredients</li>
+      <li>MeatRaw</li>
+    </thingCategories>
+    <allowedArchonexusCount>80</allowedArchonexusCount>
+  </ThingDef>
   <ThingDef ParentName="AnimalThingBase">
     <defName>SG_Caloyak</defName>
     <label>caloyak</label>
@@ -45,7 +46,7 @@
       <ComfyTemperatureMin>-45</ComfyTemperatureMin>
       <MarketValue>320</MarketValue>
       <FilthRate>16</FilthRate>
-	  <Wildness>0.20</Wildness>
+      <Wildness>0.20</Wildness>
     </statBases>
     <uiIconScale>1.15</uiIconScale>
     <comps>
@@ -148,7 +149,6 @@
       </li>
     </tools>
   </ThingDef>
-
   <PawnKindDef ParentName="AnimalKindBase">
     <defName>SG_Caloyak</defName>
     <label>caloyak</label>

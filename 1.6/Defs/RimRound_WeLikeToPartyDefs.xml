@@ -59,7 +59,9 @@
   <ThingDef ParentName="FurnitureWithQualityBase">
     <defName>WLTP_Building</defName>
     <label>blob</label>
-    <description>A soft, squishy individual ready to be handled. Trains dexterity play.</description>
+    <description>Legacy only. A pawn-bound dexterity recreation station maintained while its originating pawn remains alive, above the blob threshold and in a bed with an active We Like To Party purchase. Ending the transformation preserves body mass.</description>
+    <thingClass>RimRound.Things.Building_BlobRecreation</thingClass>
+    <tickerType>Normal</tickerType>
     <graphicData>
       <texPath>BlankTexture</texPath>
       <graphicClass>Graphic_Multi</graphicClass>

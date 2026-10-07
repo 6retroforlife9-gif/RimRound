@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-
-<Defs>
-	<ImpactSoundTypeDef>
-		<defName>RR_GunHit</defName>
-		<playOnlyIfHitPawn>false</playOnlyIfHitPawn>
-		<soundDef>RR_GunHitSound</soundDef>
-	</ImpactSoundTypeDef>
-</Defs>

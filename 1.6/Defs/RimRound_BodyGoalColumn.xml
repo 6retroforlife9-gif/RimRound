@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <PawnColumnDef>
+    <defName>RR_BodyGoal</defName>
+    <label>body goal</label>
+    <workerClass>RimRound.UI.PawnColumnWorker_BodyGoal</workerClass>
+    <sortable>true</sortable>
+  </PawnColumnDef>
+</Defs>

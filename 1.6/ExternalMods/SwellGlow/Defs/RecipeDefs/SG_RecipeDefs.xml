@@ -1,90 +1,134 @@
+<?xml version='1.0' encoding='utf-8'?>
 <Defs>
-    <ThingCategoryDef>
-        <defName>CaloriteIngredients</defName>
-        <label>calorite enriched</label>
-        <parent>FoodRaw</parent> <!-- or FoodRaw, or another category -->
-    </ThingCategoryDef>
-
-    <RecipeDef>
-        <defName>SG_MakeCalomilk</defName>
-        <label>make Calomilk</label>
-        <description>Make your own calomilk</description>
-        <jobString>Making Calomilk.</jobString>
-        <workAmount>300</workAmount> <!-- Reference: Simple Meal -->
-        <workSpeedStat>CookSpeed</workSpeedStat>
-        <workSkill>Cooking</workSkill>
-        <effectWorking>Cook</effectWorking>
-        <soundWorking>Recipe_CookMeal</soundWorking>
-        <allowMixingIngredients>true</allowMixingIngredients>
-        <targetCountAdjustment>1</targetCountAdjustment>
-        <recipeUsers>
-            <li>FueledStove</li>
-            <li>ElectricStove</li>
-        </recipeUsers>
-        <ingredients>
-            <li>
-                <filter>
-                    <thingDefs>
-                        <li>Milk</li>
-                    </thingDefs>
-                </filter>
-                <count>1</count>
-            </li>
-            <li> 
-                <filter>
-                    <thingDefs>
-                        <li>RR_Gluttonium</li>
-                    </thingDefs>
-                </filter>
-                <count>1</count>
-            </li>
-        </ingredients>
-        <products>
-            <SG_Calomilk>1</SG_Calomilk>
-        </products>
-        <skillRequirements>
-            <Cooking>3</Cooking>
-        </skillRequirements>
-    </RecipeDef>
-    <RecipeDef>
-        <defName>SG_MakeCaloyakMeat</defName>
-        <label>make caloyak meat</label>
-        <description>Make your own caloyak meat</description>
-        <jobString>Making Caloyak Meat.</jobString>
-        <workAmount>300</workAmount> <!-- Reference: Simple Meal -->
-        <workSpeedStat>CookSpeed</workSpeedStat>
-        <workSkill>Cooking</workSkill>
-        <effectWorking>Cook</effectWorking>
-        <soundWorking>Recipe_CookMeal</soundWorking>
-        <allowMixingIngredients>true</allowMixingIngredients>
-        <targetCountAdjustment>1</targetCountAdjustment>
-        <recipeUsers>
-            <li>FueledStove</li>
-            <li>ElectricStove</li>
-        </recipeUsers>
-        <ingredients>
-            <li>
-                <filter>
-                    <categories>
-						<li>MeatRaw</li>
-                    </categories>
-                </filter>
-                <count>1</count>
-            </li>
-            <li> 
-                <filter>
-                    <thingDefs>
-                        <li>RR_Gluttonium</li>
-                    </thingDefs>
-                </filter>
-                <count>1</count>
-            </li>
-        </ingredients>
-        <products>
-            <SG_CaloyakMeat>1</SG_CaloyakMeat>
-        </products>
-        <skillRequirements>
-            <Cooking>3</Cooking>
-        </skillRequirements>
-    </RecipeDef>
+  <ThingCategoryDef>
+    <defName>CaloriteIngredients</defName>
+    <label>calorite enriched</label>
+    <parent>FoodRaw</parent>
+    <!-- or FoodRaw, or another category -->
+  </ThingCategoryDef>
+  <RecipeDef>
+    <defName>SG_MakeCalomilk</defName>
+    <label>enrich milk x20</label>
+    <description>Enrich 20 units of milk with one gluttonium to produce 20 units of calorite milk.</description>
+    <jobString>Making Calomilk.</jobString>
+    <workAmount>1000</workAmount>
+    <!-- Reference: Simple Meal -->
+    <workSpeedStat>CookSpeed</workSpeedStat>
+    <workSkill>Cooking</workSkill>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <targetCountAdjustment>1</targetCountAdjustment>
+    <recipeUsers>
+      <li>FueledStove</li>
+      <li>ElectricStove</li>
+    </recipeUsers>
+    <products>
+      <SG_Calomilk>20</SG_Calomilk>
+    </products>
+    <skillRequirements>
+      <Cooking>3</Cooking>
+    </skillRequirements>
+    <ingredients Inherit="False">
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Milk</li>
+          </thingDefs>
+        </filter>
+        <count>20</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>RR_Gluttonium</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter Inherit="False">
+      <thingDefs>
+        <li>Milk</li>
+        <li>RR_Gluttonium</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <defaultIngredientFilter Inherit="False">
+      <thingDefs>
+        <li>Milk</li>
+        <li>RR_Gluttonium</li>
+      </thingDefs>
+    </defaultIngredientFilter>
+    <researchPrerequisite>RR_Research_Glutonium</researchPrerequisite>
+    <ingredientValueGetterClass>IngredientValueGetter_Volume</ingredientValueGetterClass>
+  </RecipeDef>
+  <RecipeDef>
+    <defName>SG_MakeCaloyakMeat</defName>
+    <label>enrich raw meat x20</label>
+    <description>Enrich 20 units of ordinary raw meat with one gluttonium to produce 20 units of calorite meat. Already enriched meat cannot be used as the input.</description>
+    <jobString>Making Caloyak Meat.</jobString>
+    <workAmount>1000</workAmount>
+    <!-- Reference: Simple Meal -->
+    <workSpeedStat>CookSpeed</workSpeedStat>
+    <workSkill>Cooking</workSkill>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <targetCountAdjustment>1</targetCountAdjustment>
+    <recipeUsers>
+      <li>FueledStove</li>
+      <li>ElectricStove</li>
+    </recipeUsers>
+    <products>
+      <SG_CaloyakMeat>20</SG_CaloyakMeat>
+    </products>
+    <skillRequirements>
+      <Cooking>3</Cooking>
+    </skillRequirements>
+    <ingredients Inherit="False">
+      <li>
+        <filter>
+          <categories>
+            <li>MeatRaw</li>
+          </categories>
+          <disallowedThingDefs>
+            <li>SG_CaloyakMeat</li>
+          </disallowedThingDefs>
+        </filter>
+        <count>20</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>RR_Gluttonium</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter Inherit="False">
+      <thingDefs>
+        <li>RR_Gluttonium</li>
+      </thingDefs>
+      <categories>
+        <li>MeatRaw</li>
+      </categories>
+      <disallowedThingDefs>
+        <li>SG_CaloyakMeat</li>
+      </disallowedThingDefs>
+    </fixedIngredientFilter>
+    <defaultIngredientFilter Inherit="False">
+      <thingDefs>
+        <li>RR_Gluttonium</li>
+      </thingDefs>
+      <categories>
+        <li>MeatRaw</li>
+      </categories>
+      <disallowedThingDefs>
+        <li>SG_CaloyakMeat</li>
+      </disallowedThingDefs>
+    </defaultIngredientFilter>
+    <researchPrerequisite>RR_Research_Glutonium</researchPrerequisite>
+    <ingredientValueGetterClass>IngredientValueGetter_Volume</ingredientValueGetterClass>
+  </RecipeDef>
 </Defs>

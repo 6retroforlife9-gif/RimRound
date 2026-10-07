@@ -1,0 +1,185 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Patch>
+  <Operation Class="PatchOperationSequence">
+    <operations>
+      <li Class="PatchOperationConditional">
+        <xpath>/Defs/ThingDef[defName='MealFineLarge' or defName='MealFineLargeVeg' or defName='MealFineLargeNonVeg' or defName='MealFineHuge' or defName='MealFineHugeVeg' or defName='MealFineHugeNonVeg' or defName='MealFineEnormous' or defName='MealFineEnormousVeg' or defName='MealFineEnormousNonVeg' or defName='MealFineMassive' or defName='MealFineMassiveVeg' or defName='MealFineMassiveNonVeg' or defName='MealFineColossal' or defName='MealFineColossalVeg' or defName='MealFineColossalNonVeg' or defName='MealLavishLarge' or defName='MealLavishHuge' or defName='MealLavishEnormous' or defName='MealLavishMassive' or defName='MealLavishColossal' or defName='MealLavishLargeNonMeat' or defName='MealLavishHugeNonMeat' or defName='MealLavishEnormousNonMeat' or defName='MealLavishMassiveNonMeat' or defName='MealLavishColossalNonMeat' or defName='MealLavishLargeMeat' or defName='MealLavishHugeMeat' or defName='MealLavishEnormousMeat' or defName='MealLavishMassiveMeat' or defName='MealLavishColossalMeat' or defName='RR_NetworkMealLarge' or defName='RR_NetworkMealHuge' or defName='RR_NetworkMealEnormous' or defName='RR_NetworkMealMassive' or defName='RR_NetworkMealColossal' or defName='MealSimpleLarge' or defName='MealSimpleHuge' or defName='MealSimpleEnormous' or defName='MealSimpleMassive' or defName='MealSimpleColossal']/thingCategories</xpath>
+        <match Class="PatchOperationRemove">
+          <xpath>/Defs/ThingDef[defName='MealFineLarge' or defName='MealFineLargeVeg' or defName='MealFineLargeNonVeg' or defName='MealFineHuge' or defName='MealFineHugeVeg' or defName='MealFineHugeNonVeg' or defName='MealFineEnormous' or defName='MealFineEnormousVeg' or defName='MealFineEnormousNonVeg' or defName='MealFineMassive' or defName='MealFineMassiveVeg' or defName='MealFineMassiveNonVeg' or defName='MealFineColossal' or defName='MealFineColossalVeg' or defName='MealFineColossalNonVeg' or defName='MealLavishLarge' or defName='MealLavishHuge' or defName='MealLavishEnormous' or defName='MealLavishMassive' or defName='MealLavishColossal' or defName='MealLavishLargeNonMeat' or defName='MealLavishHugeNonMeat' or defName='MealLavishEnormousNonMeat' or defName='MealLavishMassiveNonMeat' or defName='MealLavishColossalNonMeat' or defName='MealLavishLargeMeat' or defName='MealLavishHugeMeat' or defName='MealLavishEnormousMeat' or defName='MealLavishMassiveMeat' or defName='MealLavishColossalMeat' or defName='RR_NetworkMealLarge' or defName='RR_NetworkMealHuge' or defName='RR_NetworkMealEnormous' or defName='RR_NetworkMealMassive' or defName='RR_NetworkMealColossal' or defName='MealSimpleLarge' or defName='MealSimpleHuge' or defName='MealSimpleEnormous' or defName='MealSimpleMassive' or defName='MealSimpleColossal']/thingCategories</xpath>
+        </match>
+      </li>
+      <li Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName='MealFineLarge' or defName='MealFineLargeVeg' or defName='MealFineLargeNonVeg' or defName='MealFineHuge' or defName='MealFineHugeVeg' or defName='MealFineHugeNonVeg' or defName='MealFineEnormous' or defName='MealFineEnormousVeg' or defName='MealFineEnormousNonVeg' or defName='MealFineMassive' or defName='MealFineMassiveVeg' or defName='MealFineMassiveNonVeg' or defName='MealFineColossal' or defName='MealFineColossalVeg' or defName='MealFineColossalNonVeg' or defName='MealLavishLarge' or defName='MealLavishHuge' or defName='MealLavishEnormous' or defName='MealLavishMassive' or defName='MealLavishColossal' or defName='MealLavishLargeNonMeat' or defName='MealLavishHugeNonMeat' or defName='MealLavishEnormousNonMeat' or defName='MealLavishMassiveNonMeat' or defName='MealLavishColossalNonMeat' or defName='MealLavishLargeMeat' or defName='MealLavishHugeMeat' or defName='MealLavishEnormousMeat' or defName='MealLavishMassiveMeat' or defName='MealLavishColossalMeat' or defName='RR_NetworkMealLarge' or defName='RR_NetworkMealHuge' or defName='RR_NetworkMealEnormous' or defName='RR_NetworkMealMassive' or defName='RR_NetworkMealColossal' or defName='MealSimpleLarge' or defName='MealSimpleHuge' or defName='MealSimpleEnormous' or defName='MealSimpleMassive' or defName='MealSimpleColossal']</xpath>
+        <value>
+          <thingCategories Inherit="False">
+            <li>RR_OrdinaryMeals</li>
+          </thingCategories>
+        </value>
+      </li>
+    </operations>
+  </Operation>
+  <Operation Class="PatchOperationSequence">
+    <operations>
+      <li Class="PatchOperationConditional">
+        <xpath>/Defs/ThingDef[defName='FatBurger' or defName='Donut' or defName='RR_CrammedCroissant' or defName='RR_MechaniteMuffin' or defName='RR_PackedPizza']/thingCategories</xpath>
+        <match Class="PatchOperationRemove">
+          <xpath>/Defs/ThingDef[defName='FatBurger' or defName='Donut' or defName='RR_CrammedCroissant' or defName='RR_MechaniteMuffin' or defName='RR_PackedPizza']/thingCategories</xpath>
+        </match>
+      </li>
+      <li Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName='FatBurger' or defName='Donut' or defName='RR_CrammedCroissant' or defName='RR_MechaniteMuffin' or defName='RR_PackedPizza']</xpath>
+        <value>
+          <thingCategories Inherit="False">
+            <li>RR_EnrichedFoods</li>
+          </thingCategories>
+        </value>
+      </li>
+    </operations>
+  </Operation>
+  <Operation Class="PatchOperationSequence">
+    <operations>
+      <li Class="PatchOperationConditional">
+        <xpath>/Defs/ThingDef[defName='RR_LaBombe' or defName='RR_AlphaBall' or defName='RR_OmegaBall' or defName='RR_GluttoniumMeal' or defName='RR_GluttoniumMealLarge' or defName='RR_GluttoniumMealHuge' or defName='RR_GluttoniumMealEnormous' or defName='RR_GluttoniumMealMassive' or defName='RR_GluttoniumMealColossal']/thingCategories</xpath>
+        <match Class="PatchOperationRemove">
+          <xpath>/Defs/ThingDef[defName='RR_LaBombe' or defName='RR_AlphaBall' or defName='RR_OmegaBall' or defName='RR_GluttoniumMeal' or defName='RR_GluttoniumMealLarge' or defName='RR_GluttoniumMealHuge' or defName='RR_GluttoniumMealEnormous' or defName='RR_GluttoniumMealMassive' or defName='RR_GluttoniumMealColossal']/thingCategories</xpath>
+        </match>
+      </li>
+      <li Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName='RR_LaBombe' or defName='RR_AlphaBall' or defName='RR_OmegaBall' or defName='RR_GluttoniumMeal' or defName='RR_GluttoniumMealLarge' or defName='RR_GluttoniumMealHuge' or defName='RR_GluttoniumMealEnormous' or defName='RR_GluttoniumMealMassive' or defName='RR_GluttoniumMealColossal']</xpath>
+        <value>
+          <thingCategories Inherit="False">
+            <li>RR_ExceptionalFoods</li>
+          </thingCategories>
+        </value>
+      </li>
+    </operations>
+  </Operation>
+  <Operation Class="PatchOperationSequence">
+    <operations>
+      <li Class="PatchOperationConditional">
+        <xpath>/Defs/ThingDef[defName='fatpill' or defName='cakeFat' or defName='swellGlowOriginal' or defName='swellGlowPlus']/thingCategories</xpath>
+        <match Class="PatchOperationRemove">
+          <xpath>/Defs/ThingDef[defName='fatpill' or defName='cakeFat' or defName='swellGlowOriginal' or defName='swellGlowPlus']/thingCategories</xpath>
+        </match>
+      </li>
+      <li Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName='fatpill' or defName='cakeFat' or defName='swellGlowOriginal' or defName='swellGlowPlus']</xpath>
+        <value>
+          <thingCategories Inherit="False">
+            <li>RR_MetabolicDrugs</li>
+          </thingCategories>
+        </value>
+      </li>
+    </operations>
+  </Operation>
+  <Operation Class="PatchOperationSequence">
+    <operations>
+      <li Class="PatchOperationConditional">
+        <xpath>/Defs/ThingDef[defName='swellGlowX' or defName='swellGlowMAX']/thingCategories</xpath>
+        <match Class="PatchOperationRemove">
+          <xpath>/Defs/ThingDef[defName='swellGlowX' or defName='swellGlowMAX']/thingCategories</xpath>
+        </match>
+      </li>
+      <li Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName='swellGlowX' or defName='swellGlowMAX']</xpath>
+        <value>
+          <thingCategories Inherit="False">
+            <li>RR_ExceptionalDrugs</li>
+          </thingCategories>
+        </value>
+      </li>
+    </operations>
+  </Operation>
+  <Operation Class="PatchOperationSequence">
+    <operations>
+      <li Class="PatchOperationConditional">
+        <xpath>/Defs/ThingDef[defName='RR_Gluttonium']/thingCategories</xpath>
+        <match Class="PatchOperationRemove">
+          <xpath>/Defs/ThingDef[defName='RR_Gluttonium']/thingCategories</xpath>
+        </match>
+      </li>
+      <li Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName='RR_Gluttonium']</xpath>
+        <value>
+          <thingCategories Inherit="False">
+            <li>RR_SpecialistMaterials</li>
+          </thingCategories>
+        </value>
+      </li>
+    </operations>
+  </Operation>
+  <Operation Class="PatchOperationSequence">
+    <operations>
+      <li Class="PatchOperationConditional">
+        <xpath>/Defs/ThingDef[defName='SG_Calomilk']/thingCategories</xpath>
+        <match Class="PatchOperationRemove">
+          <xpath>/Defs/ThingDef[defName='SG_Calomilk']/thingCategories</xpath>
+        </match>
+      </li>
+      <li Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName='SG_Calomilk']</xpath>
+        <value>
+          <thingCategories Inherit="False">
+            <li>RR_EnrichedAnimalProducts</li>
+            <li>CaloriteIngredients</li>
+          </thingCategories>
+        </value>
+      </li>
+    </operations>
+  </Operation>
+  <Operation Class="PatchOperationSequence">
+    <operations>
+      <li Class="PatchOperationConditional">
+        <xpath>/Defs/ThingDef[defName='SG_CaloyakMeat']/thingCategories</xpath>
+        <match Class="PatchOperationRemove">
+          <xpath>/Defs/ThingDef[defName='SG_CaloyakMeat']/thingCategories</xpath>
+        </match>
+      </li>
+      <li Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName='SG_CaloyakMeat']</xpath>
+        <value>
+          <thingCategories Inherit="False">
+            <li>RR_EnrichedMeat</li>
+            <li>CaloriteIngredients</li>
+          </thingCategories>
+        </value>
+      </li>
+    </operations>
+  </Operation>
+  <Operation Class="PatchOperationSequence">
+    <operations>
+      <li Class="PatchOperationConditional">
+        <xpath>/Defs/ThingDef[defName='RimRound_NovaTechApparel_Jumpsuit' or defName='RimRound_NovaTechApparel_Belt' or defName='RimRound_NovaTechApparel_ProtoSuit' or defName='RimRound_NovaTechApparel_Gloves' or defName='RimRound_NovaTechApparel_Collar' or defName='RimRound_NovaTechApparel_Hyperbelt']/thingCategories</xpath>
+        <match Class="PatchOperationRemove">
+          <xpath>/Defs/ThingDef[defName='RimRound_NovaTechApparel_Jumpsuit' or defName='RimRound_NovaTechApparel_Belt' or defName='RimRound_NovaTechApparel_ProtoSuit' or defName='RimRound_NovaTechApparel_Gloves' or defName='RimRound_NovaTechApparel_Collar' or defName='RimRound_NovaTechApparel_Hyperbelt']/thingCategories</xpath>
+        </match>
+      </li>
+      <li Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName='RimRound_NovaTechApparel_Jumpsuit' or defName='RimRound_NovaTechApparel_Belt' or defName='RimRound_NovaTechApparel_ProtoSuit' or defName='RimRound_NovaTechApparel_Gloves' or defName='RimRound_NovaTechApparel_Collar' or defName='RimRound_NovaTechApparel_Hyperbelt']</xpath>
+        <value>
+          <thingCategories Inherit="False">
+            <li>RR_SupportApparel</li>
+          </thingCategories>
+        </value>
+      </li>
+    </operations>
+  </Operation>
+  <Operation Class="PatchOperationSequence">
+    <operations>
+      <li Class="PatchOperationConditional">
+        <xpath>/Defs/ThingDef[defName='RR_HoverChair' or defName='RR_HoverChairArm']/thingCategories</xpath>
+        <match Class="PatchOperationRemove">
+          <xpath>/Defs/ThingDef[defName='RR_HoverChair' or defName='RR_HoverChairArm']/thingCategories</xpath>
+        </match>
+      </li>
+      <li Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName='RR_HoverChair' or defName='RR_HoverChairArm']</xpath>
+        <value>
+          <thingCategories Inherit="False">
+            <li>RR_MobilityAids</li>
+          </thingCategories>
+        </value>
+      </li>
+    </operations>
+  </Operation>
+</Patch>

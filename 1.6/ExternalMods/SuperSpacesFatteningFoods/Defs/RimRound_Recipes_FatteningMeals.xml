@@ -1,170 +1,227 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version='1.0' encoding='utf-8'?>
 <Defs>
-	<!--Simple Meal Derivatives-->
-
-	<RecipeDef Name="FatMealBase" Abstract="True">
-		<fixedIngredientFilter>
-			<categories>
-				<li>FoodRaw</li>
-			</categories>
-			<specialFiltersToDisallow>
-				<li>AllowPlantFood</li>
-			</specialFiltersToDisallow>
-		</fixedIngredientFilter>
-		<defaultIngredientFilter>
-			<categories>
-				<li>FoodRaw</li>
-			</categories>
-			<disallowedCategories>
-				<li>EggsFertilized</li>
-			</disallowedCategories>
-			<disallowedThingDefs>
-				<li>Meat_Human</li>
-				<li>Meat_Megaspider</li>
-				<li>InsectJelly</li>
-				<li>RawBerries</li>
-			</disallowedThingDefs>
-		</defaultIngredientFilter>
-		<workSkill>Cooking</workSkill>
-		<workSpeedStat>CookSpeed</workSpeedStat>
-		<effectWorking>Cook</effectWorking>
-		<soundWorking>Recipe_CookMeal</soundWorking>
-		<allowMixingIngredients>true</allowMixingIngredients>
-		<ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
-		<skillRequirements>
-			<Cooking>6</Cooking>
-		</skillRequirements>
-		<recipeUsers>
-			<li>ElectricStove</li>
-			<li>FueledStove</li>
-		</recipeUsers>
-	</RecipeDef>
-	<RecipeDef Name="FatSweetMealBase" Abstract="True">
-		<fixedIngredientFilter>
-			<categories>
-				<li>FoodRaw</li>
-			</categories>
-			<specialFiltersToDisallow>
-				<li>AllowPlantFood</li>
-			</specialFiltersToDisallow>
-		</fixedIngredientFilter>
-		<defaultIngredientFilter>
-			<categories>
-				<li>FoodRaw</li>
-			</categories>
-			<disallowedCategories>
-				<li>EggsFertilized</li>
-			</disallowedCategories>
-			<disallowedThingDefs>
-				<li>Meat_Human</li>
-				<li>Meat_Megaspider</li>
-				<li>InsectJelly</li>
-			</disallowedThingDefs>
-		</defaultIngredientFilter>
-		<workSkill>Cooking</workSkill>
-		<workSpeedStat>CookSpeed</workSpeedStat>
-		<effectWorking>Cook</effectWorking>
-		<soundWorking>Recipe_CookMeal</soundWorking>
-		<allowMixingIngredients>true</allowMixingIngredients>
-		<ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
-		<skillRequirements>
-			<Cooking>6</Cooking>
-		</skillRequirements>
-		<recipeUsers>
-			<li>ElectricStove</li>
-			<li>FueledStove</li>
-		</recipeUsers>
-	</RecipeDef>
-	<!-- Start of the Actual Recipes -->
-	<RecipeDef ParentName="FatMealBase">
-		<defName>CookFatBurger</defName>
-		<label>cook a Big Ol' Burger</label>
-		<description>Cook a very large and very fattening burger from any farmed plant (except strawberries) and animal products. Needs caloyak meat.</description>
-		<jobString>Cooking Lard Filled Burger.</jobString>
-
-		<ingredients>
-			<li>
-				<filter>
-					<categories>
-						<li>MeatRaw</li>
-						<li>AnimalProductRaw</li>
-					</categories>
-				</filter>
-				<count>1</count>
-			</li>
-			<li>
-				<filter>
-					<thingDefs>
-						<li>RR_Gluttonium</li>
-					</thingDefs>
-				</filter>
-				<count>3</count>
-			</li>
-			<li>
-				<filter>
-					<categories>
-						<li>PlantFoodRaw</li>
-					</categories>
-				</filter>
-				<count>.50</count>
-			</li>
-		</ingredients>
-		<products>
-			<FatBurger>1</FatBurger>
-		</products>
-	</RecipeDef>
-	<RecipeDef ParentName="FatSweetMealBase">
-		<defName>CookDonut</defName>
-		<label>cook a nice Donut</label>
-		<description>Cook a nice yummy donut from any farmed plant. Needs caloyak milk.</description>
-		<jobString>Cooking Donut.</jobString>
-		<ingredients>
-			<li>
-				<filter>
-					<categories>
-						<li>PlantFoodRaw</li>
-					</categories>
-				</filter>
-				<count>.25</count>
-			</li>
-			<li>
-				<filter>
-					<thingDefs>
-						<li>RR_Gluttonium</li>
-					</thingDefs>
-				</filter>
-				<count>1</count>
-			</li>
-		</ingredients>
-		<products>
-			<Donut>1</Donut>
-		</products>
-	</RecipeDef>
-	<RecipeDef ParentName="FatSweetMealBase">
-		<defName>CookCake</defName>
-		<label>cook a "Cannot-Stop" Cake</label>
-		<description>Cook a big fat filled slice of "Cannot-Stop" Cake, a totally not addicting baked good!  Needs caloyak milk.</description>
-		<jobString>Cooking Donut.</jobString>
-		<ingredients>
-			<li>
-				<filter>
-					<categories>
-						<li>PlantFoodRaw</li>
-					</categories>
-				</filter>
-				<count>1</count>
-			</li>
-			<li>
-				<filter>
-					<thingDefs>
-						<li>RR_Gluttonium</li>
-					</thingDefs>
-				</filter>
-				<count>5</count>
-			</li>
-		</ingredients>
-		<products>
-			<cakeFat>1</cakeFat>
-		</products>
-	</RecipeDef>
+  <!--Simple Meal Derivatives-->
+  <RecipeDef Name="FatMealBase" Abstract="True">
+    <fixedIngredientFilter>
+      <categories>
+        <li>FoodRaw</li>
+      </categories>
+      <specialFiltersToDisallow>
+        <li>AllowPlantFood</li>
+      </specialFiltersToDisallow>
+    </fixedIngredientFilter>
+    <defaultIngredientFilter>
+      <categories>
+        <li>FoodRaw</li>
+      </categories>
+      <disallowedCategories>
+        <li>EggsFertilized</li>
+      </disallowedCategories>
+      <disallowedThingDefs>
+        <li>Meat_Human</li>
+        <li>Meat_Megaspider</li>
+        <li>InsectJelly</li>
+        <li>RawBerries</li>
+      </disallowedThingDefs>
+    </defaultIngredientFilter>
+    <workSkill>Cooking</workSkill>
+    <workSpeedStat>CookSpeed</workSpeedStat>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
+    <skillRequirements>
+      <Cooking>6</Cooking>
+    </skillRequirements>
+    <recipeUsers>
+      <li>ElectricStove</li>
+      <li>FueledStove</li>
+    </recipeUsers>
+  </RecipeDef>
+  <RecipeDef Name="FatSweetMealBase" Abstract="True">
+    <fixedIngredientFilter>
+      <categories>
+        <li>FoodRaw</li>
+      </categories>
+      <specialFiltersToDisallow>
+        <li>AllowPlantFood</li>
+      </specialFiltersToDisallow>
+    </fixedIngredientFilter>
+    <defaultIngredientFilter>
+      <categories>
+        <li>FoodRaw</li>
+      </categories>
+      <disallowedCategories>
+        <li>EggsFertilized</li>
+      </disallowedCategories>
+      <disallowedThingDefs>
+        <li>Meat_Human</li>
+        <li>Meat_Megaspider</li>
+        <li>InsectJelly</li>
+      </disallowedThingDefs>
+    </defaultIngredientFilter>
+    <workSkill>Cooking</workSkill>
+    <workSpeedStat>CookSpeed</workSpeedStat>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
+    <skillRequirements>
+      <Cooking>6</Cooking>
+    </skillRequirements>
+    <recipeUsers>
+      <li>ElectricStove</li>
+      <li>FueledStove</li>
+    </recipeUsers>
+  </RecipeDef>
+  <!-- Start of the Actual Recipes -->
+  <RecipeDef ParentName="FatMealBase">
+    <defName>CookFatBurger</defName>
+    <label>cook a Big Ol' Burger</label>
+    <description>Cook an enriched food using the stated nutrition of ordinary ingredients and the named calorite product. Cooking retains 90% of ingredient energy.</description>
+    <jobString>Cooking Lard Filled Burger.</jobString>
+    <products>
+      <FatBurger>1</FatBurger>
+    </products>
+    <ingredients Inherit="False">
+      <li>
+        <filter>
+          <categories>
+            <li>MeatRaw</li>
+            <li>AnimalProductRaw</li>
+          </categories>
+          <disallowedThingDefs>
+            <li>SG_Calomilk</li>
+            <li>SG_CaloyakMeat</li>
+          </disallowedThingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SG_CaloyakMeat</li>
+          </thingDefs>
+        </filter>
+        <count>3</count>
+      </li>
+      <li>
+        <filter>
+          <categories>
+            <li>PlantFoodRaw</li>
+          </categories>
+        </filter>
+        <count>0.5</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter Inherit="False">
+      <thingDefs>
+        <li>SG_CaloyakMeat</li>
+      </thingDefs>
+      <categories>
+        <li>AnimalProductRaw</li>
+        <li>MeatRaw</li>
+        <li>PlantFoodRaw</li>
+      </categories>
+    </fixedIngredientFilter>
+    <defaultIngredientFilter Inherit="False">
+      <thingDefs>
+        <li>SG_CaloyakMeat</li>
+      </thingDefs>
+      <categories>
+        <li>AnimalProductRaw</li>
+        <li>MeatRaw</li>
+        <li>PlantFoodRaw</li>
+      </categories>
+    </defaultIngredientFilter>
+    <workAmount>900</workAmount>
+  </RecipeDef>
+  <RecipeDef ParentName="FatSweetMealBase">
+    <defName>CookDonut</defName>
+    <label>cook a nice Donut</label>
+    <description>Cook an enriched food using the stated nutrition of ordinary ingredients and the named calorite product. Cooking retains 90% of ingredient energy.</description>
+    <jobString>Cooking Donut.</jobString>
+    <products>
+      <Donut>1</Donut>
+    </products>
+    <ingredients Inherit="False">
+      <li>
+        <filter>
+          <categories>
+            <li>PlantFoodRaw</li>
+          </categories>
+        </filter>
+        <count>0.25</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SG_Calomilk</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter Inherit="False">
+      <thingDefs>
+        <li>SG_Calomilk</li>
+      </thingDefs>
+      <categories>
+        <li>PlantFoodRaw</li>
+      </categories>
+    </fixedIngredientFilter>
+    <defaultIngredientFilter Inherit="False">
+      <thingDefs>
+        <li>SG_Calomilk</li>
+      </thingDefs>
+      <categories>
+        <li>PlantFoodRaw</li>
+      </categories>
+    </defaultIngredientFilter>
+    <workAmount>400</workAmount>
+  </RecipeDef>
+  <RecipeDef ParentName="FatSweetMealBase">
+    <defName>CookCake</defName>
+    <label>cook a "Cannot-Stop" Cake</label>
+    <description>Prepare an addictive drug cake from one nutrition of plants and one nutrition of calomilk. One complete dose supplies 1.8 nutrition.</description>
+    <jobString>Cooking Donut.</jobString>
+    <products>
+      <cakeFat>1</cakeFat>
+    </products>
+    <ingredients Inherit="False">
+      <li>
+        <filter>
+          <categories>
+            <li>PlantFoodRaw</li>
+          </categories>
+        </filter>
+        <count>1</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SG_Calomilk</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter Inherit="False">
+      <thingDefs>
+        <li>SG_Calomilk</li>
+      </thingDefs>
+      <categories>
+        <li>PlantFoodRaw</li>
+      </categories>
+    </fixedIngredientFilter>
+    <defaultIngredientFilter Inherit="False">
+      <thingDefs>
+        <li>SG_Calomilk</li>
+      </thingDefs>
+      <categories>
+        <li>PlantFoodRaw</li>
+      </categories>
+    </defaultIngredientFilter>
+    <workAmount>1000</workAmount>
+  </RecipeDef>
 </Defs>

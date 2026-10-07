@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <RR_FeastInvalidTarget>Choose a valid ritual gathering spot or altar for the communal feast.</RR_FeastInvalidTarget>
+  <RR_FeastCooldown>A communal feast can be held again in {0}.</RR_FeastCooldown>
+  <RR_FeastRequiresTable>A communal feast needs a table in the ritual area.</RR_FeastRequiresTable>
+  <RR_FeastRequiresMeal>A communal feast needs a reachable, permitted prepared meal and someone ready to eat it.</RR_FeastRequiresMeal>
+  <RR_FeastNeedsMealsForAll>Each assigned participant needs a reachable, permitted prepared meal.</RR_FeastNeedsMealsForAll>
+  <RR_FeastParticipantIneligible>Only eligible adults who use biological food can join this feast.</RR_FeastParticipantIneligible>
+</LanguageData>

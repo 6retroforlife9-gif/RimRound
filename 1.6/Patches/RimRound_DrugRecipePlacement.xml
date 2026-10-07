@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <!-- The chemical cake remains a drug. Baking skill is retained, while the
+       native drug-lab work giver owns its preparation. No potency/cost edits. -->
+  <Operation Class="PatchOperationSequence">
+    <operations>
+      <li Class="PatchOperationConditional">
+        <xpath>/Defs/RecipeDef[defName='CookCake']/recipeUsers</xpath>
+        <match Class="PatchOperationRemove"><xpath>/Defs/RecipeDef[defName='CookCake']/recipeUsers</xpath></match>
+      </li>
+      <li Class="PatchOperationConditional">
+        <xpath>/Defs/RecipeDef[defName='CookCake']/requiredGiverWorkType</xpath>
+        <match Class="PatchOperationRemove"><xpath>/Defs/RecipeDef[defName='CookCake']/requiredGiverWorkType</xpath></match>
+      </li>
+      <li Class="PatchOperationConditional">
+        <xpath>/Defs/RecipeDef[defName='CookCake']/workSpeedStat</xpath>
+        <match Class="PatchOperationRemove"><xpath>/Defs/RecipeDef[defName='CookCake']/workSpeedStat</xpath></match>
+      </li>
+      <li Class="PatchOperationAdd">
+        <xpath>/Defs/RecipeDef[defName='CookCake']</xpath>
+        <value>
+          <recipeUsers Inherit="False"><li>DrugLab</li></recipeUsers>
+          <requiredGiverWorkType>Crafting</requiredGiverWorkType>
+          <workSpeedStat>DrugCookingSpeed</workSpeedStat>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/RecipeDef[defName='CookCake']/label</xpath>
+        <value><label>prepare addictive cake</label></value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/RecipeDef[defName='CookCake']/description</xpath>
+        <value><description>Prepare a dose of addictive metabolic cake at a drug lab. This product has chemical effects and requires explicit drug authorization.</description></value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/RecipeDef[defName='CookCake']/jobString</xpath>
+        <value><jobString>Preparing addictive cake.</jobString></value>
+      </li>
+    </operations>
+  </Operation>
+</Patch>

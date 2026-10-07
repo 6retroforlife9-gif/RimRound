@@ -16,8 +16,9 @@
 		  <FoodPoisonChanceFixedHuman>0</FoodPoisonChanceFixedHuman>
 		</statBases>
 		<comps>
+		  <li Class="CompProperties_FoodPoisonable" />
 		  <li Class="CompProperties_Rottable">
-			<daysToRotStart>0.1</daysToRotStart>
+			<daysToRotStart>0.75</daysToRotStart>
 			<rotDestroys>true</rotDestroys>
 		  </li>
 		  <li Class="RimRound.Comps.CompProperties_FoodItems_NutritionDensity">

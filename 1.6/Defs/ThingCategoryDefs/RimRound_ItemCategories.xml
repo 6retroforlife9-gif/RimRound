@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Defs>
+  <ThingCategoryDef>
+    <defName>RR_OrdinaryMeals</defName>
+    <label>RimRound meals and network servings</label>
+    <parent>FoodMeals</parent>
+  </ThingCategoryDef>
+  <ThingCategoryDef>
+    <defName>RR_EnrichedFoods</defName>
+    <label>RimRound enriched foods (opt in)</label>
+    <parent>Foods</parent>
+  </ThingCategoryDef>
+  <ThingCategoryDef>
+    <defName>RR_ExceptionalFoods</defName>
+    <label>exceptional products (Fantasy)</label>
+    <parent>RR_EnrichedFoods</parent>
+  </ThingCategoryDef>
+  <ThingCategoryDef>
+    <defName>RR_MetabolicDrugs</defName>
+    <label>RimRound metabolic drugs (explicit authorization)</label>
+    <parent>Drugs</parent>
+  </ThingCategoryDef>
+  <ThingCategoryDef>
+    <defName>RR_ExceptionalDrugs</defName>
+    <label>exceptional metabolic drugs (Fantasy)</label>
+    <parent>RR_MetabolicDrugs</parent>
+  </ThingCategoryDef>
+  <ThingCategoryDef>
+    <defName>RR_SpecialistMaterials</defName>
+    <label>RimRound specialist materials</label>
+    <parent>Manufactured</parent>
+  </ThingCategoryDef>
+  <ThingCategoryDef>
+    <defName>RR_EnrichedAnimalProducts</defName>
+    <label>RimRound enriched animal products (opt in)</label>
+    <parent>AnimalProductRaw</parent>
+  </ThingCategoryDef>
+  <ThingCategoryDef>
+    <defName>RR_EnrichedMeat</defName>
+    <label>RimRound enriched meat (opt in)</label>
+    <parent>MeatRaw</parent>
+  </ThingCategoryDef>
+  <ThingCategoryDef>
+    <defName>RR_SupportApparel</defName>
+    <label>RimRound support clothing</label>
+    <parent>Apparel</parent>
+  </ThingCategoryDef>
+  <ThingCategoryDef>
+    <defName>RR_MobilityAids</defName>
+    <label>RimRound mobility aids</label>
+    <parent>ApparelUtility</parent>
+  </ThingCategoryDef>
+</Defs>

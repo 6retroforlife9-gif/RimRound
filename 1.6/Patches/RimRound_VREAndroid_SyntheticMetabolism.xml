@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <!-- Opt out by capability, including generation before Food needs exist. -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="VREA_SyntheticBody" and geneClass="VREAndroids.Gene_SyntheticBody" and not(modExtensions/li[@Class="RimRound.Utilities.BodyMetabolismExtension"])]</xpath>
+    <match Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="VREA_SyntheticBody" and geneClass="VREAndroids.Gene_SyntheticBody"]/modExtensions</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="VREA_SyntheticBody" and geneClass="VREAndroids.Gene_SyntheticBody"]/modExtensions</xpath>
+        <value>
+          <li Class="RimRound.Utilities.BodyMetabolismExtension">
+            <usesFoodMetabolism>false</usesFoodMetabolism>
+          </li>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="VREA_SyntheticBody" and geneClass="VREAndroids.Gene_SyntheticBody"]</xpath>
+        <value>
+          <modExtensions>
+            <li Class="RimRound.Utilities.BodyMetabolismExtension">
+              <usesFoodMetabolism>false</usesFoodMetabolism>
+            </li>
+          </modExtensions>
+        </value>
+      </nomatch>
+    </match>
+  </Operation>
+</Patch>

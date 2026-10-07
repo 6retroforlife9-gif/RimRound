@@ -1,4 +1,0 @@
-"zenith active loop" plays 1.6 seconds after the start of "zenith start"
-
-
-"zenith end" and "zenith passive loop" play simultaneously after player deactivates orb.

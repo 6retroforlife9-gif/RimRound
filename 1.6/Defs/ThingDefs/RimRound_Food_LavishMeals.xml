@@ -45,8 +45,9 @@
     <defName>MealLavishLarge</defName>
     <label>large lavish meal</label>
 	<statBases>
-      <MarketValue>50</MarketValue>
-      <WorkToMake>1000</WorkToMake>
+      <MarketValue>60.00</MarketValue>
+      <Mass>0.66</Mass>
+      <WorkToMake>1200</WorkToMake>
       <Nutrition>1.5</Nutrition>
     </statBases>
   </ThingDef>
@@ -55,8 +56,9 @@
     <defName>MealLavishHuge</defName>
     <label>huge lavish meal</label>
 	<statBases>
-      <MarketValue>70</MarketValue>
-      <WorkToMake>1400</WorkToMake>
+      <MarketValue>100.00</MarketValue>
+      <Mass>1.10</Mass>
+      <WorkToMake>2000</WorkToMake>
       <Nutrition>2.5</Nutrition>
     </statBases>
   </ThingDef>
@@ -65,8 +67,9 @@
     <defName>MealLavishEnormous</defName>
     <label>enormous lavish meal</label>
 	<statBases>
-      <MarketValue>100</MarketValue>
-      <WorkToMake>2000</WorkToMake>
+      <MarketValue>160.00</MarketValue>
+      <Mass>1.76</Mass>
+      <WorkToMake>3200</WorkToMake>
       <Nutrition>4.0</Nutrition>
     </statBases>
   </ThingDef>
@@ -75,8 +78,9 @@
     <defName>MealLavishMassive</defName>
     <label>massive lavish meal</label>
 	<statBases>
-      <MarketValue>140</MarketValue>
-      <WorkToMake>2800</WorkToMake>
+      <MarketValue>240.00</MarketValue>
+      <Mass>2.64</Mass>
+      <WorkToMake>4800</WorkToMake>
       <Nutrition>6.0</Nutrition>
     </statBases>
   </ThingDef>
@@ -86,8 +90,9 @@
     <label>colossal lavish meal</label>
 	<description>A ridiculously lavish, ridiculously large meal assembled from an unsettlingly large amount of ingredients. To not eat the entire thing would be a huge waste in every sense of the word.</description>
 	<statBases>
-      <MarketValue>300</MarketValue>
-      <WorkToMake>4700</WorkToMake>
+      <MarketValue>600.00</MarketValue>
+      <Mass>6.60</Mass>
+      <WorkToMake>12000</WorkToMake>
       <Nutrition>15.0</Nutrition>
     </statBases>
   </ThingDef>
@@ -99,8 +104,9 @@
     <defName>MealLavishLargeNonMeat</defName>
     <label>large vegetarian lavish meal</label>
 	<statBases>
-      <MarketValue>50</MarketValue>
-      <WorkToMake>1000</WorkToMake>
+      <MarketValue>60.00</MarketValue>
+      <Mass>0.66</Mass>
+      <WorkToMake>1200</WorkToMake>
       <Nutrition>1.5</Nutrition>
     </statBases>
   </ThingDef>
@@ -109,8 +115,9 @@
     <defName>MealLavishHugeNonMeat</defName>
     <label>huge vegetarian lavish meal</label>
 	<statBases>
-      <MarketValue>70</MarketValue>
-      <WorkToMake>1400</WorkToMake>
+      <MarketValue>100.00</MarketValue>
+      <Mass>1.10</Mass>
+      <WorkToMake>2000</WorkToMake>
       <Nutrition>2.5</Nutrition>
     </statBases>
   </ThingDef>
@@ -119,8 +126,9 @@
     <defName>MealLavishEnormousNonMeat</defName>
     <label>enormous vegetarian lavish meal</label>
 	<statBases>
-      <MarketValue>100</MarketValue>
-      <WorkToMake>2000</WorkToMake>
+      <MarketValue>160.00</MarketValue>
+      <Mass>1.76</Mass>
+      <WorkToMake>3200</WorkToMake>
       <Nutrition>4.0</Nutrition>
     </statBases>
   </ThingDef>
@@ -129,8 +137,9 @@
     <defName>MealLavishMassiveNonMeat</defName>
     <label>massive vegetarian lavish meal</label>
 	<statBases>
-      <MarketValue>140</MarketValue>
-      <WorkToMake>2800</WorkToMake>
+      <MarketValue>240.00</MarketValue>
+      <Mass>2.64</Mass>
+      <WorkToMake>4800</WorkToMake>
       <Nutrition>6.0</Nutrition>
     </statBases>
   </ThingDef>
@@ -140,8 +149,9 @@
     <label>colossal vegetarian lavish meal</label>
 	<description>A ridiculously lavish, ridiculously large meal assembled from an unsettlingly large amount of vegetarian ingredients. To not eat the entire thing would be a huge waste in every sense of the word.</description>
 	<statBases>
-      <MarketValue>300</MarketValue>
-      <WorkToMake>4700</WorkToMake>
+      <MarketValue>600.00</MarketValue>
+      <Mass>6.60</Mass>
+      <WorkToMake>12000</WorkToMake>
       <Nutrition>15.0</Nutrition>
     </statBases>
   </ThingDef>
@@ -152,8 +162,9 @@
     <defName>MealLavishLargeMeat</defName>
     <label>large meat-based lavish meal</label>
 	<statBases>
-      <MarketValue>50</MarketValue>
-      <WorkToMake>1000</WorkToMake>
+      <MarketValue>60.00</MarketValue>
+      <Mass>0.66</Mass>
+      <WorkToMake>1200</WorkToMake>
       <Nutrition>1.5</Nutrition>
     </statBases>
   </ThingDef>
@@ -162,8 +173,9 @@
     <defName>MealLavishHugeMeat</defName>
     <label>huge meat-based lavish meal</label>
 	<statBases>
-      <MarketValue>70</MarketValue>
-      <WorkToMake>1400</WorkToMake>
+      <MarketValue>100.00</MarketValue>
+      <Mass>1.10</Mass>
+      <WorkToMake>2000</WorkToMake>
       <Nutrition>2.5</Nutrition>
     </statBases>
   </ThingDef>
@@ -172,8 +184,9 @@
     <defName>MealLavishEnormousMeat</defName>
     <label>enormous meat-based lavish meal</label>
 	<statBases>
-      <MarketValue>100</MarketValue>
-      <WorkToMake>2000</WorkToMake>
+      <MarketValue>160.00</MarketValue>
+      <Mass>1.76</Mass>
+      <WorkToMake>3200</WorkToMake>
       <Nutrition>4.0</Nutrition>
     </statBases>
   </ThingDef>
@@ -182,8 +195,9 @@
     <defName>MealLavishMassiveMeat</defName>
     <label>massive meat-based lavish meal</label>
 	<statBases>
-      <MarketValue>140</MarketValue>
-      <WorkToMake>2800</WorkToMake>
+      <MarketValue>240.00</MarketValue>
+      <Mass>2.64</Mass>
+      <WorkToMake>4800</WorkToMake>
       <Nutrition>6.0</Nutrition>
     </statBases>
   </ThingDef>
@@ -193,8 +207,9 @@
     <label>colossal meat-based lavish meal</label>
 	<description>A ridiculously lavish, ridiculously large meal assembled from an unsettlingly large amount of meat-based ingredients. To not eat the entire thing would be a huge waste in every sense of the word.</description>
 	<statBases>
-      <MarketValue>300</MarketValue>
-      <WorkToMake>4700</WorkToMake>
+      <MarketValue>600.00</MarketValue>
+      <Mass>6.60</Mass>
+      <WorkToMake>12000</WorkToMake>
       <Nutrition>15.0</Nutrition>
     </statBases>
   </ThingDef>  

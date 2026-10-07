@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version='1.0' encoding='utf-8'?>
 <Defs>
   <ThingDef ParentName="RockBase">
     <defName>RR_GluttoniumOre</defName>
     <label>gluttonium ore</label>
-    <description>A compound alloy of unknown origin, packed with energy that replicates on contact with gastric juices. Research suggests it was intitially used as a tool to prevent prisoners from escaping, as, while not safe to ingest unless treated, can be cooked into extremely fattening foods and used as a tough, flexible material.</description>
+    <description>Natural deposits of gluttonium, a scarce specialist reagent. Mining provides small quantities before industrial synthesis is researched.</description>
     <graphicData>
       <texPath>Things/Building/Linked/Gluttonium_Atlas</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -16,23 +16,23 @@
       <isResourceRock>true</isResourceRock>
       <mineableThing>RR_Gluttonium</mineableThing>
       <mineableYield>2</mineableYield>
-      <mineableScatterCommonality>1.00</mineableScatterCommonality> <!-- as often as steel, with smaller blotches -->
+      <mineableScatterCommonality>1.00</mineableScatterCommonality>
+      <!-- as often as steel, with smaller blotches -->
       <mineableScatterLumpSizeRange>3~6</mineableScatterLumpSizeRange>
     </building>
-	<comps>
-	  <li Class="CompProperties_Glower">
+    <comps>
+      <li Class="CompProperties_Glower">
         <glowRadius>4</glowRadius>
         <glowColor>(77,190,37,0)</glowColor>
         <colorPickerEnabled>true</colorPickerEnabled>
         <darklightToggle>true</darklightToggle>
       </li>
-	</comps>
+    </comps>
   </ThingDef>
-  
   <ThingDef ParentName="ResourceBase">
     <defName>RR_Gluttonium</defName>
     <label>gluttonium</label>
-    <description>A compound alloy of unknown origin, packed with energy that replicates on contact with gastric juices. Research suggests it was intitially used as a tool to prevent prisoners from escaping, as, while not safe to ingest unless treated, can be cooked into extremely fattening foods and used as a tough, flexible material.</description>
+    <description>A specialist industrial reagent for named metabolic recipes and devices. Not edible raw and not a general crafting material. Balanced manufacturing consumes steel and chemfuel; power-only replication requires Fantasy mode.</description>
     <graphicData>
       <texPath>Things/Item/Resource/Gluttonium</texPath>
       <graphicClass>Graphic_StackCount</graphicClass>
@@ -44,14 +44,7 @@
     <statBases>
       <MarketValue>21</MarketValue>
       <Mass>3</Mass>
-	  <Beauty>-1</Beauty>
-      <StuffPower_Armor_Sharp>1.25</StuffPower_Armor_Sharp>
-      <StuffPower_Armor_Blunt>0.90</StuffPower_Armor_Blunt>
-      <StuffPower_Armor_Heat>1.05</StuffPower_Armor_Heat>
-      <StuffPower_Insulation_Cold>8</StuffPower_Insulation_Cold>
-      <StuffPower_Insulation_Heat>0</StuffPower_Insulation_Heat>
-      <SharpDamageMultiplier>1.2</SharpDamageMultiplier>
-      <BluntDamageMultiplier>1.7</BluntDamageMultiplier>
+      <Beauty>-1</Beauty>
     </statBases>
     <thingCategories>
       <li>Manufactured</li>
@@ -60,28 +53,17 @@
     <deepCountPerPortion>8</deepCountPerPortion>
     <deepLumpSizeRange>1~4</deepLumpSizeRange>
     <burnableByRecipe>false</burnableByRecipe>
-    <smeltable>true</smeltable>
+    <smeltable>false</smeltable>
     <stuffProps>
-      <categories>
-        <li>Metallic</li>
-      </categories>
       <appearance>Metal</appearance>
-      <commonality>0.05</commonality>
+      <commonality>0</commonality>
       <constructEffect>ConstructMetal</constructEffect>
       <color>(160,178,181)</color>
       <soundImpactBullet>BulletImpact_Metal</soundImpactBullet>
-	  <soundImpactMelee>BulletImpact_Metal</soundImpactMelee>
+      <soundImpactMelee>BulletImpact_Metal</soundImpactMelee>
       <soundMeleeHitSharp>MeleeHit_Metal_Sharp</soundMeleeHitSharp>
       <soundMeleeHitBlunt>MeleeHit_Metal_Blunt</soundMeleeHitBlunt>
-      <statFactors>
-        <MaxHitPoints>3.3</MaxHitPoints>
-        <Beauty>1.5</Beauty>
-        <Flammability>0</Flammability>
-        <WorkToMake>2.4</WorkToMake>
-        <WorkToBuild>2.4</WorkToBuild>
-		<ResearchSpeedFactor>1.7</ResearchSpeedFactor>
-        <MeleeWeapon_CooldownMultiplier>0.95</MeleeWeapon_CooldownMultiplier>
-      </statFactors>
+      <categories Inherit="False" />
     </stuffProps>
     <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
     <allowedArchonexusCount>80</allowedArchonexusCount>

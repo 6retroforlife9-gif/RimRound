@@ -1,63 +1,72 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version='1.0' encoding='utf-8'?>
 <Defs>
-	<ThingDef ParentName="RR_SimpleMealBase">
-		<defName>FatBurger</defName>
-		<label>Lard Filled Burger</label>
-		<description>It'll definitely leave a mark on your waistline. Hopefully it's good!</description>
-		<graphicData>
-			<texPath>Things/Food/Burger</texPath>
-			<graphicClass>Graphic_Single</graphicClass>
-		</graphicData>
-		<statBases>
-			<MarketValue>25</MarketValue>
-			<WorkToMake>325</WorkToMake>
-			<Nutrition>20</Nutrition>
-		</statBases>
-		<comps>
-		<li Class="RimRound.Comps.CompProperties_FoodItems_NutritionDensity">
-            <compClass>RimRound.Comps.ThingComp_FoodItems_NutritionDensity</compClass>
-            <fullnessToNutritionRatio>.03</fullnessToNutritionRatio>
-          </li>
-		</comps>
-	</ThingDef>
-	<ThingDef ParentName="RR_SimpleMealBase">
-		<defName>Donut</defName>
-		<label>Delicious Donut</label>
-		<description>Not very filling, but It'll definitely leave a mark on your waistline. Hopefully it's good!</description>
-		<graphicData>
-			<texPath>Things/Food/Donut</texPath>
-			<graphicClass>Graphic_Single</graphicClass>
-		</graphicData>
-		<statBases>
-			<MarketValue>25</MarketValue>
-			<WorkToMake>250</WorkToMake>
-			<Nutrition>4</Nutrition>
-		</statBases>
-		<comps>
-		<li Class="RimRound.Comps.CompProperties_FoodItems_NutritionDensity">
-            <compClass>RimRound.Comps.ThingComp_FoodItems_NutritionDensity</compClass>
-            <fullnessToNutritionRatio>.1</fullnessToNutritionRatio>
-          </li>
-		</comps>
-	</ThingDef>
-	<ThingDef ParentName="RR_SimpleMealBase">
-		<defName>fatpill</defName>
-		<label>Test Fat Pill</label>
-		<description>Bawompfh</description>
-		<graphicData>
-			<texPath>Things/Food/FatPills</texPath>
-			<graphicClass>Graphic_Single</graphicClass>
-		</graphicData>
-		<statBases>
-			<MarketValue>25</MarketValue>
-			<WorkToMake>375</WorkToMake>
-			<Nutrition>100</Nutrition>
-		</statBases>
-		<comps>
-		<li Class="RimRound.Comps.CompProperties_FoodItems_NutritionDensity">
-            <compClass>RimRound.Comps.ThingComp_FoodItems_NutritionDensity</compClass>
-            <fullnessToNutritionRatio>.00001</fullnessToNutritionRatio>
-          </li>
-		</comps>
-	</ThingDef>
+  <ThingDef ParentName="RR_SimpleMealBase">
+    <defName>FatBurger</defName>
+    <label>Lard Filled Burger</label>
+    <description>An enriched food containing 4.05 nutrition at three times ordinary energy density. Its whole item is consumed; a recipient who cannot use all of it wastes the rest.</description>
+    <graphicData>
+      <texPath>Things/Food/Burger</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>90</MarketValue>
+      <WorkToMake>325</WorkToMake>
+      <Nutrition>4.05</Nutrition>
+    </statBases>
+    <comps>
+      <li Class="RimRound.Comps.CompProperties_FoodItems_NutritionDensity">
+        <compClass>RimRound.Comps.ThingComp_FoodItems_NutritionDensity</compClass>
+        <fullnessToNutritionRatio>0.333333333</fullnessToNutritionRatio>
+      </li>
+    </comps>
+  </ThingDef>
+  <ThingDef ParentName="RR_SimpleMealBase">
+    <defName>Donut</defName>
+    <label>Delicious Donut</label>
+    <description>An enriched food containing 1.125 nutrition at three times ordinary energy density. Its whole item is consumed; a recipient who cannot use all of it wastes the rest.</description>
+    <graphicData>
+      <texPath>Things/Food/Donut</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>28</MarketValue>
+      <WorkToMake>250</WorkToMake>
+      <Nutrition>1.125</Nutrition>
+    </statBases>
+    <comps>
+      <li Class="RimRound.Comps.CompProperties_FoodItems_NutritionDensity">
+        <compClass>RimRound.Comps.ThingComp_FoodItems_NutritionDensity</compClass>
+        <fullnessToNutritionRatio>0.333333333</fullnessToNutritionRatio>
+      </li>
+    </comps>
+  </ThingDef>
+  <ThingDef ParentName="RR_SimpleMealBase">
+    <defName>fatpill</defName>
+    <label>Test Fat Pill</label>
+    <description>A non-addictive clinical metabolic dose. Supplies 2.4 nutrition in 0.3 fullness volume. Consume one complete dose only with explicit drug or medical authorization and enough stomach room. Not ordinary hunger food.</description>
+    <graphicData>
+      <texPath>Things/Food/FatPills</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>110</MarketValue>
+      <WorkToMake>375</WorkToMake>
+      <Nutrition>2.4</Nutrition>
+    </statBases>
+    <comps>
+      <li Class="RimRound.Comps.CompProperties_FoodItems_NutritionDensity">
+        <compClass>RimRound.Comps.ThingComp_FoodItems_NutritionDensity</compClass>
+        <fullnessToNutritionRatio>.125</fullnessToNutritionRatio>
+      </li>
+      <li Class="CompProperties_Drug" />
+    </comps>
+    <ingestible>
+      <drugCategory>Medical</drugCategory>
+      <maxNumToIngestAtOnce>1</maxNumToIngestAtOnce>
+      <defaultNumToIngestAtOnce>1</defaultNumToIngestAtOnce>
+      <preferability>NeverForNutrition</preferability>
+      <foodType>Processed</foodType>
+      <canAutoSelectAsFoodForCaravan>false</canAutoSelectAsFoodForCaravan>
+    </ingestible>
+  </ThingDef>
 </Defs>

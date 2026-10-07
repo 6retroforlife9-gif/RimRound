@@ -53,8 +53,9 @@
     <label>large fine meal</label>
     <description>A complex dish assembled with care from a variety of ingredients.</description>
 	<statBases>
-      <MarketValue>25</MarketValue>
-      <WorkToMake>500</WorkToMake>
+      <MarketValue>33.34</MarketValue>
+      <Mass>0.74</Mass>
+      <WorkToMake>750</WorkToMake>
       <Nutrition>1.5</Nutrition>
     </statBases>
   </ThingDef>
@@ -64,8 +65,9 @@
     <label>large vegetarian fine meal</label>
     <description>A complex dish assembled with care from a variety of ingredients.</description>
 	<statBases>
-      <MarketValue>25</MarketValue>
-      <WorkToMake>500</WorkToMake>
+      <MarketValue>33.34</MarketValue>
+      <Mass>0.74</Mass>
+      <WorkToMake>750</WorkToMake>
       <Nutrition>1.5</Nutrition>
     </statBases>
   </ThingDef>
@@ -75,8 +77,9 @@
     <label>large meat-based fine meal</label>
     <description>A complex dish assembled with care from a variety of ingredients.</description>
 	<statBases>
-      <MarketValue>25</MarketValue>
-      <WorkToMake>500</WorkToMake>
+      <MarketValue>33.34</MarketValue>
+      <Mass>0.74</Mass>
+      <WorkToMake>750</WorkToMake>
       <Nutrition>1.5</Nutrition>
     </statBases>
   </ThingDef>   
@@ -89,8 +92,9 @@
     <label>huge fine meal</label>
     <description>A complex dish assembled with care from a variety of ingredients.</description>
 	<statBases>
-      <MarketValue>35</MarketValue>
-      <WorkToMake>800</WorkToMake>
+      <MarketValue>55.56</MarketValue>
+      <Mass>1.23</Mass>
+      <WorkToMake>1250</WorkToMake>
       <Nutrition>2.5</Nutrition>
     </statBases>
   </ThingDef>
@@ -100,8 +104,9 @@
     <label>huge vegetarian fine meal</label>
     <description>A complex dish assembled with care from a variety of ingredients.</description>
 	<statBases>
-      <MarketValue>35</MarketValue>
-      <WorkToMake>800</WorkToMake>
+      <MarketValue>55.56</MarketValue>
+      <Mass>1.23</Mass>
+      <WorkToMake>1250</WorkToMake>
       <Nutrition>2.5</Nutrition>
     </statBases>
   </ThingDef>
@@ -111,8 +116,9 @@
     <label>huge meat-based fine meal</label>
     <description>A complex dish assembled with care from a variety of ingredients.</description>
 	<statBases>
-      <MarketValue>35</MarketValue>
-      <WorkToMake>800</WorkToMake>
+      <MarketValue>55.56</MarketValue>
+      <Mass>1.23</Mass>
+      <WorkToMake>1250</WorkToMake>
       <Nutrition>2.5</Nutrition>
     </statBases>
   </ThingDef>  
@@ -124,8 +130,9 @@
     <label>enormous fine meal</label>
     <description>A complex dish assembled with care from a variety of ingredients.</description>
 	<statBases>
-      <MarketValue>50</MarketValue>
-      <WorkToMake>1125</WorkToMake>
+      <MarketValue>88.89</MarketValue>
+      <Mass>1.96</Mass>
+      <WorkToMake>2000</WorkToMake>
       <Nutrition>4.0</Nutrition>
     </statBases>
   </ThingDef>
@@ -134,8 +141,9 @@
     <label>enormous vegetarian fine meal</label>
     <description>A complex vegetarian dish assembled with care from a variety of ingredients.</description>
 	<statBases>
-      <MarketValue>50</MarketValue>
-      <WorkToMake>1125</WorkToMake>
+      <MarketValue>88.89</MarketValue>
+      <Mass>1.96</Mass>
+      <WorkToMake>2000</WorkToMake>
       <Nutrition>4.0</Nutrition>
     </statBases>
   </ThingDef>
@@ -144,8 +152,9 @@
     <label>enormous meat-based fine meal</label>
     <description>A complex meat-based dish assembled with care from a variety of ingredients.</description>
 	<statBases>
-      <MarketValue>50</MarketValue>
-      <WorkToMake>1125</WorkToMake>
+      <MarketValue>88.89</MarketValue>
+      <Mass>1.96</Mass>
+      <WorkToMake>2000</WorkToMake>
       <Nutrition>4.0</Nutrition>
     </statBases>
   </ThingDef>  
@@ -158,8 +167,9 @@
     <label>massive fine meal</label>
     <description>A complex dish assembled with care from a variety of ingredients.</description>
 	<statBases>
-      <MarketValue>70</MarketValue>
-      <WorkToMake>1575</WorkToMake>
+      <MarketValue>133.34</MarketValue>
+      <Mass>2.94</Mass>
+      <WorkToMake>3000</WorkToMake>
       <Nutrition>6.0</Nutrition>
     </statBases>
   </ThingDef>    
@@ -168,8 +178,9 @@
     <label>massive vegetarian fine meal</label>
     <description>A complex vegetarian dish assembled with care from a variety of ingredients.</description>
 	<statBases>
-      <MarketValue>70</MarketValue>
-      <WorkToMake>1575</WorkToMake>
+      <MarketValue>133.34</MarketValue>
+      <Mass>2.94</Mass>
+      <WorkToMake>3000</WorkToMake>
       <Nutrition>6.0</Nutrition>
     </statBases>
   </ThingDef>    
@@ -178,8 +189,9 @@
     <label>massive meat-based fine meal</label>
     <description>A complex meat-based dish assembled with care from a variety of ingredients.</description>
 	<statBases>
-      <MarketValue>70</MarketValue>
-      <WorkToMake>1575</WorkToMake>
+      <MarketValue>133.34</MarketValue>
+      <Mass>2.94</Mass>
+      <WorkToMake>3000</WorkToMake>
       <Nutrition>6.0</Nutrition>
     </statBases>
   </ThingDef>
@@ -192,8 +204,9 @@
     <label>colossal fine meal</label>
     <description>An obscenely large meal crafted with care from a huge variety of ingredients.</description>
 	<statBases>
-      <MarketValue>70</MarketValue>
-      <WorkToMake>3000</WorkToMake>
+      <MarketValue>333.34</MarketValue>
+      <Mass>7.34</Mass>
+      <WorkToMake>7500</WorkToMake>
       <Nutrition>15.0</Nutrition>
     </statBases>
   </ThingDef>    
@@ -202,8 +215,9 @@
     <label>colossal vegetarian fine meal</label>
     <description>An obscenely large vegetarian meal crafted with care from a huge variety of ingredients.</description>
 	<statBases>
-      <MarketValue>150</MarketValue>
-      <WorkToMake>3000</WorkToMake>
+      <MarketValue>333.34</MarketValue>
+      <Mass>7.34</Mass>
+      <WorkToMake>7500</WorkToMake>
       <Nutrition>15.0</Nutrition>
     </statBases>
   </ThingDef>    
@@ -212,8 +226,9 @@
     <label>colossal meat-based fine meal</label>
     <description>An obscenely large meat-based meal crafted with care from a huge variety of ingredients.</description>
 	<statBases>
-      <MarketValue>150</MarketValue>
-      <WorkToMake>3000</WorkToMake>
+      <MarketValue>333.34</MarketValue>
+      <Mass>7.34</Mass>
+      <WorkToMake>7500</WorkToMake>
       <Nutrition>15.0</Nutrition>
     </statBases>
   </ThingDef>    

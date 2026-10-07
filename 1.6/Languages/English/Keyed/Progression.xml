@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <RR_ProgressionTitle>Colony progression</RR_ProgressionTitle>
+  <RR_KitchenSmockStatExplanation>Kitchen work smock: final cooking speed ×115%</RR_KitchenSmockStatExplanation>
+  <RR_ProgressionLoadColony>Start or load a colony to choose its saved progression preset.</RR_ProgressionLoadColony>
+  <RR_ProgressionCurrent>Saved preset: {0}</RR_ProgressionCurrent>
+  <RR_PresetBalanced>Balanced</RR_PresetBalanced>
+  <RR_PresetFantasy>Fantasy</RR_PresetFantasy>
+  <RR_PresetLegacy>Legacy</RR_PresetLegacy>
+  <RR_PresetBalancedDescription>Balanced: progress through cooking, research, equipment, surgery and genes. Eating does not earn perk points. Basic body goals and ordinary care are always available.</RR_PresetBalancedDescription>
+  <RR_PresetFantasyDescription>Fantasy: use the same research and equipment routes, with exceptional late-game body adaptations. The old perk ladder remains dormant.</RR_PresetFantasyDescription>
+  <RR_PresetLegacyDescription>Legacy: retain the original perk purchases, effects and point progression. Older colonies load into this preset automatically. Equipment and genes remain available.</RR_PresetLegacyDescription>
+  <RR_ProgressionSwitchWarning>Change this colony's progression preset? Existing body mass, research, perk keys, points and levels are retained. Outside Legacy, saved perk effects and purchases become dormant; returning to Legacy reactivates them. Old saves contain a combined stat-bonus total whose sources cannot be reliably identified. That historical total, including any old external-mod bonuses, is archived outside Legacy; current equipment, implants and active biology supply their new effects. New external stat changes remain effective. No equipment, genes, refunds or one-shot perk actions are granted by switching.</RR_ProgressionSwitchWarning>
+  <RR_ProgressionFinishLegacyTransformation>End {0}'s active legacy bed, recreation or generator transformation before switching presets.</RR_ProgressionFinishLegacyTransformation>
+  <RR_ProgressionLegacyOnly>The old perk ladder is available in the Legacy colony preset.</RR_ProgressionLegacyOnly>
+  <RR_ProgressionRoutes>Choose a route in the normal Research, Bills, Health and Genes screens. Cooking provides tailored meals and specialist equipment. Industrial food handling leads to automated clinical care. Bionics leads to metabolic implants. With Biotech, gene acquisition and xenogerm assembly provide inherited or implanted specializations. Food preferences and ideology remain individual choices.</RR_ProgressionRoutes>
+</LanguageData>

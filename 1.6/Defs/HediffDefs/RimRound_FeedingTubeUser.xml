@@ -27,12 +27,8 @@
 				<label>using a feeding tube</label>
 				<lifeThreatening>false</lifeThreatening>
 				<becomeVisible>false</becomeVisible>
-				<capMods>	
-					<li>
-						<capacity>Moving</capacity>
-						<setMax>0</setMax>
-					</li>							
-				</capMods>
+				<!-- Connection is informational. Bed/care jobs own posture; a
+				     powered-off or empty feeder must never remove locomotion. -->
 			</li>
 		</stages>
 	</HediffDef>

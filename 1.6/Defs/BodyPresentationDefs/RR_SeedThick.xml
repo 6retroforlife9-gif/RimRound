@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- A02 seam fixture: one existing texture, explicit reuse for the full key roster. B01 supplies art parity. -->
+  <RimRound.Presentation.BodyPresentationProfileDef>
+    <defName>RR_SeedThickPresentation</defName>
+    <label>RimRound thick presentation seed</label>
+    <schema>1</schema>
+    <profileId>rimround.seed.thick</profileId>
+    <selectable>false</selectable>
+    <artSetId>rimround.existing</artSetId>
+    <description>Minimal existing-art profile for registry integration.</description>
+    <defaultShapeId>standard</defaultShapeId>
+    <shapeIds><li>standard</li></shapeIds>
+    <supportedAdapterIds><li>human</li></supportedAdapterIds>
+    <presentationGenders><li>female</li><li>male</li><li>none</li></presentationGenders>
+    <stages>
+      <li><ShapeId>standard</ShapeId><StageKey>thick</StageKey><BodyTextureRoot>Things/Pawn/Humanlike/Bodies/Naked_F_005_Thick</BodyTextureRoot><DirectionPolicy>mirrorWest</DirectionPolicy><ShaderPolicy>cutout</ShaderPolicy><ColorPolicy>skin</ColorPolicy><MapScale>1</MapScale><PortraitScale>1</PortraitScale><PortraitZoom>1</PortraitZoom><AnchorPolicy>legacyBodyType</AnchorPolicy><LegacyBodyTypeDefName>F_005_Thick</LegacyBodyTypeDefName><ApparelFallback>native</ApparelFallback><CorpsePolicy>native</CorpsePolicy><DessicationPolicy>native</DessicationPolicy><WiggleSpeed>1</WiggleSpeed></li>
+    <li><ShapeId>standard</ShapeId><StageKey>thin</StageKey><ReuseProfileId>rimround.seed.thick</ReuseProfileId><ReuseShapeId>standard</ReuseShapeId><ReuseStageKey>thick</ReuseStageKey></li>
+    <li><ShapeId>standard</ShapeId><StageKey>average</StageKey><ReuseProfileId>rimround.seed.thick</ReuseProfileId><ReuseShapeId>standard</ReuseShapeId><ReuseStageKey>thick</ReuseStageKey></li>
+    <li><ShapeId>standard</ShapeId><StageKey>chonky</StageKey><ReuseProfileId>rimround.seed.thick</ReuseProfileId><ReuseShapeId>standard</ReuseShapeId><ReuseStageKey>thick</ReuseStageKey></li>
+    <li><ShapeId>standard</ShapeId><StageKey>chubby</StageKey><ReuseProfileId>rimround.seed.thick</ReuseProfileId><ReuseShapeId>standard</ReuseShapeId><ReuseStageKey>thick</ReuseStageKey></li>
+    <li><ShapeId>standard</ShapeId><StageKey>corpulent</StageKey><ReuseProfileId>rimround.seed.thick</ReuseProfileId><ReuseShapeId>standard</ReuseShapeId><ReuseStageKey>thick</ReuseStageKey></li>
+    <li><ShapeId>standard</ShapeId><StageKey>fat</StageKey><ReuseProfileId>rimround.seed.thick</ReuseProfileId><ReuseShapeId>standard</ReuseShapeId><ReuseStageKey>thick</ReuseStageKey></li>
+    <li><ShapeId>standard</ShapeId><StageKey>obese</StageKey><ReuseProfileId>rimround.seed.thick</ReuseProfileId><ReuseShapeId>standard</ReuseShapeId><ReuseStageKey>thick</ReuseStageKey></li>
+    <li><ShapeId>standard</ShapeId><StageKey>morbid</StageKey><ReuseProfileId>rimround.seed.thick</ReuseProfileId><ReuseShapeId>standard</ReuseShapeId><ReuseStageKey>thick</ReuseStageKey></li>
+    <li><ShapeId>standard</ShapeId><StageKey>lardy</StageKey><ReuseProfileId>rimround.seed.thick</ReuseProfileId><ReuseShapeId>standard</ReuseShapeId><ReuseStageKey>thick</ReuseStageKey></li>
+    <li><ShapeId>standard</ShapeId><StageKey>enormous</StageKey><ReuseProfileId>rimround.seed.thick</ReuseProfileId><ReuseShapeId>standard</ReuseShapeId><ReuseStageKey>thick</ReuseStageKey></li>
+    <li><ShapeId>standard</ShapeId><StageKey>gigantic</StageKey><ReuseProfileId>rimround.seed.thick</ReuseProfileId><ReuseShapeId>standard</ReuseShapeId><ReuseStageKey>thick</ReuseStageKey></li>
+    <li><ShapeId>standard</ShapeId><StageKey>titanic</StageKey><ReuseProfileId>rimround.seed.thick</ReuseProfileId><ReuseShapeId>standard</ReuseShapeId><ReuseStageKey>thick</ReuseStageKey></li>
+    <li><ShapeId>standard</ShapeId><StageKey>gelatinous01</StageKey><ReuseProfileId>rimround.seed.thick</ReuseProfileId><ReuseShapeId>standard</ReuseShapeId><ReuseStageKey>thick</ReuseStageKey></li>
+    <li><ShapeId>standard</ShapeId><StageKey>gelatinous02</StageKey><ReuseProfileId>rimround.seed.thick</ReuseProfileId><ReuseShapeId>standard</ReuseShapeId><ReuseStageKey>thick</ReuseStageKey></li>
+    <li><ShapeId>standard</ShapeId><StageKey>gelatinous03</StageKey><ReuseProfileId>rimround.seed.thick</ReuseProfileId><ReuseShapeId>standard</ReuseShapeId><ReuseStageKey>thick</ReuseStageKey></li>
+    <li><ShapeId>standard</ShapeId><StageKey>gelatinous04</StageKey><ReuseProfileId>rimround.seed.thick</ReuseProfileId><ReuseShapeId>standard</ReuseShapeId><ReuseStageKey>thick</ReuseStageKey></li>
+    <li><ShapeId>standard</ShapeId><StageKey>gelatinous05</StageKey><ReuseProfileId>rimround.seed.thick</ReuseProfileId><ReuseShapeId>standard</ReuseShapeId><ReuseStageKey>thick</ReuseStageKey></li>
+    <li><ShapeId>standard</ShapeId><StageKey>gelatinous06</StageKey><ReuseProfileId>rimround.seed.thick</ReuseProfileId><ReuseShapeId>standard</ReuseShapeId><ReuseStageKey>thick</ReuseStageKey></li>
+    <li><ShapeId>standard</ShapeId><StageKey>gelatinous07</StageKey><ReuseProfileId>rimround.seed.thick</ReuseProfileId><ReuseShapeId>standard</ReuseShapeId><ReuseStageKey>thick</ReuseStageKey></li>
+    <li><ShapeId>standard</ShapeId><StageKey>gelatinous08</StageKey><ReuseProfileId>rimround.seed.thick</ReuseProfileId><ReuseShapeId>standard</ReuseShapeId><ReuseStageKey>thick</ReuseStageKey></li>
+    <li><ShapeId>standard</ShapeId><StageKey>gelatinous09</StageKey><ReuseProfileId>rimround.seed.thick</ReuseProfileId><ReuseShapeId>standard</ReuseShapeId><ReuseStageKey>thick</ReuseStageKey></li>
+    <li><ShapeId>standard</ShapeId><StageKey>gelatinous10</StageKey><ReuseProfileId>rimround.seed.thick</ReuseProfileId><ReuseShapeId>standard</ReuseShapeId><ReuseStageKey>thick</ReuseStageKey></li>
+    <li><ShapeId>standard</ShapeId><StageKey>gelatinous11</StageKey><ReuseProfileId>rimround.seed.thick</ReuseProfileId><ReuseShapeId>standard</ReuseShapeId><ReuseStageKey>thick</ReuseStageKey></li>
+    <li><ShapeId>standard</ShapeId><StageKey>gelatinous12</StageKey><ReuseProfileId>rimround.seed.thick</ReuseProfileId><ReuseShapeId>standard</ReuseShapeId><ReuseStageKey>thick</ReuseStageKey></li>
+    <li><ShapeId>standard</ShapeId><StageKey>gelatinous13</StageKey><ReuseProfileId>rimround.seed.thick</ReuseProfileId><ReuseShapeId>standard</ReuseShapeId><ReuseStageKey>thick</ReuseStageKey></li>
+    <li><ShapeId>standard</ShapeId><StageKey>gelatinous14</StageKey><ReuseProfileId>rimround.seed.thick</ReuseProfileId><ReuseShapeId>standard</ReuseShapeId><ReuseStageKey>thick</ReuseStageKey></li>
+    <li><ShapeId>standard</ShapeId><StageKey>gelatinous15</StageKey><ReuseProfileId>rimround.seed.thick</ReuseProfileId><ReuseShapeId>standard</ReuseShapeId><ReuseStageKey>thick</ReuseStageKey></li>
+    <li><ShapeId>standard</ShapeId><StageKey>gelatinous16</StageKey><ReuseProfileId>rimround.seed.thick</ReuseProfileId><ReuseShapeId>standard</ReuseShapeId><ReuseStageKey>thick</ReuseStageKey></li>
+    <li><ShapeId>standard</ShapeId><StageKey>gelatinous17</StageKey><ReuseProfileId>rimround.seed.thick</ReuseProfileId><ReuseShapeId>standard</ReuseShapeId><ReuseStageKey>thick</ReuseStageKey></li>
+    <li><ShapeId>standard</ShapeId><StageKey>gelatinous18</StageKey><ReuseProfileId>rimround.seed.thick</ReuseProfileId><ReuseShapeId>standard</ReuseShapeId><ReuseStageKey>thick</ReuseStageKey></li>
+    <li><ShapeId>standard</ShapeId><StageKey>gelatinous19</StageKey><ReuseProfileId>rimround.seed.thick</ReuseProfileId><ReuseShapeId>standard</ReuseShapeId><ReuseStageKey>thick</ReuseStageKey></li>
+    <li><ShapeId>standard</ShapeId><StageKey>gelatinous20</StageKey><ReuseProfileId>rimround.seed.thick</ReuseProfileId><ReuseShapeId>standard</ReuseShapeId><ReuseStageKey>thick</ReuseStageKey></li>
+    </stages>
+  </RimRound.Presentation.BodyPresentationProfileDef>
+</Defs>

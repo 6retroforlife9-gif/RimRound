@@ -1,112 +1,163 @@
+<?xml version='1.0' encoding='utf-8'?>
 <Defs>
-    <ThingDef ParentName="BenchBase">
-        <defName>RR_GluttoniumFabricator</defName>
-        <label>gluttonium fabricator</label>
-        <description>A fabled device made of gluttonium capable of replicating gluttonium purely from quantum foam. Because it provides such a taboo resource quickly and infinitely, it is vastly sought after by many societies, but is also outlawed by just as many. Tales from displaced refugees apparently depict people of inconceivable sizes forcing them offworld as their very homes disappeared beneath them.</description>
-        <thingClass>Building_WorkTable</thingClass>
-        <altitudeLayer>Building</altitudeLayer>
-        <passability>PassThroughOnly</passability>
-        <pathCost>50</pathCost>
-        <statBases>
-            <Mass>2600</Mass>
-            <MaxHitPoints>550</MaxHitPoints>
-            <Beauty>2</Beauty>
-            <WorkToBuild>8000</WorkToBuild>
-            <Flammability>1.0</Flammability>
-        </statBases>
-        <minifiedDef Inherit="false"/>
-        <thingCategories Inherit="false" />
-        <size>(1,1)</size>
-        <costList>
-            <Steel>200</Steel>
-            <RR_Gluttonium>1000</RR_Gluttonium>
-            <Gold>80</Gold>
-            <Plasteel>150</Plasteel>
-            <ComponentSpacer>13</ComponentSpacer>
-        </costList>
-        <comps>
-            <li Class="CompProperties_Power">
-                <compClass>CompPowerTrader</compClass>
-                <basePowerConsumption>5600</basePowerConsumption>
-                <idlePowerDraw>50</idlePowerDraw>
-                <shortCircuitInRain>true</shortCircuitInRain>
-            </li>
-            <li Class="CompProperties_Flickable"/>
-            <li Class="CompProperties_Breakdownable"/>
-        </comps>
-        <recipes>
-        <li>RR_Make_Gluttonium</li>
-        </recipes>
-        <graphicData>
-            <texPath>Things/Building/Production/GluttoniumFabricator</texPath>
-            <graphicClass>Graphic_Single</graphicClass>
-            <shaderType>CutoutComplex</shaderType>
-            <drawSize>(1,1)</drawSize>
-            <damageData>
-                <cornerTL>Damage/Corner</cornerTL>
-                <cornerTR>Damage/Corner</cornerTR>
-                <cornerBL>Damage/Corner</cornerBL>
-                <cornerBR>Damage/Corner</cornerBR>
-            </damageData>
-        </graphicData>
-        <castEdgeShadows>false</castEdgeShadows>
-        <staticSunShadowHeight>0.20</staticSunShadowHeight>
-        <inspectorTabs>
-            <li>ITab_Bills</li>
-        </inspectorTabs>
-        <building>
-            <spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
-        </building>
-        <fillPercent>0.5</fillPercent>
-        <interactionCellOffset>(0,0,-1)</interactionCellOffset>
-        <hasInteractionCell>true</hasInteractionCell>
-        <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
-        <designationCategory>Production</designationCategory>
-        <uiOrder>2530</uiOrder>
-        <surfaceType>Item</surfaceType>
-        <designationHotKey>Misc12</designationHotKey>
-        <constructionSkillPrerequisite>6</constructionSkillPrerequisite>
-        <placeWorkers>
-            <li>PlaceWorker_PreventInteractionSpotOverlap</li>
-        </placeWorkers>
-        <researchPrerequisites>
-            <li>RR_Research_GlutoniumFabrication</li>
-        </researchPrerequisites>
-    </ThingDef>
-
-    <ThingDef ParentName="UnfinishedBase">
-        <defName>RR_UnfinishedGluttonium</defName>
-        <label>unrealized gluttonium</label>
-        <description>An unrealized chunk of gluttonium.</description>
-        <statBases>
-            <Flammability>0.5</Flammability>
-        </statBases>
-        <graphicData>
-            <texPath>Things/Item/Unfinished/UnfinishedComponent</texPath>
-            <graphicClass>Graphic_Single</graphicClass>
-        </graphicData>
-        <stuffCategories Inherit="false" />
-    </ThingDef>
-
-    <RecipeDef>
-        <defName>RR_Make_Gluttonium</defName>
-        <label>make gluttonium</label>
-        <description>Make pure gluttonium.</description>
-        <jobString>Making pure gluttonium.</jobString>
-        <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
-        <effectWorking>Cook</effectWorking>
-        <soundWorking>Recipe_Machining</soundWorking>
-        <workAmount>10000</workAmount>
-        <unfinishedThingDef>RR_UnfinishedGluttonium</unfinishedThingDef>
-        <ingredients/>
-        <fixedIngredientFilter/>
-        <products>
-            <RR_Gluttonium>25</RR_Gluttonium>
-        </products>
-        <skillRequirements>
-            <Crafting>8</Crafting>
-        </skillRequirements>
-        <workSkill>Crafting</workSkill>
-        <displayPriority>10</displayPriority>
-    </RecipeDef>  
+  <ThingDef ParentName="BenchBase">
+    <defName>RR_GluttoniumFabricator</defName>
+    <label>gluttonium fabricator</label>
+    <description>Synthesize five gluttonium from 50 steel and 20 chemfuel per batch. Uses 1,200 W while powered, including idle time. Fantasy colonies can also choose a separate power-only replication bill.</description>
+    <thingClass>Building_WorkTable</thingClass>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <pathCost>50</pathCost>
+    <statBases>
+      <Mass>180</Mass>
+      <MaxHitPoints>550</MaxHitPoints>
+      <Beauty>2</Beauty>
+      <WorkToBuild>8000</WorkToBuild>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <minifiedDef Inherit="false" />
+    <thingCategories Inherit="false" />
+    <size>(1,1)</size>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>1200</basePowerConsumption>
+        <shortCircuitInRain>true</shortCircuitInRain>
+      </li>
+      <li Class="CompProperties_Flickable" />
+      <li Class="CompProperties_Breakdownable" />
+    </comps>
+    <graphicData>
+      <texPath>Things/Building/Production/GluttoniumFabricator</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <drawSize>(1,1)</drawSize>
+      <damageData>
+        <cornerTL>Damage/Corner</cornerTL>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBL>Damage/Corner</cornerBL>
+        <cornerBR>Damage/Corner</cornerBR>
+      </damageData>
+    </graphicData>
+    <castEdgeShadows>false</castEdgeShadows>
+    <staticSunShadowHeight>0.20</staticSunShadowHeight>
+    <inspectorTabs>
+      <li>ITab_Bills</li>
+    </inspectorTabs>
+    <building>
+      <spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+    </building>
+    <fillPercent>0.5</fillPercent>
+    <interactionCellOffset>(0,0,-1)</interactionCellOffset>
+    <hasInteractionCell>true</hasInteractionCell>
+    <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+    <designationCategory>Production</designationCategory>
+    <uiOrder>2530</uiOrder>
+    <surfaceType>Item</surfaceType>
+    <designationHotKey>Misc12</designationHotKey>
+    <constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+    <placeWorkers>
+      <li>PlaceWorker_PreventInteractionSpotOverlap</li>
+    </placeWorkers>
+    <researchPrerequisites>
+      <li>RR_Research_GlutoniumFabrication</li>
+    </researchPrerequisites>
+    <costList Inherit="False">
+      <Steel>300</Steel>
+      <Plasteel>80</Plasteel>
+      <ComponentIndustrial>6</ComponentIndustrial>
+      <ComponentSpacer>2</ComponentSpacer>
+      <RR_Gluttonium>6</RR_Gluttonium>
+    </costList>
+    <recipes Inherit="False">
+      <li>RR_Make_Gluttonium</li>
+      <li>RR_Replicate_Gluttonium</li>
+    </recipes>
+  </ThingDef>
+  <ThingDef ParentName="UnfinishedBase">
+    <defName>RR_UnfinishedGluttonium</defName>
+    <label>unrealized gluttonium</label>
+    <description>An unrealized chunk of gluttonium.</description>
+    <statBases>
+      <Flammability>0.5</Flammability>
+    </statBases>
+    <graphicData>
+      <texPath>Things/Item/Unfinished/UnfinishedComponent</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <stuffCategories Inherit="false" />
+  </ThingDef>
+  <RecipeDef>
+    <defName>RR_Make_Gluttonium</defName>
+    <label>synthesize gluttonium x5</label>
+    <description>Consume 50 steel and 20 chemfuel to synthesize five gluttonium. The input cost, skilled work and electricity apply to every batch.</description>
+    <jobString>Synthesizing gluttonium.</jobString>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_Machining</soundWorking>
+    <workAmount>8000</workAmount>
+    <unfinishedThingDef>RR_UnfinishedGluttonium</unfinishedThingDef>
+    <products>
+      <RR_Gluttonium>5</RR_Gluttonium>
+    </products>
+    <skillRequirements>
+      <Crafting>8</Crafting>
+    </skillRequirements>
+    <workSkill>Crafting</workSkill>
+    <displayPriority>10</displayPriority>
+    <researchPrerequisite>RR_Research_GlutoniumFabrication</researchPrerequisite>
+    <ingredients Inherit="False">
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Steel</li>
+          </thingDefs>
+        </filter>
+        <count>50</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Chemfuel</li>
+          </thingDefs>
+        </filter>
+        <count>20</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter Inherit="False">
+      <thingDefs>
+        <li>Chemfuel</li>
+        <li>Steel</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <defaultIngredientFilter Inherit="False">
+      <thingDefs>
+        <li>Chemfuel</li>
+        <li>Steel</li>
+      </thingDefs>
+    </defaultIngredientFilter>
+  </RecipeDef>
+  <RecipeDef>
+    <defName>RR_Replicate_Gluttonium</defName>
+    <label>replicate gluttonium x5 (Fantasy)</label>
+    <description>Fantasy only: replicate five gluttonium using electricity and 20,000 work. The input-consuming synthesis bill remains available in every mode.</description>
+    <jobString>Replicating gluttonium.</jobString>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_Machining</soundWorking>
+    <workAmount>20000</workAmount>
+    <unfinishedThingDef>RR_UnfinishedGluttonium</unfinishedThingDef>
+    <products>
+      <RR_Gluttonium>5</RR_Gluttonium>
+    </products>
+    <skillRequirements>
+      <Crafting>8</Crafting>
+    </skillRequirements>
+    <workSkill>Crafting</workSkill>
+    <displayPriority>10</displayPriority>
+    <researchPrerequisite>RR_Research_GlutoniumFabrication</researchPrerequisite>
+    <ingredients Inherit="False" />
+    <fixedIngredientFilter Inherit="False" />
+    <defaultIngredientFilter Inherit="False" />
+  </RecipeDef>
 </Defs>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <PreceptDef ParentName="FestivalBase">
+    <defName>RR_CommunalFeast</defName>
+    <label>communal feast</label>
+    <description>Gather around a table to share real prepared meals. Participation and outcome depend on who actually eats.</description>
+    <ritualPatternBase>RR_CommunalFeast</ritualPatternBase>
+    <allowDuplicates>false</allowDuplicates>
+    <allowOptionalRitualObligations>true</allowOptionalRitualObligations>
+    <canGenerateAsSpecialPrecept>true</canGenerateAsSpecialPrecept>
+    <requiredMemes><li>RR_FoodSupremacy</li></requiredMemes>
+    <associatedMemes><li>RR_FoodSupremacy</li></associatedMemes>
+  </PreceptDef>
+
+  <RitualPatternDef ParentName="CelebrationPartyChat">
+    <defName>RR_CommunalFeast</defName>
+    <patternGroupTag />
+    <tags Inherit="False" />
+    <ritualExpectedDesc>Every year on {DATE}, {MEMBERS} can gather around a table to share a meal.</ritualExpectedDesc>
+    <ritualBehavior>RR_CommunalFeastBehavior</ritualBehavior>
+    <ritualOutcomeEffect>RR_CommunalFeastOutcome</ritualOutcomeEffect>
+  </RitualPatternDef>
+
+  <DutyDef>
+    <defName>RR_CommunalFeastDuty</defName>
+    <label>eat at communal feast</label>
+    <hook>MediumPriority</hook>
+    <thinkNode Class="ThinkNode_Priority">
+      <subNodes>
+        <li Class="ThinkNode_ConditionalInGatheringArea">
+          <subNodes>
+            <li Class="RimRound.Ideology.JobGiver_CommunalFeastMeal" />
+            <li Class="JobGiver_StandAndBeSociallyActive"><ticksRange>200~400</ticksRange></li>
+            <li Class="JobGiver_WanderInGatheringArea"><ticksBetweenWandersRange>50~200</ticksBetweenWandersRange></li>
+          </subNodes>
+        </li>
+        <li Class="JobGiver_WanderInGatheringArea"><ticksBetweenWandersRange>50~200</ticksBetweenWandersRange></li>
+      </subNodes>
+    </thinkNode>
+  </DutyDef>
+
+  <RitualBehaviorDef>
+    <defName>RR_CommunalFeastBehavior</defName>
+    <workerClass>RimRound.Ideology.RitualBehaviorWorker_CommunalFeast</workerClass>
+    <roles />
+    <durationTicks>5000</durationTicks>
+    <spectatorsLabel>Participants</spectatorsLabel>
+    <spectatorGerund>participate</spectatorGerund>
+    <stages>
+      <li>
+        <defaultDuty>RR_CommunalFeastDuty</defaultDuty>
+        <essential>true</essential>
+        <endTriggers>
+          <li Class="StageEndTrigger_DurationPercentage"><percentage>1</percentage></li>
+        </endTriggers>
+      </li>
+    </stages>
+  </RitualBehaviorDef>
+
+  <RitualOutcomeEffectDef>
+    <defName>RR_CommunalFeastOutcome</defName>
+    <description>Real meal participation, attendance, and the dining room affect quality. Only people who eat receive an outcome memory.</description>
+    <workerClass>RimRound.Ideology.RitualOutcomeEffectWorker_CommunalFeast</workerClass>
+    <comps>
+      <li Class="RimRound.Ideology.RitualOutcomeComp_CommunalMeals">
+        <label>participants who ate</label>
+        <curve><points><li>(0, -0.5)</li><li>(1, 0)</li><li>(3, 0.15)</li><li>(6, 0.3)</li></points></curve>
+      </li>
+      <li Class="RitualOutcomeComp_ParticipantCount">
+        <label>participant count</label>
+        <curve><points><li>(1, 0)</li><li>(3, 0.05)</li><li>(6, 0.1)</li></points></curve>
+      </li>
+      <li Class="RitualOutcomeComp_RoomStat">
+        <label>room impressiveness</label>
+        <statDef>Impressiveness</statDef>
+        <curve><points><li>(0, 0)</li><li>(50, 0.05)</li><li>(120, 0.1)</li></points></curve>
+      </li>
+    </comps>
+    <outcomeChances>
+      <li><label>Failed</label><chance>0.15</chance><memory>RR_CommunalFeastFailed</memory><description>The {0} failed to bring people together for a meal.</description><positivityIndex>-1</positivityIndex></li>
+      <li><label>Quiet</label><chance>0.35</chance><memory>RR_CommunalFeastQuiet</memory><description>The {0} was a quiet shared meal.</description><positivityIndex>0</positivityIndex></li>
+      <li><label>Warm</label><chance>0.4</chance><memory>RR_CommunalFeastWarm</memory><description>The {0} brought everyone together around good food.</description><positivityIndex>1</positivityIndex></li>
+      <li><label>Memorable</label><chance>0.1</chance><memory>RR_CommunalFeastMemorable</memory><description>The {0} will be remembered for its generous table and company.</description><positivityIndex>2</positivityIndex></li>
+    </outcomeChances>
+  </RitualOutcomeEffectDef>
+
+  <ThoughtDef>
+    <defName>RR_CommunalFeastFailed</defName><thoughtClass>Thought_AttendedRitual</thoughtClass>
+    <durationDays>2</durationDays><stackLimit>1</stackLimit>
+    <stages><li><label>failed feast</label><description>Our gathering did not become much of a feast.</description><baseMoodEffect>-1</baseMoodEffect></li></stages>
+  </ThoughtDef>
+  <ThoughtDef>
+    <defName>RR_CommunalFeastQuiet</defName><thoughtClass>Thought_AttendedRitual</thoughtClass>
+    <durationDays>2</durationDays><stackLimit>1</stackLimit>
+    <stages><li><label>quiet feast</label><description>Sharing that meal was pleasant.</description><baseMoodEffect>1</baseMoodEffect></li></stages>
+  </ThoughtDef>
+  <ThoughtDef>
+    <defName>RR_CommunalFeastWarm</defName><thoughtClass>Thought_AttendedRitual</thoughtClass>
+    <durationDays>2</durationDays><stackLimit>1</stackLimit>
+    <stages><li><label>warm feast</label><description>I enjoyed eating together with everyone.</description><baseMoodEffect>3</baseMoodEffect></li></stages>
+  </ThoughtDef>
+  <ThoughtDef>
+    <defName>RR_CommunalFeastMemorable</defName><thoughtClass>Thought_AttendedRitual</thoughtClass>
+    <durationDays>2</durationDays><stackLimit>1</stackLimit>
+    <stages><li><label>memorable feast</label><description>That shared meal made me feel at home.</description><baseMoodEffect>5</baseMoodEffect></li></stages>
+  </ThoughtDef>
+</Defs>

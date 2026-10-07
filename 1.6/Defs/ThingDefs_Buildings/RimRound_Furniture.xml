@@ -4,8 +4,9 @@
 	<ThingDef ParentName="BuildingBase" Name="BlobBedBase">
 		<defName>BlobBed_FoldsOfHeaven_z</defName>
 		<label>blob bed</label>
-		<description>A spot on a very obese pawn where people should sleep. Very comfortable.</description>
+		<description>A pawn-bound resting place maintained while its originating pawn remains alive, above the blob threshold and in another bed. The baseline works without perks in Balanced and Fantasy; improved tiers require Legacy. Ending the transformation preserves body mass.</description>
 		<thingClass>RimRound.Things.Building_BlobBed</thingClass>
+		<tickerType>Normal</tickerType>
 		<graphicData>
 		  <texPath>BlankTexture</texPath>
 		  <graphicClass>Graphic_Multi</graphicClass>

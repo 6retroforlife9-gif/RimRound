@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version='1.0' encoding='utf-8'?>
 <Defs>
   <ThingDef>
     <defName>MineableFlesh</defName>
     <label>flesh</label>
-    <description>~</description>
+    <description>An unfinished internal terrain prototype, retained for existing references. It has no normal generation, trade or construction route.</description>
     <graphicData>
       <texPath>WIP/Skin_Atlas</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -18,10 +18,7 @@
     <category>Building</category>
     <selectable>true</selectable>
     <drawerType>MapMeshOnly</drawerType>
-
-	
     <thingClass>Mineable</thingClass>
-
     <altitudeLayer>Building</altitudeLayer>
     <passability>Impassable</passability>
     <blockWind>true</blockWind>
@@ -37,8 +34,8 @@
     <fertility>0</fertility>
     <canOverlapZones>false</canOverlapZones>
     <statBases>
-		<MaxHitPoints>1500</MaxHitPoints>
-		<Flammability>0</Flammability>
+      <MaxHitPoints>1500</MaxHitPoints>
+      <Flammability>0</Flammability>
     </statBases>
     <building>
       <isInert>true</isInert>
@@ -46,15 +43,16 @@
       <canBuildNonEdificesUnder>false</canBuildNonEdificesUnder>
       <deconstructible>true</deconstructible>
       <destroyShakeAmount>0</destroyShakeAmount>
-	  <isResourceRock>false</isResourceRock>
-
+      <isResourceRock>false</isResourceRock>
     </building>
     <damageMultipliers>
       <li>
         <damageDef>Thump</damageDef>
         <multiplier>4</multiplier>
       </li>
-    </damageMultipliers>	
+    </damageMultipliers>
+    <generateAllowChance>0</generateAllowChance>
+    <tradeability>None</tradeability>
+    <scatterableOnMapGen>false</scatterableOnMapGen>
   </ThingDef>
-    
-</Defs>  
+</Defs>

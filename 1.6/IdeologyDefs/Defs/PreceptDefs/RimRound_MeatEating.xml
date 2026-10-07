@@ -4,7 +4,7 @@
     <defName>RR_MeatEating_FoodIsFood</defName>
     <issue>MeatEating</issue>
     <label>neutral</label>
-    <description>Meat is food just like any other. Avoiding it is wrong.</description>
+    <description>Meat is one food among many. Eating it or avoiding it is a personal choice.</description>
     <impact>Low</impact>
     <displayOrderInIssue>1</displayOrderInIssue>
     <displayOrderInImpact>10</displayOrderInImpact>

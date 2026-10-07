@@ -4,7 +4,7 @@
 		<defName>RR_Research_SyntheticDigestion</defName>
 		<label>synthetic digestion</label>
 		<tab>RimRoundTech</tab>
-		<description>Craft bionic stomachs that process and digest food far faster than a normal human stomach.</description>
+		<description>Craft metabolic implants for faster digestion with a smaller stomach capacity.</description>
 		<baseCost>2000</baseCost>
 		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
 		<requiredResearchFacilities>
@@ -13,6 +13,7 @@
 		<techLevel>Spacer</techLevel>
 		<prerequisites>
 			<li>Fabrication</li>
+			<li>Bionics</li>
 		</prerequisites>		
 		<researchViewX>0</researchViewX>
 		<researchViewY>2</researchViewY>
@@ -22,7 +23,7 @@
 		<defName>RR_Research_HungerImplant</defName>
 		<label>hunger implant</label>
 		<tab>RimRoundTech</tab>
-		<description>Create a high-tech brain implant that stimulates the target's appetite, causing them to digest food and gain weight more efficiently.</description>
+		<description>Create an appetite regulator that expands stomach capacity while increasing ordinary hunger.</description>
 		<baseCost>1600</baseCost>
 		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
 		<requiredResearchFacilities>
@@ -40,7 +41,7 @@
 		<defName>RR_Research_AIEncouragement</defName>
 		<label>AI encouragement</label>
 		<tab>RimRoundTech</tab>
-		<description>Persuade a rogue archotech to install itself into your colonists, improving their metabolism and mood by magnitudes.</description>
+		<description>Craft a neural encouragement chip that modestly improves digestion and mood at the cost of consciousness.</description>
 		<baseCost>4000</baseCost>
 		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
 		<requiredResearchFacilities>
@@ -52,5 +53,18 @@
 		</prerequisites>		
 		<researchViewX>2</researchViewX>
 		<researchViewY>2</researchViewY>
-	</ResearchProjectDef>		
+	</ResearchProjectDef>
+	<ResearchProjectDef>
+		<defName>RR_Research_ArchotechAdaptation</defName>
+		<label>exceptional metabolic adaptation</label>
+		<tab>RimRoundTech</tab>
+		<description>Produce an expensive implant for extraordinary digestion and capacity, with greater hunger and difficult surgery.</description>
+		<baseCost>6000</baseCost>
+		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+		<requiredResearchFacilities><li>MultiAnalyzer</li></requiredResearchFacilities>
+		<techLevel>Ultra</techLevel>
+		<prerequisites><li>RR_Research_SyntheticDigestion</li><li>RR_Research_AIEncouragement</li></prerequisites>
+		<researchViewX>3</researchViewX>
+		<researchViewY>2</researchViewY>
+	</ResearchProjectDef>
 </Defs>

@@ -4,7 +4,7 @@
 ───────────────────────────────────────────────────────────────-->
 <TraitDef>
   <defName>SG_TraitDigestDown</defName>
-  <commonality>2</commonality>
+  <commonality>0</commonality>
   <degreeDatas>
     <li>
       <degree>0</degree>
@@ -25,7 +25,7 @@
 
 <TraitDef>
   <defName>SG_TraitDigestUp</defName>
-  <commonality>2</commonality>
+  <commonality>0</commonality>
   <degreeDatas>
     <li>
       <degree>0</degree>
@@ -46,7 +46,7 @@
 
 <TraitDef>
   <defName>SG_TraitDigestUpPlus</defName>
-  <commonality>2</commonality>
+  <commonality>0</commonality>
   <degreeDatas>
     <li>
       <degree>0</degree>
@@ -71,7 +71,7 @@
 ───────────────────────────────────────────────────────────────-->
 <TraitDef>
   <defName>SG_TraitWeightGainUpPlus</defName>
-  <commonality>2</commonality>
+  <commonality>0</commonality>
   <degreeDatas>
     <li>
       <degree>0</degree>
@@ -93,7 +93,7 @@
 
 <TraitDef>
   <defName>SG_TraitWeightGainUp</defName>
-  <commonality>2</commonality>
+  <commonality>0</commonality>
   <degreeDatas>
     <li>
       <degree>0</degree>
@@ -115,7 +115,7 @@
 
 <TraitDef>
   <defName>SG_TraitWeightGainDown</defName>
-  <commonality>2</commonality>
+  <commonality>0</commonality>
   <degreeDatas>
     <li>
       <degree>0</degree>
@@ -137,7 +137,7 @@
 
 <TraitDef>
   <defName>SG_TraitWeightGainDownPlus</defName>
-  <commonality>2</commonality>
+  <commonality>0</commonality>
   <degreeDatas>
     <li>
       <degree>0</degree>
@@ -163,7 +163,7 @@
 ───────────────────────────────────────────────────────────────-->
 <TraitDef>
   <defName>SG_TraitEatSpeedDownPlus</defName>
-  <commonality>2</commonality>
+  <commonality>0</commonality>
   <degreeDatas>
     <li>
       <degree>0</degree>
@@ -185,7 +185,7 @@
 
 <TraitDef>
   <defName>SG_TraitEatSpeedDown</defName>
-  <commonality>2</commonality>
+  <commonality>0</commonality>
   <degreeDatas>
     <li>
       <degree>0</degree>
@@ -207,7 +207,7 @@
 
 <TraitDef>
   <defName>SG_TraitEatSpeedUp</defName>
-  <commonality>2</commonality>
+  <commonality>0</commonality>
   <degreeDatas>
     <li>
       <degree>0</degree>
@@ -229,7 +229,7 @@
 
 <TraitDef>
   <defName>SG_TraitEatSpeedUpPlus</defName>
-  <commonality>2</commonality>
+  <commonality>0</commonality>
   <degreeDatas>
     <li>
       <degree>0</degree>
@@ -255,7 +255,7 @@
 ───────────────────────────────────────────────────────────────-->
 <TraitDef>
   <defName>SG_TraitStomachElasticityDown</defName>
-  <commonality>2</commonality>
+  <commonality>0</commonality>
   <degreeDatas>
     <li>
       <degree>0</degree>
@@ -276,7 +276,7 @@
 
 <TraitDef>
   <defName>SG_TraitStomachElasticityUp</defName>
-  <commonality>2</commonality>
+  <commonality>0</commonality>
   <degreeDatas>
     <li>
       <degree>0</degree>
@@ -297,7 +297,7 @@
 
 <TraitDef>
   <defName>SG_TraitStomachElasticityUpPlus</defName>
-  <commonality>2</commonality>
+  <commonality>0</commonality>
   <degreeDatas>
     <li>
       <degree>0</degree>

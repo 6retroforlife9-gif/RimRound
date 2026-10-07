@@ -3,5 +3,7 @@
 	<ResearchTabDef>
 		<defName>RimRoundTech</defName>
 		<label>RimRound</label>
+		<generalTitle>RimRound research</generalTitle>
+		<generalDescription>Develop food dispensers, automatic feeders, larger meals and food storage. Unlock gluttonium processing, metabolic drugs, implants and equipment as your colony advances.</generalDescription>
 	</ResearchTabDef>
 </Defs>

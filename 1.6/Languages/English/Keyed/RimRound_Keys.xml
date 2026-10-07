@@ -30,7 +30,7 @@
 	<DietMode_Fullness>Fullness Mode</DietMode_Fullness>
 	<DietMode_Disabled>Disabled</DietMode_Disabled>
 	
-	<DietMode_Tip>Test</DietMode_Tip>
+	<DietMode_Tip>Choose how this pawn decides when to eat. Nutrition follows the food need; fullness follows stomach volume; hybrid uses both. Disabled leaves food decisions to RimWorld.</DietMode_Tip>
 	<DietMode_CurrentMode>Current Mode</DietMode_CurrentMode>
 	
 	
@@ -200,7 +200,7 @@
 
 
 	<RR_ToolTip_Preferences_UseOnlyStandardSet>Toggle use of apple body type sprites. They can have less support, so you can switch all pawns to use this type here. If you want more fine grained control, pawn body archetype can be switched in debug mode.</RR_ToolTip_Preferences_UseOnlyStandardSet>
-	<RR_ToolTip_Preferences_UseZoomPortraitStyle>Use the alternate portrait style. Switches between keeping their face the same size or fitting their body to the box. Purely preference.</RR_ToolTip_Preferences_UseZoomPortraitStyle>
+	<RR_ToolTip_Preferences_UseZoomPortraitStyle>Switch between a face close-up and fitting the pawn's body to the portrait. Gelatinous stages always use fitted framing so the pawn stays visible.</RR_ToolTip_Preferences_UseZoomPortraitStyle>
 	<RR_ToolTip_Preferences_HidePacksForCustomBodies>Pack items (e.g. shield belt) scale with body size. Other items from mods can do this too. Enabling the setting will replace pack textures with the default clothing option.</RR_ToolTip_Preferences_HidePacksForCustomBodies>
 	<RR_ToolTip_Preferences_UsePoundsWherePossible>Use pounds instead of kilograms in certain displays. RimWorld uses metric for it's measurements, so stats such as 'mass' will remain unaffected.</RR_ToolTip_Preferences_UsePoundsWherePossible>
 	<RR_ToolTip_Preferences_ShowAllPerks>Show perks that this pawn will never be elligible to purchase. (E.g. race-specific perks)</RR_ToolTip_Preferences_ShowAllPerks>

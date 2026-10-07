@@ -185,6 +185,12 @@
 				<compClass>RimRound.FeedingTube.Comps.FoodNetStorage_ThingComp</compClass>
 				<capacity>1200</capacity>
 			</li>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<basePowerConsumption>400</basePowerConsumption>
+			</li>
+			<li Class="CompProperties_Flickable"/>
+			<li Class="CompProperties_Breakdownable"/>
 		</comps>
 		<researchPrerequisites>
 			<li>RR_Research_ExpandedFoodStorage</li>
@@ -221,6 +227,12 @@
 				<compClass>RimRound.FeedingTube.Comps.FoodNetStorage_ThingComp</compClass>
 				<capacity>100</capacity>
 			</li>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<basePowerConsumption>160</basePowerConsumption>
+			</li>
+			<li Class="CompProperties_Flickable"/>
+			<li Class="CompProperties_Breakdownable"/>
 		</comps>
 		<researchPrerequisites>
 			<li>RR_Research_FoodStorage</li>
@@ -257,6 +269,12 @@
 				<compClass>RimRound.FeedingTube.Comps.FoodNetStorage_ThingComp</compClass>
 				<capacity>50</capacity>
 			</li>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<basePowerConsumption>80</basePowerConsumption>
+			</li>
+			<li Class="CompProperties_Flickable"/>
+			<li Class="CompProperties_Breakdownable"/>
 		</comps>
 		<researchPrerequisites>
 			<li>RR_Research_FoodStorage</li>
@@ -391,6 +409,7 @@
 		<hasInteractionCell>true</hasInteractionCell>
 		<interactionCellOffset>(0,0,-1)</interactionCellOffset>
 		<comps>
+			<li Class="RimRound.FeedingTube.CompProperties_FoodFaucetPortion"/>
 			<li Class="CompProperties_Power">
 				<compClass>CompPowerTrader</compClass>
 				<basePowerConsumption>170</basePowerConsumption>
@@ -558,6 +577,8 @@
 		<pathCost>42</pathCost>
 		<canOverlapZones>false</canOverlapZones>
 		<building>
+			<blueprintClass>Blueprint_Storage</blueprintClass>
+			<storageGroupTag>Hopper</storageGroupTag>
 			<fixedStorageSettings>
 				<priority>Important</priority>
 				<filter>

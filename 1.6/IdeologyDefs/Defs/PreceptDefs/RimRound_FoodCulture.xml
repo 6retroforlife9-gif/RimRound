@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <IssueDef>
+    <defName>RR_MealPortion</defName>
+    <label>meal portions</label>
+    <iconPath>UI/Issues/MeatEating</iconPath>
+  </IssueDef>
+  <IssueDef>
+    <defName>RR_Hospitality</defName>
+    <label>hospitality</label>
+    <iconPath>UI/Issues/Charity</iconPath>
+  </IssueDef>
+  <IssueDef>
+    <defName>RR_BodyIdeal</defName>
+    <label>body ideals</label>
+    <iconPath>UI/Issues/BodyModifications</iconPath>
+  </IssueDef>
+
+  <PreceptDef>
+    <defName>RR_MealPortion_Neutral</defName>
+    <issue>RR_MealPortion</issue>
+    <label>personal choice</label>
+    <description>Everyone decides how much to eat for themselves.</description>
+    <impact>Low</impact>
+  </PreceptDef>
+  <PreceptDef>
+    <defName>RR_MealPortion_Abundant</defName>
+    <issue>RR_MealPortion</issue>
+    <label>abundant</label>
+    <description>A satisfying prepared meal is worth celebrating. Nobody is required to eat beyond their own comfort.</description>
+    <impact>Low</impact>
+    <associatedMemes><li>RR_FoodSupremacy</li></associatedMemes>
+    <comps>
+      <li Class="PreceptComp_SituationalThought"><thought>RR_MealPortion_AbundantThought</thought></li>
+    </comps>
+  </PreceptDef>
+  <PreceptDef>
+    <defName>RR_MealPortion_Modest</defName>
+    <issue>RR_MealPortion</issue>
+    <label>modest</label>
+    <description>Enjoying a prepared meal while leaving room for later is admirable.</description>
+    <impact>Low</impact>
+    <comps>
+      <li Class="PreceptComp_SituationalThought"><thought>RR_MealPortion_ModestThought</thought></li>
+    </comps>
+  </PreceptDef>
+
+  <PreceptDef>
+    <defName>RR_Hospitality_Neutral</defName>
+    <issue>RR_Hospitality</issue>
+    <label>personal choice</label>
+    <description>Sharing a table is welcome, but carries no special religious expectation.</description>
+    <impact>Low</impact>
+  </PreceptDef>
+  <HistoryEventDef>
+    <defName>RR_AteAtCommunalFeast</defName>
+    <label>ate at communal feast</label>
+  </HistoryEventDef>
+  <PreceptDef>
+    <defName>RR_Hospitality_SharedTable</defName>
+    <issue>RR_Hospitality</issue>
+    <label>shared table</label>
+    <description>Eating together is a modest expression of hospitality.</description>
+    <impact>Low</impact>
+    <associatedMemes><li>RR_FoodSupremacy</li></associatedMemes>
+    <comps>
+      <li Class="PreceptComp_SelfTookMemoryThought">
+        <eventDef>RR_AteAtCommunalFeast</eventDef>
+        <thought>RR_SharedTableMemory</thought>
+      </li>
+    </comps>
+  </PreceptDef>
+
+  <PreceptDef>
+    <defName>RR_BodyIdeal_PersonalChoice</defName>
+    <issue>RR_BodyIdeal</issue>
+    <label>personal choice</label>
+    <description>Each person decides what body suits them.</description>
+    <impact>Low</impact>
+  </PreceptDef>
+  <PreceptDef>
+    <defName>RR_BodyIdeal_Ample</defName>
+    <issue>RR_BodyIdeal</issue>
+    <label>ample admired</label>
+    <description>An ample body can be beautiful when it matches a person's own preference.</description>
+    <impact>Low</impact>
+    <associatedMemes><li>RR_FoodSupremacy</li></associatedMemes>
+    <comps>
+      <li Class="PreceptComp_SituationalThought"><thought>RR_BodyIdeal_AmpleThought</thought></li>
+    </comps>
+  </PreceptDef>
+  <PreceptDef>
+    <defName>RR_BodyIdeal_Lean</defName>
+    <issue>RR_BodyIdeal</issue>
+    <label>lean admired</label>
+    <description>A lean body can be beautiful when it matches a person's own preference.</description>
+    <impact>Low</impact>
+    <comps>
+      <li Class="PreceptComp_SituationalThought"><thought>RR_BodyIdeal_LeanThought</thought></li>
+    </comps>
+  </PreceptDef>
+
+  <ThoughtDef>
+    <defName>RR_MealPortion_AbundantThought</defName>
+    <workerClass>RimRound.Ideology.ThoughtWorker_Precept_MealPortion</workerClass>
+    <thoughtClass>Thought_Situational</thoughtClass>
+    <stages><li><label>satisfied by a meal</label><description>I recently enjoyed a satisfying prepared meal.</description><baseMoodEffect>1</baseMoodEffect></li></stages>
+  </ThoughtDef>
+  <ThoughtDef>
+    <defName>RR_MealPortion_ModestThought</defName>
+    <workerClass>RimRound.Ideology.ThoughtWorker_Precept_MealPortion</workerClass>
+    <thoughtClass>Thought_Situational</thoughtClass>
+    <stages><li><label>enjoyed a measured meal</label><description>I recently ate well without going beyond my comfort.</description><baseMoodEffect>1</baseMoodEffect></li></stages>
+  </ThoughtDef>
+  <ThoughtDef>
+    <defName>RR_BodyIdeal_AmpleThought</defName>
+    <workerClass>RimRound.Ideology.ThoughtWorker_Precept_BodyIdeal</workerClass>
+    <thoughtClass>Thought_Situational</thoughtClass>
+    <stages><li><label>at ease in my body</label><description>My body reflects the shape I personally like.</description><baseMoodEffect>2</baseMoodEffect></li></stages>
+  </ThoughtDef>
+  <ThoughtDef>
+    <defName>RR_BodyIdeal_LeanThought</defName>
+    <workerClass>RimRound.Ideology.ThoughtWorker_Precept_BodyIdeal</workerClass>
+    <thoughtClass>Thought_Situational</thoughtClass>
+    <stages><li><label>at ease in my body</label><description>My body reflects the shape I personally like.</description><baseMoodEffect>2</baseMoodEffect></li></stages>
+  </ThoughtDef>
+  <ThoughtDef>
+    <defName>RR_SharedTableMemory</defName>
+    <durationDays>2</durationDays>
+    <stackLimit>1</stackLimit>
+    <stages><li><label>shared a meal</label><description>I ate a real meal with others at our table.</description><baseMoodEffect>1</baseMoodEffect></li></stages>
+  </ThoughtDef>
+</Defs>

@@ -18,8 +18,9 @@
       <graphicClass>Graphic_MealVariants</graphicClass>
     </graphicData>
     <statBases>
-      <MarketValue>20</MarketValue>
-      <WorkToMake>375</WorkToMake>
+      <MarketValue>25.00</MarketValue>
+      <Mass>0.74</Mass>
+      <WorkToMake>500</WorkToMake>
       <Nutrition>1.5</Nutrition>
     </statBases>
   </ThingDef>
@@ -33,8 +34,9 @@
       <graphicClass>Graphic_MealVariants</graphicClass>
     </graphicData>
     <statBases>
-      <MarketValue>25</MarketValue>
-      <WorkToMake>525</WorkToMake>
+      <MarketValue>41.67</MarketValue>
+      <Mass>1.23</Mass>
+      <WorkToMake>834</WorkToMake>
       <Nutrition>2.5</Nutrition>
     </statBases>
   </ThingDef>
@@ -48,8 +50,9 @@
       <graphicClass>Graphic_MealVariants</graphicClass>
     </graphicData>
     <statBases>
-      <MarketValue>40</MarketValue>
-      <WorkToMake>750</WorkToMake>
+      <MarketValue>66.67</MarketValue>
+      <Mass>1.96</Mass>
+      <WorkToMake>1334</WorkToMake>
       <Nutrition>4.0</Nutrition>
     </statBases>
   </ThingDef>
@@ -63,8 +66,9 @@
       <graphicClass>Graphic_MealVariants</graphicClass>
     </graphicData>
     <statBases>
-      <MarketValue>50</MarketValue>
-      <WorkToMake>1050</WorkToMake>
+      <MarketValue>100.00</MarketValue>
+      <Mass>2.94</Mass>
+      <WorkToMake>2000</WorkToMake>
       <Nutrition>6.0</Nutrition>
     </statBases>
   </ThingDef>
@@ -78,8 +82,9 @@
       <graphicClass>Graphic_MealVariants</graphicClass>
     </graphicData>
     <statBases>
-      <MarketValue>100</MarketValue>
-      <WorkToMake>1750</WorkToMake>
+      <MarketValue>250.00</MarketValue>
+      <Mass>7.34</Mass>
+      <WorkToMake>5000</WorkToMake>
       <Nutrition>15.0</Nutrition>
     </statBases>
   </ThingDef> 

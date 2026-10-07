@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+  <RR_FaucetPortion_Auto>Auto</RR_FaucetPortion_Auto>
+  <RR_FaucetPortion_Normal>Normal (0.9)</RR_FaucetPortion_Normal>
+  <RR_FaucetPortion_Large>Large (1.5)</RR_FaucetPortion_Large>
+  <RR_FaucetPortion_Huge>Huge (2.5)</RR_FaucetPortion_Huge>
+  <RR_FaucetPortion_Enormous>Enormous (4)</RR_FaucetPortion_Enormous>
+  <RR_FaucetPortion_Massive>Massive (6)</RR_FaucetPortion_Massive>
+  <RR_FaucetPortion_Colossal>Colossal (15)</RR_FaucetPortion_Colossal>
+  <RR_FaucetPortionCommand>Portion: {0}</RR_FaucetPortionCommand>
+  <RR_FaucetPortionInspect>Food dispenser portion: {0}</RR_FaucetPortionInspect>
+  <RR_FaucetPortionAutoStatus>Auto chooses a researched complete serving for the recipient's current feeding need, limited by available food, food policy and fullness.</RR_FaucetPortionAutoStatus>
+  <RR_FaucetAutoMaximumCommand>Auto limit: {0}</RR_FaucetAutoMaximumCommand>
+  <RR_FaucetAutoMaximumInspect>Largest automatic portion: {0}</RR_FaucetAutoMaximumInspect>
+  <RR_FaucetAutoMaximumDesc>Limit the size Auto may choose. Research, available food and the recipient's needs still apply. A locked size becomes available only after its research is completed. Fixed portions use their own selected size.</RR_FaucetAutoMaximumDesc>
+  <RR_FaucetPortionFixedStatus>Dispenses only this {0}-nutrition serving when the full amount is available and suitable for the recipient. It does not substitute a smaller serving.</RR_FaucetPortionFixedStatus>
+  <RR_FaucetPortionFixedLocked>Unavailable: {0}. The dispenser waits for this research instead of switching to another size.</RR_FaucetPortionFixedLocked>
+  <RR_FaucetPortionRequiresResearch>requires {0}</RR_FaucetPortionRequiresResearch>
+  <RR_FaucetPortionMissingResearch>required research is unavailable</RR_FaucetPortionMissingResearch>
+  <RR_FaucetPortionMissingDef>this serving definition is unavailable</RR_FaucetPortionMissingDef>
+  <RR_FaucetPortionSelected>(selected)</RR_FaucetPortionSelected>
+</LanguageData>

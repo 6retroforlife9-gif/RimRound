@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- Native surgery owns medicine, failure, part selection and item recovery. -->
+  <RecipeDef ParentName="SurgeryRemoveImplantBase">
+    <defName>RR_RemoveHungerImplant</defName>
+    <label>remove hunger implant</label>
+    <description>Remove the hunger implant and recover it for reuse.</description>
+    <jobString>Removing hunger implant.</jobString>
+    <removesHediff>RR_HungerImplantHediff</removesHediff>
+  </RecipeDef>
+  <RecipeDef ParentName="SurgeryRemoveImplantBase">
+    <defName>RR_RemoveBionicMetabolizer</defName>
+    <label>remove bionic metabolizer</label>
+    <description>Remove the bionic metabolizer and recover it for reuse.</description>
+    <jobString>Removing bionic metabolizer.</jobString>
+    <removesHediff>RR_BionicMetabolizerHediff</removesHediff>
+  </RecipeDef>
+  <RecipeDef ParentName="SurgeryRemoveImplantBase">
+    <defName>RR_RemoveArchotechMetabolizer</defName>
+    <label>remove archotech metabolizer</label>
+    <description>Remove the archotech metabolizer and recover it for reuse.</description>
+    <jobString>Removing archotech metabolizer.</jobString>
+    <removesHediff>RR_ArchotechMetabolizerHediff</removesHediff>
+  </RecipeDef>
+  <RecipeDef ParentName="SurgeryRemoveImplantBase">
+    <defName>RR_RemoveAIEncouragementChip</defName>
+    <label>remove AI encouragement chip</label>
+    <description>Remove the AI encouragement chip and recover it for reuse.</description>
+    <jobString>Removing AI encouragement chip.</jobString>
+    <removesHediff>RR_AIEncouragementChipHediff</removesHediff>
+  </RecipeDef>
+  <RecipeDef ParentName="SurgeryRemoveImplantBase">
+    <defName>SG_RemoveSwellGlowImplant</defName>
+    <label>remove swell-glow implant</label>
+    <description>Remove the swell-glow implant and recover it for reuse.</description>
+    <jobString>Removing swell-glow implant.</jobString>
+    <removesHediff>SG_ImplantHediff</removesHediff>
+  </RecipeDef>
+</Defs>

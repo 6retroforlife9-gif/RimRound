@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <JobDef>
+    <defName>RR_AssistMobilityAid</defName>
+    <driverClass>RimRound.FeedOther.JobDriver_AssistMobilityAid</driverClass>
+    <reportString>Assisting with a mobility aid.</reportString>
+    <casualInterruptible>true</casualInterruptible>
+  </JobDef>
+  <WorkGiverDef>
+    <defName>RR_DoctorAssistMobilityAid</defName>
+    <label>assist with mobility aids</label>
+    <giverClass>RimRound.FeedOther.WorkGiver_AssistMobilityAid</giverClass>
+    <workType>Doctor</workType>
+    <priorityInType>40</priorityInType>
+    <verb>assist</verb>
+    <gerund>assisting with mobility</gerund>
+    <requiredCapacities><li>Moving</li><li>Manipulation</li></requiredCapacities>
+    <directOrderable>false</directOrderable>
+  </WorkGiverDef>
+</Defs>

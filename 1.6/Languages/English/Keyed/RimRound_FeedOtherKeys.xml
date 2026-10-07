@@ -222,6 +222,6 @@
   <RR_FoodNetworkBasicNeedsAdjacentBed>A basic feeder can connect only to an immediately adjacent occupied bed.</RR_FoodNetworkBasicNeedsAdjacentBed>
   <RR_FoodNetworkAlreadyLinked>That bed is already linked to another automatic feeder.</RR_FoodNetworkAlreadyLinked>
   <RR_FoodNetworkLinkUnavailable>The feeding-tube link could not be saved.</RR_FoodNetworkLinkUnavailable>
-  <RR_FoodNetworkGainModeDesc>Continuously feeds linked occupants toward the shared feeding target of {0}% hard fullness.</RR_FoodNetworkGainModeDesc>
+  <RR_FoodNetworkGainModeDesc>Continuously feeds linked occupants to 90% of comfortable stomach capacity, regardless of their food policy or body goal.</RR_FoodNetworkGainModeDesc>
   <RR_FoodNetworkMaximumModeDesc>Continuously feeds linked occupants toward {0}% hard fullness, while retaining the 95% rupture-safety ceiling.</RR_FoodNetworkMaximumModeDesc>
 </LanguageData>

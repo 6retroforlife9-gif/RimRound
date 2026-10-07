@@ -43,7 +43,7 @@
 		
 		<!--li>ExternalMods/RRX_Mealtime</li-->
 		<li IfModActive="Ludeon.RimWorld.Ideology">1.5/IdeologyDefs</li>
-		<li IfModActive="ArmoredAmpharos.Dogbolds">1.5/ExternalMods/DogboldRaceSupport</li>	
+		<li IfModActive="ArmoredAmpharos.Dogbolds">1.5/ExternalMods/DogboldRaceSupport</li>
 		<li IfModActive="ArmoredAmpharos.Foxbolds">1.5/ExternalMods/FoxboldRaceSupport</li>	
 		<li IfModActive="Hauvega.EquiumsSeries.Equiums">1.5/ExternalMods/HorseRaceSupport</li>		
 		<li IfModActive="AveryTheKitty.XenohumansAnthromorphs">1.5/ExternalMods/XenohumanlikeRaceSupport</li>
@@ -65,7 +65,7 @@
 		<li>1.5/ExternalMods/RimRoundExtraEvents</li-->		
 		
 		<!-- This is intentionally the 1.5 paths. Individual race support should be deprecated eventually in 1.6-->
-		<li IfModActive="Ludeon.RimWorld.Ideology">1.5/IdeologyDefs</li>
+		<li IfModActive="Ludeon.RimWorld.Ideology">1.6/IdeologyDefs</li>
 		<li IfModActive="ArmoredAmpharos.Dogbolds">1.5/ExternalMods/DogboldRaceSupport</li>	
 		<li IfModActive="ArmoredAmpharos.Foxbolds">1.5/ExternalMods/FoxboldRaceSupport</li>	
 		<li IfModActive="Hauvega.EquiumsSeries.Equiums">1.5/ExternalMods/HorseRaceSupport</li>		
