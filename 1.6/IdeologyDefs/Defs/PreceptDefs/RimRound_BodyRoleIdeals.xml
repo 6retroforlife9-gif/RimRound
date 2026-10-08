@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <IssueDef>
+    <defName>RR_LeadershipBodyIdeal</defName>
+    <label>leadership body ideal</label>
+  </IssueDef>
+  <PreceptDef>
+    <defName>RR_LeadershipBodyIdeal_None</defName>
+    <issue>RR_LeadershipBodyIdeal</issue>
+    <label>personal choice</label>
+    <description>Leadership carries no expectation about body size.</description>
+    <impact>Low</impact>
+  </PreceptDef>
+  <PreceptDef Name="RR_LeadershipBodyIdealBase" Abstract="True">
+    <issue>RR_LeadershipBodyIdeal</issue>
+    <impact>Medium</impact>
+    <associatedMemes><li>RR_EmbodiedAbundance</li></associatedMemes>
+  </PreceptDef>
+  <PreceptDef ParentName="RR_LeadershipBodyIdealBase">
+    <defName>RR_LeadershipBodyIdeal_Ample</defName>
+    <label>ample</label>
+    <description>Leaders and moral guides should welcome larger bodies. Their expected size is about 2.07 times their fixed race baseline (145 kg for a human). New holders have five days to approach it. After that, followers receive -1 mood per undersized occupied role, at most -2. Vacancies add no body-ideal penalty. Personal preferences still determine willing extra meals.</description>
+    <modExtensions><li Class="RimRound.Ideology.BodyRoleIdealExtension"><baselineRatio>2.0714286</baselineRatio></li></modExtensions>
+  </PreceptDef>
+  <PreceptDef ParentName="RR_LeadershipBodyIdealBase">
+    <defName>RR_LeadershipBodyIdeal_Massive</defName>
+    <label>massive</label>
+    <description>Leaders and moral guides should welcome larger bodies. Their expected size is about 4.36 times their fixed race baseline (305 kg for a human). New holders have five days to approach it. After that, followers receive -1 mood per undersized occupied role, at most -2. Vacancies add no body-ideal penalty. Personal preferences still determine willing extra meals.</description>
+    <modExtensions><li Class="RimRound.Ideology.BodyRoleIdealExtension"><baselineRatio>4.357143</baselineRatio></li></modExtensions>
+  </PreceptDef>
+  <PreceptDef ParentName="RR_LeadershipBodyIdealBase">
+    <defName>RR_LeadershipBodyIdeal_Immobile</defName>
+    <label>immobility revered</label>
+    <description>Leaders and moral guides should welcome larger bodies. Their expected size is about 5.36 times their fixed race baseline (375 kg for a human, the ordinary unassisted mobility threshold). Mobility aids do not count against this ideal. New holders have five days of grace, then followers receive -1 mood per undersized occupied role, at most -2. Vacancies add no body-ideal penalty. Personal preference still controls willing extra meals.</description>
+    <modExtensions><li Class="RimRound.Ideology.BodyRoleIdealExtension"><baselineRatio>5.357143</baselineRatio></li></modExtensions>
+  </PreceptDef>
+  <PreceptDef ParentName="RR_LeadershipBodyIdealBase">
+    <defName>RR_LeadershipBodyIdeal_Exceptional</defName>
+    <label>exceptional (Fantasy)</label>
+    <description>Fantasy only: leaders and moral guides embody exceptional abundance, with an expected size of 20.5 times their fixed race baseline (1435 kg for a human). New holders have five days of grace, then followers receive -1 mood per undersized occupied role, at most -2. Vacancies add no body-ideal penalty. This ideal is dormant outside Fantasy; its saved identity is retained. Personal preference still controls willing extra meals.</description>
+    <modExtensions><li Class="RimRound.Ideology.BodyRoleIdealExtension"><baselineRatio>20.5</baselineRatio><fantasyOnly>true</fantasyOnly></li></modExtensions>
+  </PreceptDef>
+  <ThoughtDef>
+    <defName>RR_BodyRoleExpectation</defName>
+    <workerClass>RimRound.Ideology.ThoughtWorker_BodyRoleExpectation</workerClass>
+    <validWhileDespawned>true</validWhileDespawned>
+    <stages>
+      <li><label>body ideal unmet</label><description>One of our occupied leadership roles has not yet reached our body's ideal size.</description><baseMoodEffect>-1</baseMoodEffect></li>
+      <li><label>body ideals unmet</label><description>Our leader and moral guide have not yet reached our body's ideal size.</description><baseMoodEffect>-2</baseMoodEffect></li>
+    </stages>
+  </ThoughtDef>
+</Defs>

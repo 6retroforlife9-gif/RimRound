@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThoughtDef>
+    <defName>RR_BodyPreference</defName>
+    <workerClass>RimRound.AI.ThoughtWorker_BodyPreference</workerClass>
+    <validWhileDespawned>true</validWhileDespawned>
+    <stages>
+      <li>
+        <label>smaller than I prefer</label>
+        <description>I would prefer a larger body. My assigned goal and my own wishes may be different.</description>
+        <baseMoodEffect>-2</baseMoodEffect>
+      </li>
+      <li>
+        <label>comfortable with my size</label>
+        <description>My body is within the range I currently prefer.</description>
+        <baseMoodEffect>3</baseMoodEffect>
+      </li>
+      <li>
+        <label>larger than I prefer</label>
+        <description>I would prefer a smaller body. My assigned goal and my own wishes may be different.</description>
+        <baseMoodEffect>-2</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+</Defs>

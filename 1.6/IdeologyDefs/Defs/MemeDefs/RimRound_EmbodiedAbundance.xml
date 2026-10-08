@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <MemeDef>
+    <defName>RR_EmbodiedAbundance</defName>
+    <label>embodied abundance</label>
+    <description>A larger body is a visible expression of abundance. Leaders and moral guides are expected to embrace this ideal, while each person's own preferences govern willing assistance.</description>
+    <iconPath>UI/PerkIcons/FOOD_IS_FOOD</iconPath>
+    <groupDef>Misc</groupDef>
+    <impact>2</impact>
+    <renderOrder>121</renderOrder>
+    <requireOne><li>
+      <li>RR_LeadershipBodyIdeal_Ample</li>
+      <li>RR_LeadershipBodyIdeal_Massive</li>
+      <li>RR_LeadershipBodyIdeal_Immobile</li>
+      <li>RR_LeadershipBodyIdeal_Exceptional</li>
+    </li></requireOne>
+    <generalRules><rulesStrings>
+      <li>memeCreed->abundance</li>
+      <li>memeConcept->growth</li>
+      <li>memeAdjective->ample</li>
+      <li>memeLeaderNoun->exemplar</li>
+      <li>memeMoralist->guide</li>
+    </rulesStrings></generalRules>
+  </MemeDef>
+</Defs>

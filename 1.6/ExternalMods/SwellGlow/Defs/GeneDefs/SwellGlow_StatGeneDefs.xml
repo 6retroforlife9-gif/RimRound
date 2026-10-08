@@ -6,51 +6,36 @@
         <description>Digestion -25%. Slower processing keeps meals in the stomach longer.</description>
         <iconPath>Genes/DigestionDown</iconPath>
         <displayOrderInCategory>111</displayOrderInCategory>
-        <forcedTraits>
-            <li>
-            <def>SG_TraitDigestDown</def>
-            </li>
-        </forcedTraits>
         <exclusionTags>
             <li>DigestionGene</li>
         </exclusionTags>
-        <biostatMet>1</biostatMet>
+        <biostatMet>0</biostatMet>
         <biostatCpx>1</biostatCpx>
     </GeneDef>
     <GeneDef Name="SG_GeneDigestUp" MayRequire="Ludeon.RimWorld.Biotech">
         <defName>SG_GeneDigestUp</defName>
         <label>fast digestion</label>
         <labelShortAdj>fast-digestion</labelShortAdj>
-        <description>Digestion +25%. Faster processing requires more frequent meals.</description>
+        <description>Digestion +25%. Processes stomach contents faster.</description>
         <iconPath>Genes/DigestionUp</iconPath>
         <displayOrderInCategory>110</displayOrderInCategory>
-        <forcedTraits>
-            <li>
-            <def>SG_TraitDigestUp</def>
-            </li>
-        </forcedTraits>
         <exclusionTags>
             <li>DigestionGene</li>
         </exclusionTags>
-        <biostatMet>-1</biostatMet>
+        <biostatMet>0</biostatMet>
         <biostatCpx>1</biostatCpx>
     </GeneDef>
     <GeneDef Name="SG_GeneDigestUpPlus" MayRequire="Ludeon.RimWorld.Biotech">
         <defName>SG_GeneDigestUpPlus</defName>
         <label>ultra digestion</label>
         <labelShortAdj>ultra-digestion</labelShortAdj>
-        <description>Digestion +50%. Fast processing demands careful food supply.</description>
+        <description>Digestion +50%. Processes stomach contents much faster.</description>
         <iconPath>Genes/DigestionUpPlus</iconPath>
         <displayOrderInCategory>111</displayOrderInCategory>
-        <forcedTraits>
-            <li>
-            <def>SG_TraitDigestUpPlus</def>
-            </li>
-        </forcedTraits>
         <exclusionTags>
             <li>DigestionGene</li>
         </exclusionTags>
-        <biostatMet>-2</biostatMet>
+        <biostatMet>0</biostatMet>
         <biostatCpx>2</biostatCpx>
     </GeneDef>
 
@@ -62,15 +47,10 @@
         <description>Weight gained per meal -30%. Food supplies far less stored mass.</description>
         <iconPath>Genes/WeightDownPlus</iconPath>
         <displayOrderInCategory>113</displayOrderInCategory>
-        <forcedTraits>
-            <li>
-            <def>SG_TraitWeightGainDownPlus</def>
-            </li>
-        </forcedTraits>
         <exclusionTags>
             <li>WeightGene</li>
         </exclusionTags>
-        <biostatMet>2</biostatMet>
+        <biostatMet>0</biostatMet>
         <biostatCpx>2</biostatCpx>
     </GeneDef>
     <GeneDef Name="SG_GeneWeightDown" MayRequire="Ludeon.RimWorld.Biotech">
@@ -80,15 +60,10 @@
         <description>Weight gained per meal -15%. Food supplies less stored mass.</description>
         <iconPath>Genes/WeightDown</iconPath>
         <displayOrderInCategory>113</displayOrderInCategory>
-        <forcedTraits>
-            <li>
-            <def>SG_TraitWeightGainDown</def>
-            </li>
-        </forcedTraits>
         <exclusionTags>
             <li>WeightGene</li>
         </exclusionTags>
-        <biostatMet>1</biostatMet>
+        <biostatMet>0</biostatMet>
         <biostatCpx>1</biostatCpx>
     </GeneDef>
     <GeneDef Name="SG_GeneWeightUp" MayRequire="Ludeon.RimWorld.Biotech">
@@ -98,15 +73,10 @@
         <description>Weight gained per meal +15%. More food becomes stored mass.</description>
         <iconPath>Genes/WeightUp</iconPath>
         <displayOrderInCategory>112</displayOrderInCategory>
-        <forcedTraits>
-            <li>
-            <def>SG_TraitWeightGainUp</def>
-            </li>
-        </forcedTraits>
         <exclusionTags>
             <li>WeightGene</li>
         </exclusionTags>
-        <biostatMet>-1</biostatMet>
+        <biostatMet>0</biostatMet>
         <biostatCpx>1</biostatCpx>
     </GeneDef>
     <GeneDef Name="SG_GeneWeightUpPlus" MayRequire="Ludeon.RimWorld.Biotech">
@@ -116,15 +86,10 @@
         <description>Weight gained per meal +30%. More food becomes stored mass.</description>
         <iconPath>Genes/WeightUpPlus</iconPath>
         <displayOrderInCategory>112</displayOrderInCategory>
-        <forcedTraits>
-            <li>
-            <def>SG_TraitWeightGainUpPlus</def>
-            </li>
-        </forcedTraits>
         <exclusionTags>
             <li>WeightGene</li>
         </exclusionTags>
-        <biostatMet>-2</biostatMet>
+        <biostatMet>0</biostatMet>
         <biostatCpx>2</biostatCpx>
     </GeneDef>
 
@@ -136,15 +101,10 @@
         <description>Capacity and elasticity -15%. Less room for a meal.</description>
         <iconPath>Genes/ElasticDown</iconPath>
         <displayOrderInCategory>113</displayOrderInCategory>
-        <forcedTraits>
-            <li>
-            <def>SG_TraitStomachElasticityDown</def>
-            </li>
-        </forcedTraits>
         <exclusionTags>
             <li>ElasticGene</li>
         </exclusionTags>
-        <biostatMet>1</biostatMet>
+        <biostatMet>0</biostatMet>
         <biostatCpx>1</biostatCpx>
     </GeneDef>
     <GeneDef Name="SG_GeneElasticUp" MayRequire="Ludeon.RimWorld.Biotech">
@@ -154,15 +114,10 @@
         <description>Capacity and elasticity +15%.</description>
         <iconPath>Genes/ElasticUp</iconPath>
         <displayOrderInCategory>113</displayOrderInCategory>
-        <forcedTraits>
-            <li>
-            <def>SG_TraitStomachElasticityUp</def>
-            </li>
-        </forcedTraits>
         <exclusionTags>
             <li>ElasticGene</li>
         </exclusionTags>
-        <biostatMet>-1</biostatMet>
+        <biostatMet>0</biostatMet>
         <biostatCpx>1</biostatCpx>
     </GeneDef>
     <GeneDef Name="SG_GeneElasticUpPlus" MayRequire="Ludeon.RimWorld.Biotech">
@@ -172,15 +127,10 @@
         <description>Capacity and elasticity +30%.</description>
         <iconPath>Genes/ElasticUpPlus</iconPath>
         <displayOrderInCategory>113</displayOrderInCategory>
-        <forcedTraits>
-            <li>
-            <def>SG_TraitStomachElasticityUpPlus</def>
-            </li>
-        </forcedTraits>
         <exclusionTags>
             <li>ElasticGene</li>
         </exclusionTags>
-        <biostatMet>-2</biostatMet>
+        <biostatMet>0</biostatMet>
         <biostatCpx>2</biostatCpx>
     </GeneDef>
 
@@ -192,15 +142,10 @@
         <description>Eating capacity -30%. Meals take much longer.</description>
         <iconPath>Genes/EatSpdDownPlus</iconPath>
         <displayOrderInCategory>113</displayOrderInCategory>
-        <forcedTraits>
-            <li>
-            <def>SG_TraitEatSpeedDownPlus</def>
-            </li>
-        </forcedTraits>
         <exclusionTags>
             <li>EatSpeedGene</li>
         </exclusionTags>
-        <biostatMet>2</biostatMet>
+        <biostatMet>0</biostatMet>
         <biostatCpx>2</biostatCpx>
     </GeneDef>
     <GeneDef Name="SG_GeneEatSpeedDown" MayRequire="Ludeon.RimWorld.Biotech">
@@ -210,15 +155,10 @@
         <description>Eating capacity -15%. Meals take longer.</description>
         <iconPath>Genes/EatSpdDown</iconPath>
         <displayOrderInCategory>113</displayOrderInCategory>
-        <forcedTraits>
-            <li>
-            <def>SG_TraitEatSpeedDown</def>
-            </li>
-        </forcedTraits>
         <exclusionTags>
             <li>EatSpeedGene</li>
         </exclusionTags>
-        <biostatMet>1</biostatMet>
+        <biostatMet>0</biostatMet>
         <biostatCpx>1</biostatCpx>
     </GeneDef>
     <GeneDef Name="SG_GeneEatSpeedUp" MayRequire="Ludeon.RimWorld.Biotech">
@@ -228,15 +168,10 @@
         <description>Eating capacity +15%. Meals take less time.</description>
         <iconPath>Genes/EatSpdUp</iconPath>
         <displayOrderInCategory>113</displayOrderInCategory>
-        <forcedTraits>
-            <li>
-                <def>SG_TraitEatSpeedUp</def>
-            </li>
-        </forcedTraits>
         <exclusionTags>
             <li>EatSpeedGene</li>
         </exclusionTags>
-        <biostatMet>-1</biostatMet>
+        <biostatMet>0</biostatMet>
         <biostatCpx>1</biostatCpx>
     </GeneDef>
     <GeneDef Name="SG_GeneEatSpeedUpPlus" MayRequire="Ludeon.RimWorld.Biotech">
@@ -246,15 +181,10 @@
         <description>Eating capacity +30%. Meals take much less time.</description>
         <iconPath>Genes/EatSpdUpPlus</iconPath>
         <displayOrderInCategory>113</displayOrderInCategory>
-        <forcedTraits>
-            <li>
-            <def>SG_TraitEatSpeedUpPlus</def>
-            </li>
-        </forcedTraits>
         <exclusionTags>
             <li>EatSpeedGene</li>
         </exclusionTags>
-        <biostatMet>-2</biostatMet>
+        <biostatMet>0</biostatMet>
         <biostatCpx>2</biostatCpx>
     </GeneDef>    
 </Defs>

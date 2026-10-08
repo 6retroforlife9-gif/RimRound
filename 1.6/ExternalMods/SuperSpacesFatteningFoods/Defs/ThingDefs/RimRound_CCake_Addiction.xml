@@ -45,7 +45,7 @@
   <ThingDef ParentName="cakeDrugBase">
     <defName>cakeFat</defName>
     <label>"Cannot-Stop" cake</label>
-    <description>It'll definitely leave a mark on your waistline. Hopefully it's good! Totally not addictive.</description>
+    <description>An addictive, calorie-dense cake providing three times the nutrition of ordinary food per unit of stomach space. One complete dose supplies 1.8 nutrition in 0.6 fullness volume and a pleasurable mood high. Requires explicit drug or medical authorization and enough stomach room for the full dose. Repeated use can cause tolerance and addiction.</description>
     <graphicData>
       <texPath>Things/Food/LardCake</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -102,8 +102,8 @@
   <!--CakeHigh-->
   <HediffDef>
     <defName>cakeHigh</defName>
-    <label>Cannot-Stop Cake Growth</label>
-    <description>"Cannot Stop" Cake chemicals in the bloodstream. It lifts the mood and fattens the body.</description>
+    <label>"Cannot-Stop" cake high</label>
+    <description>A pleasurable high from "Cannot-Stop" cake that lifts the mood. The cake's calories can contribute to gradual weight gain when food intake exceeds energy expenditure.</description>
     <hediffClass>Hediff_High</hediffClass>
     <defaultLabelColor>(1,0,0.5)</defaultLabelColor>
     <scenarioCanAdd>true</scenarioCanAdd>
@@ -126,7 +126,7 @@
     <validWhileDespawned>true</validWhileDespawned>
     <stages>
       <li>
-        <label>"Cannot-Stop" Cake Growth High</label>
+        <label>"Cannot-Stop" cake high</label>
         <description>That cake was just so sweet! It makes me feel more comfy, and is making me feel so warm at the same time! I love it!</description>
         <baseMoodEffect>15</baseMoodEffect>
       </li>

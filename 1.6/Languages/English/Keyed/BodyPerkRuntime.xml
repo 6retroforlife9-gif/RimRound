@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <RR_TreeEnable>Enable optional body perks</RR_TreeEnable>
+  <RR_TreeEnableDesc>Off by default. Pawns earn capped points through actual active days, useful food and completed body discussions. Disabling preserves purchases and stops earning and effects. Legacy keeps its separate old perks.</RR_TreeEnableDesc>
+  <RR_TreeOpen>Body perks</RR_TreeOpen>
+  <RR_TreeUnknownState>This saved tree cannot be interpreted safely by this version. Its data is preserved.</RR_TreeUnknownState>
+  <RR_TreeIneligible>Body perks require an adult pawn with biological food metabolism.</RR_TreeIneligible>
+  <RR_TreeLegacy>The optional tree is dormant in Legacy.</RR_TreeLegacy>
+  <RR_TreeDisabled>Enable optional body perks in RimRound's colony progression settings. Saved purchases are retained.</RR_TreeDisabled>
+  <RR_TreeNoControl>This pawn cannot currently receive colony orders.</RR_TreeNoControl>
+  <RR_TreePurchased>Already acquired.</RR_TreePurchased>
+  <RR_TreeFantasy>Requires the Fantasy colony preset.</RR_TreeFantasy>
+  <RR_TreeResearch>Requires exceptional adaptation research.</RR_TreeResearch>
+  <RR_TreePrerequisite>Acquire the preceding node first.</RR_TreePrerequisite>
+  <RR_TreeExclusive>The other specialization is already selected.</RR_TreeExclusive>
+  <RR_TreeHabit>Requires two active days and at least 25% eating conditioning.</RR_TreeHabit>
+  <RR_TreeDiscussions>Requires three completed body discussions.</RR_TreeDiscussions>
+  <RR_TreePoints>Not enough available points.</RR_TreePoints>
+  <RR_TreeBusy>Finish the current meal, social or care session before respecializing.</RR_TreeBusy>
+  <RR_TreeEmpty>No purchases to refund.</RR_TreeEmpty>
+  <RR_TreeRespecCooldown>Respecialization is available three days after the previous refund.</RR_TreeRespecCooldown>
+  <RR_HabitSummary>Eating conditioning: {0}\nSize conditioning: {1}\nActive days: {2}</RR_HabitSummary>
+</LanguageData>

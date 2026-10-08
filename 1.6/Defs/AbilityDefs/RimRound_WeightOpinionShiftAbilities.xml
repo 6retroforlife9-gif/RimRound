@@ -2,6 +2,7 @@
 <Defs>
   <AbilityDef>
     <defName>RR_IncreaseWeightOpinion</defName>
+    <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
     <label>increase weight opinion</label>
     <description>Try to persuade another adult pawn to become more accepting of gaining weight. Success moves their RimRound weight opinion upward by one level. The chance uses Social skill levels 1-10, the target's opinion of the speaker, and close relationships; Social levels above 10 use the same chance as level 10.</description>
     <iconPath>UI/DebugIcons/INCREASE_WEIGHT_OPINION</iconPath>
@@ -46,6 +47,7 @@
 
   <AbilityDef>
     <defName>RR_DecreaseWeightOpinion</defName>
+    <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
     <label>decrease weight opinion</label>
     <description>Try to persuade another adult pawn to become less accepting of gaining weight. Success moves their RimRound weight opinion downward by one level. The chance uses Social skill levels 1-10, the target's opinion of the speaker, and close relationships; Social levels above 10 use the same chance as level 10.</description>
     <iconPath>UI/DebugIcons/DECREASE_WEIGHT_OPINION</iconPath>

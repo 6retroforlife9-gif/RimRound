@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <JobDef>
+    <defName>RR_BodyPreferenceDiscussion</defName>
+    <driverClass>RimRound.AI.JobDriver_BodyPreferenceDiscussion</driverClass>
+    <reportString>Discussing body preferences with TargetA.</reportString>
+    <casualInterruptible>false</casualInterruptible>
+  </JobDef>
+  <JobDef>
+    <defName>RR_ListenBodyDiscussion</defName>
+    <driverClass>RimRound.AI.JobDriver_ListenBodyDiscussion</driverClass>
+    <reportString>Discussing body preferences with TargetA.</reportString>
+    <casualInterruptible>false</casualInterruptible>
+  </JobDef>
+  <InteractionDef>
+    <defName>RR_BodyPreferenceDiscussion</defName>
+    <label>discuss body preferences</label>
+    <workerClass>RimRound.AI.InteractionWorker_BodyPreferenceDiscussion</workerClass>
+    <symbol>Things/Mote/SpeechSymbols/BuildRapport</symbol>
+    <logRulesInitiator>
+      <rulesStrings>
+        <li>r_logentry->[INITIATOR_nameDef] and [RECIPIENT_nameDef] discussed their preferences about body size.</li>
+      </rulesStrings>
+    </logRulesInitiator>
+  </InteractionDef>
+  <JobDef>
+    <defName>RR_VisitBodyDiscussion</defName>
+    <driverClass>RimRound.AI.JobDriver_VisitBodyDiscussion</driverClass>
+    <reportString>Discussing body preferences with TargetA.</reportString>
+    <casualInterruptible>false</casualInterruptible>
+  </JobDef>
+  <JobDef>
+    <defName>RR_BedsideBodyDiscussionSession</defName>
+    <driverClass>RimRound.AI.JobDriver_VisitBodyDiscussion</driverClass>
+    <reportString>Discussing body preferences.</reportString>
+    <casualInterruptible>false</casualInterruptible>
+  </JobDef>
+</Defs>

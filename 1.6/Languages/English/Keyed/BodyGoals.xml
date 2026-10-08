@@ -16,8 +16,13 @@
   <RR_BodyTrendToday>Body change today: {0} {1}.</RR_BodyTrendToday>
   <RR_LegacyNutritionPending>Old-save nutrition still digesting: {0}. This is credited only once.</RR_LegacyNutritionPending>
   <RR_BodyGoalDesc_Legacy>Keep saved manual diet sliders. New meals satisfy hunger immediately; fullness measures volume. Saved perks are retained.</RR_BodyGoalDesc_Legacy>
-  <RR_BodyGoalDesc_Maintain>Eat normal meals under the assigned food policy. Body mass follows food intake and native energy use; ordinary changes are limited to 1% of the race baseline per day.</RR_BodyGoalDesc_Maintain>
-  <RR_BodyGoalDesc_Gain>Allow spaced extra meals within a daily extra-meal allowance and comfortable fullness. Ordinary hunger still permits normal meals. Automatically return to Maintain after gaining 10% of the race baseline.</RR_BodyGoalDesc_Gain>
+  <RR_BodyGoalDesc_Maintain>Regulate eating toward the weight saved when Maintain was assigned. Meals do not move this target. Stored calories count toward the target; urgent hunger still permits whole meals.</RR_BodyGoalDesc_Maintain>
+  <RR_BodyGoalDesc_Gain>Allow extra meals within comfortable fullness until visible weight and stored calories cover the target. Automatically return to Maintain after gaining 10% of the race baseline. Whole servings can exceed the remaining calorie target.</RR_BodyGoalDesc_Gain>
   <RR_BodyGoalDesc_Lose>Wait longer between whole meals and draw a small, accounted contribution from body reserves. Urgent hunger always triggers eating. Stop at the target or a safe baseline. Starvation and malnutrition disable deliberate reserve use.</RR_BodyGoalDesc_Lose>
   <RR_BodyGoalDesc_Recovery>Use normal care priorities and a small extra meal allowance to restore the race baseline. Automatically return to Maintain at the target. The assigned food policy still applies.</RR_BodyGoalDesc_Recovery>
+  <RR_BodyGoalLiveAction>Current eating response: {0}. Weight after stored energy is used: about {1} {2}.</RR_BodyGoalLiveAction>
+  <RR_BodyGoalLiveRange>Auto range: {0}–{1} {2}.</RR_BodyGoalLiveRange>
+  <RR_BodyGoalRangeLimited>The preferred range extends beyond the current body limits; Auto uses the nearest allowed range.</RR_BodyGoalRangeLimited>
+  <RR_BodyGoalStoredEnergy>Calories already eaten remain stored when goals change. Weight can keep rising while that surplus converts.</RR_BodyGoalStoredEnergy>
+  <RR_BodyGoalWholeMeals>Urgent hunger takes priority over weight loss. Dense whole meals may still cause gain; smaller or less dense meals can help.</RR_BodyGoalWholeMeals>
 </LanguageData>

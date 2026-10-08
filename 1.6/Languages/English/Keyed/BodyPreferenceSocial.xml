@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <RR_DiscussionTitle>Body discussions</RR_DiscussionTitle>
+  <RR_DiscussionPawnTitle>Body discussions: {0}</RR_DiscussionPawnTitle>
+  <RR_DiscussionDescription>Discuss a larger or smaller preferred body range with another colonist. A real conversation can change their wishes or irritate them. It does not change their weight.</RR_DiscussionDescription>
+  <RR_DiscussionChoose>Choose a colonist</RR_DiscussionChoose>
+  <RR_DiscussionNoRecipients>No eligible colonists are present on this map.</RR_DiscussionNoRecipients>
+  <RR_DiscussionOngoing>Keep discussing this fixed target when both colonists are free</RR_DiscussionOngoing>
+  <RR_DiscussionLarger>Discuss a larger range</RR_DiscussionLarger>
+  <RR_DiscussionSmaller>Discuss a smaller range</RR_DiscussionSmaller>
+  <RR_DiscussionFixedTarget>Fixed target for {0}: {1}–{2} {3}. A new order is needed to change it.</RR_DiscussionFixedTarget>
+  <RR_DiscussionLimits>Rest between discussions: {0} hours remaining. Recipient outcomes today: {1}/2. Irritation: {2}.</RR_DiscussionLimits>
+  <RR_DiscussionIntentOn>Ongoing discussions enabled. They pause while either colonist is unavailable.</RR_DiscussionIntentOn>
+  <RR_DiscussionIntentOff>Ongoing discussions disabled.</RR_DiscussionIntentOff>
+  <RR_DiscussionStop>Stop discussions</RR_DiscussionStop>
+  <RR_DiscussionStopped>Discussions stopped. Existing cooldowns and outcomes remain.</RR_DiscussionStopped>
+  <RR_DiscussionScheduled>Fixed target saved. Discussions will begin when both colonists are free and ready.</RR_DiscussionScheduled>
+  <RR_DiscussionOrdered>Discussion ordered.</RR_DiscussionOrdered>
+  <RR_DiscussionUnavailable>Body discussions require two ordinary adult colonists with known body preferences.</RR_DiscussionUnavailable>
+  <RR_DiscussionSameMap>Both colonists must be present on the same map.</RR_DiscussionSameMap>
+  <RR_DiscussionNotReady>Both colonists must be awake, mobile, conscious, able to speak and hear, and capable of social interaction.</RR_DiscussionNotReady>
+  <RR_DiscussionCooldown>A participant needs more time between discussions or has reached today's limit.</RR_DiscussionCooldown>
+  <RR_DiscussionUnreachable>The speaker cannot safely reach the recipient.</RR_DiscussionUnreachable>
+  <RR_DiscussionNotLocal>The participants must remain together and able to interact.</RR_DiscussionNotLocal>
+  <RR_DiscussionBusy>A participant is busy or already reserved for another activity.</RR_DiscussionBusy>
+  <RR_DiscussionLast>Last completed discussion: {0}.</RR_DiscussionLast>
+  <RR_DiscussionShort_NoChange>no change</RR_DiscussionShort_NoChange>
+  <RR_DiscussionShort_Receptive>receptive</RR_DiscussionShort_Receptive>
+  <RR_DiscussionShort_Breakthrough>changed preferred range</RR_DiscussionShort_Breakthrough>
+  <RR_DiscussionShort_Irritated>irritated</RR_DiscussionShort_Irritated>
+  <RR_DiscussionOutcome_NoChange>{0} and {1} finished their discussion without changing {1}'s preferred range.</RR_DiscussionOutcome_NoChange>
+  <RR_DiscussionOutcome_Receptive>{1} considered {0}'s suggestion. Their preferred range moved toward the discussed target and their conviction softened.</RR_DiscussionOutcome_Receptive>
+  <RR_DiscussionOutcome_Breakthrough>{1} adopted the body range discussed with {0}.</RR_DiscussionOutcome_Breakthrough>
+  <RR_DiscussionOutcome_Irritated>{1} felt pressured by {0}'s suggestion. Their preferred range did not change.</RR_DiscussionOutcome_Irritated>
+</LanguageData>

@@ -1,0 +1,10 @@
+<LanguageData>
+  <RR_GuidanceRoleRequired>Only the current moral guide can use body guidance.</RR_GuidanceRoleRequired>
+  <RR_GuidanceNotReady>The guide and recipient must be awake, able to communicate, and ready for a body discussion.</RR_GuidanceNotReady>
+  <RR_GuidanceAtLimit>This preference cannot move further in that direction.</RR_GuidanceAtLimit>
+  <RR_GuidanceReceptive>{0} encouraged {1} toward a {2} body. Conviction: {3} → {4}.</RR_GuidanceReceptive>
+  <RR_GuidanceBreakthrough>{0} helped {1} embrace a {2} preferred body range. Conviction has settled at 50%.</RR_GuidanceBreakthrough>
+  <RR_GuidanceIrritated>{1} resisted {0}'s body guidance and became irritated. Their preference is unchanged.</RR_GuidanceIrritated>
+  <RR_GuidanceLarger>larger</RR_GuidanceLarger>
+  <RR_GuidanceSmaller>smaller</RR_GuidanceSmaller>
+</LanguageData>

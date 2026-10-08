@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <RR_BedsideRoleNotReady>The role holder must be awake, conscious and able to speak in their bed, with this role ability available.</RR_BedsideRoleNotReady>
+  <RR_BedsideRoleBusy>A participant is already reserved or attending a bedside session.</RR_BedsideRoleBusy>
+  <RR_BedsideRoleRecipientBusy>The visitor is busy with work that cannot be interrupted for this visit.</RR_BedsideRoleRecipientBusy>
+  <RR_BedsideRoleNoContact>The visitor needs a reachable place beside this bed. Two immobile occupants must already be within reach and sight.</RR_BedsideRoleNoContact>
+  <RR_BedsideRoleBlocked>The bed or its occupant is reserved for another activity.</RR_BedsideRoleBlocked>
+  <RR_BedsideRitualSite>Place an appropriate ritual spot or ideology building within four cells of the bed, in the same room and with a clear line of sight. The role holder must be awake and able to speak.</RR_BedsideRitualSite>
+  <RR_BedsideRitualEscort>A prisoner needs an available mobile warden to escort them to the bedside ritual.</RR_BedsideRitualEscort>
+  <RR_BedsideRitualLocalTarget>A pawn in a mental state must already be within speaking distance of this bed for a trial.</RR_BedsideRitualLocalTarget>
+  <RR_BedsideRitualEscortNotNeeded>An escort is only needed for a prisoner.</RR_BedsideRitualEscortNotNeeded>
+</LanguageData>

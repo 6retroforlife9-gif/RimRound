@@ -1,0 +1,6 @@
+<Patch>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/PreceptDef[defName="IdeoRole_Moralist"]/grantedAbilities</xpath>
+    <value><li>RR_EncourageLargerBody</li><li>RR_EncourageSmallerBody</li></value>
+  </Operation>
+</Patch>

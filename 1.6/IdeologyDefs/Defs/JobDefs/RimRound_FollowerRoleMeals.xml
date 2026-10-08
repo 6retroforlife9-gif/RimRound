@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <JobDef>
+    <defName>RR_FollowerRoleMeal</defName>
+    <driverClass>RimRound.FeedOther.JobDriver_FollowerRoleMeal</driverClass>
+    <reportString>offering a meal to TargetB.</reportString>
+    <neverShowWeapon>true</neverShowWeapon>
+    <playerInterruptible>true</playerInterruptible>
+    <casualInterruptible>true</casualInterruptible>
+    <allowOpportunisticPrefix>false</allowOpportunisticPrefix>
+  </JobDef>
+</Defs>

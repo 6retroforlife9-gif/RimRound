@@ -1,0 +1,53 @@
+<Defs>
+  <AbilityGroupDef><defName>RR_BodyGuidance</defName><label>body guidance</label><cooldownTicks>180000</cooldownTicks><sendMessageOnCooldownComplete>true</sendMessageOnCooldownComplete></AbilityGroupDef>
+  <AbilityDef Name="RR_BodyGuidanceBase" Abstract="True">
+    <groupDef>RR_BodyGuidance</groupDef>
+    <warmupMoteSocialSymbol>Things/Mote/SpeechSymbols/Convert</warmupMoteSocialSymbol>
+    <warmupSound>MoralistAbility_Warmup</warmupSound>
+    <jobDef>CastAbilityOnThingMelee</jobDef>
+    <stunTargetWhileCasting>true</stunTargetWhileCasting>
+    <showPsycastEffects>false</showPsycastEffects>
+    <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+    <showWhenDrafted>false</showWhenDrafted>
+    <hostile>false</hostile>
+    <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+    <showOnCharacterCard>true</showOnCharacterCard>
+    <verbProperties>
+      <verbClass>Verb_CastAbilityTouch</verbClass>
+      <drawAimPie>false</drawAimPie>
+      <range>-1</range>
+      <warmupTime>3</warmupTime>
+      <targetParams>
+        <canTargetBuildings>false</canTargetBuildings>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetHumans>true</canTargetHumans>
+        <canTargetAnimals>false</canTargetAnimals>
+        <canTargetSelf>false</canTargetSelf>
+        <neverTargetHostileFaction>true</neverTargetHostileFaction>
+      </targetParams>
+    </verbProperties>
+  </AbilityDef>
+  <AbilityDef ParentName="RR_BodyGuidanceBase">
+    <defName>RR_EncourageLargerBody</defName>
+    <label>encourage larger body</label>
+    <description>A moral guide encourages an adult colonist to prefer a larger body. Has three times the influence of an ordinary body discussion, using Social skill, rapport and the recipient's conviction. A receptive conversation shifts their preferred range; a breakthrough updates their wishes more strongly. The recipient may resist or become irritated. Both directions share a three-day cooldown and count toward ordinary discussion limits. Bedbound guides can receive a visitor.</description>
+    <iconPath>UI/DebugIcons/INCREASE_WEIGHT_OPINION</iconPath>
+    <uiOrder>5</uiOrder>
+    <comps>
+      <li Class="RimRound.FeedOther.CompProperties_BodyGuidance"><larger>true</larger></li>
+      <li Class="CompProperties_AbilityMustBeCapableOf"><workTags><li>Social</li></workTags></li>
+    </comps>
+  </AbilityDef>
+  <AbilityDef ParentName="RR_BodyGuidanceBase">
+    <defName>RR_EncourageSmallerBody</defName>
+    <label>encourage smaller body</label>
+    <description>A moral guide encourages an adult colonist to prefer a smaller body. Has three times the influence of an ordinary body discussion, using Social skill, rapport and the recipient's conviction. A receptive conversation shifts their preferred range; a breakthrough updates their wishes more strongly. The recipient may resist or become irritated. Both directions share a three-day cooldown and count toward ordinary discussion limits. Bedbound guides can receive a visitor.</description>
+    <iconPath>UI/DebugIcons/DECREASE_WEIGHT_OPINION</iconPath>
+    <uiOrder>6</uiOrder>
+    <comps>
+      <li Class="RimRound.FeedOther.CompProperties_BodyGuidance"><larger>false</larger></li>
+      <li Class="CompProperties_AbilityMustBeCapableOf"><workTags><li>Social</li></workTags></li>
+    </comps>
+  </AbilityDef>
+</Defs>

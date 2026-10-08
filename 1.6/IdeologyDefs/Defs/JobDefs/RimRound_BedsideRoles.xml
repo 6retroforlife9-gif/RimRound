@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <JobDef>
+    <defName>RR_VisitBedsideRole</defName>
+    <driverClass>RimRound.Ideology.JobDriver_VisitBedsideRole</driverClass>
+    <reportString>Visiting TargetA for an ideology ability.</reportString>
+    <casualInterruptible>false</casualInterruptible>
+  </JobDef>
+  <!-- Reservation/lifetime handle for a saved session. Never replaces a bed occupant's rest job. -->
+  <JobDef>
+    <defName>RR_BedsideRoleSession</defName>
+    <driverClass>RimRound.Ideology.JobDriver_VisitBedsideRole</driverClass>
+    <reportString>Holding a bedside ideology session.</reportString>
+    <casualInterruptible>false</casualInterruptible>
+  </JobDef>
+</Defs>

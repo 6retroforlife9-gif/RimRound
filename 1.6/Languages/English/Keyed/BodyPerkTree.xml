@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <RR_TreeUi_Title>Body perks for {0}</RR_TreeUi_Title>
+  <RR_TreeUi_MissingState>This pawn has no body-perk state.</RR_TreeUi_MissingState>
+  <RR_TreeUi_PointTotals>Earned: {0}    Spent: {1}    Available: {2}</RR_TreeUi_PointTotals>
+  <RR_TreeUi_Enabled>Body-perk tree enabled.</RR_TreeUi_Enabled>
+  <RR_TreeUi_Disabled>Body-perk tree disabled: {0}</RR_TreeUi_Disabled>
+  <RR_TreeUi_Unknown>unknown</RR_TreeUi_Unknown>
+  <RR_TreeUi_Branch_Physical>Capacity and digestion</RR_TreeUi_Branch_Physical>
+  <RR_TreeUi_Branch_Social>Body conversations</RR_TreeUi_Branch_Social>
+  <RR_TreeUi_Branch_Fantasy>Fantasy adaptations</RR_TreeUi_Branch_Fantasy>
+  <RR_TreeUi_Node_practised_appetite>Practised appetite</RR_TreeUi_Node_practised_appetite>
+  <RR_TreeUi_Node_comfortable_fullness>Comfortable fullness</RR_TreeUi_Node_comfortable_fullness>
+  <RR_TreeUi_Node_steady_digestion>Steady digestion</RR_TreeUi_Node_steady_digestion>
+  <RR_TreeUi_Node_quick_meals>Quick meals</RR_TreeUi_Node_quick_meals>
+  <RR_TreeUi_Node_supportive_voice>Supportive voice</RR_TreeUi_Node_supportive_voice>
+  <RR_TreeUi_Node_patient_listener>Patient listener</RR_TreeUi_Node_patient_listener>
+  <RR_TreeUi_Node_deep_capacity>Deep capacity</RR_TreeUi_Node_deep_capacity>
+  <RR_TreeUi_Node_rapid_processing>Rapid processing</RR_TreeUi_Node_rapid_processing>
+  <RR_TreeUi_Cost>{0} points</RR_TreeUi_Cost>
+  <RR_TreeUi_Effect_practised_appetite>Increases body capacity by 10%.</RR_TreeUi_Effect_practised_appetite>
+  <RR_TreeUi_Effect_comfortable_fullness>Reduces fullness pain by 10%.</RR_TreeUi_Effect_comfortable_fullness>
+  <RR_TreeUi_Effect_steady_digestion>Increases digestion by 15%.</RR_TreeUi_Effect_steady_digestion>
+  <RR_TreeUi_Effect_quick_meals>Increases eating capacity by 10%.</RR_TreeUi_Effect_quick_meals>
+  <RR_TreeUi_Effect_supportive_voice>Increases body-persuasion strength by 10%.</RR_TreeUi_Effect_supportive_voice>
+  <RR_TreeUi_Effect_patient_listener>Increases irritation-resistance recovery by 20%.</RR_TreeUi_Effect_patient_listener>
+  <RR_TreeUi_Effect_deep_capacity>Increases body capacity by 40% while Fantasy rules are active.</RR_TreeUi_Effect_deep_capacity>
+  <RR_TreeUi_Effect_rapid_processing>Increases digestion by 35% and hunger rate by 10% while Fantasy rules are active.</RR_TreeUi_Effect_rapid_processing>
+  <RR_TreeUi_ReqActiveDays>Requires {0} active days.</RR_TreeUi_ReqActiveDays>
+  <RR_TreeUi_ReqConditioning>Requires {0}% habit conditioning.</RR_TreeUi_ReqConditioning>
+  <RR_TreeUi_ReqDiscussions>Requires {0} completed body conversations.</RR_TreeUi_ReqDiscussions>
+  <RR_TreeUi_ReqResearch>Requires Exceptional Adaptation research.</RR_TreeUi_ReqResearch>
+  <RR_TreeUi_ReqFantasy>Fantasy-only; suppressed while Balanced rules are active.</RR_TreeUi_ReqFantasy>
+  <RR_TreeUi_Prerequisites>Requires: {0}.</RR_TreeUi_Prerequisites>
+  <RR_TreeUi_Exclusions>Excludes: {0}.</RR_TreeUi_Exclusions>
+  <RR_TreeUi_Acquired>Acquired.</RR_TreeUi_Acquired>
+  <RR_TreeUi_Purchase>Purchase ({0})</RR_TreeUi_Purchase>
+  <RR_TreeUi_PurchaseFailed>Purchase could not be completed. Check the current requirements.</RR_TreeUi_PurchaseFailed>
+  <RR_TreeUi_RespecSummary>Refundable respec: {0} recorded points.</RR_TreeUi_RespecSummary>
+  <RR_TreeUi_Respec>Refund and respec</RR_TreeUi_Respec>
+  <RR_TreeUi_RespecFailed>Respec could not be completed. Check the current restrictions.</RR_TreeUi_RespecFailed>
+</LanguageData>

@@ -116,12 +116,12 @@
   <RR_FeedOtherSettingsWorldHeader>Pawn generation, resources, and orbit</RR_FeedOtherSettingsWorldHeader>
   <RR_FeedOtherSettingsBalancedOpinions>Balanced weight-opinion distribution</RR_FeedOtherSettingsBalancedOpinions>
   <RR_FeedOtherSettingsBalancedOpinionsTip>Uses the patch's neutral-centred symmetric distribution for newly assigned RimRound weight opinions. Turning it off restores RimRound's original loaded weights.</RR_FeedOtherSettingsBalancedOpinionsTip>
-  <RR_FeedOtherSettingsEatingTraits>Guarantee one eating-style trait</RR_FeedOtherSettingsEatingTraits>
-  <RR_FeedOtherSettingsEatingTraitsTip>Adds exactly one slow, average, or fast eating-style marker after normal traits are generated.</RR_FeedOtherSettingsEatingTraitsTip>
-  <RR_FeedOtherSettingsElasticityTraits>Guarantee one stomach-elasticity trait</RR_FeedOtherSettingsElasticityTraits>
-  <RR_FeedOtherSettingsElasticityTraitsTip>Adds exactly one rigid, average, flexible, or elastic stomach marker after normal traits are generated.</RR_FeedOtherSettingsElasticityTraitsTip>
-  <RR_FeedOtherSettingsRepairTraits>Repair missing categories on existing pawns</RR_FeedOtherSettingsRepairTraits>
-  <RR_FeedOtherSettingsRepairTraitsTip>When loading or saving settings, adds currently enabled missing trait categories and removes accidental duplicates. Existing traits are never removed merely because generation is disabled.</RR_FeedOtherSettingsRepairTraitsTip>
+  <RR_FeedOtherSettingsEatingTraits>Vary natural eating speed</RR_FeedOtherSettingsEatingTraits>
+  <RR_FeedOtherSettingsEatingTraitsTip>New pawns vary from very slow to very fast eating. With Biotech, differences are inheritable genes; normal speed needs no gene. Without Biotech, uses traits. Inherited and custom gene sets are preserved.</RR_FeedOtherSettingsEatingTraitsTip>
+  <RR_FeedOtherSettingsElasticityTraits>Vary natural stomach capacity and elasticity</RR_FeedOtherSettingsElasticityTraits>
+  <RR_FeedOtherSettingsElasticityTraitsTip>New pawns vary from rigid to elastic stomachs. With Biotech, differences are inheritable genes; normal capacity needs no gene. Without Biotech, uses traits. Inherited and custom gene sets are preserved.</RR_FeedOtherSettingsElasticityTraitsTip>
+  <RR_FeedOtherSettingsRepairTraits>Update existing physical dispositions</RR_FeedOtherSettingsRepairTraits>
+  <RR_FeedOtherSettingsRepairTraitsTip>On load or when applying settings, converts existing RimRound physical traits to matching inheritable genes when Biotech is active. Existing genes take priority; no new variation is rolled. Without Biotech, repairs missing enabled trait categories. Personal weight opinions are unchanged.</RR_FeedOtherSettingsRepairTraitsTip>
   <RR_FeedOtherSettingsGluttonium>Generate separate Gluttonium veins</RR_FeedOtherSettingsGluttonium>
   <RR_FeedOtherSettingsGluttoniumTip>Runs the independent Gluttonium ore pass without consuming vanilla steel, compacted machinery, or precious-ore selections. Applies only to newly generated maps.</RR_FeedOtherSettingsGluttoniumTip>
   <RR_FeedOtherSettingsGluttoniumFrequency>Gluttonium veins per 10,000 cells</RR_FeedOtherSettingsGluttoniumFrequency>
@@ -224,4 +224,8 @@
   <RR_FoodNetworkLinkUnavailable>The feeding-tube link could not be saved.</RR_FoodNetworkLinkUnavailable>
   <RR_FoodNetworkGainModeDesc>Continuously feeds linked occupants to 90% of comfortable stomach capacity, regardless of their food policy or body goal.</RR_FoodNetworkGainModeDesc>
   <RR_FoodNetworkMaximumModeDesc>Continuously feeds linked occupants toward {0}% hard fullness, while retaining the 95% rupture-safety ceiling.</RR_FoodNetworkMaximumModeDesc>
+  <RR_HeritableDigestion>Vary natural digestion genes</RR_HeritableDigestion>
+  <RR_HeritableDigestionTip>New pawns usually have normal digestion, with rarer slow, fast or ultra variants. Uses inheritable Biotech genes and preserves inherited or custom gene sets.</RR_HeritableDigestionTip>
+  <RR_HeritableMetabolism>Vary natural metabolism genes</RR_HeritableMetabolism>
+  <RR_HeritableMetabolismTip>New pawns usually have normal weight-gain metabolism, with rarer faster or slower variants. Uses inheritable Biotech genes and preserves inherited or custom gene sets.</RR_HeritableMetabolismTip>
 </LanguageData>

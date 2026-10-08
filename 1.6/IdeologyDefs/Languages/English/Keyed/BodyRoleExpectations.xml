@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <RR_BodyRoleRequiresPreference>Requires a favourable personal body preference (Like or stronger).</RR_BodyRoleRequiresPreference>
+  <RR_BodyRoleExpectation>{0}: expected size {1} kg\nRole grace remaining: {2} days. Extra meals still follow personal willingness.</RR_BodyRoleExpectation>
+  <RR_FollowerMealsEnabled>Allow followers to offer extra meals</RR_FollowerMealsEnabled>
+  <RR_FollowerMealsExplanation>Idle followers of this ideoligion may bring a real meal to this role holder in bed, while their assigned goal seeks gain and their personal preferred range has not been reached. Ordinary hunger and care take priority. This does not enable persuasion or forced feeding.</RR_FollowerMealsExplanation>
+  <RR_FollowerMealOff>Follower meals are off.</RR_FollowerMealOff>
+  <RR_FollowerMealIneligible>Optional follower meals are unavailable for this pawn or role.</RR_FollowerMealIneligible>
+  <RR_FollowerMealPersonalTarget>No extra meal wanted: visible weight and stored calories already reach the personal preferred range.</RR_FollowerMealPersonalTarget>
+  <RR_FollowerMealGoal>The current body goal is not asking for extra gain food.</RR_FollowerMealGoal>
+  <RR_FollowerMealNotReady>Waiting until another comfortable extra meal is appropriate. Ordinary hunger and care still use their normal routines.</RR_FollowerMealNotReady>
+  <RR_FollowerMealWilling>Willing to accept extra food. Delivery also needs an available follower, suitable stored food, spare supplies and an accessible bed.</RR_FollowerMealWilling>
+</LanguageData>

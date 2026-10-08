@@ -671,4 +671,13 @@ HighGravWorlderRace,defaultSet
 LowGravWorlderRace,defaultSet
 RadWorlderRace,defaultSet
 VatgrownHumanRace,defaultSet</RR_RaceData>
+  <RR_PreferenceTitle>Body preference</RR_PreferenceTitle>
+  <RR_BodyGoal_Auto>Auto</RR_BodyGoal_Auto>
+  <RR_BodyGoalDesc_Auto>Choose Gain, Maintain or Lose from this pawn's personal preferred range, including calories already eaten and awaiting conversion. Urgent hunger and medical care still take priority.</RR_BodyGoalDesc_Auto>
+  <RR_BodyGoalAutoAction>Auto: {0}</RR_BodyGoalAutoAction>
+  <RR_PreferencePawnTitle>{0}: body preference</RR_PreferencePawnTitle>
+  <RR_PreferenceSummary>Preferred range: {0}–{1} {2}\nConviction: {3}</RR_PreferenceSummary>
+  <RR_PreferenceUnavailable>Personal preference unavailable.</RR_PreferenceUnavailable>
+  <RR_PreferenceAssignment>Assigned goal: {0}</RR_PreferenceAssignment>
+  <RR_PreferenceExplanation>Personal wishes and assigned goals are separate. Assigning a goal or ordering a meal does not change this preference. Conviction describes resistance to changing these wishes.</RR_PreferenceExplanation>
 </LanguageData>
