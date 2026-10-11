@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThoughtDef>
+    <defName>RR_SocialBodyOpinion</defName>
+    <thoughtClass>Thought_SituationalSocial</thoughtClass>
+    <workerClass>RimRound.AI.ThoughtWorker_SocialBodyOpinion</workerClass>
+    <developmentalStageFilter>Adult</developmentalStageFilter>
+    <socialTargetDevelopmentalStageFilter>Adult</socialTargetDevelopmentalStageFilter>
+    <ignoreSubhumans>true</ignoreSubhumans>
+    <validWhileDespawned>true</validWhileDespawned>
+    <stages>
+      <li>
+        <label>strong dislike of larger body</label>
+        <description>I strongly dislike this person's larger body.</description>
+        <baseOpinionOffset>-10</baseOpinionOffset>
+      </li>
+      <li>
+        <label>dislike of larger body</label>
+        <description>I dislike this person's larger body.</description>
+        <baseOpinionOffset>-5</baseOpinionOffset>
+      </li>
+      <li>
+        <label>dislike of larger body</label>
+        <description>I dislike this person's larger body.</description>
+        <baseOpinionOffset>-2</baseOpinionOffset>
+      </li>
+      <li>
+        <label>liking for larger body</label>
+        <description>I like this person's larger body.</description>
+        <baseOpinionOffset>2</baseOpinionOffset>
+      </li>
+      <li>
+        <label>liking for larger body</label>
+        <description>I like this person's larger body.</description>
+        <baseOpinionOffset>5</baseOpinionOffset>
+      </li>
+      <li>
+        <label>strong liking for larger body</label>
+        <description>I strongly like this person's larger body.</description>
+        <baseOpinionOffset>10</baseOpinionOffset>
+      </li>
+      <li>
+        <label>body size valued by ideology</label>
+        <description>My ideology values this person's larger body.</description>
+        <baseOpinionOffset>5</baseOpinionOffset>
+      </li>
+    </stages>
+  </ThoughtDef>
+</Defs>

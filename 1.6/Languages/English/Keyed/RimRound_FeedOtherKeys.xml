@@ -12,17 +12,17 @@
 
   <RR_FeedOtherSettingsFeedingHeader>Feeding activities</RR_FeedOtherSettingsFeedingHeader>
   <RR_FeedOtherSettingsAutonomousShared>Autonomous shared meals</RR_FeedOtherSettingsAutonomousShared>
-  <RR_FeedOtherSettingsAutonomousSharedTip>Allows eligible Neutral+ or higher pawns to start shared eating and shared bedside-feeding recreation on their own.</RR_FeedOtherSettingsAutonomousSharedTip>
+  <RR_FeedOtherSettingsAutonomousSharedTip>Allows a willing Gain pawn who likes larger bodies to invite another Gain pawn to a shared meal, including at their bedside. Optional meals stop at comfortable fullness and protect three days of colony food.</RR_FeedOtherSettingsAutonomousSharedTip>
   <RR_FeedOtherSettingsAutonomousOneWay>Autonomous one-way feeding</RR_FeedOtherSettingsAutonomousOneWay>
-  <RR_FeedOtherSettingsAutonomousOneWayTip>Allows exempt pawns and RimRound pawns with Neutral or lower weight opinion to feed an eligible pawn without eating themselves.</RR_FeedOtherSettingsAutonomousOneWayTip>
+  <RR_FeedOtherSettingsAutonomousOneWayTip>Allows a capable helper who likes larger bodies, or has a relevant ideology role motivation, to feed a willing Gain pawn. Helpers may be on Gain, Maintain or Lose without eating an extra meal themselves.</RR_FeedOtherSettingsAutonomousOneWayTip>
   <RR_FeedOtherSettingsManualFeeding>Manual right-click feeding</RR_FeedOtherSettingsManualFeeding>
   <RR_FeedOtherSettingsManualFeedingTip>Adds the player-forced Feed command when one selected pawn right-clicks another eligible humanlike pawn.</RR_FeedOtherSettingsManualFeedingTip>
   <RR_FeedOtherSettingsBedsideFeeding>Bedside and sleeping-recipient feeding</RR_FeedOtherSettingsBedsideFeeding>
   <RR_FeedOtherSettingsBedsideFeedingTip>Allows feeding a downed, immobile, resting, or sleeping recipient while they remain in bed. Disabling this affects new sessions only.</RR_FeedOtherSettingsBedsideFeedingTip>
   <RR_FeedOtherSettingsStartingCutoff>Maximum fullness for starting a session</RR_FeedOtherSettingsStartingCutoff>
-  <RR_FeedOtherSettingsStartingCutoffTip>A new automatic or manual session may start at exactly this percentage, but not above it. This value is always kept below the feeding target.</RR_FeedOtherSettingsStartingCutoffTip>
+  <RR_FeedOtherSettingsStartingCutoffTip>Controls manual feeding's starting fullness. Automatic social meals use room below 90% of comfortable capacity, the recipient's Gain goal and the colony food reserve.</RR_FeedOtherSettingsStartingCutoffTip>
   <RR_FeedOtherSettingsFeedingTarget>Feed Other stop fullness</RR_FeedOtherSettingsFeedingTarget>
-  <RR_FeedOtherSettingsFeedingTargetTooltip>Controls the exact hard-capacity percentage at which Shared Meal, Feed Other, manual feeding, and bedside feeding stop. The final fullness increase is clamped to this value. The recommended default is 70%. This does not alter RimRound's health-stage boundaries, its 70% Very Full mood trigger, or the separate 80% prisoner Fatten target.</RR_FeedOtherSettingsFeedingTargetTooltip>
+  <RR_FeedOtherSettingsFeedingTargetTooltip>Controls the hard-capacity percentage at which manual feeding stops. Automatic Gain and social meals stop at 90% of comfortable capacity. RimRound's health-stage boundaries and the separate prisoner Fatten target retain their own rules.</RR_FeedOtherSettingsFeedingTargetTooltip>
   <RR_FeedOtherSettingsStageFull>Resulting RimRound stage: Full (below Very Full).</RR_FeedOtherSettingsStageFull>
   <RR_FeedOtherSettingsStageVeryFull>Resulting RimRound stage: Very Full.</RR_FeedOtherSettingsStageVeryFull>
   <RR_FeedOtherSettingsStagePainfullyFull>Resulting RimRound stage: Painfully Full.</RR_FeedOtherSettingsStagePainfullyFull>
@@ -33,7 +33,7 @@
   <RR_FeedOtherSettingsSessionTimeout>Maximum feeding-session time</RR_FeedOtherSettingsSessionTimeout>
   <RR_FeedOtherSettingsSessionTimeoutTip>Maximum time spent fetching, meeting, waiting, and eating before a feeding session ends safely. The optional after-meal social phase has its own limit.</RR_FeedOtherSettingsSessionTimeoutTip>
   <RR_FeedOtherSettingsAutonomousFrequency>Autonomous event frequency</RR_FeedOtherSettingsAutonomousFrequency>
-  <RR_FeedOtherSettingsAutonomousFrequencyTip>Multiplies the final chance that Feed Other wins an eligible recreation choice. It does not bypass eligibility, food, relationship, timetable, or cooldown checks.</RR_FeedOtherSettingsAutonomousFrequencyTip>
+  <RR_FeedOtherSettingsAutonomousFrequencyTip>Multiplies each eligible social opportunity. Work blocks optional invitations; Recreation has four times the ordinary Anything or Sleep chance. Invitations can happen with a full recreation meter and still obey capacity, food reserves, partner availability and cooldowns.</RR_FeedOtherSettingsAutonomousFrequencyTip>
 
   <RR_FeedOtherSettingsCooldownHeader>Autonomous feeding cooldowns</RR_FeedOtherSettingsCooldownHeader>
   <RR_FeedOtherSettingsParticipantCooldown>Participant / recipient cooldown</RR_FeedOtherSettingsParticipantCooldown>
@@ -46,7 +46,7 @@
   <RR_FeedOtherSettingsLikeBypassTip>If either pawn has Like, Love, Fanatical, or Extreme weight opinion, their pair may start again immediately whenever all other conditions are valid.</RR_FeedOtherSettingsLikeBypassTip>
   <RR_FeedOtherSettingsManualIgnoresCooldown>Manual commands ignore feeding cooldowns</RR_FeedOtherSettingsManualIgnoresCooldown>
   <RR_FeedOtherSettingsManualIgnoresCooldownTip>When enabled, right-click Feed commands neither check nor start these feeding cooldowns. When disabled, manual feeding uses and records the same cooldown system.</RR_FeedOtherSettingsManualIgnoresCooldownTip>
-  <RR_FeedOtherSettingsCooldownZeroNote>Setting a cooldown to 0 hours disables that particular cooldown. Existing saved cooldown expiry times are not lengthened or shortened; the new duration is used by future sessions.</RR_FeedOtherSettingsCooldownZeroNote>
+  <RR_FeedOtherSettingsCooldownZeroNote>Automatic sessions use at least four hours per participant and pair. Liking larger bodies does not bypass this limit. Existing saved expiry times remain; new durations apply to future sessions. A normal sleep period permits only one social wake-up.</RR_FeedOtherSettingsCooldownZeroNote>
 
   <RR_FeedOtherSettingsSocialHeader>Dialogue, recreation, and memories</RR_FeedOtherSettingsSocialHeader>
   <RR_FeedOtherSettingsDialogue>Feeding dialogue and interaction logs</RR_FeedOtherSettingsDialogue>
@@ -63,8 +63,8 @@
   <RR_FeedOtherSettingsPositiveMoodTip>Allows Neutral+ and higher weight opinions to receive the positive RimRound Patch mood memory when crossing RimRound's real 70% Very Full boundary.</RR_FeedOtherSettingsPositiveMoodTip>
   <RR_FeedOtherSettingsNegativeMood>Negative Very Full discomfort memories</RR_FeedOtherSettingsNegativeMood>
   <RR_FeedOtherSettingsNegativeMoodTip>Allows Neutral-, Dislike, and Hate weight opinions to receive the negative discomfort memory when crossing the real 70% Very Full boundary.</RR_FeedOtherSettingsNegativeMoodTip>
-  <RR_FeedOtherSettingsAfterMealMood>After-meal chat mood (+2)</RR_FeedOtherSettingsAfterMealMood>
-  <RR_FeedOtherSettingsAfterMealMoodTip>Awards the +2 mood memory after at least 600 ticks of successful post-meal social recreation.</RR_FeedOtherSettingsAfterMealMoodTip>
+  <RR_FeedOtherSettingsAfterMealMood>Enjoyed meal or feeding mood (+2)</RR_FeedOtherSettingsAfterMealMood>
+  <RR_FeedOtherSettingsAfterMealMoodTip>A successful, enjoyable meal or feeding visit can give +2 mood for four hours, including a bedside visit without chat. Meaningful food intake is required. Unpleasant, painful or interrupted visits give no automatic reward; existing social-meal rewards are not stacked or refreshed.</RR_FeedOtherSettingsAfterMealMoodTip>
 
   <RR_FeedOtherSettingsPawnHeader>Pawn behaviour and abilities</RR_FeedOtherSettingsPawnHeader>
   <RR_FeedOtherSettingsIdleEating>Idle underweight eating</RR_FeedOtherSettingsIdleEating>
@@ -222,8 +222,8 @@
   <RR_FoodNetworkBasicNeedsAdjacentBed>A basic feeder can connect only to an immediately adjacent occupied bed.</RR_FoodNetworkBasicNeedsAdjacentBed>
   <RR_FoodNetworkAlreadyLinked>That bed is already linked to another automatic feeder.</RR_FoodNetworkAlreadyLinked>
   <RR_FoodNetworkLinkUnavailable>The feeding-tube link could not be saved.</RR_FoodNetworkLinkUnavailable>
-  <RR_FoodNetworkGainModeDesc>Continuously feeds linked occupants to 90% of comfortable stomach capacity, regardless of their food policy or body goal.</RR_FoodNetworkGainModeDesc>
-  <RR_FoodNetworkMaximumModeDesc>Continuously feeds linked occupants toward {0}% hard fullness, while retaining the 95% rupture-safety ceiling.</RR_FoodNetworkMaximumModeDesc>
+  <RR_FoodNetworkGainModeDesc>Starts feeding at 25% food or below, then fills to 90% of comfortable fullness. Respects food restrictions and keeps three days of colony food. Necessary hunger feeding remains available.</RR_FoodNetworkGainModeDesc>
+  <RR_FoodNetworkMaximumModeDesc>Feeds linked occupants toward {0}% hard fullness, with a 95% safety ceiling. Automatic extra feeding respects food restrictions and keeps three days of colony food. Necessary hunger feeding remains available.</RR_FoodNetworkMaximumModeDesc>
   <RR_HeritableDigestion>Vary natural digestion genes</RR_HeritableDigestion>
   <RR_HeritableDigestionTip>New pawns usually have normal digestion, with rarer slow, fast or ultra variants. Uses inheritable Biotech genes and preserves inherited or custom gene sets.</RR_HeritableDigestionTip>
   <RR_HeritableMetabolism>Vary natural metabolism genes</RR_HeritableMetabolism>

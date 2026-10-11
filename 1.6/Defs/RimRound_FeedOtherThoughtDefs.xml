@@ -75,4 +75,27 @@
       </li>
     </stages>
   </ThoughtDef>
+  <ThoughtDef>
+    <defName>RR_EnjoyedSocialMealMood</defName>
+    <thoughtClass>Thought_Memory</thoughtClass>
+    <durationDays>0.1666667</durationDays>
+    <stackLimit>1</stackLimit>
+    <stages>
+      <li>
+        <label>enjoyed a shared meal</label>
+        <description>Sharing a comfortable meal together felt good.</description>
+        <baseMoodEffect>2</baseMoodEffect>
+      </li>
+      <li>
+        <label>enjoyed being fed</label>
+        <description>A willing companion brought me a pleasant, comfortable meal.</description>
+        <baseMoodEffect>2</baseMoodEffect>
+      </li>
+      <li>
+        <label>enjoyed feeding someone</label>
+        <description>Helping a willing companion enjoy their meal felt satisfying.</description>
+        <baseMoodEffect>2</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
 </Defs>

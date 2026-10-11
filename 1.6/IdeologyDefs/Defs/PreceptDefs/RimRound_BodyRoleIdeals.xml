@@ -3,6 +3,7 @@
   <IssueDef>
     <defName>RR_LeadershipBodyIdeal</defName>
     <label>leadership body ideal</label>
+    <iconPath>UI/PerkIcons/FOOD_IS_FOOD</iconPath>
   </IssueDef>
   <PreceptDef>
     <defName>RR_LeadershipBodyIdeal_None</defName>

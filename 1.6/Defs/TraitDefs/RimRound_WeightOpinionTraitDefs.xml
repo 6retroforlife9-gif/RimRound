@@ -49,7 +49,7 @@
     <degreeDatas>
       <li>
         <label>Weight Opinion: Neutral</label>
-        <description>{PAWN_nameDef} believes that fat is just fat. While they don't want to be huge, they can appreciate bodies with a little extra weight on them.</description>
+        <description>{PAWN_nameDef} is comfortable carrying a little extra weight on their own body, but does not want to be huge.</description>
       </li>
     </degreeDatas>
     <exclusionTags>
@@ -63,7 +63,7 @@
     <degreeDatas>
       <li>
         <label>Weight Opinion: Neutral+</label>
-        <description>{PAWN_nameDef} understands the appeal of the larger form. They appreciate the softness that comes with carrying extra weight and prefer to be heavier themselves.</description>
+        <description>{PAWN_nameDef} appreciates the softness of carrying extra weight on their own body and prefers to be heavier.</description>
       </li>
     </degreeDatas>
     <exclusionTags>
@@ -77,7 +77,7 @@
     <degreeDatas>
       <li>
         <label>Weight Opinion: Like</label>
-        <description>{PAWN_nameDef} is a true fat admirer. They would like nothing more than to be fat and will be quite upset if they're not.</description>
+        <description>{PAWN_nameDef} wants to be fat and will be quite upset if their own body is too small.</description>
       </li>
     </degreeDatas>
     <exclusionTags>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <RR_PreferenceOwnSize>Preferred own size</RR_PreferenceOwnSize>
+  <RR_SocialBodyTasteSummary>View of larger bodies: {0}</RR_SocialBodyTasteSummary>
+  <RR_SocialBodyTasteLevel0>Strongly dislikes larger bodies</RR_SocialBodyTasteLevel0>
+  <RR_SocialBodyTasteLevel1>Dislikes larger bodies</RR_SocialBodyTasteLevel1>
+  <RR_SocialBodyTasteLevel2>Neutral about larger bodies</RR_SocialBodyTasteLevel2>
+  <RR_SocialBodyTasteLevel3>Likes larger bodies</RR_SocialBodyTasteLevel3>
+  <RR_SocialBodyTasteLevel4>Strongly likes larger bodies</RR_SocialBodyTasteLevel4>
+  <RR_SocialBodyTasteUnavailable>View of larger bodies: unavailable</RR_SocialBodyTasteUnavailable>
+  <RR_SocialBodyTasteExplanation>This view stays fixed and is separate from preferred own size. Body opinions contribute to ordinary Social relationships. The weight-opinion mood option controls feelings about own size.</RR_SocialBodyTasteExplanation>
+  <RR_SocialBodyTasteUnavailableExplanation>No social taste is currently available. Preferred own size remains separate.</RR_SocialBodyTasteUnavailableExplanation>
+  <RR_SocialBodyTasteInactive>Body opinions are currently inactive for this pawn. They apply between living adults with food metabolism who can have ordinary social thoughts.</RR_SocialBodyTasteInactive>
+  <RR_SocialBodyTasteAppearanceSuppressed>This pawn does not care about others' appearance, so their personal body opinion contributes nothing. Their stored taste stays the same.</RR_SocialBodyTasteAppearanceSuppressed>
+  <RR_SocialBodyTasteAbundance>Embodied Abundance makes the opinion of a qualifying larger adult body at least +5. This cultural approval keeps stronger personal approval and does not change the stored taste or preferred own size.</RR_SocialBodyTasteAbundance>
+</LanguageData>

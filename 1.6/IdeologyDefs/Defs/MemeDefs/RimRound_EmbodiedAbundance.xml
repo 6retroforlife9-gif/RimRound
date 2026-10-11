@@ -3,7 +3,7 @@
   <MemeDef>
     <defName>RR_EmbodiedAbundance</defName>
     <label>embodied abundance</label>
-    <description>A larger body is a visible expression of abundance. Leaders and moral guides are expected to embrace this ideal, while each person's own preferences govern willing assistance.</description>
+    <description>A larger body is a visible expression of abundance. Leaders and moral guides are expected to embrace this ideal, while each person's own preferences govern willing assistance. Followers give qualifying larger known adults at least +5 in the body-size component of social opinion. Other causes can still make their total opinion negative. This ideal does not change a follower's fixed social taste or preferred own size.</description>
     <iconPath>UI/PerkIcons/FOOD_IS_FOOD</iconPath>
     <groupDef>Misc</groupDef>
     <impact>2</impact>
