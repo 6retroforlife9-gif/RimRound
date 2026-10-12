@@ -281,7 +281,7 @@
 	<FeedingTubeModeLabel_maintainDesc>The autofeeder will attempt to keep the pawn at their current weight.</FeedingTubeModeLabel_maintainDesc>
 	<FeedingTubeModeLabel_gain>Gain Weight</FeedingTubeModeLabel_gain>
 	<FeedingTubeModeLabel_gainDesc>Starts feeding at 25% food or below, then fills to 90% of comfortable fullness. Keeps three days of colony food. Necessary hunger feeding remains available.</FeedingTubeModeLabel_gainDesc>
-	<FeedingTubeModeLabel_maxgain>Force Gain Weight</FeedingTubeModeLabel_maxgain>
+	<FeedingTubeModeLabel_maxgain>Maximum Gain</FeedingTubeModeLabel_maxgain>
 	<FeedingTubeModeLabel_maxgainDesc>Feeds toward the configured maximum fullness and can stretch stomach capacity. Keeps three days of colony food for automatic extra feeding. Necessary hunger feeding remains available.</FeedingTubeModeLabel_maxgainDesc>
 	<FeedingTubeModeLabel_off>Standby</FeedingTubeModeLabel_off>
 	<FeedingTubeModeLabel_offDesc>While in standby the autofeeder will not consume food nor will it feed any pawns. It will, however, still consume power.</FeedingTubeModeLabel_offDesc>
