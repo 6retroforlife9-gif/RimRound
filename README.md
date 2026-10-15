@@ -7,3 +7,6 @@ Substantially redesigned mod for RimWorld 1.6.
 **Anthrosonae is now fully supported.** Base-mod adult appearances retain their coats, colours, head features and fitted tails/wings across supported RimRound body artwork and weight stages. Third-party addon content retains native fallback.
 
 This build also includes reworked food density and digestion, complete Gain meals, and updated food machinery etc etc etc tons of things dig deep into the code if you like :P
+
+Anthrosonae:
+https://steamcommunity.com/sharedfiles/filedetails/?id=2902258418
