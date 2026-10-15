@@ -4,7 +4,7 @@
   <ThingDef ParentName="swellGlowDrugBase">
     <defName>swellGlowOriginal</defName>
     <label>Swell-Glow</label>
-    <description>An addictive metabolic drug. One indivisible dose supplies 0.9 nutrition and 0.3 fullness volume, with its full chemical effects and tolerance. Requires explicit drug permission and enough stomach room for the complete dose; not ordinary hunger food.</description>
+    <description>Contains 16 nutrition in 0.1 stomach volume before pawn modifiers. Releases useful energy over 24 game hours in Fantasy or 72 game hours in Balanced where permitted. One complete dose requires explicit drug or medical authorization and enough stomach room. Chemical effects remain unchanged.</description>
     <tradeTags>
       <li>Drugs</li>
     </tradeTags>
@@ -13,9 +13,9 @@
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <statBases>
-      <MarketValue>45</MarketValue>
+      <MarketValue>70</MarketValue>
       <WorkToMake>375</WorkToMake>
-      <Nutrition>0.9</Nutrition>
+      <Nutrition>16</Nutrition>
       <Mass>0.005</Mass>
     </statBases>
     <ingestible>
@@ -48,7 +48,7 @@
     <comps>
       <li Class="RimRound.Comps.CompProperties_FoodItems_NutritionDensity">
         <compClass>RimRound.Comps.ThingComp_FoodItems_NutritionDensity</compClass>
-        <fullnessToNutritionRatio>0.333333333</fullnessToNutritionRatio>
+        <fullnessToNutritionRatio>0.00625</fullnessToNutritionRatio>
       </li>
       <li Class="CompProperties_Drug">
         <chemical>swellGlowChem</chemical>
@@ -64,7 +64,7 @@
   <ThingDef ParentName="swellGlowDrugBase">
     <defName>swellGlowPlus</defName>
     <label>Swell-Glow Plus</label>
-    <description>An addictive metabolic drug. One indivisible dose supplies 1.8 nutrition and 0.45 fullness volume, with its full chemical effects and tolerance. Requires explicit drug permission and enough stomach room for the complete dose; not ordinary hunger food.</description>
+    <description>Contains 40 nutrition in 0.1 stomach volume before pawn modifiers. Releases useful energy over 24 game hours in Fantasy or 72 game hours in Balanced where permitted. One complete dose requires explicit drug or medical authorization and enough stomach room. Chemical effects remain unchanged.</description>
     <tradeTags>
       <li>Drugs</li>
     </tradeTags>
@@ -73,9 +73,9 @@
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <statBases>
-      <MarketValue>70</MarketValue>
+      <MarketValue>150</MarketValue>
       <WorkToMake>375</WorkToMake>
-      <Nutrition>1.8</Nutrition>
+      <Nutrition>40</Nutrition>
       <Mass>0.005</Mass>
     </statBases>
     <ingestible>
@@ -108,7 +108,7 @@
     <comps>
       <li Class="RimRound.Comps.CompProperties_FoodItems_NutritionDensity">
         <compClass>RimRound.Comps.ThingComp_FoodItems_NutritionDensity</compClass>
-        <fullnessToNutritionRatio>0.25</fullnessToNutritionRatio>
+        <fullnessToNutritionRatio>0.0025</fullnessToNutritionRatio>
       </li>
       <li Class="CompProperties_Drug">
         <chemical>swellGlowChem</chemical>
@@ -124,7 +124,7 @@
   <ThingDef ParentName="swellGlowDrugBase">
     <defName>swellGlowX</defName>
     <label>Swell-Glow X</label>
-    <description>Fantasy only. An addictive metabolic drug. One indivisible dose supplies 100 nutrition and 0.1 fullness volume, with its full chemical effects and tolerance. Requires explicit drug permission and enough stomach room for the complete dose; not ordinary hunger food.</description>
+    <description>Fantasy only. Contains 100 nutrition in 0.1 stomach volume before pawn modifiers. Releases useful energy over 24 game hours in Fantasy or 72 game hours in Balanced where permitted. One complete dose requires explicit drug or medical authorization and enough stomach room. Chemical effects remain unchanged.</description>
     <tradeTags>
       <li>Drugs</li>
     </tradeTags>
@@ -133,7 +133,7 @@
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <statBases>
-      <MarketValue>110</MarketValue>
+      <MarketValue>300</MarketValue>
       <WorkToMake>375</WorkToMake>
       <Nutrition>100</Nutrition>
       <Mass>0.005</Mass>
@@ -184,7 +184,7 @@
   <ThingDef ParentName="swellGlowDrugBase">
     <defName>swellGlowMAX</defName>
     <label>Swell-Glow MAX</label>
-    <description>Fantasy only. An addictive metabolic drug. One indivisible dose supplies 150 nutrition and 0.15 fullness volume, with its full chemical effects and tolerance. Requires explicit drug permission and enough stomach room for the complete dose; not ordinary hunger food.</description>
+    <description>Fantasy only. Contains 160 nutrition in 0.1 stomach volume before pawn modifiers. Releases useful energy over 24 game hours in Fantasy or 72 game hours in Balanced where permitted. One complete dose requires explicit drug or medical authorization and enough stomach room. Chemical effects remain unchanged.</description>
     <tradeTags>
       <li>Drugs</li>
     </tradeTags>
@@ -193,9 +193,9 @@
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <statBases>
-      <MarketValue>145</MarketValue>
+      <MarketValue>450</MarketValue>
       <WorkToMake>375</WorkToMake>
-      <Nutrition>150</Nutrition>
+      <Nutrition>160</Nutrition>
       <Mass>0.005</Mass>
     </statBases>
     <ingestible>
@@ -228,7 +228,7 @@
     <comps>
       <li Class="RimRound.Comps.CompProperties_FoodItems_NutritionDensity">
         <compClass>RimRound.Comps.ThingComp_FoodItems_NutritionDensity</compClass>
-        <fullnessToNutritionRatio>0.001</fullnessToNutritionRatio>
+        <fullnessToNutritionRatio>0.000625</fullnessToNutritionRatio>
       </li>
       <li Class="CompProperties_Drug">
         <chemical>swellGlowChem</chemical>
@@ -339,18 +339,18 @@
   <ThingDef ParentName="OrganicProductBase">
     <defName>SG_Calomilk</defName>
     <label>calomilk</label>
-    <description>Calorite-rich milk. Each unit supplies 0.1 nutrition. Used by explicitly enriched recipes; excluded from everyday cooking defaults.</description>
+    <description>Contains 0.2 nutrition in 0.05 stomach volume before pawn modifiers. Energy is absorbed as this food digests. Whole items are consumed; any portion that cannot be used is wasted.</description>
     <graphicData>
       <texPath>Things/Products/Calomilk</texPath>
     </graphicData>
     <socialPropernessMatters>true</socialPropernessMatters>
     <statBases>
-      <MarketValue>2.8</MarketValue>
+      <MarketValue>4.2</MarketValue>
       <!-- Can be used like meat in recipes -->
       <Mass>0.045</Mass>
       <MaxHitPoints>60</MaxHitPoints>
       <Flammability>0.2</Flammability>
-      <Nutrition>0.1</Nutrition>
+      <Nutrition>0.2</Nutrition>
       <FoodPoisonChanceFixedHuman>0.02</FoodPoisonChanceFixedHuman>
     </statBases>
     <comps>
@@ -359,6 +359,10 @@
         <rotDestroys>true</rotDestroys>
       </li>
       <li Class="CompProperties_Ingredients" />
+      <li Class="RimRound.Comps.CompProperties_FoodItems_NutritionDensity">
+        <compClass>RimRound.Comps.ThingComp_FoodItems_NutritionDensity</compClass>
+        <fullnessToNutritionRatio>0.25</fullnessToNutritionRatio>
+      </li>
     </comps>
     <ingestible>
       <preferability>RawTasty</preferability>

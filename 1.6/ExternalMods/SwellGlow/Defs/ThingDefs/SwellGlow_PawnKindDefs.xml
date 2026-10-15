@@ -3,19 +3,19 @@
   <ThingDef ParentName="OrganicProductBase">
     <defName>SG_CaloyakMeat</defName>
     <label>caloyak meat</label>
-    <description>Calorite-rich meat from a caloyak. Each unit supplies 0.1 nutrition. Retains animal-meat identity in specialist recipes.</description>
+    <description>Contains 0.2 nutrition in 0.05 stomach volume before pawn modifiers. Energy is absorbed as this food digests. Whole items are consumed; any portion that cannot be used is wasted.</description>
     <graphicData>
       <texPath>Things/Products/CaloyakMeat</texPath>
       <graphicClass>Graphic_StackCount</graphicClass>
     </graphicData>
     <socialPropernessMatters>true</socialPropernessMatters>
     <statBases>
-      <MarketValue>2.8</MarketValue>
+      <MarketValue>4.2</MarketValue>
       <!-- Can be used like meat in recipes -->
       <Mass>0.045</Mass>
       <MaxHitPoints>50</MaxHitPoints>
       <Flammability>0.2</Flammability>
-      <Nutrition>0.1</Nutrition>
+      <Nutrition>0.2</Nutrition>
       <FoodPoisonChanceFixedHuman>0.02</FoodPoisonChanceFixedHuman>
     </statBases>
     <comps>
@@ -24,6 +24,10 @@
         <rotDestroys>true</rotDestroys>
       </li>
       <li Class="CompProperties_Ingredients" />
+      <li Class="RimRound.Comps.CompProperties_FoodItems_NutritionDensity">
+        <compClass>RimRound.Comps.ThingComp_FoodItems_NutritionDensity</compClass>
+        <fullnessToNutritionRatio>0.25</fullnessToNutritionRatio>
+      </li>
     </comps>
     <ingestible>
       <preferability>RawBad</preferability>

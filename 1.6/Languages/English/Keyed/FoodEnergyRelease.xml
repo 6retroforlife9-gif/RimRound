@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <RR_FdrEnergyStatus>Energy: {0} nutrition digesting; {1} in timed products; {2} absorbed balance. Effective gain conversion: {3}x.</RR_FdrEnergyStatus>
+  <RR_FdrTransitionStatus>Save transition: {0} nutrition remaining over {1} active game hours. This preserves previously stored energy.</RR_FdrTransitionStatus>
+</LanguageData>

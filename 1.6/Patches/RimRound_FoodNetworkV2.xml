@@ -72,8 +72,7 @@
     </value>
   </Operation>
 
-  <!-- Replace the old north-only distiller markers with rotation-aware input
-       and output ports. -->
+  <!-- Both storage modes share the same fixed input and output geometry. -->
   <Operation Class="PatchOperationReplace">
     <xpath>Defs/ThingDef[defName="RR_TD_NutrientDistillery"]/placeWorkers/li[text()="RimRound.FeedingTube.NutrientDistillery_PlaceWorker"]</xpath>
     <value>

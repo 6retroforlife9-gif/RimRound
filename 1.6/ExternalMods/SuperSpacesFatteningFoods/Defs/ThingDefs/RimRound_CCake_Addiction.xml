@@ -45,15 +45,15 @@
   <ThingDef ParentName="cakeDrugBase">
     <defName>cakeFat</defName>
     <label>"Cannot-Stop" cake</label>
-    <description>An addictive, calorie-dense cake providing three times the nutrition of ordinary food per unit of stomach space. One complete dose supplies 1.8 nutrition in 0.6 fullness volume and a pleasurable mood high. Requires explicit drug or medical authorization and enough stomach room for the full dose. Repeated use can cause tolerance and addiction.</description>
+    <description>Contains 6 nutrition in 0.6 stomach volume before pawn modifiers. Releases useful energy over 24 game hours in Fantasy or 72 game hours in Balanced where permitted. One complete dose requires explicit drug or medical authorization and enough stomach room. Chemical effects remain unchanged.</description>
     <graphicData>
       <texPath>Things/Food/LardCake</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <statBases>
-      <MarketValue>55</MarketValue>
+      <MarketValue>160</MarketValue>
       <WorkToMake>450</WorkToMake>
-      <Nutrition>1.8</Nutrition>
+      <Nutrition>6</Nutrition>
     </statBases>
     <ingestible>
       <outcomeDoers>
@@ -85,7 +85,7 @@
     <comps>
       <li Class="RimRound.Comps.CompProperties_FoodItems_NutritionDensity">
         <compClass>RimRound.Comps.ThingComp_FoodItems_NutritionDensity</compClass>
-        <fullnessToNutritionRatio>0.333333333</fullnessToNutritionRatio>
+        <fullnessToNutritionRatio>0.1</fullnessToNutritionRatio>
       </li>
       <li Class="CompProperties_Drug">
         <chemical>cakeChem</chemical>

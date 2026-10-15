@@ -644,7 +644,7 @@
 		<drawerType>MapMeshAndRealTime</drawerType>
 		<graphicData>
 			<texPath>Things/Building/Production/NutrientRefinery</texPath>
-			<graphicClass>Graphic_Single</graphicClass>
+			<graphicClass>RimRound.FeedingTube.Graphic_FixedNutrientDistillery</graphicClass>
 			<drawSize>(2, 3)</drawSize>
 			<damageData>
 				<rect>(0,0.35,1,0.3)</rect>
@@ -697,8 +697,8 @@
 			<li>RimRound.FeedingTube.FoodTransmitter_PlaceWorker</li>
 			<li>RimRound.FeedingTube.NutrientDistillery_PlaceWorker</li>
 		</placeWorkers>
-		<drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
-		<rotatable>true</rotatable>
+		<drawPlaceWorkersWhileSelected>false</drawPlaceWorkersWhileSelected>
+		<rotatable>false</rotatable>
 		<selectable>true</selectable>
 		<neverMultiSelect>true</neverMultiSelect>
 		<soundImpactDefault>BulletImpact_Metal</soundImpactDefault>

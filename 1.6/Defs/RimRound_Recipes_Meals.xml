@@ -1,30 +1,24 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version='1.0' encoding='utf-8'?>
 <Defs>
-	<!--Simple Meal Derivatives-->
-	
-	<RecipeDef Name="RR_SimpleMealRecipeBase" ParentName="CookMealBase" Abstract="True">
-		<workSpeedStat>CookSpeed</workSpeedStat>
-		<requiredGiverWorkType>Cooking</requiredGiverWorkType>
-		<effectWorking>Cook</effectWorking>
-		<soundWorking>Recipe_CookMeal</soundWorking>
-		<allowMixingIngredients>true</allowMixingIngredients>
-		<recipeUsers>
-		  <li>ElectricStove</li>
-		  <li>FueledStove</li>
-		</recipeUsers>		
-		<ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
-		<workSkill>Cooking</workSkill>
-		<researchPrerequisite>RR_Research_NutritionallyDenseFoods</researchPrerequisite>
-	</RecipeDef>
-
-<!--Simple meals-->
-
+  <RecipeDef Name="RR_SimpleMealRecipeBase" ParentName="CookMealBase" Abstract="True">
+    <workSpeedStat>CookSpeed</workSpeedStat>
+    <requiredGiverWorkType>Cooking</requiredGiverWorkType>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <recipeUsers>
+      <li>ElectricStove</li>
+      <li>FueledStove</li>
+    </recipeUsers>
+    <ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
+    <workSkill>Cooking</workSkill>
+    <researchPrerequisite>RR_Research_NutritionallyDenseFoods</researchPrerequisite>
+  </RecipeDef>
   <RecipeDef ParentName="RR_SimpleMealRecipeBase">
     <defName>CookMealSimpleLarge</defName>
-    <label>cook large simple meal</label>
-    <description>Cook a large straightforward meal from one ingredient.</description>
+    <label>cook a large simple meal</label>
+    <description>Produces 1 supported portion(s), 1.8 nutrition in total. Ingredients and work scale with the output; legacy bills remain usable.</description>
     <jobString>Cooking large simple meal.</jobString>
-
     <ingredients>
       <li>
         <filter>
@@ -32,21 +26,19 @@
             <li>FoodRaw</li>
           </categories>
         </filter>
-        <count>0.84</count>
+        <count>1</count>
       </li>
     </ingredients>
     <products>
       <MealSimpleLarge>1</MealSimpleLarge>
     </products>
+    <workAmount>600</workAmount>
   </RecipeDef>
-  
- 
   <RecipeDef ParentName="RR_SimpleMealRecipeBase">
     <defName>CookMealSimpleHuge</defName>
-    <label>cook huge simple meal</label>
-    <description>Cook a huge straightforward meal from one ingredient.</description>
+    <label>cook a feast simple meal</label>
+    <description>Produces 1 supported portion(s), 3.6 nutrition in total. Ingredients and work scale with the output; legacy bills remain usable.</description>
     <jobString>Cooking huge simple meal.</jobString>
-
     <ingredients>
       <li>
         <filter>
@@ -54,20 +46,19 @@
             <li>FoodRaw</li>
           </categories>
         </filter>
-        <count>1.39</count>
+        <count>2</count>
       </li>
     </ingredients>
     <products>
       <MealSimpleHuge>1</MealSimpleHuge>
     </products>
+    <workAmount>1200</workAmount>
   </RecipeDef>
-
   <RecipeDef ParentName="RR_SimpleMealRecipeBase">
     <defName>CookMealSimpleEnormous</defName>
-    <label>cook enormous simple meal</label>
-    <description>Cook a enormous straightforward meal from one ingredient.</description>
+    <label>legacy bill: cook a feast simple meal</label>
+    <description>Produces 1 supported portion(s), 3.6 nutrition in total. Ingredients and work scale with the output; legacy bills remain usable.</description>
     <jobString>Cooking enormous simple meal.</jobString>
-
     <ingredients>
       <li>
         <filter>
@@ -75,20 +66,20 @@
             <li>FoodRaw</li>
           </categories>
         </filter>
-        <count>2.23</count>
+        <count>2</count>
       </li>
     </ingredients>
     <products>
-      <MealSimpleEnormous>1</MealSimpleEnormous>
+      <MealSimpleHuge>1</MealSimpleHuge>
     </products>
+    <recipeUsers Inherit="False" />
+    <workAmount>1200</workAmount>
   </RecipeDef>
-
   <RecipeDef ParentName="RR_SimpleMealRecipeBase">
     <defName>CookMealSimpleMassive</defName>
-    <label>cook massive simple meal</label>
-    <description>Cook a massive straightforward meal from one ingredient.</description>
+    <label>legacy bill: cook 2 feast simple meals</label>
+    <description>Produces 2 supported portion(s), 7.2 nutrition in total. Ingredients and work scale with the output; legacy bills remain usable.</description>
     <jobString>Cooking massive simple meal.</jobString>
-
     <ingredients>
       <li>
         <filter>
@@ -96,18 +87,19 @@
             <li>FoodRaw</li>
           </categories>
         </filter>
-        <count>3.34</count>
+        <count>4</count>
       </li>
     </ingredients>
     <products>
-      <MealSimpleMassive>1</MealSimpleMassive>
+      <MealSimpleHuge>2</MealSimpleHuge>
     </products>
-  </RecipeDef>  
-  
+    <recipeUsers Inherit="False" />
+    <workAmount>2400</workAmount>
+  </RecipeDef>
   <RecipeDef ParentName="RR_SimpleMealRecipeBase">
     <defName>CookMealSimpleColossal</defName>
-    <label>cook colossal simple meal</label>
-    <description>Cook a colossal straightforward meal from one ingredient.</description>
+    <label>legacy bill: cook 4 feast simple meals</label>
+    <description>Produces 4 supported portion(s), 14.4 nutrition in total. Ingredients and work scale with the output; legacy bills remain usable.</description>
     <jobString>Cooking colossal simple meal.</jobString>
     <ingredients>
       <li>
@@ -116,36 +108,32 @@
             <li>FoodRaw</li>
           </categories>
         </filter>
-        <count>8.34</count>
+        <count>8</count>
       </li>
     </ingredients>
     <products>
-      <MealSimpleColossal>1</MealSimpleColossal>
+      <MealSimpleHuge>4</MealSimpleHuge>
     </products>
-	<researchPrerequisite>RR_Research_ColossalMeals</researchPrerequisite>		
-	
-  </RecipeDef>    
-  
-  <!--Fine Meal Derivatives-->
-  <RecipeDef Name="RR_FineMealRecipeBase" ParentName="CookMealFineBase" Abstract="True">
-		<recipeUsers>
-		  <li>ElectricStove</li>
-		  <li>FueledStove</li>
-		</recipeUsers>
-		<researchPrerequisite>RR_Research_NutritionallyDenseFoods</researchPrerequisite>		
+    <researchPrerequisite>RR_Research_ColossalMeals</researchPrerequisite>
+    <recipeUsers Inherit="False" />
+    <workAmount>4800</workAmount>
   </RecipeDef>
-  
-  
-  
+  <RecipeDef Name="RR_FineMealRecipeBase" ParentName="CookMealFineBase" Abstract="True">
+    <recipeUsers>
+      <li>ElectricStove</li>
+      <li>FueledStove</li>
+    </recipeUsers>
+    <researchPrerequisite>RR_Research_NutritionallyDenseFoods</researchPrerequisite>
+  </RecipeDef>
   <RecipeDef ParentName="RR_FineMealRecipeBase">
     <defName>CookMealFineLarge</defName>
-    <label>cook large fine meal</label>
-    <description>Cook a large, somewhat complex meal from a combination of meat and plant ingredients.</description>
+    <label>cook a large fine meal</label>
+    <description>Produces 1 supported portion(s), 1.8 nutrition in total. Ingredients and work scale with the output; legacy bills remain usable.</description>
     <jobString>Cooking large fine meal.</jobString>
-	<recipeUsers>
-		<li>ElectricStove</li>
-		<li>FueledStove</li>
-	</recipeUsers>		
+    <recipeUsers>
+      <li>ElectricStove</li>
+      <li>FueledStove</li>
+    </recipeUsers>
     <ingredients>
       <li>
         <filter>
@@ -154,7 +142,7 @@
             <li>AnimalProductRaw</li>
           </categories>
         </filter>
-        <count>0.42</count>
+        <count>0.5</count>
       </li>
       <li>
         <filter>
@@ -162,23 +150,23 @@
             <li>PlantFoodRaw</li>
           </categories>
         </filter>
-        <count>0.42</count>
+        <count>0.5</count>
       </li>
     </ingredients>
     <products>
       <MealFineLarge>1</MealFineLarge>
     </products>
+    <workAmount>900</workAmount>
   </RecipeDef>
- 
   <RecipeDef ParentName="RR_FineMealRecipeBase">
     <defName>CookMealFineLargeVeg</defName>
-    <label>cook large fine meal</label>
-    <description>Cook a large, somewhat complex meal from plant ingredients.</description>
+    <label>cook a large fine meal</label>
+    <description>Produces 1 supported portion(s), 1.8 nutrition in total. Ingredients and work scale with the output; legacy bills remain usable.</description>
     <jobString>Cooking large fine meal.</jobString>
-	<recipeUsers>
-		<li>ElectricStove</li>
-		<li>FueledStove</li>
-	</recipeUsers>		
+    <recipeUsers>
+      <li>ElectricStove</li>
+      <li>FueledStove</li>
+    </recipeUsers>
     <ingredients>
       <li>
         <filter>
@@ -186,23 +174,343 @@
             <li>PlantFoodRaw</li>
           </categories>
         </filter>
-        <count>1.25</count>
+        <count>1.5</count>
       </li>
     </ingredients>
     <products>
       <MealFineLargeVeg>1</MealFineLargeVeg>
     </products>
+    <workAmount>900</workAmount>
   </RecipeDef>
-
   <RecipeDef ParentName="RR_FineMealRecipeBase">
     <defName>CookMealFineLargeMeat</defName>
-    <label>cook large fine meal</label>
-    <description>Cook a large, somewhat complex meal from meat ingredients.</description>
+    <label>cook a large fine meal</label>
+    <description>Produces 1 supported portion(s), 1.8 nutrition in total. Ingredients and work scale with the output; legacy bills remain usable.</description>
     <jobString>Cooking large fine meal.</jobString>
-	<recipeUsers>
-		<li>ElectricStove</li>
-		<li>FueledStove</li>
-	</recipeUsers>		
+    <recipeUsers>
+      <li>ElectricStove</li>
+      <li>FueledStove</li>
+    </recipeUsers>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>MeatRaw</li>
+            <li>AnimalProductRaw</li>
+          </categories>
+        </filter>
+        <count>1.5</count>
+      </li>
+    </ingredients>
+    <products>
+      <MealFineLargeNonVeg>1</MealFineLargeNonVeg>
+    </products>
+    <workAmount>900</workAmount>
+  </RecipeDef>
+  <RecipeDef ParentName="RR_FineMealRecipeBase">
+    <defName>CookMealFineHuge</defName>
+    <label>cook a feast fine meal</label>
+    <description>Produces 1 supported portion(s), 3.6 nutrition in total. Ingredients and work scale with the output; legacy bills remain usable.</description>
+    <jobString>Cooking huge fine meal.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>MeatRaw</li>
+            <li>AnimalProductRaw</li>
+          </categories>
+        </filter>
+        <count>1</count>
+      </li>
+      <li>
+        <filter>
+          <categories>
+            <li>PlantFoodRaw</li>
+          </categories>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <products>
+      <MealFineHuge>1</MealFineHuge>
+    </products>
+    <workAmount>1800</workAmount>
+  </RecipeDef>
+  <RecipeDef ParentName="RR_FineMealRecipeBase">
+    <defName>CookMealFineHugeVeg</defName>
+    <label>cook a feast fine meal</label>
+    <description>Produces 1 supported portion(s), 3.6 nutrition in total. Ingredients and work scale with the output; legacy bills remain usable.</description>
+    <jobString>Cooking huge fine meal.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>PlantFoodRaw</li>
+          </categories>
+        </filter>
+        <count>3</count>
+      </li>
+    </ingredients>
+    <products>
+      <MealFineHugeVeg>1</MealFineHugeVeg>
+    </products>
+    <workAmount>1800</workAmount>
+  </RecipeDef>
+  <RecipeDef ParentName="RR_FineMealRecipeBase">
+    <defName>CookMealFineHugeMeat</defName>
+    <label>cook a feast fine meal</label>
+    <description>Produces 1 supported portion(s), 3.6 nutrition in total. Ingredients and work scale with the output; legacy bills remain usable.</description>
+    <jobString>Cooking huge fine meal.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>MeatRaw</li>
+            <li>AnimalProductRaw</li>
+          </categories>
+        </filter>
+        <count>3</count>
+      </li>
+    </ingredients>
+    <products>
+      <MealFineHugeNonVeg>1</MealFineHugeNonVeg>
+    </products>
+    <workAmount>1800</workAmount>
+  </RecipeDef>
+  <RecipeDef ParentName="RR_FineMealRecipeBase">
+    <defName>CookMealFineEnormous</defName>
+    <label>legacy bill: cook a feast fine meal</label>
+    <description>Produces 1 supported portion(s), 3.6 nutrition in total. Ingredients and work scale with the output; legacy bills remain usable.</description>
+    <jobString>Cooking enormous fine meal.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>MeatRaw</li>
+            <li>AnimalProductRaw</li>
+          </categories>
+        </filter>
+        <count>1</count>
+      </li>
+      <li>
+        <filter>
+          <categories>
+            <li>PlantFoodRaw</li>
+          </categories>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <products>
+      <MealFineHuge>1</MealFineHuge>
+    </products>
+    <recipeUsers Inherit="False" />
+    <workAmount>1800</workAmount>
+  </RecipeDef>
+  <RecipeDef ParentName="RR_FineMealRecipeBase">
+    <defName>CookMealFineEnormousVeg</defName>
+    <label>legacy bill: cook a feast fine meal</label>
+    <description>Produces 1 supported portion(s), 3.6 nutrition in total. Ingredients and work scale with the output; legacy bills remain usable.</description>
+    <jobString>Cooking enormous fine meal.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>PlantFoodRaw</li>
+          </categories>
+        </filter>
+        <count>3</count>
+      </li>
+    </ingredients>
+    <products>
+      <MealFineHugeVeg>1</MealFineHugeVeg>
+    </products>
+    <recipeUsers Inherit="False" />
+    <workAmount>1800</workAmount>
+  </RecipeDef>
+  <RecipeDef ParentName="RR_FineMealRecipeBase">
+    <defName>CookMealFineEnormousMeat</defName>
+    <label>legacy bill: cook a feast fine meal</label>
+    <description>Produces 1 supported portion(s), 3.6 nutrition in total. Ingredients and work scale with the output; legacy bills remain usable.</description>
+    <jobString>Cooking enormous fine meal.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>MeatRaw</li>
+            <li>AnimalProductRaw</li>
+          </categories>
+        </filter>
+        <count>3</count>
+      </li>
+    </ingredients>
+    <products>
+      <MealFineHugeNonVeg>1</MealFineHugeNonVeg>
+    </products>
+    <recipeUsers Inherit="False" />
+    <workAmount>1800</workAmount>
+  </RecipeDef>
+  <RecipeDef ParentName="RR_FineMealRecipeBase">
+    <defName>CookMealFineMassive</defName>
+    <label>legacy bill: cook 2 feast fine meals</label>
+    <description>Produces 2 supported portion(s), 7.2 nutrition in total. Ingredients and work scale with the output; legacy bills remain usable.</description>
+    <jobString>Cooking massive fine meal.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>MeatRaw</li>
+            <li>AnimalProductRaw</li>
+          </categories>
+        </filter>
+        <count>2</count>
+      </li>
+      <li>
+        <filter>
+          <categories>
+            <li>PlantFoodRaw</li>
+          </categories>
+        </filter>
+        <count>2</count>
+      </li>
+    </ingredients>
+    <products>
+      <MealFineHuge>2</MealFineHuge>
+    </products>
+    <recipeUsers Inherit="False" />
+    <workAmount>3600</workAmount>
+  </RecipeDef>
+  <RecipeDef ParentName="RR_FineMealRecipeBase">
+    <defName>CookMealFineMassiveVeg</defName>
+    <label>legacy bill: cook 2 feast fine meals</label>
+    <description>Produces 2 supported portion(s), 7.2 nutrition in total. Ingredients and work scale with the output; legacy bills remain usable.</description>
+    <jobString>Cooking massive fine meal.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>PlantFoodRaw</li>
+          </categories>
+        </filter>
+        <count>6</count>
+      </li>
+    </ingredients>
+    <products>
+      <MealFineHugeVeg>2</MealFineHugeVeg>
+    </products>
+    <recipeUsers Inherit="False" />
+    <workAmount>3600</workAmount>
+  </RecipeDef>
+  <RecipeDef ParentName="RR_FineMealRecipeBase">
+    <defName>CookMealFineMassiveMeat</defName>
+    <label>legacy bill: cook 2 feast fine meals</label>
+    <description>Produces 2 supported portion(s), 7.2 nutrition in total. Ingredients and work scale with the output; legacy bills remain usable.</description>
+    <jobString>Cooking massive fine meal.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>MeatRaw</li>
+            <li>AnimalProductRaw</li>
+          </categories>
+        </filter>
+        <count>6</count>
+      </li>
+    </ingredients>
+    <products>
+      <MealFineHugeNonVeg>2</MealFineHugeNonVeg>
+    </products>
+    <recipeUsers Inherit="False" />
+    <workAmount>3600</workAmount>
+  </RecipeDef>
+  <RecipeDef ParentName="RR_FineMealRecipeBase">
+    <defName>CookMealFineColossal</defName>
+    <label>legacy bill: cook 4 feast fine meals</label>
+    <description>Produces 4 supported portion(s), 14.4 nutrition in total. Ingredients and work scale with the output; legacy bills remain usable.</description>
+    <jobString>Cooking colossal fine meal.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>MeatRaw</li>
+            <li>AnimalProductRaw</li>
+          </categories>
+        </filter>
+        <count>4</count>
+      </li>
+      <li>
+        <filter>
+          <categories>
+            <li>PlantFoodRaw</li>
+          </categories>
+        </filter>
+        <count>4</count>
+      </li>
+    </ingredients>
+    <products>
+      <MealFineHuge>4</MealFineHuge>
+    </products>
+    <researchPrerequisite>RR_Research_ColossalMeals</researchPrerequisite>
+    <recipeUsers Inherit="False" />
+    <workAmount>7200</workAmount>
+  </RecipeDef>
+  <RecipeDef ParentName="RR_FineMealRecipeBase">
+    <defName>CookMealFineColossalVeg</defName>
+    <label>legacy bill: cook 4 feast fine meals</label>
+    <description>Produces 4 supported portion(s), 14.4 nutrition in total. Ingredients and work scale with the output; legacy bills remain usable.</description>
+    <jobString>Cooking colossal fine meal.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>PlantFoodRaw</li>
+          </categories>
+        </filter>
+        <count>12</count>
+      </li>
+    </ingredients>
+    <products>
+      <MealFineHugeVeg>4</MealFineHugeVeg>
+    </products>
+    <researchPrerequisite>RR_Research_ColossalMeals</researchPrerequisite>
+    <recipeUsers Inherit="False" />
+    <workAmount>7200</workAmount>
+  </RecipeDef>
+  <RecipeDef ParentName="RR_FineMealRecipeBase">
+    <defName>CookMealFineColossalMeat</defName>
+    <label>legacy bill: cook 4 feast fine meals</label>
+    <description>Produces 4 supported portion(s), 14.4 nutrition in total. Ingredients and work scale with the output; legacy bills remain usable.</description>
+    <jobString>Cooking colossal fine meal.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>MeatRaw</li>
+            <li>AnimalProductRaw</li>
+          </categories>
+        </filter>
+        <count>12</count>
+      </li>
+    </ingredients>
+    <products>
+      <MealFineHugeNonVeg>4</MealFineHugeNonVeg>
+    </products>
+    <researchPrerequisite>RR_Research_ColossalMeals</researchPrerequisite>
+    <recipeUsers Inherit="False" />
+    <workAmount>7200</workAmount>
+  </RecipeDef>
+  <RecipeDef Name="RR_LavishMealRecipeBase" ParentName="CookMealLavishBase" Abstract="True">
+    <recipeUsers>
+      <li>ElectricStove</li>
+      <li>FueledStove</li>
+    </recipeUsers>
+    <researchPrerequisite>RR_Research_NutritionallyDenseFoods</researchPrerequisite>
+  </RecipeDef>
+  <RecipeDef ParentName="RR_LavishMealRecipeBase">
+    <defName>CookMealLavishLarge</defName>
+    <label>cook a large lavish meal</label>
+    <description>Produces 1 supported portion(s), 1.8 nutrition in total. Ingredients and work scale with the output; legacy bills remain usable.</description>
+    <jobString>Cooking large lavish meal.</jobString>
     <ingredients>
       <li>
         <filter>
@@ -213,348 +521,24 @@
         </filter>
         <count>1.25</count>
       </li>
-    </ingredients>
-    <products>
-      <MealFineLargeNonVeg>1</MealFineLargeNonVeg>
-    </products>
-  </RecipeDef>
-  
-  
-  
-  <RecipeDef ParentName="RR_FineMealRecipeBase">
-    <defName>CookMealFineHuge</defName>
-    <label>cook huge fine meal</label>
-    <description>Cook a huge, somewhat complex meal from a combination of meat and plant ingredients.</description>
-    <jobString>Cooking huge fine meal.</jobString>
-    <ingredients>
-      <li>
-        <filter>
-          <categories>
-            <li>MeatRaw</li>
-            <li>AnimalProductRaw</li>
-          </categories>
-        </filter>
-        <count>0.70</count>
-      </li>
       <li>
         <filter>
           <categories>
             <li>PlantFoodRaw</li>
           </categories>
         </filter>
-        <count>0.70</count>
-      </li>
-    </ingredients>
-    <products>
-      <MealFineHuge>1</MealFineHuge>
-    </products>
-  </RecipeDef>
-
-  <RecipeDef ParentName="RR_FineMealRecipeBase">
-    <defName>CookMealFineHugeVeg</defName>
-    <label>cook huge fine meal</label>
-    <description>Cook a huge, somewhat complex meal from plant ingredients.</description>
-    <jobString>Cooking huge fine meal.</jobString>
-    <ingredients>
-      <li>
-        <filter>
-          <categories>
-            <li>PlantFoodRaw</li>
-          </categories>
-        </filter>
-        <count>2.09</count>
-      </li>
-    </ingredients>
-    <products>
-      <MealFineHugeVeg>1</MealFineHugeVeg>
-    </products>
-  </RecipeDef>
- 
-  <RecipeDef ParentName="RR_FineMealRecipeBase">
-    <defName>CookMealFineHugeMeat</defName>
-    <label>cook huge fine meal</label>
-    <description>Cook a huge, somewhat complex meal from meat ingredients.</description>
-    <jobString>Cooking huge fine meal.</jobString>
-    <ingredients>
-      <li>
-        <filter>
-          <categories>
-            <li>MeatRaw</li>
-            <li>AnimalProductRaw</li>
-          </categories>
-        </filter>
-        <count>2.09</count>
-      </li>
-    </ingredients>
-    <products>
-      <MealFineHugeNonVeg>1</MealFineHugeNonVeg>
-    </products>
-  </RecipeDef> 
- 
- 
- 
-  <RecipeDef ParentName="RR_FineMealRecipeBase">
-    <defName>CookMealFineEnormous</defName>
-    <label>cook enormous fine meal</label>
-    <description>Cook an enormous, somewhat complex meal from a combination of meat and plant ingredients.</description>
-    <jobString>Cooking enormous fine meal.</jobString>
-    <ingredients>
-      <li>
-        <filter>
-          <categories>
-            <li>MeatRaw</li>
-            <li>AnimalProductRaw</li>
-          </categories>
-        </filter>
-        <count>1.12</count>
-      </li>
-      <li>
-        <filter>
-          <categories>
-            <li>PlantFoodRaw</li>
-          </categories>
-        </filter>
-        <count>1.12</count>
-      </li>
-    </ingredients>
-    <products>
-      <MealFineEnormous>1</MealFineEnormous>
-    </products>
-  </RecipeDef>
-  
-  <RecipeDef ParentName="RR_FineMealRecipeBase">
-    <defName>CookMealFineEnormousVeg</defName>
-    <label>cook enormous fine meal</label>
-    <description>Cook an enormous, somewhat complex meal from plant ingredients.</description>
-    <jobString>Cooking enormous fine meal.</jobString>
-	<ingredients>
-      <li>
-        <filter>
-          <categories>
-            <li>PlantFoodRaw</li>
-          </categories>
-        </filter>
-        <count>3.34</count>
-      </li>
-    </ingredients>
-    <products>
-      <MealFineEnormousVeg>1</MealFineEnormousVeg>
-    </products>
-  </RecipeDef>
-
-  <RecipeDef ParentName="RR_FineMealRecipeBase">
-    <defName>CookMealFineEnormousMeat</defName>
-    <label>cook enormous fine meal</label>
-    <description>Cook an enormous, somewhat complex meal from meat ingredients.</description>
-    <jobString>Cooking enormous fine meal.</jobString>
-    <ingredients>
-      <li>
-        <filter>
-          <categories>
-            <li>MeatRaw</li>
-            <li>AnimalProductRaw</li>
-          </categories>
-        </filter>
-        <count>3.34</count>
-      </li>
-
-    </ingredients>
-    <products>
-      <MealFineEnormousNonVeg>1</MealFineEnormousNonVeg>
-    </products>
-  </RecipeDef>  
-  
-  
-  
-  <RecipeDef ParentName="RR_FineMealRecipeBase">
-    <defName>CookMealFineMassive</defName>
-    <label>cook massive fine meal</label>
-    <description>Cook a massive, somewhat complex meal from a combination of meat and plant ingredients.</description>
-    <jobString>Cooking massive fine meal.</jobString>
-    <ingredients>
-      <li>
-        <filter>
-          <categories>
-            <li>MeatRaw</li>
-            <li>AnimalProductRaw</li>
-          </categories>
-        </filter>
-        <count>1.67</count>
-      </li>
-      <li>
-        <filter>
-          <categories>
-            <li>PlantFoodRaw</li>
-          </categories>
-        </filter>
-        <count>1.67</count>
-      </li>
-    </ingredients>
-    <products>
-      <MealFineMassive>1</MealFineMassive>
-    </products>
-  </RecipeDef>
-  
-  <RecipeDef ParentName="RR_FineMealRecipeBase">
-    <defName>CookMealFineMassiveVeg</defName>
-    <label>cook massive fine meal</label>
-    <description>Cook a massive, somewhat complex meal from plant ingredients.</description>
-    <jobString>Cooking massive fine meal.</jobString>
-    <ingredients>
-      <li>
-        <filter>
-          <categories>
-            <li>PlantFoodRaw</li>
-          </categories>
-        </filter>
-        <count>5.00</count>
-      </li>
-    </ingredients>
-    <products>
-      <MealFineMassiveVeg>1</MealFineMassiveVeg>
-    </products>
-  </RecipeDef>
-
-  <RecipeDef ParentName="RR_FineMealRecipeBase">
-    <defName>CookMealFineMassiveMeat</defName>
-    <label>cook massive fine meal</label>
-    <description>Cook a massive, somewhat complex meal from meat ingredients.</description>
-    <jobString>Cooking massive fine meal.</jobString>
-    <ingredients>
-      <li>
-        <filter>
-          <categories>
-            <li>MeatRaw</li>
-            <li>AnimalProductRaw</li>
-          </categories>
-        </filter>
-        <count>5.00</count>
-      </li>
-    </ingredients>
-    <products>
-      <MealFineMassiveNonVeg>1</MealFineMassiveNonVeg>
-    </products>
-  </RecipeDef>  
-  
-  
-   
-  <RecipeDef ParentName="RR_FineMealRecipeBase">
-    <defName>CookMealFineColossal</defName>
-    <label>cook colossal fine meal</label>
-    <description>Cook a colossal, somewhat complex meal from a combination of meat and plant ingredients.</description>
-    <jobString>Cooking colossal fine meal.</jobString>
-    <ingredients>
-      <li>
-        <filter>
-          <categories>
-            <li>MeatRaw</li>
-            <li>AnimalProductRaw</li>
-          </categories>
-        </filter>
-        <count>4.17</count>
-      </li>
-      <li>
-        <filter>
-          <categories>
-            <li>PlantFoodRaw</li>
-          </categories>
-        </filter>
-        <count>4.17</count>
-      </li>
-    </ingredients>
-    <products>
-      <MealFineColossal>1</MealFineColossal>
-    </products>
-	<researchPrerequisite>RR_Research_ColossalMeals</researchPrerequisite>		
-  </RecipeDef>
-  
-  <RecipeDef ParentName="RR_FineMealRecipeBase">
-    <defName>CookMealFineColossalVeg</defName>
-    <label>cook colossal fine meal</label>
-    <description>Cook a colossal, somewhat complex meal from plant ingredients.</description>
-    <jobString>Cooking colossal fine meal.</jobString>
-    <ingredients>
-      <li>
-        <filter>
-          <categories>
-            <li>PlantFoodRaw</li>
-          </categories>
-        </filter>
-        <count>12.50</count>
-      </li>
-    </ingredients>
-    <products>
-      <MealFineColossalVeg>1</MealFineColossalVeg>
-    </products>
-	<researchPrerequisite>RR_Research_ColossalMeals</researchPrerequisite>			
-  </RecipeDef>
-
-  <RecipeDef ParentName="RR_FineMealRecipeBase">
-    <defName>CookMealFineColossalMeat</defName>
-    <label>cook colossal fine meal</label>
-    <description>Cook a colossal, somewhat complex meal from meat ingredients.</description>
-    <jobString>Cooking colossal fine meal.</jobString>
-    <ingredients>
-      <li>
-        <filter>
-          <categories>
-            <li>MeatRaw</li>
-            <li>AnimalProductRaw</li>
-          </categories>
-        </filter>
-        <count>12.50</count>
-      </li>
-    </ingredients>
-    <products>
-      <MealFineColossalNonVeg>1</MealFineColossalNonVeg>
-    </products>
-	<researchPrerequisite>RR_Research_ColossalMeals</researchPrerequisite>			
-  </RecipeDef>  
-  
-  
-  <!--Lavish Meal Derivatives-->
-  <RecipeDef Name="RR_LavishMealRecipeBase" ParentName="CookMealLavishBase" Abstract="True">
-		<recipeUsers>
-		  <li>ElectricStove</li>
-		  <li>FueledStove</li>
-		</recipeUsers>	
-		<researchPrerequisite>RR_Research_NutritionallyDenseFoods</researchPrerequisite>				
-  </RecipeDef>
-  
-  
-  <RecipeDef ParentName="RR_LavishMealRecipeBase">
-    <defName>CookMealLavishLarge</defName>
-    <label>cook large lavish meal</label>
-    <description>Cook a large, very complex meal from a combination of meat and plant ingredients. Much of the ingredients are wasted in order to create the best eating experience.</description>
-    <jobString>Cooking large lavish meal.</jobString>
-    <ingredients>
-      <li>
-        <filter>
-          <categories>
-            <li>MeatRaw</li>
-            <li>AnimalProductRaw</li>
-          </categories>
-        </filter>
-        <count>0.94</count>
-      </li>
-      <li>
-        <filter>
-          <categories>
-            <li>PlantFoodRaw</li>
-          </categories>
-        </filter>
-        <count>0.94</count>
+        <count>1.25</count>
       </li>
     </ingredients>
     <products>
       <MealLavishLarge>1</MealLavishLarge>
     </products>
+    <workAmount>1600</workAmount>
   </RecipeDef>
-  
   <RecipeDef ParentName="RR_LavishMealRecipeBase">
     <defName>CookMealLavishLargeVeg</defName>
-    <label>cook large lavish meal</label>
-    <description>Cook a large, very complex meal from plant ingredients. Much of the ingredients are wasted in order to create the best eating experience.</description>
+    <label>cook a large lavish meal</label>
+    <description>Produces 1 supported portion(s), 1.8 nutrition in total. Ingredients and work scale with the output; legacy bills remain usable.</description>
     <jobString>Cooking large lavish meal.</jobString>
     <ingredients>
       <li>
@@ -563,18 +547,18 @@
             <li>PlantFoodRaw</li>
           </categories>
         </filter>
-        <count>1.88</count>
+        <count>2.50</count>
       </li>
     </ingredients>
     <products>
       <MealLavishLargeNonMeat>1</MealLavishLargeNonMeat>
     </products>
+    <workAmount>1600</workAmount>
   </RecipeDef>
-
   <RecipeDef ParentName="RR_LavishMealRecipeBase">
     <defName>CookMealLavishLargeMeat</defName>
-    <label>cook large lavish meal</label>
-    <description>Cook a large, very complex meal from a combination of meat and plant ingredients. Much of the ingredients are wasted in order to create the best eating experience.</description>
+    <label>cook a large lavish meal</label>
+    <description>Produces 1 supported portion(s), 1.8 nutrition in total. Ingredients and work scale with the output; legacy bills remain usable.</description>
     <jobString>Cooking large lavish meal.</jobString>
     <ingredients>
       <li>
@@ -584,20 +568,18 @@
             <li>AnimalProductRaw</li>
           </categories>
         </filter>
-        <count>1.88</count>
+        <count>2.50</count>
       </li>
     </ingredients>
     <products>
       <MealLavishLargeMeat>1</MealLavishLargeMeat>
     </products>
+    <workAmount>1600</workAmount>
   </RecipeDef>
-
-
-  
   <RecipeDef ParentName="RR_LavishMealRecipeBase">
     <defName>CookMealLavishHuge</defName>
-    <label>cook huge lavish meal</label>
-    <description>Cook a huge, very complex meal from a combination of meat and plant ingredients. Much of the ingredients are wasted in order to create the best eating experience.</description>
+    <label>cook a feast lavish meal</label>
+    <description>Produces 1 supported portion(s), 3.6 nutrition in total. Ingredients and work scale with the output; legacy bills remain usable.</description>
     <jobString>Cooking huge lavish meal.</jobString>
     <ingredients>
       <li>
@@ -607,7 +589,7 @@
             <li>AnimalProductRaw</li>
           </categories>
         </filter>
-        <count>1.57</count>
+        <count>2.50</count>
       </li>
       <li>
         <filter>
@@ -615,18 +597,18 @@
             <li>PlantFoodRaw</li>
           </categories>
         </filter>
-        <count>1.57</count>
+        <count>2.50</count>
       </li>
     </ingredients>
     <products>
       <MealLavishHuge>1</MealLavishHuge>
     </products>
+    <workAmount>3200</workAmount>
   </RecipeDef>
-  
   <RecipeDef ParentName="RR_LavishMealRecipeBase">
     <defName>CookMealLavishHugeVeg</defName>
-    <label>cook huge lavish meal</label>
-    <description>Cook a huge, very complex meal from plant ingredients. Much of the ingredients are wasted in order to create the best eating experience.</description>
+    <label>cook a feast lavish meal</label>
+    <description>Produces 1 supported portion(s), 3.6 nutrition in total. Ingredients and work scale with the output; legacy bills remain usable.</description>
     <jobString>Cooking huge lavish meal.</jobString>
     <ingredients>
       <li>
@@ -635,18 +617,18 @@
             <li>PlantFoodRaw</li>
           </categories>
         </filter>
-        <count>3.13</count>
+        <count>5.00</count>
       </li>
     </ingredients>
     <products>
       <MealLavishHugeNonMeat>1</MealLavishHugeNonMeat>
     </products>
-  </RecipeDef> 
- 
-   <RecipeDef ParentName="RR_LavishMealRecipeBase">
+    <workAmount>3200</workAmount>
+  </RecipeDef>
+  <RecipeDef ParentName="RR_LavishMealRecipeBase">
     <defName>CookMealLavishHugeMeat</defName>
-    <label>cook huge lavish meal</label>
-    <description>Cook a huge, very complex meal from meat ingredients. Much of the ingredients are wasted in order to create the best eating experience.</description>
+    <label>cook a feast lavish meal</label>
+    <description>Produces 1 supported portion(s), 3.6 nutrition in total. Ingredients and work scale with the output; legacy bills remain usable.</description>
     <jobString>Cooking huge lavish meal.</jobString>
     <ingredients>
       <li>
@@ -656,20 +638,18 @@
             <li>AnimalProductRaw</li>
           </categories>
         </filter>
-        <count>3.13</count>
+        <count>5.00</count>
       </li>
     </ingredients>
     <products>
       <MealLavishHugeMeat>1</MealLavishHugeMeat>
     </products>
+    <workAmount>3200</workAmount>
   </RecipeDef>
- 
- 
- 
   <RecipeDef ParentName="RR_LavishMealRecipeBase">
     <defName>CookMealLavishEnormous</defName>
-    <label>cook enormous lavish meal</label>
-    <description>Cook an enormous, very complex meal from a combination of meat and plant ingredients. Much of the ingredients are wasted in order to create the best eating experience.</description>
+    <label>legacy bill: cook a feast lavish meal</label>
+    <description>Produces 1 supported portion(s), 3.6 nutrition in total. Ingredients and work scale with the output; legacy bills remain usable.</description>
     <jobString>Cooking enormous lavish meal.</jobString>
     <ingredients>
       <li>
@@ -691,14 +671,15 @@
       </li>
     </ingredients>
     <products>
-      <MealLavishEnormous>1</MealLavishEnormous>
+      <MealLavishHuge>1</MealLavishHuge>
     </products>
+    <recipeUsers Inherit="False" />
+    <workAmount>3200</workAmount>
   </RecipeDef>
- 
   <RecipeDef ParentName="RR_LavishMealRecipeBase">
     <defName>CookMealLavishEnormousVeg</defName>
-    <label>cook enormous lavish meal</label>
-    <description>Cook an enormous, very complex meal from plant ingredients. Much of the ingredients are wasted in order to create the best eating experience.</description>
+    <label>legacy bill: cook a feast lavish meal</label>
+    <description>Produces 1 supported portion(s), 3.6 nutrition in total. Ingredients and work scale with the output; legacy bills remain usable.</description>
     <jobString>Cooking enormous lavish meal.</jobString>
     <ingredients>
       <li>
@@ -711,14 +692,15 @@
       </li>
     </ingredients>
     <products>
-      <MealLavishEnormousNonMeat>1</MealLavishEnormousNonMeat>
+      <MealLavishHugeNonMeat>1</MealLavishHugeNonMeat>
     </products>
+    <recipeUsers Inherit="False" />
+    <workAmount>3200</workAmount>
   </RecipeDef>
- 
   <RecipeDef ParentName="RR_LavishMealRecipeBase">
     <defName>CookMealLavishEnormousMeat</defName>
-    <label>cook enormous lavish meal</label>
-    <description>Cook an enormous, very complex meal from meat ingredients. Much of the ingredients are wasted in order to create the best eating experience.</description>
+    <label>legacy bill: cook a feast lavish meal</label>
+    <description>Produces 1 supported portion(s), 3.6 nutrition in total. Ingredients and work scale with the output; legacy bills remain usable.</description>
     <jobString>Cooking enormous lavish meal.</jobString>
     <ingredients>
       <li>
@@ -732,15 +714,15 @@
       </li>
     </ingredients>
     <products>
-      <MealLavishEnormousMeat>1</MealLavishEnormousMeat>
+      <MealLavishHugeMeat>1</MealLavishHugeMeat>
     </products>
-  </RecipeDef>  
-  
-  
+    <recipeUsers Inherit="False" />
+    <workAmount>3200</workAmount>
+  </RecipeDef>
   <RecipeDef ParentName="RR_LavishMealRecipeBase">
     <defName>CookMealLavishMassive</defName>
-    <label>cook massive lavish meal</label>
-    <description>Cook a massive, very complex meal from a combination of meat and plant ingredients. Much of the ingredients are wasted in order to create the best eating experience.</description>
+    <label>legacy bill: cook 2 feast lavish meals</label>
+    <description>Produces 2 supported portion(s), 7.2 nutrition in total. Ingredients and work scale with the output; legacy bills remain usable.</description>
     <jobString>Cooking massive lavish meal.</jobString>
     <ingredients>
       <li>
@@ -750,7 +732,7 @@
             <li>AnimalProductRaw</li>
           </categories>
         </filter>
-        <count>3.75</count>
+        <count>5.00</count>
       </li>
       <li>
         <filter>
@@ -758,18 +740,19 @@
             <li>PlantFoodRaw</li>
           </categories>
         </filter>
-        <count>3.75</count>
+        <count>5.00</count>
       </li>
     </ingredients>
     <products>
-      <MealLavishMassive>1</MealLavishMassive>
+      <MealLavishHuge>2</MealLavishHuge>
     </products>
+    <recipeUsers Inherit="False" />
+    <workAmount>6400</workAmount>
   </RecipeDef>
-
   <RecipeDef ParentName="RR_LavishMealRecipeBase">
     <defName>CookMealLavishMassiveVeg</defName>
-    <label>cook massive lavish meal</label>
-    <description>Cook a massive, very complex meal from plant ingredients. Much of the ingredients are wasted in order to create the best eating experience.</description>
+    <label>legacy bill: cook 2 feast lavish meals</label>
+    <description>Produces 2 supported portion(s), 7.2 nutrition in total. Ingredients and work scale with the output; legacy bills remain usable.</description>
     <jobString>Cooking massive lavish meal.</jobString>
     <ingredients>
       <li>
@@ -778,18 +761,19 @@
             <li>PlantFoodRaw</li>
           </categories>
         </filter>
-        <count>7.50</count>
+        <count>10.00</count>
       </li>
     </ingredients>
     <products>
-      <MealLavishMassiveNonMeat>1</MealLavishMassiveNonMeat>
+      <MealLavishHugeNonMeat>2</MealLavishHugeNonMeat>
     </products>
+    <recipeUsers Inherit="False" />
+    <workAmount>6400</workAmount>
   </RecipeDef>
-
   <RecipeDef ParentName="RR_LavishMealRecipeBase">
     <defName>CookMealLavishMassiveMeat</defName>
-    <label>cook massive lavish meal</label>
-    <description>Cook a massive, very complex meal from meat ingredients. Much of the ingredients are wasted in order to create the best eating experience.</description>
+    <label>legacy bill: cook 2 feast lavish meals</label>
+    <description>Produces 2 supported portion(s), 7.2 nutrition in total. Ingredients and work scale with the output; legacy bills remain usable.</description>
     <jobString>Cooking massive lavish meal.</jobString>
     <ingredients>
       <li>
@@ -799,20 +783,19 @@
             <li>AnimalProductRaw</li>
           </categories>
         </filter>
-        <count>7.50</count>
+        <count>10.00</count>
       </li>
     </ingredients>
     <products>
-      <MealLavishMassiveMeat>1</MealLavishMassiveMeat>
+      <MealLavishHugeMeat>2</MealLavishHugeMeat>
     </products>
-  </RecipeDef>  
- 
- 
- 
+    <recipeUsers Inherit="False" />
+    <workAmount>6400</workAmount>
+  </RecipeDef>
   <RecipeDef ParentName="RR_LavishMealRecipeBase">
     <defName>CookMealLavishColossal</defName>
-    <label>cook colossal lavish meal</label>
-    <description>Cook a colossal, very complex meal from a combination of meat and plant ingredients. Much of the ingredients are wasted in order to create the best eating experience.</description>
+    <label>legacy bill: cook 4 feast lavish meals</label>
+    <description>Produces 4 supported portion(s), 14.4 nutrition in total. Ingredients and work scale with the output; legacy bills remain usable.</description>
     <jobString>Cooking colossal lavish meal.</jobString>
     <ingredients>
       <li>
@@ -822,7 +805,7 @@
             <li>AnimalProductRaw</li>
           </categories>
         </filter>
-        <count>9.38</count>
+        <count>10.00</count>
       </li>
       <li>
         <filter>
@@ -830,19 +813,20 @@
             <li>PlantFoodRaw</li>
           </categories>
         </filter>
-        <count>9.38</count>
+        <count>10.00</count>
       </li>
     </ingredients>
     <products>
-      <MealLavishColossal>1</MealLavishColossal>
+      <MealLavishHuge>4</MealLavishHuge>
     </products>
-	<researchPrerequisite>RR_Research_ColossalMeals</researchPrerequisite>			
+    <researchPrerequisite>RR_Research_ColossalMeals</researchPrerequisite>
+    <recipeUsers Inherit="False" />
+    <workAmount>12800</workAmount>
   </RecipeDef>
-
   <RecipeDef ParentName="RR_LavishMealRecipeBase">
     <defName>CookMealLavishColossalVeg</defName>
-    <label>cook colossal lavish meal</label>
-    <description>Cook a colossal, very complex meal from plant ingredients. Much of the ingredients are wasted in order to create the best eating experience.</description>
+    <label>legacy bill: cook 4 feast lavish meals</label>
+    <description>Produces 4 supported portion(s), 14.4 nutrition in total. Ingredients and work scale with the output; legacy bills remain usable.</description>
     <jobString>Cooking colossal lavish meal.</jobString>
     <ingredients>
       <li>
@@ -851,19 +835,20 @@
             <li>PlantFoodRaw</li>
           </categories>
         </filter>
-        <count>18.75</count>
+        <count>20.00</count>
       </li>
     </ingredients>
     <products>
-      <MealLavishColossalNonMeat>1</MealLavishColossalNonMeat>
+      <MealLavishHugeNonMeat>4</MealLavishHugeNonMeat>
     </products>
-	<researchPrerequisite>RR_Research_ColossalMeals</researchPrerequisite>			
+    <researchPrerequisite>RR_Research_ColossalMeals</researchPrerequisite>
+    <recipeUsers Inherit="False" />
+    <workAmount>12800</workAmount>
   </RecipeDef>
-
   <RecipeDef ParentName="RR_LavishMealRecipeBase">
     <defName>CookMealLavishColossalMeat</defName>
-    <label>cook colossal lavish meal</label>
-    <description>Cook a colossal, very complex meal from meat ingredients. Much of the ingredients are wasted in order to create the best eating experience.</description>
+    <label>legacy bill: cook 4 feast lavish meals</label>
+    <description>Produces 4 supported portion(s), 14.4 nutrition in total. Ingredients and work scale with the output; legacy bills remain usable.</description>
     <jobString>Cooking colossal lavish meal.</jobString>
     <ingredients>
       <li>
@@ -873,12 +858,14 @@
             <li>AnimalProductRaw</li>
           </categories>
         </filter>
-        <count>18.75</count>
+        <count>20.00</count>
       </li>
     </ingredients>
     <products>
-      <MealLavishColossalMeat>1</MealLavishColossalMeat>
+      <MealLavishHugeMeat>4</MealLavishHugeMeat>
     </products>
-	<researchPrerequisite>RR_Research_ColossalMeals</researchPrerequisite>
-  </RecipeDef>   
- </Defs>
+    <researchPrerequisite>RR_Research_ColossalMeals</researchPrerequisite>
+    <recipeUsers Inherit="False" />
+    <workAmount>12800</workAmount>
+  </RecipeDef>
+</Defs>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version='1.0' encoding='utf-8'?>
 <Defs>
   <!-- These are larger nutrient-paste servings, not cooked-meal quality or
        recipes. MealBase supplies vanilla ingredients and food poisoning;
@@ -26,27 +26,26 @@
       </li>
     </comps>
   </ThingDef>
-
   <ThingDef ParentName="RR_NetworkMealBase">
     <defName>RR_NetworkMealLarge</defName>
     <label>large network paste meal</label>
     <statBases>
-      <MarketValue>16.67</MarketValue>
-      <Mass>0.73</Mass>
-      <Nutrition>1.5</Nutrition>
+      <MarketValue>20</MarketValue>
+      <Mass>0.88</Mass>
+      <Nutrition>1.8</Nutrition>
     </statBases>
+    <description>Large meal: 1.8 nutrition and 1.8 stomach volume at 1x. Whole items are consumed; unusable portions are wasted.</description>
   </ThingDef>
-
   <ThingDef ParentName="RR_NetworkMealBase">
     <defName>RR_NetworkMealHuge</defName>
-    <label>huge network paste meal</label>
+    <label>feast-sized network paste meal</label>
     <statBases>
-      <MarketValue>27.78</MarketValue>
-      <Mass>1.22</Mass>
-      <Nutrition>2.5</Nutrition>
+      <MarketValue>40</MarketValue>
+      <Mass>1.76</Mass>
+      <Nutrition>3.6</Nutrition>
     </statBases>
+    <description>Feast-sized meal: 3.6 nutrition and 3.6 stomach volume at 1x. Whole items are consumed; unusable portions are wasted.</description>
   </ThingDef>
-
   <ThingDef ParentName="RR_NetworkMealBase">
     <defName>RR_NetworkMealEnormous</defName>
     <label>enormous network paste meal</label>
@@ -55,8 +54,8 @@
       <Mass>1.96</Mass>
       <Nutrition>4</Nutrition>
     </statBases>
+    <description>Legacy oversized stock: 4 nutrition and 4 stomach volume at 1x. Retained for existing saves. New cooking uses Standard, Large and Feast portions; old bills produce matching Feast batches.</description>
   </ThingDef>
-
   <ThingDef ParentName="RR_NetworkMealBase">
     <defName>RR_NetworkMealMassive</defName>
     <label>massive network paste meal</label>
@@ -65,8 +64,8 @@
       <Mass>2.93</Mass>
       <Nutrition>6</Nutrition>
     </statBases>
+    <description>Legacy oversized stock: 6 nutrition and 6 stomach volume at 1x. Retained for existing saves. New cooking uses Standard, Large and Feast portions; old bills produce matching Feast batches.</description>
   </ThingDef>
-
   <ThingDef ParentName="RR_NetworkMealBase">
     <defName>RR_NetworkMealColossal</defName>
     <label>colossal network paste meal</label>
@@ -75,5 +74,6 @@
       <Mass>7.33</Mass>
       <Nutrition>15</Nutrition>
     </statBases>
+    <description>Legacy oversized stock: 15 nutrition and 15 stomach volume at 1x. Retained for existing saves. New cooking uses Standard, Large and Feast portions; old bills produce matching Feast batches.</description>
   </ThingDef>
 </Defs>

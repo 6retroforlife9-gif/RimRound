@@ -17,7 +17,7 @@
   <RecipeDef ParentName="RR_GluttoniumEnrichedBase">
     <defName>RR_CookCrammedCroissant</defName>
     <label>cook a crammed croissant</label>
-    <description>Cook a rich croissant from two nutrition of ordinary food and three nutrition of calorite ingredients.</description>
+    <description>Uses 2 nutrition of ordinary food and 3 nutrition of calorite ingredients. Cooking retains at most 90% of ingredient energy.</description>
     <jobString>Cooking crammed croissant.</jobString>
     <ingredients>
       <li>
@@ -51,7 +51,7 @@
   <RecipeDef ParentName="RR_GluttoniumEnrichedBase">
     <defName>RR_CookMechaniteMuffin</defName>
     <label>cook a mechanite muffin</label>
-    <description>Cook a dense muffin from 1.2 nutrition of ordinary food and two nutrition of calorite ingredients.</description>
+    <description>Uses 1.2 nutrition of ordinary food and 2.2 nutrition of calorite ingredients. Cooking retains at most 90% of ingredient energy.</description>
     <jobString>Cooking mechanite muffin.</jobString>
     <ingredients>
       <li>
@@ -74,7 +74,7 @@
             <li>RR_Gluttonium</li>
           </thingDefs>
         </filter>
-        <count>2</count>
+        <count>2.2</count>
       </li>
     </ingredients>
     <products>
@@ -85,7 +85,7 @@
   <RecipeDef ParentName="RR_GluttoniumEnrichedBase">
     <defName>RR_CookPackedPizza</defName>
     <label>cook a packed pizza</label>
-    <description>Cook a large enriched pizza from three nutrition of ordinary food and five nutrition of calorite ingredients.</description>
+    <description>Uses 3 nutrition of ordinary food and 7 nutrition of calorite ingredients. Cooking retains at most 90% of ingredient energy.</description>
     <jobString>Cooking packed pizza.</jobString>
     <ingredients>
       <li>
@@ -108,7 +108,7 @@
             <li>RR_Gluttonium</li>
           </thingDefs>
         </filter>
-        <count>5</count>
+        <count>7</count>
       </li>
     </ingredients>
     <products>
@@ -120,7 +120,7 @@
     <defName>RR_CookLaBombe</defName>
     <label>cook la bombe</label>
     <workAmount>1800</workAmount>
-    <description>Cook the culinary masterpiece that is 'la bombe'.</description>
+    <description>Uses 9 nutrition of ordinary food and 3 nutrition of calorite ingredients. Fantasy activation also consumes 12 gluttonium; the 60 nutrition releases over 24 game hours.</description>
     <jobString>Cooking la bombe.</jobString>
     <ingredients>
       <li>
@@ -143,7 +143,15 @@
             <li>RR_Gluttonium</li>
           </thingDefs>
         </filter>
-        <count>10</count>
+        <count>3</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>RR_Gluttonium</li>
+          </thingDefs>
+        </filter>
+        <count>12</count>
       </li>
     </ingredients>
     <products>
@@ -158,7 +166,7 @@
     <defName>RR_CookGluttoniumMeal</defName>
     <label>cook gluttonium meal</label>
     <workAmount>1000</workAmount>
-    <description>Cook a meal solely from gluttonium.</description>
+    <description>Fantasy synthesis consumes 10 gluttonium to create 40 nutrition. Each useful portion releases energy over 24 game hours; it cannot be processed into unrestricted liquid food.</description>
     <jobString>Cooking gluttonium meal.</jobString>
     <ingredients>
       <li>
@@ -176,9 +184,9 @@
   </RecipeDef>
   <RecipeDef ParentName="GluttoniumMealBase">
     <defName>RR_CookLargeGluttoniumMeal</defName>
-    <label>cook large gluttonium meal</label>
+    <label>prepare potent gluttonium meal</label>
     <workAmount>1500</workAmount>
-    <description>Cook a large meal solely from gluttonium.</description>
+    <description>Fantasy synthesis consumes 20 gluttonium to create 80 nutrition. Each useful portion releases energy over 24 game hours; it cannot be processed into unrestricted liquid food.</description>
     <jobString>Cooking large gluttonium meal.</jobString>
     <ingredients>
       <li>
@@ -187,7 +195,7 @@
             <li>RR_Gluttonium</li>
           </thingDefs>
         </filter>
-        <count>13</count>
+        <count>20</count>
       </li>
     </ingredients>
     <products>
@@ -196,9 +204,9 @@
   </RecipeDef>
   <RecipeDef ParentName="GluttoniumMealBase">
     <defName>RR_CookHugeGluttoniumMeal</defName>
-    <label>cook huge gluttonium meal</label>
+    <label>prepare extreme gluttonium meal</label>
     <workAmount>2000</workAmount>
-    <description>Cook a huge meal solely from gluttonium.</description>
+    <description>Fantasy synthesis consumes 40 gluttonium to create 160 nutrition. Each useful portion releases energy over 24 game hours; it cannot be processed into unrestricted liquid food.</description>
     <jobString>Cooking huge gluttonium meal.</jobString>
     <ingredients>
       <li>
@@ -207,7 +215,7 @@
             <li>RR_Gluttonium</li>
           </thingDefs>
         </filter>
-        <count>18</count>
+        <count>40</count>
       </li>
     </ingredients>
     <products>
@@ -218,7 +226,7 @@
     <defName>RR_CookEnormousGluttoniumMeal</defName>
     <label>cook enormous gluttonium meal</label>
     <workAmount>2500</workAmount>
-    <description>Cook an enormous meal solely from gluttonium.</description>
+    <description>Fantasy synthesis consumes 40 gluttonium to create 160 nutrition. Each useful portion releases energy over 24 game hours; it cannot be processed into unrestricted liquid food.</description>
     <jobString>Cooking enormous gluttonium meal.</jobString>
     <ingredients>
       <li>
@@ -227,18 +235,19 @@
             <li>RR_Gluttonium</li>
           </thingDefs>
         </filter>
-        <count>25</count>
+        <count>40</count>
       </li>
     </ingredients>
     <products>
-      <RR_GluttoniumMealEnormous>1</RR_GluttoniumMealEnormous>
+      <RR_GluttoniumMealHuge>1</RR_GluttoniumMealHuge>
     </products>
+    <recipeUsers Inherit="False" />
   </RecipeDef>
   <RecipeDef ParentName="GluttoniumMealBase">
     <defName>RR_CookMassiveGluttoniumMeal</defName>
     <label>cook massive gluttonium meal</label>
     <workAmount>3000</workAmount>
-    <description>Cook a massive meal solely from gluttonium.</description>
+    <description>Fantasy synthesis consumes 40 gluttonium to create 160 nutrition. Each useful portion releases energy over 24 game hours; it cannot be processed into unrestricted liquid food.</description>
     <jobString>Cooking massive gluttonium meal.</jobString>
     <ingredients>
       <li>
@@ -247,18 +256,19 @@
             <li>RR_Gluttonium</li>
           </thingDefs>
         </filter>
-        <count>35</count>
+        <count>40</count>
       </li>
     </ingredients>
     <products>
-      <RR_GluttoniumMealMassive>1</RR_GluttoniumMealMassive>
+      <RR_GluttoniumMealHuge>1</RR_GluttoniumMealHuge>
     </products>
+    <recipeUsers Inherit="False" />
   </RecipeDef>
   <RecipeDef ParentName="GluttoniumMealBase">
     <defName>RR_CookColossalGluttoniumMeal</defName>
     <label>cook colossal gluttonium meal</label>
     <workAmount>4000</workAmount>
-    <description>Cook a colossal meal solely from gluttonium.</description>
+    <description>Fantasy synthesis consumes 80 gluttonium to create 320 nutrition. Each useful portion releases energy over 24 game hours; it cannot be processed into unrestricted liquid food.</description>
     <jobString>Cooking colossal gluttonium meal.</jobString>
     <ingredients>
       <li>
@@ -267,19 +277,20 @@
             <li>RR_Gluttonium</li>
           </thingDefs>
         </filter>
-        <count>70</count>
+        <count>80</count>
       </li>
     </ingredients>
     <products>
-      <RR_GluttoniumMealColossal>1</RR_GluttoniumMealColossal>
+      <RR_GluttoniumMealHuge>2</RR_GluttoniumMealHuge>
     </products>
+    <recipeUsers Inherit="False" />
   </RecipeDef>
   <!--Orbs-->
   <RecipeDef ParentName="GluttoniumMealBase">
     <defName>RR_CookAlphaBall</defName>
     <label>create the 'alpha ball'</label>
     <workAmount>5000</workAmount>
-    <description>Use the latent power of gluttonium to create the alpha ball.</description>
+    <description>Fantasy synthesis consumes 30 gluttonium to create 120 nutrition. Each useful portion releases energy over 24 game hours; it cannot be processed into unrestricted liquid food.</description>
     <jobString>Creating an alpha ball.</jobString>
     <ingredients>
       <li>
@@ -300,7 +311,7 @@
     <defName>RR_CookOmegaBall</defName>
     <label>create the 'omega ball'</label>
     <workAmount>10000</workAmount>
-    <description>Manipulate and utilize the latent power of gluttonium to create the omega ball.</description>
+    <description>Fantasy synthesis consumes 60 gluttonium to create 240 nutrition. Each useful portion releases energy over 24 game hours; it cannot be processed into unrestricted liquid food.</description>
     <jobString>Creating an omega ball.</jobString>
     <ingredients>
       <li>
@@ -309,7 +320,7 @@
             <li>RR_Gluttonium</li>
           </thingDefs>
         </filter>
-        <count>100</count>
+        <count>60</count>
       </li>
     </ingredients>
     <products>

@@ -3,7 +3,7 @@
   <RecipeDef Name="SwellGlow">
     <defName>makeSwellGlow</defName>
     <label>Synthesize Swell-Glow</label>
-    <description>Synthesize a Swell-Glow pill.</description>
+    <description>Synthesize one authorized metabolic dose from 2 gluttonium and 2 neutroamine. Its energy releases over the product schedule, separately from its chemical high.</description>
     <jobString>Synthesizing Swell-Glow.</jobString>
     <workAmount>1300</workAmount>
     <workSpeedStat>DrugCookingSpeed</workSpeedStat>
@@ -21,7 +21,7 @@
             <li>RR_Gluttonium</li>
           </thingDefs>
         </filter>
-        <count>1</count>
+        <count>2</count>
       </li>
       <li>
         <filter>
@@ -39,7 +39,7 @@
   <RecipeDef Name="SwellGlowPlus">
     <defName>makeSwellGlowPlus</defName>
     <label>Synthesize Swell-Glow Plus</label>
-    <description>Synthesize a Swell-Glow Plus pill.</description>
+    <description>Synthesize one authorized metabolic dose from 5 gluttonium and 2 neutroamine. Its energy releases over the product schedule, separately from its chemical high.</description>
     <jobString>Synthesizing Swell-Glow Plus.</jobString>
     <workAmount>1300</workAmount>
     <workSpeedStat>DrugCookingSpeed</workSpeedStat>
@@ -57,7 +57,7 @@
             <li>RR_Gluttonium</li>
           </thingDefs>
         </filter>
-        <count>2</count>
+        <count>5</count>
       </li>
       <li>
         <filter>
@@ -75,7 +75,7 @@
   <RecipeDef Name="SwellGlowX">
     <defName>makeSwellGlowX</defName>
     <label>Synthesize Swell-Glow X</label>
-    <description>Synthesize a Swell-Glow X pill.</description>
+    <description>Synthesize one authorized metabolic dose from 10 gluttonium and 4 neutroamine. Its energy releases over the product schedule, separately from its chemical high.</description>
     <jobString>Synthesizing Swell-Glow X.</jobString>
     <workAmount>1300</workAmount>
     <workSpeedStat>DrugCookingSpeed</workSpeedStat>
@@ -93,7 +93,7 @@
             <li>RR_Gluttonium</li>
           </thingDefs>
         </filter>
-        <count>3</count>
+        <count>10</count>
       </li>
       <li>
         <filter>
@@ -101,7 +101,7 @@
             <li>Neutroamine</li>
           </thingDefs>
         </filter>
-        <count>2</count>
+        <count>4</count>
       </li>
     </ingredients>
     <products>
@@ -111,7 +111,7 @@
   <RecipeDef Name="SwellGlowMAX">
     <defName>makeSwellGlowMAX</defName>
     <label>Synthesize Swell-Glow MAX</label>
-    <description>Synthesize a Swell-Glow MAX pill.</description>
+    <description>Synthesize one authorized metabolic dose from 16 gluttonium and 4 neutroamine. Its energy releases over the product schedule, separately from its chemical high.</description>
     <jobString>Synthesizing Swell-Glow MAX.</jobString>
     <workAmount>1300</workAmount>
     <workSpeedStat>DrugCookingSpeed</workSpeedStat>
@@ -129,7 +129,7 @@
             <li>RR_Gluttonium</li>
           </thingDefs>
         </filter>
-        <count>4</count>
+        <count>16</count>
       </li>
       <li>
         <filter>
@@ -137,7 +137,7 @@
             <li>Neutroamine</li>
           </thingDefs>
         </filter>
-        <count>2</count>
+        <count>4</count>
       </li>
     </ingredients>
     <products>

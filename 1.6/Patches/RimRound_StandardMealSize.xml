@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <!-- Quality changes ingredients, mood and work; standard portion size stays
+       0.9 nutrition / volume. Larger RimRound defs override this base. -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[@Name='MealLavishBase']/statBases/Nutrition</xpath>
+    <value><Nutrition>0.9</Nutrition></value>
+  </Operation>
+</Patch>

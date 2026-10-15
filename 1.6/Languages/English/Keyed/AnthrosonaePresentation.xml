@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <RR_Anthrosonae_NativeSmallStage>This body size uses the native coat. Your saved artwork choice is retained.</RR_Anthrosonae_NativeSmallStage>
+  <RR_Anthrosonae_CoatArtworkUnavailable>Coat artwork is unavailable for this shape or size. Native appearance is shown; your saved choice is retained.</RR_Anthrosonae_CoatArtworkUnavailable>
+  <RR_Anthrosonae_AttachmentPlacementUnavailable>A tail or wing cannot use the selected body placement. Native appearance is shown; your saved choice is retained.</RR_Anthrosonae_AttachmentPlacementUnavailable>
+  <RR_Anthrosonae_BodyFeaturesIncompatible>A body feature is incompatible with the selected artwork. Native appearance is shown; your saved choice is retained.</RR_Anthrosonae_BodyFeaturesIncompatible>
+  <RR_Anthrosonae_CoatFeaturesIncompatible>This coat and its body features cannot use the selected artwork together. Native appearance is shown; your saved choice is retained.</RR_Anthrosonae_CoatFeaturesIncompatible>
+  <RR_Anthrosonae_IntegrationUnavailable>Compatible body artwork cannot currently be shown for this pawn. Native appearance is shown; your saved choice is retained.</RR_Anthrosonae_IntegrationUnavailable>
+  <RR_Anthrosonae_ColouringUnavailable>Compatible coat colouring is unavailable. Native appearance is shown; your saved choice is retained.</RR_Anthrosonae_ColouringUnavailable>
+  <RR_Anthrosonae_PreviewUnavailable>This coat preview cannot show the current appearance. Native appearance is shown; your saved choice is retained.</RR_Anthrosonae_PreviewUnavailable>
+  <RR_Presentation_NativeNowSuffix>(Native now)</RR_Presentation_NativeNowSuffix>
+  <RR_Presentation_ApplyToUpdate>Your choice will be saved and the appearance will update when applied.</RR_Presentation_ApplyToUpdate>
+  <RR_Presentation_ArtworkAvailable>This artwork is available for this shape and size. Body features, clothing or coat colouring may still require native appearance.</RR_Presentation_ArtworkAvailable>
+</LanguageData>

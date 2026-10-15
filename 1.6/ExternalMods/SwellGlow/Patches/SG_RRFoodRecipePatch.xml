@@ -3,7 +3,7 @@
   <Operation Class="PatchOperationReplace">
     <xpath>
       Defs/RecipeDef[defName="RR_CookCrammedCroissant"]
-      /ingredients/li/filter/thingDefs[li="RR_Gluttonium"]
+      /ingredients/li[2]/filter/thingDefs[li="RR_Gluttonium"]
     </xpath>
     <value>
       <categories>
@@ -14,7 +14,7 @@
   <Operation Class="PatchOperationReplace">
     <xpath>
       Defs/RecipeDef[defName="RR_CookMechaniteMuffin"]
-      /ingredients/li/filter/thingDefs[li="RR_Gluttonium"]
+      /ingredients/li[2]/filter/thingDefs[li="RR_Gluttonium"]
     </xpath>
     <value>
       <categories>
@@ -25,7 +25,7 @@
   <Operation Class="PatchOperationReplace">
     <xpath>
       Defs/RecipeDef[defName="RR_CookPackedPizza"]
-      /ingredients/li/filter/thingDefs[li="RR_Gluttonium"]
+      /ingredients/li[2]/filter/thingDefs[li="RR_Gluttonium"]
     </xpath>
     <value>
       <categories>
@@ -36,7 +36,7 @@
   <Operation Class="PatchOperationReplace">
     <xpath>
       Defs/RecipeDef[defName="RR_CookLaBombe"]
-      /ingredients/li/filter/thingDefs[li="RR_Gluttonium"]
+      /ingredients/li[2]/filter/thingDefs[li="RR_Gluttonium"]
     </xpath>
     <value>
       <categories>

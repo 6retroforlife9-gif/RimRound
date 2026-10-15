@@ -1,50 +1,47 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version='1.0' encoding='utf-8'?>
 <Defs>
-	<!--Simple Meal Derivatives-->
-	<ThingDef Name="RR_SimpleMealBase" ParentName="MealCooked" Abstract="True">
-		<ingestible>
-		  <preferability>MealSimple</preferability>
-		  <ingestEffect>EatVegetarian</ingestEffect>
-		  <ingestSound>Meal_Eat</ingestSound>
-		</ingestible>
-	</ThingDef>
-	
+  <!--Simple Meal Derivatives-->
+  <ThingDef Name="RR_SimpleMealBase" ParentName="MealCooked" Abstract="True">
+    <ingestible>
+      <preferability>MealSimple</preferability>
+      <ingestEffect>EatVegetarian</ingestEffect>
+      <ingestSound>Meal_Eat</ingestSound>
+    </ingestible>
+  </ThingDef>
   <ThingDef ParentName="RR_SimpleMealBase">
     <defName>MealSimpleLarge</defName>
     <label>large simple meal</label>
-    <description>A large simple meal quickly cooked from one main ingredient.</description>
+    <description>Large meal: 1.8 nutrition and 1.8 stomach volume at 1x. Whole items are consumed; unusable portions are wasted.</description>
     <graphicData>
       <texPath>Things/Item/Meal/Simple</texPath>
       <graphicClass>Graphic_MealVariants</graphicClass>
     </graphicData>
     <statBases>
-      <MarketValue>25.00</MarketValue>
-      <Mass>0.74</Mass>
-      <WorkToMake>500</WorkToMake>
-      <Nutrition>1.5</Nutrition>
+      <MarketValue>30</MarketValue>
+      <Mass>0.88</Mass>
+      <WorkToMake>600</WorkToMake>
+      <Nutrition>1.8</Nutrition>
     </statBases>
   </ThingDef>
-  
   <ThingDef ParentName="RR_SimpleMealBase">
     <defName>MealSimpleHuge</defName>
-    <label>huge simple meal</label>
-    <description>A huge simple meal quickly cooked from one main ingredient.</description>
+    <label>feast-sized simple meal</label>
+    <description>Feast-sized meal: 3.6 nutrition and 3.6 stomach volume at 1x. Whole items are consumed; unusable portions are wasted.</description>
     <graphicData>
       <texPath>Things/Item/Meal/Simple</texPath>
       <graphicClass>Graphic_MealVariants</graphicClass>
     </graphicData>
     <statBases>
-      <MarketValue>41.67</MarketValue>
-      <Mass>1.23</Mass>
-      <WorkToMake>834</WorkToMake>
-      <Nutrition>2.5</Nutrition>
+      <MarketValue>60</MarketValue>
+      <Mass>1.76</Mass>
+      <WorkToMake>1201</WorkToMake>
+      <Nutrition>3.6</Nutrition>
     </statBases>
   </ThingDef>
-  
   <ThingDef ParentName="RR_SimpleMealBase">
     <defName>MealSimpleEnormous</defName>
     <label>enormous simple meal</label>
-    <description>An enormous simple meal quickly cooked from one main ingredient.</description>
+    <description>Legacy oversized stock: 4 nutrition and 4 stomach volume at 1x. Retained for existing saves. New cooking uses Standard, Large and Feast portions; old bills produce matching Feast batches.</description>
     <graphicData>
       <texPath>Things/Item/Meal/Simple</texPath>
       <graphicClass>Graphic_MealVariants</graphicClass>
@@ -56,11 +53,10 @@
       <Nutrition>4.0</Nutrition>
     </statBases>
   </ThingDef>
-  
   <ThingDef ParentName="RR_SimpleMealBase">
     <defName>MealSimpleMassive</defName>
     <label>massive simple meal</label>
-    <description>An massive simple meal quickly cooked from one main ingredient.</description>
+    <description>Legacy oversized stock: 6 nutrition and 6 stomach volume at 1x. Retained for existing saves. New cooking uses Standard, Large and Feast portions; old bills produce matching Feast batches.</description>
     <graphicData>
       <texPath>Things/Item/Meal/Simple</texPath>
       <graphicClass>Graphic_MealVariants</graphicClass>
@@ -72,11 +68,10 @@
       <Nutrition>6.0</Nutrition>
     </statBases>
   </ThingDef>
-  
   <ThingDef ParentName="RR_SimpleMealBase">
     <defName>MealSimpleColossal</defName>
     <label>colossal simple meal</label>
-    <description>An obscenely large meal painstakingly cooked from one main ingredient.</description>
+    <description>Legacy oversized stock: 15 nutrition and 15 stomach volume at 1x. Retained for existing saves. New cooking uses Standard, Large and Feast portions; old bills produce matching Feast batches.</description>
     <graphicData>
       <texPath>Things/Item/Meal/Simple</texPath>
       <graphicClass>Graphic_MealVariants</graphicClass>
@@ -87,5 +82,5 @@
       <WorkToMake>5000</WorkToMake>
       <Nutrition>15.0</Nutrition>
     </statBases>
-  </ThingDef> 
- </Defs>
+  </ThingDef>
+</Defs>

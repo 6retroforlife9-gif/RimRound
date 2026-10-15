@@ -9,7 +9,7 @@
   <RecipeDef>
     <defName>SG_MakeCalomilk</defName>
     <label>enrich milk x20</label>
-    <description>Enrich 20 units of milk with one gluttonium to produce 20 units of calorite milk.</description>
+    <description>Enrich 20 units of ordinary raw input (1 nutrition) with 3 gluttonium to make 20 calorite units (4 nutrition). Already enriched input is excluded; each reagent adds one nutrition in this route.</description>
     <jobString>Making Calomilk.</jobString>
     <workAmount>1000</workAmount>
     <!-- Reference: Simple Meal -->
@@ -44,7 +44,7 @@
             <li>RR_Gluttonium</li>
           </thingDefs>
         </filter>
-        <count>1</count>
+        <count>3</count>
       </li>
     </ingredients>
     <fixedIngredientFilter Inherit="False">
@@ -65,7 +65,7 @@
   <RecipeDef>
     <defName>SG_MakeCaloyakMeat</defName>
     <label>enrich raw meat x20</label>
-    <description>Enrich 20 units of ordinary raw meat with one gluttonium to produce 20 units of calorite meat. Already enriched meat cannot be used as the input.</description>
+    <description>Enrich 20 units of ordinary raw input (1 nutrition) with 3 gluttonium to make 20 calorite units (4 nutrition). Already enriched input is excluded; each reagent adds one nutrition in this route.</description>
     <jobString>Making Caloyak Meat.</jobString>
     <workAmount>1000</workAmount>
     <!-- Reference: Simple Meal -->
@@ -103,7 +103,7 @@
             <li>RR_Gluttonium</li>
           </thingDefs>
         </filter>
-        <count>1</count>
+        <count>3</count>
       </li>
     </ingredients>
     <fixedIngredientFilter Inherit="False">

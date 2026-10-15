@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version='1.0' encoding='utf-8'?>
 <Defs>
   <!--Fine Meal Derivatives-->
   <ThingDef Name="RR_MealFineBase" ParentName="MealFineBase" Abstract="True">
@@ -10,11 +10,10 @@
       <graphicClass>Graphic_MealVariants</graphicClass>
     </graphicData>
     <comps>
-      <li Class="CompProperties_Ingredients"/>
+      <li Class="CompProperties_Ingredients" />
     </comps>
   </ThingDef>
-
-  <ThingDef Name="RR_MealFineBaseVEG" Abstract ="True" ParentName="MealFineBase">
+  <ThingDef Name="RR_MealFineBaseVEG" Abstract="True" ParentName="MealFineBase">
     <defName>RR_MealFineBaseVEG</defName>
     <label>vegetarian fine meal</label>
     <description>A complex dish assembled with care from vegetarian ingredients.</description>
@@ -28,7 +27,6 @@
       </li>
     </comps>
   </ThingDef>
-
   <ThingDef Name="RR_MealFineBaseMEAT" ParentName="MealFineBase" Abstract="True">
     <defName>RR_MealFineBaseMEAT</defName>
     <label>meat-based fine meal</label>
@@ -43,93 +41,83 @@
       </li>
     </comps>
   </ThingDef>
-  
   <!--*************************************************************-->
   <!--*************************************************************-->
-      
-  
   <ThingDef ParentName="RR_MealFineBase">
     <defName>MealFineLarge</defName>
     <label>large fine meal</label>
-    <description>A complex dish assembled with care from a variety of ingredients.</description>
-	<statBases>
-      <MarketValue>33.34</MarketValue>
-      <Mass>0.74</Mass>
-      <WorkToMake>750</WorkToMake>
-      <Nutrition>1.5</Nutrition>
+    <description>Large meal: 1.8 nutrition and 1.8 stomach volume at 1x. Whole items are consumed; unusable portions are wasted.</description>
+    <statBases>
+      <MarketValue>40</MarketValue>
+      <Mass>0.88</Mass>
+      <WorkToMake>900</WorkToMake>
+      <Nutrition>1.8</Nutrition>
     </statBases>
   </ThingDef>
-  
   <ThingDef ParentName="RR_MealFineBaseVEG">
     <defName>MealFineLargeVeg</defName>
     <label>large vegetarian fine meal</label>
-    <description>A complex dish assembled with care from a variety of ingredients.</description>
-	<statBases>
-      <MarketValue>33.34</MarketValue>
-      <Mass>0.74</Mass>
-      <WorkToMake>750</WorkToMake>
-      <Nutrition>1.5</Nutrition>
+    <description>Large meal: 1.8 nutrition and 1.8 stomach volume at 1x. Whole items are consumed; unusable portions are wasted.</description>
+    <statBases>
+      <MarketValue>40</MarketValue>
+      <Mass>0.88</Mass>
+      <WorkToMake>900</WorkToMake>
+      <Nutrition>1.8</Nutrition>
     </statBases>
   </ThingDef>
-  
   <ThingDef ParentName="RR_MealFineBaseMEAT">
     <defName>MealFineLargeNonVeg</defName>
     <label>large meat-based fine meal</label>
-    <description>A complex dish assembled with care from a variety of ingredients.</description>
-	<statBases>
-      <MarketValue>33.34</MarketValue>
-      <Mass>0.74</Mass>
-      <WorkToMake>750</WorkToMake>
-      <Nutrition>1.5</Nutrition>
+    <description>Large meal: 1.8 nutrition and 1.8 stomach volume at 1x. Whole items are consumed; unusable portions are wasted.</description>
+    <statBases>
+      <MarketValue>40</MarketValue>
+      <Mass>0.88</Mass>
+      <WorkToMake>900</WorkToMake>
+      <Nutrition>1.8</Nutrition>
     </statBases>
-  </ThingDef>   
-  
+  </ThingDef>
   <!--*************************************************************-->
   <!--*************************************************************-->
-    
   <ThingDef ParentName="RR_MealFineBase">
     <defName>MealFineHuge</defName>
-    <label>huge fine meal</label>
-    <description>A complex dish assembled with care from a variety of ingredients.</description>
-	<statBases>
-      <MarketValue>55.56</MarketValue>
-      <Mass>1.23</Mass>
-      <WorkToMake>1250</WorkToMake>
-      <Nutrition>2.5</Nutrition>
+    <label>feast-sized fine meal</label>
+    <description>Feast-sized meal: 3.6 nutrition and 3.6 stomach volume at 1x. Whole items are consumed; unusable portions are wasted.</description>
+    <statBases>
+      <MarketValue>80</MarketValue>
+      <Mass>1.76</Mass>
+      <WorkToMake>1800</WorkToMake>
+      <Nutrition>3.6</Nutrition>
     </statBases>
   </ThingDef>
-  
-   <ThingDef ParentName="RR_MealFineBaseVEG">
+  <ThingDef ParentName="RR_MealFineBaseVEG">
     <defName>MealFineHugeVeg</defName>
-    <label>huge vegetarian fine meal</label>
-    <description>A complex dish assembled with care from a variety of ingredients.</description>
-	<statBases>
-      <MarketValue>55.56</MarketValue>
-      <Mass>1.23</Mass>
-      <WorkToMake>1250</WorkToMake>
-      <Nutrition>2.5</Nutrition>
+    <label>feast-sized vegetarian fine meal</label>
+    <description>Feast-sized meal: 3.6 nutrition and 3.6 stomach volume at 1x. Whole items are consumed; unusable portions are wasted.</description>
+    <statBases>
+      <MarketValue>80</MarketValue>
+      <Mass>1.76</Mass>
+      <WorkToMake>1800</WorkToMake>
+      <Nutrition>3.6</Nutrition>
     </statBases>
   </ThingDef>
-
   <ThingDef ParentName="RR_MealFineBaseMEAT">
     <defName>MealFineHugeNonVeg</defName>
-    <label>huge meat-based fine meal</label>
-    <description>A complex dish assembled with care from a variety of ingredients.</description>
-	<statBases>
-      <MarketValue>55.56</MarketValue>
-      <Mass>1.23</Mass>
-      <WorkToMake>1250</WorkToMake>
-      <Nutrition>2.5</Nutrition>
+    <label>feast-sized meat-based fine meal</label>
+    <description>Feast-sized meal: 3.6 nutrition and 3.6 stomach volume at 1x. Whole items are consumed; unusable portions are wasted.</description>
+    <statBases>
+      <MarketValue>80</MarketValue>
+      <Mass>1.76</Mass>
+      <WorkToMake>1800</WorkToMake>
+      <Nutrition>3.6</Nutrition>
     </statBases>
-  </ThingDef>  
+  </ThingDef>
   <!--*************************************************************-->
   <!--*************************************************************-->
-     
   <ThingDef ParentName="RR_MealFineBase">
     <defName>MealFineEnormous</defName>
     <label>enormous fine meal</label>
-    <description>A complex dish assembled with care from a variety of ingredients.</description>
-	<statBases>
+    <description>Legacy oversized stock: 4 nutrition and 4 stomach volume at 1x. Retained for existing saves. New cooking uses Standard, Large and Feast portions; old bills produce matching Feast batches.</description>
+    <statBases>
       <MarketValue>88.89</MarketValue>
       <Mass>1.96</Mass>
       <WorkToMake>2000</WorkToMake>
@@ -139,8 +127,8 @@
   <ThingDef ParentName="RR_MealFineBaseVEG">
     <defName>MealFineEnormousVeg</defName>
     <label>enormous vegetarian fine meal</label>
-    <description>A complex vegetarian dish assembled with care from a variety of ingredients.</description>
-	<statBases>
+    <description>Legacy oversized stock: 4 nutrition and 4 stomach volume at 1x. Retained for existing saves. New cooking uses Standard, Large and Feast portions; old bills produce matching Feast batches.</description>
+    <statBases>
       <MarketValue>88.89</MarketValue>
       <Mass>1.96</Mass>
       <WorkToMake>2000</WorkToMake>
@@ -150,87 +138,82 @@
   <ThingDef ParentName="RR_MealFineBaseMEAT">
     <defName>MealFineEnormousNonVeg</defName>
     <label>enormous meat-based fine meal</label>
-    <description>A complex meat-based dish assembled with care from a variety of ingredients.</description>
-	<statBases>
+    <description>Legacy oversized stock: 4 nutrition and 4 stomach volume at 1x. Retained for existing saves. New cooking uses Standard, Large and Feast portions; old bills produce matching Feast batches.</description>
+    <statBases>
       <MarketValue>88.89</MarketValue>
       <Mass>1.96</Mass>
       <WorkToMake>2000</WorkToMake>
       <Nutrition>4.0</Nutrition>
     </statBases>
-  </ThingDef>  
-  
+  </ThingDef>
   <!--*************************************************************-->
   <!--*************************************************************-->
-    
   <ThingDef ParentName="RR_MealFineBase">
     <defName>MealFineMassive</defName>
     <label>massive fine meal</label>
-    <description>A complex dish assembled with care from a variety of ingredients.</description>
-	<statBases>
-      <MarketValue>133.34</MarketValue>
-      <Mass>2.94</Mass>
-      <WorkToMake>3000</WorkToMake>
-      <Nutrition>6.0</Nutrition>
-    </statBases>
-  </ThingDef>    
-  <ThingDef ParentName="RR_MealFineBaseVEG">
-    <defName>MealFineMassiveVeg</defName>
-    <label>massive vegetarian fine meal</label>
-    <description>A complex vegetarian dish assembled with care from a variety of ingredients.</description>
-	<statBases>
-      <MarketValue>133.34</MarketValue>
-      <Mass>2.94</Mass>
-      <WorkToMake>3000</WorkToMake>
-      <Nutrition>6.0</Nutrition>
-    </statBases>
-  </ThingDef>    
-  <ThingDef ParentName="RR_MealFineBaseMEAT">
-    <defName>MealFineMassiveNonVeg</defName>
-    <label>massive meat-based fine meal</label>
-    <description>A complex meat-based dish assembled with care from a variety of ingredients.</description>
-	<statBases>
+    <description>Legacy oversized stock: 6 nutrition and 6 stomach volume at 1x. Retained for existing saves. New cooking uses Standard, Large and Feast portions; old bills produce matching Feast batches.</description>
+    <statBases>
       <MarketValue>133.34</MarketValue>
       <Mass>2.94</Mass>
       <WorkToMake>3000</WorkToMake>
       <Nutrition>6.0</Nutrition>
     </statBases>
   </ThingDef>
-  
+  <ThingDef ParentName="RR_MealFineBaseVEG">
+    <defName>MealFineMassiveVeg</defName>
+    <label>massive vegetarian fine meal</label>
+    <description>Legacy oversized stock: 6 nutrition and 6 stomach volume at 1x. Retained for existing saves. New cooking uses Standard, Large and Feast portions; old bills produce matching Feast batches.</description>
+    <statBases>
+      <MarketValue>133.34</MarketValue>
+      <Mass>2.94</Mass>
+      <WorkToMake>3000</WorkToMake>
+      <Nutrition>6.0</Nutrition>
+    </statBases>
+  </ThingDef>
+  <ThingDef ParentName="RR_MealFineBaseMEAT">
+    <defName>MealFineMassiveNonVeg</defName>
+    <label>massive meat-based fine meal</label>
+    <description>Legacy oversized stock: 6 nutrition and 6 stomach volume at 1x. Retained for existing saves. New cooking uses Standard, Large and Feast portions; old bills produce matching Feast batches.</description>
+    <statBases>
+      <MarketValue>133.34</MarketValue>
+      <Mass>2.94</Mass>
+      <WorkToMake>3000</WorkToMake>
+      <Nutrition>6.0</Nutrition>
+    </statBases>
+  </ThingDef>
   <!--*************************************************************-->
   <!--*************************************************************-->
-  
   <ThingDef ParentName="RR_MealFineBase">
     <defName>MealFineColossal</defName>
     <label>colossal fine meal</label>
-    <description>An obscenely large meal crafted with care from a huge variety of ingredients.</description>
-	<statBases>
+    <description>Legacy oversized stock: 15 nutrition and 15 stomach volume at 1x. Retained for existing saves. New cooking uses Standard, Large and Feast portions; old bills produce matching Feast batches.</description>
+    <statBases>
       <MarketValue>333.34</MarketValue>
       <Mass>7.34</Mass>
       <WorkToMake>7500</WorkToMake>
       <Nutrition>15.0</Nutrition>
     </statBases>
-  </ThingDef>    
+  </ThingDef>
   <ThingDef ParentName="RR_MealFineBaseVEG">
     <defName>MealFineColossalVeg</defName>
     <label>colossal vegetarian fine meal</label>
-    <description>An obscenely large vegetarian meal crafted with care from a huge variety of ingredients.</description>
-	<statBases>
+    <description>Legacy oversized stock: 15 nutrition and 15 stomach volume at 1x. Retained for existing saves. New cooking uses Standard, Large and Feast portions; old bills produce matching Feast batches.</description>
+    <statBases>
       <MarketValue>333.34</MarketValue>
       <Mass>7.34</Mass>
       <WorkToMake>7500</WorkToMake>
       <Nutrition>15.0</Nutrition>
     </statBases>
-  </ThingDef>    
+  </ThingDef>
   <ThingDef ParentName="RR_MealFineBaseMEAT">
     <defName>MealFineColossalNonVeg</defName>
     <label>colossal meat-based fine meal</label>
-    <description>An obscenely large meat-based meal crafted with care from a huge variety of ingredients.</description>
-	<statBases>
+    <description>Legacy oversized stock: 15 nutrition and 15 stomach volume at 1x. Retained for existing saves. New cooking uses Standard, Large and Feast portions; old bills produce matching Feast batches.</description>
+    <statBases>
       <MarketValue>333.34</MarketValue>
       <Mass>7.34</Mass>
       <WorkToMake>7500</WorkToMake>
       <Nutrition>15.0</Nutrition>
     </statBases>
-  </ThingDef>    
-  
- </Defs>
+  </ThingDef>
+</Defs>

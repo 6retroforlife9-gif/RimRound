@@ -78,7 +78,7 @@
   <RecipeDef ParentName="FatMealBase">
     <defName>CookFatBurger</defName>
     <label>cook a Big Ol' Burger</label>
-    <description>Cook an enriched food using the stated nutrition of ordinary ingredients and the named calorite product. Cooking retains 90% of ingredient energy.</description>
+    <description>Uses the listed nutrition of ordinary and calorite ingredients. At least 10% of ingredient energy is lost during preparation; the product specifies its physical size and absorption schedule.</description>
     <jobString>Cooking Lard Filled Burger.</jobString>
     <products>
       <FatBurger>1</FatBurger>
@@ -103,7 +103,7 @@
             <li>SG_CaloyakMeat</li>
           </thingDefs>
         </filter>
-        <count>3</count>
+        <count>5.2</count>
       </li>
       <li>
         <filter>
@@ -139,7 +139,7 @@
   <RecipeDef ParentName="FatSweetMealBase">
     <defName>CookDonut</defName>
     <label>cook a nice Donut</label>
-    <description>Cook an enriched food using the stated nutrition of ordinary ingredients and the named calorite product. Cooking retains 90% of ingredient energy.</description>
+    <description>Uses the listed nutrition of ordinary and calorite ingredients. At least 10% of ingredient energy is lost during preparation; the product specifies its physical size and absorption schedule.</description>
     <jobString>Cooking Donut.</jobString>
     <products>
       <Donut>1</Donut>
@@ -151,7 +151,7 @@
             <li>PlantFoodRaw</li>
           </categories>
         </filter>
-        <count>0.25</count>
+        <count>0.4</count>
       </li>
       <li>
         <filter>
@@ -159,7 +159,7 @@
             <li>SG_Calomilk</li>
           </thingDefs>
         </filter>
-        <count>1</count>
+        <count>1.6</count>
       </li>
     </ingredients>
     <fixedIngredientFilter Inherit="False">
@@ -183,7 +183,7 @@
   <RecipeDef ParentName="FatSweetMealBase">
     <defName>CookCake</defName>
     <label>cook a "Cannot-Stop" Cake</label>
-    <description>Prepare an addictive drug cake from one nutrition of plants and one nutrition of calomilk. One complete dose supplies 1.8 nutrition.</description>
+    <description>Uses the listed nutrition of ordinary and calorite ingredients. At least 10% of ingredient energy is lost during preparation; the product specifies its physical size and absorption schedule.</description>
     <jobString>Cooking Donut.</jobString>
     <products>
       <cakeFat>1</cakeFat>
@@ -195,7 +195,7 @@
             <li>PlantFoodRaw</li>
           </categories>
         </filter>
-        <count>1</count>
+        <count>1.4</count>
       </li>
       <li>
         <filter>
@@ -203,7 +203,7 @@
             <li>SG_Calomilk</li>
           </thingDefs>
         </filter>
-        <count>1</count>
+        <count>5.4</count>
       </li>
     </ingredients>
     <fixedIngredientFilter Inherit="False">

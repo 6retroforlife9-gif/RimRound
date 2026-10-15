@@ -25,7 +25,7 @@
   <ThingDef ParentName="RR_GluttoniumProductsBase">
     <defName>RR_CrammedCroissant</defName>
     <label>crammed croissant</label>
-    <description>A rich croissant made from ordinary food and calorite ingredients. Contains 4.5 nutrition in 1.5 fullness volume. A whole item is consumed; any unusable portion is wasted.</description>
+    <description>Contains 4.5 nutrition in 0.6 stomach volume before pawn modifiers. Energy is absorbed as this food digests. Whole items are consumed; any portion that cannot be used is wasted.</description>
     <graphicData>
       <texPath>Things/Item/GluttoniumFood/CrammedCroissant</texPath>
     </graphicData>
@@ -39,8 +39,7 @@
     <comps>
       <li Class="RimRound.Comps.CompProperties_FoodItems_NutritionDensity">
         <compClass>RimRound.Comps.ThingComp_FoodItems_NutritionDensity</compClass>
-        <fullnessToNutritionRatio>0.333333333</fullnessToNutritionRatio>
-        <!--1/20-->
+        <fullnessToNutritionRatio>0.133333333333</fullnessToNutritionRatio>
       </li>
       <li Class="CompProperties_Ingredients" />
     </comps>
@@ -48,22 +47,21 @@
   <ThingDef ParentName="RR_GluttoniumProductsBase">
     <defName>RR_MechaniteMuffin</defName>
     <label>mechanite muffin</label>
-    <description>A dense muffin made from ordinary food and calorite ingredients. Contains 2.88 nutrition in 0.96 fullness volume. A whole item is consumed; any unusable portion is wasted.</description>
+    <description>Contains 3 nutrition in 0.4 stomach volume before pawn modifiers. Energy is absorbed as this food digests. Whole items are consumed; any portion that cannot be used is wasted.</description>
     <graphicData>
       <texPath>Things/Item/GluttoniumFood/MechaniteMuffin</texPath>
     </graphicData>
     <statBases>
       <WorkToMake>1920</WorkToMake>
-      <MarketValue>70</MarketValue>
+      <MarketValue>80</MarketValue>
       <Mass>0.7</Mass>
-      <Nutrition>2.88</Nutrition>
+      <Nutrition>3</Nutrition>
     </statBases>
     <ingestible />
     <comps>
       <li Class="RimRound.Comps.CompProperties_FoodItems_NutritionDensity">
         <compClass>RimRound.Comps.ThingComp_FoodItems_NutritionDensity</compClass>
-        <fullnessToNutritionRatio>0.333333333</fullnessToNutritionRatio>
-        <!--1/12-->
+        <fullnessToNutritionRatio>0.133333333333</fullnessToNutritionRatio>
       </li>
       <li Class="CompProperties_Ingredients" />
     </comps>
@@ -71,22 +69,21 @@
   <ThingDef ParentName="RR_GluttoniumProductsBase">
     <defName>RR_PackedPizza</defName>
     <label>packed pizza</label>
-    <description>A large enriched pizza made from ordinary food and calorite ingredients. Contains 7.2 nutrition in 2.4 fullness volume. Choose an appropriate recipient to avoid wasting the rest.</description>
+    <description>Contains 9 nutrition in 0.9 stomach volume before pawn modifiers. Energy is absorbed as this food digests. Whole items are consumed; any portion that cannot be used is wasted.</description>
     <graphicData>
       <texPath>Things/Item/GluttoniumFood/PackedPizza</texPath>
     </graphicData>
     <statBases>
       <WorkToMake>3240</WorkToMake>
-      <MarketValue>180</MarketValue>
+      <MarketValue>220</MarketValue>
       <Mass>2.0</Mass>
-      <Nutrition>7.2</Nutrition>
+      <Nutrition>9</Nutrition>
     </statBases>
     <ingestible />
     <comps>
       <li Class="RimRound.Comps.CompProperties_FoodItems_NutritionDensity">
         <compClass>RimRound.Comps.ThingComp_FoodItems_NutritionDensity</compClass>
-        <fullnessToNutritionRatio>0.333333333</fullnessToNutritionRatio>
-        <!--1/40-->
+        <fullnessToNutritionRatio>0.1</fullnessToNutritionRatio>
       </li>
       <li Class="CompProperties_Ingredients" />
     </comps>
@@ -94,22 +91,21 @@
   <ThingDef ParentName="RR_GluttoniumProductsBase">
     <defName>RR_LaBombe</defName>
     <label>la bombe</label>
-    <description>Fantasy only. An exceptionally concentrated specialist meal. The whole item is consumed, while only the useful portion enters the body; the remainder is waste. Individual food permissions still apply.</description>
+    <description>Fantasy only. Contains 60 nutrition in 0.9 stomach volume before pawn modifiers. Releases useful energy over 24 game hours in Fantasy or 72 game hours in Balanced where permitted. Whole items are consumed; any portion that cannot be used is wasted.</description>
     <graphicData>
       <texPath>Things/Item/GluttoniumFood/LaBombe</texPath>
     </graphicData>
     <statBases>
       <WorkToMake>5400</WorkToMake>
       <MarketValue>500</MarketValue>
-      <Mass>5.5</Mass>
+      <Mass>.44</Mass>
       <Nutrition>60</Nutrition>
     </statBases>
     <ingestible />
     <comps>
       <li Class="RimRound.Comps.CompProperties_FoodItems_NutritionDensity">
         <compClass>RimRound.Comps.ThingComp_FoodItems_NutritionDensity</compClass>
-        <fullnessToNutritionRatio>0.016666</fullnessToNutritionRatio>
-        <!--1/60-->
+        <fullnessToNutritionRatio>0.015</fullnessToNutritionRatio>
       </li>
       <li Class="CompProperties_Ingredients" />
     </comps>
@@ -118,126 +114,120 @@
   <ThingDef ParentName="RR_GluttoniumProductsBase">
     <defName>RR_GluttoniumMeal</defName>
     <label>gluttonium meal</label>
-    <description>Fantasy only. An exceptionally concentrated specialist meal. The whole item is consumed, while only the useful portion enters the body; the remainder is waste. Individual food permissions still apply.</description>
+    <description>Fantasy only. Contains 40 nutrition in 0.9 stomach volume before pawn modifiers. Releases useful energy over 24 game hours in Fantasy or 72 game hours in Balanced where permitted. Whole items are consumed; any portion that cannot be used is wasted.</description>
     <graphicData>
       <texPath>Things/Item/GluttoniumFood/GluttoniumMeal</texPath>
     </graphicData>
     <statBases>
       <MarketValue>250</MarketValue>
-      <Mass>60</Mass>
+      <Mass>.44</Mass>
       <Nutrition>40</Nutrition>
     </statBases>
     <ingestible />
     <comps>
       <li Class="RimRound.Comps.CompProperties_FoodItems_NutritionDensity">
         <compClass>RimRound.Comps.ThingComp_FoodItems_NutritionDensity</compClass>
-        <fullnessToNutritionRatio>0.025</fullnessToNutritionRatio>
-        <!--1/40-->
+        <fullnessToNutritionRatio>0.0225</fullnessToNutritionRatio>
       </li>
     </comps>
   </ThingDef>
   <ThingDef ParentName="RR_GluttoniumProductsBase">
     <defName>RR_GluttoniumMealLarge</defName>
-    <label>large gluttonium meal</label>
-    <description>Fantasy only. An exceptionally concentrated specialist meal. The whole item is consumed, while only the useful portion enters the body; the remainder is waste. Individual food permissions still apply.</description>
+    <label>potent gluttonium meal</label>
+    <description>Fantasy only. Contains 80 nutrition in 0.9 stomach volume before pawn modifiers. Releases useful energy over 24 game hours in Fantasy or 72 game hours in Balanced where permitted. Whole items are consumed; any portion that cannot be used is wasted.</description>
     <graphicData>
       <texPath>Things/Item/GluttoniumFood/GluttoniumMeal</texPath>
     </graphicData>
     <statBases>
-      <MarketValue>325</MarketValue>
-      <Mass>80</Mass>
-      <Nutrition>60</Nutrition>
-    </statBases>
-    <ingestible />
-    <comps>
-      <li Class="RimRound.Comps.CompProperties_FoodItems_NutritionDensity">
-        <compClass>RimRound.Comps.ThingComp_FoodItems_NutritionDensity</compClass>
-        <fullnessToNutritionRatio>0.016666</fullnessToNutritionRatio>
-        <!--1/60-->
-      </li>
-    </comps>
-  </ThingDef>
-  <ThingDef ParentName="RR_GluttoniumProductsBase">
-    <defName>RR_GluttoniumMealHuge</defName>
-    <label>huge gluttonium meal</label>
-    <description>Fantasy only. An exceptionally concentrated specialist meal. The whole item is consumed, while only the useful portion enters the body; the remainder is waste. Individual food permissions still apply.</description>
-    <graphicData>
-      <texPath>Things/Item/GluttoniumFood/GluttoniumMeal</texPath>
-    </graphicData>
-    <statBases>
-      <MarketValue>450</MarketValue>
-      <Mass>100</Mass>
+      <MarketValue>500</MarketValue>
+      <Mass>.44</Mass>
       <Nutrition>80</Nutrition>
     </statBases>
     <ingestible />
     <comps>
       <li Class="RimRound.Comps.CompProperties_FoodItems_NutritionDensity">
         <compClass>RimRound.Comps.ThingComp_FoodItems_NutritionDensity</compClass>
-        <fullnessToNutritionRatio>0.0125</fullnessToNutritionRatio>
-        <!--1/80-->
+        <fullnessToNutritionRatio>0.01125</fullnessToNutritionRatio>
+      </li>
+    </comps>
+  </ThingDef>
+  <ThingDef ParentName="RR_GluttoniumProductsBase">
+    <defName>RR_GluttoniumMealHuge</defName>
+    <label>extreme gluttonium meal</label>
+    <description>Fantasy only. Contains 160 nutrition in 0.9 stomach volume before pawn modifiers. Releases useful energy over 24 game hours in Fantasy or 72 game hours in Balanced where permitted. Whole items are consumed; any portion that cannot be used is wasted.</description>
+    <graphicData>
+      <texPath>Things/Item/GluttoniumFood/GluttoniumMeal</texPath>
+    </graphicData>
+    <statBases>
+      <MarketValue>1000</MarketValue>
+      <Mass>.44</Mass>
+      <Nutrition>160</Nutrition>
+    </statBases>
+    <ingestible />
+    <comps>
+      <li Class="RimRound.Comps.CompProperties_FoodItems_NutritionDensity">
+        <compClass>RimRound.Comps.ThingComp_FoodItems_NutritionDensity</compClass>
+        <fullnessToNutritionRatio>0.005625</fullnessToNutritionRatio>
       </li>
     </comps>
   </ThingDef>
   <ThingDef ParentName="RR_GluttoniumProductsBase">
     <defName>RR_GluttoniumMealEnormous</defName>
     <label>enormous gluttonium meal</label>
-    <description>Fantasy only. An exceptionally concentrated specialist meal. The whole item is consumed, while only the useful portion enters the body; the remainder is waste. Individual food permissions still apply.</description>
+    <description>Fantasy only. Contains 120 nutrition in 0.9 stomach volume before pawn modifiers. Releases useful energy over 24 game hours in Fantasy or 72 game hours in Balanced where permitted. Whole items are consumed; any portion that cannot be used is wasted.</description>
     <graphicData>
       <texPath>Things/Item/GluttoniumFood/GluttoniumMeal</texPath>
     </graphicData>
     <statBases>
-      <MarketValue>625</MarketValue>
-      <Mass>150</Mass>
+      <MarketValue>750</MarketValue>
+      <Mass>.44</Mass>
       <Nutrition>120</Nutrition>
     </statBases>
     <ingestible />
     <comps>
       <li Class="RimRound.Comps.CompProperties_FoodItems_NutritionDensity">
         <compClass>RimRound.Comps.ThingComp_FoodItems_NutritionDensity</compClass>
-        <fullnessToNutritionRatio>0.008333</fullnessToNutritionRatio>
-        <!--1/120-->
+        <fullnessToNutritionRatio>0.0075</fullnessToNutritionRatio>
       </li>
     </comps>
   </ThingDef>
   <ThingDef ParentName="RR_GluttoniumProductsBase">
     <defName>RR_GluttoniumMealMassive</defName>
     <label>massive gluttonium meal</label>
-    <description>Fantasy only. An exceptionally concentrated specialist meal. The whole item is consumed, while only the useful portion enters the body; the remainder is waste. Individual food permissions still apply.</description>
+    <description>Fantasy only. Contains 180 nutrition in 0.9 stomach volume before pawn modifiers. Releases useful energy over 24 game hours in Fantasy or 72 game hours in Balanced where permitted. Whole items are consumed; any portion that cannot be used is wasted.</description>
     <graphicData>
       <texPath>Things/Item/GluttoniumFood/GluttoniumMeal</texPath>
     </graphicData>
     <statBases>
-      <MarketValue>875</MarketValue>
-      <Mass>200</Mass>
+      <MarketValue>1125</MarketValue>
+      <Mass>.44</Mass>
       <Nutrition>180</Nutrition>
     </statBases>
     <ingestible />
     <comps>
       <li Class="RimRound.Comps.CompProperties_FoodItems_NutritionDensity">
         <compClass>RimRound.Comps.ThingComp_FoodItems_NutritionDensity</compClass>
-        <fullnessToNutritionRatio>0.005555</fullnessToNutritionRatio>
-        <!--1/180-->
+        <fullnessToNutritionRatio>0.005</fullnessToNutritionRatio>
       </li>
     </comps>
   </ThingDef>
   <ThingDef ParentName="RR_GluttoniumProductsBase">
     <defName>RR_GluttoniumMealColossal</defName>
     <label>colossal gluttonium meal</label>
-    <description>Fantasy only. An exceptionally concentrated specialist meal. The whole item is consumed, while only the useful portion enters the body; the remainder is waste. Individual food permissions still apply.</description>
+    <description>Fantasy only. Contains 300 nutrition in 0.9 stomach volume before pawn modifiers. Releases useful energy over 24 game hours in Fantasy or 72 game hours in Balanced where permitted. Whole items are consumed; any portion that cannot be used is wasted.</description>
     <graphicData>
       <texPath>Things/Item/GluttoniumFood/GluttoniumMealColossal</texPath>
     </graphicData>
     <statBases>
-      <MarketValue>1750</MarketValue>
-      <Mass>300</Mass>
+      <MarketValue>1875</MarketValue>
+      <Mass>.44</Mass>
       <Nutrition>300</Nutrition>
     </statBases>
     <ingestible />
     <comps>
       <li Class="RimRound.Comps.CompProperties_FoodItems_NutritionDensity">
         <compClass>RimRound.Comps.ThingComp_FoodItems_NutritionDensity</compClass>
-        <fullnessToNutritionRatio>0.0033333</fullnessToNutritionRatio>
-        <!--1/300-->
+        <fullnessToNutritionRatio>0.003</fullnessToNutritionRatio>
       </li>
     </comps>
   </ThingDef>
@@ -245,44 +235,42 @@
   <ThingDef ParentName="RR_GluttoniumProductsBase">
     <defName>RR_AlphaBall</defName>
     <label>alpha ball</label>
-    <description>Fantasy only. An independently manufactured, extremely dense gluttonium confection. The whole item is consumed, while only the useful portion enters the body; the remainder is waste. Individual food permissions still apply.</description>
+    <description>Fantasy only. Contains 120 nutrition in 0.9 stomach volume before pawn modifiers. Releases useful energy over 24 game hours in Fantasy or 72 game hours in Balanced where permitted. Whole items are consumed; any portion that cannot be used is wasted.</description>
     <graphicData>
       <texPath>Things/Item/GluttoniumFood/AlphaBall</texPath>
     </graphicData>
     <statBases>
       <WorkToMake>4320</WorkToMake>
       <MarketValue>750</MarketValue>
-      <Mass>50</Mass>
-      <Nutrition>200</Nutrition>
+      <Mass>.44</Mass>
+      <Nutrition>120</Nutrition>
     </statBases>
     <ingestible />
     <comps>
       <li Class="RimRound.Comps.CompProperties_FoodItems_NutritionDensity">
         <compClass>RimRound.Comps.ThingComp_FoodItems_NutritionDensity</compClass>
-        <fullnessToNutritionRatio>0.005</fullnessToNutritionRatio>
-        <!--1/200-->
+        <fullnessToNutritionRatio>0.0075</fullnessToNutritionRatio>
       </li>
     </comps>
   </ThingDef>
   <ThingDef ParentName="RR_GluttoniumProductsBase">
     <defName>RR_OmegaBall</defName>
     <label>omega ball</label>
-    <description>Fantasy only. An independently manufactured, extremely dense gluttonium confection. The whole item is consumed, while only the useful portion enters the body; the remainder is waste. Individual food permissions still apply.</description>
+    <description>Fantasy only. Contains 240 nutrition in 0.9 stomach volume before pawn modifiers. Releases useful energy over 24 game hours in Fantasy or 72 game hours in Balanced where permitted. Whole items are consumed; any portion that cannot be used is wasted.</description>
     <graphicData>
       <texPath>Things/Item/GluttoniumFood/OmegaBall</texPath>
     </graphicData>
     <statBases>
       <WorkToMake>8640</WorkToMake>
-      <MarketValue>2500</MarketValue>
-      <Mass>80</Mass>
-      <Nutrition>500</Nutrition>
+      <MarketValue>1500</MarketValue>
+      <Mass>.44</Mass>
+      <Nutrition>240</Nutrition>
     </statBases>
     <ingestible />
     <comps>
       <li Class="RimRound.Comps.CompProperties_FoodItems_NutritionDensity">
         <compClass>RimRound.Comps.ThingComp_FoodItems_NutritionDensity</compClass>
-        <fullnessToNutritionRatio>0.002</fullnessToNutritionRatio>
-        <!--1/500-->
+        <fullnessToNutritionRatio>0.00375</fullnessToNutritionRatio>
       </li>
     </comps>
   </ThingDef>

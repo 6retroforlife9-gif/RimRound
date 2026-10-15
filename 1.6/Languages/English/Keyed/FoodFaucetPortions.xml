@@ -1,22 +1,34 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <LanguageData>
   <RR_FaucetPortion_Auto>Auto</RR_FaucetPortion_Auto>
-  <RR_FaucetPortion_Normal>Normal (0.9)</RR_FaucetPortion_Normal>
-  <RR_FaucetPortion_Large>Large (1.5)</RR_FaucetPortion_Large>
-  <RR_FaucetPortion_Huge>Huge (2.5)</RR_FaucetPortion_Huge>
+  <RR_FaucetPortion_Normal>Standard (0.9 volume)</RR_FaucetPortion_Normal>
+  <RR_FaucetPortion_Large>Large (1.8 volume)</RR_FaucetPortion_Large>
+  <RR_FaucetPortion_Huge>Feast (3.6 volume)</RR_FaucetPortion_Huge>
   <RR_FaucetPortion_Enormous>Enormous (4)</RR_FaucetPortion_Enormous>
   <RR_FaucetPortion_Massive>Massive (6)</RR_FaucetPortion_Massive>
   <RR_FaucetPortion_Colossal>Colossal (15)</RR_FaucetPortion_Colossal>
   <RR_FaucetPortionCommand>Portion: {0}</RR_FaucetPortionCommand>
   <RR_FaucetPortionInspect>Food dispenser portion: {0}</RR_FaucetPortionInspect>
-  <RR_FaucetPortionAutoStatus>Auto chooses a researched complete serving for the recipient's current feeding need, limited by available food, food policy and fullness.</RR_FaucetPortionAutoStatus>
+  <RR_FaucetPortionAutoStatus>Auto chooses a researched serving size for the recipient. Children and pawns assigned Maintain or Lose receive Standard at 1x. Gain uses the prepared density. Food policy, available stock and room in the stomach still apply.</RR_FaucetPortionAutoStatus>
   <RR_FaucetAutoMaximumCommand>Auto limit: {0}</RR_FaucetAutoMaximumCommand>
   <RR_FaucetAutoMaximumInspect>Largest automatic portion: {0}</RR_FaucetAutoMaximumInspect>
   <RR_FaucetAutoMaximumDesc>Limit the size Auto may choose. Research, available food and the recipient's needs still apply. A locked size becomes available only after its research is completed. Fixed portions use their own selected size.</RR_FaucetAutoMaximumDesc>
-  <RR_FaucetPortionFixedStatus>Dispenses only this {0}-nutrition serving when the full amount is available and suitable for the recipient. It does not substitute a smaller serving.</RR_FaucetPortionFixedStatus>
+  <RR_FaucetPortionFixedStatus>Gain requests this {0}-volume serving at the prepared density. Children and pawns assigned Maintain or Lose receive Standard at 1x. The full amount must be available and suitable for the recipient.</RR_FaucetPortionFixedStatus>
   <RR_FaucetPortionFixedLocked>Unavailable: {0}. The dispenser waits for this research instead of switching to another size.</RR_FaucetPortionFixedLocked>
   <RR_FaucetPortionRequiresResearch>requires {0}</RR_FaucetPortionRequiresResearch>
   <RR_FaucetPortionMissingResearch>required research is unavailable</RR_FaucetPortionMissingResearch>
   <RR_FaucetPortionMissingDef>this serving definition is unavailable</RR_FaucetPortionMissingDef>
   <RR_FaucetPortionSelected>(selected)</RR_FaucetPortionSelected>
+  <RR_FoodDensityGrade>{0}x density</RR_FoodDensityGrade>
+  <RR_DistilleryDensityInspect>Target food density: {0}x</RR_DistilleryDensityInspect>
+  <RR_DistilleryDensityCommand>Prepare: {0}x</RR_DistilleryDensityCommand>
+  <RR_DistilleryDensityDesc>Choose an absolute density from 1x to 5x. Processing conserves nutrition and changes physical volume. Reprocessing at the same grade does not multiply nutrition. Existing mixed stock keeps its actual density.</RR_DistilleryDensityDesc>
+  <RR_DistilleryLegacyLayout>Legacy port layout preserved. Reinstall this distillery to use the fixed orientation.</RR_DistilleryLegacyLayout>
+  <RR_FaucetDensityUseSupply>Use supply setting</RR_FaucetDensityUseSupply>
+  <RR_FaucetDensityOverride>Gain density: {0}x</RR_FaucetDensityOverride>
+  <RR_FaucetDensityDesc>By default, Gain follows the setting of one connected upstream distillery. If supply is ambiguous, use a clearly reported available integer grade. An explicit grade can be selected here. Richer stock can be diluted; the dispenser never concentrates weaker stock. Children and pawns assigned Maintain or Lose receive 1x.</RR_FaucetDensityDesc>
+  <RR_FaucetDensitySupplyResolved>Gain density: {0}x (supply setting)</RR_FaucetDensitySupplyResolved>
+  <RR_FaucetDensitySupplyAmbiguous>Gain density: {0}x (no unique distillery; available grade)</RR_FaucetDensitySupplyAmbiguous>
+  <RR_FaucetDensityReady>Prepared stock can supply this grade.</RR_FaucetDensityReady>
+  <RR_FaucetDensityWaiting>Waiting for enough prepared stock at this grade.</RR_FaucetDensityWaiting>
 </LanguageData>
