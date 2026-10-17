@@ -12,10 +12,6 @@ Substantially redesigned mod for RimWorld 1.6.
 - **Defaults:** male/female bodies and friendly/hostile/prisoner/slave eligibility are enabled at ages 18-1000. Existing choices are retained, with a one-time migration of the old 200-year upper limit.
 - **Settings repairs:** feeder flow, prisoner feeding resume, separate mood/target controls, cooldown validation and feeder interval rounding now use the audited settings behavior; obsolete controls are hidden.
 
-This is the tested settings-audit build, including the preceding body/meal, mobility/vehicle and stage-health fixes. It retains the earlier food and Anthrosonae work below. Proposed separate body regions, new head/chin growth and new fitted clothing remain future work and are not included in this runtime.
-
-Broader save-reference reliability and sustained-performance/release work remain open. Existing scoped tests and the known Anthrosonae large-colony CPU limitation still apply; this publication does not claim general compatibility with every save or mod list.
-
 ## Previous update - 15 October 2026
 
 **Anthrosonae is now fully supported.** Base-mod adult appearances retain their coats, colours, head features and fitted tails/wings across supported RimRound body artwork and weight stages. Third-party addon content retains native fallback.
