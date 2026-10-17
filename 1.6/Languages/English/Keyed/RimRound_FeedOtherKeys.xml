@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
-  <RR_FeedOtherSettingsTitle>RimRound Patch settings</RR_FeedOtherSettingsTitle>
+  <RR_FeedOtherSettingsTitle>RimRound settings</RR_FeedOtherSettingsTitle>
   <RR_FeedOtherSettingsTabFeeding>Feeding</RR_FeedOtherSettingsTabFeeding>
   <RR_FeedOtherSettingsTabCooldowns>Cooldowns</RR_FeedOtherSettingsTabCooldowns>
   <RR_FeedOtherSettingsTabSocial>Social</RR_FeedOtherSettingsTabSocial>
@@ -12,16 +12,16 @@
 
   <RR_FeedOtherSettingsFeedingHeader>Feeding activities</RR_FeedOtherSettingsFeedingHeader>
   <RR_FeedOtherSettingsAutonomousShared>Autonomous shared meals</RR_FeedOtherSettingsAutonomousShared>
-  <RR_FeedOtherSettingsAutonomousSharedTip>Allows a willing Gain pawn who likes larger bodies to invite another Gain pawn to a shared meal, including at their bedside. Optional meals stop at comfortable fullness and protect three days of colony food.</RR_FeedOtherSettingsAutonomousSharedTip>
+  <RR_FeedOtherSettingsAutonomousSharedTip>Allows two willing Gain pawns to share a meal, including a bedside meal. Shared meals do not require a preference for larger bodies. Optional meals stop at 90% of comfortable capacity and protect three days of colony food.</RR_FeedOtherSettingsAutonomousSharedTip>
   <RR_FeedOtherSettingsAutonomousOneWay>Autonomous one-way feeding</RR_FeedOtherSettingsAutonomousOneWay>
   <RR_FeedOtherSettingsAutonomousOneWayTip>Allows a capable helper who likes larger bodies, or has a relevant ideology role motivation, to feed a willing Gain pawn. Helpers may be on Gain, Maintain or Lose without eating an extra meal themselves.</RR_FeedOtherSettingsAutonomousOneWayTip>
   <RR_FeedOtherSettingsManualFeeding>Manual right-click feeding</RR_FeedOtherSettingsManualFeeding>
   <RR_FeedOtherSettingsManualFeedingTip>Adds the player-forced Feed command when one selected pawn right-clicks another eligible humanlike pawn.</RR_FeedOtherSettingsManualFeedingTip>
   <RR_FeedOtherSettingsBedsideFeeding>Bedside and sleeping-recipient feeding</RR_FeedOtherSettingsBedsideFeeding>
   <RR_FeedOtherSettingsBedsideFeedingTip>Allows feeding a downed, immobile, resting, or sleeping recipient while they remain in bed. Disabling this affects new sessions only.</RR_FeedOtherSettingsBedsideFeedingTip>
-  <RR_FeedOtherSettingsStartingCutoff>Maximum fullness for starting a session</RR_FeedOtherSettingsStartingCutoff>
-  <RR_FeedOtherSettingsStartingCutoffTip>Controls manual feeding's starting fullness. Automatic social meals use room below 90% of comfortable capacity, the recipient's Gain goal and the colony food reserve.</RR_FeedOtherSettingsStartingCutoffTip>
-  <RR_FeedOtherSettingsFeedingTarget>Feed Other stop fullness</RR_FeedOtherSettingsFeedingTarget>
+  <RR_FeedOtherSettingsStartingCutoff>Manual feeding: maximum starting fullness</RR_FeedOtherSettingsStartingCutoff>
+  <RR_FeedOtherSettingsStartingCutoffTip>Percentage of hard stomach capacity allowed when starting a manual feeding order. This is stomach fullness, not the hunger bar. Automatic social meals use room below 90% of comfortable capacity, the Gain goal and colony food reserves.</RR_FeedOtherSettingsStartingCutoffTip>
+  <RR_FeedOtherSettingsFeedingTarget>Manual feeding: stop fullness</RR_FeedOtherSettingsFeedingTarget>
   <RR_FeedOtherSettingsFeedingTargetTooltip>Controls the hard-capacity percentage at which manual feeding stops. Automatic Gain and social meals stop at 90% of comfortable capacity. RimRound's health-stage boundaries and the separate prisoner Fatten target retain their own rules.</RR_FeedOtherSettingsFeedingTargetTooltip>
   <RR_FeedOtherSettingsStageFull>Resulting RimRound stage: Full (below Very Full).</RR_FeedOtherSettingsStageFull>
   <RR_FeedOtherSettingsStageVeryFull>Resulting RimRound stage: Very Full.</RR_FeedOtherSettingsStageVeryFull>
@@ -33,7 +33,7 @@
   <RR_FeedOtherSettingsSessionTimeout>Maximum feeding-session time</RR_FeedOtherSettingsSessionTimeout>
   <RR_FeedOtherSettingsSessionTimeoutTip>Maximum time spent fetching, meeting, waiting, and eating before a feeding session ends safely. The optional after-meal social phase has its own limit.</RR_FeedOtherSettingsSessionTimeoutTip>
   <RR_FeedOtherSettingsAutonomousFrequency>Autonomous event frequency</RR_FeedOtherSettingsAutonomousFrequency>
-  <RR_FeedOtherSettingsAutonomousFrequencyTip>Multiplies each eligible social opportunity. Work blocks optional invitations; Recreation has four times the ordinary Anything or Sleep chance. Invitations can happen with a full recreation meter and still obey capacity, food reserves, partner availability and cooldowns.</RR_FeedOtherSettingsAutonomousFrequencyTip>
+  <RR_FeedOtherSettingsAutonomousFrequencyTip>Multiplies scheduled social-meal opportunities. Recreation has four times the Anything chance. Work blocks optional invitations unless Force Gain is assigned; Sleep blocks them except eligible bedside hunger care. This does not alter the social-first meal search when a Gain pawn already wants food.</RR_FeedOtherSettingsAutonomousFrequencyTip>
 
   <RR_FeedOtherSettingsCooldownHeader>Autonomous feeding cooldowns</RR_FeedOtherSettingsCooldownHeader>
   <RR_FeedOtherSettingsParticipantCooldown>Participant / recipient cooldown</RR_FeedOtherSettingsParticipantCooldown>
@@ -67,18 +67,18 @@
   <RR_FeedOtherSettingsAfterMealMoodTip>A successful, enjoyable meal or feeding visit can give +2 mood for four hours, including a bedside visit without chat. Meaningful food intake is required. Unpleasant, painful or interrupted visits give no automatic reward; existing social-meal rewards are not stacked or refreshed.</RR_FeedOtherSettingsAfterMealMoodTip>
 
   <RR_FeedOtherSettingsPawnHeader>Pawn behaviour and abilities</RR_FeedOtherSettingsPawnHeader>
-  <RR_FeedOtherSettingsIdleEating>Idle underweight eating</RR_FeedOtherSettingsIdleEating>
-  <RR_FeedOtherSettingsIdleEatingTip>Allows an eligible Neutral+ or higher pawn who dislikes being too thin to collect policy-approved food and eat it where it is collected. Food Network faucets dispense enough complete meals for the active Fullness/Hybrid target, or every complete meal currently available when the target cannot be met.</RR_FeedOtherSettingsIdleEatingTip>
-  <RR_FeedOtherSettingsIdleTrigger>Idle-eating fullness trigger</RR_FeedOtherSettingsIdleTrigger>
-  <RR_FeedOtherSettingsIdleTriggerTip>The pawn must be below this percentage of hard stomach capacity before the idle-eating timer runs.</RR_FeedOtherSettingsIdleTriggerTip>
+  <RR_FeedOtherSettingsIdleEating>Extra idle meals for Recovery or legacy diets</RR_FeedOtherSettingsIdleEating>
+  <RR_FeedOtherSettingsIdleEatingTip>Allows eligible idle colony pawns to seek extra food for Recovery goals or legacy diet bars. Modern Gain and Force Gain use their ordinary meal cycle independently of this switch. Food policy and reserve rules still apply.</RR_FeedOtherSettingsIdleEatingTip>
+  <RR_FeedOtherSettingsIdleTrigger>Legacy diet: idle-eating fullness trigger</RR_FeedOtherSettingsIdleTrigger>
+  <RR_FeedOtherSettingsIdleTriggerTip>For pawns using legacy diet bars, the idle timer requires fullness below this percentage of hard stomach capacity. Recovery uses its body-goal allowance instead. This is not a hunger-bar threshold.</RR_FeedOtherSettingsIdleTriggerTip>
   <RR_FeedOtherSettingsIdleMinDelay>Minimum idle-eating delay</RR_FeedOtherSettingsIdleMinDelay>
   <RR_FeedOtherSettingsIdleMinDelayTip>Shortest random in-game delay before an eligible idle pawn tries to find a meal.</RR_FeedOtherSettingsIdleMinDelayTip>
   <RR_FeedOtherSettingsIdleMaxDelay>Maximum idle-eating delay</RR_FeedOtherSettingsIdleMaxDelay>
   <RR_FeedOtherSettingsIdleMaxDelayTip>Longest random in-game delay before an eligible idle pawn tries to find a meal.</RR_FeedOtherSettingsIdleMaxDelayTip>
   <RR_FeedOtherSettingsMilkExpression>Automatic milk-expression feature</RR_FeedOtherSettingsMilkExpression>
   <RR_FeedOtherSettingsMilkExpressionTip>Shows and enables the per-pawn Express milk automatically command for lactating adult women. Turning this master switch off preserves every pawn's saved choice.</RR_FeedOtherSettingsMilkExpressionTip>
-  <RR_FeedOtherSettingsPersuasion>Weight-opinion persuasion abilities</RR_FeedOtherSettingsPersuasion>
-  <RR_FeedOtherSettingsPersuasionTip>Shows the Increase and Decrease Weight Opinion ability buttons on eligible adult pawns.</RR_FeedOtherSettingsPersuasionTip>
+  <RR_FeedOtherSettingsPersuasion>Developer weight-opinion abilities</RR_FeedOtherSettingsPersuasion>
+  <RR_FeedOtherSettingsPersuasionTip>Enables the old Increase and Decrease Weight Opinion abilities for eligible adults only while developer mode and god mode are both active. Ordinary body discussions and gradual preference changes use their own rules.</RR_FeedOtherSettingsPersuasionTip>
   <RR_FeedOtherSettingsPersuasionCooldown>Persuasion cooldown</RR_FeedOtherSettingsPersuasionCooldown>
   <RR_FeedOtherSettingsPersuasionCooldownTip>Shared cooldown used by both persuasion directions after either a success or failure.</RR_FeedOtherSettingsPersuasionCooldownTip>
   <RR_FeedOtherSettingsShowAdvanced>Show advanced persuasion chances</RR_FeedOtherSettingsShowAdvanced>
@@ -110,7 +110,7 @@
   <RR_FeedOtherSettingsFattenTarget>Fatten session target</RR_FeedOtherSettingsFattenTarget>
   <RR_FeedOtherSettingsFattenTargetTip>Hard stomach-capacity percentage at which warden Fatten feeding stops. The final serving is clamped exactly to this target.</RR_FeedOtherSettingsFattenTargetTip>
   <RR_FeedOtherSettingsFattenResume>Resume Fatten feeding below</RR_FeedOtherSettingsFattenResume>
-  <RR_FeedOtherSettingsFattenResumeTip>After reaching the Fatten target, wardens wait until physical fullness falls strictly below this percentage before starting another Fatten session.</RR_FeedOtherSettingsFattenResumeTip>
+  <RR_FeedOtherSettingsFattenResumeTip>After reaching the target, wardens wait until physical fullness falls strictly below this percentage of hard capacity. Zero waits for an empty stomach.</RR_FeedOtherSettingsFattenResumeTip>
   <RR_FeedOtherSettingsFattenWarning>At 80% or higher, Fatten deliberately reaches RimRound's Painfully Full or worse stages and may immobilise heavily penalised prisoners.</RR_FeedOtherSettingsFattenWarning>
 
   <RR_FeedOtherSettingsWorldHeader>Pawn generation, resources, and orbit</RR_FeedOtherSettingsWorldHeader>
@@ -160,11 +160,11 @@
   <RR_FoodNetworkSettingsDistillerRateTip>Nutrition moved transactionally from the blue input network to the red output network per cycle. Nutrition and ingredients are conserved.</RR_FoodNetworkSettingsDistillerRateTip>
   <RR_FoodNetworkSettingsFeederHeader>Automatic feeders</RR_FoodNetworkSettingsFeederHeader>
   <RR_FoodNetworkSettingsFeederGainFlow>Gain-mode fullness flow per pulse</RR_FoodNetworkSettingsFeederGainFlow>
-  <RR_FoodNetworkSettingsFeederGainFlowTip>Percentage of each pawn's hard stomach capacity pumped per check in Gain or Maximum Gain mode. This is physical fullness volume, so distilled food does not flow more slowly merely because it is denser. The target and 95% safety ceiling still prevent overshoot.</RR_FoodNetworkSettingsFeederGainFlowTip>
+  <RR_FoodNetworkSettingsFeederGainFlowTip>Physical fullness delivered per pulse in Gain or Maximum Gain mode, as a percentage of comfortable capacity. The target still limits the final pulse, and denser food delivers more nutrition in the same volume. Legacy diet fallback uses hard capacity.</RR_FoodNetworkSettingsFeederGainFlowTip>
   <RR_FoodNetworkSettingsFeederInterval>Feeding check interval</RR_FoodNetworkSettingsFeederInterval>
   <RR_FoodNetworkSettingsFeederIntervalTip>How often each connected feeder checks its beds and can dispense one serving per eligible occupant.</RR_FoodNetworkSettingsFeederIntervalTip>
   <RR_FoodNetworkSettingsMaximumTarget>Advanced Maximum Gain target</RR_FoodNetworkSettingsMaximumTarget>
-  <RR_FoodNetworkSettingsMaximumTargetTip>Hard stomach-capacity percentage used by an advanced feeder's Maximum Gain mode. It can never exceed 95%.</RR_FoodNetworkSettingsMaximumTargetTip>
+  <RR_FoodNetworkSettingsMaximumTargetTip>Hard stomach-capacity percentage used by an advanced feeder in Maximum Gain mode, capped at 95%. Independent of the manual feeding target. Ordinary Gain stops at 90% of comfortable capacity.</RR_FoodNetworkSettingsMaximumTargetTip>
   <RR_FoodNetworkSettingsAdvancedRange>Advanced feeder hose range</RR_FoodNetworkSettingsAdvancedRange>
   <RR_FoodNetworkSettingsAdvancedRangeTip>Maximum distance between an advanced automatic feeder and each linked bed occupant.</RR_FoodNetworkSettingsAdvancedRangeTip>
   <RR_FoodNetworkSettingsAdvancedBeds>Advanced feeder bed limit</RR_FoodNetworkSettingsAdvancedBeds>

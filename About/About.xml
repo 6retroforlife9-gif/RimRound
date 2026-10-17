@@ -8,9 +8,19 @@
   </supportedVersions>
   <description>Work-in-progress rework of RimRound for RimWorld 1.6.
 
+Updated 17 October 2026: unified settings under Options &gt; Mod options &gt; RimRound; audited controls and display sizes; repaired social/assisted feeding and prepared-meal selection; correctly sized nude bodies when clothing art is missing.
+
+Weight-related extra rest drain is reduced by 75% in an operating hoverchair and by 100% while stationary, immobile, carried or seated in a vehicle. Vanilla rest needs remain. Vehicle Framework and Vanilla Vehicles Expanded passenger feeding have been checked in the tested versions.
+
+Obese and above receive natural/tended injury recovery at 110% of the ordinary rate after compensating for enlarged body-part health. Lardy and above resist new food poisoning. Both effects follow current eligible adult weight stage.
+
+Male and female bodies, friendly and hostile pawns, prisoners and slaves are enabled by default at ages 18-1000. Existing custom switches and limits are preserved, apart from the one-time old 200-year upper-limit migration.
+
 Anthrosonae is now fully supported. Base-mod adult appearances retain their coats, colours, head features and fitted tails/wings across supported RimRound body artwork and weight stages. Third-party addon content retains native fallback.
 
-Updated 15 October 2026 with reworked food density and digestion, complete Gain meals, and updated food machinery.</description>
+Includes the earlier food-density/digestion rework, complete Gain meals and food machinery. Regional body parts, new head/chin growth and new fitted outfits remain future work.
+
+This is a WIP. Broader save-reference reliability and sustained-performance/release checks remain open.</description>
   <url>https://github.com/6retroforlife9-gif/RimRound/tree/rework-wip</url>
   <modDependencies>
     <li>

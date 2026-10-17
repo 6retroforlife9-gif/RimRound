@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <RR_SettingsBodies>Pawn eligibility</RR_SettingsBodies>
+  <RR_SettingsAppearance>Appearance</RR_SettingsAppearance>
+  <RR_SettingsMetabolism>Body balance</RR_SettingsMetabolism>
+  <RR_SettingsInterface>Pawn controls</RR_SettingsInterface>
+  <RR_SettingsHealth>Health modifiers</RR_SettingsHealth>
+  <RR_SettingsSound>Sound</RR_SettingsSound>
+  <RR_SettingsProgression>Colony progression</RR_SettingsProgression>
+  <RR_SettingsRaces>Race artwork</RR_SettingsRaces>
+  <RR_SettingsGlobalScope>Applies to all colonies. Changes are saved automatically.</RR_SettingsGlobalScope>
+  <RR_SettingsColonyScope>Applies to this colony. Changes are stored when you save the game.</RR_SettingsColonyScope>
+  <RR_SettingsDefaultScope>Defaults for new colonies. Existing colonies keep their saved choices.</RR_SettingsDefaultScope>
+  <RR_SettingsLoadColony>Load a colony to change these options.</RR_SettingsLoadColony>
+  <RR_SettingsResetPage>Reset this page</RR_SettingsResetPage>
+  <RR_SettingsResetConfirm>Reset {0} to its default settings?</RR_SettingsResetConfirm>
+  <RR_SettingsLegacyOnly>Legacy mode</RR_SettingsLegacyOnly>
+  <RR_SettingsTreeDormant>The body perk tree is inactive in Legacy mode. Its saved choice is retained for Balanced or Fantasy.</RR_SettingsTreeDormant>
+  <RR_SettingsIdleScope>Gain and Force Gain use the ordinary meal cycle. These options cover Recovery and pawns using legacy diet bars; the fullness trigger applies only to legacy diets.</RR_SettingsIdleScope>
+  <RR_SettingsPersuasionScope>Ordinary body discussions use gradual preference changes. The old instant opinion abilities are developer tools and require developer mode plus god mode.</RR_SettingsPersuasionScope>
+</LanguageData>

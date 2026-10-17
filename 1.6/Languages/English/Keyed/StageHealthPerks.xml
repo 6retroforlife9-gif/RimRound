@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <RR_StageHealth_Header>Automatic weight perks (lost below their required stage)</RR_StageHealth_Header>
+  <RR_StageHealth_HealingActive>Improved recovery: active (Obese+). Natural and tended wounds recover 10% faster for the same proportion of part damage, with compensation for enlarged arms, legs and torso.</RR_StageHealth_HealingActive>
+  <RR_StageHealth_HealingInactive>Improved recovery: requires Obese. Grants 10% faster recovery with compensation for enlarged body parts.</RR_StageHealth_HealingInactive>
+  <RR_StageHealth_FoodActive>Food-poisoning immunity: active (Lardy+). Prevents new food poisoning; existing illness runs its normal course.</RR_StageHealth_FoodActive>
+  <RR_StageHealth_FoodInactive>Food-poisoning immunity: requires Lardy.</RR_StageHealth_FoodInactive>
+</LanguageData>
