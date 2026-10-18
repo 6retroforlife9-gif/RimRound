@@ -8,6 +8,16 @@
   </supportedVersions>
   <description>Work-in-progress rework of RimRound for RimWorld 1.6.
 
+Updated 19 October 2026 (c24):
+- Fixed vanilla nutrient-paste reserve checks and exact hopper ingredient use.
+- Fixed liquid-food collection, outlet reservations and stock accounting.
+- Fixed prepared-food reconsideration during raw-food pickup.
+- Fixed optional shared-meal usefulness checks, including resumed jobs.
+- Fixed wasteful medical meals while nearly-full pawns recover from malnutrition.
+- Fixed retired VEF group references, cross-game weight history, book-author ownership and incompatible HAR tribal-chief biographies.
+- Fixed inventory food packing and kitchen-equipment research placement.
+- Fixed the reproduced RimRound sound-streaming errors with buffered loading.
+
 Updated 17 October 2026: unified settings under Options &gt; Mod options &gt; RimRound; audited controls and display sizes; repaired social/assisted feeding and prepared-meal selection; correctly sized nude bodies when clothing art is missing.
 
 Weight-related extra rest drain is reduced by 75% in an operating hoverchair and by 100% while stationary, immobile, carried or seated in a vehicle. Vanilla rest needs remain. Vehicle Framework and Vanilla Vehicles Expanded passenger feeding have been checked in the tested versions.
@@ -18,9 +28,7 @@ Male and female bodies, friendly and hostile pawns, prisoners and slaves are ena
 
 Anthrosonae is now fully supported. Base-mod adult appearances retain their coats, colours, head features and fitted tails/wings across supported RimRound body artwork and weight stages. Third-party addon content retains native fallback.
 
-Includes the earlier food-density/digestion rework, complete Gain meals and food machinery. Regional body parts, new head/chin growth and new fitted outfits remain future work.
-
-This is a WIP. Broader save-reference reliability and sustained-performance/release checks remain open.</description>
+Includes the earlier food-density/digestion rework, complete Gain meals and food machinery.</description>
   <url>https://github.com/6retroforlife9-gif/RimRound/tree/rework-wip</url>
   <modDependencies>
     <li>

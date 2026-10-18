@@ -2,7 +2,17 @@
 
 Substantially redesigned mod for RimWorld 1.6.
 
-## Latest update - 17 October 2026
+## Latest update - 19 October 2026 (c24)
+
+- **Vanilla nutrient paste:** repairs paste-only food-policy reserve checks, counts accessible ingredients in working hoppers once, and checks exact ingredient use when dispensing meals.
+- **Food selection and collection:** rechecks prepared food during raw-food pickup and repairs liquid-outlet reservations, portion precision and stock accounting.
+- **Shared and assisted meals:** keeps the 75%-useful-food safeguard active for optional Gain meals, including resumed shared jobs, with current food-policy and stock checks.
+- **Malnutrition recovery:** stops nearly-full recovering pawns requesting unnecessary medical meals while keeping urgent feeding available when they are hungry.
+- **Save and pawn references:** fixes retired Vanilla Expanded Framework group references, weight history between games, book-author ownership and incompatible Humanoid Alien Races tribal-chief biographies.
+- **Inventory and research:** repairs inventory food-packing behavior and places kitchen-equipment research in the correct position.
+- **Audio:** buffers RimRound's affected sound effects to address the reproduced streaming errors.
+
+## Previous update - 17 October 2026
 
 - **One settings window:** Options > Mod options > RimRound replaces the old bottom-bar settings tabs. The controls were audited and the layout checked from 720p through 4K with supported UI scales; 720p/1x is an extra compatibility case below the native resolution menu minimum.
 - **Body and meal fixes:** missing clothing artwork keeps the correctly sized nude RimRound body; social/assisted feeding, reservations and interrupted collection are repaired. Suitable prepared meals take priority over raw food, with raw fallback when no suitable prepared serving is available.
