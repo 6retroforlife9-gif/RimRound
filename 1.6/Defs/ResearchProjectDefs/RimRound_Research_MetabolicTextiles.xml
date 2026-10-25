@@ -18,7 +18,7 @@
     <defName>RR_Research_UltraTechMetabolicTextiles</defName>
     <label>Ultratech metabolic textiles</label>
     <tab>RimRoundTech</tab>
-    <description>Learn to craft the pinnacle of high-tech clothing and accessories that greatly transform the wearer's metabolism and supports indolent lifestyles.</description>
+    <description>Craft advanced clothing and accessories that support larger bodies and more demanding appetites.</description>
     <baseCost>2400</baseCost>
     <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
     <requiredResearchFacilities>

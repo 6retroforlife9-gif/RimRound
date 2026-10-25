@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <RR_XenotypeArtwork_Override>Override xenotype body artwork</RR_XenotypeArtwork_Override>
+  <RR_XenotypeArtwork_Help>Use the selected body artwork in place of the xenotype's body or fur. Separate features keep their native artwork, but their fit may vary with body size. Genes and weight are unchanged.</RR_XenotypeArtwork_Help>
+  <RR_XenotypeArtwork_NativeSelected>Choose an art set above to use the override; Native body keeps the native appearance.</RR_XenotypeArtwork_NativeSelected>
+  <RR_XenotypeArtwork_Unsupported>A body feature uses artwork that this override cannot safely separate. Native appearance is shown; your saved choice and override are retained.</RR_XenotypeArtwork_Unsupported>
+</LanguageData>

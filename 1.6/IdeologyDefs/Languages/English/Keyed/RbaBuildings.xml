@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <RR_RbaRitualBed>Ritual bed</RR_RbaRitualBed>
+  <RR_RbaBedType>Large RimRound single bed</RR_RbaBedType>
+  <RR_RbaBuildingTitle>Ritual bed — {0}</RR_RbaBuildingTitle>
+  <RR_RbaBuildingNameSuggestion>Seat of Plenty</RR_RbaBuildingNameSuggestion>
+  <RR_RbaCeremonialName>Ceremonial name: {0}</RR_RbaCeremonialName>
+  <RR_RbaBuildingOptional>This entry describes a supported building type. It does not mean that a bed has been built or designated, and adds no separate building requirement.</RR_RbaBuildingOptional>
+  <RR_RbaSharedDemand>A valid designated ritual bed or {0} can satisfy the same ritual-building demand, starting at {1} expectations.</RR_RbaSharedDemand>
+  <RR_RbaBedAlternativeRequirements>The bed alternative requires an indoor room, a table and clear bedside access. Beds are allowed; the other room requirements above still apply.</RR_RbaBedAlternativeRequirements>
+  <RR_RbaBuildingOpen>Click for the native name editor, building information or construction selection. A ceremonial name is optional.</RR_RbaBuildingOpen>
+  <RR_RbaBuildingInformation>Information: {0}</RR_RbaBuildingInformation>
+  <RR_RbaBuildingConstruct>Build {0}...</RR_RbaBuildingConstruct>
+  <RR_RbaBuildingUnavailable>Construction is unavailable under the current map or research rules.</RR_RbaBuildingUnavailable>
+  <RR_RbaBedUseNone>Ordinary</RR_RbaBedUseNone>
+  <RR_RbaBedUseLeader>Leader</RR_RbaBedUseLeader>
+  <RR_RbaBedUseMoralGuide>Moral guide</RR_RbaBedUseMoralGuide>
+  <RR_RbaBedUseFeedee>Feedee</RR_RbaBedUseFeedee>
+  <RR_RbaBedNotSpawned>The bed must be placed on a map.</RR_RbaBedNotSpawned>
+  <RR_RbaBedNotColony>The bed must belong to the colony.</RR_RbaBedNotColony>
+  <RR_RbaBedMedical>Turn off medical use for this ritual bed.</RR_RbaBedMedical>
+  <RR_RbaBedPrisoner>A prisoner bed cannot be used as this ritual focus.</RR_RbaBedPrisoner>
+  <RR_RbaBedBurning>The ritual bed is burning.</RR_RbaBedBurning>
+  <RR_RbaBedIndoors>The ritual bed needs an indoor room.</RR_RbaBedIndoors>
+  <RR_RbaBedHasTable>Table in the room: available</RR_RbaBedHasTable>
+  <RR_RbaBedSeats>Dining and ritual seats in the room: {0}</RR_RbaBedSeats>
+  <RR_RbaBedHasAccess>Clear bedside access: available</RR_RbaBedHasAccess>
+  <RR_RbaBedNoAccess>No clear bedside approach is available.</RR_RbaBedNoAccess>
+  <RR_RbaBedOwnerNotReady>The owner must be present, awake and conscious, with sufficient rest, and free of drafting, mental state, fire, anesthesia or deathrest.</RR_RbaBedOwnerNotReady>
+  <RR_RbaBedAttendanceCheck>Routes, reservations, seat sufficiency and temporary guest places are checked when participants are selected.</RR_RbaBedAttendanceCheck>
+  <RR_RbaRitualBedroom>ritual bedroom</RR_RbaRitualBedroom>
+  <RR_RbaRitualRoomAnnotation>{0} (ritual use)</RR_RbaRitualRoomAnnotation>
+  <RR_RbaReformRitualActive>Finish or cancel this ideoligion's current ritual before applying reforms. Your changes remain in the reform editor.</RR_RbaReformRitualActive>
+</LanguageData>

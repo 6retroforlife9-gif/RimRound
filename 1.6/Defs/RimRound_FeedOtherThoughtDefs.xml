@@ -23,17 +23,17 @@
     <stages>
       <li>
         <label>satisfyingly very full</label>
-        <description>Reaching a wonderfully indulgent level of fullness felt deeply satisfying.</description>
+        <description>That was a properly indulgent meal. I love this heavy, full feeling.</description>
         <baseMoodEffect>5</baseMoodEffect>
       </li>
       <li>
         <label>delightfully very full</label>
-        <description>Becoming very full was exactly the indulgence I hoped for.</description>
+        <description>Stuffed just the way I like it. Every mouthful was worth it.</description>
         <baseMoodEffect>10</baseMoodEffect>
       </li>
       <li>
         <label>ecstatically very full</label>
-        <description>Reaching such magnificent fullness was absolutely exhilarating.</description>
+        <description>Gloriously stuffed. I could hardly have asked for more.</description>
         <baseMoodEffect>15</baseMoodEffect>
       </li>
     </stages>
@@ -70,7 +70,7 @@
     <stages>
       <li>
         <label>enjoyed an after-meal chat</label>
-        <description>Relaxing together and chatting after the meal was a pleasant way to unwind.</description>
+        <description>A good meal, then a lazy chat. A fine way to pass the time.</description>
         <baseMoodEffect>2</baseMoodEffect>
       </li>
     </stages>
@@ -83,17 +83,17 @@
     <stages>
       <li>
         <label>enjoyed a shared meal</label>
-        <description>Sharing a comfortable meal together felt good.</description>
+        <description>Good food tastes even better with company.</description>
         <baseMoodEffect>2</baseMoodEffect>
       </li>
       <li>
         <label>enjoyed being fed</label>
-        <description>A willing companion brought me a pleasant, comfortable meal.</description>
+        <description>Someone brought me a meal and stayed to feed me. That felt good.</description>
         <baseMoodEffect>2</baseMoodEffect>
       </li>
       <li>
         <label>enjoyed feeding someone</label>
-        <description>Helping a willing companion enjoy their meal felt satisfying.</description>
+        <description>Seeing someone enjoy the meal I fed them was its own reward.</description>
         <baseMoodEffect>2</baseMoodEffect>
       </li>
     </stages>

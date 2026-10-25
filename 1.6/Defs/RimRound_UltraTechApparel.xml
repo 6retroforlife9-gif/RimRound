@@ -56,7 +56,7 @@
   <ThingDef ParentName="UltraTechClothingBase">
     <defName>RimRound_NovaTechApparel_Jumpsuit</defName>
     <label>NovaTech jumpsuit</label>
-    <description>Flexible workwear: digestion +10%, movement +5%, and 5% less weight movement penalty. It occupies the skin layer and offers modest armor. Children can wear it for native clothing protection; metabolic bonuses apply only to eligible adults.</description>
+    <description>Flexible workwear for a body with a demanding appetite.\n\nDigestion +10%; movement +5%; weight movement penalty reduced by 5%.\nSkin layer; modest armour.\nListed bonuses are for Normal quality. Better quality improves the special bonuses; see the item information for effective values.\nMetabolic bonuses apply only to eligible adults. Children receive clothing protection only.</description>
     <modExtensions>
       <li Class="RimRound.Defs.ClothingModExtension">
         <digestionSpeedMultBonus>.10</digestionSpeedMultBonus>
@@ -110,7 +110,7 @@
   <ThingDef ParentName="UltraTechClothingBase">
     <defName>RimRound_NovaTechApparel_Belt</defName>
     <label>NovaTech belt</label>
-    <description>A supportive waist belt: stomach capacity +5%, elasticity +10%, digestion +10%, and 5% less fullness movement penalty. It uses the belt slot and is heavy. Children can wear it for native clothing protection; metabolic bonuses apply only to eligible adults.</description>
+    <description>A sturdy belt to lend a growing belly some support.\n\nStomach capacity +5%; elasticity +10%; digestion +10%; fullness movement penalty reduced by 5%.\nHeavy; belt slot.\nListed bonuses are for Normal quality. Better quality improves the special bonuses; see the item information for effective values.\nMetabolic bonuses apply only to eligible adults. Children receive clothing protection only.</description>
     <modExtensions>
       <li Class="RimRound.Defs.ClothingModExtension">
         <softLimitMultiplier>.05</softLimitMultiplier>
@@ -159,7 +159,7 @@
   <ThingDef ParentName="UltraTechClothingBase">
     <defName>RimRound_NovaTechApparel_ProtoSuit</defName>
     <label>NovaTech proto-suit</label>
-    <description>Advanced metabolic workwear: weight conversion +15%, digestion +25%, movement +10%, and manipulation +5%. Expensive materials and the skin slot limit its use. Children can wear it for native clothing protection; metabolic bonuses apply only to eligible adults.</description>
+    <description>Advanced workwear built to keep a well-fed body productive.\n\nWeight conversion +15%; digestion +25%; movement +10%; manipulation +5%.\nExpensive materials; skin layer.\nListed bonuses are for Normal quality. Better quality improves the special bonuses; see the item information for effective values.\nMetabolic bonuses apply only to eligible adults. Children receive clothing protection only.</description>
     <modExtensions>
       <li Class="RimRound.Defs.ClothingModExtension">
         <weightGainMultiplierMultBonus>.15</weightGainMultiplierMultBonus>
@@ -214,7 +214,7 @@
   <ThingDef ParentName="UltraTechClothingBase">
     <defName>RimRound_NovaTechApparel_Gloves</defName>
     <label>NovaTech gloves</label>
-    <description>Assisted gloves: manipulation +10% and eating capacity +15%. They occupy the hand layer. Children can wear it for native clothing protection; metabolic bonuses apply only to eligible adults.</description>
+    <description>Assisted gloves for busy hands, at work or at the dinner table.\n\nManipulation +10%; eating capacity +15%.\nHand layer.\nListed bonuses are for Normal quality. Better quality improves the special bonuses; see the item information for effective values.\nMetabolic bonuses apply only to eligible adults. Children receive clothing protection only.</description>
     <modExtensions>
       <li Class="RimRound.Defs.ClothingModExtension">
         <flatManipulationBonus>.10</flatManipulationBonus>
@@ -264,7 +264,7 @@
   <ThingDef ParentName="UltraTechClothingBase">
     <defName>RimRound_NovaTechApparel_Collar</defName>
     <label>NovaTech collar</label>
-    <description>An assisted eating collar: digestion +10% and eating capacity +10%. It occupies the neck slot. Children can wear it for native clothing protection; metabolic bonuses apply only to eligible adults.</description>
+    <description>An eating collar for meals that deserve a little assistance.\n\nDigestion +10%; eating capacity +10%.\nNeck slot.\nListed bonuses are for Normal quality. Better quality improves the special bonuses; see the item information for effective values.\nMetabolic bonuses apply only to eligible adults. Children receive clothing protection only.</description>
     <modExtensions>
       <li Class="RimRound.Defs.ClothingModExtension">
         <digestionSpeedMultBonus>.10</digestionSpeedMultBonus>
@@ -315,7 +315,7 @@
   <ThingDef ParentName="UltraTechClothingBase">
     <defName>RimRound_NovaTechApparel_Hyperbelt</defName>
     <label>NovaTech hyperbelt</label>
-    <description>A late support belt: capacity +15%, elasticity +30%, digestion +25%, and 10% less fullness movement penalty. Its weight and belt slot are significant tradeoffs. Children can wear it for native clothing protection; metabolic bonuses apply only to eligible adults.</description>
+    <description>A heavy support belt for a belly with room to grow.\n\nCapacity +15%; elasticity +30%; digestion +25%; fullness movement penalty reduced by 10%.\nHeavy; belt slot.\nListed bonuses are for Normal quality. Better quality improves the special bonuses; see the item information for effective values.\nMetabolic bonuses apply only to eligible adults. Children receive clothing protection only.</description>
     <modExtensions>
       <li Class="RimRound.Defs.ClothingModExtension">
         <softLimitMultiplier>.15</softLimitMultiplier>

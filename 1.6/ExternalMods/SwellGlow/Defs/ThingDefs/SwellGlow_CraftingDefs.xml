@@ -3,7 +3,7 @@
   <RecipeDef Name="SwellGlow">
     <defName>makeSwellGlow</defName>
     <label>Synthesize Swell-Glow</label>
-    <description>Synthesize one authorized metabolic dose from 2 gluttonium and 2 neutroamine. Its energy releases over the product schedule, separately from its chemical high.</description>
+    <description>Make one dose from 2 gluttonium and 2 neutroamine. Calories release over the product's stated duration, separately from its high.</description>
     <jobString>Synthesizing Swell-Glow.</jobString>
     <workAmount>1300</workAmount>
     <workSpeedStat>DrugCookingSpeed</workSpeedStat>
@@ -39,7 +39,7 @@
   <RecipeDef Name="SwellGlowPlus">
     <defName>makeSwellGlowPlus</defName>
     <label>Synthesize Swell-Glow Plus</label>
-    <description>Synthesize one authorized metabolic dose from 5 gluttonium and 2 neutroamine. Its energy releases over the product schedule, separately from its chemical high.</description>
+    <description>Make one dose from 5 gluttonium and 2 neutroamine. Calories release over the product's stated duration, separately from its high.</description>
     <jobString>Synthesizing Swell-Glow Plus.</jobString>
     <workAmount>1300</workAmount>
     <workSpeedStat>DrugCookingSpeed</workSpeedStat>
@@ -75,7 +75,7 @@
   <RecipeDef Name="SwellGlowX">
     <defName>makeSwellGlowX</defName>
     <label>Synthesize Swell-Glow X</label>
-    <description>Synthesize one authorized metabolic dose from 10 gluttonium and 4 neutroamine. Its energy releases over the product schedule, separately from its chemical high.</description>
+    <description>Make one dose from 10 gluttonium and 4 neutroamine. Calories release over the product's stated duration, separately from its high.</description>
     <jobString>Synthesizing Swell-Glow X.</jobString>
     <workAmount>1300</workAmount>
     <workSpeedStat>DrugCookingSpeed</workSpeedStat>
@@ -111,7 +111,7 @@
   <RecipeDef Name="SwellGlowMAX">
     <defName>makeSwellGlowMAX</defName>
     <label>Synthesize Swell-Glow MAX</label>
-    <description>Synthesize one authorized metabolic dose from 16 gluttonium and 4 neutroamine. Its energy releases over the product schedule, separately from its chemical high.</description>
+    <description>Make one dose from 16 gluttonium and 4 neutroamine. Calories release over the product's stated duration, separately from its high.</description>
     <jobString>Synthesizing Swell-Glow MAX.</jobString>
     <workAmount>1300</workAmount>
     <workSpeedStat>DrugCookingSpeed</workSpeedStat>

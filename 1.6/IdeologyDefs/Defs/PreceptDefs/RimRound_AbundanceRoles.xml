@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <IssueDef><defName>RR_FeederRole</defName><label>feeder role</label></IssueDef>
+  <IssueDef><defName>RR_FeedeeRole</defName><label>feedee role</label></IssueDef>
+  <IssueDef><defName>RR_ProvisionerRole</defName><label>provisioner role</label></IssueDef>
+  <PreceptDef Abstract="True" Name="RR_AbundanceRoleBase" ParentName="PreceptRoleMultiBase">
+    <requiredMemes><li>RR_EmbodiedAbundance</li></requiredMemes>
+    <canRemoveInUI>false</canRemoveInUI>
+    <allowDuplicates>false</allowDuplicates>
+    <roleRequirements><li Class="RimRound.Ideology.RoleRequirement_AbundanceAdult" /></roleRequirements>
+    <roleApparelRequirements Inherit="False" />
+    <comps Inherit="False" />
+  </PreceptDef>
+  <PreceptDef ParentName="RR_AbundanceRoleBase">
+    <defName>RR_Role_Feeder</defName>
+    <issue>RR_FeederRole</issue>
+    <label>feeder</label>
+    <nameMaker>RR_NamerFeeder</nameMaker>
+    <description>An attendant devoted to sharing abundance. Feeds others 25% faster and brings skill to ceremonial feeding. Retains ordinary food collection and care work.</description>
+    <iconPath>UI/Roles/SpecialistMedical</iconPath>
+    <roleTags><li>RR_Feeder</li></roleTags>
+    <roleDisabledWorkTags Inherit="False" />
+  </PreceptDef>
+  <PreceptDef ParentName="RR_AbundanceRoleBase">
+    <defName>RR_Role_Feedee</defName>
+    <issue>RR_FeedeeRole</issue>
+    <label>feedee</label>
+    <nameMaker>RR_NamerFeedee</nameMaker>
+    <description>An honoured example of abundance who gains 20% more body weight from ordinary food. This changes weight gain, not calories, hunger satisfaction or stomach volume. Timed weight-gain products receive no extra benefit. Can receive ceremonial feeding while retaining this role.</description>
+    <iconPath>UI/PerkIcons/FOOD_IS_FOOD</iconPath>
+    <roleTags><li>RR_Feedee</li></roleTags>
+    <roleDisabledWorkTags Inherit="False" />
+  </PreceptDef>
+  <PreceptDef ParentName="RR_AbundanceRoleBase">
+    <defName>RR_Role_Provisioner</defName>
+    <issue>RR_ProvisionerRole</issue>
+    <label>provisioner</label>
+    <nameMaker>RR_NamerProvisioner</nameMaker>
+    <description>A keeper of the colony's food supply. Produces 25% more edible food through harvesting, butchery, animal produce, foraging and fishing. Cooking, dispensing and handling food grant no second bonus. Retains all food production and gathering work.</description>
+    <iconPath>UI/Roles/SpecialistPlants</iconPath>
+    <roleTags><li>RR_Provisioner</li></roleTags>
+    <roleDisabledWorkTags Inherit="False" />
+  </PreceptDef>
+  <RulePackDef><defName>RR_NamerFeeder</defName><rulePack><rulesStrings><li>r_roleName->Feeder</li></rulesStrings></rulePack></RulePackDef>
+  <RulePackDef><defName>RR_NamerFeedee</defName><rulePack><rulesStrings><li>r_roleName->Feedee</li></rulesStrings></rulePack></RulePackDef>
+  <RulePackDef><defName>RR_NamerProvisioner</defName><rulePack><rulesStrings><li>r_roleName->Provisioner</li></rulesStrings></rulePack></RulePackDef>
+</Defs>

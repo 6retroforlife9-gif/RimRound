@@ -2,7 +2,7 @@
 <LanguageData>
   <RR_DiscussionTitle>Body discussions</RR_DiscussionTitle>
   <RR_DiscussionPawnTitle>Body discussions: {0}</RR_DiscussionPawnTitle>
-  <RR_DiscussionDescription>Discuss a larger or smaller preferred body range with another colonist. A real conversation can change their wishes or irritate them. It does not change their weight.</RR_DiscussionDescription>
+  <RR_DiscussionDescription>Talk to another colonist about preferring a larger or smaller body. They may reconsider or become irritated. The conversation changes wishes, not weight.</RR_DiscussionDescription>
   <RR_DiscussionChoose>Choose a colonist</RR_DiscussionChoose>
   <RR_DiscussionNoRecipients>No eligible colonists are present on this map.</RR_DiscussionNoRecipients>
   <RR_DiscussionOngoing>Keep discussing this fixed target when both colonists are free</RR_DiscussionOngoing>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <RR_AttendanceInvalid>The assisted-attendance plan is no longer valid.</RR_AttendanceInvalid>
+  <RR_AttendanceOtherEvent>{0} already has an assisted-attendance or return reservation for another event.</RR_AttendanceOtherEvent>
+  <RR_AttendanceNoHelper>{0} needs carrying, but no selected mobile attendee can safely carry them. Select a capable helper with enough carrying capacity.</RR_AttendanceNoHelper>
+  <RR_AttendanceNoPlace>{0} needs carrying, but there is no safe guest place with a clear route and a separate helper approach.</RR_AttendanceNoPlace>
+  <RR_AttendanceUnsupported>{0} has no supported assisted spectator behaviour. This ritual requires a separate attendance adapter.</RR_AttendanceUnsupported>
+  <RR_AttendancePerformer>{0} cannot be carried into the {1} role. Its required actions still require the native ability to perform them.</RR_AttendancePerformer>
+  <RR_AttendanceNotOnMap>{0} is no longer available on this map for assisted attendance. A pawn in another holder or activity will not be taken out of it.</RR_AttendanceNotOnMap>
+  <RR_AttendanceIneligible>{0} is not eligible for voluntary assisted attendance.</RR_AttendanceIneligible>
+  <RR_AttendanceUnsafe>{0} cannot safely attend while drafted, in a mental state, unconscious, suspended, deathresting or burning.</RR_AttendanceUnsafe>
+  <RR_AttendanceMedical>{0} needs medical care and cannot be moved for an optional ritual.</RR_AttendanceMedical>
+  <RR_AttendanceNeeds>{0} must be awake, rested and not starving before assisted attendance.</RR_AttendanceNeeds>
+  <RR_AttendanceDestinationBlocked>The reserved guest place or route for {0} is blocked or unsafe.</RR_AttendanceDestinationBlocked>
+  <RR_AttendanceReturnAlternative>{0}'s original bed is unavailable. They will be returned to {1}, without changing their home-bed assignment.</RR_AttendanceReturnAlternative>
+  <RR_AttendanceReturnPending>Return pending for {0}: the original/current owned bed and reachable medical beds are unavailable. Clear a safe route or care bed, then use Retry assisted return.</RR_AttendanceReturnPending>
+  <RR_AttendanceMobilityRecovered>{0} can move again and has resumed ordinary attendance.</RR_AttendanceMobilityRecovered>
+  <RR_AttendancePreparationTimeout>The ritual was cancelled because assisted guests could not settle within the preparation time.</RR_AttendancePreparationTimeout>
+  <RR_AttendanceHolderChanged>{0}'s carrier or carrying job changed. The new native activity has control; assisted attendance has released its claim.</RR_AttendanceHolderChanged>
+  <RR_AttendancePlayerControl>{0} has a direct player order or another native activity. Assisted attendance has released its claim.</RR_AttendancePlayerControl>
+  <RR_AttendanceCarrierUnavailable>{0}'s selected carrier is unavailable. Waiting for another eligible selected helper.</RR_AttendanceCarrierUnavailable>
+  <RR_AttendanceTransportInterrupted>Assisted transport for {0} was interrupted. The pawn has been placed locally and return care is pending.</RR_AttendanceTransportInterrupted>
+  <RR_AttendancePickupInterrupted>Assisted pickup for {0} was interrupted. The pawn remains at their current location.</RR_AttendancePickupInterrupted>
+  <RR_AttendanceCannotPutDown>{0}'s carrier cannot find a clear adjacent place to put them down. Clear the surrounding cells or give an explicit rescue order.</RR_AttendanceCannotPutDown>
+  <RR_AttendanceNeedsCarrying>{0}: Needs carrying</RR_AttendanceNeedsCarrying>
+  <RR_AttendanceSelectToPlan>Select this pawn and a capable helper to plan their guest place and route.</RR_AttendanceSelectToPlan>
+  <RR_AttendanceExistingBedside>Existing bedside participation keeps the pawn in their own bed.</RR_AttendanceExistingBedside>
+  <RR_AttendanceChair>audience chair</RR_AttendanceChair>
+  <RR_AttendanceFloorSeat>ritual mat or pillow</RR_AttendanceFloorSeat>
+  <RR_AttendanceGround>clear ground place</RR_AttendanceGround>
+  <RR_AttendancePreview>{0}: Needs carrying. Guest place: {1} at {2}; proposed helper: {3}; clear approach: {4}. Return to a valid owned or care bed afterwards.</RR_AttendancePreview>
+  <RR_AttendanceAlreadySettled>{0}: already settled at {1}; no transport required.</RR_AttendanceAlreadySettled>
+  <RR_AttendanceParticipantLeft>{0} left the ritual. Assisted return has been requested.</RR_AttendanceParticipantLeft>
+  <RR_AttendancePendingInspection>Assisted return pending: {0}</RR_AttendancePendingInspection>
+  <RR_AttendanceWaitingHelper>waiting for an eligible selected helper</RR_AttendanceWaitingHelper>
+  <RR_AttendanceInspection>Assisted ritual attendance: {0}</RR_AttendanceInspection>
+  <RR_AttendanceRetryReturn>Retry assisted return</RR_AttendanceRetryReturn>
+  <RR_AttendanceRetryReturnDesc>Recheck the selected helpers, safe routes, original/current owned bed and available medical beds. This does not claim or reassign a home bed.</RR_AttendanceRetryReturnDesc>
+  <RR_AttendanceWaitingReturnReport>Waiting for an assistant to carry me back to bed.</RR_AttendanceWaitingReturnReport>
+</LanguageData>

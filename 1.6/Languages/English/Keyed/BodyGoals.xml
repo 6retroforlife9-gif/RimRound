@@ -18,11 +18,11 @@
   <RR_BodyTrendToday>Body change today: {0} {1}.</RR_BodyTrendToday>
   <RR_LegacyNutritionPending>Old-save nutrition still digesting: {0}. This is credited only once.</RR_LegacyNutritionPending>
   <RR_BodyGoalDesc_Legacy>Keep saved manual diet sliders. New meals satisfy hunger immediately; fullness measures volume. Saved perks are retained.</RR_BodyGoalDesc_Legacy>
-  <RR_BodyGoalDesc_Maintain>Regulate eating toward the weight saved when Maintain was assigned. Meals do not move this target. Stored calories count toward the target; urgent hunger still permits whole meals.</RR_BodyGoalDesc_Maintain>
-  <RR_BodyGoalDesc_Gain>Keep gaining while selected. Hungry meals aim for 90% comfortable fullness. Anything and Recreation allow extra meals, trying a willing shared meal or motivated feeder before eating alone. Work permits hungry meals only. Extra eating during Sleep requires being awake. Food policy and colony reserves still apply.</RR_BodyGoalDesc_Gain>
-  <RR_BodyGoalDesc_ForceGain>Keep gaining while selected. Eat whenever awake on every schedule, including Work, up to 90% comfortable fullness. Try social meals first during Anything and Recreation. Food policy and colony reserves still apply.</RR_BodyGoalDesc_ForceGain>
-  <RR_BodyGoalDesc_Lose>Wait longer between whole meals and draw a small, accounted contribution from body reserves. Urgent hunger always triggers eating. Stop at the target or a safe baseline. Starvation and malnutrition disable deliberate reserve use.</RR_BodyGoalDesc_Lose>
-  <RR_BodyGoalDesc_Recovery>Use normal care priorities and a small extra meal allowance to restore the race baseline. Automatically return to Maintain at the target. The assigned food policy still applies.</RR_BodyGoalDesc_Recovery>
+  <RR_BodyGoalDesc_Maintain>Hold the weight saved when Maintain was assigned. Stored calories count towards the target; eating does not move it. Urgent hunger still allows whole meals.</RR_BodyGoalDesc_Maintain>
+  <RR_BodyGoalDesc_Gain>Keep gaining while selected; hungry meals aim for 90% comfortable fullness.\nAnything/Recreation: extra meals, with a willing partner or motivated feeder tried before eating alone.\nWork: hungry meals only. Sleep: extra meals only while awake.\nFood policy and colony reserves apply.</RR_BodyGoalDesc_Gain>
+  <RR_BodyGoalDesc_ForceGain>Keep gaining while awake, including during Work. Meals aim for 90% comfortable fullness.\nAnything/Recreation tries social meals first. Food policy and colony reserves apply.</RR_BodyGoalDesc_ForceGain>
+  <RR_BodyGoalDesc_Lose>Eat whole meals less often and use a small amount of body reserves. Stop at the target or safe baseline.\nUrgent hunger always allows eating. Starvation or malnutrition stops deliberate reserve use.</RR_BodyGoalDesc_Lose>
+  <RR_BodyGoalDesc_Recovery>Restore the race's baseline weight with normal care and a small extra meal allowance. Switch to Maintain at the target. Food policy still applies.</RR_BodyGoalDesc_Recovery>
   <RR_BodyGoalLiveAction>Current eating response: {0}. Weight after stored energy is used: about {1} {2}.</RR_BodyGoalLiveAction>
   <RR_BodyGoalLiveRange>Auto range: {0}–{1} {2}.</RR_BodyGoalLiveRange>
   <RR_BodyGoalRangeLimited>The preferred range extends beyond the current body limits; Auto uses the nearest allowed range.</RR_BodyGoalRangeLimited>

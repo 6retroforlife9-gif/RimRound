@@ -1,10 +1,9 @@
 <?xml version='1.0' encoding='utf-8'?>
 <Defs>
-  <!-- These are larger nutrient-paste servings, not cooked-meal quality or
-       recipes. MealBase supplies vanilla ingredients and food poisoning;
-       the existing paste-only patch does not match these new defNames. -->
+  <!-- Larger nutrient-paste servings. Initialized network food retains its
+       source batch's expiry and does not cause food poisoning. -->
   <ThingDef Name="RR_NetworkMealBase" ParentName="MealBase" Abstract="True">
-    <description>A larger serving of nutrient paste drawn from a food network. Its ingredient, spoilage and poisoning state comes from the source batch.</description>
+    <description>A larger serving of nutrient paste drawn from a food network. Keeps the source batch's ingredients and remaining shelf life.</description>
     <graphicData>
       <texPath>Things/Item/Meal/NutrientPaste</texPath>
       <graphicClass>Graphic_MealVariants</graphicClass>
@@ -18,7 +17,7 @@
     </ingestible>
     <comps>
       <li Class="CompProperties_Rottable">
-        <daysToRotStart>0.75</daysToRotStart>
+        <daysToRotStart>4</daysToRotStart>
         <rotDestroys>true</rotDestroys>
       </li>
       <li Class="RimRound.FeedOther.CompProperties_FoodNetworkServing">
@@ -34,7 +33,7 @@
       <Mass>0.88</Mass>
       <Nutrition>1.8</Nutrition>
     </statBases>
-    <description>Large meal: 1.8 nutrition and 1.8 stomach volume at 1x. Whole items are consumed; unusable portions are wasted.</description>
+    <description>Large meal.\n\n1.8 nutrition / 1.8 L at 1x density.\nConsumed whole; unusable food is wasted.</description>
   </ThingDef>
   <ThingDef ParentName="RR_NetworkMealBase">
     <defName>RR_NetworkMealHuge</defName>
@@ -44,7 +43,7 @@
       <Mass>1.76</Mass>
       <Nutrition>3.6</Nutrition>
     </statBases>
-    <description>Feast-sized meal: 3.6 nutrition and 3.6 stomach volume at 1x. Whole items are consumed; unusable portions are wasted.</description>
+    <description>Feast-sized meal.\n\n3.6 nutrition / 3.6 L at 1x density.\nConsumed whole; unusable food is wasted.</description>
   </ThingDef>
   <ThingDef ParentName="RR_NetworkMealBase">
     <defName>RR_NetworkMealEnormous</defName>

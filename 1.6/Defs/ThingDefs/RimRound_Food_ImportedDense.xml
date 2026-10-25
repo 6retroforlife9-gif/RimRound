@@ -1,0 +1,93 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Defs>
+  <ThingDef ParentName="RR_SimpleMealBase">
+    <defName>RR_DenseSimple2x</defName>
+    <label>2x dense simple meal</label>
+    <description>A concentrated simple meal imported by food traders.\n\n1.8 nutrition in a standard 0.9 L portion. Keep refrigerated.</description>
+    <tradeability>All</tradeability>
+    <graphicData>
+      <texPath>Things/Item/Meal/Simple</texPath>
+      <graphicClass>Graphic_MealVariants</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>30</MarketValue>
+      <Nutrition>1.8</Nutrition>
+      <Mass>.44</Mass>
+    </statBases>
+    <comps>
+      <li Class="RimRound.Comps.CompProperties_FoodItems_NutritionDensity">
+        <compClass>RimRound.Comps.ThingComp_FoodItems_NutritionDensity</compClass>
+        <fullnessToNutritionRatio>0.500000000000</fullnessToNutritionRatio>
+      </li>
+    </comps>
+  </ThingDef>
+  <ThingDef ParentName="RR_SimpleMealBase">
+    <defName>RR_DenseSimple3x</defName>
+    <label>3x dense simple meal</label>
+    <description>A concentrated simple meal imported by food traders.\n\n2.7 nutrition in a standard 0.9 L portion. Keep refrigerated.</description>
+    <tradeability>All</tradeability>
+    <graphicData>
+      <texPath>Things/Item/Meal/Simple</texPath>
+      <graphicClass>Graphic_MealVariants</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>45</MarketValue>
+      <Nutrition>2.7</Nutrition>
+      <Mass>.44</Mass>
+    </statBases>
+    <comps>
+      <li Class="RimRound.Comps.CompProperties_FoodItems_NutritionDensity">
+        <compClass>RimRound.Comps.ThingComp_FoodItems_NutritionDensity</compClass>
+        <fullnessToNutritionRatio>0.333333333333</fullnessToNutritionRatio>
+      </li>
+    </comps>
+  </ThingDef>
+  <ThingDef ParentName="MealFineBase">
+    <defName>RR_DenseFine2x</defName>
+    <label>2x dense fine meal</label>
+    <description>A concentrated fine meal imported by food traders.\n\n1.8 nutrition in a standard 0.9 L portion. Keep refrigerated.</description>
+    <tradeability>All</tradeability>
+    <graphicData>
+      <texPath>Things/Item/Meal/Fine</texPath>
+      <graphicClass>Graphic_MealVariants</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>40</MarketValue>
+      <Nutrition>1.8</Nutrition>
+      <Mass>.44</Mass>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_Ingredients">
+        <splitTransferableFoodKind>true</splitTransferableFoodKind>
+      </li>
+      <li Class="RimRound.Comps.CompProperties_FoodItems_NutritionDensity">
+        <compClass>RimRound.Comps.ThingComp_FoodItems_NutritionDensity</compClass>
+        <fullnessToNutritionRatio>0.500000000000</fullnessToNutritionRatio>
+      </li>
+    </comps>
+  </ThingDef>
+  <ThingDef ParentName="MealFineBase">
+    <defName>RR_DenseFine3x</defName>
+    <label>3x dense fine meal</label>
+    <description>A concentrated fine meal imported by food traders.\n\n2.7 nutrition in a standard 0.9 L portion. Keep refrigerated.</description>
+    <tradeability>All</tradeability>
+    <graphicData>
+      <texPath>Things/Item/Meal/Fine</texPath>
+      <graphicClass>Graphic_MealVariants</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>60</MarketValue>
+      <Nutrition>2.7</Nutrition>
+      <Mass>.44</Mass>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_Ingredients">
+        <splitTransferableFoodKind>true</splitTransferableFoodKind>
+      </li>
+      <li Class="RimRound.Comps.CompProperties_FoodItems_NutritionDensity">
+        <compClass>RimRound.Comps.ThingComp_FoodItems_NutritionDensity</compClass>
+        <fullnessToNutritionRatio>0.333333333333</fullnessToNutritionRatio>
+      </li>
+    </comps>
+  </ThingDef>
+</Defs>

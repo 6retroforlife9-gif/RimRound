@@ -45,7 +45,7 @@
   <ThingDef ParentName="cakeDrugBase">
     <defName>cakeFat</defName>
     <label>"Cannot-Stop" cake</label>
-    <description>Contains 6 nutrition in 0.6 stomach volume before pawn modifiers. Releases useful energy over 24 game hours in Fantasy or 72 game hours in Balanced where permitted. One complete dose requires explicit drug or medical authorization and enough stomach room. Chemical effects remain unchanged.</description>
+    <description>Sweet, fattening cake with a craving that lingers long after the last bite. The name is a warning.\n\nBase: 6 nutrition / 0.6 L, before pawn modifiers.\nEnergy release: 24 game hours in Fantasy; 72 in Balanced where permitted.\nRequires drug or medical authorization and room for a whole dose. Drug effects apply separately.</description>
     <graphicData>
       <texPath>Things/Food/LardCake</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -144,7 +144,7 @@
     <defName>chemical_Cake</defName>
     <needClass>Need_Chemical</needClass>
     <label>cannot-stop cake</label>
-    <description>Because of an addiction to the imfamous "Cannot-Stop" Cake, this person needs to regularly consume the cake to avoid withdrawal symptoms.</description>
+    <description>Addicted to the infamous "Cannot-Stop" Cake. Regular doses keep withdrawal at bay.</description>
     <listPriority>20</listPriority>
   </NeedDef>
   <HediffDef ParentName="DrugToleranceBase">
@@ -163,9 +163,7 @@
   <HediffDef ParentName="AddictionBase">
     <defName>cakeAddiction</defName>
     <label>cannot-stop cake addiction</label>
-    <description>A chemical addiction to "Cannot-Stop" Cake. Long-term presence of "Cannot-Stop" Cake has caused neurological adaptations at the cellular level, so the brain can no longer function properly without the drug.
-			\n Without the regular consumption of "Cannot-Stop" Cake, withdrawal symptoms will begin. However, extended abstinence will force the brain to adapt back to its normal state, resolving the addiction.
-		\n Or you could ignore this warning and keep fattening up the little pawn anyway. I know that's what you'll do anyway.</description>
+    <description>An addiction to "Cannot-Stop" Cake. Going without brings withdrawal; prolonged abstinence eventually breaks the addiction.\n\nOr you could ignore this warning and keep fattening up the little pawn anyway. I know that's what you'll do anyway.</description>
     <hediffClass>Hediff_Addiction</hediffClass>
     <chemicalNeed>chemical_Cake</chemicalNeed>
     <comps>

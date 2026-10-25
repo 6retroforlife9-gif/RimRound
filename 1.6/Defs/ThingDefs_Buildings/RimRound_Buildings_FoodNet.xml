@@ -157,7 +157,7 @@
 	<ThingDef ParentName="FoodStorageBase">
 		<defName>RR_TD_FoodStorageVat_Massive</defName>
 		<label>massive feeding tube storage</label>
-		<description>Stores excess food.</description>
+		<description>Stores liquid food for the network. Powered preservation pauses spoilage; perishable contents age during outages or breakdowns.</description>
 		<thingClass>RimRound.FeedingTube.Building_FoodVatMassive</thingClass>
 		<graphicData>
 			<texPath>Things/Building/Production/FoodStorageVatMassive</texPath>
@@ -200,7 +200,7 @@
 	<ThingDef ParentName="FoodStorageBase">
 		<defName>RR_TD_FoodStorageVat_Large</defName>
 		<label>feeding tube storage</label>
-		<description>Stores excess food.</description>
+		<description>Stores liquid food for the network. Powered preservation pauses spoilage; perishable contents age during outages or breakdowns.</description>
 		<thingClass>RimRound.FeedingTube.Building_FoodVatLarge</thingClass>
 		<graphicData>
 			<texPath>Things/Building/Production/FoodStorageVatLarge</texPath>
@@ -242,7 +242,7 @@
 	<ThingDef ParentName="FoodStorageBase">
 		<defName>RR_TD_FoodStorageVat_Small</defName>
 		<label>small food storage vat</label>
-		<description>Stores excess food.</description>
+		<description>Stores liquid food for the network. Powered preservation pauses spoilage; perishable contents age during outages or breakdowns.</description>
 		<thingClass>RimRound.FeedingTube.Building_FoodVatSmall</thingClass>
 		<graphicData>
 			<texPath>Things/Building/Production/FoodStorageVatSmall</texPath>
@@ -284,7 +284,7 @@
 	<ThingDef ParentName="BuildingBase" Name="FoodProcessor">
 		<defName>RR_TD_FeedingTubeFoodProcessor</defName>
 		<label>food processor</label>
-		<description>Creates feeding fluid from solid edibles.</description>
+		<description>Turns edible ingredients into liquid food for the colony's pipes and storage vats.</description>
 		<thingClass>RimRound.FeedingTube.Building_FoodProcessor</thingClass>
 		<drawerType>MapMeshAndRealTime</drawerType>
 		<graphicData>
@@ -363,7 +363,7 @@
 	<ThingDef ParentName="BuildingBase" Name="FoodDispenser">
 		<defName>RR_TD_FoodFaucet</defName>
 		<label>food dispenser</label>
-		<description>dispenses food.</description>
+		<description>Serves meals from the liquid-food network. Choose the portion size and density at the dispenser.</description>
 		<thingClass>RimRound.FeedingTube.Building_FoodFaucet</thingClass>
 		<drawerType>MapMeshAndRealTime</drawerType>
 		<graphicData>
@@ -523,7 +523,7 @@
 	<ThingDef ParentName="AutoFeederBase">
 		<defName>RR_AdvancedAutoFeeder</defName>
 		<label>Advanced automatic food dispenser</label>
-		<description>A vastly improved, exceedingly high tech automatic food dispenser, requiring vastly less power than its predecessor, never malfunctions, and is equipped with a small light and even a radio for some reason.</description>
+		<description>A refined automatic feeder for linked beds. Uses less power than the basic model, avoids routine breakdowns, and includes a light and, for some reason, a radio.</description>
 		<thingClass>RimRound.FeedingTube.Building_AdvancedAutoFeeder</thingClass>
 		<graphicData>
 			<texPath>Things/Building/Production/AdvancedAutoFeeder</texPath>
@@ -639,7 +639,7 @@
 	<ThingDef ParentName="BuildingBase">
 		<defName>RR_TD_NutrientDistillery</defName>
 		<label>nutrient distillery</label>
-		<description>Increases the nutrient density of the system by removing unnecessary food components such as water and dietary fibers through a combination of centrifuges and distillation processes.</description>
+		<description>Concentrates liquid food into smaller, richer servings. Choose a density from 1x to 5x; the nutrition stays the same.</description>
 		<thingClass>RimRound.FeedingTube.Building_NutrientDistillery</thingClass>
 		<drawerType>MapMeshAndRealTime</drawerType>
 		<graphicData>

@@ -3,7 +3,7 @@
   <IssueDef>
     <defName>RR_LeadershipBodyIdeal</defName>
     <label>leadership body ideal</label>
-    <iconPath>UI/PerkIcons/FOOD_IS_FOOD</iconPath>
+    <iconPath>UI/RimRoundIdeology/LeadershipBodyIdeal</iconPath>
   </IssueDef>
   <PreceptDef>
     <defName>RR_LeadershipBodyIdeal_None</defName>
@@ -20,25 +20,25 @@
   <PreceptDef ParentName="RR_LeadershipBodyIdealBase">
     <defName>RR_LeadershipBodyIdeal_Ample</defName>
     <label>ample</label>
-    <description>Leaders and moral guides should welcome larger bodies. Their expected size is about 2.07 times their fixed race baseline (145 kg for a human). New holders have five days to approach it. After that, followers receive -1 mood per undersized occupied role, at most -2. Vacancies add no body-ideal penalty. Personal preferences still determine willing extra meals.</description>
+    <description>Leaders and moral guides should embody the colony's abundance.\n\nExpected size: about 2.07x the fixed race baseline (145 kg for humans).\nNew role holders have five days of grace. Afterwards, each undersized holder gives followers -1 mood, up to -2. Vacant roles add no penalty.\nExtra meals still follow personal preference.</description>
     <modExtensions><li Class="RimRound.Ideology.BodyRoleIdealExtension"><baselineRatio>2.0714286</baselineRatio></li></modExtensions>
   </PreceptDef>
   <PreceptDef ParentName="RR_LeadershipBodyIdealBase">
     <defName>RR_LeadershipBodyIdeal_Massive</defName>
     <label>massive</label>
-    <description>Leaders and moral guides should welcome larger bodies. Their expected size is about 4.36 times their fixed race baseline (305 kg for a human). New holders have five days to approach it. After that, followers receive -1 mood per undersized occupied role, at most -2. Vacancies add no body-ideal penalty. Personal preferences still determine willing extra meals.</description>
+    <description>Leaders and moral guides should embody the colony's abundance.\n\nExpected size: about 4.36x the fixed race baseline (305 kg for humans).\nNew role holders have five days of grace. Afterwards, each undersized holder gives followers -1 mood, up to -2. Vacant roles add no penalty.\nExtra meals still follow personal preference.</description>
     <modExtensions><li Class="RimRound.Ideology.BodyRoleIdealExtension"><baselineRatio>4.357143</baselineRatio></li></modExtensions>
   </PreceptDef>
   <PreceptDef ParentName="RR_LeadershipBodyIdealBase">
     <defName>RR_LeadershipBodyIdeal_Immobile</defName>
     <label>immobility revered</label>
-    <description>Leaders and moral guides should welcome larger bodies. Their expected size is about 5.36 times their fixed race baseline (375 kg for a human, the ordinary unassisted mobility threshold). Mobility aids do not count against this ideal. New holders have five days of grace, then followers receive -1 mood per undersized occupied role, at most -2. Vacancies add no body-ideal penalty. Personal preference still controls willing extra meals.</description>
+    <description>Leaders and moral guides should embody the colony's abundance.\n\nThis is the usual unassisted mobility threshold; mobility aids are allowed.\nExpected size: about 5.36x the fixed race baseline (375 kg for humans).\nNew role holders have five days of grace. Afterwards, each undersized holder gives followers -1 mood, up to -2. Vacant roles add no penalty.\nExtra meals still follow personal preference.</description>
     <modExtensions><li Class="RimRound.Ideology.BodyRoleIdealExtension"><baselineRatio>5.357143</baselineRatio></li></modExtensions>
   </PreceptDef>
   <PreceptDef ParentName="RR_LeadershipBodyIdealBase">
     <defName>RR_LeadershipBodyIdeal_Exceptional</defName>
     <label>exceptional (Fantasy)</label>
-    <description>Fantasy only: leaders and moral guides embody exceptional abundance, with an expected size of 20.5 times their fixed race baseline (1435 kg for a human). New holders have five days of grace, then followers receive -1 mood per undersized occupied role, at most -2. Vacancies add no body-ideal penalty. This ideal is dormant outside Fantasy; its saved identity is retained. Personal preference still controls willing extra meals.</description>
+    <description>Leaders and moral guides should embody the colony's abundance.\n\nFantasy only. Inactive outside Fantasy, with the saved choice retained.\nExpected size: about 20.5x the fixed race baseline (1435 kg for humans).\nNew role holders have five days of grace. Afterwards, each undersized holder gives followers -1 mood, up to -2. Vacant roles add no penalty.\nExtra meals still follow personal preference.</description>
     <modExtensions><li Class="RimRound.Ideology.BodyRoleIdealExtension"><baselineRatio>20.5</baselineRatio><fantasyOnly>true</fantasyOnly></li></modExtensions>
   </PreceptDef>
   <ThoughtDef>
@@ -46,8 +46,8 @@
     <workerClass>RimRound.Ideology.ThoughtWorker_BodyRoleExpectation</workerClass>
     <validWhileDespawned>true</validWhileDespawned>
     <stages>
-      <li><label>body ideal unmet</label><description>One of our occupied leadership roles has not yet reached our body's ideal size.</description><baseMoodEffect>-1</baseMoodEffect></li>
-      <li><label>body ideals unmet</label><description>Our leader and moral guide have not yet reached our body's ideal size.</description><baseMoodEffect>-2</baseMoodEffect></li>
+      <li><label>body ideal unmet</label><description>One of our leaders is still too small to embody our ideal.</description><baseMoodEffect>-1</baseMoodEffect></li>
+      <li><label>body ideals unmet</label><description>Our leader and moral guide are both too small to embody our ideal.</description><baseMoodEffect>-2</baseMoodEffect></li>
     </stages>
   </ThoughtDef>
 </Defs>

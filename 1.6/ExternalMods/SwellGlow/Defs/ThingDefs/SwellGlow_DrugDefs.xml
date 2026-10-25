@@ -100,8 +100,7 @@
 	<HediffDef ParentName="AddictionBase">
 		<defName>swellGlowAddiction</defName>
 		<label>Swell-Glow Addiction</label>
-		<description>A chemical addiction to Swell-Glow. Long-term presence of the drug has caused neurological adaptations at the cellular level, so the brain can no longer function properly without it.
-			\n Without regular administration of Swell-Glow, withdrawal symptoms will begin. However, extended abstinence will force the brain to adapt back to its normal state, resolving the addiction.</description>
+		<description>An addiction to Swell-Glow. Going without causes withdrawal; prolonged abstinence eventually breaks the addiction.</description>
 		<hediffClass>Hediff_Addiction</hediffClass>
 		<chemicalNeed>chemical_swellGlow</chemicalNeed>
 		<comps>

@@ -4,7 +4,7 @@
   <ThingDef ParentName="swellGlowDrugBase">
     <defName>swellGlowOriginal</defName>
     <label>Swell-Glow</label>
-    <description>Contains 16 nutrition in 0.1 stomach volume before pawn modifiers. Releases useful energy over 24 game hours in Fantasy or 72 game hours in Balanced where permitted. One complete dose requires explicit drug or medical authorization and enough stomach room. Chemical effects remain unchanged.</description>
+    <description>A fattening drug that pairs a pleasurable high with a growing waistline.\n\nBase: 16 nutrition / 0.1 L, before pawn modifiers.\nEnergy release: 24 game hours in Fantasy; 72 in Balanced where permitted.\nRequires drug or medical authorization and room for a whole dose. Drug effects apply separately.</description>
     <tradeTags>
       <li>Drugs</li>
     </tradeTags>
@@ -64,7 +64,7 @@
   <ThingDef ParentName="swellGlowDrugBase">
     <defName>swellGlowPlus</defName>
     <label>Swell-Glow Plus</label>
-    <description>Contains 40 nutrition in 0.1 stomach volume before pawn modifiers. Releases useful energy over 24 game hours in Fantasy or 72 game hours in Balanced where permitted. One complete dose requires explicit drug or medical authorization and enough stomach room. Chemical effects remain unchanged.</description>
+    <description>More Swell-Glow in the same dose, for gluttons who found the original rather restrained.\n\nBase: 40 nutrition / 0.1 L, before pawn modifiers.\nEnergy release: 24 game hours in Fantasy; 72 in Balanced where permitted.\nRequires drug or medical authorization and room for a whole dose. Drug effects apply separately.</description>
     <tradeTags>
       <li>Drugs</li>
     </tradeTags>
@@ -124,7 +124,7 @@
   <ThingDef ParentName="swellGlowDrugBase">
     <defName>swellGlowX</defName>
     <label>Swell-Glow X</label>
-    <description>Fantasy only. Contains 100 nutrition in 0.1 stomach volume before pawn modifiers. Releases useful energy over 24 game hours in Fantasy or 72 game hours in Balanced where permitted. One complete dose requires explicit drug or medical authorization and enough stomach room. Chemical effects remain unchanged.</description>
+    <description>An extreme dose of Swell-Glow for appetites that have departed the realm of sensible limits.\n\nFantasy only.\nBase: 100 nutrition / 0.1 L, before pawn modifiers.\nEnergy release: 24 game hours in Fantasy; 72 in Balanced where permitted.\nRequires drug or medical authorization and room for a whole dose. Drug effects apply separately.</description>
     <tradeTags>
       <li>Drugs</li>
     </tradeTags>
@@ -184,7 +184,7 @@
   <ThingDef ParentName="swellGlowDrugBase">
     <defName>swellGlowMAX</defName>
     <label>Swell-Glow MAX</label>
-    <description>Fantasy only. Contains 160 nutrition in 0.1 stomach volume before pawn modifiers. Releases useful energy over 24 game hours in Fantasy or 72 game hours in Balanced where permitted. One complete dose requires explicit drug or medical authorization and enough stomach room. Chemical effects remain unchanged.</description>
+    <description>Swell-Glow taken to its most excessive conclusion. Even the name has given up on restraint.\n\nFantasy only.\nBase: 160 nutrition / 0.1 L, before pawn modifiers.\nEnergy release: 24 game hours in Fantasy; 72 in Balanced where permitted.\nRequires drug or medical authorization and room for a whole dose. Drug effects apply separately.</description>
     <tradeTags>
       <li>Drugs</li>
     </tradeTags>
@@ -339,7 +339,7 @@
   <ThingDef ParentName="OrganicProductBase">
     <defName>SG_Calomilk</defName>
     <label>calomilk</label>
-    <description>Contains 0.2 nutrition in 0.05 stomach volume before pawn modifiers. Energy is absorbed as this food digests. Whole items are consumed; any portion that cannot be used is wasted.</description>
+    <description>Rich calorite milk. A small drink can make a substantial contribution to a growing belly.\n\nBase: 0.2 nutrition / 0.05 L, before pawn modifiers.\nEnergy is absorbed during digestion.\nConsumed whole; unusable food is wasted.</description>
     <graphicData>
       <texPath>Things/Products/Calomilk</texPath>
     </graphicData>

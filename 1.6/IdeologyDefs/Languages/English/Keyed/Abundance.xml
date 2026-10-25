@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <RR_AbundanceAdult>Adult</RR_AbundanceAdult>
+  <RR_ProvisionerCaretaker>Provisioner: {0}</RR_ProvisionerCaretaker>
+  <RR_ProvisionerCaretakerDesc>Choose the Provisioner caring for this egg-laying animal. While the caretaker is capable and present on this map, egg production receives their food-yield bonus. Each animal has one caretaker.</RR_ProvisionerCaretakerDesc>
+  <RR_AbundanceMigrated>{0}: Abundant Table is now a shared-feast ritual. Its former meme has become Embodied Abundance, including leadership body expectations and the Feeder, Feedee and Provisioner roles. Existing role holders are preserved.</RR_AbundanceMigrated>
+  <RR_AbundanceBedStatus>Ritual focus: {0}; owner: {1}</RR_AbundanceBedStatus>
+  <RR_AbundanceBedOwnerMismatch>The bed must belong to the matching leader, moral guide or Feedee of its designated Embodied Abundance ideoligion.</RR_AbundanceBedOwnerMismatch>
+  <RR_AbundanceBedDesignation>Ritual focus: {0}</RR_AbundanceBedDesignation>
+  <RR_AbundanceBedDesignationDesc>Designate this large single bed for its owner's rituals. Normal bed ownership and bedroom benefits remain. Select the role that its owner holds.</RR_AbundanceBedDesignationDesc>
+  <RR_AbundanceBedNeedsOwner>Assign this bed to a member of Embodied Abundance first.</RR_AbundanceBedNeedsOwner>
+  <RR_AbundanceBedTarget>Designated large single bed</RR_AbundanceBedTarget>
+  <RR_AbundanceTableTarget>Dining table, ritual spot or altar</RR_AbundanceTableTarget>
+  <RR_AbundanceInvalid>The ritual needs a valid site and meal service.</RR_AbundanceInvalid>
+  <RR_AbundanceHostRequired>Assign this bed's capable, awake owner as the host.</RR_AbundanceHostRequired>
+  <RR_AbundanceServerRequired>Assign a mobile attendant who can collect food and reach the bedside.</RR_AbundanceServerRequired>
+  <RR_AbundanceHostCannotSettle>The host cannot reach and settle in their designated bed.</RR_AbundanceHostCannotSettle>
+  <RR_AbundanceSeats>Guest seats needed: {0}; dining and ritual seats available in this room: {1}. Add reachable, unreserved table chairs, pews, kneel sheets or kneel pillows. Ritual seats can be away from the tables.</RR_AbundanceSeats>
+  <RR_AbundanceSeatUnavailable>No free, reachable seat for {0}. Check dining chairs, ritual seats, paths and reservations in this room.</RR_AbundanceSeatUnavailable>
+  <RR_AbundanceNoMeal>No unreserved, reachable prepared meal permitted for {0}.</RR_AbundanceNoMeal>
+  <RR_AbundanceNoDiners>No selected diner has room for food.</RR_AbundanceNoDiners>
+  <RR_AbundanceMealExplanation>Participants bring enough prepared food for the whole sitting and set it out on the tables, then around them if needed. Dining, sharing and feeding use this spread. The feast fills diners to their comfortable limit; ceremonial feeding permits 10% more. Guests already physically full can spectate. A bed host requires an attendant.</RR_AbundanceMealExplanation>
+  <RR_AbundanceDigestionReward>The recipient has {0}% faster digestion for one day.</RR_AbundanceDigestionReward>
+  <RR_AbundanceNotEnough>Too little reachable, allowed food for {0}. Invite fewer diners or add food.</RR_AbundanceNotEnough>
+  <RR_AbundanceRoleLostByReforming>Removing {0} will end this role for: {1}.</RR_AbundanceRoleLostByReforming>
+  <RR_AbundancePriorClaimInvalid>Another active food ritual has an unavailable or changed supply for {0}. Finish or cancel that ritual before planning another.</RR_AbundancePriorClaimInvalid>
+</LanguageData>

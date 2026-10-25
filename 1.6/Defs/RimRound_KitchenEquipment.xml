@@ -14,8 +14,8 @@
   <ThingDef ParentName="ApparelBase">
     <defName>RR_KitchenWorkSmock</defName>
     <label>kitchen work smock</label>
-    <description>A heavy, washable work smock with organized pockets. Cooking speed +15% while worn. Its mass and skin layer make it a deliberate work outfit.</description>
-    <thingCategories><li>Apparel</li></thingCategories>
+    <description>A heavy, washable smock with pockets for a cook who has a lot of mouths to feed.\n\nIncreases cooking speed while worn. The bonus improves with quality: +15% at Normal and +30% at Legendary. Worn on the skin layer.\n\nCraft at either tailoring bench after researching Kitchen workwear in the RimRound research tab.</description>
+    <thingCategories><li>ApparelMisc</li></thingCategories>
     <stuffCategories><li>Fabric</li><li>Leathery</li></stuffCategories>
     <costStuffCount>80</costStuffCount>
     <graphicData><texPath>Things/Item/Equipment/NovaTech/NOVATECH_JUMPSUIT</texPath><graphicClass>Graphic_Single</graphicClass></graphicData>

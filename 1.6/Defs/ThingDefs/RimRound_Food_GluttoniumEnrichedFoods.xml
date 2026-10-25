@@ -25,7 +25,7 @@
   <ThingDef ParentName="RR_GluttoniumProductsBase">
     <defName>RR_CrammedCroissant</defName>
     <label>crammed croissant</label>
-    <description>Contains 4.5 nutrition in 0.6 stomach volume before pawn modifiers. Energy is absorbed as this food digests. Whole items are consumed; any portion that cannot be used is wasted.</description>
+    <description>A flaky pastry with a great deal more fattening potential than its innocent appearance suggests.\n\nBase: 4.5 nutrition / 0.6 L, before pawn modifiers.\nEnergy is absorbed during digestion.\nConsumed whole; unusable food is wasted.</description>
     <graphicData>
       <texPath>Things/Item/GluttoniumFood/CrammedCroissant</texPath>
     </graphicData>
@@ -47,7 +47,7 @@
   <ThingDef ParentName="RR_GluttoniumProductsBase">
     <defName>RR_MechaniteMuffin</defName>
     <label>mechanite muffin</label>
-    <description>Contains 3 nutrition in 0.4 stomach volume before pawn modifiers. Energy is absorbed as this food digests. Whole items are consumed; any portion that cannot be used is wasted.</description>
+    <description>A soft little muffin with an appetite for making its eater considerably less little.\n\nBase: 3 nutrition / 0.4 L, before pawn modifiers.\nEnergy is absorbed during digestion.\nConsumed whole; unusable food is wasted.</description>
     <graphicData>
       <texPath>Things/Item/GluttoniumFood/MechaniteMuffin</texPath>
     </graphicData>
@@ -69,7 +69,7 @@
   <ThingDef ParentName="RR_GluttoniumProductsBase">
     <defName>RR_PackedPizza</defName>
     <label>packed pizza</label>
-    <description>Contains 9 nutrition in 0.9 stomach volume before pawn modifiers. Energy is absorbed as this food digests. Whole items are consumed; any portion that cannot be used is wasted.</description>
+    <description>An entire feast's worth of excess packed into a deceptively manageable pizza.\n\nBase: 9 nutrition / 0.9 L, before pawn modifiers.\nEnergy is absorbed during digestion.\nConsumed whole; unusable food is wasted.</description>
     <graphicData>
       <texPath>Things/Item/GluttoniumFood/PackedPizza</texPath>
     </graphicData>
@@ -91,7 +91,7 @@
   <ThingDef ParentName="RR_GluttoniumProductsBase">
     <defName>RR_LaBombe</defName>
     <label>la bombe</label>
-    <description>Fantasy only. Contains 60 nutrition in 0.9 stomach volume before pawn modifiers. Releases useful energy over 24 game hours in Fantasy or 72 game hours in Balanced where permitted. Whole items are consumed; any portion that cannot be used is wasted.</description>
+    <description>A food bomb for ambitious gluttons. The explosion is strictly a matter for the waistline.\n\nFantasy only.\nBase: 60 nutrition / 0.9 L, before pawn modifiers.\nEnergy release: 24 game hours in Fantasy; 72 in Balanced where permitted.\nConsumed whole; unusable food is wasted.</description>
     <graphicData>
       <texPath>Things/Item/GluttoniumFood/LaBombe</texPath>
     </graphicData>
@@ -114,7 +114,7 @@
   <ThingDef ParentName="RR_GluttoniumProductsBase">
     <defName>RR_GluttoniumMeal</defName>
     <label>gluttonium meal</label>
-    <description>Fantasy only. Contains 40 nutrition in 0.9 stomach volume before pawn modifiers. Releases useful energy over 24 game hours in Fantasy or 72 game hours in Balanced where permitted. Whole items are consumed; any portion that cannot be used is wasted.</description>
+    <description>Pure gluttonium made edible. An extravagant answer to the question of how fattening one meal can be.\n\nFantasy only.\nBase: 40 nutrition / 0.9 L, before pawn modifiers.\nEnergy release: 24 game hours in Fantasy; 72 in Balanced where permitted.\nConsumed whole; unusable food is wasted.</description>
     <graphicData>
       <texPath>Things/Item/GluttoniumFood/GluttoniumMeal</texPath>
     </graphicData>
@@ -134,7 +134,7 @@
   <ThingDef ParentName="RR_GluttoniumProductsBase">
     <defName>RR_GluttoniumMealLarge</defName>
     <label>potent gluttonium meal</label>
-    <description>Fantasy only. Contains 80 nutrition in 0.9 stomach volume before pawn modifiers. Releases useful energy over 24 game hours in Fantasy or 72 game hours in Balanced where permitted. Whole items are consumed; any portion that cannot be used is wasted.</description>
+    <description>A richer serving of pure gluttonium, for appetites that regard the ordinary version as a starting point.\n\nFantasy only.\nBase: 80 nutrition / 0.9 L, before pawn modifiers.\nEnergy release: 24 game hours in Fantasy; 72 in Balanced where permitted.\nConsumed whole; unusable food is wasted.</description>
     <graphicData>
       <texPath>Things/Item/GluttoniumFood/GluttoniumMeal</texPath>
     </graphicData>
@@ -154,7 +154,7 @@
   <ThingDef ParentName="RR_GluttoniumProductsBase">
     <defName>RR_GluttoniumMealHuge</defName>
     <label>extreme gluttonium meal</label>
-    <description>Fantasy only. Contains 160 nutrition in 0.9 stomach volume before pawn modifiers. Releases useful energy over 24 game hours in Fantasy or 72 game hours in Balanced where permitted. Whole items are consumed; any portion that cannot be used is wasted.</description>
+    <description>A formidable concentration of gluttonium in a meal that looks far less excessive than it is.\n\nFantasy only.\nBase: 160 nutrition / 0.9 L, before pawn modifiers.\nEnergy release: 24 game hours in Fantasy; 72 in Balanced where permitted.\nConsumed whole; unusable food is wasted.</description>
     <graphicData>
       <texPath>Things/Item/GluttoniumFood/GluttoniumMeal</texPath>
     </graphicData>
@@ -174,7 +174,7 @@
   <ThingDef ParentName="RR_GluttoniumProductsBase">
     <defName>RR_GluttoniumMealEnormous</defName>
     <label>enormous gluttonium meal</label>
-    <description>Fantasy only. Contains 120 nutrition in 0.9 stomach volume before pawn modifiers. Releases useful energy over 24 game hours in Fantasy or 72 game hours in Balanced where permitted. Whole items are consumed; any portion that cannot be used is wasted.</description>
+    <description>A concentrated gluttonium meal with very little interest in moderation.\n\nFantasy only.\nBase: 120 nutrition / 0.9 L, before pawn modifiers.\nEnergy release: 24 game hours in Fantasy; 72 in Balanced where permitted.\nConsumed whole; unusable food is wasted.</description>
     <graphicData>
       <texPath>Things/Item/GluttoniumFood/GluttoniumMeal</texPath>
     </graphicData>
@@ -194,7 +194,7 @@
   <ThingDef ParentName="RR_GluttoniumProductsBase">
     <defName>RR_GluttoniumMealMassive</defName>
     <label>massive gluttonium meal</label>
-    <description>Fantasy only. Contains 180 nutrition in 0.9 stomach volume before pawn modifiers. Releases useful energy over 24 game hours in Fantasy or 72 game hours in Balanced where permitted. Whole items are consumed; any portion that cannot be used is wasted.</description>
+    <description>An extravagantly fattening gluttonium meal. The plate is doing a poor job of conveying the scale of the decision.\n\nFantasy only.\nBase: 180 nutrition / 0.9 L, before pawn modifiers.\nEnergy release: 24 game hours in Fantasy; 72 in Balanced where permitted.\nConsumed whole; unusable food is wasted.</description>
     <graphicData>
       <texPath>Things/Item/GluttoniumFood/GluttoniumMeal</texPath>
     </graphicData>
@@ -214,7 +214,7 @@
   <ThingDef ParentName="RR_GluttoniumProductsBase">
     <defName>RR_GluttoniumMealColossal</defName>
     <label>colossal gluttonium meal</label>
-    <description>Fantasy only. Contains 300 nutrition in 0.9 stomach volume before pawn modifiers. Releases useful energy over 24 game hours in Fantasy or 72 game hours in Balanced where permitted. Whole items are consumed; any portion that cannot be used is wasted.</description>
+    <description>A colossal helping of gluttonium energy packed into an ordinary meal's worth of space.\n\nFantasy only.\nBase: 300 nutrition / 0.9 L, before pawn modifiers.\nEnergy release: 24 game hours in Fantasy; 72 in Balanced where permitted.\nConsumed whole; unusable food is wasted.</description>
     <graphicData>
       <texPath>Things/Item/GluttoniumFood/GluttoniumMealColossal</texPath>
     </graphicData>
@@ -235,7 +235,7 @@
   <ThingDef ParentName="RR_GluttoniumProductsBase">
     <defName>RR_AlphaBall</defName>
     <label>alpha ball</label>
-    <description>Fantasy only. Contains 120 nutrition in 0.9 stomach volume before pawn modifiers. Releases useful energy over 24 game hours in Fantasy or 72 game hours in Balanced where permitted. Whole items are consumed; any portion that cannot be used is wasted.</description>
+    <description>A compact sphere of gluttonium for gluttons who have outgrown the usual menu.\n\nFantasy only.\nBase: 120 nutrition / 0.9 L, before pawn modifiers.\nEnergy release: 24 game hours in Fantasy; 72 in Balanced where permitted.\nConsumed whole; unusable food is wasted.</description>
     <graphicData>
       <texPath>Things/Item/GluttoniumFood/AlphaBall</texPath>
     </graphicData>
@@ -256,7 +256,7 @@
   <ThingDef ParentName="RR_GluttoniumProductsBase">
     <defName>RR_OmegaBall</defName>
     <label>omega ball</label>
-    <description>Fantasy only. Contains 240 nutrition in 0.9 stomach volume before pawn modifiers. Releases useful energy over 24 game hours in Fantasy or 72 game hours in Balanced where permitted. Whole items are consumed; any portion that cannot be used is wasted.</description>
+    <description>The Alpha ball was apparently not excessive enough. Culinary escalation has reached its logical conclusion.\n\nFantasy only.\nBase: 240 nutrition / 0.9 L, before pawn modifiers.\nEnergy release: 24 game hours in Fantasy; 72 in Balanced where permitted.\nConsumed whole; unusable food is wasted.</description>
     <graphicData>
       <texPath>Things/Item/GluttoniumFood/OmegaBall</texPath>
     </graphicData>

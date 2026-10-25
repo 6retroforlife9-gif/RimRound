@@ -32,7 +32,7 @@
   <ThingDef ParentName="ResourceBase">
     <defName>RR_Gluttonium</defName>
     <label>gluttonium</label>
-    <description>A specialist industrial reagent for named metabolic recipes and devices. Not edible raw and not a general crafting material. Balanced manufacturing consumes steel and chemfuel; power-only replication requires Fantasy mode.</description>
+    <description>The colony's answer to insufficiently fattening food: a reagent for specialised metabolic recipes and machines.\n\nInedible raw; not a general crafting material. Balanced production consumes steel and chemfuel. Replication from power alone requires Fantasy.</description>
     <graphicData>
       <texPath>Things/Item/Resource/Gluttonium</texPath>
       <graphicClass>Graphic_StackCount</graphicClass>

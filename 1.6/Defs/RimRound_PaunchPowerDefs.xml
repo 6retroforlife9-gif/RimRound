@@ -2,7 +2,7 @@
   <ThingDef ParentName="BuildingBase" Name="BaseFlabGenerator">
     <defName>RR_PaunchGenerator_I</defName>
     <label>flab generator</label>
-    <description>Legacy Paunch Power: a pawn-bound generator with a constant 1000 W output while its originating pawn remains alive, spawned, transformed and in bed on this map. It does not consume metabolic energy. Unbound historical generators remain inactive until the eligible pawn toggles the transformation off and on.</description>
+    <description>Legacy Paunch Power: a living source of 1000 W.\n\nWorks while its pawn is alive, transformed and in bed on this map. It does not burn stored calories.\nIf an old generator has lost its pawn link, turn that pawn's transformation off and on.</description>
     <thingClass>RimRound.Things.Building_PaunchGenerator</thingClass>
     <drawerType>MapMeshAndRealTime</drawerType>
     <graphicData>
@@ -44,7 +44,7 @@
   
   <ThingDef ParentName="BaseFlabGenerator">
 	<defName>RR_PaunchGenerator_II</defName>
-    <description>Legacy Paunch Power: a pawn-bound generator with a constant 2000 W output while its originating pawn remains alive, spawned, transformed and in bed on this map. It does not consume metabolic energy. Unbound historical generators remain inactive until the eligible pawn toggles the transformation off and on.</description>
+    <description>Legacy Paunch Power: a living source of 2000 W.\n\nWorks while its pawn is alive, transformed and in bed on this map. It does not burn stored calories.\nIf an old generator has lost its pawn link, turn that pawn's transformation off and on.</description>
     <comps Inherit="False">
       <li Class="CompProperties_Power">
         <compClass>RimRound.Things.CompPowerPlant_PaunchGenerator</compClass>

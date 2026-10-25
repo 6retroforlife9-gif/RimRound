@@ -2,34 +2,36 @@
 <Defs>
   <PreceptDef ParentName="FestivalBase">
     <defName>RR_CommunalFeast</defName>
-    <label>communal feast</label>
-    <description>Gather around a table to share real prepared meals. Participation and outcome depend on who actually eats.</description>
+    <label>Abundant Table</label>
+    <iconPath>UI/RimRoundIdeology/RitualFeast</iconPath>
+    <description>Share prepared meals at one or more dining tables. Participants bring enough food for the whole sitting and set it out on the tables, with overflow nearby. Diners eat, share and feed from this spread until very full. An attendant can serve a host in their designated Embodied Abundance ritual bed. Guests already physically full can attend without eating. Only real intake earns meal credit.</description>
     <ritualPatternBase>RR_CommunalFeast</ritualPatternBase>
     <allowDuplicates>false</allowDuplicates>
     <allowOptionalRitualObligations>true</allowOptionalRitualObligations>
     <canGenerateAsSpecialPrecept>true</canGenerateAsSpecialPrecept>
-    <requiredMemes><li>RR_FoodSupremacy</li></requiredMemes>
-    <associatedMemes><li>RR_FoodSupremacy</li></associatedMemes>
+    <associatedMemes><li>RR_EmbodiedAbundance</li></associatedMemes>
   </PreceptDef>
 
   <RitualPatternDef ParentName="CelebrationPartyChat">
     <defName>RR_CommunalFeast</defName>
+    <iconPathOverride>UI/RimRoundIdeology/RitualFeast</iconPathOverride>
     <patternGroupTag />
     <tags Inherit="False" />
     <ritualExpectedDesc>Every year on {DATE}, {MEMBERS} can gather around a table to share a meal.</ritualExpectedDesc>
     <ritualBehavior>RR_CommunalFeastBehavior</ritualBehavior>
+    <ritualObligationTargetFilter>RR_AbundanceFoodTarget</ritualObligationTargetFilter>
     <ritualOutcomeEffect>RR_CommunalFeastOutcome</ritualOutcomeEffect>
   </RitualPatternDef>
 
   <DutyDef>
     <defName>RR_CommunalFeastDuty</defName>
     <label>eat at communal feast</label>
-    <hook>MediumPriority</hook>
+    <hook>HighPriority</hook>
     <thinkNode Class="ThinkNode_Priority">
       <subNodes>
+        <li Class="RimRound.Ideology.JobGiver_AbundanceMeal" />
         <li Class="ThinkNode_ConditionalInGatheringArea">
           <subNodes>
-            <li Class="RimRound.Ideology.JobGiver_CommunalFeastMeal" />
             <li Class="JobGiver_StandAndBeSociallyActive"><ticksRange>200~400</ticksRange></li>
             <li Class="JobGiver_WanderInGatheringArea"><ticksBetweenWandersRange>50~200</ticksBetweenWandersRange></li>
           </subNodes>
@@ -42,16 +44,19 @@
   <RitualBehaviorDef>
     <defName>RR_CommunalFeastBehavior</defName>
     <workerClass>RimRound.Ideology.RitualBehaviorWorker_CommunalFeast</workerClass>
-    <roles />
+    <roles>
+      <li Class="RimRound.Ideology.RitualRole_AbundanceHost"><label>bedside host</label><id>RR_host</id><maxCount>1</maxCount><allowDowned>true</allowDowned><allowKeepLayingDown>true</allowKeepLayingDown><endJobOnRitualCleanup>false</endJobOnRitualCleanup><allowChild>false</allowChild></li>
+      <li Class="RimRound.Ideology.RitualRole_AbundanceAttendant"><label>attendant</label><id>RR_attendant</id><maxCount>1</maxCount><allowChild>false</allowChild></li>
+    </roles>
     <durationTicks>5000</durationTicks>
     <spectatorsLabel>Participants</spectatorsLabel>
     <spectatorGerund>participate</spectatorGerund>
     <stages>
-      <li>
+      <li Class="RimRound.Ideology.RitualStage_AbundanceMeals">
         <defaultDuty>RR_CommunalFeastDuty</defaultDuty>
         <essential>true</essential>
         <endTriggers>
-          <li Class="StageEndTrigger_DurationPercentage"><percentage>1</percentage></li>
+          <li Class="RimRound.Ideology.StageEndTrigger_AbundanceMeals" />
         </endTriggers>
       </li>
     </stages>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <PreceptDef>
+    <defName>RR_RitualBedBuilding</defName>
+    <label>ritual bed</label>
+    <description>A large RimRound single bed can serve as a ritual focus for its current leader, moral guide or permanent Feedee owner. Build or use an existing bed, assign its owner normally, then choose the matching ritual focus on the bed.\n\nThe bed keeps its normal bedroom use. A table and clear bedside access are needed for food rituals; guest seats and temporary places are checked for the selected participants. Ordinary table feasts do not require this bed or a role holder.</description>
+    <issue>IdeoBuilding</issue>
+    <preceptClass>RimRound.Ideology.Precept_RbaRitualBed</preceptClass>
+    <workerClass>RimRound.Ideology.PreceptWorker_RbaRitualBed</workerClass>
+    <impact>Medium</impact>
+    <buildingDefChances><NotRegalBed>1</NotRegalBed></buildingDefChances>
+    <allowDuplicates>false</allowDuplicates>
+    <canUseAlreadyUsedThingDef>true</canUseAlreadyUsedThingDef>
+    <countsTowardsPreceptLimit>false</countsTowardsPreceptLimit>
+    <canGenerateAsSpecialPrecept>false</canGenerateAsSpecialPrecept>
+    <canRemoveInUI>false</canRemoveInUI>
+    <visibleOnAddFloatMenu>false</visibleOnAddFloatMenu>
+    <ignoreNameUniqueness>true</ignoreNameUniqueness>
+  </PreceptDef>
+</Defs>

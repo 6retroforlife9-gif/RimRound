@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <!-- Native taste thought: +12 for one day, normal replacement and Ascetic rules. -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="Donut" or defName="FatBurger"]</xpath>
+    <value>
+      <ingestible>
+        <tasteThought>AteLavishMeal</tasteThought>
+      </ingestible>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="RR_CrammedCroissant" or defName="RR_MechaniteMuffin" or defName="RR_PackedPizza" or defName="RR_LaBombe"]/ingestible</xpath>
+    <value>
+      <tasteThought>AteLavishMeal</tasteThought>
+    </value>
+  </Operation>
+</Patch>

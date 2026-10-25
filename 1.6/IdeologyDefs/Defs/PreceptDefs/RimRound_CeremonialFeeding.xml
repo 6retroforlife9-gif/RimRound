@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <RitualObligationTargetFilterDef><defName>RR_AbundanceFoodTarget</defName><workerClass>RimRound.Ideology.RitualTarget_AbundanceFood</workerClass></RitualObligationTargetFilterDef>
+  <JobDef><defName>RR_AbundanceMeal</defName><driverClass>RimRound.FeedOther.JobDriver_AbundanceMeal</driverClass><reportString>preparing and serving a ritual meal.</reportString><casualInterruptible>false</casualInterruptible></JobDef>
+  <PreceptDef ParentName="FestivalBase">
+    <defName>RR_CeremonialFeeding</defName><label>ceremonial feeding</label>
+    <description>Honour the leader, moral guide or a Feedee in their own designated large single bed. An attendant serves real prepared food, up to slightly overfull. A successful ceremony grants faster digestion for one day; a Feeder improves service and quality. Existing food restrictions remain in effect.</description>
+    <ritualPatternBase>RR_CeremonialFeeding</ritualPatternBase><allowDuplicates>false</allowDuplicates>
+    <allowOptionalRitualObligations>true</allowOptionalRitualObligations><canGenerateAsSpecialPrecept>true</canGenerateAsSpecialPrecept>
+    <requiredMemes><li>RR_EmbodiedAbundance</li></requiredMemes><associatedMemes><li>RR_EmbodiedAbundance</li></associatedMemes>
+  </PreceptDef>
+  <RitualPatternDef ParentName="CelebrationPartyChat">
+    <defName>RR_CeremonialFeeding</defName><patternGroupTag/><tags Inherit="False"/>
+    <ritualExpectedDesc>Every year on {DATE}, {MEMBERS} can honour abundance with ceremonial feeding.</ritualExpectedDesc>
+    <ritualObligationTargetFilter>RR_AbundanceFoodTarget</ritualObligationTargetFilter>
+    <ritualBehavior>RR_CeremonialFeedingBehavior</ritualBehavior><ritualOutcomeEffect>RR_CeremonialFeedingOutcome</ritualOutcomeEffect>
+  </RitualPatternDef>
+  <RitualBehaviorDef>
+    <defName>RR_CeremonialFeedingBehavior</defName><workerClass>RimRound.Ideology.RitualBehaviorWorker_CommunalFeast</workerClass>
+    <durationTicks>5000</durationTicks><spectatorsLabel>Guests</spectatorsLabel><spectatorGerund>attend</spectatorGerund>
+    <roles>
+      <li Class="RimRound.Ideology.RitualRole_AbundanceHost"><label>honoured recipient</label><id>RR_host</id><maxCount>1</maxCount><required>true</required><allowDowned>true</allowDowned><allowKeepLayingDown>true</allowKeepLayingDown><endJobOnRitualCleanup>false</endJobOnRitualCleanup><allowChild>false</allowChild></li>
+      <li Class="RimRound.Ideology.RitualRole_AbundanceAttendant"><label>attendant</label><id>RR_attendant</id><maxCount>1</maxCount><required>true</required><allowChild>false</allowChild></li>
+    </roles>
+    <stages><li Class="RimRound.Ideology.RitualStage_AbundanceMeals"><defaultDuty>RR_CommunalFeastDuty</defaultDuty><essential>true</essential><endTriggers><li Class="RimRound.Ideology.StageEndTrigger_AbundanceMeals" /></endTriggers></li></stages>
+  </RitualBehaviorDef>
+  <RitualOutcomeEffectDef>
+    <defName>RR_CeremonialFeedingOutcome</defName><workerClass>RimRound.Ideology.RitualOutcomeEffectWorker_CeremonialFeeding</workerClass>
+    <description>Actual feeding, the attendant's expertise and the room affect quality. Good and exceptional ceremonies grant the recipient 25% or 50% faster digestion for one day. The benefit never stacks.</description>
+    <comps>
+      <li Class="RimRound.Ideology.RitualOutcomeComp_CommunalMeals"><label>recipient fed</label><curve><points><li>(0, -0.5)</li><li>(1, 0.2)</li></points></curve></li>
+      <li Class="RimRound.Ideology.RitualOutcomeComp_AbundanceService"><label>Feeder service</label><curve><points><li>(0, 0)</li><li>(1, 0.1)</li></points></curve></li>
+      <li Class="RitualOutcomeComp_RoomStat"><label>room impressiveness</label><statDef>Impressiveness</statDef><curve><points><li>(0, 0)</li><li>(100, 0.1)</li></points></curve></li>
+    </comps>
+    <outcomeChances>
+      <li><label>Failed</label><chance>0.1</chance><memory>RR_CommunalFeastFailed</memory><description>The {0} failed to honour abundance.</description><positivityIndex>-1</positivityIndex></li>
+      <li><label>Ordinary</label><chance>0.2</chance><memory>RR_CommunalFeastQuiet</memory><description>The {0} was an ordinary shared meal.</description><positivityIndex>0</positivityIndex></li>
+      <li><label>Good</label><chance>0.5</chance><memory>RR_CommunalFeastWarm</memory><description>The {0} honoured abundance with attentive service.</description><positivityIndex>1</positivityIndex></li>
+      <li><label>Exceptional</label><chance>0.2</chance><memory>RR_CommunalFeastMemorable</memory><description>The {0} was an exceptional celebration of abundance.</description><positivityIndex>2</positivityIndex></li>
+    </outcomeChances>
+  </RitualOutcomeEffectDef>
+  <HediffDef>
+    <defName>RR_AbundantDigestion</defName><label>abundant digestion</label><description>Recent ceremonial feeding speeds the digestion of ordinary food. It does not create nutrition or accelerate timed weight-gain products.</description>
+    <hediffClass>HediffWithComps</hediffClass><isBad>false</isBad><initialSeverity>0.25</initialSeverity><maxSeverity>0.5</maxSeverity>
+    <comps><li Class="HediffCompProperties_Disappears"><disappearsAfterTicks>60000</disappearsAfterTicks></li></comps>
+    <stages><li><label>25% faster digestion</label></li><li><minSeverity>0.5</minSeverity><label>50% faster digestion</label></li></stages>
+  </HediffDef>
+</Defs>

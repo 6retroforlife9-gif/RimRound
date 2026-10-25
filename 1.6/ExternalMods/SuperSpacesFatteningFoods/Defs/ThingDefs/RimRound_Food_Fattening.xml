@@ -3,7 +3,7 @@
   <ThingDef ParentName="RR_SimpleMealBase">
     <defName>FatBurger</defName>
     <label>Lard Filled Burger</label>
-    <description>Contains 6 nutrition in 0.6 stomach volume before pawn modifiers. Energy is absorbed as this food digests. Whole items are consumed; any portion that cannot be used is wasted.</description>
+    <description>A rich, greasy burger that takes its name as a promise.\n\nBase: 6 nutrition / 0.6 L, before pawn modifiers.\nEnergy is absorbed during digestion.\nConsumed whole; unusable food is wasted.</description>
     <graphicData>
       <texPath>Things/Food/Burger</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -23,7 +23,7 @@
   <ThingDef ParentName="RR_SimpleMealBase">
     <defName>Donut</defName>
     <label>Delicious Donut</label>
-    <description>Contains 1.8 nutrition in 0.3 stomach volume before pawn modifiers. Energy is absorbed as this food digests. Whole items are consumed; any portion that cannot be used is wasted.</description>
+    <description>A little ring of sweet dough with grand ambitions for your waistline.\n\nBase: 1.8 nutrition / 0.3 L, before pawn modifiers.\nEnergy is absorbed during digestion.\nConsumed whole; unusable food is wasted.</description>
     <graphicData>
       <texPath>Things/Food/Donut</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -43,7 +43,7 @@
   <ThingDef ParentName="RR_SimpleMealBase">
     <defName>fatpill</defName>
     <label>Test Fat Pill</label>
-    <description>Contains 12 nutrition in 0.05 stomach volume before pawn modifiers. Releases useful energy over 24 game hours in Fantasy or 72 game hours in Balanced where permitted. One complete dose requires explicit drug or medical authorization and enough stomach room. Chemical effects remain unchanged.</description>
+    <description>A tiny pill with much larger plans for its swallower. Its energy is released gradually.\n\nBase: 12 nutrition / 0.05 L, before pawn modifiers.\nEnergy release: 24 game hours in Fantasy; 72 in Balanced where permitted.\nRequires drug or medical authorization and room for a whole dose. Drug effects apply separately.</description>
     <graphicData>
       <texPath>Things/Food/FatPills</texPath>
       <graphicClass>Graphic_Single</graphicClass>

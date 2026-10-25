@@ -18,7 +18,7 @@
 		<comps>
 		  <li Class="CompProperties_FoodPoisonable" />
 		  <li Class="CompProperties_Rottable">
-			<daysToRotStart>0.75</daysToRotStart>
+			<daysToRotStart>4</daysToRotStart>
 			<rotDestroys>true</rotDestroys>
 		  </li>
 		  <li Class="RimRound.Comps.CompProperties_FoodItems_NutritionDensity">

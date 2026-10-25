@@ -61,7 +61,7 @@
     <defName>RR_Research_GlutoniumEnrichedFoods</defName>
     <label>glutonium enriched foods</label>
     <tab>RimRoundTech</tab>
-    <description>Prepare enriched foods from ordinary food and calorite milk or meat. Ingredient energy, work, storage and whole-item waste all matter.</description>
+    <description>Cook rich, fattening foods with ordinary ingredients and calorite milk or meat. Their energy still comes from ingredients, and oversized meals can waste food.</description>
     <baseCost>3200</baseCost>
     <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
     <requiredResearchFacilities>
@@ -78,7 +78,7 @@
     <defName>RR_Research_GlutoniumMeals</defName>
     <label>glutonium meals</label>
     <tab>RimRoundTech</tab>
-    <description>Fantasy only: manufacture exceptionally concentrated pure-gluttonium meals. Individual food permissions and useful-intake limits still apply.</description>
+    <description>Fantasy only: turn gluttonium into exceptionally fattening meals. Food restrictions and limits on usable intake still apply.</description>
     <baseCost>4000</baseCost>
     <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
     <requiredResearchFacilities>
@@ -95,7 +95,7 @@
     <defName>RR_Research_ProjectAlpha</defName>
     <label>project α</label>
     <tab>RimRoundTech</tab>
-    <description>Fantasy only: compress 30 gluttonium into an extremely energy-dense Alpha ball. Individual food permissions and useful-intake limits still apply.</description>
+    <description>Fantasy only: compress 30 gluttonium into an Alpha ball. Food restrictions and limits on usable intake still apply.</description>
     <baseCost>6000</baseCost>
     <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
     <requiredResearchFacilities>
@@ -112,7 +112,7 @@
     <defName>RR_Research_ProjectOmega</defName>
     <label>project Ω</label>
     <tab>RimRoundTech</tab>
-    <description>Fantasy only: manufacture an Omega ball independently from 100 gluttonium. Alpha research is a prerequisite, but the recipe does not consume an Alpha ball.</description>
+    <description>Fantasy only: make an Omega ball from 60 gluttonium. Requires Alpha research, but does not consume an Alpha ball.</description>
     <baseCost>8000</baseCost>
     <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
     <requiredResearchFacilities>

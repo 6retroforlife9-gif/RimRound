@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <!-- One buildable type and label in the card, info, material and build menus. -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="NotRegalBed"]/label</xpath>
+    <value><label>large RimRound single bed</label></value>
+  </Operation>
+  <!-- Native Precept_ThingStyle entries require this comp on their type.
+       It carries optional style data only; the card is not a Precept_Building
+       and cannot become the bed's construction source precept. -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[defName="NotRegalBed"]/comps/li[@Class="CompProperties_Styleable" or compClass="CompStyleable"]</xpath>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>Defs/ThingDef[defName="NotRegalBed"]/comps</xpath>
+      <value><li Class="CompProperties_Styleable" /></value>
+    </nomatch>
+  </Operation>
+</Patch>

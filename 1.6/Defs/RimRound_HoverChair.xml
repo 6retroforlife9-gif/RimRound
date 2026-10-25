@@ -3,7 +3,7 @@
   <ThingDef ParentName="ArmorSmithableBase" Name="RRHoverChair">
     <defName>RR_HoverChair</defName>
     <label>hoverchair</label>
-    <description>A durable 25 kg mobility aid with 300 hit points. A helper can fit it at a bedside. Requires the ability to operate its controls; it does not overcome unconsciousness or pain shock. Both appearances share mechanics, with no batteries or hard body-weight limit.</description>
+    <description>A sturdy hoverchair for getting a heavy body moving again. A helper can fit it at the bedside.\n\n25 kg; 300 hit points. Both appearances work alike, need no batteries and have no body-weight limit.\nThe wearer must be able to operate the controls; unconsciousness and pain shock still prevent movement.</description>
     <useHitPoints>true</useHitPoints>
     <category>Item</category>
     <graphicData>
@@ -60,7 +60,7 @@
   <ThingDef ParentName="RRHoverChair">
     <defName>RR_HoverChairArm</defName>
     <label>hoverchair with arm rests</label>
-    <description>A durable 25 kg mobility aid with 300 hit points. A helper can fit it at a bedside. Requires the ability to operate its controls; it does not overcome unconsciousness or pain shock. Both appearances share mechanics, with no batteries or hard body-weight limit.</description>
+    <description>A sturdy hoverchair for getting a heavy body moving again. A helper can fit it at the bedside.\n\n25 kg; 300 hit points. Both appearances work alike, need no batteries and have no body-weight limit.\nThe wearer must be able to operate the controls; unconsciousness and pain shock still prevent movement.</description>
     <apparel>
       <wornGraphicPath>Things/Pawn/Humanlike/Apparel/Hoverchair/hoverchairArm</wornGraphicPath>
     </apparel>

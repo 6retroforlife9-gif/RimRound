@@ -3,7 +3,7 @@
   <ThingDef ParentName="BenchBase">
     <defName>RR_GluttoniumFabricator</defName>
     <label>gluttonium fabricator</label>
-    <description>Synthesize five gluttonium from 50 steel and 20 chemfuel per batch. Uses 1,200 W while powered, including idle time. Fantasy colonies can also choose a separate power-only replication bill.</description>
+    <description>An industrial fabricator for the colony's gluttonium supply.\n\nEach batch: 50 steel + 20 chemfuel → 5 gluttonium.\nDraws 1,200 W whenever powered, even while idle. Fantasy also offers a separate bill that uses only power and work.</description>
     <thingClass>Building_WorkTable</thingClass>
     <altitudeLayer>Building</altitudeLayer>
     <passability>PassThroughOnly</passability>

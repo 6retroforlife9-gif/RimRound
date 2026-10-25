@@ -31,7 +31,7 @@
   <AbilityDef ParentName="RR_BodyGuidanceBase">
     <defName>RR_EncourageLargerBody</defName>
     <label>encourage larger body</label>
-    <description>A moral guide encourages an adult colonist to prefer a larger body. Has three times the influence of an ordinary body discussion, using Social skill, rapport and the recipient's conviction. A receptive conversation shifts their preferred range; a breakthrough updates their wishes more strongly. The recipient may resist or become irritated. Both directions share a three-day cooldown and count toward ordinary discussion limits. Bedbound guides can receive a visitor.</description>
+    <description>Encourage an adult colonist to prefer a larger body. A moral guide has three times an ordinary discussion's influence, affected by Social skill, rapport and the recipient's conviction.\n\nReceptive talks shift preferences; breakthroughs have a stronger effect. The recipient may resist or become irritated.\nBoth directions share a three-day cooldown and normal discussion limits. Bedbound guides can receive visitors.</description>
     <iconPath>UI/DebugIcons/INCREASE_WEIGHT_OPINION</iconPath>
     <uiOrder>5</uiOrder>
     <comps>
@@ -42,7 +42,7 @@
   <AbilityDef ParentName="RR_BodyGuidanceBase">
     <defName>RR_EncourageSmallerBody</defName>
     <label>encourage smaller body</label>
-    <description>A moral guide encourages an adult colonist to prefer a smaller body. Has three times the influence of an ordinary body discussion, using Social skill, rapport and the recipient's conviction. A receptive conversation shifts their preferred range; a breakthrough updates their wishes more strongly. The recipient may resist or become irritated. Both directions share a three-day cooldown and count toward ordinary discussion limits. Bedbound guides can receive a visitor.</description>
+    <description>Encourage an adult colonist to prefer a smaller body. A moral guide has three times an ordinary discussion's influence, affected by Social skill, rapport and the recipient's conviction.\n\nReceptive talks shift preferences; breakthroughs have a stronger effect. The recipient may resist or become irritated.\nBoth directions share a three-day cooldown and normal discussion limits. Bedbound guides can receive visitors.</description>
     <iconPath>UI/DebugIcons/DECREASE_WEIGHT_OPINION</iconPath>
     <uiOrder>6</uiOrder>
     <comps>

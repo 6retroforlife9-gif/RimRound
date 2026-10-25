@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <JobDef><defName>RR_AbundanceGather</defName><driverClass>RimRound.FeedOther.JobDriver_AbundanceGather</driverClass><reportString>bringing food for the feast.</reportString><casualInterruptible>false</casualInterruptible></JobDef>
+  <JobDef><defName>RR_AbundanceSetTable</defName><driverClass>RimRound.FeedOther.JobDriver_AbundanceSetTable</driverClass><reportString>setting out food for the feast.</reportString><casualInterruptible>false</casualInterruptible></JobDef>
+  <JobDef><defName>RR_AbundanceSocial</defName><driverClass>RimRound.FeedOther.JobDriver_AbundanceSocial</driverClass><reportString>sharing a moment at the feast.</reportString><casualInterruptible>true</casualInterruptible></JobDef>
+  <InteractionDef>
+    <defName>RR_AbundanceHug</defName><label>feast hug</label><workerClass>RimRound.FeedOther.InteractionWorker_AbundanceAffection</workerClass>
+    <symbol>Things/Mote/SpeechSymbols/KindWords</symbol>
+    <logRulesInitiator><rulesStrings><li>r_logentry->[INITIATOR_nameDef] shared a warm hug with [RECIPIENT_nameDef] during the feast.</li></rulesStrings></logRulesInitiator>
+  </InteractionDef>
+  <InteractionDef>
+    <defName>RR_AbundanceBellyRub</defName><label>belly rub</label><workerClass>RimRound.FeedOther.InteractionWorker_AbundanceAffection</workerClass>
+    <symbol>Things/Mote/SpeechSymbols/KindWords</symbol>
+    <logRulesInitiator><rulesStrings><li>r_logentry->[INITIATOR_nameDef] gave [RECIPIENT_nameDef] a welcome belly rub as they enjoyed the feast.</li></rulesStrings></logRulesInitiator>
+  </InteractionDef>
+  <InteractionDef>
+    <defName>RR_AbundanceBellyGrab</defName><label>playful belly squeeze</label><workerClass>RimRound.FeedOther.InteractionWorker_AbundanceAffection</workerClass>
+    <symbol>Things/Mote/SpeechSymbols/KindWords</symbol>
+    <logRulesInitiator><rulesStrings><li>r_logentry->[INITIATOR_nameDef] playfully squeezed [RECIPIENT_nameDef]'s belly, sharing a happy moment at the feast.</li></rulesStrings></logRulesInitiator>
+  </InteractionDef>
+  <ThoughtDef>
+    <defName>RR_AbundanceCompany</defName><thoughtClass>Thought_Memory</thoughtClass><durationDays>1</durationDays><stackLimit>1</stackLimit>
+    <stages><li><label>affectionate company</label><description>I enjoyed some affection and good company at the feast.</description><baseMoodEffect>2</baseMoodEffect></li></stages>
+  </ThoughtDef>
+</Defs>

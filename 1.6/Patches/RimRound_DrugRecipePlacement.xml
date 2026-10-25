@@ -30,7 +30,7 @@
       </li>
       <li Class="PatchOperationReplace">
         <xpath>/Defs/RecipeDef[defName='CookCake']/description</xpath>
-        <value><description>Prepare a dose of addictive metabolic cake at a drug lab. This product has chemical effects and requires explicit drug authorization.</description></value>
+        <value><description>Prepare a dose of addictive Cannot-Stop Cake at a drug lab. Its use requires drug authorization.</description></value>
       </li>
       <li Class="PatchOperationReplace">
         <xpath>/Defs/RecipeDef[defName='CookCake']/jobString</xpath>

@@ -17,7 +17,7 @@
   <RecipeDef ParentName="RR_SimpleMealRecipeBase">
     <defName>CookMealSimpleLarge</defName>
     <label>cook a large simple meal</label>
-    <description>Produces 1 supported portion(s), 1.8 nutrition in total. Ingredients and work scale with the output; legacy bills remain usable.</description>
+    <description>Cook 1 portion (1.8 nutrition total). Ingredient and work costs scale with the output. Existing bills still work.</description>
     <jobString>Cooking large simple meal.</jobString>
     <ingredients>
       <li>
@@ -37,7 +37,7 @@
   <RecipeDef ParentName="RR_SimpleMealRecipeBase">
     <defName>CookMealSimpleHuge</defName>
     <label>cook a feast simple meal</label>
-    <description>Produces 1 supported portion(s), 3.6 nutrition in total. Ingredients and work scale with the output; legacy bills remain usable.</description>
+    <description>Cook 1 portion (3.6 nutrition total). Ingredient and work costs scale with the output. Existing bills still work.</description>
     <jobString>Cooking huge simple meal.</jobString>
     <ingredients>
       <li>
@@ -57,7 +57,7 @@
   <RecipeDef ParentName="RR_SimpleMealRecipeBase">
     <defName>CookMealSimpleEnormous</defName>
     <label>legacy bill: cook a feast simple meal</label>
-    <description>Produces 1 supported portion(s), 3.6 nutrition in total. Ingredients and work scale with the output; legacy bills remain usable.</description>
+    <description>Cook 1 portion (3.6 nutrition total). Ingredient and work costs scale with the output. Existing bills still work.</description>
     <jobString>Cooking enormous simple meal.</jobString>
     <ingredients>
       <li>
@@ -78,7 +78,7 @@
   <RecipeDef ParentName="RR_SimpleMealRecipeBase">
     <defName>CookMealSimpleMassive</defName>
     <label>legacy bill: cook 2 feast simple meals</label>
-    <description>Produces 2 supported portion(s), 7.2 nutrition in total. Ingredients and work scale with the output; legacy bills remain usable.</description>
+    <description>Cook 2 portions (7.2 nutrition total). Ingredient and work costs scale with the output. Existing bills still work.</description>
     <jobString>Cooking massive simple meal.</jobString>
     <ingredients>
       <li>
@@ -99,7 +99,7 @@
   <RecipeDef ParentName="RR_SimpleMealRecipeBase">
     <defName>CookMealSimpleColossal</defName>
     <label>legacy bill: cook 4 feast simple meals</label>
-    <description>Produces 4 supported portion(s), 14.4 nutrition in total. Ingredients and work scale with the output; legacy bills remain usable.</description>
+    <description>Cook 4 portions (14.4 nutrition total). Ingredient and work costs scale with the output. Existing bills still work.</description>
     <jobString>Cooking colossal simple meal.</jobString>
     <ingredients>
       <li>
@@ -128,7 +128,7 @@
   <RecipeDef ParentName="RR_FineMealRecipeBase">
     <defName>CookMealFineLarge</defName>
     <label>cook a large fine meal</label>
-    <description>Produces 1 supported portion(s), 1.8 nutrition in total. Ingredients and work scale with the output; legacy bills remain usable.</description>
+    <description>Cook 1 portion (1.8 nutrition total). Ingredient and work costs scale with the output. Existing bills still work.</description>
     <jobString>Cooking large fine meal.</jobString>
     <recipeUsers>
       <li>ElectricStove</li>
@@ -161,7 +161,7 @@
   <RecipeDef ParentName="RR_FineMealRecipeBase">
     <defName>CookMealFineLargeVeg</defName>
     <label>cook a large fine meal</label>
-    <description>Produces 1 supported portion(s), 1.8 nutrition in total. Ingredients and work scale with the output; legacy bills remain usable.</description>
+    <description>Cook 1 portion (1.8 nutrition total). Ingredient and work costs scale with the output. Existing bills still work.</description>
     <jobString>Cooking large fine meal.</jobString>
     <recipeUsers>
       <li>ElectricStove</li>
@@ -185,7 +185,7 @@
   <RecipeDef ParentName="RR_FineMealRecipeBase">
     <defName>CookMealFineLargeMeat</defName>
     <label>cook a large fine meal</label>
-    <description>Produces 1 supported portion(s), 1.8 nutrition in total. Ingredients and work scale with the output; legacy bills remain usable.</description>
+    <description>Cook 1 portion (1.8 nutrition total). Ingredient and work costs scale with the output. Existing bills still work.</description>
     <jobString>Cooking large fine meal.</jobString>
     <recipeUsers>
       <li>ElectricStove</li>
@@ -210,7 +210,7 @@
   <RecipeDef ParentName="RR_FineMealRecipeBase">
     <defName>CookMealFineHuge</defName>
     <label>cook a feast fine meal</label>
-    <description>Produces 1 supported portion(s), 3.6 nutrition in total. Ingredients and work scale with the output; legacy bills remain usable.</description>
+    <description>Cook 1 portion (3.6 nutrition total). Ingredient and work costs scale with the output. Existing bills still work.</description>
     <jobString>Cooking huge fine meal.</jobString>
     <ingredients>
       <li>
@@ -239,7 +239,7 @@
   <RecipeDef ParentName="RR_FineMealRecipeBase">
     <defName>CookMealFineHugeVeg</defName>
     <label>cook a feast fine meal</label>
-    <description>Produces 1 supported portion(s), 3.6 nutrition in total. Ingredients and work scale with the output; legacy bills remain usable.</description>
+    <description>Cook 1 portion (3.6 nutrition total). Ingredient and work costs scale with the output. Existing bills still work.</description>
     <jobString>Cooking huge fine meal.</jobString>
     <ingredients>
       <li>
@@ -259,7 +259,7 @@
   <RecipeDef ParentName="RR_FineMealRecipeBase">
     <defName>CookMealFineHugeMeat</defName>
     <label>cook a feast fine meal</label>
-    <description>Produces 1 supported portion(s), 3.6 nutrition in total. Ingredients and work scale with the output; legacy bills remain usable.</description>
+    <description>Cook 1 portion (3.6 nutrition total). Ingredient and work costs scale with the output. Existing bills still work.</description>
     <jobString>Cooking huge fine meal.</jobString>
     <ingredients>
       <li>
@@ -280,7 +280,7 @@
   <RecipeDef ParentName="RR_FineMealRecipeBase">
     <defName>CookMealFineEnormous</defName>
     <label>legacy bill: cook a feast fine meal</label>
-    <description>Produces 1 supported portion(s), 3.6 nutrition in total. Ingredients and work scale with the output; legacy bills remain usable.</description>
+    <description>Cook 1 portion (3.6 nutrition total). Ingredient and work costs scale with the output. Existing bills still work.</description>
     <jobString>Cooking enormous fine meal.</jobString>
     <ingredients>
       <li>
@@ -310,7 +310,7 @@
   <RecipeDef ParentName="RR_FineMealRecipeBase">
     <defName>CookMealFineEnormousVeg</defName>
     <label>legacy bill: cook a feast fine meal</label>
-    <description>Produces 1 supported portion(s), 3.6 nutrition in total. Ingredients and work scale with the output; legacy bills remain usable.</description>
+    <description>Cook 1 portion (3.6 nutrition total). Ingredient and work costs scale with the output. Existing bills still work.</description>
     <jobString>Cooking enormous fine meal.</jobString>
     <ingredients>
       <li>
@@ -331,7 +331,7 @@
   <RecipeDef ParentName="RR_FineMealRecipeBase">
     <defName>CookMealFineEnormousMeat</defName>
     <label>legacy bill: cook a feast fine meal</label>
-    <description>Produces 1 supported portion(s), 3.6 nutrition in total. Ingredients and work scale with the output; legacy bills remain usable.</description>
+    <description>Cook 1 portion (3.6 nutrition total). Ingredient and work costs scale with the output. Existing bills still work.</description>
     <jobString>Cooking enormous fine meal.</jobString>
     <ingredients>
       <li>
@@ -353,7 +353,7 @@
   <RecipeDef ParentName="RR_FineMealRecipeBase">
     <defName>CookMealFineMassive</defName>
     <label>legacy bill: cook 2 feast fine meals</label>
-    <description>Produces 2 supported portion(s), 7.2 nutrition in total. Ingredients and work scale with the output; legacy bills remain usable.</description>
+    <description>Cook 2 portions (7.2 nutrition total). Ingredient and work costs scale with the output. Existing bills still work.</description>
     <jobString>Cooking massive fine meal.</jobString>
     <ingredients>
       <li>
@@ -383,7 +383,7 @@
   <RecipeDef ParentName="RR_FineMealRecipeBase">
     <defName>CookMealFineMassiveVeg</defName>
     <label>legacy bill: cook 2 feast fine meals</label>
-    <description>Produces 2 supported portion(s), 7.2 nutrition in total. Ingredients and work scale with the output; legacy bills remain usable.</description>
+    <description>Cook 2 portions (7.2 nutrition total). Ingredient and work costs scale with the output. Existing bills still work.</description>
     <jobString>Cooking massive fine meal.</jobString>
     <ingredients>
       <li>
@@ -404,7 +404,7 @@
   <RecipeDef ParentName="RR_FineMealRecipeBase">
     <defName>CookMealFineMassiveMeat</defName>
     <label>legacy bill: cook 2 feast fine meals</label>
-    <description>Produces 2 supported portion(s), 7.2 nutrition in total. Ingredients and work scale with the output; legacy bills remain usable.</description>
+    <description>Cook 2 portions (7.2 nutrition total). Ingredient and work costs scale with the output. Existing bills still work.</description>
     <jobString>Cooking massive fine meal.</jobString>
     <ingredients>
       <li>
@@ -426,7 +426,7 @@
   <RecipeDef ParentName="RR_FineMealRecipeBase">
     <defName>CookMealFineColossal</defName>
     <label>legacy bill: cook 4 feast fine meals</label>
-    <description>Produces 4 supported portion(s), 14.4 nutrition in total. Ingredients and work scale with the output; legacy bills remain usable.</description>
+    <description>Cook 4 portions (14.4 nutrition total). Ingredient and work costs scale with the output. Existing bills still work.</description>
     <jobString>Cooking colossal fine meal.</jobString>
     <ingredients>
       <li>
@@ -457,7 +457,7 @@
   <RecipeDef ParentName="RR_FineMealRecipeBase">
     <defName>CookMealFineColossalVeg</defName>
     <label>legacy bill: cook 4 feast fine meals</label>
-    <description>Produces 4 supported portion(s), 14.4 nutrition in total. Ingredients and work scale with the output; legacy bills remain usable.</description>
+    <description>Cook 4 portions (14.4 nutrition total). Ingredient and work costs scale with the output. Existing bills still work.</description>
     <jobString>Cooking colossal fine meal.</jobString>
     <ingredients>
       <li>
@@ -479,7 +479,7 @@
   <RecipeDef ParentName="RR_FineMealRecipeBase">
     <defName>CookMealFineColossalMeat</defName>
     <label>legacy bill: cook 4 feast fine meals</label>
-    <description>Produces 4 supported portion(s), 14.4 nutrition in total. Ingredients and work scale with the output; legacy bills remain usable.</description>
+    <description>Cook 4 portions (14.4 nutrition total). Ingredient and work costs scale with the output. Existing bills still work.</description>
     <jobString>Cooking colossal fine meal.</jobString>
     <ingredients>
       <li>
@@ -509,7 +509,7 @@
   <RecipeDef ParentName="RR_LavishMealRecipeBase">
     <defName>CookMealLavishLarge</defName>
     <label>cook a large lavish meal</label>
-    <description>Produces 1 supported portion(s), 1.8 nutrition in total. Ingredients and work scale with the output; legacy bills remain usable.</description>
+    <description>Cook 1 portion (1.8 nutrition total). Ingredient and work costs scale with the output. Existing bills still work.</description>
     <jobString>Cooking large lavish meal.</jobString>
     <ingredients>
       <li>
@@ -538,7 +538,7 @@
   <RecipeDef ParentName="RR_LavishMealRecipeBase">
     <defName>CookMealLavishLargeVeg</defName>
     <label>cook a large lavish meal</label>
-    <description>Produces 1 supported portion(s), 1.8 nutrition in total. Ingredients and work scale with the output; legacy bills remain usable.</description>
+    <description>Cook 1 portion (1.8 nutrition total). Ingredient and work costs scale with the output. Existing bills still work.</description>
     <jobString>Cooking large lavish meal.</jobString>
     <ingredients>
       <li>
@@ -558,7 +558,7 @@
   <RecipeDef ParentName="RR_LavishMealRecipeBase">
     <defName>CookMealLavishLargeMeat</defName>
     <label>cook a large lavish meal</label>
-    <description>Produces 1 supported portion(s), 1.8 nutrition in total. Ingredients and work scale with the output; legacy bills remain usable.</description>
+    <description>Cook 1 portion (1.8 nutrition total). Ingredient and work costs scale with the output. Existing bills still work.</description>
     <jobString>Cooking large lavish meal.</jobString>
     <ingredients>
       <li>
@@ -579,7 +579,7 @@
   <RecipeDef ParentName="RR_LavishMealRecipeBase">
     <defName>CookMealLavishHuge</defName>
     <label>cook a feast lavish meal</label>
-    <description>Produces 1 supported portion(s), 3.6 nutrition in total. Ingredients and work scale with the output; legacy bills remain usable.</description>
+    <description>Cook 1 portion (3.6 nutrition total). Ingredient and work costs scale with the output. Existing bills still work.</description>
     <jobString>Cooking huge lavish meal.</jobString>
     <ingredients>
       <li>
@@ -608,7 +608,7 @@
   <RecipeDef ParentName="RR_LavishMealRecipeBase">
     <defName>CookMealLavishHugeVeg</defName>
     <label>cook a feast lavish meal</label>
-    <description>Produces 1 supported portion(s), 3.6 nutrition in total. Ingredients and work scale with the output; legacy bills remain usable.</description>
+    <description>Cook 1 portion (3.6 nutrition total). Ingredient and work costs scale with the output. Existing bills still work.</description>
     <jobString>Cooking huge lavish meal.</jobString>
     <ingredients>
       <li>
@@ -628,7 +628,7 @@
   <RecipeDef ParentName="RR_LavishMealRecipeBase">
     <defName>CookMealLavishHugeMeat</defName>
     <label>cook a feast lavish meal</label>
-    <description>Produces 1 supported portion(s), 3.6 nutrition in total. Ingredients and work scale with the output; legacy bills remain usable.</description>
+    <description>Cook 1 portion (3.6 nutrition total). Ingredient and work costs scale with the output. Existing bills still work.</description>
     <jobString>Cooking huge lavish meal.</jobString>
     <ingredients>
       <li>
@@ -649,7 +649,7 @@
   <RecipeDef ParentName="RR_LavishMealRecipeBase">
     <defName>CookMealLavishEnormous</defName>
     <label>legacy bill: cook a feast lavish meal</label>
-    <description>Produces 1 supported portion(s), 3.6 nutrition in total. Ingredients and work scale with the output; legacy bills remain usable.</description>
+    <description>Cook 1 portion (3.6 nutrition total). Ingredient and work costs scale with the output. Existing bills still work.</description>
     <jobString>Cooking enormous lavish meal.</jobString>
     <ingredients>
       <li>
@@ -679,7 +679,7 @@
   <RecipeDef ParentName="RR_LavishMealRecipeBase">
     <defName>CookMealLavishEnormousVeg</defName>
     <label>legacy bill: cook a feast lavish meal</label>
-    <description>Produces 1 supported portion(s), 3.6 nutrition in total. Ingredients and work scale with the output; legacy bills remain usable.</description>
+    <description>Cook 1 portion (3.6 nutrition total). Ingredient and work costs scale with the output. Existing bills still work.</description>
     <jobString>Cooking enormous lavish meal.</jobString>
     <ingredients>
       <li>
@@ -700,7 +700,7 @@
   <RecipeDef ParentName="RR_LavishMealRecipeBase">
     <defName>CookMealLavishEnormousMeat</defName>
     <label>legacy bill: cook a feast lavish meal</label>
-    <description>Produces 1 supported portion(s), 3.6 nutrition in total. Ingredients and work scale with the output; legacy bills remain usable.</description>
+    <description>Cook 1 portion (3.6 nutrition total). Ingredient and work costs scale with the output. Existing bills still work.</description>
     <jobString>Cooking enormous lavish meal.</jobString>
     <ingredients>
       <li>
@@ -722,7 +722,7 @@
   <RecipeDef ParentName="RR_LavishMealRecipeBase">
     <defName>CookMealLavishMassive</defName>
     <label>legacy bill: cook 2 feast lavish meals</label>
-    <description>Produces 2 supported portion(s), 7.2 nutrition in total. Ingredients and work scale with the output; legacy bills remain usable.</description>
+    <description>Cook 2 portions (7.2 nutrition total). Ingredient and work costs scale with the output. Existing bills still work.</description>
     <jobString>Cooking massive lavish meal.</jobString>
     <ingredients>
       <li>
@@ -752,7 +752,7 @@
   <RecipeDef ParentName="RR_LavishMealRecipeBase">
     <defName>CookMealLavishMassiveVeg</defName>
     <label>legacy bill: cook 2 feast lavish meals</label>
-    <description>Produces 2 supported portion(s), 7.2 nutrition in total. Ingredients and work scale with the output; legacy bills remain usable.</description>
+    <description>Cook 2 portions (7.2 nutrition total). Ingredient and work costs scale with the output. Existing bills still work.</description>
     <jobString>Cooking massive lavish meal.</jobString>
     <ingredients>
       <li>
@@ -773,7 +773,7 @@
   <RecipeDef ParentName="RR_LavishMealRecipeBase">
     <defName>CookMealLavishMassiveMeat</defName>
     <label>legacy bill: cook 2 feast lavish meals</label>
-    <description>Produces 2 supported portion(s), 7.2 nutrition in total. Ingredients and work scale with the output; legacy bills remain usable.</description>
+    <description>Cook 2 portions (7.2 nutrition total). Ingredient and work costs scale with the output. Existing bills still work.</description>
     <jobString>Cooking massive lavish meal.</jobString>
     <ingredients>
       <li>
@@ -795,7 +795,7 @@
   <RecipeDef ParentName="RR_LavishMealRecipeBase">
     <defName>CookMealLavishColossal</defName>
     <label>legacy bill: cook 4 feast lavish meals</label>
-    <description>Produces 4 supported portion(s), 14.4 nutrition in total. Ingredients and work scale with the output; legacy bills remain usable.</description>
+    <description>Cook 4 portions (14.4 nutrition total). Ingredient and work costs scale with the output. Existing bills still work.</description>
     <jobString>Cooking colossal lavish meal.</jobString>
     <ingredients>
       <li>
@@ -826,7 +826,7 @@
   <RecipeDef ParentName="RR_LavishMealRecipeBase">
     <defName>CookMealLavishColossalVeg</defName>
     <label>legacy bill: cook 4 feast lavish meals</label>
-    <description>Produces 4 supported portion(s), 14.4 nutrition in total. Ingredients and work scale with the output; legacy bills remain usable.</description>
+    <description>Cook 4 portions (14.4 nutrition total). Ingredient and work costs scale with the output. Existing bills still work.</description>
     <jobString>Cooking colossal lavish meal.</jobString>
     <ingredients>
       <li>
@@ -848,7 +848,7 @@
   <RecipeDef ParentName="RR_LavishMealRecipeBase">
     <defName>CookMealLavishColossalMeat</defName>
     <label>legacy bill: cook 4 feast lavish meals</label>
-    <description>Produces 4 supported portion(s), 14.4 nutrition in total. Ingredients and work scale with the output; legacy bills remain usable.</description>
+    <description>Cook 4 portions (14.4 nutrition total). Ingredient and work costs scale with the output. Existing bills still work.</description>
     <jobString>Cooking colossal lavish meal.</jobString>
     <ingredients>
       <li>

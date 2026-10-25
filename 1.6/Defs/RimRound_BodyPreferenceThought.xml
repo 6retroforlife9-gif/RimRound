@@ -7,17 +7,17 @@
     <stages>
       <li>
         <label>smaller than I prefer</label>
-        <description>I would prefer a larger body. My assigned goal and my own wishes may be different.</description>
+        <description>I want to be fatter. This body still feels too small.</description>
         <baseMoodEffect>-2</baseMoodEffect>
       </li>
       <li>
         <label>comfortable with my size</label>
-        <description>My body is within the range I currently prefer.</description>
+        <description>Just the size I wanted. I feel at home in this body.</description>
         <baseMoodEffect>3</baseMoodEffect>
       </li>
       <li>
         <label>larger than I prefer</label>
-        <description>I would prefer a smaller body. My assigned goal and my own wishes may be different.</description>
+        <description>There's more of me than I want. I'd rather be slimmer.</description>
         <baseMoodEffect>-2</baseMoodEffect>
       </li>
     </stages>

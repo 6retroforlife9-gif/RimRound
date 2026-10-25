@@ -11,7 +11,7 @@
   <ThingDef ParentName="RR_SimpleMealBase">
     <defName>MealSimpleLarge</defName>
     <label>large simple meal</label>
-    <description>Large meal: 1.8 nutrition and 1.8 stomach volume at 1x. Whole items are consumed; unusable portions are wasted.</description>
+    <description>Large meal.\n\n1.8 nutrition / 1.8 L at 1x density.\nConsumed whole; unusable food is wasted.</description>
     <graphicData>
       <texPath>Things/Item/Meal/Simple</texPath>
       <graphicClass>Graphic_MealVariants</graphicClass>
@@ -26,7 +26,7 @@
   <ThingDef ParentName="RR_SimpleMealBase">
     <defName>MealSimpleHuge</defName>
     <label>feast-sized simple meal</label>
-    <description>Feast-sized meal: 3.6 nutrition and 3.6 stomach volume at 1x. Whole items are consumed; unusable portions are wasted.</description>
+    <description>Feast-sized meal.\n\n3.6 nutrition / 3.6 L at 1x density.\nConsumed whole; unusable food is wasted.</description>
     <graphicData>
       <texPath>Things/Item/Meal/Simple</texPath>
       <graphicClass>Graphic_MealVariants</graphicClass>

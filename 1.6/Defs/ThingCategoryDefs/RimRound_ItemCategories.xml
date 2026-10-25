@@ -3,6 +3,7 @@
   <ThingCategoryDef>
     <defName>RR_OrdinaryMeals</defName>
     <label>RimRound meals and network servings</label>
+    <iconPath>UI/RimRoundIdeology/MealPortions</iconPath>
     <parent>FoodMeals</parent>
   </ThingCategoryDef>
   <ThingCategoryDef>

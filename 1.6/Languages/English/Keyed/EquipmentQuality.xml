@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <RR_RestingGainInspect>Resting weight-gain bonus: +{0}</RR_RestingGainInspect>
+  <RR_RestingGainBonus>Resting weight-gain bonus</RR_RestingGainBonus>
+  <RR_EquipmentQualityReport>Normal bonus: +{0}\nQuality: {1}\nQuality multiplier on this bonus: {2}\nEffective bonus: +{3}\n\n{4}\n\nRecipes and definitions without a specific item show Normal quality.</RR_EquipmentQualityReport>
+  <RR_RestingGainCondition>Active only while an eligible adult actually lies in this bed, awake or asleep. Adds to the weight-gain multiplier when surplus energy is converted into body mass. For example, a 100% multiplier becomes 125% with a Normal bed. Does not create food, affect weight loss, or apply just from owning the bed. Maximum contribution: +50%.</RR_RestingGainCondition>
+  <RR_SmockCookingBonus>Cooking speed bonus</RR_SmockCookingBonus>
+  <RR_SmockCookingCondition>Multiplies final cooking speed while worn. A Normal smock multiplies it by 115%; a Legendary smock by 130%. If multiple smocks are equipped, only the strongest bonus applies. Requires Kitchen workwear research; make at either tailoring bench.</RR_SmockCookingCondition>
+  <RR_NovaQualityCondition>Active while worn by an eligible adult. Quality scales this item's special bonus, not the pawn's entire stat. Compatible pieces combine using the normal RimRound stacking rules. Mitigation remains bounded by the pawn's normal mitigation limits.</RR_NovaQualityCondition>
+  <RR_LegacyEquipmentCondition>Legacy Perks mode preserves the base profile recorded when this item was equipped. Quality adds a live adjustment without changing the saved bonus ledger.</RR_LegacyEquipmentCondition>
+  <RR_ChairPropulsion>Hoverchair propulsion</RR_ChairPropulsion>
+  <RR_ChairLegacyCapacity>Hoverchair Moving capacity (Legacy)</RR_ChairLegacyCapacity>
+  <RR_ChairQualityReport>Quality: {0}\nPropulsion: {1} of native race and life-stage speed.\n\nAwful 55%, Poor 60%, Normal 65%, Good 68%, Excellent 72%, Masterwork 76%, Legendary 80%.\n\nThe wearer must fit and be able to control the chair. Walking bonuses do not increase propulsion; native movement and final stat modifiers still apply.\n\nLegacy Perks retains its existing perk-based movement system. Quality adds the difference from Normal to its movement capacity, capped at 100%.</RR_ChairQualityReport>
+  <RR_Equipment_weightGainMultBonus>Weight-gain bonus</RR_Equipment_weightGainMultBonus>
+  <RR_Equipment_digestionRateMultiplier>Digestion rate bonus</RR_Equipment_digestionRateMultiplier>
+  <RR_Equipment_stomachElasticityMultiplier>Stomach elasticity bonus</RR_Equipment_stomachElasticityMultiplier>
+  <RR_Equipment_softLimitMultiplier>Comfortable fullness bonus</RR_Equipment_softLimitMultiplier>
+  <RR_Equipment_fullnessGainedMultBonus>Fullness gained adjustment</RR_Equipment_fullnessGainedMultBonus>
+  <RR_Equipment_movementFlatBonus>Moving capacity bonus</RR_Equipment_movementFlatBonus>
+  <RR_Equipment_manipulationFlatBonus>Manipulation capacity bonus</RR_Equipment_manipulationFlatBonus>
+  <RR_Equipment_eatingFlatBonus>Eating capacity bonus</RR_Equipment_eatingFlatBonus>
+  <RR_Equipment_movementPenaltyMitigationMultBonus_Weight>Weight movement penalty mitigation</RR_Equipment_movementPenaltyMitigationMultBonus_Weight>
+  <RR_Equipment_movementPenaltyMitigationMultBonus_Fullness>Fullness movement penalty mitigation</RR_Equipment_movementPenaltyMitigationMultBonus_Fullness>
+  <RR_Equipment_manipulationPenaltyMitigationMultBonus_Weight>Weight manipulation penalty mitigation</RR_Equipment_manipulationPenaltyMitigationMultBonus_Weight>
+  <RR_Equipment_painMitigationMultBonus_Fullness>Fullness pain mitigation</RR_Equipment_painMitigationMultBonus_Fullness>
+  <RR_Equipment_eatingSpeedReductionMitigationMultBonus_Fullness>Fullness eating penalty mitigation</RR_Equipment_eatingSpeedReductionMitigationMultBonus_Fullness>
+</LanguageData>

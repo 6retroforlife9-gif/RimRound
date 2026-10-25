@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Patch>
+  <!-- Permit the existing pack animal wherever a biome already permits pack
+       caravans. Empty lists (for example space) keep their native restriction. -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/BiomeDef[allowedPackAnimals/li and not(allowedPackAnimals/li="SG_Caloyak")]/allowedPackAnimals</xpath>
+    <value>
+      <li>SG_Caloyak</li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/FactionDef[@Name="OutlanderFactionBase"]/caravanTraderKinds</xpath>
+    <value>
+      <li>RR_CaravanFoodSupplier</li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Odyssey</li>
+    </mods>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/FactionDef[defName="TradersGuild"]/orbitalTraderKinds</xpath>
+      <value>
+        <li>RR_OrbitalFoodSupplier</li>
+      </value>
+    </match>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="Gun_Autopistol" or defName="Gun_Revolver"]/weaponTags</xpath>
+    <value>
+      <li>RR_FoodSidearm</li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="Gun_HeavySMG" or defName="Gun_AssaultRifle"]/weaponTags</xpath>
+    <value>
+      <li>RR_FoodGuardGun</li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="Gun_AssaultRifle" or defName="Gun_ChargeRifle"]/weaponTags</xpath>
+    <value>
+      <li>RR_FoodEliteGun</li>
+    </value>
+  </Operation>
+</Patch>

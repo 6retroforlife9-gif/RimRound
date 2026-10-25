@@ -46,7 +46,7 @@
   <ThingDef ParentName="RR_MealFineBase">
     <defName>MealFineLarge</defName>
     <label>large fine meal</label>
-    <description>Large meal: 1.8 nutrition and 1.8 stomach volume at 1x. Whole items are consumed; unusable portions are wasted.</description>
+    <description>Large meal.\n\n1.8 nutrition / 1.8 L at 1x density.\nConsumed whole; unusable food is wasted.</description>
     <statBases>
       <MarketValue>40</MarketValue>
       <Mass>0.88</Mass>
@@ -57,7 +57,7 @@
   <ThingDef ParentName="RR_MealFineBaseVEG">
     <defName>MealFineLargeVeg</defName>
     <label>large vegetarian fine meal</label>
-    <description>Large meal: 1.8 nutrition and 1.8 stomach volume at 1x. Whole items are consumed; unusable portions are wasted.</description>
+    <description>Large meal.\n\n1.8 nutrition / 1.8 L at 1x density.\nConsumed whole; unusable food is wasted.</description>
     <statBases>
       <MarketValue>40</MarketValue>
       <Mass>0.88</Mass>
@@ -68,7 +68,7 @@
   <ThingDef ParentName="RR_MealFineBaseMEAT">
     <defName>MealFineLargeNonVeg</defName>
     <label>large meat-based fine meal</label>
-    <description>Large meal: 1.8 nutrition and 1.8 stomach volume at 1x. Whole items are consumed; unusable portions are wasted.</description>
+    <description>Large meal.\n\n1.8 nutrition / 1.8 L at 1x density.\nConsumed whole; unusable food is wasted.</description>
     <statBases>
       <MarketValue>40</MarketValue>
       <Mass>0.88</Mass>
@@ -81,7 +81,7 @@
   <ThingDef ParentName="RR_MealFineBase">
     <defName>MealFineHuge</defName>
     <label>feast-sized fine meal</label>
-    <description>Feast-sized meal: 3.6 nutrition and 3.6 stomach volume at 1x. Whole items are consumed; unusable portions are wasted.</description>
+    <description>Feast-sized meal.\n\n3.6 nutrition / 3.6 L at 1x density.\nConsumed whole; unusable food is wasted.</description>
     <statBases>
       <MarketValue>80</MarketValue>
       <Mass>1.76</Mass>
@@ -92,7 +92,7 @@
   <ThingDef ParentName="RR_MealFineBaseVEG">
     <defName>MealFineHugeVeg</defName>
     <label>feast-sized vegetarian fine meal</label>
-    <description>Feast-sized meal: 3.6 nutrition and 3.6 stomach volume at 1x. Whole items are consumed; unusable portions are wasted.</description>
+    <description>Feast-sized meal.\n\n3.6 nutrition / 3.6 L at 1x density.\nConsumed whole; unusable food is wasted.</description>
     <statBases>
       <MarketValue>80</MarketValue>
       <Mass>1.76</Mass>
@@ -103,7 +103,7 @@
   <ThingDef ParentName="RR_MealFineBaseMEAT">
     <defName>MealFineHugeNonVeg</defName>
     <label>feast-sized meat-based fine meal</label>
-    <description>Feast-sized meal: 3.6 nutrition and 3.6 stomach volume at 1x. Whole items are consumed; unusable portions are wasted.</description>
+    <description>Feast-sized meal.\n\n3.6 nutrition / 3.6 L at 1x density.\nConsumed whole; unusable food is wasted.</description>
     <statBases>
       <MarketValue>80</MarketValue>
       <Mass>1.76</Mass>

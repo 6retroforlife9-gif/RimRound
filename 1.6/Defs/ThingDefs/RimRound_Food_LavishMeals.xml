@@ -43,7 +43,7 @@
       <WorkToMake>1600</WorkToMake>
       <Nutrition>1.8</Nutrition>
     </statBases>
-    <description>Large meal: 1.8 nutrition and 1.8 stomach volume at 1x. Whole items are consumed; unusable portions are wasted.</description>
+    <description>Large meal.\n\n1.8 nutrition / 1.8 L at 1x density.\nConsumed whole; unusable food is wasted.</description>
   </ThingDef>
   <ThingDef ParentName="RR_LavishMealBase">
     <defName>MealLavishHuge</defName>
@@ -54,7 +54,7 @@
       <WorkToMake>3200</WorkToMake>
       <Nutrition>3.6</Nutrition>
     </statBases>
-    <description>Feast-sized meal: 3.6 nutrition and 3.6 stomach volume at 1x. Whole items are consumed; unusable portions are wasted.</description>
+    <description>Feast-sized meal.\n\n3.6 nutrition / 3.6 L at 1x density.\nConsumed whole; unusable food is wasted.</description>
   </ThingDef>
   <ThingDef ParentName="RR_LavishMealBase">
     <defName>MealLavishEnormous</defName>
@@ -98,7 +98,7 @@
       <WorkToMake>1600</WorkToMake>
       <Nutrition>1.8</Nutrition>
     </statBases>
-    <description>Large meal: 1.8 nutrition and 1.8 stomach volume at 1x. Whole items are consumed; unusable portions are wasted.</description>
+    <description>Large meal.\n\n1.8 nutrition / 1.8 L at 1x density.\nConsumed whole; unusable food is wasted.</description>
   </ThingDef>
   <ThingDef ParentName="RR_LavishMealBaseVEG">
     <defName>MealLavishHugeNonMeat</defName>
@@ -109,7 +109,7 @@
       <WorkToMake>3200</WorkToMake>
       <Nutrition>3.6</Nutrition>
     </statBases>
-    <description>Feast-sized meal: 3.6 nutrition and 3.6 stomach volume at 1x. Whole items are consumed; unusable portions are wasted.</description>
+    <description>Feast-sized meal.\n\n3.6 nutrition / 3.6 L at 1x density.\nConsumed whole; unusable food is wasted.</description>
   </ThingDef>
   <ThingDef ParentName="RR_LavishMealBaseVEG">
     <defName>MealLavishEnormousNonMeat</defName>
@@ -153,7 +153,7 @@
       <WorkToMake>1600</WorkToMake>
       <Nutrition>1.8</Nutrition>
     </statBases>
-    <description>Large meal: 1.8 nutrition and 1.8 stomach volume at 1x. Whole items are consumed; unusable portions are wasted.</description>
+    <description>Large meal.\n\n1.8 nutrition / 1.8 L at 1x density.\nConsumed whole; unusable food is wasted.</description>
   </ThingDef>
   <ThingDef ParentName="RR_LavishMealBaseMEAT">
     <defName>MealLavishHugeMeat</defName>
@@ -164,7 +164,7 @@
       <WorkToMake>3200</WorkToMake>
       <Nutrition>3.6</Nutrition>
     </statBases>
-    <description>Feast-sized meal: 3.6 nutrition and 3.6 stomach volume at 1x. Whole items are consumed; unusable portions are wasted.</description>
+    <description>Feast-sized meal.\n\n3.6 nutrition / 3.6 L at 1x density.\nConsumed whole; unusable food is wasted.</description>
   </ThingDef>
   <ThingDef ParentName="RR_LavishMealBaseMEAT">
     <defName>MealLavishEnormousMeat</defName>

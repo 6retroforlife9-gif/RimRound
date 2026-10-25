@@ -78,7 +78,7 @@
   <RecipeDef ParentName="FatMealBase">
     <defName>CookFatBurger</defName>
     <label>cook a Big Ol' Burger</label>
-    <description>Uses the listed nutrition of ordinary and calorite ingredients. At least 10% of ingredient energy is lost during preparation; the product specifies its physical size and absorption schedule.</description>
+    <description>Cook with the listed ordinary and calorite ingredients. Preparation loses at least 10% of their energy; see the finished food for volume and digestion details.</description>
     <jobString>Cooking Lard Filled Burger.</jobString>
     <products>
       <FatBurger>1</FatBurger>
@@ -139,7 +139,7 @@
   <RecipeDef ParentName="FatSweetMealBase">
     <defName>CookDonut</defName>
     <label>cook a nice Donut</label>
-    <description>Uses the listed nutrition of ordinary and calorite ingredients. At least 10% of ingredient energy is lost during preparation; the product specifies its physical size and absorption schedule.</description>
+    <description>Cook with the listed ordinary and calorite ingredients. Preparation loses at least 10% of their energy; see the finished food for volume and digestion details.</description>
     <jobString>Cooking Donut.</jobString>
     <products>
       <Donut>1</Donut>
@@ -183,7 +183,7 @@
   <RecipeDef ParentName="FatSweetMealBase">
     <defName>CookCake</defName>
     <label>cook a "Cannot-Stop" Cake</label>
-    <description>Uses the listed nutrition of ordinary and calorite ingredients. At least 10% of ingredient energy is lost during preparation; the product specifies its physical size and absorption schedule.</description>
+    <description>Cook with the listed ordinary and calorite ingredients. Preparation loses at least 10% of their energy; see the finished food for volume and digestion details.</description>
     <jobString>Cooking Donut.</jobString>
     <products>
       <cakeFat>1</cakeFat>

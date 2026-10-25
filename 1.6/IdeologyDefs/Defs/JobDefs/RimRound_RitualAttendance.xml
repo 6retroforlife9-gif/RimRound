@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <JobDef>
+    <defName>RR_RitualAttendanceCarry</defName>
+    <driverClass>RimRound.Ideology.JobDriver_RitualAttendanceCarry</driverClass>
+    <reportString>Carrying TargetA for assisted ritual attendance.</reportString>
+    <casualInterruptible>false</casualInterruptible>
+    <playerInterruptible>true</playerInterruptible>
+  </JobDef>
+  <JobDef>
+    <defName>RR_RitualAttendanceStay</defName>
+    <driverClass>RimRound.Ideology.JobDriver_RitualAttendanceStay</driverClass>
+    <reportString>Attending the ritual from an assisted guest place.</reportString>
+    <casualInterruptible>false</casualInterruptible>
+    <playerInterruptible>true</playerInterruptible>
+  </JobDef>
+</Defs>

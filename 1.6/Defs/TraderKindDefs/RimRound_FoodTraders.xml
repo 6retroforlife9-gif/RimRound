@@ -1,0 +1,246 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Defs>
+  <TraderKindDef>
+    <defName>RR_CaravanFoodSupplier</defName>
+    <label>RimRound food caravan</label>
+    <orbital>false</orbital>
+    <commonality>1</commonality>
+    <stockGenerators>
+      <li Class="StockGenerator_SingleDef">
+        <thingDef>Silver</thingDef>
+        <countRange>750~1200</countRange>
+      </li>
+      <li Class="RimRound.FeedOther.StockGenerator_RimRoundFood">
+        <thingDef>Donut</thingDef>
+        <countRange>6~12</countRange>
+        <chance>1</chance>
+        <price>Cheap</price>
+      </li>
+      <li Class="RimRound.FeedOther.StockGenerator_RimRoundFood">
+        <thingDef>FatBurger</thingDef>
+        <countRange>3~8</countRange>
+        <chance>1</chance>
+        <price>Cheap</price>
+      </li>
+      <li Class="RimRound.FeedOther.StockGenerator_RimRoundFood">
+        <thingDef>RR_DenseSimple2x</thingDef>
+        <countRange>8~16</countRange>
+        <chance>1</chance>
+        <price>Cheap</price>
+      </li>
+      <li Class="RimRound.FeedOther.StockGenerator_RimRoundFood">
+        <thingDef>RR_DenseSimple3x</thingDef>
+        <countRange>8~16</countRange>
+        <chance>1</chance>
+        <price>Cheap</price>
+      </li>
+      <li Class="RimRound.FeedOther.StockGenerator_RimRoundFood">
+        <thingDef>RR_DenseFine2x</thingDef>
+        <countRange>8~16</countRange>
+        <chance>0.75</chance>
+        <price>Cheap</price>
+      </li>
+      <li Class="RimRound.FeedOther.StockGenerator_RimRoundFood">
+        <thingDef>RR_DenseFine3x</thingDef>
+        <countRange>8~16</countRange>
+        <chance>0.55</chance>
+        <price>Cheap</price>
+      </li>
+      <li Class="RimRound.FeedOther.StockGenerator_RimRoundFood">
+        <thingDef>RR_CrammedCroissant</thingDef>
+        <countRange>2~5</countRange>
+        <chance>0.6</chance>
+        <price>Cheap</price>
+      </li>
+      <li Class="RimRound.FeedOther.StockGenerator_RimRoundFood">
+        <thingDef>RR_MechaniteMuffin</thingDef>
+        <countRange>2~5</countRange>
+        <chance>0.6</chance>
+        <price>Cheap</price>
+      </li>
+      <li Class="RimRound.FeedOther.StockGenerator_RimRoundFood">
+        <thingDef>RR_PackedPizza</thingDef>
+        <countRange>1~3</countRange>
+        <chance>0.45</chance>
+        <price>Cheap</price>
+      </li>
+      <li Class="RimRound.FeedOther.StockGenerator_RimRoundFood">
+        <thingDef>fatpill</thingDef>
+        <countRange>1~3</countRange>
+        <chance>0.7</chance>
+        <price>Cheap</price>
+      </li>
+      <li Class="RimRound.FeedOther.StockGenerator_RimRoundFood">
+        <thingDef>swellGlowOriginal</thingDef>
+        <countRange>1~3</countRange>
+        <chance>0.8</chance>
+        <price>Cheap</price>
+      </li>
+      <li Class="RimRound.FeedOther.StockGenerator_RimRoundFood">
+        <thingDef>swellGlowPlus</thingDef>
+        <countRange>1~2</countRange>
+        <chance>0.45</chance>
+        <price>Cheap</price>
+      </li>
+      <li Class="RimRound.FeedOther.StockGenerator_RimRoundFood">
+        <thingDef>RR_GluttoniumMeal</thingDef>
+        <countRange>1~2</countRange>
+        <chance>0.2</chance>
+        <price>Cheap</price>
+      </li>
+      <li Class="RimRound.FeedOther.StockGenerator_RimRoundFood">
+        <thingDef>RR_LaBombe</thingDef>
+        <countRange>1~1</countRange>
+        <chance>0.1</chance>
+        <price>Cheap</price>
+      </li>
+      <li Class="RimRound.FeedOther.StockGenerator_RimRoundFood">
+        <thingDef>swellGlowX</thingDef>
+        <countRange>1~1</countRange>
+        <chance>0.12</chance>
+        <price>Cheap</price>
+      </li>
+      <li Class="RimRound.FeedOther.StockGenerator_RimRoundFood">
+        <thingDef>swellGlowMAX</thingDef>
+        <countRange>1~1</countRange>
+        <chance>0.05</chance>
+        <price>Cheap</price>
+      </li>
+      <li Class="RimRound.FeedOther.StockGenerator_RimRoundFood">
+        <thingDef>RR_HoverChair</thingDef>
+        <countRange>1~1</countRange>
+        <chance>0.2</chance>
+        <price>Normal</price>
+      </li>
+      <li Class="RimRound.FeedOther.StockGenerator_RimRoundFood">
+        <thingDef>RR_HoverChairArm</thingDef>
+        <countRange>1~1</countRange>
+        <chance>0.15</chance>
+        <price>Normal</price>
+      </li>
+      <li Class="RimRound.FeedOther.StockGenerator_RimRoundBuyFood" />
+    </stockGenerators>
+  </TraderKindDef>
+  <TraderKindDef>
+    <defName>RR_OrbitalFoodSupplier</defName>
+    <label>RimRound food supplier</label>
+    <orbital>true</orbital>
+    <commonality>1</commonality>
+    <faction MayRequire="Ludeon.RimWorld.Odyssey">TradersGuild</faction>
+    <stockGenerators>
+      <li Class="StockGenerator_SingleDef">
+        <thingDef>Silver</thingDef>
+        <countRange>2000~4000</countRange>
+      </li>
+      <li Class="RimRound.FeedOther.StockGenerator_RimRoundFood">
+        <thingDef>Donut</thingDef>
+        <countRange>12~24</countRange>
+        <chance>1</chance>
+        <price>Cheap</price>
+      </li>
+      <li Class="RimRound.FeedOther.StockGenerator_RimRoundFood">
+        <thingDef>FatBurger</thingDef>
+        <countRange>6~16</countRange>
+        <chance>1</chance>
+        <price>Cheap</price>
+      </li>
+      <li Class="RimRound.FeedOther.StockGenerator_RimRoundFood">
+        <thingDef>RR_DenseSimple2x</thingDef>
+        <countRange>16~32</countRange>
+        <chance>1</chance>
+        <price>Cheap</price>
+      </li>
+      <li Class="RimRound.FeedOther.StockGenerator_RimRoundFood">
+        <thingDef>RR_DenseSimple3x</thingDef>
+        <countRange>16~32</countRange>
+        <chance>1</chance>
+        <price>Cheap</price>
+      </li>
+      <li Class="RimRound.FeedOther.StockGenerator_RimRoundFood">
+        <thingDef>RR_DenseFine2x</thingDef>
+        <countRange>16~32</countRange>
+        <chance>0.75</chance>
+        <price>Cheap</price>
+      </li>
+      <li Class="RimRound.FeedOther.StockGenerator_RimRoundFood">
+        <thingDef>RR_DenseFine3x</thingDef>
+        <countRange>16~32</countRange>
+        <chance>0.55</chance>
+        <price>Cheap</price>
+      </li>
+      <li Class="RimRound.FeedOther.StockGenerator_RimRoundFood">
+        <thingDef>RR_CrammedCroissant</thingDef>
+        <countRange>4~10</countRange>
+        <chance>0.6</chance>
+        <price>Cheap</price>
+      </li>
+      <li Class="RimRound.FeedOther.StockGenerator_RimRoundFood">
+        <thingDef>RR_MechaniteMuffin</thingDef>
+        <countRange>4~10</countRange>
+        <chance>0.6</chance>
+        <price>Cheap</price>
+      </li>
+      <li Class="RimRound.FeedOther.StockGenerator_RimRoundFood">
+        <thingDef>RR_PackedPizza</thingDef>
+        <countRange>2~6</countRange>
+        <chance>0.45</chance>
+        <price>Cheap</price>
+      </li>
+      <li Class="RimRound.FeedOther.StockGenerator_RimRoundFood">
+        <thingDef>fatpill</thingDef>
+        <countRange>2~6</countRange>
+        <chance>0.7</chance>
+        <price>Cheap</price>
+      </li>
+      <li Class="RimRound.FeedOther.StockGenerator_RimRoundFood">
+        <thingDef>swellGlowOriginal</thingDef>
+        <countRange>2~6</countRange>
+        <chance>0.8</chance>
+        <price>Cheap</price>
+      </li>
+      <li Class="RimRound.FeedOther.StockGenerator_RimRoundFood">
+        <thingDef>swellGlowPlus</thingDef>
+        <countRange>2~4</countRange>
+        <chance>0.45</chance>
+        <price>Cheap</price>
+      </li>
+      <li Class="RimRound.FeedOther.StockGenerator_RimRoundFood">
+        <thingDef>RR_GluttoniumMeal</thingDef>
+        <countRange>2~4</countRange>
+        <chance>0.2</chance>
+        <price>Cheap</price>
+      </li>
+      <li Class="RimRound.FeedOther.StockGenerator_RimRoundFood">
+        <thingDef>RR_LaBombe</thingDef>
+        <countRange>2~2</countRange>
+        <chance>0.1</chance>
+        <price>Cheap</price>
+      </li>
+      <li Class="RimRound.FeedOther.StockGenerator_RimRoundFood">
+        <thingDef>swellGlowX</thingDef>
+        <countRange>2~2</countRange>
+        <chance>0.12</chance>
+        <price>Cheap</price>
+      </li>
+      <li Class="RimRound.FeedOther.StockGenerator_RimRoundFood">
+        <thingDef>swellGlowMAX</thingDef>
+        <countRange>2~2</countRange>
+        <chance>0.05</chance>
+        <price>Cheap</price>
+      </li>
+      <li Class="RimRound.FeedOther.StockGenerator_RimRoundFood">
+        <thingDef>RR_HoverChair</thingDef>
+        <countRange>1~1</countRange>
+        <chance>0.2</chance>
+        <price>Normal</price>
+      </li>
+      <li Class="RimRound.FeedOther.StockGenerator_RimRoundFood">
+        <thingDef>RR_HoverChairArm</thingDef>
+        <countRange>1~1</countRange>
+        <chance>0.15</chance>
+        <price>Normal</price>
+      </li>
+      <li Class="RimRound.FeedOther.StockGenerator_RimRoundBuyFood" />
+    </stockGenerators>
+  </TraderKindDef>
+</Defs>

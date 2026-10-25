@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
   <name>RimRound Rework WIP</name>
   <author>Niwatori401</author>
@@ -7,6 +7,18 @@
     <li>1.6</li>
   </supportedVersions>
   <description>Work-in-progress rework of RimRound for RimWorld 1.6.
+
+Updated 25 October 2026:
+- Embodied Abundance, shared feasts, ceremonial feeding and designated ritual beds.
+- Assisted immobile guests, real meal collection, native ritual seating and return care.
+- Feeder +25% feeding speed, Feedee +20% eligible ordinary-food mass gain, Provisioner +25% source food production.
+- Working resting-bed gain bonus: +25% at Normal quality, capped at +50% at Legendary.
+- Kitchen workwear at both tailoring benches; quality-based smock, NovaTech and hoverchair bonuses.
+- Optional saved xenotype body-art override. This is a cosmetic override, not a race adapter or compatibility patch; custom body layers may remain visible and attachments may not align.
+- Food traders and dense imported meals.
+- Rejected-pawn reference cleanup and corrected distillery port overlay.
+
+RimWorld 1.6 development build. New colonies and their later saves are the main target. Testing does not establish compatibility with every save or mod list, or performance in large colonies.
 
 Updated 19 October 2026 (c24):
 - Fixed vanilla nutrient-paste reserve checks and exact hopper ingredient use.

@@ -3,8 +3,10 @@
   <MemeDef>
     <!-- Keep the DefName so existing ideoligions retain their meme on upgrade. -->
     <defName>RR_FoodSupremacy</defName>
+    <hiddenInChooseMemes>true</hiddenInChooseMemes>
+    <randomizationSelectionWeightFactor>0</randomizationSelectionWeightFactor>
     <label>abundant table</label>
-    <description>Food is a shared responsibility and a source of joy. These people prize well-stocked kitchens, generous hospitality, and the freedom to choose how much to eat.</description>
+    <description>A stocked kitchen and a generous table are the heart of a colony. Food is for sharing and savouring; each diner chooses how much is enough.</description>
     <iconPath>UI/PerkIcons/FOOD_IS_FOOD</iconPath>
     <groupDef>Misc</groupDef>
     <impact>2</impact>
