@@ -18,16 +18,8 @@
 		<showWhenDrafted>false</showWhenDrafted>
 		<hostile>false</hostile>
 		<comps>
-			<li Class="RimRound.Comps.CompProperties_ConvertWeightOpinion">
-				<majorIncrease>Test 1</majorIncrease>
-				<majorDecrease>Test 2</majorDecrease>
-				<minorIncrease>Test 3</minorIncrease>
-				<minorDecrease>Test 4</minorDecrease>
-				<!--failIncrease>{INITIATOR_labelShort} failed to convince {RECIPIENT_labelShort}. {RECIPIENT_labelShort} was upset by the attempt, but {RECIPIENT_possessive} certainty fell from {CERTAINTYBEFORE} to {CERTAINTYAFTER}.</failIncrease>
-				<failDecrease>{INITIATOR_labelShort} failed to convince {RECIPIENT_labelShort}. {RECIPIENT_labelShort} was upset by the attempt, but {RECIPIENT_possessive} certainty fell from {CERTAINTYBEFORE} to {CERTAINTYAFTER}.</failDecrease-->
-				<convertPowerFactor>2</convertPowerFactor>
-				<sound>Tick_Low</sound> <!--MoralistAbility_Resolve-->
-			</li>
+			<!-- Compatibility identity only; the unfinished prototype is inert and hidden. -->
+            <li Class="RimRound.Comps.CompProperties_ConvertWeightOpinion" />
 			<li Class="CompProperties_AbilityMustBeCapableOf">
 				<workTags>
 					<li>Social</li>

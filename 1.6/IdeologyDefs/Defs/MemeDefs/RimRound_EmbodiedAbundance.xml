@@ -3,7 +3,7 @@
   <MemeDef>
     <defName>RR_EmbodiedAbundance</defName>
     <label>embodied abundance</label>
-    <description>A generous body is abundance made flesh. Leaders and moral guides are expected to embody it.\n\nQualifying larger adults known to a follower receive at least +5 body-size opinion. Other opinions can still make the total negative.\nPersonal size preferences and social taste stay unchanged; extra feeding still requires willingness.</description>
+    <description>A generous body is abundance made flesh. Leaders and moral guides are expected to embody it.\n\nQualifying larger adults known to a follower receive at least +5 body-size opinion. Other opinions can still make the total negative.\nNew adult social tastes are Likes or Strongly likes larger bodies. Existing tastes and personal size preferences stay fixed; extra feeding still requires willingness.</description>
     <iconPath>UI/RimRoundIdeology/EmbodiedAbundance</iconPath>
     <groupDef>Misc</groupDef>
     <impact>2</impact>

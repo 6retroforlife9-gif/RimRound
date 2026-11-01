@@ -16,12 +16,25 @@
   <RR_AbundanceServerRequired>Assign a mobile attendant who can collect food and reach the bedside.</RR_AbundanceServerRequired>
   <RR_AbundanceHostCannotSettle>The host cannot reach and settle in their designated bed.</RR_AbundanceHostCannotSettle>
   <RR_AbundanceSeats>Guest seats needed: {0}; dining and ritual seats available in this room: {1}. Add reachable, unreserved table chairs, pews, kneel sheets or kneel pillows. Ritual seats can be away from the tables.</RR_AbundanceSeats>
-  <RR_AbundanceSeatUnavailable>No free, reachable seat for {0}. Check dining chairs, ritual seats, paths and reservations in this room.</RR_AbundanceSeatUnavailable>
+  <RR_AbundanceSeatUnavailable>No free, reachable seat for {0}. Check seating, paths and reservations.</RR_AbundanceSeatUnavailable>
   <RR_AbundanceNoMeal>No unreserved, reachable prepared meal permitted for {0}.</RR_AbundanceNoMeal>
   <RR_AbundanceNoDiners>No selected diner has room for food.</RR_AbundanceNoDiners>
-  <RR_AbundanceMealExplanation>Participants bring enough prepared food for the whole sitting and set it out on the tables, then around them if needed. Dining, sharing and feeding use this spread. The feast fills diners to their comfortable limit; ceremonial feeding permits 10% more. Guests already physically full can spectate. A bed host requires an attendant.</RR_AbundanceMealExplanation>
+  <RR_AbundanceMealExplanation>Participants bring enough prepared food for the whole sitting and set it out on the tables, then around them if needed. A working liquid-food dispenser in the room can supply the meals. Dining, sharing and feeding use this spread. Leaders and moral guides receive assisted meals, with a target 10% above comfortable fullness, within their physical limit. Other diners eat to their comfortable limit; ceremonial feeding also permits 10% more. Guests already physically full can spectate. A bed host requires an attendant.</RR_AbundanceMealExplanation>
   <RR_AbundanceDigestionReward>The recipient has {0}% faster digestion for one day.</RR_AbundanceDigestionReward>
   <RR_AbundanceNotEnough>Too little reachable, allowed food for {0}. Invite fewer diners or add food.</RR_AbundanceNotEnough>
+  <RR_FeastNoPreparedFood>No reachable prepared food is permitted for {0}. Check their food policy and the available dishes.</RR_FeastNoPreparedFood>
+  <RR_FeastPlanningLimit>This feast is too complex to plan at once. Invite fewer diners or simplify the available food.</RR_FeastPlanningLimit>
+  <RR_FeastCannotCarry>No selected participant can carry a serving for {0}. Free inventory space or select another collector.</RR_FeastCannotCarry>
+  <RR_FeastPlannedFood>Planned food: {0}</RR_FeastPlannedFood>
+  <RR_FeastPlannedSeats>Seats: {0} needed, {1} available.</RR_FeastPlannedSeats>
+  <RR_FeastNoProgress>The feast stopped because preparation made no progress.</RR_FeastNoProgress>
+  <RR_FeastWholePortionLimit>Whole portions only: {0} will finish below their comfortable limit.</RR_FeastWholePortionLimit>
+  <RR_FeastAttendWithoutEating>No available whole portion fits {0}. They can attend without eating.</RR_FeastAttendWithoutEating>
+  <RR_FeastUnsupportedSource>Food in {0} cannot currently be collected for this feast.</RR_FeastUnsupportedSource>
+  <RR_FeastWaitingArrival>Waiting for {0} to arrive at the feast.</RR_FeastWaitingArrival>
+  <RR_FeastWaitingCollection>Waiting for {0} to collect food.</RR_FeastWaitingCollection>
+  <RR_FeastWaitingPlacement>Waiting for {0} to place food.</RR_FeastWaitingPlacement>
+  <RR_FeastSupplyChanged>The feast stopped because its food supply changed.</RR_FeastSupplyChanged>
   <RR_AbundanceRoleLostByReforming>Removing {0} will end this role for: {1}.</RR_AbundanceRoleLostByReforming>
   <RR_AbundancePriorClaimInvalid>Another active food ritual has an unavailable or changed supply for {0}. Finish or cancel that ritual before planning another.</RR_AbundancePriorClaimInvalid>
 </LanguageData>
