@@ -139,7 +139,7 @@
     </statBases>
     <apparel>
       <countsAsClothingForNudity>false</countsAsClothingForNudity>
-      <wornGraphicPath>FillerTexture</wornGraphicPath>
+      <wornGraphicPath />
       <bodyPartGroups>
         <li>Waist</li>
       </bodyPartGroups>
@@ -252,7 +252,7 @@
       <bodyPartGroups>
         <li>Hands</li>
       </bodyPartGroups>
-      <wornGraphicPath>FillerTexture</wornGraphicPath>
+      <wornGraphicPath />
       <layers>
         <li>Middle</li>
       </layers>
@@ -303,7 +303,7 @@
       <bodyPartGroups>
         <li>Neck</li>
       </bodyPartGroups>
-      <wornGraphicPath>FillerTexture</wornGraphicPath>
+      <wornGraphicPath />
       <layers>
         <li>OnSkin</li>
       </layers>
@@ -349,7 +349,7 @@
     </statBases>
     <apparel>
       <countsAsClothingForNudity>false</countsAsClothingForNudity>
-      <wornGraphicPath>FillerTexture</wornGraphicPath>
+      <wornGraphicPath />
       <bodyPartGroups>
         <li>Waist</li>
       </bodyPartGroups>

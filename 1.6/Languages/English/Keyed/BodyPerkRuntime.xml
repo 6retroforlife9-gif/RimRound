@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
   <RR_TreeEnable>Enable optional body perks</RR_TreeEnable>
-  <RR_TreeEnableDesc>Off by default. Earn capped points from active days, useful food intake and completed body discussions.\nDisabling stops points and effects but keeps purchases. Legacy uses its original perks.</RR_TreeEnableDesc>
+  <RR_TreeEnableDesc>Enabled by default for new colonies. Earn capped points from active days, useful food intake and completed body discussions.\nDisabling stops points and effects but keeps purchases. Legacy uses its original perks.</RR_TreeEnableDesc>
   <RR_TreeOpen>Body perks</RR_TreeOpen>
   <RR_TreeUnknownState>This saved tree cannot be interpreted safely by this version. Its data is preserved.</RR_TreeUnknownState>
   <RR_TreeIneligible>Body perks require an adult pawn with biological food metabolism.</RR_TreeIneligible>

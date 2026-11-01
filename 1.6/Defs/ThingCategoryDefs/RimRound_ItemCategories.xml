@@ -9,46 +9,55 @@
   <ThingCategoryDef>
     <defName>RR_EnrichedFoods</defName>
     <label>RimRound enriched foods (opt in)</label>
+    <iconPath>UI/RimRoundIdeology/MealPortions</iconPath>
     <parent>Foods</parent>
   </ThingCategoryDef>
   <ThingCategoryDef>
     <defName>RR_ExceptionalFoods</defName>
     <label>exceptional products (Fantasy)</label>
+    <iconPath>Things/Item/GluttoniumFood/GluttoniumMeal</iconPath>
     <parent>RR_EnrichedFoods</parent>
   </ThingCategoryDef>
   <ThingCategoryDef>
     <defName>RR_MetabolicDrugs</defName>
     <label>RimRound metabolic drugs (explicit authorization)</label>
+    <iconPath>UI/Icons/ThingCategories/Drugs</iconPath>
     <parent>Drugs</parent>
   </ThingCategoryDef>
   <ThingCategoryDef>
     <defName>RR_ExceptionalDrugs</defName>
     <label>exceptional metabolic drugs (Fantasy)</label>
+    <iconPath>UI/Icons/ThingCategories/Drugs</iconPath>
     <parent>RR_MetabolicDrugs</parent>
   </ThingCategoryDef>
   <ThingCategoryDef>
     <defName>RR_SpecialistMaterials</defName>
     <label>RimRound specialist materials</label>
+    <iconPath>UI/Icons/ThingCategories/Manufactured</iconPath>
     <parent>Manufactured</parent>
   </ThingCategoryDef>
   <ThingCategoryDef>
     <defName>RR_EnrichedAnimalProducts</defName>
     <label>RimRound enriched animal products (opt in)</label>
+    <iconPath>UI/Icons/ThingCategories/AnimalProductRaw</iconPath>
     <parent>AnimalProductRaw</parent>
   </ThingCategoryDef>
   <ThingCategoryDef>
     <defName>RR_EnrichedMeat</defName>
     <label>RimRound enriched meat (opt in)</label>
+    <iconPath>UI/Icons/ThingCategories/MeatRaw</iconPath>
     <parent>MeatRaw</parent>
   </ThingCategoryDef>
   <ThingCategoryDef>
     <defName>RR_SupportApparel</defName>
     <label>RimRound support clothing</label>
+    <iconPath>Things/Item/Equipment/NovaTech/NOVATECH_JUMPSUIT</iconPath>
     <parent>Apparel</parent>
   </ThingCategoryDef>
   <ThingCategoryDef>
     <defName>RR_MobilityAids</defName>
     <label>RimRound mobility aids</label>
+    <iconPath>Things/Pawn/Humanlike/Apparel/Hoverchair/hoverchair</iconPath>
     <parent>ApparelUtility</parent>
   </ThingCategoryDef>
 </Defs>
