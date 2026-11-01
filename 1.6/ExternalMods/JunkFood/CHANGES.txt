@@ -1,0 +1,120 @@
+JUNK FOOD FOR THE CURRENT RIMROUND REWORK
+Changes from Oinky's supplied RimWorld 1.5 archive
+1 November 2026
+
+ORIGINAL CONTENT AND DOCUMENTATION
+
+Junk Food remains a separate optional mod by Oinky, using package ID Oinky.JunkFood.
+The original 93 foods, artwork, preview and retained sound asset are preserved.
+CREDITS.txt retains the original configuration and sound credits and links.
+Documentation/Original/About-1.5.xml is a byte-for-byte copy of the original
+About.xml, including its description, author, credits and old dependencies.
+The supplied archive contained no separate README, manual or licence text.
+That archived About.xml is historical documentation, not the active load order.
+
+RIMWORLD AND RIMROUND COMPATIBILITY
+
+- Updated for RimWorld 1.6 and the current RimRound rework with its companion DLL.
+- Harmony and RimRound are required. Load Junk Food after RimRound. RimRound
+  remains usable without Junk Food, and the add-on keeps its own Mods folder.
+- The old Randy Burger dependency is no longer required; native eating sounds
+  are used. Do not enable the old Junk Food package alongside this one.
+- The foods are ordinary edible food instead of social drugs, so RimRound can
+  recognise them for supported self-eating, shared meals, manual and bedside
+  feeding and feast food selection. Normal food and ingredient restrictions apply.
+- Corrected malformed legacy XML, missing/broken thoughts and recreation references.
+- Retained old food/recipe/chemical/gene identifiers for scoped save migration.
+  Retired obsolete junk-food addiction states without removing unrelated health
+  or chemical states. This does not certify every historical player save.
+
+FOOD, STOMACH SPACE AND WEIGHT
+
+- Preserves or improves the original food energy and calories per stomach space.
+  Densities range from 4x to 7.5x an ordinary meal.
+- RimRound accounts for useful food intake, digestion and energy balance. The
+  add-on does not apply a second instant weight-gain effect on top of that intake.
+- All food has at least four days before normal-temperature rot; freezing pauses
+  native rot. Opening a package preserves its remaining life and other metadata.
+- Snacks share a capped +3 taste memory; savoury meals use the normal fine-meal
+  memory. Recreation uses the existing Gluttonous tolerance rather than making
+  every brand a separate endlessly repeatable recreation source.
+
+CRAFTING
+
+- Junk Foods research costs 500. Cooking requirements range from skill 3 to 6.
+- All 189 production recipes are available at fueled and electric stoves;
+  drinks and frozen desserts also have 65 brewery entries.
+- Uses ordinary crops, milk, native chocolate and appropriate potatoes/meat/fish.
+  No extra flour, sugar, oil or cheese manufacturing chain is required.
+- Provides single and bulk production while preserving historical recipe IDs and
+  original output counts. Retired medical administration recipes remain inert
+  compatibility aliases rather than a second way to generate or administer food.
+
+PACKAGES AND COLLECTING FOOD
+
+- The 90 ordinary foods are ready to eat. Boxes, bags and wrappers in their art
+  do not require a separate opening job before a pawn collects or eats them.
+- Three larger packages can be opened into individual servings:
+    large cola bottle -> 6 individual colas
+    whole Pizza Pizza -> 4 slices
+    KitKat pile       -> 4 bars
+- A hungry colonist choosing food automatically opens one bulk package when
+  its servings are allowed by their food policy and there is reachable accepting
+  storage nearby. Normal food jobs then collect and eat the actual servings.
+- Haulers can prepare a serving stack for hungry residents, including patients,
+  so ordinary feeding jobs can collect it. Existing available servings are used
+  before another package is opened. This does not unpack the entire stockpile.
+- Right-click Open one remains available for manual preparation. That manual
+  order leaves servings nearby; normal hauling can put them into storage.
+- Packages remain edible if automatic preparation is unavailable. Food already
+  reserved or claimed by a feast is not replaced behind that job's back. Existing
+  inventory/caravan food and already-planned ritual servings retain their usual
+  behavior. No universal interception of every mod's feeding job is claimed.
+- Opening conserves nutrition, stomach volume and mass, and transfers age,
+  ingredients, poisoning, relative condition and infection ownership.
+  Opening does not award eaten calories, weight or craving progress.
+
+OPTIONAL SETTINGS AND SUPPLY
+
+- Enable Junk Food and Enable mild cravings are independent colony-saved options.
+- Turning content off stops new production, supply and junk recreation. Existing
+  food remains edible and existing packages can still be opened.
+- Mild adult cravings replace the old chemical addiction. The optional penalty
+  is -2 mood after a qualifying habit and 48 hours without a snack; abstinence
+  clears it. Disabling cravings clears the history immediately.
+- RimRound food traders carry rotating families of treats; gifts can include
+  them within their normal budget. Resource-pod cargo has a scoped 10% junk-food
+  branch; the mod does not increase the frequency of pod incidents.
+- Junk Food is excluded from RimRound's liquid-food processors because those
+  processors cannot currently preserve every food-specific eating effect.
+
+PAIRED RIMROUND UPDATE
+
+- The paired RimRound build enables the Body Perk Tree for new colonies.
+  Existing colonies retain their saved choice; no perks or points are granted.
+  Disabling the tree still preserves purchases, and Legacy uses its old perks.
+- Factory pawn eligibility is ages 18–200, with male, female, hostile, friendly,
+  prisoner and slave options enabled. Existing colony choices and user-defined
+  new-colony defaults remain respected. The old saved-max200-to1000 conversion
+  is removed. Resetting the Pawn eligibility page restores these factory values.
+- Missing icons are assigned for nine RimRound item categories. All existing
+  food, drug, equipment and body behaviour remains unchanged by that icon fix.
+- The refreshed manual showroom has its Body Perk Tree explicitly enabled and
+  all six eligibility switches enabled at ages 18–200.
+
+VERIFIED SCOPE
+
+The underlying Junk Food runtime was tested in RimWorld 1.6.4871 with Core and
+all five official DLCs using the recorded Harmony, VEF and HAR versions. Native
+checks covered actual crafting, manual package opening, individual self-eating,
+sharing, manual/bedside feeding, settings, selected legacy migration/reloads and
+a five-day finite-pantry comparison. All 93 foods passed the recorded feast
+selection predicates; this is not a new full ritual test with this add-on.
+
+The paired update's new automatic-package and default-setting results are
+recorded separately in Documentation/Pairing-Test-Results.txt.
+
+Direct whole-pizza/KitKat ingestion jobs, arbitrary mod lists,
+caravan consumption, fueled-stove/brewery crafting jobs and RimWorld 1.7 were not
+established by those tests. Keep only one copy of each mod and back up a colony
+before changing its mod list.

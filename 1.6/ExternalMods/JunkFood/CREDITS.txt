@@ -1,0 +1,16 @@
+Junk Food — original author: Oinky
+Original package identity: Oinky.JunkFood
+
+The original food artwork, preview and sound asset are retained from the supplied
+Junk Food archive. This update does not claim authorship of those assets.
+
+Original credits, retained from About.xml:
+Based off Config from Milkeshakes: Digital Deluxe Edition
+https://steamcommunity.com/sharedfiles/filedetails/?id=2595980371
+Soda can sounds and Config from Randy Burger - Fast Food set
+https://steamcommunity.com/sharedfiles/filedetails/?id=2437337542
+
+1.6 port and RimRound integration: prepared in the RimRound redesign workspace,
+November 2026. The update uses native eating sounds; Randy Burger is optional.
+Brand names belong to their respective owners; this mod is not affiliated with
+the food brands depicted in the original artwork.

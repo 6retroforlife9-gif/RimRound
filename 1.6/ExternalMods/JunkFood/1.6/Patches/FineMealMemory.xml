@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <!-- Native duration-based fallback is already Thought_Memory. The accepted
+       RimRound feast checker needs this explicit metadata for fractional meals.
+       Keep the vanilla thought ID, mood, replacements and any custom class. -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ThoughtDef[defName="AteFineMeal" and not(thoughtClass) and durationDays &gt; 0]</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/ThoughtDef[defName="AteFineMeal" and not(thoughtClass) and durationDays &gt; 0]</xpath>
+      <value><thoughtClass>RimWorld.Thought_Memory</thoughtClass></value>
+    </match>
+  </Operation>
+</Patch>

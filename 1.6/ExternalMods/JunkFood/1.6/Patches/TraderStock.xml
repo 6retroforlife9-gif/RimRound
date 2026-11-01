@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Patch>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/TraderKindDef[defName="RR_CaravanFoodSupplier"]/stockGenerators</xpath>
+    <value>
+      <li Class="Oinky.JunkFood.StockGenerator_JunkFood">
+        <orbital>false</orbital>
+      </li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/TraderKindDef[defName="RR_OrbitalFoodSupplier"]/stockGenerators</xpath>
+    <value>
+      <li Class="Oinky.JunkFood.StockGenerator_JunkFood">
+        <orbital>true</orbital>
+      </li>
+    </value>
+  </Operation>
+</Patch>

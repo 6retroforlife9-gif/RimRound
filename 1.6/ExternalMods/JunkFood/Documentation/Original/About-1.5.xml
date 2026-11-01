@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+	<name>Junk Food</name>
+	<author>Oinky</author>
+	<packageId>Oinky.JunkFood</packageId>
+	<url></url>
+	<supportedVersions>
+		<li>1.5</li>
+	</supportedVersions>
+        <modDependencies> 
+       <li> <packageId>RH2.Randy.Burger.Fast.Food</packageId>
+	<displayName>[RH2] Randy Burger - Fast Food set</displayName>
+         <steamWorkshopUrl>steam://url/CommunityFilePage/2437337542</steamWorkshopUrl> </li>
+       <li> <packageId>Niwatori401.RimRound</packageId>
+	<displayName>RimRound</displayName> 
+        <downloadUrl>https://github.com/Niwatori401/RimRound/tree/main</downloadUrl> 
+</li> 
+         </modDependencies> 
+	<loadAfter>
+		<li>Ludeon.RimWorld</li>
+		<li>Ludeon.RimWorld.Royalty</li>
+		<li>Ludeon.RimWorld.Ideology</li>
+		<li>Ludeon.RimWorld.Biotech</li>
+		<li>Ludeon.RimWorld.Anomaly</li>
+                <li>Niwatori401.RimRound</li>
+                <li>RH2.Randy.Burger.Fast.Food</li>
+	</loadAfter>
+	<description>
+The only thing I want to eat!
+
+
+Adds a wide variety of junk foods! I'll be adding more every once in a while!
+Please feel free to request more junk foods! 
+
+
+Junk Foods:
+
+- Coca Cola 
+- Fanta Orange
+- Slurm
+- Sprite
+- Pepsi
+- KitKats
+	- KitKat Original
+	- KitKat Chunky
+- Pocky
+	- Chocolate Pocky
+	- Green Tea Pocky
+	- Strawberry Pocky
+- Twinkies 
+And more! 
+
+Credits
+
+Based off Config from [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2595980371]Milkeshakes: Digital Deluxe Edition[/url]
+Soda can sounds and Config from [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2437337542]Randy Burger[/url]
+
+
+	</description>
+</ModMetaData>

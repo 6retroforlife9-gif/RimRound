@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- Inert reference identities for old Junk Food saves. No active chemical system. -->
+  <ChemicalDef>
+    <defName>junkfoodChem</defName>
+    <label>retired junk food chemical</label>
+    <addictionHediff>junkfoodAddiction</addictionHediff>
+    <toleranceHediff>junkfoodTolerance</toleranceHediff>
+    <canBinge>false</canBinge>
+    <canBeAddicted>false</canBeAddicted>
+    <generateAddictionGenes>false</generateAddictionGenes>
+    <onGeneratedAddictedToleranceChance>0</onGeneratedAddictedToleranceChance>
+  </ChemicalDef>
+  <HediffDef Name="Oinky_RetiredJunkFoodHediff" Abstract="True">
+    <hediffClass>HediffWithComps</hediffClass>
+    <description>This retired Junk Food chemical state is removed when the pawn loads.</description>
+    <isBad>false</isBad>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <stages><li><becomeVisible>false</becomeVisible></li></stages>
+  </HediffDef>
+  <HediffDef ParentName="Oinky_RetiredJunkFoodHediff">
+    <defName>junkfoodHigh</defName><label>retired sugar rush</label>
+  </HediffDef>
+  <HediffDef ParentName="Oinky_RetiredJunkFoodHediff">
+    <defName>junkfoodTolerance</defName><label>retired junk food tolerance</label>
+  </HediffDef>
+  <HediffDef ParentName="Oinky_RetiredJunkFoodHediff">
+    <defName>junkfoodAddiction</defName><label>retired junk food addiction</label>
+    <!-- Saved Hediff_Addiction instances need this nonnull identity while needs
+         are being constructed, before their pawn references finish loading. -->
+    <chemicalNeed>chemical_Junkfood</chemicalNeed>
+    <!-- Old runtime instances still index satisfied/withdrawal stages before
+         PostLoadInit removes them. Both compatibility slots are inert. -->
+    <stages Inherit="False">
+      <li><becomeVisible>false</becomeVisible></li>
+      <li><minSeverity>0.01</minSeverity><becomeVisible>false</becomeVisible></li>
+    </stages>
+  </HediffDef>
+  <NeedDef>
+    <defName>chemical_Junkfood</defName>
+    <label>retired junk food need</label>
+    <description>Inactive compatibility reference for an old Junk Food save.</description>
+    <needClass>Oinky.JunkFood.Need_JunkFoodLegacy</needClass>
+    <onlyIfCausedByHediff>true</onlyIfCausedByHediff>
+    <showOnNeedList>false</showOnNeedList>
+    <fallPerDay>0</fallPerDay>
+  </NeedDef>
+  <ThoughtDef>
+    <defName>junkfoodWithdrawal</defName>
+    <workerClass>Oinky.JunkFood.ThoughtWorker_JunkFoodLegacy</workerClass>
+    <validWhileDespawned>true</validWhileDespawned>
+    <stages><li><label>retired junk food withdrawal</label><baseMoodEffect>0</baseMoodEffect><visible>false</visible></li></stages>
+  </ThoughtDef>
+  <ThoughtDef MayRequire="Ludeon.RimWorld.Biotech">
+    <defName>GeneticChemicalDependency_junkfoodChem</defName>
+    <workerClass>Oinky.JunkFood.ThoughtWorker_JunkFoodLegacy</workerClass>
+    <validWhileDespawned>true</validWhileDespawned>
+    <stages><li><label>retired junk food dependency</label><baseMoodEffect>0</baseMoodEffect><visible>false</visible></li></stages>
+  </ThoughtDef>
+  <GeneDef Name="Oinky_RetiredJunkFoodGene" Abstract="True" MayRequire="Ludeon.RimWorld.Biotech">
+    <geneClass>Oinky.JunkFood.Gene_JunkFoodLegacy</geneClass>
+    <description>This former Junk Food chemical gene is inert. The reference remains valid in old pawns, genepacks and xenotypes.</description>
+    <labelShortAdj>retired junk food</labelShortAdj>
+    <iconPath>Things/Item/Resource/Oinky_KitKat/Oinky_KitKat_a</iconPath>
+    <chemical>junkfoodChem</chemical>
+    <selectionWeight>0</selectionWeight>
+    <canGenerateInGeneSet>false</canGenerateInGeneSet>
+    <biostatCpx>0</biostatCpx><biostatMet>0</biostatMet><biostatArc>0</biostatArc>
+  </GeneDef>
+  <GeneDef ParentName="Oinky_RetiredJunkFoodGene" MayRequire="Ludeon.RimWorld.Biotech">
+    <defName>ChemicalDependency_junkfoodChem</defName><label>retired junk food dependency</label>
+  </GeneDef>
+  <GeneDef ParentName="Oinky_RetiredJunkFoodGene" MayRequire="Ludeon.RimWorld.Biotech">
+    <defName>AddictionResistant_junkfoodChem</defName><label>retired junk food resistance</label>
+  </GeneDef>
+  <GeneDef ParentName="Oinky_RetiredJunkFoodGene" MayRequire="Ludeon.RimWorld.Biotech">
+    <defName>AddictionImmune_junkfoodChem</defName><label>retired junk food immunity</label>
+  </GeneDef>
+</Defs>

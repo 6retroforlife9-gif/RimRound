@@ -1,0 +1,67 @@
+PAIRED RIMROUND / JUNK FOOD FOLLOW-UP TESTS
+1 November 2026
+
+Tested on RimWorld 1.6.4871 rev591, with Core alone and with all five official
+DLCs. Both profiles included the pinned Harmony, Humanoid Alien Races and Vanilla
+Expanded Framework dependencies. Protected copies of the accepted test colony
+were used; raids, animals, hostile pawns and other saved test hazards were blocked.
+
+AUTOMATIC PACKAGES
+
+- Actual hunger scheduling chose an opening job, produced stored individual
+  servings, and then collected and ate those servings for large cola, KitKat piles
+  and whole pizza. Both Maintain and Gain were exercised. Gain consumed four bars
+  together, demonstrating real stack pickup and intake.
+- A fed hauler independently prepared cola for a hungry pawn in their own bed.
+  The existing manual feeding command then collected and fed the opened drinks.
+  The AllDlc case served four drinks; the Core case served five. The helper did
+  not eat them. This verifies autonomous preparation and actual ordered feeding,
+  rather than claiming a new autonomous feeding scheduler.
+- Real save/reload during the opening delay resumed the same job, with the
+  original package still intact and no duplicated intake or opening transaction.
+- Blocking storage or disallowing the child food while opening was underway
+  stopped preparation without losing the package. Native eating then used the
+  ordinary whole-package fallback. A bounded retry deadline prevented immediate
+  reopening loops. Useful intake plus waste matched the food actually removed.
+- Direct paused checks covered the 90 unchanged ready-to-eat foods, child food
+  policy, native reservations, existing-serving preference and quantity, a
+  logical feast claim, storage denial, and the suppressed-food-need boundary.
+- Each package pair was checked at source counts one and two, including content
+  disabled. Nutrition, stomach volume, mass, remaining rot time, ingredients,
+  poison, relative condition and optional Anomaly infection ownership were kept.
+  Opening itself awarded no intake credit.
+
+Core testing initially chose a Builder whose native backstory forbids hauling.
+The run stopped before that case; its previous food/reload cases had passed.
+The remaining case resumed from the saved checkpoint with an existing capable
+Cook. No colony was regenerated and no pawn capabilities were changed.
+
+DEFAULT SETTINGS
+
+Production new-game/new-world initializer diagnostics and the actual settings-page
+reset gave Body Perk Tree enabled and eligibility ages 18-200/all six switches
+enabled. These diagnostics do not claim a full new-colony generation playthrough.
+Real saves/reloads retained enabled choices and deliberate saved opt-outs/custom
+age limits. An old max200 save remained200. Legacy keeps the new tree dormant.
+All ten RimRound category icons resolved to valid native textures.
+
+SCOPE
+
+These focused checks supplement the previous crafting, food accounting, feeding,
+legacy migration and pantry tests. The original 93 foods, 189 production recipes,
+three package relationships and all 282 supplied art/sound files were verified.
+No food balance or recipe change was introduced by this follow-up.
+
+This is not universal compatibility certification. A real feast with this add-on,
+automatic opening within already-claimed ritual allocations, caravan opening,
+arbitrary mod lists, a VRE Android-specific opening playthrough, a post-commit
+opening reload, and RimWorld 1.7 remain outside these focused checks. The bedside
+test used a sleeping pawn, not a new downed-pawn scenario. The claim and suppressed
+metabolism checks were explicit diagnostics, not full ritual/Android playthroughs.
+Whole-cola fallback was played; direct whole-pizza/KitKat ingestion was not.
+
+Workspace evidence: docs/JUNK_FOOD_PAIRING_RESULTS.md and
+artifacts/paired-junk-food-20261101/run01/.
+Native runs: pair-defaults02; pair-auto01; pair-auto02 (partial fixture failure)
+and its corrected remaining case pair-auto03. The final add-on differs from the
+tested add-on03 only in its added documentation and manifest.

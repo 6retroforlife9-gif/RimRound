@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+  <name>Junk Food</name>
+  <author>Oinky</author>
+  <packageId>Oinky.JunkFood</packageId>
+  <supportedVersions><li>1.6</li></supportedVersions>
+  <modDependencies>
+    <li><packageId>brrainz.harmony</packageId><displayName>Harmony</displayName><steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=2009463077</steamWorkshopUrl></li>
+    <li><packageId>Niwatori401.RimRound</packageId><displayName>RimRound (current redesign)</displayName><downloadUrl>https://github.com/Niwatori401/RimRound/tree/main</downloadUrl></li>
+  </modDependencies>
+  <loadAfter>
+    <li>brrainz.harmony</li>
+    <li>Niwatori401.RimRound</li>
+    <li>Ludeon.RimWorld.Royalty</li>
+    <li>Ludeon.RimWorld.Ideology</li>
+    <li>Ludeon.RimWorld.Biotech</li>
+    <li>Ludeon.RimWorld.Anomaly</li>
+    <li>Ludeon.RimWorld.Odyssey</li>
+  </loadAfter>
+  <description>Oinky's 93 snacks, sweets, drinks and rich meals, updated for RimWorld 1.6 and the current RimRound redesign.
+
+Make them at a fueled or electric stove using ordinary crops, milk and chocolate. Drinks and frozen desserts can also be prepared at a brewery. Unlock the 500-point Junk Foods research; Cooking requirements range from 3 to 6. Every food lasts at least four days before rotting at normal temperatures.
+
+Dense foods provide substantial nutrition in less stomach space. RimRound owns digestion and weight gain. Optional mild cravings and a master content switch are saved with each colony, under Options → Mod settings → Junk Food. Disabling the content stops new production and supply; existing food remains edible.
+
+RimRound food traders carry a rotating selection. Their gifts can include treats, and occasional resource pods contain junk-food cargo. Large cola bottles, whole pizzas and KitKat piles can be opened into individual servings by selecting a colonist and right-clicking the package.
+
+Original art and content: Oinky. Original configuration credits: Milkeshakes: Digital Deluxe Edition; Randy Burger - Fast Food set. This update uses native eating sounds and does not require Randy Burger. See CREDITS.txt for the original credit links.
+
+Development candidate: compatibility and balance playtesting remain required. Supports the current RimRound redesign API, not the legacy upstream RimRound release.</description>
+</ModMetaData>

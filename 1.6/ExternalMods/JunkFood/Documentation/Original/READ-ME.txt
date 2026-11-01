@@ -1,0 +1,12 @@
+ORIGINAL JUNK FOOD DOCUMENTATION
+
+About-1.5.xml is preserved byte-for-byte from About/About.xml in the two-volume
+Junk Food archive supplied in Downloads. It contains Oinky's original description,
+author name, credits, links and RimWorld 1.5 dependency information.
+
+The original archive had no separate README, manual or licence text. This copy
+preserves the supplied documentation; it is not a replacement licence or a claim
+that the old dependency list describes the updated 1.6 package.
+
+For the current installation, use the active About/About.xml, README.md,
+CREDITS.txt and CHANGES.txt in the updated Junk Food folder.

@@ -1,0 +1,21 @@
+RimRound integration - 1 November 2026
+
+Junk Food is now included inside the RimRound rework. Enabling RimRound supplies
+the 93 foods, 189 recipes, Junk Foods research, textures, sounds and existing
+automatic package-opening behavior without a separate Junk Food download.
+
+Original content and artwork remain credited to Oinky and the contributors in
+CREDITS.txt. The original documentation and earlier update records are retained.
+
+Food definitions, recipe IDs, assembly identity and saved colony settings retain
+their existing names. The Junk Food settings page remains available under Mod
+options, with the existing content and mild-cravings controls.
+
+When the separate Oinky.JunkFood package is enabled, RimRound skips its embedded
+copy so the game loads only one implementation. Use the bundled version for the
+current rework. This guard does not update an obsolete standalone package.
+
+The integration does not change food nutrition, stomach volume, ingredients,
+weight accounting, research costs or recipe outputs. RimRound continues to own
+digestion and body changes. Original saved content remains identified by the
+same Def names and component types.

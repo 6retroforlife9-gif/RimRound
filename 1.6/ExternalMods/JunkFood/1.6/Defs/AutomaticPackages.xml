@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <JobDef>
+    <defName>Oinky_AutoOpenPackage</defName>
+    <driverClass>Oinky.JunkFood.JobDriver_AutoOpenPackage</driverClass>
+    <reportString>Opening TargetA into individual servings.</reportString>
+    <casualInterruptible>true</casualInterruptible>
+  </JobDef>
+  <WorkGiverDef>
+    <defName>Oinky_OpenFoodPackages</defName>
+    <label>open food packages</label>
+    <giverClass>Oinky.JunkFood.WorkGiver_OpenJunkFoodPackage</giverClass>
+    <workType>Hauling</workType>
+    <priorityInType>55</priorityInType>
+    <verb>open</verb>
+    <gerund>opening food packages</gerund>
+    <requiredCapacities>
+      <li>Manipulation</li>
+      <li>Moving</li>
+    </requiredCapacities>
+  </WorkGiverDef>
+</Defs>

@@ -1,0 +1,2514 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Defs>
+  <RecipeDef>
+    <defName>Administer_Oinky_BananaChubby</defName>
+    <label>administer "Go Bananas" Chubby (retired)</label>
+    <description>Retained for old medical bills. Junk food is now ordinary food and is served through feeding jobs.</description>
+    <workerClass>Oinky.JunkFood.Recipe_JunkFoodLegacy</workerClass>
+    <recipeUsers />
+    <workAmount>600</workAmount>
+    <workSkill>Medicine</workSkill>
+    <modExtensions>
+      <li Class="Oinky.JunkFood.LegacyJunkFoodRecipeExtension" />
+    </modExtensions>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Oinky_BananaChubby</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Oinky_BananaChubby</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+  </RecipeDef>
+  <RecipeDef>
+    <defName>Administer_Oinky_Aero</defName>
+    <label>administer Aero (retired)</label>
+    <description>Retained for old medical bills. Junk food is now ordinary food and is served through feeding jobs.</description>
+    <workerClass>Oinky.JunkFood.Recipe_JunkFoodLegacy</workerClass>
+    <recipeUsers />
+    <workAmount>600</workAmount>
+    <workSkill>Medicine</workSkill>
+    <modExtensions>
+      <li Class="Oinky.JunkFood.LegacyJunkFoodRecipeExtension" />
+    </modExtensions>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Oinky_Aero</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Oinky_Aero</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+  </RecipeDef>
+  <RecipeDef>
+    <defName>Administer_Oinky_AhCaramel</defName>
+    <label>administer Ah Caramel (retired)</label>
+    <description>Retained for old medical bills. Junk food is now ordinary food and is served through feeding jobs.</description>
+    <workerClass>Oinky.JunkFood.Recipe_JunkFoodLegacy</workerClass>
+    <recipeUsers />
+    <workAmount>600</workAmount>
+    <workSkill>Medicine</workSkill>
+    <modExtensions>
+      <li Class="Oinky.JunkFood.LegacyJunkFoodRecipeExtension" />
+    </modExtensions>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Oinky_AhCaramel</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Oinky_AhCaramel</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+  </RecipeDef>
+  <RecipeDef>
+    <defName>Administer_Oinky_LaffyTaffyBanana</defName>
+    <label>administer Banana Laffy Taffy (retired)</label>
+    <description>Retained for old medical bills. Junk food is now ordinary food and is served through feeding jobs.</description>
+    <workerClass>Oinky.JunkFood.Recipe_JunkFoodLegacy</workerClass>
+    <recipeUsers />
+    <workAmount>600</workAmount>
+    <workSkill>Medicine</workSkill>
+    <modExtensions>
+      <li Class="Oinky.JunkFood.LegacyJunkFoodRecipeExtension" />
+    </modExtensions>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Oinky_LaffyTaffyBanana</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Oinky_LaffyTaffyBanana</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+  </RecipeDef>
+  <RecipeDef>
+    <defName>Administer_Oinky_LaffyTaffyBlueRaspberry</defName>
+    <label>administer Blue Raspberry Laffy Taffy (retired)</label>
+    <description>Retained for old medical bills. Junk food is now ordinary food and is served through feeding jobs.</description>
+    <workerClass>Oinky.JunkFood.Recipe_JunkFoodLegacy</workerClass>
+    <recipeUsers />
+    <workAmount>600</workAmount>
+    <workSkill>Medicine</workSkill>
+    <modExtensions>
+      <li Class="Oinky.JunkFood.LegacyJunkFoodRecipeExtension" />
+    </modExtensions>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Oinky_LaffyTaffyBlueRaspberry</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Oinky_LaffyTaffyBlueRaspberry</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+  </RecipeDef>
+  <RecipeDef>
+    <defName>Administer_Oinky_BlueberryChubby</defName>
+    <label>administer Blueberry Blast Chubby (retired)</label>
+    <description>Retained for old medical bills. Junk food is now ordinary food and is served through feeding jobs.</description>
+    <workerClass>Oinky.JunkFood.Recipe_JunkFoodLegacy</workerClass>
+    <recipeUsers />
+    <workAmount>600</workAmount>
+    <workSkill>Medicine</workSkill>
+    <modExtensions>
+      <li Class="Oinky.JunkFood.LegacyJunkFoodRecipeExtension" />
+    </modExtensions>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Oinky_BlueberryChubby</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Oinky_BlueberryChubby</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+  </RecipeDef>
+  <RecipeDef>
+    <defName>Administer_Oinky_PoptartBlueberry</defName>
+    <label>administer Blueberry Poptart (retired)</label>
+    <description>Retained for old medical bills. Junk food is now ordinary food and is served through feeding jobs.</description>
+    <workerClass>Oinky.JunkFood.Recipe_JunkFoodLegacy</workerClass>
+    <recipeUsers />
+    <workAmount>600</workAmount>
+    <workSkill>Medicine</workSkill>
+    <modExtensions>
+      <li Class="Oinky.JunkFood.LegacyJunkFoodRecipeExtension" />
+    </modExtensions>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Oinky_PoptartBlueberry</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Oinky_PoptartBlueberry</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+  </RecipeDef>
+  <RecipeDef>
+    <defName>Administer_Oinky_IceeBlueberryRaspberry</defName>
+    <label>administer Blueberry Raspberry Icee (retired)</label>
+    <description>Retained for old medical bills. Junk food is now ordinary food and is served through feeding jobs.</description>
+    <workerClass>Oinky.JunkFood.Recipe_JunkFoodLegacy</workerClass>
+    <recipeUsers />
+    <workAmount>600</workAmount>
+    <workSkill>Medicine</workSkill>
+    <modExtensions>
+      <li Class="Oinky.JunkFood.LegacyJunkFoodRecipeExtension" />
+    </modExtensions>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Oinky_IceeBlueberryRaspberry</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Oinky_IceeBlueberryRaspberry</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+  </RecipeDef>
+  <RecipeDef>
+    <defName>Administer_Oinky_CanadaDry</defName>
+    <label>administer Canada Dry (retired)</label>
+    <description>Retained for old medical bills. Junk food is now ordinary food and is served through feeding jobs.</description>
+    <workerClass>Oinky.JunkFood.Recipe_JunkFoodLegacy</workerClass>
+    <recipeUsers />
+    <workAmount>600</workAmount>
+    <workSkill>Medicine</workSkill>
+    <modExtensions>
+      <li Class="Oinky.JunkFood.LegacyJunkFoodRecipeExtension" />
+    </modExtensions>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Oinky_CanadaDry</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Oinky_CanadaDry</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+  </RecipeDef>
+  <RecipeDef>
+    <defName>Administer_Oinky_CaptainCrunchBerries</defName>
+    <label>administer Cap'n Crunch Berries (retired)</label>
+    <description>Retained for old medical bills. Junk food is now ordinary food and is served through feeding jobs.</description>
+    <workerClass>Oinky.JunkFood.Recipe_JunkFoodLegacy</workerClass>
+    <recipeUsers />
+    <workAmount>600</workAmount>
+    <workSkill>Medicine</workSkill>
+    <modExtensions>
+      <li Class="Oinky.JunkFood.LegacyJunkFoodRecipeExtension" />
+    </modExtensions>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Oinky_CaptainCrunchBerries</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Oinky_CaptainCrunchBerries</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+  </RecipeDef>
+  <RecipeDef>
+    <defName>Administer_Oinky_Caramilk</defName>
+    <label>administer Caramilk (retired)</label>
+    <description>Retained for old medical bills. Junk food is now ordinary food and is served through feeding jobs.</description>
+    <workerClass>Oinky.JunkFood.Recipe_JunkFoodLegacy</workerClass>
+    <recipeUsers />
+    <workAmount>600</workAmount>
+    <workSkill>Medicine</workSkill>
+    <modExtensions>
+      <li Class="Oinky.JunkFood.LegacyJunkFoodRecipeExtension" />
+    </modExtensions>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Oinky_Caramilk</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Oinky_Caramilk</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+  </RecipeDef>
+  <RecipeDef>
+    <defName>Administer_Oinky_Cheetos</defName>
+    <label>administer Cheetos (retired)</label>
+    <description>Retained for old medical bills. Junk food is now ordinary food and is served through feeding jobs.</description>
+    <workerClass>Oinky.JunkFood.Recipe_JunkFoodLegacy</workerClass>
+    <recipeUsers />
+    <workAmount>600</workAmount>
+    <workSkill>Medicine</workSkill>
+    <modExtensions>
+      <li Class="Oinky.JunkFood.LegacyJunkFoodRecipeExtension" />
+    </modExtensions>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Oinky_Cheetos</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Oinky_Cheetos</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+  </RecipeDef>
+  <RecipeDef>
+    <defName>Administer_Oinky_GordonRamsayMacNCheese</defName>
+    <label>administer Chef Ramsay Four Macaroni Cheese (retired)</label>
+    <description>Retained for old medical bills. Junk food is now ordinary food and is served through feeding jobs.</description>
+    <workerClass>Oinky.JunkFood.Recipe_JunkFoodLegacy</workerClass>
+    <recipeUsers />
+    <workAmount>600</workAmount>
+    <workSkill>Medicine</workSkill>
+    <modExtensions>
+      <li Class="Oinky.JunkFood.LegacyJunkFoodRecipeExtension" />
+    </modExtensions>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Oinky_GordonRamsayMacNCheese</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Oinky_GordonRamsayMacNCheese</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+  </RecipeDef>
+  <RecipeDef>
+    <defName>Administer_Oinky_CherryCoke</defName>
+    <label>administer Cherry Coke (retired)</label>
+    <description>Retained for old medical bills. Junk food is now ordinary food and is served through feeding jobs.</description>
+    <workerClass>Oinky.JunkFood.Recipe_JunkFoodLegacy</workerClass>
+    <recipeUsers />
+    <workAmount>600</workAmount>
+    <workSkill>Medicine</workSkill>
+    <modExtensions>
+      <li Class="Oinky.JunkFood.LegacyJunkFoodRecipeExtension" />
+    </modExtensions>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Oinky_CherryCoke</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Oinky_CherryCoke</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+  </RecipeDef>
+  <RecipeDef>
+    <defName>Administer_Oinky_LaffyTaffyCherry</defName>
+    <label>administer Cherry Laffy Taffy (retired)</label>
+    <description>Retained for old medical bills. Junk food is now ordinary food and is served through feeding jobs.</description>
+    <workerClass>Oinky.JunkFood.Recipe_JunkFoodLegacy</workerClass>
+    <recipeUsers />
+    <workAmount>600</workAmount>
+    <workSkill>Medicine</workSkill>
+    <modExtensions>
+      <li Class="Oinky.JunkFood.LegacyJunkFoodRecipeExtension" />
+    </modExtensions>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Oinky_LaffyTaffyCherry</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Oinky_LaffyTaffyCherry</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+  </RecipeDef>
+  <RecipeDef>
+    <defName>Administer_Oinky_ChipsAhoy</defName>
+    <label>administer Chips Ahoy (retired)</label>
+    <description>Retained for old medical bills. Junk food is now ordinary food and is served through feeding jobs.</description>
+    <workerClass>Oinky.JunkFood.Recipe_JunkFoodLegacy</workerClass>
+    <recipeUsers />
+    <workAmount>600</workAmount>
+    <workSkill>Medicine</workSkill>
+    <modExtensions>
+      <li Class="Oinky.JunkFood.LegacyJunkFoodRecipeExtension" />
+    </modExtensions>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Oinky_ChipsAhoy</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Oinky_ChipsAhoy</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+  </RecipeDef>
+  <RecipeDef>
+    <defName>Administer_Oinky_FreakshakeChocolateChip</defName>
+    <label>administer Chocolate Chip Freakshake (retired)</label>
+    <description>Retained for old medical bills. Junk food is now ordinary food and is served through feeding jobs.</description>
+    <workerClass>Oinky.JunkFood.Recipe_JunkFoodLegacy</workerClass>
+    <recipeUsers />
+    <workAmount>600</workAmount>
+    <workSkill>Medicine</workSkill>
+    <modExtensions>
+      <li Class="Oinky.JunkFood.LegacyJunkFoodRecipeExtension" />
+    </modExtensions>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Oinky_FreakshakeChocolateChip</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Oinky_FreakshakeChocolateChip</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+  </RecipeDef>
+  <RecipeDef>
+    <defName>Administer_Oinky_CocaCola</defName>
+    <label>administer Coca-Cola (retired)</label>
+    <description>Retained for old medical bills. Junk food is now ordinary food and is served through feeding jobs.</description>
+    <workerClass>Oinky.JunkFood.Recipe_JunkFoodLegacy</workerClass>
+    <recipeUsers />
+    <workAmount>600</workAmount>
+    <workSkill>Medicine</workSkill>
+    <modExtensions>
+      <li Class="Oinky.JunkFood.LegacyJunkFoodRecipeExtension" />
+    </modExtensions>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Oinky_CocaCola</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Oinky_CocaCola</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+  </RecipeDef>
+  <RecipeDef>
+    <defName>Administer_Oinky_LargeCoke</defName>
+    <label>administer Coke (2L Bottle) (retired)</label>
+    <description>Retained for old medical bills. Junk food is now ordinary food and is served through feeding jobs.</description>
+    <workerClass>Oinky.JunkFood.Recipe_JunkFoodLegacy</workerClass>
+    <recipeUsers />
+    <workAmount>600</workAmount>
+    <workSkill>Medicine</workSkill>
+    <modExtensions>
+      <li Class="Oinky.JunkFood.LegacyJunkFoodRecipeExtension" />
+    </modExtensions>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Oinky_LargeCoke</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Oinky_LargeCoke</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+  </RecipeDef>
+  <RecipeDef>
+    <defName>Administer_Oinky_IceeCola</defName>
+    <label>administer Cola Icee (retired)</label>
+    <description>Retained for old medical bills. Junk food is now ordinary food and is served through feeding jobs.</description>
+    <workerClass>Oinky.JunkFood.Recipe_JunkFoodLegacy</workerClass>
+    <recipeUsers />
+    <workAmount>600</workAmount>
+    <workSkill>Medicine</workSkill>
+    <modExtensions>
+      <li Class="Oinky.JunkFood.LegacyJunkFoodRecipeExtension" />
+    </modExtensions>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Oinky_IceeCola</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Oinky_IceeCola</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+  </RecipeDef>
+  <RecipeDef>
+    <defName>Administer_Oinky_CosmicBrownie</defName>
+    <label>administer Cosmic Brownie (retired)</label>
+    <description>Retained for old medical bills. Junk food is now ordinary food and is served through feeding jobs.</description>
+    <workerClass>Oinky.JunkFood.Recipe_JunkFoodLegacy</workerClass>
+    <recipeUsers />
+    <workAmount>600</workAmount>
+    <workSkill>Medicine</workSkill>
+    <modExtensions>
+      <li Class="Oinky.JunkFood.LegacyJunkFoodRecipeExtension" />
+    </modExtensions>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Oinky_CosmicBrownie</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Oinky_CosmicBrownie</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+  </RecipeDef>
+  <RecipeDef>
+    <defName>Administer_Oinky_FreakshakeCottonCandy</defName>
+    <label>administer Cotton Candy Freakshake (retired)</label>
+    <description>Retained for old medical bills. Junk food is now ordinary food and is served through feeding jobs.</description>
+    <workerClass>Oinky.JunkFood.Recipe_JunkFoodLegacy</workerClass>
+    <recipeUsers />
+    <workAmount>600</workAmount>
+    <workSkill>Medicine</workSkill>
+    <modExtensions>
+      <li Class="Oinky.JunkFood.LegacyJunkFoodRecipeExtension" />
+    </modExtensions>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Oinky_FreakshakeCottonCandy</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Oinky_FreakshakeCottonCandy</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+  </RecipeDef>
+  <RecipeDef>
+    <defName>Administer_Oinky_CrackerJack</defName>
+    <label>administer Cracker Jack (retired)</label>
+    <description>Retained for old medical bills. Junk food is now ordinary food and is served through feeding jobs.</description>
+    <workerClass>Oinky.JunkFood.Recipe_JunkFoodLegacy</workerClass>
+    <recipeUsers />
+    <workAmount>600</workAmount>
+    <workSkill>Medicine</workSkill>
+    <modExtensions>
+      <li Class="Oinky.JunkFood.LegacyJunkFoodRecipeExtension" />
+    </modExtensions>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Oinky_CrackerJack</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Oinky_CrackerJack</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+  </RecipeDef>
+  <RecipeDef>
+    <defName>Administer_Oinky_CreamSodaChubby</defName>
+    <label>administer Cream Scream Chubby (retired)</label>
+    <description>Retained for old medical bills. Junk food is now ordinary food and is served through feeding jobs.</description>
+    <workerClass>Oinky.JunkFood.Recipe_JunkFoodLegacy</workerClass>
+    <recipeUsers />
+    <workAmount>600</workAmount>
+    <workSkill>Medicine</workSkill>
+    <modExtensions>
+      <li Class="Oinky.JunkFood.LegacyJunkFoodRecipeExtension" />
+    </modExtensions>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Oinky_CreamSodaChubby</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Oinky_CreamSodaChubby</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+  </RecipeDef>
+  <RecipeDef>
+    <defName>Administer_Oinky_CrunchBar</defName>
+    <label>administer Crunch Bar (retired)</label>
+    <description>Retained for old medical bills. Junk food is now ordinary food and is served through feeding jobs.</description>
+    <workerClass>Oinky.JunkFood.Recipe_JunkFoodLegacy</workerClass>
+    <recipeUsers />
+    <workAmount>600</workAmount>
+    <workSkill>Medicine</workSkill>
+    <modExtensions>
+      <li Class="Oinky.JunkFood.LegacyJunkFoodRecipeExtension" />
+    </modExtensions>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Oinky_CrunchBar</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Oinky_CrunchBar</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+  </RecipeDef>
+  <RecipeDef>
+    <defName>Administer_Oinky_Doritos</defName>
+    <label>administer Doritos (retired)</label>
+    <description>Retained for old medical bills. Junk food is now ordinary food and is served through feeding jobs.</description>
+    <workerClass>Oinky.JunkFood.Recipe_JunkFoodLegacy</workerClass>
+    <recipeUsers />
+    <workAmount>600</workAmount>
+    <workSkill>Medicine</workSkill>
+    <modExtensions>
+      <li Class="Oinky.JunkFood.LegacyJunkFoodRecipeExtension" />
+    </modExtensions>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Oinky_Doritos</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Oinky_Doritos</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+  </RecipeDef>
+  <RecipeDef>
+    <defName>Administer_Oinky_Dunkaroos</defName>
+    <label>administer Dunkaroos (retired)</label>
+    <description>Retained for old medical bills. Junk food is now ordinary food and is served through feeding jobs.</description>
+    <workerClass>Oinky.JunkFood.Recipe_JunkFoodLegacy</workerClass>
+    <recipeUsers />
+    <workAmount>600</workAmount>
+    <workSkill>Medicine</workSkill>
+    <modExtensions>
+      <li Class="Oinky.JunkFood.LegacyJunkFoodRecipeExtension" />
+    </modExtensions>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Oinky_Dunkaroos</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Oinky_Dunkaroos</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+  </RecipeDef>
+  <RecipeDef>
+    <defName>Administer_Oinky_EvergreenBubbleTea</defName>
+    <label>administer Evergreen Brown Sugar Bubble Tea (retired)</label>
+    <description>Retained for old medical bills. Junk food is now ordinary food and is served through feeding jobs.</description>
+    <workerClass>Oinky.JunkFood.Recipe_JunkFoodLegacy</workerClass>
+    <recipeUsers />
+    <workAmount>600</workAmount>
+    <workSkill>Medicine</workSkill>
+    <modExtensions>
+      <li Class="Oinky.JunkFood.LegacyJunkFoodRecipeExtension" />
+    </modExtensions>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Oinky_EvergreenBubbleTea</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Oinky_EvergreenBubbleTea</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+  </RecipeDef>
+  <RecipeDef>
+    <defName>Administer_Oinky_FantaOrange</defName>
+    <label>administer Fanta Orange (retired)</label>
+    <description>Retained for old medical bills. Junk food is now ordinary food and is served through feeding jobs.</description>
+    <workerClass>Oinky.JunkFood.Recipe_JunkFoodLegacy</workerClass>
+    <recipeUsers />
+    <workAmount>600</workAmount>
+    <workSkill>Medicine</workSkill>
+    <modExtensions>
+      <li Class="Oinky.JunkFood.LegacyJunkFoodRecipeExtension" />
+    </modExtensions>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Oinky_FantaOrange</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Oinky_FantaOrange</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+  </RecipeDef>
+  <RecipeDef>
+    <defName>Administer_Oinky_FerreroRocher</defName>
+    <label>administer Ferrero Rocher (retired)</label>
+    <description>Retained for old medical bills. Junk food is now ordinary food and is served through feeding jobs.</description>
+    <workerClass>Oinky.JunkFood.Recipe_JunkFoodLegacy</workerClass>
+    <recipeUsers />
+    <workAmount>600</workAmount>
+    <workSkill>Medicine</workSkill>
+    <modExtensions>
+      <li Class="Oinky.JunkFood.LegacyJunkFoodRecipeExtension" />
+    </modExtensions>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Oinky_FerreroRocher</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Oinky_FerreroRocher</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+  </RecipeDef>
+  <RecipeDef>
+    <defName>Administer_Oinky_CheetosFlamingHotCrunchy</defName>
+    <label>administer Flamin' Hot Crunchy Cheetos (retired)</label>
+    <description>Retained for old medical bills. Junk food is now ordinary food and is served through feeding jobs.</description>
+    <workerClass>Oinky.JunkFood.Recipe_JunkFoodLegacy</workerClass>
+    <recipeUsers />
+    <workAmount>600</workAmount>
+    <workSkill>Medicine</workSkill>
+    <modExtensions>
+      <li Class="Oinky.JunkFood.LegacyJunkFoodRecipeExtension" />
+    </modExtensions>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Oinky_CheetosFlamingHotCrunchy</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Oinky_CheetosFlamingHotCrunchy</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+  </RecipeDef>
+  <RecipeDef>
+    <defName>Administer_Oinky_FruitbytheFoot</defName>
+    <label>administer Fruit by the Foot (retired)</label>
+    <description>Retained for old medical bills. Junk food is now ordinary food and is served through feeding jobs.</description>
+    <workerClass>Oinky.JunkFood.Recipe_JunkFoodLegacy</workerClass>
+    <recipeUsers />
+    <workAmount>600</workAmount>
+    <workSkill>Medicine</workSkill>
+    <modExtensions>
+      <li Class="Oinky.JunkFood.LegacyJunkFoodRecipeExtension" />
+    </modExtensions>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Oinky_FruitbytheFoot</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Oinky_FruitbytheFoot</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+  </RecipeDef>
+  <RecipeDef>
+    <defName>Administer_Oinky_IceeFruitPunch</defName>
+    <label>administer Fruit Punch Icee (retired)</label>
+    <description>Retained for old medical bills. Junk food is now ordinary food and is served through feeding jobs.</description>
+    <workerClass>Oinky.JunkFood.Recipe_JunkFoodLegacy</workerClass>
+    <recipeUsers />
+    <workAmount>600</workAmount>
+    <workSkill>Medicine</workSkill>
+    <modExtensions>
+      <li Class="Oinky.JunkFood.LegacyJunkFoodRecipeExtension" />
+    </modExtensions>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Oinky_IceeFruitPunch</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Oinky_IceeFruitPunch</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+  </RecipeDef>
+  <RecipeDef>
+    <defName>Administer_Oinky_FruitRollUp</defName>
+    <label>administer Fruit Roll-up (retired)</label>
+    <description>Retained for old medical bills. Junk food is now ordinary food and is served through feeding jobs.</description>
+    <workerClass>Oinky.JunkFood.Recipe_JunkFoodLegacy</workerClass>
+    <recipeUsers />
+    <workAmount>600</workAmount>
+    <workSkill>Medicine</workSkill>
+    <modExtensions>
+      <li Class="Oinky.JunkFood.LegacyJunkFoodRecipeExtension" />
+    </modExtensions>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Oinky_FruitRollUp</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Oinky_FruitRollUp</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+  </RecipeDef>
+  <RecipeDef>
+    <defName>Administer_Oinky_Caplico</defName>
+    <label>administer Giant Strawberry Caplico (retired)</label>
+    <description>Retained for old medical bills. Junk food is now ordinary food and is served through feeding jobs.</description>
+    <workerClass>Oinky.JunkFood.Recipe_JunkFoodLegacy</workerClass>
+    <recipeUsers />
+    <workAmount>600</workAmount>
+    <workSkill>Medicine</workSkill>
+    <modExtensions>
+      <li Class="Oinky.JunkFood.LegacyJunkFoodRecipeExtension" />
+    </modExtensions>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Oinky_Caplico</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Oinky_Caplico</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+  </RecipeDef>
+  <RecipeDef>
+    <defName>Administer_Oinky_Gushers</defName>
+    <label>administer Gushers (retired)</label>
+    <description>Retained for old medical bills. Junk food is now ordinary food and is served through feeding jobs.</description>
+    <workerClass>Oinky.JunkFood.Recipe_JunkFoodLegacy</workerClass>
+    <recipeUsers />
+    <workAmount>600</workAmount>
+    <workSkill>Medicine</workSkill>
+    <modExtensions>
+      <li Class="Oinky.JunkFood.LegacyJunkFoodRecipeExtension" />
+    </modExtensions>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Oinky_Gushers</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Oinky_Gushers</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+  </RecipeDef>
+  <RecipeDef>
+    <defName>Administer_Oinky_HappyCola</defName>
+    <label>administer Haribo Happy Cola (retired)</label>
+    <description>Retained for old medical bills. Junk food is now ordinary food and is served through feeding jobs.</description>
+    <workerClass>Oinky.JunkFood.Recipe_JunkFoodLegacy</workerClass>
+    <recipeUsers />
+    <workAmount>600</workAmount>
+    <workSkill>Medicine</workSkill>
+    <modExtensions>
+      <li Class="Oinky.JunkFood.LegacyJunkFoodRecipeExtension" />
+    </modExtensions>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Oinky_HappyCola</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Oinky_HappyCola</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+  </RecipeDef>
+  <RecipeDef>
+    <defName>Administer_Oinky_HersheySmores</defName>
+    <label>administer Hershey S'mores (retired)</label>
+    <description>Retained for old medical bills. Junk food is now ordinary food and is served through feeding jobs.</description>
+    <workerClass>Oinky.JunkFood.Recipe_JunkFoodLegacy</workerClass>
+    <recipeUsers />
+    <workAmount>600</workAmount>
+    <workSkill>Medicine</workSkill>
+    <modExtensions>
+      <li Class="Oinky.JunkFood.LegacyJunkFoodRecipeExtension" />
+    </modExtensions>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Oinky_HersheySmores</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Oinky_HersheySmores</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+  </RecipeDef>
+  <RecipeDef>
+    <defName>Administer_Oinky_HostessCupcakes</defName>
+    <label>administer Hostess Cupcakes (retired)</label>
+    <description>Retained for old medical bills. Junk food is now ordinary food and is served through feeding jobs.</description>
+    <workerClass>Oinky.JunkFood.Recipe_JunkFoodLegacy</workerClass>
+    <recipeUsers />
+    <workAmount>600</workAmount>
+    <workSkill>Medicine</workSkill>
+    <modExtensions>
+      <li Class="Oinky.JunkFood.LegacyJunkFoodRecipeExtension" />
+    </modExtensions>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Oinky_HostessCupcakes</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Oinky_HostessCupcakes</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+  </RecipeDef>
+  <RecipeDef>
+    <defName>Administer_Oinky_Ironbeer</defName>
+    <label>administer Ironbeer (retired)</label>
+    <description>Retained for old medical bills. Junk food is now ordinary food and is served through feeding jobs.</description>
+    <workerClass>Oinky.JunkFood.Recipe_JunkFoodLegacy</workerClass>
+    <recipeUsers />
+    <workAmount>600</workAmount>
+    <workSkill>Medicine</workSkill>
+    <modExtensions>
+      <li Class="Oinky.JunkFood.LegacyJunkFoodRecipeExtension" />
+    </modExtensions>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Oinky_Ironbeer</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Oinky_Ironbeer</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+  </RecipeDef>
+  <RecipeDef>
+    <defName>Administer_Oinky_IronbeerVintage</defName>
+    <label>administer Ironbeer (Vintage)  (retired)</label>
+    <description>Retained for old medical bills. Junk food is now ordinary food and is served through feeding jobs.</description>
+    <workerClass>Oinky.JunkFood.Recipe_JunkFoodLegacy</workerClass>
+    <recipeUsers />
+    <workAmount>600</workAmount>
+    <workSkill>Medicine</workSkill>
+    <modExtensions>
+      <li Class="Oinky.JunkFood.LegacyJunkFoodRecipeExtension" />
+    </modExtensions>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Oinky_IronbeerVintage</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Oinky_IronbeerVintage</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+  </RecipeDef>
+  <RecipeDef>
+    <defName>Administer_Oinky_Jawbreaker</defName>
+    <label>administer Jawbreaker (retired)</label>
+    <description>Retained for old medical bills. Junk food is now ordinary food and is served through feeding jobs.</description>
+    <workerClass>Oinky.JunkFood.Recipe_JunkFoodLegacy</workerClass>
+    <recipeUsers />
+    <workAmount>600</workAmount>
+    <workSkill>Medicine</workSkill>
+    <modExtensions>
+      <li Class="Oinky.JunkFood.LegacyJunkFoodRecipeExtension" />
+    </modExtensions>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Oinky_Jawbreaker</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Oinky_Jawbreaker</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+  </RecipeDef>
+  <RecipeDef>
+    <defName>Administer_Oinky_Marshmallows</defName>
+    <label>administer Jet-Puffed Marshmallows (retired)</label>
+    <description>Retained for old medical bills. Junk food is now ordinary food and is served through feeding jobs.</description>
+    <workerClass>Oinky.JunkFood.Recipe_JunkFoodLegacy</workerClass>
+    <recipeUsers />
+    <workAmount>600</workAmount>
+    <workSkill>Medicine</workSkill>
+    <modExtensions>
+      <li Class="Oinky.JunkFood.LegacyJunkFoodRecipeExtension" />
+    </modExtensions>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Oinky_Marshmallows</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Oinky_Marshmallows</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+  </RecipeDef>
+  <RecipeDef>
+    <defName>Administer_Oinky_JordanAlmonds</defName>
+    <label>administer Jordan Almonds (retired)</label>
+    <description>Retained for old medical bills. Junk food is now ordinary food and is served through feeding jobs.</description>
+    <workerClass>Oinky.JunkFood.Recipe_JunkFoodLegacy</workerClass>
+    <recipeUsers />
+    <workAmount>600</workAmount>
+    <workSkill>Medicine</workSkill>
+    <modExtensions>
+      <li Class="Oinky.JunkFood.LegacyJunkFoodRecipeExtension" />
+    </modExtensions>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Oinky_JordanAlmonds</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Oinky_JordanAlmonds</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+  </RecipeDef>
+  <RecipeDef>
+    <defName>Administer_Oinky_KitKat</defName>
+    <label>administer KitKat (retired)</label>
+    <description>Retained for old medical bills. Junk food is now ordinary food and is served through feeding jobs.</description>
+    <workerClass>Oinky.JunkFood.Recipe_JunkFoodLegacy</workerClass>
+    <recipeUsers />
+    <workAmount>600</workAmount>
+    <workSkill>Medicine</workSkill>
+    <modExtensions>
+      <li Class="Oinky.JunkFood.LegacyJunkFoodRecipeExtension" />
+    </modExtensions>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Oinky_KitKat</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Oinky_KitKat</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+  </RecipeDef>
+  <RecipeDef>
+    <defName>Administer_Oinky_KitKatChunky</defName>
+    <label>administer KitKat Chunky (retired)</label>
+    <description>Retained for old medical bills. Junk food is now ordinary food and is served through feeding jobs.</description>
+    <workerClass>Oinky.JunkFood.Recipe_JunkFoodLegacy</workerClass>
+    <recipeUsers />
+    <workAmount>600</workAmount>
+    <workSkill>Medicine</workSkill>
+    <modExtensions>
+      <li Class="Oinky.JunkFood.LegacyJunkFoodRecipeExtension" />
+    </modExtensions>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Oinky_KitKatChunky</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Oinky_KitKatChunky</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+  </RecipeDef>
+  <RecipeDef>
+    <defName>Administer_Oinky_KitKatPile</defName>
+    <label>administer KitKat Pile (retired)</label>
+    <description>Retained for old medical bills. Junk food is now ordinary food and is served through feeding jobs.</description>
+    <workerClass>Oinky.JunkFood.Recipe_JunkFoodLegacy</workerClass>
+    <recipeUsers />
+    <workAmount>600</workAmount>
+    <workSkill>Medicine</workSkill>
+    <modExtensions>
+      <li Class="Oinky.JunkFood.LegacyJunkFoodRecipeExtension" />
+    </modExtensions>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Oinky_KitKatPile</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Oinky_KitKatPile</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+  </RecipeDef>
+  <RecipeDef>
+    <defName>Administer_Oinky_Klondike</defName>
+    <label>administer Klondike (retired)</label>
+    <description>Retained for old medical bills. Junk food is now ordinary food and is served through feeding jobs.</description>
+    <workerClass>Oinky.JunkFood.Recipe_JunkFoodLegacy</workerClass>
+    <recipeUsers />
+    <workAmount>600</workAmount>
+    <workSkill>Medicine</workSkill>
+    <modExtensions>
+      <li Class="Oinky.JunkFood.LegacyJunkFoodRecipeExtension" />
+    </modExtensions>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Oinky_Klondike</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Oinky_Klondike</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+  </RecipeDef>
+  <RecipeDef>
+    <defName>Administer_Oinky_Krave</defName>
+    <label>administer Krave (retired)</label>
+    <description>Retained for old medical bills. Junk food is now ordinary food and is served through feeding jobs.</description>
+    <workerClass>Oinky.JunkFood.Recipe_JunkFoodLegacy</workerClass>
+    <recipeUsers />
+    <workAmount>600</workAmount>
+    <workSkill>Medicine</workSkill>
+    <modExtensions>
+      <li Class="Oinky.JunkFood.LegacyJunkFoodRecipeExtension" />
+    </modExtensions>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Oinky_Krave</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Oinky_Krave</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+  </RecipeDef>
+  <RecipeDef>
+    <defName>Administer_Oinky_LoackerWafers</defName>
+    <label>administer Loacker Hazelnut Wafers (retired)</label>
+    <description>Retained for old medical bills. Junk food is now ordinary food and is served through feeding jobs.</description>
+    <workerClass>Oinky.JunkFood.Recipe_JunkFoodLegacy</workerClass>
+    <recipeUsers />
+    <workAmount>600</workAmount>
+    <workSkill>Medicine</workSkill>
+    <modExtensions>
+      <li Class="Oinky.JunkFood.LegacyJunkFoodRecipeExtension" />
+    </modExtensions>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Oinky_LoackerWafers</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Oinky_LoackerWafers</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+  </RecipeDef>
+  <RecipeDef>
+    <defName>Administer_Oinky_LuckyCharms</defName>
+    <label>administer Lucky Charms (retired)</label>
+    <description>Retained for old medical bills. Junk food is now ordinary food and is served through feeding jobs.</description>
+    <workerClass>Oinky.JunkFood.Recipe_JunkFoodLegacy</workerClass>
+    <recipeUsers />
+    <workAmount>600</workAmount>
+    <workSkill>Medicine</workSkill>
+    <modExtensions>
+      <li Class="Oinky.JunkFood.LegacyJunkFoodRecipeExtension" />
+    </modExtensions>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Oinky_LuckyCharms</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Oinky_LuckyCharms</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+  </RecipeDef>
+  <RecipeDef>
+    <defName>Administer_Oinky_MnMs</defName>
+    <label>administer M&amp;Ms (retired)</label>
+    <description>Retained for old medical bills. Junk food is now ordinary food and is served through feeding jobs.</description>
+    <workerClass>Oinky.JunkFood.Recipe_JunkFoodLegacy</workerClass>
+    <recipeUsers />
+    <workAmount>600</workAmount>
+    <workSkill>Medicine</workSkill>
+    <modExtensions>
+      <li Class="Oinky.JunkFood.LegacyJunkFoodRecipeExtension" />
+    </modExtensions>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Oinky_MnMs</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Oinky_MnMs</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+  </RecipeDef>
+  <RecipeDef>
+    <defName>Administer_Oinky_PockyMatcha</defName>
+    <label>administer Matcha Green Tea Pocky (retired)</label>
+    <description>Retained for old medical bills. Junk food is now ordinary food and is served through feeding jobs.</description>
+    <workerClass>Oinky.JunkFood.Recipe_JunkFoodLegacy</workerClass>
+    <recipeUsers />
+    <workAmount>600</workAmount>
+    <workSkill>Medicine</workSkill>
+    <modExtensions>
+      <li Class="Oinky.JunkFood.LegacyJunkFoodRecipeExtension" />
+    </modExtensions>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Oinky_PockyMatcha</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Oinky_PockyMatcha</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+  </RecipeDef>
+  <RecipeDef>
+    <defName>Administer_Oinky_Materva</defName>
+    <label>administer Materva (retired)</label>
+    <description>Retained for old medical bills. Junk food is now ordinary food and is served through feeding jobs.</description>
+    <workerClass>Oinky.JunkFood.Recipe_JunkFoodLegacy</workerClass>
+    <recipeUsers />
+    <workAmount>600</workAmount>
+    <workSkill>Medicine</workSkill>
+    <modExtensions>
+      <li Class="Oinky.JunkFood.LegacyJunkFoodRecipeExtension" />
+    </modExtensions>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Oinky_Materva</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Oinky_Materva</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+  </RecipeDef>
+  <RecipeDef>
+    <defName>Administer_Oinky_MatervaVintage</defName>
+    <label>administer Materva (Vintage)  (retired)</label>
+    <description>Retained for old medical bills. Junk food is now ordinary food and is served through feeding jobs.</description>
+    <workerClass>Oinky.JunkFood.Recipe_JunkFoodLegacy</workerClass>
+    <recipeUsers />
+    <workAmount>600</workAmount>
+    <workSkill>Medicine</workSkill>
+    <modExtensions>
+      <li Class="Oinky.JunkFood.LegacyJunkFoodRecipeExtension" />
+    </modExtensions>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Oinky_MatervaVintage</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Oinky_MatervaVintage</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+  </RecipeDef>
+  <RecipeDef>
+    <defName>Administer_Oinky_RamuneMelon</defName>
+    <label>administer Melon Ramune (retired)</label>
+    <description>Retained for old medical bills. Junk food is now ordinary food and is served through feeding jobs.</description>
+    <workerClass>Oinky.JunkFood.Recipe_JunkFoodLegacy</workerClass>
+    <recipeUsers />
+    <workAmount>600</workAmount>
+    <workSkill>Medicine</workSkill>
+    <modExtensions>
+      <li Class="Oinky.JunkFood.LegacyJunkFoodRecipeExtension" />
+    </modExtensions>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Oinky_RamuneMelon</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Oinky_RamuneMelon</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+  </RecipeDef>
+  <RecipeDef>
+    <defName>Administer_Oinky_MinecraftCereal</defName>
+    <label>administer Minecraft Cereal (retired)</label>
+    <description>Retained for old medical bills. Junk food is now ordinary food and is served through feeding jobs.</description>
+    <workerClass>Oinky.JunkFood.Recipe_JunkFoodLegacy</workerClass>
+    <recipeUsers />
+    <workAmount>600</workAmount>
+    <workSkill>Medicine</workSkill>
+    <modExtensions>
+      <li Class="Oinky.JunkFood.LegacyJunkFoodRecipeExtension" />
+    </modExtensions>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Oinky_MinecraftCereal</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Oinky_MinecraftCereal</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+  </RecipeDef>
+  <RecipeDef>
+    <defName>Administer_Oinky_FreakshakeMintChocolate</defName>
+    <label>administer Mint Chocolate Freakshake (retired)</label>
+    <description>Retained for old medical bills. Junk food is now ordinary food and is served through feeding jobs.</description>
+    <workerClass>Oinky.JunkFood.Recipe_JunkFoodLegacy</workerClass>
+    <recipeUsers />
+    <workAmount>600</workAmount>
+    <workSkill>Medicine</workSkill>
+    <modExtensions>
+      <li Class="Oinky.JunkFood.LegacyJunkFoodRecipeExtension" />
+    </modExtensions>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Oinky_FreakshakeMintChocolate</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Oinky_FreakshakeMintChocolate</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+  </RecipeDef>
+  <RecipeDef>
+    <defName>Administer_Oinky_MountainDew</defName>
+    <label>administer Mountain Dew (retired)</label>
+    <description>Retained for old medical bills. Junk food is now ordinary food and is served through feeding jobs.</description>
+    <workerClass>Oinky.JunkFood.Recipe_JunkFoodLegacy</workerClass>
+    <recipeUsers />
+    <workAmount>600</workAmount>
+    <workSkill>Medicine</workSkill>
+    <modExtensions>
+      <li Class="Oinky.JunkFood.LegacyJunkFoodRecipeExtension" />
+    </modExtensions>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Oinky_MountainDew</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Oinky_MountainDew</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+  </RecipeDef>
+  <RecipeDef>
+    <defName>Administer_Oinky_NesquikChocolate</defName>
+    <label>administer Nesquik Chocolate Milk (retired)</label>
+    <description>Retained for old medical bills. Junk food is now ordinary food and is served through feeding jobs.</description>
+    <workerClass>Oinky.JunkFood.Recipe_JunkFoodLegacy</workerClass>
+    <recipeUsers />
+    <workAmount>600</workAmount>
+    <workSkill>Medicine</workSkill>
+    <modExtensions>
+      <li Class="Oinky.JunkFood.LegacyJunkFoodRecipeExtension" />
+    </modExtensions>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Oinky_NesquikChocolate</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Oinky_NesquikChocolate</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+  </RecipeDef>
+  <RecipeDef>
+    <defName>Administer_Oinky_NesquikStrawberry</defName>
+    <label>administer Nesquik Strawberry Milk (retired)</label>
+    <description>Retained for old medical bills. Junk food is now ordinary food and is served through feeding jobs.</description>
+    <workerClass>Oinky.JunkFood.Recipe_JunkFoodLegacy</workerClass>
+    <recipeUsers />
+    <workAmount>600</workAmount>
+    <workSkill>Medicine</workSkill>
+    <modExtensions>
+      <li Class="Oinky.JunkFood.LegacyJunkFoodRecipeExtension" />
+    </modExtensions>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Oinky_NesquikStrawberry</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Oinky_NesquikStrawberry</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+  </RecipeDef>
+  <RecipeDef>
+    <defName>Administer_Oinky_IceeOrange</defName>
+    <label>administer Orange Icee (retired)</label>
+    <description>Retained for old medical bills. Junk food is now ordinary food and is served through feeding jobs.</description>
+    <workerClass>Oinky.JunkFood.Recipe_JunkFoodLegacy</workerClass>
+    <recipeUsers />
+    <workAmount>600</workAmount>
+    <workSkill>Medicine</workSkill>
+    <modExtensions>
+      <li Class="Oinky.JunkFood.LegacyJunkFoodRecipeExtension" />
+    </modExtensions>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Oinky_IceeOrange</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Oinky_IceeOrange</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+  </RecipeDef>
+  <RecipeDef>
+    <defName>Administer_Oinky_Oreo</defName>
+    <label>administer Oreo (retired)</label>
+    <description>Retained for old medical bills. Junk food is now ordinary food and is served through feeding jobs.</description>
+    <workerClass>Oinky.JunkFood.Recipe_JunkFoodLegacy</workerClass>
+    <recipeUsers />
+    <workAmount>600</workAmount>
+    <workSkill>Medicine</workSkill>
+    <modExtensions>
+      <li Class="Oinky.JunkFood.LegacyJunkFoodRecipeExtension" />
+    </modExtensions>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Oinky_Oreo</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Oinky_Oreo</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+  </RecipeDef>
+  <RecipeDef>
+    <defName>Administer_Oinky_OreoCereal</defName>
+    <label>administer Oreo O's (retired)</label>
+    <description>Retained for old medical bills. Junk food is now ordinary food and is served through feeding jobs.</description>
+    <workerClass>Oinky.JunkFood.Recipe_JunkFoodLegacy</workerClass>
+    <recipeUsers />
+    <workAmount>600</workAmount>
+    <workSkill>Medicine</workSkill>
+    <modExtensions>
+      <li Class="Oinky.JunkFood.LegacyJunkFoodRecipeExtension" />
+    </modExtensions>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Oinky_OreoCereal</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Oinky_OreoCereal</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+  </RecipeDef>
+  <RecipeDef>
+    <defName>Administer_Oinky_OreoSandwich</defName>
+    <label>administer Oreo Sandwich (retired)</label>
+    <description>Retained for old medical bills. Junk food is now ordinary food and is served through feeding jobs.</description>
+    <workerClass>Oinky.JunkFood.Recipe_JunkFoodLegacy</workerClass>
+    <recipeUsers />
+    <workAmount>600</workAmount>
+    <workSkill>Medicine</workSkill>
+    <modExtensions>
+      <li Class="Oinky.JunkFood.LegacyJunkFoodRecipeExtension" />
+    </modExtensions>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Oinky_OreoSandwich</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Oinky_OreoSandwich</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+  </RecipeDef>
+  <RecipeDef>
+    <defName>Administer_Oinky_PassionFlakie</defName>
+    <label>administer Passion Flakie (retired)</label>
+    <description>Retained for old medical bills. Junk food is now ordinary food and is served through feeding jobs.</description>
+    <workerClass>Oinky.JunkFood.Recipe_JunkFoodLegacy</workerClass>
+    <recipeUsers />
+    <workAmount>600</workAmount>
+    <workSkill>Medicine</workSkill>
+    <modExtensions>
+      <li Class="Oinky.JunkFood.LegacyJunkFoodRecipeExtension" />
+    </modExtensions>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Oinky_PassionFlakie</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Oinky_PassionFlakie</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+  </RecipeDef>
+  <RecipeDef>
+    <defName>Administer_Oinky_MnMsPeanut</defName>
+    <label>administer Peanut M&amp;Ms (retired)</label>
+    <description>Retained for old medical bills. Junk food is now ordinary food and is served through feeding jobs.</description>
+    <workerClass>Oinky.JunkFood.Recipe_JunkFoodLegacy</workerClass>
+    <recipeUsers />
+    <workAmount>600</workAmount>
+    <workSkill>Medicine</workSkill>
+    <modExtensions>
+      <li Class="Oinky.JunkFood.LegacyJunkFoodRecipeExtension" />
+    </modExtensions>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Oinky_MnMsPeanut</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Oinky_MnMsPeanut</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+  </RecipeDef>
+  <RecipeDef>
+    <defName>Administer_Oinky_AeroPeppermint</defName>
+    <label>administer Peppermint Aero (retired)</label>
+    <description>Retained for old medical bills. Junk food is now ordinary food and is served through feeding jobs.</description>
+    <workerClass>Oinky.JunkFood.Recipe_JunkFoodLegacy</workerClass>
+    <recipeUsers />
+    <workAmount>600</workAmount>
+    <workSkill>Medicine</workSkill>
+    <modExtensions>
+      <li Class="Oinky.JunkFood.LegacyJunkFoodRecipeExtension" />
+    </modExtensions>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Oinky_AeroPeppermint</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Oinky_AeroPeppermint</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+  </RecipeDef>
+  <RecipeDef>
+    <defName>Administer_Oinky_Pepsi</defName>
+    <label>administer Pepsi (retired)</label>
+    <description>Retained for old medical bills. Junk food is now ordinary food and is served through feeding jobs.</description>
+    <workerClass>Oinky.JunkFood.Recipe_JunkFoodLegacy</workerClass>
+    <recipeUsers />
+    <workAmount>600</workAmount>
+    <workSkill>Medicine</workSkill>
+    <modExtensions>
+      <li Class="Oinky.JunkFood.LegacyJunkFoodRecipeExtension" />
+    </modExtensions>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Oinky_Pepsi</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Oinky_Pepsi</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+  </RecipeDef>
+  <RecipeDef>
+    <defName>Administer_Oinky_Pirouline</defName>
+    <label>administer Pirouline Wafers (retired)</label>
+    <description>Retained for old medical bills. Junk food is now ordinary food and is served through feeding jobs.</description>
+    <workerClass>Oinky.JunkFood.Recipe_JunkFoodLegacy</workerClass>
+    <recipeUsers />
+    <workAmount>600</workAmount>
+    <workSkill>Medicine</workSkill>
+    <modExtensions>
+      <li Class="Oinky.JunkFood.LegacyJunkFoodRecipeExtension" />
+    </modExtensions>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Oinky_Pirouline</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Oinky_Pirouline</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+  </RecipeDef>
+  <RecipeDef>
+    <defName>Administer_Oinky_PizzaPizzaEntire</defName>
+    <label>administer Pizza Pizza (retired)</label>
+    <description>Retained for old medical bills. Junk food is now ordinary food and is served through feeding jobs.</description>
+    <workerClass>Oinky.JunkFood.Recipe_JunkFoodLegacy</workerClass>
+    <recipeUsers />
+    <workAmount>600</workAmount>
+    <workSkill>Medicine</workSkill>
+    <modExtensions>
+      <li Class="Oinky.JunkFood.LegacyJunkFoodRecipeExtension" />
+    </modExtensions>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Oinky_PizzaPizzaEntire</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Oinky_PizzaPizzaEntire</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+  </RecipeDef>
+  <RecipeDef>
+    <defName>Administer_Oinky_PizzaPizzaSlice</defName>
+    <label>administer Pizza Pizza Slice (retired)</label>
+    <description>Retained for old medical bills. Junk food is now ordinary food and is served through feeding jobs.</description>
+    <workerClass>Oinky.JunkFood.Recipe_JunkFoodLegacy</workerClass>
+    <recipeUsers />
+    <workAmount>600</workAmount>
+    <workSkill>Medicine</workSkill>
+    <modExtensions>
+      <li Class="Oinky.JunkFood.LegacyJunkFoodRecipeExtension" />
+    </modExtensions>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Oinky_PizzaPizzaSlice</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Oinky_PizzaPizzaSlice</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+  </RecipeDef>
+  <RecipeDef>
+    <defName>Administer_Oinky_PizzaPops</defName>
+    <label>administer Pizza Pops (retired)</label>
+    <description>Retained for old medical bills. Junk food is now ordinary food and is served through feeding jobs.</description>
+    <workerClass>Oinky.JunkFood.Recipe_JunkFoodLegacy</workerClass>
+    <recipeUsers />
+    <workAmount>600</workAmount>
+    <workSkill>Medicine</workSkill>
+    <modExtensions>
+      <li Class="Oinky.JunkFood.LegacyJunkFoodRecipeExtension" />
+    </modExtensions>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Oinky_PizzaPops</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Oinky_PizzaPops</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+  </RecipeDef>
+  <RecipeDef>
+    <defName>Administer_Oinky_Pocky</defName>
+    <label>administer Pocky (retired)</label>
+    <description>Retained for old medical bills. Junk food is now ordinary food and is served through feeding jobs.</description>
+    <workerClass>Oinky.JunkFood.Recipe_JunkFoodLegacy</workerClass>
+    <recipeUsers />
+    <workAmount>600</workAmount>
+    <workSkill>Medicine</workSkill>
+    <modExtensions>
+      <li Class="Oinky.JunkFood.LegacyJunkFoodRecipeExtension" />
+    </modExtensions>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Oinky_Pocky</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Oinky_Pocky</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+  </RecipeDef>
+  <RecipeDef>
+    <defName>Administer_Oinky_Ramune</defName>
+    <label>administer Ramune (retired)</label>
+    <description>Retained for old medical bills. Junk food is now ordinary food and is served through feeding jobs.</description>
+    <workerClass>Oinky.JunkFood.Recipe_JunkFoodLegacy</workerClass>
+    <recipeUsers />
+    <workAmount>600</workAmount>
+    <workSkill>Medicine</workSkill>
+    <modExtensions>
+      <li Class="Oinky.JunkFood.LegacyJunkFoodRecipeExtension" />
+    </modExtensions>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Oinky_Ramune</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Oinky_Ramune</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+  </RecipeDef>
+  <RecipeDef>
+    <defName>Administer_Oinky_RamuneCandy</defName>
+    <label>administer Ramune Candy (retired)</label>
+    <description>Retained for old medical bills. Junk food is now ordinary food and is served through feeding jobs.</description>
+    <workerClass>Oinky.JunkFood.Recipe_JunkFoodLegacy</workerClass>
+    <recipeUsers />
+    <workAmount>600</workAmount>
+    <workSkill>Medicine</workSkill>
+    <modExtensions>
+      <li Class="Oinky.JunkFood.LegacyJunkFoodRecipeExtension" />
+    </modExtensions>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Oinky_RamuneCandy</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Oinky_RamuneCandy</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+  </RecipeDef>
+  <RecipeDef>
+    <defName>Administer_Oinky_ReesesPeanutButterCup</defName>
+    <label>administer Reese's Peanut Butter Cup (retired)</label>
+    <description>Retained for old medical bills. Junk food is now ordinary food and is served through feeding jobs.</description>
+    <workerClass>Oinky.JunkFood.Recipe_JunkFoodLegacy</workerClass>
+    <recipeUsers />
+    <workAmount>600</workAmount>
+    <workSkill>Medicine</workSkill>
+    <modExtensions>
+      <li Class="Oinky.JunkFood.LegacyJunkFoodRecipeExtension" />
+    </modExtensions>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Oinky_ReesesPeanutButterCup</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Oinky_ReesesPeanutButterCup</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+  </RecipeDef>
+  <RecipeDef>
+    <defName>Administer_Oinky_ReesesPieces</defName>
+    <label>administer Reese's Pieces (retired)</label>
+    <description>Retained for old medical bills. Junk food is now ordinary food and is served through feeding jobs.</description>
+    <workerClass>Oinky.JunkFood.Recipe_JunkFoodLegacy</workerClass>
+    <recipeUsers />
+    <workAmount>600</workAmount>
+    <workSkill>Medicine</workSkill>
+    <modExtensions>
+      <li Class="Oinky.JunkFood.LegacyJunkFoodRecipeExtension" />
+    </modExtensions>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Oinky_ReesesPieces</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Oinky_ReesesPieces</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+  </RecipeDef>
+  <RecipeDef>
+    <defName>Administer_Oinky_PoptartSmores</defName>
+    <label>administer S'mores Poptart (retired)</label>
+    <description>Retained for old medical bills. Junk food is now ordinary food and is served through feeding jobs.</description>
+    <workerClass>Oinky.JunkFood.Recipe_JunkFoodLegacy</workerClass>
+    <recipeUsers />
+    <workAmount>600</workAmount>
+    <workSkill>Medicine</workSkill>
+    <modExtensions>
+      <li Class="Oinky.JunkFood.LegacyJunkFoodRecipeExtension" />
+    </modExtensions>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Oinky_PoptartSmores</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Oinky_PoptartSmores</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+  </RecipeDef>
+  <RecipeDef>
+    <defName>Administer_Oinky_Skittles</defName>
+    <label>administer Skittles (retired)</label>
+    <description>Retained for old medical bills. Junk food is now ordinary food and is served through feeding jobs.</description>
+    <workerClass>Oinky.JunkFood.Recipe_JunkFoodLegacy</workerClass>
+    <recipeUsers />
+    <workAmount>600</workAmount>
+    <workSkill>Medicine</workSkill>
+    <modExtensions>
+      <li Class="Oinky.JunkFood.LegacyJunkFoodRecipeExtension" />
+    </modExtensions>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Oinky_Skittles</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Oinky_Skittles</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+  </RecipeDef>
+  <RecipeDef>
+    <defName>Administer_Oinky_Slurm</defName>
+    <label>administer Slurm (retired)</label>
+    <description>Retained for old medical bills. Junk food is now ordinary food and is served through feeding jobs.</description>
+    <workerClass>Oinky.JunkFood.Recipe_JunkFoodLegacy</workerClass>
+    <recipeUsers />
+    <workAmount>600</workAmount>
+    <workSkill>Medicine</workSkill>
+    <modExtensions>
+      <li Class="Oinky.JunkFood.LegacyJunkFoodRecipeExtension" />
+    </modExtensions>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Oinky_Slurm</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Oinky_Slurm</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+  </RecipeDef>
+  <RecipeDef>
+    <defName>Administer_Oinky_Snickers</defName>
+    <label>administer Snickers (retired)</label>
+    <description>Retained for old medical bills. Junk food is now ordinary food and is served through feeding jobs.</description>
+    <workerClass>Oinky.JunkFood.Recipe_JunkFoodLegacy</workerClass>
+    <recipeUsers />
+    <workAmount>600</workAmount>
+    <workSkill>Medicine</workSkill>
+    <modExtensions>
+      <li Class="Oinky.JunkFood.LegacyJunkFoodRecipeExtension" />
+    </modExtensions>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Oinky_Snickers</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Oinky_Snickers</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+  </RecipeDef>
+  <RecipeDef>
+    <defName>Administer_Oinky_LaffyTaffySourApple</defName>
+    <label>administer Sour Apple Laffy Taffy (retired)</label>
+    <description>Retained for old medical bills. Junk food is now ordinary food and is served through feeding jobs.</description>
+    <workerClass>Oinky.JunkFood.Recipe_JunkFoodLegacy</workerClass>
+    <recipeUsers />
+    <workAmount>600</workAmount>
+    <workSkill>Medicine</workSkill>
+    <modExtensions>
+      <li Class="Oinky.JunkFood.LegacyJunkFoodRecipeExtension" />
+    </modExtensions>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Oinky_LaffyTaffySourApple</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Oinky_LaffyTaffySourApple</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+  </RecipeDef>
+  <RecipeDef>
+    <defName>Administer_Oinky_SkittlesSour</defName>
+    <label>administer Sour Skittles (retired)</label>
+    <description>Retained for old medical bills. Junk food is now ordinary food and is served through feeding jobs.</description>
+    <workerClass>Oinky.JunkFood.Recipe_JunkFoodLegacy</workerClass>
+    <recipeUsers />
+    <workAmount>600</workAmount>
+    <workSkill>Medicine</workSkill>
+    <modExtensions>
+      <li Class="Oinky.JunkFood.LegacyJunkFoodRecipeExtension" />
+    </modExtensions>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Oinky_SkittlesSour</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Oinky_SkittlesSour</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+  </RecipeDef>
+  <RecipeDef>
+    <defName>Administer_Oinky_Sprite</defName>
+    <label>administer Sprite (retired)</label>
+    <description>Retained for old medical bills. Junk food is now ordinary food and is served through feeding jobs.</description>
+    <workerClass>Oinky.JunkFood.Recipe_JunkFoodLegacy</workerClass>
+    <recipeUsers />
+    <workAmount>600</workAmount>
+    <workSkill>Medicine</workSkill>
+    <modExtensions>
+      <li Class="Oinky.JunkFood.LegacyJunkFoodRecipeExtension" />
+    </modExtensions>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Oinky_Sprite</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Oinky_Sprite</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+  </RecipeDef>
+  <RecipeDef>
+    <defName>Administer_Oinky_FreakshakeStrawberry</defName>
+    <label>administer Strawberry Freakshake (retired)</label>
+    <description>Retained for old medical bills. Junk food is now ordinary food and is served through feeding jobs.</description>
+    <workerClass>Oinky.JunkFood.Recipe_JunkFoodLegacy</workerClass>
+    <recipeUsers />
+    <workAmount>600</workAmount>
+    <workSkill>Medicine</workSkill>
+    <modExtensions>
+      <li Class="Oinky.JunkFood.LegacyJunkFoodRecipeExtension" />
+    </modExtensions>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Oinky_FreakshakeStrawberry</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Oinky_FreakshakeStrawberry</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+  </RecipeDef>
+  <RecipeDef>
+    <defName>Administer_Oinky_PockyStrawberry</defName>
+    <label>administer Strawberry Pocky (retired)</label>
+    <description>Retained for old medical bills. Junk food is now ordinary food and is served through feeding jobs.</description>
+    <workerClass>Oinky.JunkFood.Recipe_JunkFoodLegacy</workerClass>
+    <recipeUsers />
+    <workAmount>600</workAmount>
+    <workSkill>Medicine</workSkill>
+    <modExtensions>
+      <li Class="Oinky.JunkFood.LegacyJunkFoodRecipeExtension" />
+    </modExtensions>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Oinky_PockyStrawberry</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Oinky_PockyStrawberry</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+  </RecipeDef>
+  <RecipeDef>
+    <defName>Administer_Oinky_PoptartStrawberry</defName>
+    <label>administer Strawberry Poptart (retired)</label>
+    <description>Retained for old medical bills. Junk food is now ordinary food and is served through feeding jobs.</description>
+    <workerClass>Oinky.JunkFood.Recipe_JunkFoodLegacy</workerClass>
+    <recipeUsers />
+    <workAmount>600</workAmount>
+    <workSkill>Medicine</workSkill>
+    <modExtensions>
+      <li Class="Oinky.JunkFood.LegacyJunkFoodRecipeExtension" />
+    </modExtensions>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Oinky_PoptartStrawberry</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Oinky_PoptartStrawberry</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+  </RecipeDef>
+  <RecipeDef>
+    <defName>Administer_Oinky_RamuneStrawberry</defName>
+    <label>administer Strawberry Ramune (retired)</label>
+    <description>Retained for old medical bills. Junk food is now ordinary food and is served through feeding jobs.</description>
+    <workerClass>Oinky.JunkFood.Recipe_JunkFoodLegacy</workerClass>
+    <recipeUsers />
+    <workAmount>600</workAmount>
+    <workSkill>Medicine</workSkill>
+    <modExtensions>
+      <li Class="Oinky.JunkFood.LegacyJunkFoodRecipeExtension" />
+    </modExtensions>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Oinky_RamuneStrawberry</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Oinky_RamuneStrawberry</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+  </RecipeDef>
+  <RecipeDef>
+    <defName>Administer_Oinky_Trix</defName>
+    <label>administer Trix (retired)</label>
+    <description>Retained for old medical bills. Junk food is now ordinary food and is served through feeding jobs.</description>
+    <workerClass>Oinky.JunkFood.Recipe_JunkFoodLegacy</workerClass>
+    <recipeUsers />
+    <workAmount>600</workAmount>
+    <workSkill>Medicine</workSkill>
+    <modExtensions>
+      <li Class="Oinky.JunkFood.LegacyJunkFoodRecipeExtension" />
+    </modExtensions>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Oinky_Trix</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Oinky_Trix</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+  </RecipeDef>
+  <RecipeDef>
+    <defName>Administer_Oinky_Twinkies</defName>
+    <label>administer Twinkies (retired)</label>
+    <description>Retained for old medical bills. Junk food is now ordinary food and is served through feeding jobs.</description>
+    <workerClass>Oinky.JunkFood.Recipe_JunkFoodLegacy</workerClass>
+    <recipeUsers />
+    <workAmount>600</workAmount>
+    <workSkill>Medicine</workSkill>
+    <modExtensions>
+      <li Class="Oinky.JunkFood.LegacyJunkFoodRecipeExtension" />
+    </modExtensions>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Oinky_Twinkies</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Oinky_Twinkies</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+  </RecipeDef>
+  <RecipeDef>
+    <defName>Administer_Oinky_Twizzlers</defName>
+    <label>administer Twizzlers (retired)</label>
+    <description>Retained for old medical bills. Junk food is now ordinary food and is served through feeding jobs.</description>
+    <workerClass>Oinky.JunkFood.Recipe_JunkFoodLegacy</workerClass>
+    <recipeUsers />
+    <workAmount>600</workAmount>
+    <workSkill>Medicine</workSkill>
+    <modExtensions>
+      <li Class="Oinky.JunkFood.LegacyJunkFoodRecipeExtension" />
+    </modExtensions>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Oinky_Twizzlers</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Oinky_Twizzlers</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+  </RecipeDef>
+  <RecipeDef>
+    <defName>Administer_Oinky_Vitasoy</defName>
+    <label>administer Vitasoy (retired)</label>
+    <description>Retained for old medical bills. Junk food is now ordinary food and is served through feeding jobs.</description>
+    <workerClass>Oinky.JunkFood.Recipe_JunkFoodLegacy</workerClass>
+    <recipeUsers />
+    <workAmount>600</workAmount>
+    <workSkill>Medicine</workSkill>
+    <modExtensions>
+      <li Class="Oinky.JunkFood.LegacyJunkFoodRecipeExtension" />
+    </modExtensions>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Oinky_Vitasoy</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Oinky_Vitasoy</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+  </RecipeDef>
+</Defs>
