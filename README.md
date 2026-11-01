@@ -4,6 +4,21 @@ Substantially redesigned mod for RimWorld 1.6.
 
 ## Latest update - 1 November 2026
 
+- **Junk Food is now included:** Oinky's Junk Food content is built into the RimRound rework, with 93 foods, 189 crafting recipes, its research, artwork and original credits. No separate Junk Food download is needed.
+- **Compact, calorie-dense snacks:** junk foods provide more calories for the stomach space they occupy, making them useful for weight gain. They work with ordinary eating, shared meals and assisted feeding while respecting food restrictions and the recipient's limits.
+- **Automatic unpacking:** pawns can open whole pizzas, large cola bottles and KitKat piles into servings when food is needed. They collect the servings for eating or feeding, and helpers can serve several portions in succession when the recipient can use more.
+- **Android helpers:** capable Vanilla Races Expanded: Androids pawns can feed humans, and socially capable Androids can discuss another pawn's body preference. They remain exempt from RimRound eating and weight gain. Non-eating Androids no longer create impossible food-reserve requirements that pause optional meals.
+- **NovaTech appearance fix:** the belt, collar, gloves and hyperbelt no longer produce an unwanted shirt outfit when worn. Their equipment bonuses remain intact, and ordinary clothing keeps its intended appearance.
+- **Updated defaults:** the Body Perk Tree is enabled for new colonies. The default age range is 18–200, with body features enabled for male and female pawns, friendly and hostile NPCs, prisoners and slaves. Existing saved choices are respected; the old automatic increase from a 200-year maximum to 1000 is removed.
+- **Food category icons:** restored the missing RimRound category icons in the resource list and storage filters.
+- **Medical incapacitation:** fixed RimRound movement rules, hoverchairs and Legacy perks allowing pawns to walk despite paralytic abasia, coma or other incapacitating conditions. Loading also repairs stale saved mobility state. Valid native crawling and movement after recovery remain available.
+
+Original documentation and a new integration changes document are included in the bundled folder.
+
+Testing covered real cooking, automatic package opening, eating and feeding, saved settings, switching from the tested standalone Junk Food version, and save/reload. Android checks used **Vanilla Races Expanded: Androids 1.1.0**. Medical checks covered the base game and all five DLCs, including paralytic abasia, anesthesia, coma, pain shock and limb loss. This remains a **RimWorld 1.6 WIP**, tested on **1.6.4871 rev591**; 1.7 compatibility is unverified.
+
+## Earlier update - 1 November 2026
+
 - **Modded feast food and furniture:** feasts recognise suitable prepared meals, dining tables and seats through their game definitions. Multi-seat benches and supported serving storage are included. Food restrictions, ingredients, access, reservations and storage limits still apply.
 - **Liquid meals in the ritual room:** a working supported liquid-food dispenser in the same room as the feast tables can supply meals. RimRound's classic and V2 networks, vanilla nutrient paste and Medieval Overhaul stew pots use their own food supplies and accounting.
 - **Batch collection and consecutive servings:** collectors carry as many planned meals as their carrying capacity permits. Helpers can bring several portions for a diner and feed them one after another, including ordinary standard-size meals. Distinct ingredient, quality and food-effect combinations stay separate.
@@ -48,7 +63,7 @@ This is a **RimWorld 1.6 WIP**, tested on 1.6.4871 rev591. Keep backups before u
 - **Mobility:** only the extra weight-related rest drain is reduced: 75% in an operating hoverchair, and 100% while stationary, immobile/bedbound, carried or seated in a vehicle. Normal rest needs still apply.
 - **Vehicles:** repaired the obsolete Vehicle Framework food hook and checked actual Vanilla Vehicles Expanded travel, passenger feeding and occupied-caravan reload in the tested framework versions.
 - **Automatic stage benefits:** Obese+ natural/tended injury recovery reaches 110% of the ordinary rate after compensating for enlarged body-part health. Lardy+ prevents new food poisoning. Both benefits follow the current eligible adult weight stage and disappear below their thresholds; existing poisoning continues normally.
-- **Defaults:** male/female bodies and friendly/hostile/prisoner/slave eligibility are enabled at ages 18-1000. Existing choices are retained, with a one-time migration of the old 200-year upper limit.
+- **Defaults:** male/female bodies and friendly/hostile/prisoner/slave eligibility are enabled at ages 18-1000. Existing choices are retained, with a one-time migration of the old 200-year upper limit. This historical default and migration are superseded by the 1 November update above.
 - **Settings repairs:** feeder flow, prisoner feeding resume, separate mood/target controls, cooldown validation and feeder interval rounding now use the audited settings behavior; obsolete controls are hidden.
 
 ## Previous update - 15 October 2026
