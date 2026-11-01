@@ -2,7 +2,22 @@
 
 Substantially redesigned mod for RimWorld 1.6.
 
-## Latest update - 25 October 2026
+## Latest update - 1 November 2026
+
+- **Modded feast food and furniture:** feasts recognise suitable prepared meals, dining tables and seats through their game definitions. Multi-seat benches and supported serving storage are included. Food restrictions, ingredients, access, reservations and storage limits still apply.
+- **Liquid meals in the ritual room:** a working supported liquid-food dispenser in the same room as the feast tables can supply meals. RimRound's classic and V2 networks, vanilla nutrient paste and Medieval Overhaul stew pots use their own food supplies and accounting.
+- **Batch collection and consecutive servings:** collectors carry as many planned meals as their carrying capacity permits. Helpers can bring several portions for a diner and feed them one after another, including ordinary standard-size meals. Distinct ingredient, quality and food-effect combinations stay separate.
+- **Generous meals for leaders and moral guides:** selected officers receive assisted meals and extra portions when food, helpers and their physical capacity allow. Bedbound officers can remain in their beds. Eligible immobile guests can be carried into the ceremony and returned afterwards; the aim is a generous meal.
+- **Occasional Feeder visits:** Feeder specialists can bring extra bedside meals to willing bedbound leaders and moral guides pursuing an unreached gain goal, including after eating, feeding another pawn or sharing a meal. Food reserves, personal limits and restrictions still apply; hunger, urgent care and player orders take priority.
+- **Prisoner and patient feeding:** fixed eligible bedside care rejecting the meal at the final bite because the recipient's Lose goal was waiting for greater hunger. Maintain's temporary Lose action is covered too. Ordinary hunger and food restrictions remain in force.
+- **Embodied Abundance tastes:** newly initialised adult followers start with a positive taste for larger bodies. Existing saved tastes remain unchanged, and converting an adult does not reroll their taste.
+- **Further fixes:** corrected temporary weight-effect reversals at body limits, delayed weight-change ordering, caravan state and cooldowns between games, and pawn-name text in body descriptions.
+
+The feast checks used **Medieval Overhaul 1.6.2.2**, **Vanilla Cooking Expanded**, **Vanilla Furniture Expanded**, **Medieval Overhaul: Adaptive Storage** and **Adaptive Storage Framework**, with their required frameworks. Base-game feeding, minimal Ideology and targeted checks with all five DLCs were also covered. A controlled medieval colony completed twelve game days and two feasts; collection, assisted attendance, repeated servings and save/reload were checked in the recorded scenarios.
+
+This remains a **RimWorld 1.6 WIP**, tested on **1.6.4871 rev591**. These checks do not establish universal mod compatibility, 1.7 support or long-session performance in large colonies. Unfamiliar custom dispensers or food effects may need their own integration. Keep backups before updating an existing colony.
+
+## Previous update - 25 October 2026
 
 - **Embodied Abundance and feasts:** Abundant Table is now a shared feast ritual available to any ideoligion. Embodied Abundance adds Ceremonial Feeding for a leader, moral guide or permanent Feedee in their own designated large RimRound single bed. Separate bedrooms and a shared ritual hall are supported.
 - **Ritual beds and attendance:** the Ideology Buildings list now includes the Ritual bed, with its icon, name and build controls. Guests can use ordinary chairs, pews, kneel sheets or pillows. Selected helpers carry eligible immobile guests to the ceremony and return them to a suitable owned or medical bed afterwards. Selected food collectors gather real meals before dining, within carrying limits and food policies.
@@ -14,7 +29,7 @@ Substantially redesigned mod for RimWorld 1.6.
 - **Food suppliers:** new orbital and visiting food traders sell curated junk food, gain products, imported dense meals and occasional hoverchairs. Caravan stock travels on caloyaks. Food and consumables use the native Cheap price band; equipment keeps normal prices. Food-policy, drug and colony-preset restrictions still apply.
 - **Further fixes:** repaired rejected-pawn reference cleanup and corrected the nutrient distillery's port overlay. Existing feeding, body, settings and vehicle fixes below are retained.
 
-This is a **RimWorld 1.6 WIP**, tested on 1.6.4871 rev591. New colonies and their later saves are the main target; keep backups before updating an existing colony. Testing does not establish compatibility with every save or mod list, or performance in large colonies.
+This is a **RimWorld 1.6 WIP**, tested on 1.6.4871 rev591. Keep backups before updating an existing colony. Testing does not establish compatibility with every save or mod list, or performance in large colonies.
 
 ## Previous update - 19 October 2026 (c24)
 
