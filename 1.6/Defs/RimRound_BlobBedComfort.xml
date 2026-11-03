@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThoughtDef>
+    <defName>RR_BlobBedHeavyCompany</defName>
+    <workerClass>RimRound.Utilities.ThoughtWorker_BlobBedHeavyCompany</workerClass>
+    <stages>
+      <li>
+        <label>Heavy company</label>
+        <description>Having someone so soft and heavy resting on me feels wonderful.</description>
+        <baseMoodEffect>2</baseMoodEffect>
+      </li>
+      <li>
+        <label>Heavy company</label>
+        <description>Having someone so soft and heavy resting on me feels wonderful.</description>
+        <baseMoodEffect>4</baseMoodEffect>
+      </li>
+      <li>
+        <label>Heavy company</label>
+        <description>Having someone so soft and heavy resting on me feels wonderful.</description>
+        <baseMoodEffect>6</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+</Defs>

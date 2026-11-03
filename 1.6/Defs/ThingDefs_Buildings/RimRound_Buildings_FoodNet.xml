@@ -590,6 +590,7 @@
 					</specialFiltersToDisallow>
 					<disallowedThingDefs>
 						<li>Hay</li>
+						<li MayRequire="Ludeon.RimWorld.Biotech">HemogenPack</li>
 					</disallowedThingDefs>
 				</filter>
 			</fixedStorageSettings>

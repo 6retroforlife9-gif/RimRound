@@ -17,7 +17,7 @@
     <label>feeder</label>
     <nameMaker>RR_NamerFeeder</nameMaker>
     <description>An attendant devoted to sharing abundance. Feeds others 25% faster and brings skill to ceremonial feeding. Retains ordinary food collection and care work.</description>
-    <iconPath>UI/Roles/SpecialistMedical</iconPath>
+    <iconPath>UI/RimRoundIdeology/RoleFeeder</iconPath>
     <roleTags><li>RR_Feeder</li></roleTags>
     <roleDisabledWorkTags Inherit="False" />
   </PreceptDef>
@@ -27,7 +27,7 @@
     <label>feedee</label>
     <nameMaker>RR_NamerFeedee</nameMaker>
     <description>An honoured example of abundance who gains 20% more body weight from ordinary food. This changes weight gain, not calories, hunger satisfaction or stomach volume. Timed weight-gain products receive no extra benefit. Can receive ceremonial feeding while retaining this role.</description>
-    <iconPath>UI/PerkIcons/FOOD_IS_FOOD</iconPath>
+    <iconPath>UI/RimRoundIdeology/RoleFeedee</iconPath>
     <roleTags><li>RR_Feedee</li></roleTags>
     <roleDisabledWorkTags Inherit="False" />
   </PreceptDef>

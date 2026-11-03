@@ -7683,7 +7683,7 @@
         <li MayRequire="Ludeon.RimWorld.Odyssey">Fish_Piranha</li>
         <li MayRequire="Ludeon.RimWorld.Odyssey">Fish_Salmon</li>
         <li MayRequire="Ludeon.RimWorld.Odyssey">Fish_Tilapia</li>
-        <li MayRequire="Ludeon.RimWorld.Odyssey">Fish_Toxfish</li>
+        <li MayRequire="Ludeon.RimWorld.Odyssey,Ludeon.RimWorld.Biotech">Fish_Toxfish</li>
         <li MayRequire="Ludeon.RimWorld.Odyssey">Fish_Tuna</li>
         <li>Meat_Alpaca</li>
         <li>Meat_Alphabeaver</li>
@@ -7757,7 +7757,7 @@
         <li MayRequire="Ludeon.RimWorld.Odyssey">Fish_Piranha</li>
         <li MayRequire="Ludeon.RimWorld.Odyssey">Fish_Salmon</li>
         <li MayRequire="Ludeon.RimWorld.Odyssey">Fish_Tilapia</li>
-        <li MayRequire="Ludeon.RimWorld.Odyssey">Fish_Toxfish</li>
+        <li MayRequire="Ludeon.RimWorld.Odyssey,Ludeon.RimWorld.Biotech">Fish_Toxfish</li>
         <li MayRequire="Ludeon.RimWorld.Odyssey">Fish_Tuna</li>
         <li>Meat_Alpaca</li>
         <li>Meat_Alphabeaver</li>
@@ -7855,7 +7855,7 @@
             <li MayRequire="Ludeon.RimWorld.Odyssey">Fish_Piranha</li>
             <li MayRequire="Ludeon.RimWorld.Odyssey">Fish_Salmon</li>
             <li MayRequire="Ludeon.RimWorld.Odyssey">Fish_Tilapia</li>
-            <li MayRequire="Ludeon.RimWorld.Odyssey">Fish_Toxfish</li>
+            <li MayRequire="Ludeon.RimWorld.Odyssey,Ludeon.RimWorld.Biotech">Fish_Toxfish</li>
             <li MayRequire="Ludeon.RimWorld.Odyssey">Fish_Tuna</li>
             <li>Meat_Alpaca</li>
             <li>Meat_Alphabeaver</li>
@@ -7948,7 +7948,7 @@
         <li MayRequire="Ludeon.RimWorld.Odyssey">Fish_Piranha</li>
         <li MayRequire="Ludeon.RimWorld.Odyssey">Fish_Salmon</li>
         <li MayRequire="Ludeon.RimWorld.Odyssey">Fish_Tilapia</li>
-        <li MayRequire="Ludeon.RimWorld.Odyssey">Fish_Toxfish</li>
+        <li MayRequire="Ludeon.RimWorld.Odyssey,Ludeon.RimWorld.Biotech">Fish_Toxfish</li>
         <li MayRequire="Ludeon.RimWorld.Odyssey">Fish_Tuna</li>
         <li>Meat_Alpaca</li>
         <li>Meat_Alphabeaver</li>
@@ -8022,7 +8022,7 @@
         <li MayRequire="Ludeon.RimWorld.Odyssey">Fish_Piranha</li>
         <li MayRequire="Ludeon.RimWorld.Odyssey">Fish_Salmon</li>
         <li MayRequire="Ludeon.RimWorld.Odyssey">Fish_Tilapia</li>
-        <li MayRequire="Ludeon.RimWorld.Odyssey">Fish_Toxfish</li>
+        <li MayRequire="Ludeon.RimWorld.Odyssey,Ludeon.RimWorld.Biotech">Fish_Toxfish</li>
         <li MayRequire="Ludeon.RimWorld.Odyssey">Fish_Tuna</li>
         <li>Meat_Alpaca</li>
         <li>Meat_Alphabeaver</li>
@@ -8120,7 +8120,7 @@
             <li MayRequire="Ludeon.RimWorld.Odyssey">Fish_Piranha</li>
             <li MayRequire="Ludeon.RimWorld.Odyssey">Fish_Salmon</li>
             <li MayRequire="Ludeon.RimWorld.Odyssey">Fish_Tilapia</li>
-            <li MayRequire="Ludeon.RimWorld.Odyssey">Fish_Toxfish</li>
+            <li MayRequire="Ludeon.RimWorld.Odyssey,Ludeon.RimWorld.Biotech">Fish_Toxfish</li>
             <li MayRequire="Ludeon.RimWorld.Odyssey">Fish_Tuna</li>
             <li>Meat_Alpaca</li>
             <li>Meat_Alphabeaver</li>
@@ -8213,7 +8213,7 @@
         <li MayRequire="Ludeon.RimWorld.Odyssey">Fish_Piranha</li>
         <li MayRequire="Ludeon.RimWorld.Odyssey">Fish_Salmon</li>
         <li MayRequire="Ludeon.RimWorld.Odyssey">Fish_Tilapia</li>
-        <li MayRequire="Ludeon.RimWorld.Odyssey">Fish_Toxfish</li>
+        <li MayRequire="Ludeon.RimWorld.Odyssey,Ludeon.RimWorld.Biotech">Fish_Toxfish</li>
         <li MayRequire="Ludeon.RimWorld.Odyssey">Fish_Tuna</li>
         <li>Meat_Alpaca</li>
         <li>Meat_Alphabeaver</li>
@@ -8287,7 +8287,7 @@
         <li MayRequire="Ludeon.RimWorld.Odyssey">Fish_Piranha</li>
         <li MayRequire="Ludeon.RimWorld.Odyssey">Fish_Salmon</li>
         <li MayRequire="Ludeon.RimWorld.Odyssey">Fish_Tilapia</li>
-        <li MayRequire="Ludeon.RimWorld.Odyssey">Fish_Toxfish</li>
+        <li MayRequire="Ludeon.RimWorld.Odyssey,Ludeon.RimWorld.Biotech">Fish_Toxfish</li>
         <li MayRequire="Ludeon.RimWorld.Odyssey">Fish_Tuna</li>
         <li>Meat_Alpaca</li>
         <li>Meat_Alphabeaver</li>
@@ -8385,7 +8385,7 @@
             <li MayRequire="Ludeon.RimWorld.Odyssey">Fish_Piranha</li>
             <li MayRequire="Ludeon.RimWorld.Odyssey">Fish_Salmon</li>
             <li MayRequire="Ludeon.RimWorld.Odyssey">Fish_Tilapia</li>
-            <li MayRequire="Ludeon.RimWorld.Odyssey">Fish_Toxfish</li>
+            <li MayRequire="Ludeon.RimWorld.Odyssey,Ludeon.RimWorld.Biotech">Fish_Toxfish</li>
             <li MayRequire="Ludeon.RimWorld.Odyssey">Fish_Tuna</li>
             <li>Meat_Alpaca</li>
             <li>Meat_Alphabeaver</li>
@@ -8478,7 +8478,7 @@
         <li MayRequire="Ludeon.RimWorld.Odyssey">Fish_Piranha</li>
         <li MayRequire="Ludeon.RimWorld.Odyssey">Fish_Salmon</li>
         <li MayRequire="Ludeon.RimWorld.Odyssey">Fish_Tilapia</li>
-        <li MayRequire="Ludeon.RimWorld.Odyssey">Fish_Toxfish</li>
+        <li MayRequire="Ludeon.RimWorld.Odyssey,Ludeon.RimWorld.Biotech">Fish_Toxfish</li>
         <li MayRequire="Ludeon.RimWorld.Odyssey">Fish_Tuna</li>
         <li>Meat_Alpaca</li>
         <li>Meat_Alphabeaver</li>
@@ -8552,7 +8552,7 @@
         <li MayRequire="Ludeon.RimWorld.Odyssey">Fish_Piranha</li>
         <li MayRequire="Ludeon.RimWorld.Odyssey">Fish_Salmon</li>
         <li MayRequire="Ludeon.RimWorld.Odyssey">Fish_Tilapia</li>
-        <li MayRequire="Ludeon.RimWorld.Odyssey">Fish_Toxfish</li>
+        <li MayRequire="Ludeon.RimWorld.Odyssey,Ludeon.RimWorld.Biotech">Fish_Toxfish</li>
         <li MayRequire="Ludeon.RimWorld.Odyssey">Fish_Tuna</li>
         <li>Meat_Alpaca</li>
         <li>Meat_Alphabeaver</li>
@@ -8650,7 +8650,7 @@
             <li MayRequire="Ludeon.RimWorld.Odyssey">Fish_Piranha</li>
             <li MayRequire="Ludeon.RimWorld.Odyssey">Fish_Salmon</li>
             <li MayRequire="Ludeon.RimWorld.Odyssey">Fish_Tilapia</li>
-            <li MayRequire="Ludeon.RimWorld.Odyssey">Fish_Toxfish</li>
+            <li MayRequire="Ludeon.RimWorld.Odyssey,Ludeon.RimWorld.Biotech">Fish_Toxfish</li>
             <li MayRequire="Ludeon.RimWorld.Odyssey">Fish_Tuna</li>
             <li>Meat_Alpaca</li>
             <li>Meat_Alphabeaver</li>
@@ -8743,7 +8743,7 @@
         <li MayRequire="Ludeon.RimWorld.Odyssey">Fish_Piranha</li>
         <li MayRequire="Ludeon.RimWorld.Odyssey">Fish_Salmon</li>
         <li MayRequire="Ludeon.RimWorld.Odyssey">Fish_Tilapia</li>
-        <li MayRequire="Ludeon.RimWorld.Odyssey">Fish_Toxfish</li>
+        <li MayRequire="Ludeon.RimWorld.Odyssey,Ludeon.RimWorld.Biotech">Fish_Toxfish</li>
         <li MayRequire="Ludeon.RimWorld.Odyssey">Fish_Tuna</li>
         <li>Meat_Alpaca</li>
         <li>Meat_Alphabeaver</li>
@@ -8817,7 +8817,7 @@
         <li MayRequire="Ludeon.RimWorld.Odyssey">Fish_Piranha</li>
         <li MayRequire="Ludeon.RimWorld.Odyssey">Fish_Salmon</li>
         <li MayRequire="Ludeon.RimWorld.Odyssey">Fish_Tilapia</li>
-        <li MayRequire="Ludeon.RimWorld.Odyssey">Fish_Toxfish</li>
+        <li MayRequire="Ludeon.RimWorld.Odyssey,Ludeon.RimWorld.Biotech">Fish_Toxfish</li>
         <li MayRequire="Ludeon.RimWorld.Odyssey">Fish_Tuna</li>
         <li>Meat_Alpaca</li>
         <li>Meat_Alphabeaver</li>
@@ -8915,7 +8915,7 @@
             <li MayRequire="Ludeon.RimWorld.Odyssey">Fish_Piranha</li>
             <li MayRequire="Ludeon.RimWorld.Odyssey">Fish_Salmon</li>
             <li MayRequire="Ludeon.RimWorld.Odyssey">Fish_Tilapia</li>
-            <li MayRequire="Ludeon.RimWorld.Odyssey">Fish_Toxfish</li>
+            <li MayRequire="Ludeon.RimWorld.Odyssey,Ludeon.RimWorld.Biotech">Fish_Toxfish</li>
             <li MayRequire="Ludeon.RimWorld.Odyssey">Fish_Tuna</li>
             <li>Meat_Alpaca</li>
             <li>Meat_Alphabeaver</li>

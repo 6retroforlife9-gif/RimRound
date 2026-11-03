@@ -3,13 +3,13 @@
   <ThingCategoryDef>
     <defName>RR_OrdinaryMeals</defName>
     <label>RimRound meals and network servings</label>
-    <iconPath>UI/RimRoundIdeology/MealPortions</iconPath>
+    <iconPath>Things/Item/Meal/Simple/Simple_a</iconPath>
     <parent>FoodMeals</parent>
   </ThingCategoryDef>
   <ThingCategoryDef>
     <defName>RR_EnrichedFoods</defName>
     <label>RimRound enriched foods (opt in)</label>
-    <iconPath>UI/RimRoundIdeology/MealPortions</iconPath>
+    <iconPath>Things/Food/Burger</iconPath>
     <parent>Foods</parent>
   </ThingCategoryDef>
   <ThingCategoryDef>

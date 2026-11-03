@@ -151,7 +151,7 @@
   <RR_FoodNetworkSettingsEnabled>Food Network v2 overhaul</RR_FoodNetworkSettingsEnabled>
   <RR_FoodNetworkSettingsEnabledTip>Uses the transactional pipe network, FIFO food batches, safe dispenser jobs, validated bed links, and two-port distiller. Turning this off returns the machines to RimRound's original implementation; saved v2 batches are retained.</RR_FoodNetworkSettingsEnabledTip>
   <RR_FoodNetworkSettingsPreparedMeals>Allow prepared meals in food processors</RR_FoodNetworkSettingsPreparedMeals>
-  <RR_FoodNetworkSettingsPreparedMealsTip>Lets a processor liquefy prepared meals accepted by its hopper filter. Raw foods and ingredients remain accepted either way.</RR_FoodNetworkSettingsPreparedMealsTip>
+  <RR_FoodNetworkSettingsPreparedMealsTip>Food Network v2 processors can liquefy ordinary prepared meals selected in an XL hopper's Storage filter. Enable the desired meals in that filter separately; this option does not change saved storage choices. Vanilla hoppers remain raw-only. Bundled Junk Food and other excluded foods cannot be processed. This option applies only to Food Network v2.</RR_FoodNetworkSettingsPreparedMealsTip>
   <RR_FoodNetworkSettingsProcessorRate>Processor throughput per 60-tick cycle</RR_FoodNetworkSettingsProcessorRate>
   <RR_FoodNetworkSettingsProcessorRateTip>Maximum nutrition converted by each food processor per cycle. A single larger item is still processed whole when there is enough exact storage capacity.</RR_FoodNetworkSettingsProcessorRateTip>
   <RR_FoodNetworkSettingsServingSize>Survival/Maintain nutrition per pulse</RR_FoodNetworkSettingsServingSize>

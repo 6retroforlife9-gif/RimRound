@@ -4,10 +4,10 @@
     <defName>Oinky_JunkFoods</defName>
     <label>Junk foods</label>
     <description>Prepare dense snacks, sweets, drinks and rich meals from ordinary crops, milk and chocolate.</description>
-    <tab>Main</tab>
+    <tab>RimRoundTech</tab>
     <baseCost>500</baseCost>
     <techLevel>Industrial</techLevel>
-    <researchViewX>1</researchViewX>
+    <researchViewX>2</researchViewX>
     <researchViewY>5</researchViewY>
   </ResearchProjectDef>
   <ThoughtDef>

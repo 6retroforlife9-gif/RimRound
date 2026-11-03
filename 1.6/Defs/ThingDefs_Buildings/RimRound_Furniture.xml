@@ -14,7 +14,7 @@
 		</graphicData>
 		<altitudeLayer>FloorEmplacement</altitudeLayer>
 		<statBases>
-			<BedRestEffectiveness>1.00</BedRestEffectiveness>
+			<BedRestEffectiveness>1.25</BedRestEffectiveness>
 			<WorkToBuild>0</WorkToBuild>
 			<Comfort>1.50</Comfort>
 			<SurgerySuccessChanceFactor>0.7</SurgerySuccessChanceFactor>
@@ -48,21 +48,21 @@
 	<ThingDef ParentName="BlobBedBase">
 		<defName>BlobBed_FoldsOfHeaven_I</defName>
 		<statBases>
-			<BedRestEffectiveness>1.20</BedRestEffectiveness>
+			<BedRestEffectiveness>1.50</BedRestEffectiveness>
 			<Comfort>2.0</Comfort>
 		</statBases>
 	</ThingDef>
 	<ThingDef ParentName="BlobBedBase">
 		<defName>BlobBed_FoldsOfHeaven_II</defName>
 		<statBases>
-			<BedRestEffectiveness>1.40</BedRestEffectiveness>
+			<BedRestEffectiveness>1.75</BedRestEffectiveness>
 			<Comfort>2.5</Comfort>
 		</statBases>
 	</ThingDef>
 	<ThingDef ParentName="BlobBedBase">
 		<defName>BlobBed_FoldsOfHeaven_III</defName>
 		<statBases>
-			<BedRestEffectiveness>1.60</BedRestEffectiveness>
+			<BedRestEffectiveness>2.00</BedRestEffectiveness>
 			<Comfort>3.0</Comfort>
 		</statBases>
 	</ThingDef>	

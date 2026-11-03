@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ChemicalDef>
+    <defName>Oinky_JunkFoodHabitChemical</defName>
+    <label>junk food</label>
+    <addictionHediff>Oinky_JunkFoodHabit</addictionHediff>
+    <toleranceHediff>Oinky_JunkFoodExposure</toleranceHediff>
+    <canBeAddicted>false</canBeAddicted>
+    <canBinge>false</canBinge>
+    <generateAddictionGenes>false</generateAddictionGenes>
+  </ChemicalDef>
+  <HediffDef>
+    <defName>Oinky_JunkFoodHabit</defName>
+    <label>junk-food habit</label>
+    <description>A mild habit of enjoying treats. Any useful junk-food serving gives proportional relief. Even a small useful bite delays recovery; four active days without junk food clear the habit. It causes no intoxication, physical withdrawal or increased calorie absorption.</description>
+    <hediffClass>Oinky.JunkFood.Hediff_JunkFoodHabit</hediffClass>
+    <chemicalNeed>Oinky_JunkFoodNeed</chemicalNeed>
+    <isBad>false</isBad>
+    <everCurableByItem>false</everCurableByItem>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <initialSeverity>1</initialSeverity>
+    <maxSeverity>1</maxSeverity>
+    <stages><li/><li><label>craving treats</label></li></stages>
+  </HediffDef>
+  <HediffDef>
+    <defName>Oinky_JunkFoodExposure</defName>
+    <label>used to treats</label>
+    <description>Recent useful junk-food servings can gradually form a mild habit. This does not change calories, food effects or the amount needed for relief.</description>
+    <hediffClass>Oinky.JunkFood.Hediff_JunkFoodExposure</hediffClass>
+    <isBad>false</isBad>
+    <everCurableByItem>false</everCurableByItem>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <initialSeverity>0.001</initialSeverity>
+    <maxSeverity>1</maxSeverity>
+  </HediffDef>
+  <NeedDef>
+    <defName>Oinky_JunkFoodNeed</defName>
+    <label>treats</label>
+    <description>A mild desire for junk food. Each useful serving restores 90%; the need falls by 50% per active day. Low levels cause a single -1, -2 or -3 annoyance. Any useful bite delays the four active days of abstinence needed to lose the habit.</description>
+    <needClass>Oinky.JunkFood.Need_JunkFood</needClass>
+    <minIntelligence>Humanlike</minIntelligence>
+    <onlyIfCausedByHediff>true</onlyIfCausedByHediff>
+    <developmentalStageFilter>Adult</developmentalStageFilter>
+    <showForCaravanMembers>true</showForCaravanMembers>
+    <freezeWhileSleeping>false</freezeWhileSleeping>
+    <freezeInMentalState>false</freezeInMentalState>
+    <fallPerDay>0.5</fallPerDay>
+    <listPriority>31</listPriority>
+  </NeedDef>
+  <ThoughtDef>
+    <defName>Oinky_SharedJunkFoodCraving</defName>
+    <workerClass>Oinky.JunkFood.ThoughtWorker_SharedJunkCraving</workerClass>
+    <developmentalStageFilter>Adult</developmentalStageFilter>
+    <validWhileDespawned>true</validWhileDespawned>
+    <stages>
+      <li><label>craving a treat</label><description>I could go for a little junk food.</description><baseMoodEffect>-1</baseMoodEffect></li>
+      <li><label>snack deprived</label><description>I have been missing my treats.</description><baseMoodEffect>-2</baseMoodEffect></li>
+      <li><label>grumpy without treats</label><description>I am a little grumpy without my usual snacks. It will pass.</description><baseMoodEffect>-3</baseMoodEffect></li>
+    </stages>
+  </ThoughtDef>
+  <JobDef>
+    <defName>Oinky_SharedJunkSnack</defName>
+    <driverClass>Oinky.JunkFood.JobDriver_JunkSnack</driverClass>
+    <reportString>Having a junk-food snack.</reportString>
+    <casualInterruptible>true</casualInterruptible>
+  </JobDef>
+  <JobDef>
+    <defName>Oinky_CarryJunkSnacks</defName>
+    <driverClass>Oinky.JunkFood.JobDriver_CarryJunkSnacks</driverClass>
+    <reportString>Collecting junk-food snacks.</reportString>
+    <casualInterruptible>true</casualInterruptible>
+  </JobDef>
+  <MentalBreakDef>
+    <defName>Oinky_JunkFoodBinge</defName>
+    <mentalState>Oinky_JunkFoodBinge</mentalState>
+    <workerClass>Oinky.JunkFood.MentalBreakWorker_JunkFoodBinge</workerClass>
+    <baseCommonality>0.2</baseCommonality>
+    <intensity>Minor</intensity>
+  </MentalBreakDef>
+  <MentalStateDef ParentName="BaseMentalState">
+    <defName>Oinky_JunkFoodBinge</defName>
+    <stateClass>Oinky.JunkFood.MentalState_JunkFoodBinge</stateClass>
+    <workerClass>Oinky.JunkFood.MentalStateWorker_JunkFoodBinge</workerClass>
+    <label>binging on junk food</label>
+    <category>Misc</category>
+    <prisonersCanDo>false</prisonersCanDo>
+    <colonistsOnly>true</colonistsOnly>
+    <minTicksBeforeRecovery>6000</minTicksBeforeRecovery>
+    <maxTicksBeforeRecovery>18000</maxTicksBeforeRecovery>
+    <recoveryMtbDays>0.083</recoveryMtbDays>
+    <recoverFromSleep>true</recoverFromSleep>
+    <nameColor>(0.5,0.9,0.5)</nameColor>
+    <beginLetterLabel>junk-food binge</beginLetterLabel>
+    <beginLetter>{0} is going on a short junk-food binge.</beginLetter>
+    <beginLetterDef>NegativeEvent</beginLetterDef>
+    <moodRecoveryThought>Catharsis</moodRecoveryThought>
+    <recoveryMessage>{0} is no longer binging on junk food.</recoveryMessage>
+    <baseInspectLine>Mental state: Junk-food binge</baseInspectLine>
+    <requiredCapacities><li>Manipulation</li><li>Moving</li></requiredCapacities>
+  </MentalStateDef>
+  <ThinkTreeDef>
+    <defName>Oinky_JunkFoodBinge</defName>
+    <insertTag>Humanlike_PostMentalState</insertTag>
+    <insertPriority>100</insertPriority>
+    <thinkRoot Class="ThinkNode_ConditionalMentalState">
+      <state>Oinky_JunkFoodBinge</state>
+      <subNodes>
+        <li Class="ThinkNode_ConditionalExhausted"><subNodes><li Class="JobGiver_GetRest"/></subNodes></li>
+        <li Class="JobGiver_SatisfyChemicalNeed"/>
+        <li Class="JobGiver_SatifyChemicalDependency" MayRequire="Ludeon.RimWorld.Biotech"/>
+        <li Class="Oinky.JunkFood.JobGiver_JunkFoodBinge"/>
+        <li Class="JobGiver_WanderColony"/>
+      </subNodes>
+    </thinkRoot>
+  </ThinkTreeDef>
+</Defs>
