@@ -36,7 +36,7 @@ Weight-related extra rest drain is reduced by 75% in an operating hoverchair and
 
 Obese and above receive natural/tended injury recovery at 110% of the ordinary rate after compensating for enlarged body-part health. Lardy and above resist new food poisoning. Both effects follow current eligible adult weight stage.
 
-Male and female bodies, friendly and hostile pawns, prisoners and slaves are enabled by default at ages 18-1000. Existing custom switches and limits are preserved, apart from the one-time old 200-year upper-limit migration.
+The default age range is 18–200. Body features are enabled by default for male and female pawns, friendly and hostile NPCs, prisoners and slaves. Existing saved choices are respected.
 
 Anthrosonae is now fully supported. Base-mod adult appearances retain their coats, colours, head features and fitted tails/wings across supported RimRound body artwork and weight stages. Third-party addon content retains native fallback.
 

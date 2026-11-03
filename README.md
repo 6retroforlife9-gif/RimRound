@@ -2,7 +2,17 @@
 
 Substantially redesigned mod for RimWorld 1.6.
 
-## Latest update - 1 November 2026
+## Latest update - 2 November 2026
+
+- **Blob beds and partners.** Guests can use a free spot beside a large supporting bed, get Masterwork-equivalent base rest and keep their sleeping direction after a reload. Assigned adult partners get the shared-bed mood benefit and can qualify for intimacy under the game's normal rules.
+- **Optional Junk Food habit and snack policy.** The new colony setting defaults off. Turning it on adds one policy for all treats, covering recreation, craving relief, scheduled snacks and carrying. Pawns can develop a shared habit with mild cravings and occasional junk-only binges. Ordinary meals and assisted feeding still follow food restrictions.
+- **Junk Food research and recipes.** Find Junk Foods on the RimRound research tab. All 189 recipes show whole-item ingredient costs. A large cola bottle lists 94 corn. Each recipe still consumes the same ingredients.
+- **XL hoppers and food reserves.** XL hoppers can take selected prepared meals and reject hemogen packs even if an old filter allows them. Liquid-food reserves now account for which servings a pawn or helper can actually collect.
+- **Body discussions and encouragement.** Colonists who cannot do Social work can now receive body-preference discussions and encouragement from a moral guide. The speaker or guide still needs Social capability.
+
+Tested on **RimWorld 1.6.4871 rev591**, including cooking and feeding jobs, a discussion and a guide cast on a copy of an existing colony, and save/reload.
+
+## Previous update - 1 November 2026
 
 - **Junk Food is now included:** Oinky's Junk Food content is built into the RimRound rework, with 93 foods, 189 crafting recipes, its research, artwork and original credits. No separate Junk Food download is needed.
 - **Compact, calorie-dense snacks:** junk foods provide more calories for the stomach space they occupy, making them useful for weight gain. They work with ordinary eating, shared meals and assisted feeding while respecting food restrictions and the recipient's limits.
