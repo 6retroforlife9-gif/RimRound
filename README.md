@@ -2,7 +2,18 @@
 
 Substantially redesigned mod for RimWorld 1.6.
 
-## Latest update - 2 November 2026
+## Latest update - 4 November 2026
+
+- **RimVore-2 and RJW compatibility.** The heavy RimRound rework now works with the custom **RimVore-2 1.16.1.3** companion and optional **RJW 6.2.2** on **RimWorld 1.6**.
+- **Passenger space and digestion.** A living swallowed pawn temporarily takes up eating room. Transfers and release do not award calories. Eligible digestion contributes to RimRound's energy and weight system once, including after saving and loading.
+- **Transfers and save/load.** The companion preserves the actual pawn and carried items through supported transfers and releases. Newly saved pending proposals retain their participants when reloaded.
+- **Dispenser feeding fix.** A helper feeding a hungry patient can collect an ordinary serving when food is available but colony reserves prevent optional extra feeding. This fixes the reproduced waiting loop with adjacent or separated buildings.
+
+Install the [custom RimVore-2 companion](CompanionMods/RimVore-2-1.16.1.3.zip) as a separate mod folder alongside RimRound. Its adapters are included. Load RimVore-2 after RimRound, then optional RJW. RJW is a separate download. Keep one installed copy of each mod.
+
+Tested on **RimWorld 1.6.4871 rev591**; this update does not qualify 1.7 gameplay.
+
+## Previous update - 2 November 2026
 
 - **Blob beds and partners.** Guests can use a free spot beside a large supporting bed, get Masterwork-equivalent base rest and keep their sleeping direction after a reload. Assigned adult partners get the shared-bed mood benefit and can qualify for intimacy under the game's normal rules.
 - **Optional Junk Food habit and snack policy.** The new colony setting defaults off. Turning it on adds one policy for all treats, covering recreation, craving relief, scheduled snacks and carrying. Pawns can develop a shared habit with mild cravings and occasional junk-only binges. Ordinary meals and assisted feeding still follow food restrictions.
