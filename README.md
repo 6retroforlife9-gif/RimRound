@@ -1,8 +1,36 @@
-# RimRound Rework WIP
+# RimRound Rework 1.0
 
-Substantially redesigned mod for RimWorld 1.6.
+RimRound Rework expands Niwatori401’s weight-gain mod for **RimWorld 1.6**. Give individual colonists a Gain, Maintain or Lose goal, plan the food a colony can spare, and have pawns share meals or feed someone who needs help. With Ideology, a communal feast can bring the dining room to a bedbound guest or bring the guest to the table.
 
-## Latest update - 4 November 2026
+## Install
+
+1. Enable **Harmony**, **Humanoid Alien Races** and **Vanilla Expanded Framework** before RimRound.
+2. Download **RimRound-1.0.zip** from the [1.0 release](https://github.com/6retroforlife9-gif/RimRound/releases/tag/v1.0). Extract the `RimRound` folder into your game’s `Mods` directory. The installed metadata belongs at `Mods/RimRound/About/About.xml`. When updating an existing colony, back up the save and replace the previous RimRound folder so there is one copy of `Niwatori401.RimRound`.
+3. Enable RimRound in **Mods**, then open **Options → Mod options → RimRound** to configure it. Gameplay verification used **RimWorld 1.6.4871 rev591**. Compatibility with RimWorld 1.7 is unverified.
+
+For optional RimVore-2 integration, install the [custom RimVore-2 1.16.1.3 companion](CompanionMods/RimVore-2-1.16.1.3.zip) as a separate mod. Load it after RimRound. If you also use RJW 6.2.2, load RJW after the companion. Oinky’s Junk Food is already bundled with RimRound.
+
+## What changed in 1.0
+
+- **Everyday feeding.** A mobile colonist who asks for food stays in the shared interaction while the helper collects the meal. This fixes the case where a pawn stood up on their bed tile, started looking for their own breakfast, and left the helper carrying food meant for them.
+- **Feasts and attendance.** The Begin window explains seat shortages. A full guest can attend and eat later as appetite returns. If an optional guest leaves or a serving falls through, the remaining diners can finish. The outside-room food setting lets collectors fetch from storage or restrict the feast to food available in the room.
+- **Bedside service.** An immobile leader and moral guide can eat in their own designated beds. A helper can bring another guest to a kneeling mat, pillow or clear floor near the table or a pew, then carry them home. An upright diner can sit on the pew. The planner checks that the helper has an empty place to stand, even in a hall where food is laid out on the floor.
+- **Resting and crawling.** A guest placed on the floor faces south and holds a steady resting pose, including after a save and reload. When the pawn genuinely crawls, the body and head follow the direction of travel.
+- **Ideology and mood.** Role changes use a timed ceremony, and canceling the ceremony preserves the existing role. Body-preference thoughts now describe degrees of satisfaction and discomfort in the pawn’s own voice.
+- **Food searches.** When arranging a meal, pawns reuse the list of stored food and the portion estimate for each prepared dish. Harvested ingredients still go through normal diet and storage checks. Automatic feeders also spend less time looking for machines to maintain.
+
+## Source and credits
+
+The [1.0 release](https://github.com/6retroforlife9-gif/RimRound/releases/tag/v1.0) also includes **RimRound-1.0-Source.zip**, with the C# projects for RimRound, its feeding systems, the SwellGlow integration and bundled Junk Food. See [Building from source](BUILDING.md) for the required game and mod references.
+
+Original RimRound by **Niwatori401**. The rework retains the original project licence and asset credits. [Licence](LICENSE) · [Attribution](ATTRIBUTION)
+
+## Earlier updates
+
+<details>
+<summary>Read the rework history through 4 November 2026</summary>
+
+## Update - 4 November 2026
 
 - **RimVore-2 and RJW compatibility.** The heavy RimRound rework now works with the custom **RimVore-2 1.16.1.3** companion and optional **RJW 6.2.2** on **RimWorld 1.6**.
 - **Passenger space and digestion.** A living swallowed pawn temporarily takes up eating room. Transfers and release do not award calories. Eligible digestion contributes to RimRound's energy and weight system once, including after saving and loading.
@@ -95,3 +123,5 @@ This build also includes reworked food density and digestion, complete Gain meal
 
 Anthrosonae:
 https://steamcommunity.com/sharedfiles/filedetails/?id=2902258418
+
+</details>
