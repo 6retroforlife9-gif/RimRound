@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<HediffDef>
+		<defName>RREE_WeightGainTotemAura</defName>
+		<label>weight gain totem aura</label>
+		<labelNoun>a weight gain totem aura</labelNoun>
+		<description>Generalized toxic effects due to over-concentration of drugs in the bloodstream.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<!-- 
+		<defaultLabelColor>(1,0,0.5)</defaultLabelColor>
+		-->
+		<comps>
+			<li Class="HediffCompProperties_SeverityPerDay">
+				<severityPerDay>-1</severityPerDay>
+				<showHoursToRecover>true</showHoursToRecover>
+			</li>
+			<li Class="RimRoundExtraEvents.HediffComps.HediffCompProperties_RimRoundStats">
+				<weightGainMultiplier>1</weightGainMultiplier>
+			</li>
+		</comps>
+	</HediffDef>
+
+</Defs>

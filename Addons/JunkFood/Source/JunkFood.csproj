@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net48</TargetFramework>
+    <LangVersion>7.3</LangVersion>
+    <AssemblyName>Oinky.JunkFood</AssemblyName>
+    <RootNamespace>Oinky.JunkFood</RootNamespace>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <OutputPath>../1.6/Assemblies/</OutputPath>
+    <RimWorldGameRoot Condition="'$(RimWorldGameRoot)' == ''">UNSET</RimWorldGameRoot>
+    <RimWorldWorkshopRoot Condition="'$(RimWorldWorkshopRoot)' == ''">UNSET</RimWorldWorkshopRoot>
+    <RimRoundReferenceRoot Condition="'$(RimRoundReferenceRoot)' == ''">UNSET</RimRoundReferenceRoot>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies.net48" Version="1.0.3" PrivateAssets="All" />
+    <Reference Include="Assembly-CSharp"><HintPath>$(RimWorldGameRoot)/RimWorldWin64_Data/Managed/Assembly-CSharp.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="0Harmony"><HintPath>$(RimWorldWorkshopRoot)/2009463077/1.6/Assemblies/0Harmony.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="RimRound"><HintPath>$(RimRoundReferenceRoot)/Assemblies/RimRound.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="RimRoundFeedOther"><HintPath>$(RimRoundReferenceRoot)/Assemblies/RimRoundFeedOther.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="UnityEngine.CoreModule"><HintPath>$(RimWorldGameRoot)/RimWorldWin64_Data/Managed/UnityEngine.CoreModule.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="UnityEngine.IMGUIModule"><HintPath>$(RimWorldGameRoot)/RimWorldWin64_Data/Managed/UnityEngine.IMGUIModule.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="UnityEngine.TextRenderingModule"><HintPath>$(RimWorldGameRoot)/RimWorldWin64_Data/Managed/UnityEngine.TextRenderingModule.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="netstandard"><HintPath>$(RimWorldGameRoot)/RimWorldWin64_Data/Managed/netstandard.dll</HintPath><Private>false</Private></Reference>
+  </ItemGroup>
+  <Target Name="RequireNativeReferences" BeforeTargets="ResolveReferences">
+    <Error Condition="!Exists('$(RimWorldGameRoot)/RimWorldWin64_Data/Managed/Assembly-CSharp.dll')" Text="Set RimWorldGameRoot to the intended RimWorld 1.6 installation." />
+    <Error Condition="!Exists('$(RimRoundReferenceRoot)/Assemblies/RimRoundFeedOther.dll')" Text="Set RimRoundReferenceRoot to the frozen RimRound candidate's 1.6 directory." />
+  </Target>
+</Project>

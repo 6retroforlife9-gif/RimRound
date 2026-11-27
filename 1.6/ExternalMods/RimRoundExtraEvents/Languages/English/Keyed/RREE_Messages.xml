@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+	<RREE_MessageWornFatStorageApparelDropped>{1_nameFull} exceeded the max capacity of {1_pronoun} {0}, causing it to drop onto the ground.</RREE_MessageWornFatStorageApparelDropped>
+	<RREE_MessageWornFatStorageApparelDroppedFatDump>{1_nameFull} exceeded the max capacity of {1_pronoun} {0}, causing it to drop onto the ground as waves of flesh emerge from {PAWN_pronoun} body..</RREE_MessageWornFatStorageApparelDroppedFatDump>
+	
+	<RREE_MessageWornFatStorageApparelPopped>{1_nameFull} exceeded the max capacity of {1_pronoun} {0}, causing it to break spectacularly.</RREE_MessageWornFatStorageApparelPopped>
+	<RREE_MessageWornFatStorageApparelPoppedFatDump>{1_nameFull} exceeded the max capacity of {1_pronoun} {0}, causing it to break spectacularly as waves of flesh emerge from {PAWN_pronoun} body.</RREE_MessageWornFatStorageApparelPoppedFatDump>
+
+	<RREE_MessageWornFatStorageApparelSoftPopped>{1_nameFull} exceeded the safe capacity of {1_pronoun} {0} for too long, causing it to break spectacularly.</RREE_MessageWornFatStorageApparelSoftPopped>
+	<RREE_MessageWornFatStorageApparelSoftPoppedFatDump>{1_nameFull} exceeded the safe capacity of {1_pronoun} {0} for too long, causing it to break spectacularly as waves of flesh emerge from {PAWN_pronoun} body.</RREE_MessageWornFatStorageApparelSoftPoppedFatDump>
+
+	<RREE_MessageWornFatStorageApparelEMPFatDump>The circuits of the {0} worn by {1_nameFull} have been completely overwhelmed by EMP, causing it to unleash its stored fat onto the world.</RREE_MessageWornFatStorageApparelEMPFatDump>
+	
+</LanguageData>

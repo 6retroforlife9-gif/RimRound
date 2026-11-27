@@ -19,6 +19,8 @@
   <RR_FeedOtherSettingsManualFeedingTip>Adds the player-forced Feed command when one selected pawn right-clicks another eligible humanlike pawn.</RR_FeedOtherSettingsManualFeedingTip>
   <RR_FeedOtherSettingsBedsideFeeding>Bedside and sleeping-recipient feeding</RR_FeedOtherSettingsBedsideFeeding>
   <RR_FeedOtherSettingsBedsideFeedingTip>Allows feeding a downed, immobile, resting, or sleeping recipient while they remain in bed. Disabling this affects new sessions only.</RR_FeedOtherSettingsBedsideFeedingTip>
+  <RR_FeedOtherSettingsRitualOutsideFood>Fetch food from outside the ritual room</RR_FeedOtherSettingsRitualOutsideFood>
+  <RR_FeedOtherSettingsRitualOutsideFoodTip>Allow participants in Communal Feasts and Ceremonial Feedings to fetch food from elsewhere on the map. When this is off, they use food they bring with them, dishes in the ritual room, and dispensers operated from inside that room. Changes take effect when the next ritual begins.</RR_FeedOtherSettingsRitualOutsideFoodTip>
   <RR_FeedOtherSettingsStartingCutoff>Manual feeding: maximum starting fullness</RR_FeedOtherSettingsStartingCutoff>
   <RR_FeedOtherSettingsStartingCutoffTip>Maximum starting fullness for a manual feeding order, as a percentage of the hard stomach limit—not the food bar.\nAutomatic social meals instead use the Gain goal, room below 90% comfortable capacity and colony reserves.</RR_FeedOtherSettingsStartingCutoffTip>
   <RR_FeedOtherSettingsFeedingTarget>Manual feeding: stop fullness</RR_FeedOtherSettingsFeedingTarget>

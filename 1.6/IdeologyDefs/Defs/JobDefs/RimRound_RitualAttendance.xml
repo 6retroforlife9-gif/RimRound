@@ -11,6 +11,7 @@
     <defName>RR_RitualAttendanceStay</defName>
     <driverClass>RimRound.Ideology.JobDriver_RitualAttendanceStay</driverClass>
     <reportString>Attending the ritual from an assisted guest place.</reportString>
+    <isCrawlingIfDowned>false</isCrawlingIfDowned>
     <casualInterruptible>false</casualInterruptible>
     <playerInterruptible>true</playerInterruptible>
   </JobDef>

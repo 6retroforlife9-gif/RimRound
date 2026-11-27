@@ -679,5 +679,5 @@ VatgrownHumanRace,defaultSet</RR_RaceData>
   <RR_PreferenceSummary>Preferred range: {0}–{1} {2}\nConviction: {3}</RR_PreferenceSummary>
   <RR_PreferenceUnavailable>Personal preference unavailable.</RR_PreferenceUnavailable>
   <RR_PreferenceAssignment>Assigned goal: {0}</RR_PreferenceAssignment>
-  <RR_PreferenceExplanation>Personal wishes and assigned goals are separate. Assigning a goal or ordering a meal does not change this preference. Conviction describes resistance to changing these wishes.</RR_PreferenceExplanation>
+  <RR_PreferenceExplanation>Assigning a goal or ordering a meal leaves this preference intact. A pawn feels good within their preferred range. The farther outside it they are, the more it affects their mood. Conviction describes resistance to changing these wishes.</RR_PreferenceExplanation>
 </LanguageData>

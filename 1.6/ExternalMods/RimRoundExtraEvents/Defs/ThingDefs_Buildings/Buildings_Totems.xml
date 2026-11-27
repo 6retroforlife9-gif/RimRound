@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef ParentName="BuildingBase">
+		<defName>RREE_WeightGainAuraTotem</defName>
+		<label>small totem</label>
+		<description>A torso-sized piece of material sculpted into an artistic form.</description>
+		<graphicData>
+			<graphicClass>Graphic_Random</graphicClass>
+			<texPath>Things/Building/Art/SculptureSmall</texPath>
+		</graphicData>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<pathCost>50</pathCost>
+		<useHitPoints>true</useHitPoints>
+		<minifiedDef>MinifiedThing</minifiedDef>
+		<thingCategories>
+			<li>BuildingsArt</li>
+		</thingCategories>
+		<thingSetMakerTags>
+			<li>RewardStandardLowFreq</li>
+		</thingSetMakerTags>
+		<fillPercent>0.35</fillPercent>
+		<rotatable>false</rotatable>
+		<statBases>
+			<Flammability>1.0</Flammability>
+			<SellPriceFactor>1.10</SellPriceFactor>
+			<MeditationFocusStrength>0.0</MeditationFocusStrength>
+			<MaxHitPoints>90</MaxHitPoints>
+			<Mass>3</Mass>
+			<Beauty>50</Beauty>
+			<WorkToMake>18000</WorkToMake>
+			<StyleDominance MayRequire="Ludeon.RimWorld.Ideology">10</StyleDominance>
+		</statBases>
+		<stuffCategories>
+			<li>Metallic</li>
+			<li>Woody</li>
+			<li>Stony</li>
+		</stuffCategories>
+		<costStuffCount>50</costStuffCount>
+		<tradeTags>
+			<li>Art</li>
+		</tradeTags>
+
+		<tickerType>Rare</tickerType>
+		<specialDisplayRadius>8.3</specialDisplayRadius>
+		<comps>
+			<li Class="RimRoundExtraEvents.ThingComps.CompProperties_AddHediffRadius">
+				<hediffDeff>RREE_WeightGainTotemAura</hediffDeff>
+				<effectRadius>8.3</effectRadius>
+				<setSeverity>0.05</setSeverity>
+				<!--Practically only about 0.05~ per hour, as the hediff loses roughly 0.05~-->
+				<severityPerHour>0.1</severityPerHour>
+				<maxSeverity>0.5</maxSeverity>
+			</li>
+		</comps>
+	</ThingDef>
+
+</Defs>

@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
-  <name>RimRound Rework WIP</name>
+  <name>RimRound Rework</name>
   <author>Niwatori401</author>
   <packageId>Niwatori401.RimRound</packageId>
   <supportedVersions>
     <li>1.6</li>
   </supportedVersions>
-  <description>Work-in-progress rework of RimRound for RimWorld 1.6.
+  <description>RimRound Rework 1.0 for RimWorld 1.6.
+
+Shared meals keep a mobile recipient with the helper through collection and feeding. Feasts support room-local food, bedside diners and assisted guests. A guest placed on the floor faces south, keeps a steady resting pose and can be carried home after the ritual.
 
 Updated 25 October 2026:
 - Embodied Abundance, shared feasts, ceremonial feeding and designated ritual beds.

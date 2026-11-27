@@ -6,19 +6,39 @@
     <validWhileDespawned>true</validWhileDespawned>
     <stages>
       <li>
-        <label>smaller than I prefer</label>
-        <description>I want to be fatter. This body still feels too small.</description>
-        <baseMoodEffect>-2</baseMoodEffect>
+        <label>way too light</label>
+        <description>I'm far too light. There is simply not enough of me to feel real.</description>
+        <baseMoodEffect>-6</baseMoodEffect>
       </li>
       <li>
-        <label>comfortable with my size</label>
-        <description>Just the size I wanted. I feel at home in this body.</description>
-        <baseMoodEffect>3</baseMoodEffect>
+        <label>not heavy enough</label>
+        <description>I'm too light. I want to feel more of me pressing against my skin.</description>
+        <baseMoodEffect>-3</baseMoodEffect>
       </li>
       <li>
-        <label>larger than I prefer</label>
-        <description>There's more of me than I want. I'd rather be slimmer.</description>
-        <baseMoodEffect>-2</baseMoodEffect>
+        <label>a little too light</label>
+        <description>So close to my ideal. I just need a touch more heft.</description>
+        <baseMoodEffect>-1</baseMoodEffect>
+      </li>
+      <li>
+        <label>just right</label>
+        <description>This is my size. Not a pound I'd add or take away.</description>
+        <baseMoodEffect>5</baseMoodEffect>
+      </li>
+      <li>
+        <label>a bit too heavy</label>
+        <description>A touch too much weight. I feel slightly too wide and soft for my liking.</description>
+        <baseMoodEffect>-1</baseMoodEffect>
+      </li>
+      <li>
+        <label>too heavy</label>
+        <description>I'm fatter than I want to be. I feel a thick layer of softness everywhere.</description>
+        <baseMoodEffect>-3</baseMoodEffect>
+      </li>
+      <li>
+        <label>way too heavy</label>
+        <description>I feel overwhelmed by my own size. This is far too much weight.</description>
+        <baseMoodEffect>-6</baseMoodEffect>
       </li>
     </stages>
   </ThoughtDef>

@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!--ThingDef ParentName="MakeableDrugPillBase">
+		<defName>RREE_AppetitePill</defName>
+		<label>Experimental Appetite Stimulant</label>
+		<description>A drug for produced for increasing one's appetite, increasing both their physical and mental need for food. Each dose lengthens the effective duration by another day.\n\nThis, however, has quite the effect on the user's psyche, and repeated use may prove harmful to their mental state.</description>
+		<possessionCount>10</possessionCount>
+		<descriptionHyperlinks>
+			<HediffDef>RREE_AppetitePillHigh</HediffDef>
+		</descriptionHyperlinks>
+		<graphicData>
+			<texPath>Things/Item/Drug/Penoxycyline</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<socialPropernessMatters>false</socialPropernessMatters>
+		<rotatable>false</rotatable>
+		<statBases>
+			<WorkToMake>600</WorkToMake>
+			<MarketValue>18</MarketValue>
+			<Mass>0.005</Mass>
+			<Flammability>0.7</Flammability>
+		</statBases>
+		<techLevel>Industrial</techLevel>
+		<ingestible>
+			<drugCategory>Medical</drugCategory>
+			<outcomeDoers>
+				<li Class="IngestionOutcomeDoer_GiveHediff">
+					<hediffDef>RREE_AppetitePillHigh</hediffDef>
+					<severity>1.0</severity>
+				</li>
+			</outcomeDoers>
+		</ingestible>
+		<comps>
+			<li Class="CompProperties_Drug">
+				<listOrder>1000</listOrder>
+			</li>
+		</comps>
+	</ThingDef>
+
+	<ThingDef ParentName="MakeableDrugPillBase">
+		<defName>RREE_AppetitePillStrong</defName>
+		<label>Experimental Experimental Appetite Stimulant</label>
+		<description>A drug for originally produced for increasing one's appetite. Blocks malaria, sleeping sickness, plague. Must be taken every five days to remain effective.\n\nThis drug only prevents new infections. It does not cure existing infections - even those that are not yet discovered.</description>
+		<possessionCount>10</possessionCount>
+		<descriptionHyperlinks>
+			<HediffDef>RREE_AppetitePillHigh</HediffDef>
+		</descriptionHyperlinks>
+		<graphicData>
+			<texPath>Things/Item/Drug/Penoxycyline</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<socialPropernessMatters>false</socialPropernessMatters>
+		<rotatable>false</rotatable>
+		<statBases>
+			<WorkToMake>600</WorkToMake>
+			<MarketValue>18</MarketValue>
+			<Mass>0.005</Mass>
+			<Flammability>0.7</Flammability>
+		</statBases>
+		<techLevel>Industrial</techLevel>
+		<ingestible>
+			<drugCategory>Medical</drugCategory>
+			<outcomeDoers>
+				<li Class="IngestionOutcomeDoer_GiveHediff">
+					<hediffDef>RREE_AppetitePillHigh</hediffDef>
+					<severity>15.0</severity>
+				</li>
+			</outcomeDoers>
+		</ingestible>
+		<comps>
+			<li Class="CompProperties_Drug">
+				<listOrder>1000</listOrder>
+			</li>
+		</comps>
+	</ThingDef-->
+
+	<HediffDef>
+		<defName>RREE_AppetitePillHigh</defName>
+		<hediffClass>RimRoundExtraEvents.Hediffs.Hediff_AppetiteStimulant</hediffClass>
+		<label>stimulated appetite</label>
+		<description>Penoxycyline-induced immunity to certain illnesses. This only blocks new infections; it does nothing for those who are already infected, even if their infection is dormant.</description>
+		<defaultLabelColor>(1,0,0.5)</defaultLabelColor>
+		<scenarioCanAdd>true</scenarioCanAdd>
+		<maxSeverity>600.0</maxSeverity>
+		<isBad>true</isBad>
+		<comps>
+			<li Class="HediffCompProperties_SeverityPerDay">
+				<severityPerDay>-1.0</severityPerDay>
+				<showDaysToRecover>true</showDaysToRecover>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<label>hungry</label>
+				<painFactor>0.9</painFactor>
+				<hungerRateFactorOffset>0.2</hungerRateFactorOffset>
+				<capMods>
+					<li>
+						<capacity>Eating</capacity>
+						<offset>0.25</offset>
+					</li>
+				</capMods>
+			</li>
+			<li>
+				<minSeverity>3.0</minSeverity>
+				<label>piggish</label>
+				<painFactor>0.8</painFactor>
+				<hungerRateFactorOffset>0.5</hungerRateFactorOffset>
+				<capMods>
+					<li>
+						<capacity>Eating</capacity>
+						<offset>0.50</offset>
+					</li>
+				</capMods>
+			</li>
+			<li>
+				<minSeverity>10.0</minSeverity>
+				<label>ravenous</label>
+				<painFactor>0.7</painFactor>
+				<hungerRateFactorOffset>1.0</hungerRateFactorOffset>
+				<capMods>
+					<li>
+						<capacity>Eating</capacity>
+						<offset>1.5</offset>
+					</li>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>-0.05</offset>
+					</li>
+				</capMods>
+			</li>
+			<li>
+				<minSeverity>30.0</minSeverity>
+				<label>insatiable</label>
+				<painFactor>0.5</painFactor>
+				<hungerRateFactorOffset>1.0</hungerRateFactorOffset>
+				<capMods>
+					<li>
+						<capacity>Eating</capacity>
+						<offset>3.0</offset>
+					</li>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>-0.1</offset>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+	</HediffDef>
+
+	<ThoughtDef>
+		<defName>RREE_AppetitePillThought</defName>
+		<workerClass>RimRoundExtraEvents.ThoughtWorkers.ThoughtWorker_AppetiteStimulant</workerClass>
+		<hediff>RREE_AppetitePillHigh</hediff>
+		<validWhileDespawned>true</validWhileDespawned>
+		<developmentalStageFilter>Child, Adult</developmentalStageFilter>
+		<stages>
+			<!--Insatiable max penalty-->
+			<li>
+				<label>insatiably hungry</label>
+				<description>Food... food... anything... please...</description>
+				<baseMoodEffect>-40</baseMoodEffect>
+			</li>
+			<!--Ravenous max penalty-->
+			<li>
+				<label>ravenously hungry</label>
+				<description>I can barely think about anything but food. My stomach grumbles like never before. What's going on?</description>
+				<baseMoodEffect>-30</baseMoodEffect>
+			</li>
+			<!--Piggish max penalty-->
+			<li>
+				<label>hunger pangs</label>
+				<description>These hunger pangs are hard to ignore. It's so hard to focus.</description>
+				<baseMoodEffect>-12</baseMoodEffect>
+			</li>
+			<!--Hungry max penalty-->
+			<li>
+				<label>mild hunger pangs</label> 
+				<description>I'm really hungry.</description>
+				<baseMoodEffect>-6</baseMoodEffect>
+			</li>
+
+			<!--Hungry max bonus-->
+			<li>
+				<label>blissed out</label>
+				<description>I'm really hungry.</description>
+				<baseMoodEffect>6</baseMoodEffect>
+			</li>
+			<!--Piggish max bonus-->
+			<li>
+				<label>blissed out</label>
+				<description>I'm really hungry.</description>
+				<baseMoodEffect>12</baseMoodEffect>
+			</li>
+			<!--Ravenous max bonus-->
+			<li>
+				<label>blissed out</label>
+				<description>I'm really hungry.</description>
+				<baseMoodEffect>30</baseMoodEffect>
+			</li>
+			<!--Insatiable max bonus-->
+			<li>
+				<label>blissed out</label>
+				<description>I'm filled to bursting, but, it... it just feels so good... I can't get enough of this...</description>
+				<baseMoodEffect>40</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<!--
+	<ThinkTreeDef>
+		<defName>RREE_AppetitePillThinkTree</defName>
+		<insertTag>Humanlike_PostMentalState</insertTag>
+		<thinkRoot Class="RimRoundExtraEvents.ThinkNodes.ThinkNode_ConditionalAppetiteStimulant">
+			<hediff>RREE_AppetitePillHigh</hediff>
+			<subNodes>
+				<li Class="ThinkNode_PrioritySorter">
+					<minPriority>0.5</minPriority>
+					<subNodes>
+						<li Class="JobGiver_GetFood"/>
+						<li Class="JobGiver_SatisfyChemicalNeed"/>
+						<li Class="JobGiver_SatifyChemicalDependency" MayRequire="Ludeon.RimWorld.Biotech"/>
+					</subNodes>
+				</li>
+				<li Class="RimRoundExtraEvents.JobGivers.JobGiver_StimulatedBingeFood"/>
+				<li Class="RimRoundExtraEvents.JobGivers.JobGiver_WanderStimulatedBinge"/>
+			</subNodes>
+		</thinkRoot>
+	</ThinkTreeDef>
+	-->
+
+	<ThinkTreeDef>
+		<defName>RREE_AppetitePillThinkTree</defName>
+		<insertTag>Humanlike_PostMentalState</insertTag>
+		<thinkRoot Class="ThinkNode_ConditionalMentalState">
+			<state>RREE_Stimulated_Binging_Food</state>
+			<subNodes>
+				<li Class="ThinkNode_PrioritySorter">
+					<minPriority>0.5</minPriority>
+					<subNodes>
+						<li Class="JobGiver_GetFood"/>
+						<li Class="JobGiver_SatisfyChemicalNeed"/>
+						<li Class="JobGiver_SatifyChemicalDependency" MayRequire="Ludeon.RimWorld.Biotech"/>
+					</subNodes>
+				</li>
+				<li Class="RimRoundExtraEvents.JobGivers.JobGiver_StimulatedBingeFood"/>
+				<li Class="RimRoundExtraEvents.JobGivers.JobGiver_WanderStimulatedBinge"/>
+			</subNodes>
+		</thinkRoot>
+	</ThinkTreeDef>
+	
+	<MentalStateDef ParentName="BaseMentalState">
+		<defName>RREE_Stimulated_Binging_Food</defName>
+		<stateClass>RimRoundExtraEvents.MentalStates.MentalState_AppetiteStimulatedBinging</stateClass>
+		<workerClass>RimRoundExtraEvents.MentalStateWorkers.MentalStateWorker_AppetiteStimulantBingingFood</workerClass>
+		<label>binging on food</label>
+		<category>Misc</category>
+		<blockNormalThoughts>true</blockNormalThoughts>
+		<minTicksBeforeRecovery>99999999</minTicksBeforeRecovery>
+		<recoverFromSleep>false</recoverFromSleep>
+		<recoverFromDowned>false</recoverFromDowned>
+		<recoverFromCollapsingExhausted>false</recoverFromCollapsingExhausted>
+		<nameColor>(0.5, 0.9, 0.5)</nameColor>
+		<beginLetterLabel>extreme food binge</beginLetterLabel>
+		<beginLetter>{0} is pigging out on food.</beginLetter>
+		<beginLetterDef>NegativeEvent</beginLetterDef>
+		<recoveryMessage>{0} is no longer pigging out on food.</recoveryMessage>
+		<baseInspectLine>Mental state: Pigging out</baseInspectLine>
+		<inCaravanCanDo>true</inCaravanCanDo>
+		<downedCanDo>true</downedCanDo>
+		<prisonersCanDo>true</prisonersCanDo>
+		<slavesCanDo>true</slavesCanDo>
+	
+	</MentalStateDef>
+
+</Defs>

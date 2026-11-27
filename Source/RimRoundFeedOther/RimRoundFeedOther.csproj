@@ -1,0 +1,136 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net48</TargetFramework>
+    <LangVersion>7.3</LangVersion>
+    <AssemblyName>RimRoundFeedOther</AssemblyName>
+    <RootNamespace>RimRound.FeedOther</RootNamespace>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <OutputPath>../../1.6/Assemblies/</OutputPath>
+    <DebugType>portable</DebugType>
+    <RimRoundReferenceRoot Condition="'$(RimRoundReferenceRoot)' == ''">../../1.6</RimRoundReferenceRoot>
+    <RimWorldGameRoot Condition="'$(RimWorldGameRoot)' == ''">$(MSBuildProjectDirectory)\..\..\..</RimWorldGameRoot>
+    <RimWorldWorkshopRoot Condition="'$(RimWorldWorkshopRoot)' == ''">$(RimWorldGameRoot)\..\..\workshop\content\294100</RimWorldWorkshopRoot>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Condition="'$(SkipReferenceAssemblyPackage)' != 'true'" Include="Microsoft.NETFramework.ReferenceAssemblies.net48" Version="1.0.3" PrivateAssets="All" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="0Harmony">
+      <HintPath>$(RimWorldWorkshopRoot)/2009463077/1.6/Assemblies/0Harmony.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>$(RimWorldGameRoot)/RimWorldWin64_Data/Managed/Assembly-CSharp.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="RimRound">
+      <HintPath>$(RimRoundReferenceRoot)/Assemblies/RimRound.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="SwellGlow">
+      <HintPath>$(RimRoundReferenceRoot)/ExternalMods/SwellGlow/Assemblies/SwellGlow.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>$(RimWorldGameRoot)/RimWorldWin64_Data/Managed/UnityEngine.CoreModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.AudioModule">
+      <HintPath>$(RimWorldGameRoot)/RimWorldWin64_Data/Managed/UnityEngine.AudioModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.IMGUIModule">
+      <HintPath>$(RimWorldGameRoot)/RimWorldWin64_Data/Managed/UnityEngine.IMGUIModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.TextRenderingModule">
+      <HintPath>$(RimWorldGameRoot)/RimWorldWin64_Data/Managed/UnityEngine.TextRenderingModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="netstandard">
+      <HintPath>$(RimWorldGameRoot)/RimWorldWin64_Data/Managed/netstandard.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="FeedOtherBootstrap.cs" />
+    <Compile Include="FoodTraders.cs" />
+    <Compile Include="ExportAgencyCompatibility.cs" />
+    <Compile Include="VefRaidReferenceCompatibility.cs" />
+    <Compile Include="TalePawnReferenceCompatibility.cs" />
+    <Compile Include="RejectedPawnReferenceCompatibility.cs" />
+    <Compile Include="HarSolidBioWorkTagsCompatibility.cs" />
+    <Compile Include="BodyRoleFollowerMeals.cs" />
+    <Compile Include="OfficerBedsideService.cs" />
+    <Compile Include="ItemPolicyDefaults.cs" />
+    <Compile Include="FeedOtherSettings.cs" />
+    <Compile Include="RimRoundAudioLoading.cs" />
+    <Compile Include="UnifiedSettingsUI.cs" />
+    <Compile Include="MainTabWindow_FeedOtherSettings.cs" />
+    <Compile Include="RimRoundTraitGenerationBeta.cs" />
+    <Compile Include="HeritableEatingBiology.cs" />
+    <Compile Include="AutoMilkExpression.cs" />
+    <Compile Include="FeedOtherJoyTolerancePatch.cs" />
+    <Compile Include="CurrentFullness_FeedOtherClampPatch.cs" />
+    <Compile Include="EnergeticJoyPriorityPatch.cs" />
+    <Compile Include="FeedOtherDefOf.cs" />
+    <Compile Include="FeedOtherCooldownComponent.cs" />
+    <Compile Include="FeedOtherConversations.cs" />
+    <Compile Include="PostMealSocialUtility.cs" />
+    <Compile Include="FeedOtherUtility.cs" />
+    <Compile Include="FoodNetworkFoodReserve.cs" />
+    <Compile Include="HopperStorageCompatibility.cs" />
+    <Compile Include="LiquidReserveAllocation.cs" />
+    <Compile Include="SocialFeedingPolicy.cs" />
+    <Compile Include="JobDriver_RequestGainMeal.cs" />
+    <Compile Include="SocialMealExperience.cs" />
+    <Compile Include="FeedPartnerFloatMenuPatch.cs" />
+    <Compile Include="IdleUnderweightEatingPatch.cs" />
+    <Compile Include="JoyGiver_FeedOther.cs" />
+    <Compile Include="JobDriver_FeedOther.cs" />
+    <Compile Include="JobDriver_FeedOtherBedside.cs" />
+    <Compile Include="JobDriver_FeedOtherOneWay.cs" />
+    <Compile Include="JobDriver_FattenPrisonerDirectFeed.cs" />
+    <Compile Include="JobDriver_FoodFeedPatientEatingSpeed.cs" />
+    <Compile Include="FoodNetworkV2PatientSearchPatch.cs" />
+    <Compile Include="JobDriver_PrisonerMealDelivery.cs" />
+    <Compile Include="JobDriver_FattenPrisonerBedLock.cs" />
+    <Compile Include="NeedFood_NutritionWanted_FeedOtherPatch.cs" />
+    <Compile Include="OrbitalMovementPenaltyPatch.cs" />
+    <Compile Include="GluttoniumGenerationSettingsPatch.cs" />
+    <Compile Include="FoodNetworkV2Core.cs" />
+    <Compile Include="FoodNetworkV2Travel.cs" />
+    <Compile Include="FoodNetworkV2Preservation.cs" />
+    <Compile Include="FoodNetworkV2Serving.cs" />
+    <Compile Include="FaucetMealAcquisition.cs" />
+    <Compile Include="AbundanceMealJobs.cs" />
+    <Compile Include="AbundanceServingJobs.cs" />
+    <Compile Include="FeastSourceProviders.cs" />
+    <Compile Include="AbundanceGatherJobs.cs" />
+    <Compile Include="AbundanceCollection.cs" />
+    <Compile Include="AbundanceSupplyClaims.cs" />
+    <Compile Include="AbundanceTableSupply.cs" />
+    <Compile Include="AbundanceSocial.cs" />
+    <Compile Include="FaucetMealBatch.cs" />
+    <Compile Include="MealSitting.cs" />
+    <Compile Include="MealSittingToils.cs" />
+    <Compile Include="FoodNetworkServingRecovery.cs" />
+    <Compile Include="FoodNetworkV2Machines.cs" />
+    <Compile Include="FoodNetworkV2Transactions.cs" />
+    <Compile Include="FoodNetworkV2AutoFeeders.cs" />
+    <Compile Include="NotRegalBedReliabilityFix.cs" />
+    <Compile Include="HoverchairReliabilityFix.cs" />
+    <Compile Include="MobilityAidController.cs" />
+    <Compile Include="MobilityAidJobs.cs" />
+    <Compile Include="OrdinaryIntakeSessionBudget.cs" />
+    <Compile Include="PrisonerFatteningFoodPatch.cs" />
+    <Compile Include="WeightOpinionShiftAbilities.cs" />
+    <Compile Include="BodyGuidance.cs" />
+    <Compile Include="Properties/AssemblyInfo.cs" />
+  </ItemGroup>
+</Project>

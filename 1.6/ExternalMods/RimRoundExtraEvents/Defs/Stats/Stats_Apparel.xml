@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<StatDef>
+		<defName>FatStorageAmount</defName>
+		<label>Fat storage amount</label>
+		<description>The amount of fat able to be stored by fat storage equipment.</description>
+		<category>Apparel</category>
+		<minValue>0</minValue>
+		<maxValue>340282300000000000000000000000000000000</maxValue>
+		<toStringStyle>FloatOne</toStringStyle>
+		<formatString>{0} kgs</formatString>
+		<showIfUndefined>false</showIfUndefined>
+		<displayPriorityInCategory>61</displayPriorityInCategory>
+		<parts>
+			<li Class="StatPart_Quality">
+				<factorAwful>0.84</factorAwful>
+				<factorPoor>0.92</factorPoor>
+				<factorNormal>1</factorNormal>
+				<factorGood>1.08</factorGood>
+				<factorExcellent>1.16</factorExcellent>
+				<factorMasterwork>1.3</factorMasterwork>
+				<factorLegendary>1.5</factorLegendary>
+			</li>
+		</parts>
+	</StatDef>
+
+	<StatDef>
+		<defName>FatStorageHardLimit</defName>
+		<label>Fat storage hard limit</label>
+		<description>The amount of fat a piece of fat storage equipment can store over its capacity, as a percentage of the base amount stored.</description>
+		<category>Apparel</category>
+		<minValue>0</minValue>
+		<defaultBaseValue>0.05</defaultBaseValue>
+		<toStringStyle>PercentZero</toStringStyle>
+		<showIfUndefined>false</showIfUndefined>
+		<displayPriorityInCategory>62</displayPriorityInCategory>
+	</StatDef>
+	
+</Defs>

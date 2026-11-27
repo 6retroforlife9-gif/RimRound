@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<ThingDef ParentName="UltraTechClothingBase">
+		<defName>RREE_NovaTechApparel_SuppressionBelt</defName>
+		<label>OLD NovaTech suppression belt</label>
+		<description>NovaTech's market-grade solution to workers incapable of working efficiently due to their sheer weight. This belt suppresses the wearer's fat by temporarily converting it to a much more easily storable form, letting them act and feel as if no thicker than the average pawn, with only the minor side-effect of confusing the body into building up more fat. When taken off, the stored substance is rapidly metabolized back into fat.\n\nNovaTech is not liable for any harm caused by sudden rapid expansion upon failure of an overstrained device.\n\n+20% Weight Gain Multiplier</description>
+		<thingClass>RimRoundExtraEvents.Apparelclasses.FatSuppressionApparel</thingClass>
+		<tickerType>Normal</tickerType>
+		<modExtensions>
+			<li Class="RimRound.Defs.ClothingModExtension">
+				<weightGainMultiplierMultBonus>0.2</weightGainMultiplierMultBonus>
+			</li>
+			<li Class="RimRoundExtraEvents.ApparelClasses.FatSuppressionModExtension">
+				<weightSeverityReducedTo>0.020</weightSeverityReducedTo>
+				<maxWeightSeverity>0.350</maxWeightSeverity>
+			</li>
+		</modExtensions>
+		<graphicData>
+			<texPath>Things/Item/Equipment/NovaTech/NOVATECH_BELT</texPath>
+			<!--inherited-->
+			<onGroundRandomRotateAngle>35</onGroundRandomRotateAngle>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<costList>
+			<Hyperweave>50</Hyperweave>
+			<Steel>20</Steel>
+		</costList>
+		<recipeMaker>
+			<researchPrerequisite>RR_Research_MetabolicTextiles</researchPrerequisite>
+			<recipeUsers>
+				<li>FabricationBench</li>
+			</recipeUsers>
+			<!--inherited-->
+			<displayPriority>200</displayPriority>
+			<workSkill>Crafting</workSkill>
+		</recipeMaker>
+		<statBases>
+			<Beauty>1</Beauty>
+			<MaxHitPoints>100</MaxHitPoints>
+			<Flammability>0.1</Flammability>
+			<WorkToMake>200</WorkToMake>
+			<Mass>2</Mass>
+			<EquipDelay>2</EquipDelay>
+			<DeteriorationRate>2</DeteriorationRate>
+		</statBases>
+		<apparel>
+			<countsAsClothingForNudity>false</countsAsClothingForNudity>
+			<wornGraphicPath>FillerTexture</wornGraphicPath>
+			<bodyPartGroups>
+				<li>Waist</li>
+			</bodyPartGroups>
+			<layers>
+				<li>Belt</li>
+			</layers>
+			<!--inherited-->
+			<tags>
+				<li>IndustrialMilitaryBasic</li>
+			</tags>
+			<defaultOutfitTags>
+				<li>Soldier</li>
+			</defaultOutfitTags>
+			<developmentalStageFilter>Child, Adult</developmentalStageFilter>
+		</apparel>
+	</ThingDef>
+
+	<ThingDef ParentName="UltraTechClothingBase">
+		<defName>RREE_FatStorageApparel_Tier1Jumpsuit</defName>
+		<label>Tier 1 compressor suit</label>
+		<description>A thick, extremely flexible jumpsuit with built-in nanites that improve the wearer's digestion. It's thought that this suit is the result of a failed experiment to allow soldiers on long skirmishes to eat less, but had the opposite effect.\n\n+20% Weight Gain Multiplier\n+20% Digestion Speed Multiplier\n+15% Movement\n-5% Weight Movement Penalty</description>
+		<modExtensions>
+			<li Class="RimRound.Defs.ClothingModExtension">
+				<weightGainMultiplierMultBonus>1</weightGainMultiplierMultBonus>
+			</li>
+		</modExtensions>
+		<graphicData>
+			<texPath>Things/Item/Equipment/NovaTech/NOVATECH_JUMPSUIT</texPath>
+		</graphicData>
+		<costList>
+			<Hyperweave>70</Hyperweave>
+		</costList>
+		<recipeMaker>
+			<researchPrerequisite>RR_Research_MetabolicTextiles</researchPrerequisite>
+			<recipeUsers>
+				<li>ElectricTailoringBench</li>
+				<li>HandTailoringBench</li>
+			</recipeUsers>
+		</recipeMaker>
+		<statBases>
+			<Beauty>-2</Beauty>
+			<MaxHitPoints>120</MaxHitPoints>
+			<Flammability>0.2</Flammability>
+			<WorkToMake>100</WorkToMake>
+			<Mass>1.1</Mass>
+			<ArmorRating_Sharp>0.45</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.16</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.90</ArmorRating_Heat>
+			<Insulation_Cold>7</Insulation_Cold>
+			<Insulation_Heat>4</Insulation_Heat>
+			<EquipDelay>3</EquipDelay>
+			<DeteriorationRate>2</DeteriorationRate>
+			<FatStorageAmount>5000000000000000000000</FatStorageAmount>
+			<FatStorageHardLimit>0.05</FatStorageHardLimit>
+		</statBases>
+		<apparel>
+			<bodyPartGroups>
+				<li>Torso</li>
+				<li>Legs</li>
+				<li>Shoulders</li>
+			</bodyPartGroups>
+			<wornGraphicPath>FillerTexture</wornGraphicPath>
+			<layers>
+				<li>OnSkin</li>
+			</layers>
+		</apparel>
+		<tickerType>Normal</tickerType>
+		<comps>
+			<li Class="RimRoundExtraEvents.ApparelClasses.CompProperties_FatStorage">
+				<hasFunnelMode>true</hasFunnelMode>
+				<hasFunnelModeButton>true</hasFunnelModeButton>
+				<funnelModeIntervalTicks>30</funnelModeIntervalTicks>
+				
+				<hasAddButton>true</hasAddButton>
+				<hasRemoveButton>true</hasRemoveButton>
+
+				<ticksDisabledByEMP>600</ticksDisabledByEMP>
+				<dumpsFatOnEMP>true</dumpsFatOnEMP>
+				<sendEMPFatDumpMessage>true</sendEMPFatDumpMessage>
+
+				<softLimitMovementPenalty>-0.2</softLimitMovementPenalty>
+				<overSoftLimitDamagePerApplication>2.5</overSoftLimitDamagePerApplication>
+				<overSoftLimitTicksPerDamageApplication>1250</overSoftLimitTicksPerDamageApplication>
+
+				<hardLimitFailureMode>Break</hardLimitFailureMode>
+				<dumpsFatOnRemoval>OnFailure</dumpsFatOnRemoval>
+
+				<lockEquipmentWhen>OverSoftCap</lockEquipmentWhen>
+
+				<hideStorageContentsWhenMade>false</hideStorageContentsWhenMade>
+				<stopHidingContentsOnceEmptied>false</stopHidingContentsOnceEmptied>
+				<stopHidingContentsAtLimit>Never</stopHidingContentsAtLimit>
+
+				<hideStorageCapacityWhenMade>false</hideStorageCapacityWhenMade>
+				<stopHidingCapacityOnceEmptied>false</stopHidingCapacityOnceEmptied>
+				<stopHidingCapacityAtLimit>Never</stopHidingCapacityAtLimit>
+			</li>
+		</comps>
+	</ThingDef>
+
+</Defs>

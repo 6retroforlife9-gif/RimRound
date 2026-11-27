@@ -4,7 +4,8 @@
   <JobDef><defName>RR_AbundanceMeal</defName><driverClass>RimRound.FeedOther.JobDriver_AbundanceMeal</driverClass><reportString>preparing and serving a ritual meal.</reportString><casualInterruptible>false</casualInterruptible></JobDef>
   <PreceptDef ParentName="FestivalBase">
     <defName>RR_CeremonialFeeding</defName><label>ceremonial feeding</label>
-    <description>Honour the leader, moral guide or a Feedee in their own designated large single bed. An attendant serves real prepared food, up to slightly overfull. A successful ceremony grants faster digestion for one day; a Feeder improves service and quality. Existing food restrictions remain in effect.</description>
+    <description>Honour the leader, moral guide or a Feedee in their designated large single bed. An attendant serves prepared food up to slightly overfull, respecting the recipient's food restrictions. Good and exceptional ceremonies grant faster digestion for one day. A Feeder improves service and quality. The ceremony can be held again after three days at its normal quality.</description>
+    <useRepeatPenalty>false</useRepeatPenalty>
     <ritualPatternBase>RR_CeremonialFeeding</ritualPatternBase><allowDuplicates>false</allowDuplicates>
     <allowOptionalRitualObligations>true</allowOptionalRitualObligations><canGenerateAsSpecialPrecept>true</canGenerateAsSpecialPrecept>
     <requiredMemes><li>RR_EmbodiedAbundance</li></requiredMemes><associatedMemes><li>RR_EmbodiedAbundance</li></associatedMemes>
@@ -28,10 +29,11 @@
     <defName>RR_CeremonialFeedingOutcome</defName><workerClass>RimRound.Ideology.RitualOutcomeEffectWorker_CeremonialFeeding</workerClass>
     <description>Actual feeding, the attendant's expertise and the room affect quality. Good and exceptional ceremonies grant the recipient 25% or 50% faster digestion for one day. The benefit never stacks.</description>
     <comps>
-      <li Class="RimRound.Ideology.RitualOutcomeComp_CommunalMeals"><label>recipient fed</label><curve><points><li>(0, -0.5)</li><li>(1, 0.2)</li></points></curve></li>
+      <li Class="RimRound.Ideology.RitualOutcomeComp_CommunalMeals"><label>recipient and their meals</label><curve><points><li>(0, 0)</li><li>(1, 0.25)</li></points></curve></li>
       <li Class="RimRound.Ideology.RitualOutcomeComp_AbundanceService"><label>Feeder service</label><curve><points><li>(0, 0)</li><li>(1, 0.1)</li></points></curve></li>
-      <li Class="RitualOutcomeComp_RoomStat"><label>room impressiveness</label><statDef>Impressiveness</statDef><curve><points><li>(0, 0)</li><li>(100, 0.1)</li></points></curve></li>
+      <li Class="RitualOutcomeComp_RoomStat"><label>room impressiveness</label><statDef>Impressiveness</statDef><curve><points><li>(0, 0)</li><li>(50, 0.07)</li><li>(120, 0.20)</li></points></curve></li>
     </comps>
+    <startingQuality>0.30</startingQuality>
     <outcomeChances>
       <li><label>Failed</label><chance>0.1</chance><memory>RR_CommunalFeastFailed</memory><description>The {0} failed to honour abundance.</description><positivityIndex>-1</positivityIndex></li>
       <li><label>Ordinary</label><chance>0.2</chance><memory>RR_CommunalFeastQuiet</memory><description>The {0} was an ordinary shared meal.</description><positivityIndex>0</positivityIndex></li>

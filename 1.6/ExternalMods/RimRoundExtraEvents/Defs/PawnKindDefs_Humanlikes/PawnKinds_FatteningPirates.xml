@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<PawnKindDef ParentName="GrenadierBase">
+		<defName>RREE_Grenadier_Fattening</defName>
+		<label>flab grenadier</label>
+		<combatPower>70</combatPower>
+		<weaponTags>
+			<li>GrenadeFattening</li>
+		</weaponTags>
+		<initialResistanceRange>10~16</initialResistanceRange>
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="MercenaryGunnerBase">
+		<defName>RREE_Mercenary_Fattening_Gunner</defName>
+		<label>mercenary enbiggunner</label>
+		<weaponTags Inherit="False">
+			<li>FatteningGun</li>
+		</weaponTags>
+		<initialResistanceRange>6~10</initialResistanceRange>
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="PirateKindBase">
+		<defName>RREE_Pirate_Fattening_Gunner</defName>
+		<label>pirate enbiggunner</label>
+		<weaponTags Inherit="False">
+			<li>FatteningGun</li>
+		</weaponTags>
+	</PawnKindDef>
+
+</Defs>

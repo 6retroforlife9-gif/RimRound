@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+	<RREE_ToolTip_FatStorageGizmo_FunnelModeButton>Funnel mode attempts to maintain the pawn's weight using its stored weight by automatically adding or removing it when needed. When active, the add and remove buttons also shift the maintained weight.</RREE_ToolTip_FatStorageGizmo_FunnelModeButton>
+	
+</LanguageData>
